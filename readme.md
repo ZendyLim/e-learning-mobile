@@ -29,17 +29,8 @@ Please refer to this ES6 standards. [(Link)](https://github.com/elierotenberg/co
 
 ## Setup Guide
 1. Make sure your development environment fulfill all requirements.
-
 2. Clone this repository by using `HTTPS` or `SSH` methods
-
-### HTTPS
-> git clone https://github.com/ZendyLim/e-learning-mobile.git
-
-### SSH
-> git clone git@github.com:ZendyLim/e-learning-mobile.git
-
 3. Install all dependencies
-> npm install
 
 ## Git Guide
 ### Commit Guidelines
