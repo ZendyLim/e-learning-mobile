@@ -14,10 +14,12 @@ Note: Please make sure version is correct in your development environment
 ── <project root>
    ├── android
    ├── app
+       ├── assets
        ├── components
        ├── config
        ├── lib
-       └── screens
+       ├── screens
+       └── services
    ├── index.android.js
    ├── package.json
    ├── package.lock
