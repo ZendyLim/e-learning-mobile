@@ -1,8 +1,3 @@
-/*
-Author : andy william
-Page : Home Screen 
-Comment : Home screen for srudy aplicaion
-*/
 import React, { Component } from 'react';
 import {
     ActivityIndicator,

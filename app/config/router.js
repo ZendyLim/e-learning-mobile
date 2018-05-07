@@ -33,9 +33,24 @@ const SettingStack = StackNavigator({
 
 export const AppStack = TabNavigator({ 
     Home: HomeScreen, 
-    Study: { screen: StudyStack, navigationOptions: { tabBarLabel: 'Study' }}, 
-    Summary: { screen: SummaryStack, navigationOptions: { tabBarLabel: 'Summary' }}, 
-    Setting: { screen: SettingStack, navigationOptions: { tabBarLabel: 'Setting' }}, 
+    Study: {
+        screen: StudyStack, 
+        navigationOptions: { 
+            tabBarLabel: 'Study' 
+        }
+    }, 
+    Summary: { 
+        screen: SummaryStack, 
+        navigationOptions: { 
+            tabBarLabel: 'Summary' 
+        }
+    }, 
+    Setting: { 
+        screen: SettingStack, 
+        navigationOptions: { 
+            tabBarLabel: 'Setting' 
+        }
+    }, 
 }, {
     tabBarPosition: 'bottom',
 });

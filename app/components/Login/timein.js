@@ -1,8 +1,3 @@
-/*
-Author : andy william
-Page : Home Screen 
-Comment : Home screen for srudy aplicaion
-*/
 import React, { Component } from 'react';
 import {
     ActivityIndicator,
@@ -15,25 +10,26 @@ import {
   import { List, ListItem } from 'react-native-elements';
 
   
-  class NameScreen extends Component {
+  class TimeScreen extends Component {
     static navigationOptions = {
-      title: 'Name',
+      title: 'Time',
     };
   
     render() {
       return (
         <View style={styles.container}>
-          <Button title="Add name page" onPress={this.addName} />
+          <Button title="Add Time page" onPress={this.saveStudyTime}/>
         </View>
       );
     }
   
-    addName = () => {
-      this.props.navigation.navigate('TimeIn');
+    saveStudyTime = async () => {
+        await AsyncStorage.setItem('userToken', 'abc');
+        this.props.navigation.navigate('App');
     };
 
  
   }
 
   const styles = require('../../style/style');
-export default NameScreen;
+export default TimeScreen;

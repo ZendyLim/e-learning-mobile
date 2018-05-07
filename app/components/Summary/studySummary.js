@@ -1,8 +1,3 @@
-/*
-Author : andy william
-Page : Study Summary Screen 
-Comment : Study Summary screen for study aplicaion
-*/
 import React, { Component } from 'react';
 import {
     ActivityIndicator,

@@ -1,8 +1,3 @@
-/*
-Author : andy william
-Page : Study List Screen 
-Comment : Study List screen for study aplicaion
-*/
 import React, { Component } from 'react';
 import {
     ActivityIndicator,
@@ -15,27 +10,27 @@ import {
   import { List, ListItem } from 'react-native-elements';
 
   
-  class StudyListScreen extends Component {
+  class LoginScreen extends Component {
   
     static navigationOptions = {
       header: null,
-      title: 'Study',
+      //title: 'Login Page',
     };
   
     render() {
       return (
         <View style={styles.container}>
-          <Button title="Study List Page!" onPress={this.selectList} />
+          <Button title="Quest Login" onPress={this.createGuest} />
         </View>
       );
     }
   
     //createGuest = async () => {
-    selectList = () => {
+    createGuest = () => {
       //await AsyncStorage.setItem('userToken', 'abc');
-      this.props.navigation.navigate('HiraganaList');
+      this.props.navigation.navigate('NameIn');
     };
   }
 
-  const styles = require('../../style/style');
-export default StudyListScreen;
+const styles = require('../../style/style');
+export default LoginScreen;

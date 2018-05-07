@@ -1,8 +1,3 @@
-/*
-Author : andy william
-Page : Hiragana List Screen 
-Comment : Hiragana List screen for study aplicaion
-*/
 import React, { Component } from 'react';
 import {
     ActivityIndicator,
@@ -15,27 +10,27 @@ import {
   import { List, ListItem } from 'react-native-elements';
 
   
-  class HiraganaListScreen extends Component {
+  class SettingScreen extends Component {
   
     static navigationOptions = {
       header: null,
-      title: 'HiraganaList',
+      title: 'Study',
     };
   
     render() {
       return (
         <View style={styles.container}>
-          <Button title="Hiragana List Page" onPress={this.createGuest} />
+          <Button title="Setting Page" onPress={this.selectList} />
         </View>
       );
     }
   
     //createGuest = async () => {
-    createGuest = () => {
+    selectList = () => {
       //await AsyncStorage.setItem('userToken', 'abc');
-      this.props.navigation.navigate('NameIn');
+      this.props.navigation.navigate('HiraganaList');
     };
   }
 
   const styles = require('../../style/style');
-export default HiraganaListScreen;
+export default SettingScreen;

@@ -1,8 +1,3 @@
-/*
-Author : andy william
-Page : Testing for remove signout Screen 
-Comment : Testing for remove signout screen for srudy aplicaion
-*/
 import React, { Component } from 'react';
 import {
     ActivityIndicator,

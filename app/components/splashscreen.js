@@ -1,8 +1,3 @@
-/*
-Author : andy william
-Page : Splash Screen
-Comment : Splash Screenfor srudy aplicaion
-*/
 import React, { Component } from 'react';
 import {
     ActivityIndicator,
