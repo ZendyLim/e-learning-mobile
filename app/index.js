@@ -13,7 +13,7 @@ import { StackNavigator, SwitchNavigator } from 'react-navigation'; // Version c
 import { AppStack , AuthStack }  from './config/router';
 
 //import component Splash screen
-import SplashScreen from './component/splashscreen';
+import SplashScreen from './components/splashscreen';
 
 //Remove Error Warning For router navigation
 import { YellowBox } from 'react-native';

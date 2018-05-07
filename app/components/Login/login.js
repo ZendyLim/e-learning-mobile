@@ -15,7 +15,7 @@ import {
   class LoginScreen extends Component {
     constructor() {
       super();
-      this._onSetLanguageTo('en');
+      this._onSetLanguageTo('ja');
     }
     _onSetLanguageTo(value) {
       strings.setLanguage(value);
@@ -41,5 +41,5 @@ import {
     };
   }
 
-const styles = require('../../style/style');
+const styles = require('../../styles/style');
 export default LoginScreen;
