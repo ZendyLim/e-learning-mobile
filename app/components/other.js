@@ -29,5 +29,5 @@ import {
       this.props.navigation.navigate('Auth');
     };
   }
-  const styles = require('../style/style');
+  const styles = require('../styles/style');
 export default OtherScreen;
