@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
+import  { strings }   from '../../config/localization';
 import {
     ActivityIndicator,
     AsyncStorage,
     Button,
     StatusBar,
     StyleSheet,
+    Text,
     View,
   } from 'react-native';
   import { List, ListItem } from 'react-native-elements';
 
   
   class LoginScreen extends Component {
-  
+    constructor() {
+      super();
+      this._onSetLanguageTo('en');
+    }
+    _onSetLanguageTo(value) {
+      strings.setLanguage(value);
+      //this.setState({});
+    }
     static navigationOptions = {
       header: null,
       //title: 'Login Page',
@@ -20,7 +29,7 @@ import {
     render() {
       return (
         <View style={styles.container}>
-          <Button title="Quest Login" onPress={this.createGuest} />
+          <Button title={ strings.loginGuest } onPress={this.createGuest} />
         </View>
       );
     }
