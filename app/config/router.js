@@ -2,19 +2,19 @@ import React from 'react';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
-import HomeScreen from '../component/home';
-import OtherScreen from '../component/other';
+import HomeScreen from '../components/home';
+import OtherScreen from '../components/other';
 //import login screen
-import LoginScreen from '../component/Login/login';
-import NameScreen from '../component/Login/namein';
-import TimeScreen from '../component/Login/timein';
+import LoginScreen from '../components/Login/login';
+import NameScreen from '../components/Login/namein';
+import TimeScreen from '../components/Login/timein';
 //import study screen
-import StudyListScreen from '../component/Study/studyList';
-import HiraganaListScreen from '../component/Study/hiraganaList';
+import StudyListScreen from '../components/Study/studyList';
+import HiraganaListScreen from '../components/Study/hiraganaList';
 //import Summary Screen
-import StudySummaryScreen from '../component/Summary/studySummary';
+import StudySummaryScreen from '../components/Summary/studySummary';
 //import setting data
-import SettingScreen from '../component/Setting/setting';
+import SettingScreen from '../components/Setting/setting';
 
 //import 
 const StudyStack = StackNavigator({ 

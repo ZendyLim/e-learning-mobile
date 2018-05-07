@@ -27,5 +27,5 @@ import {
     };
   }
 
-const styles = require('../style/style');
+const styles = require('../styles/style');
 export default HomeScreen;
