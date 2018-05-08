@@ -9,9 +9,6 @@ import {
 } from 'react-native';
 import { StackNavigator, SwitchNavigator } from 'react-navigation'; // Version can be specified in package.json
 
-//import stack router for Each component
-import { AppStack , AuthStack }  from './config/router';
-
 import { Provider } from 'react-redux';
 
 import configureStore from './lib/store';
@@ -20,6 +17,7 @@ const { persistor, store } = configureStore();
 
 //import component Splash screen
 import SplashScreen from './components/splashscreen';
+import MainScreen from './components/main';
 
 import { PersistGate } from 'redux-persist/integration/react'
 
@@ -30,8 +28,7 @@ YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTIm
 const Root =  SwitchNavigator(
   {
     AuthLoading: SplashScreen,
-    App: AppStack,
-    Auth: AuthStack,
+    App: MainScreen,
   },
   {
     initialRouteName: 'AuthLoading',

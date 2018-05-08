@@ -1,4 +1,4 @@
-import {DATA_AVAILABLE ,FETCH_USER , FETCH_USER_SUCCESS ,  FETCH_USER_FAILED }  from '../lib/constants';
+import {DATA_AVAILABLE ,FETCH_USER , FETCH_USER_SUCCESS ,  FETCH_USER_FAILED , USER_REMOVE}  from '../lib/constants';
 
 const initialState = { 
     guestID:'', 
@@ -27,7 +27,12 @@ export default function userReducer (state = initialState, action) {
             state = Object.assign({}, state, { 
                 isFailed : true
             });
-            return state;
+            return state;   
+        case USER_REMOVE:
+            state = Object.assign({}, state, { 
+                user: []
+            });
+            return state;           
         default:
             return state;
     }

@@ -1,8 +1,8 @@
-import DATA_AVAILABLE from '../lib/constants';
+import { DATA_AVAILABLE } from '../lib/constants';
 
 export function getDataAPI(){
     return (dispatch) => {
-        fetch('http://www.mocky.io/v2/5af046b9310000690096c583')
+        fetch('http://www.mocky.io/v2/5af16325310000550096c943')
         .then(data => data.json())
         .then(json => {
           console.log('json:', json)
@@ -21,7 +21,7 @@ export function SetDataSuccess(data) {
 
   export function getPeopleFailure(data) {
     return {
-      type: DATA_AVAILABLE_FAILURE,
+      type: DATA_AVAILABLE,
       data: ''
     }
   }

@@ -1,26 +1,46 @@
-import {FETCH_USER , FETCH_USER_SUCCESS ,  FETCH_USER_FAILED }  from '../lib/constants';
+import {FETCH_USER , FETCH_USER_SUCCESS ,  FETCH_USER_FAILED,  USER_REMOVE }  from '../lib/constants';
+
 //================================   API FETCH ===================================
 export function createUser(userValue){
     return (dispatch) => {
-        fetch('http://www.mocky.io/v2/5af046b9310000690096c583')
-        .then(data => data.json())
+        fetch('http://www.mocky.io/v2/5af163c63100002a0096c946',{
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userValue)
+        }).then(data => data.json())
         .then(json => {
           console.log('json:', json)
-          dispatch(SetDataSuccess(json));
+          dispatch(fetchDataSuccess(json));
         })
-        .catch(err => dispatch(getPeopleFailure(err)))
+        .catch(err => dispatch(fetchDataFailed(err)))
       };        
 }
 
 export function updateUser(userValue){
   return (dispatch) => {
-      fetch('http://www.mocky.io/v2/5af046b9310000690096c583')
-      .then(data => data.json())
+      fetch('http://www.mocky.io/v2/5af163c63100002a0096c946',{
+        method: 'PUT',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userValue)
+      }).then(data => data.json())
       .then(json => {
         console.log('json:', json)
-        dispatch(SetDataSuccess(json));
+        dispatch(fetchDataSuccess(json));
       })
-      .catch(err => dispatch(getPeopleFailure(err)))
+      .catch(err => dispatch(fetchDataFailed(err)))
+    };        
+}
+
+export function deleteUserState(){
+  return (dispatch) => {
+    console.log('delete data');
+      dispatch(deleteUserStateDispatch())
     };        
 }
 
@@ -34,27 +54,19 @@ export function fetchData() {
 export function fetchDataSuccess(data) {
   return {
     type: FETCH_USER_SUCCESS,
-    data: data.instructions,
-    isFailed: false
+    data: data.data
   }
 }
 export function fetchDataFailed(error) {
+  console.log(error);
   return {
     type: FETCH_USER_FAILED,
     error: error
   }
 }
 
-export function SetDataSuccess(data) {
-    return {
-      type: DATA_AVAILABLE,
-      data: data.instructions
-    }
+export function deleteUserStateDispatch() {;
+  return {
+    type: USER_REMOVE
   }
-
-  export function getPeopleFailure(data) {
-    return {
-      type: DATA_AVAILABLE_FAILURE,
-      data: ''
-    }
-  }
+}
