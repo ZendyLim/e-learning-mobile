@@ -15,15 +15,10 @@ class SplashScreen extends Component {
       this.CheckingGuest();
     }
   
-    // Fetch the token from storage then navigate to our appropriate place
     CheckingGuest = async () => {
-      const userToken = await AsyncStorage.getItem('userToken');
-  
-      // This will switch to the App screen or Auth screen and this loading
-      // screen will be unmounted and thrown away.
        setTimeout(() => {
-            this.props.navigation.navigate(userToken ? 'App' : 'Auth');
-        }, 5000);   
+            this.props.navigation.navigate('App');
+        }, 2000);   
       
     };
   
@@ -39,4 +34,5 @@ class SplashScreen extends Component {
   }
 
   const styles = require('../styles/style');
+
 export default SplashScreen;

@@ -12,9 +12,13 @@ import {
   import { List, ListItem } from 'react-native-elements';
 
   
+  import { bindActionCreators } from 'redux';
+  import { connect } from 'react-redux';
+  import * as Actions from '../../actions/user'; //Import your actions
+  
   class LoginScreen extends Component {
-    constructor() {
-      super();
+    constructor(props) {
+      super(props);
       this._onSetLanguageTo('ja');
     }
     _onSetLanguageTo(value) {
@@ -34,12 +38,23 @@ import {
       );
     }
   
-    //createGuest = async () => {
     createGuest = () => {
-      //await AsyncStorage.setItem('userToken', 'abc');
       this.props.navigation.navigate('NameIn');
     };
   }
 
 const styles = require('../../styles/style');
-export default LoginScreen;
+
+function mapStateToProps(state, props) {
+  return {
+      loading: state.user.loading,
+      data: state.user.user
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(Actions, dispatch);
+}
+
+//Connect everything
+export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);
