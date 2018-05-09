@@ -778,3 +778,22 @@ export const users = [
     "nat": "FR"
   }
 ];
+
+export const studyReasonOption = [
+{
+  "id" : 0,
+  "text" : "Choose your Reason"
+},
+{
+  "id" : 1,
+  "text" : "I want to go to Japan"
+},
+{
+  "id" : 2,
+  "text" : "I want to go to Africa"
+},
+{
+  "id" : 3,
+  "text" : "I want to go to Indog"
+},
+]

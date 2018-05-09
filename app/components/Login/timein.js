@@ -12,8 +12,7 @@ import {
   } from 'react-native';
   import { List, ListItem } from 'react-native-elements';
   import Slider from 'react-native-slider';
-
-  
+  import DatePicker from 'react-native-datepicker'; 
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import * as Actions from '../../actions/user'; //Import your actions
@@ -25,12 +24,38 @@ import {
     state = {
       day: 1,
       hours:1,
+      userName: "",
+      studyReason: "",
+      finishDate: "2018-05-11",
+      type: "",
     }
+
+    componentDidMount() {
+      const { navigation } = this.props;
+      console.log(navigation, "timein");
+      this.setState({
+        userName: navigation.getParam('userName', null),
+        studyReason: navigation.getParam('studyReason',null),
+        type: navigation.getParam('type',null),
+      });
+    }
+
+    onDateChange = (date) => {
+      this.setState({
+        finishDate: date
+      });
+    };
+
+    saveStudyTime = () => {
+      this.props.navigation.navigate('Confirmation',(this.state));
+    };
+
     render() {
+      const { navigation } = this.props;
       return (
-        <View style={styles.containerWhite}>
+        <View style={styles.containerWhiteTop}>
           <Text style={styles.textBlue}>Study Plan</Text>
-          <Text>How many times per week?</Text>
+          <Text style={styles.textBlack}>How many times per week?</Text>
           <Slider
             minimumValue = {1}
             maximumValue = {7}
@@ -41,9 +66,8 @@ import {
             value={this.state.day}
             onValueChange={(day) => this.setState({day})} 
           />
-          <Text>Value: {this.state.day}</Text>
-
-          <Text>How many hours per day?</Text>
+          <Text>{this.state.day} Days</Text>
+          <Text style={styles.textBlack}>How many hours per day?</Text>
           <Slider
             minimumValue = {1}
             maximumValue = {24}
@@ -54,7 +78,30 @@ import {
             value={this.state.hours}
             onValueChange={(hours) => this.setState({hours})} 
           />
-
+          <Text>{this.state.hours} Hours</Text>
+          <Text style={styles.textBlack}>Until when do you plan to finish your japanese studies?</Text>
+          <DatePicker
+            style={{width: 200}}
+            date={this.state.finishDate}
+            mode="date"
+            placeholder="select date"
+            format="YYYY-MM-DD"
+            minDate={new Date()}
+            confirmBtnText="Confirm"
+            cancelBtnText="Cancel"
+            customStyles={{
+              dateIcon: {
+                position: 'absolute',
+                left: 0,
+                top: 4,
+                marginLeft: 0
+              },
+              dateInput: {
+                marginLeft: 36
+              }
+            }}
+            onDateChange={this.onDateChange}
+          />
           <TouchableOpacity
             style= {styles.buttonBlue}
             onPress= {this.saveStudyTime}
@@ -64,13 +111,7 @@ import {
         </View>
       );
     }
-  
-    saveStudyTime = async () => {
-      this.props.createUser('das');   
-      this.props.navigation.navigate('App');
-    };
   }
-
 
   const styles = require('../../styles/style');
   function mapStateToProps(state, props) {

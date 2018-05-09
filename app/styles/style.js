@@ -17,8 +17,17 @@ module.exports = StyleSheet.create({
   },
   containerWhite: {
     flex: 1,
+    flexDirection: 'column',
     alignItems: 'stretch',
     justifyContent: 'center',
+    padding: 10,
+    backgroundColor: '#ffffff',
+  },
+  containerWhiteTop: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    justifyContent: 'flex-start',
     padding: 10,
     backgroundColor: '#ffffff',
   },
@@ -30,6 +39,10 @@ module.exports = StyleSheet.create({
   textWhite: {
     fontSize: 24,
     color: '#ffffff',
+  },
+  textBlack: {
+    fontSize: 24,
+    color: '#999999',
   },
   textBlue: {
     fontSize: 24,
