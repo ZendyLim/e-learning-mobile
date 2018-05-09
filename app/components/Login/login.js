@@ -10,12 +10,13 @@ import {
     View,
   } from 'react-native';
   import { List, ListItem } from 'react-native-elements';
-
-  
+  import { FBLogin, FBLoginManager } from 'react-native-facebook-login';
+  import FBLoginView from './fblogin';
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import * as Actions from '../../actions/user'; //Import your actions
   
+
   class LoginScreen extends Component {
     constructor(props) {
       super(props);
@@ -33,7 +34,18 @@ import {
     render() {
       return (
         <View style={styles.container}>
-          <Button title={ strings.loginGuest } onPress={this.createGuest} />
+          <FBLogin
+            buttonView={<FBLoginView />}
+            ref={(fbLogin) => { this.fbLogin = fbLogin }}
+            loginBehavior={FBLoginManager.LoginBehaviors.Native}
+            permissions={["email","user_friends"]}
+            onLogin={function(e){console.log(e)}}
+            onLoginFound={function(e){console.log(e)}}
+            onLoginNotFound={function(e){console.log(e)}}
+            onLogout={function(e){console.log(e)}}
+            onCancel={function(e){console.log(e)}}
+            onPermissionsMissing={function(e){console.log(e)}}
+          />
         </View>
       );
     }
