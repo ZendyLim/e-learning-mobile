@@ -18,7 +18,6 @@ import {
   import * as Actions from '../../actions/user'; //Import your actions
   
   class SettingScreen extends Component {
-  d
     static navigationOptions = {
       header: null,
       title: 'Study',
