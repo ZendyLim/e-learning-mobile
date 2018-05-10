@@ -24,16 +24,21 @@ import {
       title: 'Create Guest Account',
     };
     state = {
+      userFB: [],
       userName: "",
       studyReason: 0,
       type : "",
     }
+    
 
     componentDidMount() {
       const { navigation } = this.props;
       this.setState({
+        userFB: navigation.getParam('fbData', null),
+        userName: navigation.getParam('userName', null),
         type: navigation.getParam('type',null),
       });
+      //Console.log(navigation.getParam('userName', null),"NIAMAK");
     }
 
     updateName = (name) => {

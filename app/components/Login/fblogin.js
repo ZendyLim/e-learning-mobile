@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View , Button} from 'react-native';
+import { StyleSheet, Text, View , Button, TouchableHighlight} from 'react-native';
 import PropTypes from 'prop-types';
 
 /**
@@ -21,17 +21,33 @@ class FBLoginView extends Component {
     }
 
     render(){
+      if(!this.context.isLoggedIn){
         return (
-          <View style={[]}>
-            <Button onPress={() => {
-                if(!this.context.isLoggedIn){
-                  this.context.login()
-                }else{
-                  this.context.logout()
-                }
-              }} title="Facebook" />
+          <View >
+            <TouchableHighlight style={styles.socialFacebook}
+            onPress={() => {
+              this.context.login()     
+            }}>
+            <Text style={styles.facebookText}>Facebook Login</Text>
+            </TouchableHighlight>
           </View>
       )
+      }else{
+        return (
+          <View>
+            <TouchableHighlight style={styles.socialFacebook}
+            onPress={() => {
+              this.context.logout()     
+            }}>
+            <Text style={styles.facebookText}>Facebook Logout</Text>
+            </TouchableHighlight>
+          </View>
+      )
+      }
+
+      
     }
 }
 module.exports = FBLoginView;
+
+const styles = require('../../styles/style');
