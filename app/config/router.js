@@ -20,7 +20,7 @@ import SettingScreen from '../components/Setting/setting';
 //import 
 const StudyStack = StackNavigator({ 
     StudyList: StudyListScreen ,
-    HiraganaList: StudySummaryScreen
+    HiraganaList: HiraganaListScreen
 });
 
 const SummaryStack = StackNavigator({
