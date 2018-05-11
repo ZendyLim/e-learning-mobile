@@ -8,31 +8,35 @@ import {
     View,
   } from 'react-native';
   import { List, ListItem } from 'react-native-elements';
-  
+
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
-  import * as Actions from '../../actions/user'; //Import your actions
+  import * as Actions from '../../../actions/study'; //Import your actions
   
-  class TimeScreen extends Component {
+  class LearnContainer extends Component {
+  
     static navigationOptions = {
-      title: 'Time',
+      header: null,
+      title: 'Study',
     };
   
     render() {
       return (
         <View style={styles.container}>
-          <Button title="Add Time page" onPress={this.saveStudyTime}/>
+          <Button title="Study List Page!" onPress={this.selectList} />
         </View>
       );
     }
   
-    saveStudyTime = async () => {
-      this.props.createUser('das');   
-      this.props.navigation.navigate('App');
+    //createGuest = async () => {
+    selectList = () => {
+      //await AsyncStorage.setItem('userToken', 'abc');
+      this.props.navigation.navigate('HiraganaList');
     };
   }
 
   const styles = require('../../styles/style');
+
   function mapStateToProps(state, props) {
     return {
         loading: state.user.loading,
@@ -43,6 +47,6 @@ import {
   function mapDispatchToProps(dispatch) {
     return bindActionCreators(Actions, dispatch);
   }
-  
-  //Connect everything
-  export default connect(mapStateToProps, mapDispatchToProps)(TimeScreen);
+
+//Connect everything
+export default connect(mapStateToProps, mapDispatchToProps)(LearnContainer);

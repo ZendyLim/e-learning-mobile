@@ -6,6 +6,7 @@ import HomeScreen from '../components/home';
 import OtherScreen from '../components/other';
 //import login screen
 import LoginScreen from '../components/Login/login';
+//import LoginScreen from '../components/exampleRedux';
 import NameScreen from '../components/Login/namein';
 import TimeScreen from '../components/Login/timein';
 //import study screen
@@ -56,6 +57,7 @@ export const AppStack = TabNavigator({
 });
 
 export const AuthStack = StackNavigator(
-    { LoginSr: LoginScreen, NameIn: NameScreen, TimeIn: TimeScreen});
+    { LoginSr: LoginScreen, NameIn: NameScreen, TimeIn: TimeScreen
+});
 
 
