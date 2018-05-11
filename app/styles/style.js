@@ -19,10 +19,16 @@ module.exports = StyleSheet.create({
        container: {
         flex: 1,
         alignItems: 'center',
+        backgroundColor: 'powderblue',
 		position: 'relative',
 		// height: '100%',
 		// width: '100%',
       },
+      
+      toolbar: {
+        height: 56,
+        backgroundColor: '#45B5E7',
+      }, 
 
     topbackground: {
     	backgroundColor: '#d2f9fc',
