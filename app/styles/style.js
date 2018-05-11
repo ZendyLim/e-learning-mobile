@@ -23,6 +23,15 @@ module.exports = StyleSheet.create({
 		position: 'relative',
 		// height: '100%',
 		// width: '100%',
+	  },
+	  containerCenter: {
+        flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+        backgroundColor: 'powderblue',
+		position: 'relative',
+		// height: '100%',
+		// width: '100%',
       },
       
       toolbar: {

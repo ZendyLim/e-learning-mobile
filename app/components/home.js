@@ -21,7 +21,7 @@ import {
     };
    render() {
       return (
-        <View style={styles.container}>
+        <View style={styles.containerCenter}>
           <Button title="Show me more of the app" onPress={this._showMoreApp} />
         </View>
       );
