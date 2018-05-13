@@ -25,7 +25,7 @@ class SplashScreen extends Component {
     // Render any loading content that you like here
     render() {
       return (
-        <View style={styles.container}>
+        <View style={styles.containerCenter}>
           <ActivityIndicator />
           <StatusBar barStyle="default" />
         </View>

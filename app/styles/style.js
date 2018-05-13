@@ -23,6 +23,15 @@ module.exports = StyleSheet.create({
 		position: 'relative',
 		// height: '100%',
 		// width: '100%',
+	  },
+	  containerCenter: {
+        flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+        backgroundColor: 'powderblue',
+		position: 'relative',
+		// height: '100%',
+		// width: '100%',
       },
       
       toolbar: {
@@ -149,4 +158,84 @@ module.exports = StyleSheet.create({
 	txtbuttonicon: {
 		fontSize: 16,
 	},
+	containerBlue: {
+		flex: 1,
+		alignItems: 'stretch',
+		justifyContent: 'center',
+		padding: 10,
+		backgroundColor: '#d2f9fc',
+	  },
+	  containerWhite: {
+		flex: 1,
+		flexDirection: 'column',
+		alignItems: 'stretch',
+		justifyContent: 'center',
+		padding: 10,
+		backgroundColor: '#ffffff',
+	  },
+	  containerWhiteTop: {
+		flex: 1,
+		flexDirection: 'column',
+		alignItems: 'stretch',
+		justifyContent: 'flex-start',
+		padding: 10,
+		backgroundColor: '#ffffff',
+	  },
+	  createGuestButton: {
+		backgroundColor: '#495057',
+		alignItems: 'center',
+		borderRadius: 5,
+	  },
+	  textWhite: {
+		fontSize: 24,
+		color: '#ffffff',
+	  },
+	  textBlack: {
+		fontSize: 24,
+		color: '#999999',
+	  },
+	  textBlue: {
+		fontSize: 24,
+		color: '#45b4e7',
+	  },
+	  buttonBlue:{
+		alignSelf: 'flex-end',
+		justifyContent: 'center',
+		backgroundColor: '#45b4e7',
+		padding:10,
+		borderRadius: 5,
+		
+	  },
+	  picker: {
+		textDecorationLine: 'underline',
+		alignSelf: 'stretch',
+		
+	  },
+	  textCon: {
+		width: 320,
+		flexDirection: 'row',
+		justifyContent: 'space-between'
+	  },
+	  textSignWith: {
+		color: '#999999',
+		alignSelf: 'center',
+	  },
+	  socialContainer: {
+		flexDirection: 'row',
+		height: 150,
+	  },
+	  socialButton: {
+		flex: 1,
+	  },
+	  socialFacebook:{
+		marginTop: 5,
+		height: 40,
+		width: "100%",
+		backgroundColor: "#3B5998",
+		alignItems: "center",
+		justifyContent: "center",
+	  },
+	  facebookText: {
+		color: "#ffffff",
+	  }
 });

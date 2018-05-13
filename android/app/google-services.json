@@ -1,0 +1,59 @@
+{
+    "project_info": {
+      "project_number": "108217245320",
+      "firebase_url": "https://elearning-mobile-1525884176045.firebaseio.com",
+      "project_id": "elearning-mobile-1525884176045",
+      "storage_bucket": "elearning-mobile-1525884176045.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:108217245320:android:9d8d0b8a05e01c4b",
+          "android_client_info": {
+            "package_name": "com.learningtest2"
+          }
+        },
+        "oauth_client": [
+          {
+            "client_id": "108217245320-v76cn6u2ijr4k7207mkf8v0vduosd7he.apps.googleusercontent.com",
+            "client_type": 3
+          },
+          {
+            "client_id": "108217245320-nk7kj388k0kofkfpb4g81s10tdnhdgls.apps.googleusercontent.com",
+            "client_type": 1,
+            "android_info": {
+              "package_name": "com.learningtest2",
+              "certificate_hash": "10d1b084db765a17da3f2f738e1fc664efb0f035"
+            }
+          },
+          {
+            "client_id": "108217245320-8arphui0r2qimm0d2jhu3jlde3s963k5.apps.googleusercontent.com",
+            "client_type": 3
+          }
+        ],
+        "api_key": [
+          {
+            "current_key": "AIzaSyBc-zS0ynn52Z4rEnDDGs8-M5DZQ_9OX8s"
+          }
+        ],
+        "services": {
+          "analytics_service": {
+            "status": 1
+          },
+          "appinvite_service": {
+            "status": 2,
+            "other_platform_oauth_client": [
+              {
+                "client_id": "108217245320-v76cn6u2ijr4k7207mkf8v0vduosd7he.apps.googleusercontent.com",
+                "client_type": 3
+              }
+            ]
+          },
+          "ads_service": {
+            "status": 2
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
