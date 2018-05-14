@@ -41,7 +41,8 @@ module.exports = StyleSheet.create({
     },
 		row: {
 			flexDirection: 'row',
-			flex: 1
+			flex: 1,
+			flexWrap: 'wrap'
 		},
 		// 12 column grid system (Like Bootstrap)
 		col12 : {
@@ -82,8 +83,9 @@ module.exports = StyleSheet.create({
 		}, 
 		// Helper
 		shadow : {
-			shadowColor: "#000000",
-			shadowOpacity: 1,
+			shadowColor: "#000",
+			shadowOpacity: 0.5,
+			elevation: 2
 		},   
       
 		toolbar: {
@@ -290,8 +292,53 @@ module.exports = StyleSheet.create({
 	  facebookText: {
 		color: "#ffffff",
 		},
+		//Character
+		character: {
+			width:112,
+			height:318
+		},
+		// Timer Bar
+		timerContainer: {
+			borderColor: '#333',
+			backgroundColor: '#fff'
+		},
+		timerStatus: {
+			color: '#222',
+			fontSize: 18,
+			position: 'absolute',
+			alignSelf: 'flex-end',
+		  right:5,
+			zIndex: 2
+		},
+		timerWrapper: {
+			position: 'relative',
+			zIndex:5,
+			backgroundColor:'#fff'
+		},
+		timerBox: {
+			zIndex:10,
+			backgroundColor: '#fff',
+			borderRadius: 5,
+			top:0,
+			height:25,
+			width:25,
+			marginLeft:-10,
+			position:'absolute'
+		},
 		//Quiz Screen
 		quizFlashTop: {
-			height:200
+			height:200,
+			zIndex:5,
+			overflow:'hidden'
+		},
+		quizChar: {
+			position:'absolute',
+			right:5,
+			top: 5,
+			zIndex:5
+		},
+		quizBanner:{
+			flex:1,
+			zIndex:1
 		}
 });

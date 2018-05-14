@@ -6,56 +6,71 @@ import {
     StatusBar,
     StyleSheet,
     View,
-    Image,
-    Text,
-    ScrollView
+    ImageBackground,
+    Text
   } from 'react-native';
   import { List, ListItem } from 'react-native-elements';
 
-  const imageBackground = require('../../assets/img/topic/1.0-class.jpg');
+  // Import Components
+  import CharacterImage   from '../../component/character';
+  import TimerBar   from '../../component/timer';
+
+  const imageSource = require('../../assets/img/topic/1.0-class.jpg');
   
   class QuizFlashScreen extends Component {
   
-    static navigationOptions = {    
-      header:false,  
+    static navigationOptions = {      
       title: 'Quiz',
       tabBarVisible:false
     };
+
+    constructor(props){
+      super(props);
+
+      this.state = {
+        success: 'Dieeee'
+      }
+
+      console.log(this.state);
+    }
   
     render() {
+      let display = this.state.success;
       return (
         <View style={styles.container}>
-            
-            <View style={styles.row}>
-              <View elevation={5} style={[styles.col4, styles.shadow, {borderWidth:1, borderColor:"black"}]}>
-                <Text>
-                  Column 4
-                </Text>
-              </View>
-              <View style={[styles.col3, {borderWidth:1, borderColor:"black"}]}>
-                <Text>
-                  Column 3
-                </Text>
-              </View>
+            <View style={[styles.row]}>
+              <View style={[styles.col12, styles.quizFlashTop]}>
 
-              <View style={[styles.col5, {borderWidth:1, borderColor:"black"}]}>
-                <Text>
-                  Column 5
-                </Text>
+                  <ImageBackground
+                      style={ styles.quizBanner }
+                      source={ imageSource }
+                  >
+                    <CharacterImage expression={ "happy" } style={ styles.quizChar }/>
+                  </ImageBackground>
+
+              </View>
+              
+              <View style={[styles.col12]}>
+
+                <TimerBar time={ 2000 } onUpdate={this.onUpdate} />
+
+                <Text>{ display }</Text>
               </View>
             </View>
             
         </View>
       );
     }
-  
-    //createGuest = async () => {
-    createGuest = () => {
-      //await AsyncStorage.setItem('userToken', 'abc');
-      this.props.navigation.navigate('NameIn');
+
+    onUpdate = (val) => {
+      this.setState({
+        success: val
+      })
     };
+  
   }
 
   const styles = require('../../styles/style');
   
 export default QuizFlashScreen;
+
