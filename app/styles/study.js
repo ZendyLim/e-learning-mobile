@@ -123,17 +123,31 @@ module.exports = StyleSheet.create({
     left : 0,
     zIndex : 2,
     backgroundColor: 'rgba(0,0,0,0.5)',
+    alignItems:'flex-end', 
+    padding: 15,
   },
   NotlockButton : {
     display : 'none',
   },
   StudyContainer : {
     padding: '2%',
+    backgroundColor: '#d2fafc',
   },
   titleContainer : {
     borderColor: '#2771e8',
     borderWidth: 1,
     borderTopWidth : 0, 
+  },
+  btnLearn : {
+    width: '100%',
+    height: 70,
+    justifyContent: 'center',
+    alignItems : 'center',
+    borderColor: '#2771e8',
+    borderWidth: 1,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    marginBottom: 5
   }
 });
 

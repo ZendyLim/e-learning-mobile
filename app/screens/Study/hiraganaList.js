@@ -13,41 +13,57 @@ import {
     TouchableOpacity, 
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
+import  { strings }   from '../../config/localization';
 
 class HiraganaListScreen extends Component {
 
   static navigationOptions = {
-    header: null,
-    title: 'HiraganaList',
+    //header: null,
+    title: 'HIRAGANA LIST',
   };
+  state = {
+    title:"",
+    img: "",
+  }
+  componentDidMount() {
+    const { navigation } = this.props;
+    this.setState({
+      title: navigation.getParam('title', null),
+      img: navigation.getParam('img', null),
+    });
+    //Console.log(navigation.getParam('userName', null),"NIAMAK");
+  }
 
+  navigateToLearn=(type)=>{
+    if(type == 'Learn'){
+      this.props.navigation.navigate('LearnListScreen',(
+        {
+          type : type,
+          title : this.state.title
+        }
+      ));
+    }else{
+      this.props.navigation.navigate('TopicList',(
+        item
+      ));
+    }
+  }
   render() {
     return (
       <ScrollView>
-        <View style={study.container}>
-          <ToolbarAndroid
-              title="Hiragana & Katakana Lesson"
-              style={styles.toolbar}
-              titleColor='white'
-          />
-
+        <View style={study.StudyContainer}>
           <Image 
-            style={study.cardImg}
-            source={require('../../img/sample1.png')}
+            style={ study.cardImg }
+            source= {this.state.img }
             resizeMode="stretch"  
           />
           
           <View style={[study.cardBox, study.borderBox, study.p3]}>
             <Text style={[study.textLg, study.textBlack]}>Learn</Text>
-            <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
             <View style={study.buttonContainer}>
-              <TouchableOpacity style={[study.button, study.mR10]}>
+              <TouchableOpacity style={[study.button, study.mR10]} onPress={this.navigateToLearn.bind(this, 'Learn')}>
                 <Icon name='play-arrow'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={study.button}>
-                <Icon name='search'/>
-                <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
             </View>
           </View>

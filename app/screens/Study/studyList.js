@@ -27,7 +27,7 @@ class StudyListScreen extends Component {
   }
 
   lockedMessage=(item, index)=>{
-    alert('locked' + item.title);     
+    alert('locked ' + strings[item.title]);     
   }
   
   navigateToLearn=(item, index)=>{
@@ -37,7 +37,7 @@ class StudyListScreen extends Component {
       ));
     }else{
       this.props.navigation.navigate('TopicList',(
-        { pageIndex : index }
+        item
       ));
     }
   }
@@ -63,7 +63,7 @@ class StudyListScreen extends Component {
             </TouchableOpacity>
               { item.lock ? (              
                 <TouchableOpacity style={study.lockButton} onPress={this.lockedMessage.bind(this, item, key)}>  
-                  <Text>lock</Text>
+                  <Icon name='lock'  color='#fff' size={40}/>
                 </TouchableOpacity>
                 ) : (
                   <Text style={study.NotlockButton}>not lock</Text>
