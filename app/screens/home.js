@@ -23,12 +23,17 @@ import {
       return (
         <View style={styles.containerCenter}>
           <Button title="Show me more of the app" onPress={this._showMoreApp} />
+          <Button title="Quiz" onPress={this.takeQuiz} />
         </View>
       );
     }
     _showMoreApp = async () => {
       this.props.deleteUserState();
       this.props.navigation.navigate('AuthLoading');
+    };
+
+    takeQuiz = () => {
+      this.props.navigation.navigate('QuizFlash');
     };
   }
 
