@@ -15,13 +15,16 @@ import StudyListScreen from '../screens/Study/studyList';
 import HiraganaListScreen from '../screens/Study/hiraganaList';
 //import Summary Screen
 import StudySummaryScreen from '../screens/Summary/studySummary';
+//import Quiz Flash Screen
+import QuizFlashScreen from '../screens/Quiz/quizFlash';
 //import setting data
 import SettingScreen from '../screens/Setting/setting';
 
 //import 
 const StudyStack = StackNavigator({ 
     StudyList: StudyListScreen ,
-    HiraganaList: HiraganaListScreen
+    HiraganaList: HiraganaListScreen,
+    QuizFlash: QuizFlashScreen
 });
 
 const SummaryStack = StackNavigator({
@@ -34,7 +37,7 @@ const SettingStack = StackNavigator({
 
 
 export const AppStack = TabNavigator({ 
-    Home: HomeScreen, 
+    Home: HomeScreen,    
     Study: {
         screen: StudyStack, 
         navigationOptions: { 
@@ -52,7 +55,7 @@ export const AppStack = TabNavigator({
         navigationOptions: { 
             tabBarLabel: 'Setting' 
         }
-    }, 
+    }
 }, {
     tabBarPosition: 'bottom',
 });
@@ -62,7 +65,6 @@ export const AuthStack = StackNavigator(
         LoginSr: LoginScreen,
         NameIn: NameScreen,
         TimeIn: TimeScreen,
-        Confirmation: ConfirmationScreen,
+        Confirmation: ConfirmationScreen
 });
-
 

@@ -6,6 +6,9 @@ var {
   StyleSheet,
 } = React;
 
+let englishFont = 'Roboto-Regular';
+let japaneseFont = 'NotoSansJP-Regular';
+
 module.exports = StyleSheet.create({
 
     // container: {
@@ -14,30 +17,75 @@ module.exports = StyleSheet.create({
     //     justifyContent: 'center',
     //     position: 'relative',
     //     flexDirection: 'row',
-    //   },
-
-       container: {
-        flex: 1,
-        alignItems: 'center',
-        backgroundColor: 'powderblue',
-		position: 'relative',
-		// height: '100%',
-		// width: '100%',
+		//   },
+		wrapper:{
+			backgroundColor:'#d2f9fc',
+			paddingLeft:10
+		},
+		container: {
+			flex: 1,
+			alignItems: 'center',
+			backgroundColor: 'powderblue',
+			position: 'relative',
+			// height: '100%',
+			// width: '100%',
 	  },
 	  containerCenter: {
-        flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center',
-        backgroundColor: 'powderblue',
-		position: 'relative',
-		// height: '100%',
-		// width: '100%',
-      },
+			flex: 1,
+			alignItems: 'center',
+			justifyContent: 'center',
+			backgroundColor: 'powderblue',
+			position: 'relative',
+			// height: '100%',
+			// width: '100%',
+    },
+		row: {
+			flexDirection: 'row',
+			flexWrap: 'wrap',
+			flex: 1
+		},
+		// 12 column grid system (Like Bootstrap)
+		col12 : {
+			width: '100%'
+		},
+		col11 : {
+			width: '91.66666667%'
+		},
+		col10 : {
+			width: '83.33333333%'
+		},
+		col9 : {
+			width: '75%'
+		},
+		col8 : {
+			width: '66.66666667%'
+		},
+		col7 : {
+			width: '58.33333333%'
+		},
+		col6 : {
+			width: '50%'
+		},
+		col5 : {
+			width: '41.66666667%'
+		},
+		col4 : {
+			width: '33.33333333%'
+		},
+		col3 : {
+			width: '25%'
+		},
+		col2 : {
+			width: '16.66666667%'
+		},
+		col1 : {
+			width: '8.33333333%'
+		},    
       
-      toolbar: {
-        height: 56,
-        backgroundColor: '#45B5E7',
-      }, 
+		toolbar: {
+			height: 56,
+			backgroundColor: '#45B5E7',
+		}, 
 
     topbackground: {
     	backgroundColor: '#d2f9fc',
@@ -237,5 +285,9 @@ module.exports = StyleSheet.create({
 	  },
 	  facebookText: {
 		color: "#ffffff",
-	  }
+		},
+		//Quiz Screen
+		quizFlashTop: {
+			height:200
+		}
 });
