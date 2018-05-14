@@ -28,10 +28,9 @@ import {
       super(props);
 
       this.state = {
-        success: 'Dieeee'
+        success: 'yooo'
       }
 
-      console.log(this.state);
     }
   
     render() {

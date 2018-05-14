@@ -20,8 +20,7 @@ class TimerBar extends Component {
       this.seconds = this.duration / 1000;
 
       this.state = {
-        progress: 0,
-        success: ''
+        progress: 0
       };
   }
 
@@ -42,7 +41,6 @@ class TimerBar extends Component {
           <Text style={styles.timerStatus}>
           { this.state.progress }
           </Text>
-          <Text>{ this.state.success }</Text>
         </View>
       );
     }
