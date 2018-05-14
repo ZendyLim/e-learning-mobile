@@ -1,34 +1,18 @@
-'use strict';
+import { createStore } from 'redux'
+import { persistStore, persistReducer } from 'redux-persist'
+import storage from 'redux-persist/lib/storage' // defaults to localStorage for web and AsyncStorage for react-native
 
-import {createStore, applyMiddleware, compose} from 'redux';
-import reducers from '../reducers';
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
-import {AsyncStorage} from 'react-native';
-import thunk from 'redux-thunk';
-import { offline } from 'redux-offline';
-import offlineConfig from 'redux-offline/lib/defaults';
+import rootReducer from '../reducers'
 
-const config = {
-  key: 'root', // key is required
-  storage, // storage is now required
+const persistConfig = {
+  key: 'root',
+  storage,
 }
-const reducer = persistReducer(config, reducers);
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 
-// export default function configureStore(onComplete) {
-//   let store = createStoreWithMiddleware(reducer)
-//   let persistor = persistStore(store)
-//   return { persistor, store };
-// }
-export default function configureStore(onComplete) {
-  let store = createStore(
-    reducer,
-    compose(
-      applyMiddleware(thunk),
-      offline(offlineConfig)
-    )
-  );  
+const persistedReducer = persistReducer(persistConfig, rootReducer)
+
+export default () => {
+  let store = createStore(persistedReducer)
   let persistor = persistStore(store)
   return { store, persistor }
 }

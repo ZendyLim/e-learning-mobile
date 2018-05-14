@@ -23,15 +23,16 @@ module.exports = StyleSheet.create({
   cardBox: {
     flex: 1,
     backgroundColor: 'white',
-    width: '94%',
-    margin: '2%',
-    alignItems: 'stretch'
+    width: '100%',
+    marginBottom: 10,
+    alignItems: 'stretch',
+    position: 'relative'
   },
   
   cardImg: {
     backgroundColor: 'steelblue',
     flex: 1,
-    width: null, 
+    width: '100%', 
     height: 150,
     alignItems: 'stretch', 
   },
@@ -106,7 +107,33 @@ module.exports = StyleSheet.create({
 
   textWhite: {
     color: 'white', 
+  },
+  title :{
+    textAlign: 'center',
+    fontSize: 25,
+    marginTop: 5,
+    marginBottom : 5,
+    fontWeight: 'bold',
+  },
+  lockButton : {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    top: 0,
+    left : 0,
+    zIndex : 2,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+  },
+  NotlockButton : {
+    display : 'none',
+  },
+  StudyContainer : {
+    padding: '2%',
+  },
+  titleContainer : {
+    borderColor: '#2771e8',
+    borderWidth: 1,
+    borderTopWidth : 0, 
   }
-
 });
 

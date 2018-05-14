@@ -14,23 +14,17 @@ import {
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
 
-class HiraganaListScreen extends Component {
+class TopicListScreen extends Component {
 
   static navigationOptions = {
-    header: null,
-    title: 'HiraganaList',
+    //header: null,
+    title: 'TopicList',
   };
 
   render() {
     return (
       <ScrollView>
         <View style={study.container}>
-          <ToolbarAndroid
-              title="Hiragana & Katakana Lesson"
-              style={styles.toolbar}
-              titleColor='white'
-          />
-
           <Image 
             style={study.cardImg}
             source={require('../../img/sample1.png')}
@@ -42,7 +36,9 @@ class HiraganaListScreen extends Component {
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
             <View style={study.buttonContainer}>
               <TouchableOpacity style={[study.button, study.mR10]}>
-                <Icon name='play-arrow'/>
+              <Icon
+  name='g-translate'
+  color='#00aced' />
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
               </TouchableOpacity>
               <TouchableOpacity style={study.button}>
@@ -97,4 +93,4 @@ class HiraganaListScreen extends Component {
 const styles = require('../../styles/style');
 const study = require('../../styles/study');
 
-export default HiraganaListScreen;
+export default TopicListScreen;

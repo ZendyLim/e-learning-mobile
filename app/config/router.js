@@ -12,6 +12,7 @@ import TimeScreen from '../screens/Login/timein';
 import ConfirmationScreen from '../screens/Login/confirmation';
 //import study screen
 import StudyListScreen from '../screens/Study/studyList';
+import TopicListScreen from '../screens/Study/topiclist';
 import HiraganaListScreen from '../screens/Study/hiraganaList';
 //import Summary Screen
 import StudySummaryScreen from '../screens/Summary/studySummary';
@@ -23,8 +24,10 @@ import SettingScreen from '../screens/Setting/setting';
 //import 
 const StudyStack = StackNavigator({ 
     StudyList: StudyListScreen ,
+    TopicList: TopicListScreen,
     HiraganaList: HiraganaListScreen,
-    QuizFlash: QuizFlashScreen
+    QuizFlash: QuizFlashScreen,
+    
 });
 
 const SummaryStack = StackNavigator({
