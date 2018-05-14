@@ -9,6 +9,7 @@ import LoginScreen from '../screens/Login/login';
 //import LoginScreen from '../screens/exampleRedux';
 import NameScreen from '../screens/Login/namein';
 import TimeScreen from '../screens/Login/timein';
+import ConfirmationScreen from '../screens/Login/confirmation';
 //import study screen
 import StudyListScreen from '../screens/Study/studyList';
 import HiraganaListScreen from '../screens/Study/hiraganaList';
@@ -57,7 +58,11 @@ export const AppStack = TabNavigator({
 });
 
 export const AuthStack = StackNavigator(
-    { LoginSr: LoginScreen, NameIn: NameScreen, TimeIn: TimeScreen
+    { 
+        LoginSr: LoginScreen,
+        NameIn: NameScreen,
+        TimeIn: TimeScreen,
+        Confirmation: ConfirmationScreen,
 });
 
 

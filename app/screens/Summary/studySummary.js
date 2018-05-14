@@ -19,7 +19,7 @@ import {
   
     render() {
       return (
-        <View style={styles.container}>
+        <View style={styles.containerCenter}>
           <Button title="Study Summary" onPress={this.createGuest} />
         </View>
       );

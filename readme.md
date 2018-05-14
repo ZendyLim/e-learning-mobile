@@ -13,12 +13,13 @@ Note: Please make sure version is correct in your development environment
 ```
 ── <project root>
    ├── android
+   ├── ios
    ├── app
        ├── components
        ├── config
-       ├── lib
-       └── screens
-   ├── index.android.js
+       └── styles
+   ├── index.js
+   ├── ...
    ├── package.json
    ├── package.lock
    └── readme.md
