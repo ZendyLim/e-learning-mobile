@@ -12,7 +12,7 @@ import {
   } from 'react-native';
   import { List, ListItem } from 'react-native-elements';
   import { FBLogin, FBLoginManager } from 'react-native-facebook-login';
-  import FBLoginView from './fblogin';
+  import FBLoginView from '../../component/fblogin';
   import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 
   
