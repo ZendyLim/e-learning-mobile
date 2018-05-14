@@ -6,7 +6,9 @@ import {
     StatusBar,
     StyleSheet,
     View,
-    Image
+    Image,
+    Text,
+    ScrollView
   } from 'react-native';
   import { List, ListItem } from 'react-native-elements';
 
@@ -14,25 +16,35 @@ import {
   
   class QuizFlashScreen extends Component {
   
-    static navigationOptions = {      
+    static navigationOptions = {    
+      header:false,  
       title: 'Quiz',
       tabBarVisible:false
     };
   
     render() {
       return (
-        <View>
-            <View style={styles.quizFlashTop}>
-                <Image
-                    style={{
-                        flex:1,
-                        resizeMode: 'center'
-                    }}
+        <View style={styles.container}>
+            
+            <View style={styles.row}>
+              <View elevation={5} style={[styles.col4, styles.shadow, {borderWidth:1, borderColor:"black"}]}>
+                <Text>
+                  Column 4
+                </Text>
+              </View>
+              <View style={[styles.col3, {borderWidth:1, borderColor:"black"}]}>
+                <Text>
+                  Column 3
+                </Text>
+              </View>
 
-                    source={{ uri:imageBackground }}
-                />
+              <View style={[styles.col5, {borderWidth:1, borderColor:"black"}]}>
+                <Text>
+                  Column 5
+                </Text>
+              </View>
             </View>
-          <Button title="Study Summary" onPress={this.createGuest} />
+            
         </View>
       );
     }
