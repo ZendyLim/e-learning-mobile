@@ -41,7 +41,6 @@ module.exports = StyleSheet.create({
     },
 		row: {
 			flexDirection: 'row',
-			flexWrap: 'wrap',
 			flex: 1
 		},
 		// 12 column grid system (Like Bootstrap)
@@ -49,38 +48,43 @@ module.exports = StyleSheet.create({
 			width: '100%'
 		},
 		col11 : {
-			width: '91.66666667%'
+			width: '91.667%'
 		},
 		col10 : {
-			width: '83.33333333%'
+			width: '83.333%'
 		},
 		col9 : {
 			width: '75%'
 		},
 		col8 : {
-			width: '66.66666667%'
+			width: '66.667%'
 		},
 		col7 : {
-			width: '58.33333333%'
+			width: '58.333%'
 		},
 		col6 : {
 			width: '50%'
 		},
 		col5 : {
-			width: '41.66666667%'
+			width: '41.667%'
 		},
 		col4 : {
-			width: '33.33333333%'
+			width: '33.333%'
 		},
 		col3 : {
 			width: '25%'
 		},
 		col2 : {
-			width: '16.66666667%'
+			width: '16.667%'
 		},
 		col1 : {
-			width: '8.33333333%'
-		},    
+			width: '8.333%'
+		}, 
+		// Helper
+		shadow : {
+			shadowColor: "#000000",
+			shadowOpacity: 1,
+		},   
       
 		toolbar: {
 			height: 56,
