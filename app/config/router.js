@@ -23,7 +23,7 @@ import QuizFlashScreen from '../screens/Quiz/quizFlash';
 //import setting data
 import SettingScreen from '../screens/Setting/setting';
 
-
+const styles = require('../styles/style');
 //import 
 const StudyStack = StackNavigator({ 
     StudyList: StudyListScreen,
@@ -65,6 +65,9 @@ export const AppStack = TabNavigator({
     }
 }, {
     tabBarPosition: 'bottom',
+    tabBarOptions:{
+        style:styles.tabBar
+    }
 });
 
 export const AuthStack = StackNavigator(

@@ -8,6 +8,10 @@ var {
 
 let englishFont = 'Roboto-Regular';
 let japaneseFont = 'NotoSansJP-Regular';
+let primaryColor = '#45b4e7'; // blue
+let secondaryColor = '#d2f9fc';
+let textColor = '#333';
+let grayColor = '#ccc';
 
 module.exports = StyleSheet.create({
 
@@ -19,13 +23,13 @@ module.exports = StyleSheet.create({
     //     flexDirection: 'row',
 		//   },
 		wrapper:{
-			backgroundColor:'#d2f9fc',
+			backgroundColor:secondaryColor,
 			paddingLeft:10
 		},
 		container: {
 			flex: 1,
 			alignItems: 'center',
-			backgroundColor: 'powderblue',
+			backgroundColor: secondaryColor,
 			position: 'relative',
 			// height: '100%',
 			// width: '100%',
@@ -34,7 +38,7 @@ module.exports = StyleSheet.create({
 			flex: 1,
 			alignItems: 'center',
 			justifyContent: 'center',
-			backgroundColor: 'powderblue',
+			backgroundColor: secondaryColor,
 			position: 'relative',
 			// height: '100%',
 			// width: '100%',
@@ -86,15 +90,19 @@ module.exports = StyleSheet.create({
 			shadowColor: "#000",
 			shadowOpacity: 0.5,
 			elevation: 2
-		},   
+		},  
+		
+		tabBar:{
+			backgroundColor: primaryColor,
+		},
       
 		toolbar: {
 			height: 56,
-			backgroundColor: '#45B5E7',
+			backgroundColor: primaryColor,
 		}, 
 
     topbackground: {
-    	backgroundColor: '#d2f9fc',
+    	backgroundColor: secondaryColor,
     	flex: 26,
     	width: '100%',
  	 },
@@ -217,7 +225,7 @@ module.exports = StyleSheet.create({
 		alignItems: 'stretch',
 		justifyContent: 'center',
 		padding: 10,
-		backgroundColor: '#d2f9fc',
+		backgroundColor: secondaryColor,
 	  },
 	  containerWhite: {
 		flex: 1,
@@ -250,12 +258,12 @@ module.exports = StyleSheet.create({
 	  },
 	  textBlue: {
 		fontSize: 24,
-		color: '#45b4e7',
+		color: primaryColor,
 	  },
 	  buttonBlue:{
 		alignSelf: 'flex-end',
 		justifyContent: 'center',
-		backgroundColor: '#45b4e7',
+		backgroundColor: primaryColor,
 		padding:10,
 		borderRadius: 5,
 		
@@ -324,6 +332,20 @@ module.exports = StyleSheet.create({
 			width:25,
 			marginLeft:-10,
 			position:'absolute'
+		},
+		// Question Panel
+		questionWrapper: {
+			padding:10,
+			flex: 1,
+			alignItems: 'center',
+			justifyContent: 'center',
+		},
+		questionContainer:{
+			backgroundColor:'rgba(255,255,255,0.8)',
+			height:109
+		},
+		questionBigText:{
+			fontSize: 60
 		},
 		//Quiz Screen
 		quizFlashTop: {
