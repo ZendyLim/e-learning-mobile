@@ -23,7 +23,7 @@ import {
       return (
         <View style={styles.containerCenter}>
           <Button title="Show me more of the app" onPress={this._showMoreApp} />
-          <Button title="Quiz" onPress={this.takeQuiz} />
+          <Button title="Quiz" onPress={this.quiz} />
         </View>
       );
     }
@@ -31,10 +31,9 @@ import {
       this.props.deleteUserState();
       this.props.navigation.navigate('AuthLoading');
     };
-
-    takeQuiz = () => {
-      this.props.navigation.navigate('QuizFlash');
-    };
+    quiz = () => {
+      this.props.navigation.navigate('QuizList');
+    };  
   }
 
 const styles = require('../styles/style');

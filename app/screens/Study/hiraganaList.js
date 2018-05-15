@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
 import  { strings }   from '../../config/localization';
+// import * as Actions from '../../../actions/Quiz'; //Import your actions
 
 class HiraganaListScreen extends Component {
 
@@ -72,7 +73,7 @@ class HiraganaListScreen extends Component {
             <Text style={[study.textLg, study.textBlack]}>Quiz</Text>
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
             <View style={study.buttonContainer}>
-              <TouchableOpacity style={[study.button, study.mR10]}>
+              <TouchableOpacity style={[study.button, study.mR10]} onPress={this.quiz}>
                 <Icon name='play-arrow'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
               </TouchableOpacity>
@@ -107,6 +108,9 @@ class HiraganaListScreen extends Component {
   createGuest = () => {
     //await AsyncStorage.setItem('userToken', 'abc');
     this.props.navigation.navigate('NameIn');
+  };
+  quiz = () => {
+    this.props.navigation.navigate('QuizMain');
   };
 }
 

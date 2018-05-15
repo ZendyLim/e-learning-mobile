@@ -16,6 +16,10 @@ import TopicListScreen from '../screens/Study/topiclist';
 import HiraganaListScreen from '../screens/Study/hiraganaList';
 import LearnListScreen from '../screens/Learn/LearnList';
 import LearnHiraganaModule from '../screens/Learn/LearnModule';
+import QuizMainScreen from '../screens/Quiz/quizMain';
+import QuizListScreen from '../screens/Quiz/quizList';
+import QuizHiraganaListScreen from '../screens/Quiz/quizHiraganaList';
+import QuizKatakanaListScreen from '../screens/Quiz/quizKatakanaList';
 //import Summary Screen
 import StudySummaryScreen from '../screens/Summary/studySummary';
 //import Quiz Flash Screen
@@ -32,6 +36,8 @@ const StudyStack = StackNavigator({
     QuizFlash: QuizFlashScreen,
     LearnListScreen:  LearnListScreen,
     LearnHiraganaModule: LearnHiraganaModule,
+    QuizMain: QuizMainScreen,
+    QuizList: QuizListScreen,
 });
 
 const SummaryStack = StackNavigator({
@@ -42,6 +48,12 @@ const SettingStack = StackNavigator({
     SettingList: SettingScreen
 });
 
+// const QuizHiraganaListStack = StackNavigator({
+//     QuizHiraganaList: QuizHiraganaListScreen
+// })
+// const QuizKatakanaListStack = StackNavigator({
+//     QuizKarakanaList: QuizKatakanaListScreen
+// })
 
 export const AppStack = TabNavigator({ 
     Home: HomeScreen,    
@@ -65,6 +77,13 @@ export const AppStack = TabNavigator({
     }
 }, {
     tabBarPosition: 'bottom',
+});
+
+export const QuizStack = TabNavigator({ 
+    QuizHiraganaList: QuizHiraganaListScreen, 
+    QuizKarakanaList: QuizKatakanaListScreen
+}, {
+    tabBarPosition: 'top',
 });
 
 export const AuthStack = StackNavigator(
