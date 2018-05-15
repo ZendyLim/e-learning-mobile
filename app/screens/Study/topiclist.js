@@ -13,57 +13,37 @@ import {
     TouchableOpacity, 
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
-import  { strings }   from '../../config/localization';
 
-class HiraganaListScreen extends Component {
+class TopicListScreen extends Component {
 
   static navigationOptions = {
     //header: null,
-    title: 'HIRAGANA LIST',
+    title: 'TopicList',
   };
-  state = {
-    title:"",
-    img: "",
-  }
-  componentDidMount() {
-    const { navigation } = this.props;
-    this.setState({
-      title: navigation.getParam('title', null),
-      img: navigation.getParam('img', null),
-    });
-    //Console.log(navigation.getParam('userName', null),"NIAMAK");
-  }
 
-  navigateToLearn=(type)=>{
-    if(type == 'Learn'){
-      this.props.navigation.navigate('LearnListScreen',(
-        {
-          type : type,
-          title : this.state.title
-        }
-      ));
-    }else{
-      this.props.navigation.navigate('TopicList',(
-        item
-      ));
-    }
-  }
   render() {
     return (
       <ScrollView>
-        <View style={study.StudyContainer}>
+        <View style={study.container}>
           <Image 
-            style={ study.cardImg }
-            source= {this.state.img }
+            style={study.cardImg}
+            source={require('../../img/sample1.png')}
             resizeMode="stretch"  
           />
           
           <View style={[study.cardBox, study.borderBox, study.p3]}>
             <Text style={[study.textLg, study.textBlack]}>Learn</Text>
+            <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
             <View style={study.buttonContainer}>
-              <TouchableOpacity style={[study.button, study.mR10]} onPress={this.navigateToLearn.bind(this, 'Learn')}>
-                <Icon name='play-arrow'/>
+              <TouchableOpacity style={[study.button, study.mR10]}>
+              <Icon
+  name='g-translate'
+  color='#00aced' />
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={study.button}>
+                <Icon name='search'/>
+                <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -113,4 +93,4 @@ class HiraganaListScreen extends Component {
 const styles = require('../../styles/style');
 const study = require('../../styles/study');
 
-export default HiraganaListScreen;
+export default TopicListScreen;
