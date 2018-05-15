@@ -12,7 +12,10 @@ import TimeScreen from '../screens/Login/timein';
 import ConfirmationScreen from '../screens/Login/confirmation';
 //import study screen
 import StudyListScreen from '../screens/Study/studyList';
+import TopicListScreen from '../screens/Study/topiclist';
 import HiraganaListScreen from '../screens/Study/hiraganaList';
+import LearnListScreen from '../screens/Learn/LearnList';
+import LearnHiraganaModule from '../screens/Learn/LearnModule';
 //import Summary Screen
 import StudySummaryScreen from '../screens/Summary/studySummary';
 //import Quiz Flash Screen
@@ -20,11 +23,15 @@ import QuizFlashScreen from '../screens/Quiz/quizFlash';
 //import setting data
 import SettingScreen from '../screens/Setting/setting';
 
+
 //import 
 const StudyStack = StackNavigator({ 
-    StudyList: StudyListScreen ,
+    StudyList: StudyListScreen,
+    TopicList: TopicListScreen,
     HiraganaList: HiraganaListScreen,
-    QuizFlash: QuizFlashScreen
+    QuizFlash: QuizFlashScreen,
+    LearnListScreen:  LearnListScreen,
+    LearnHiraganaModule: LearnHiraganaModule,
 });
 
 const SummaryStack = StackNavigator({

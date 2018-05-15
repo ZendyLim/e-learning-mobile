@@ -12,63 +12,66 @@ import {
     TouchableOpacity, 
 } from 'react-native';
 import { Icon } from 'react-native-elements';
+import  { strings }   from '../../config/localization';
+import { StudyList } from '../../config/studyList';
+import style from 'react-native-datepicker/style';
 
 class StudyListScreen extends Component {
+  constructor() {
+    super();
+    this._onSetLanguageTo('en');
+  }
+  _onSetLanguageTo(value) {
+    strings.setLanguage(value);
+    //this.setState({});
+  }
 
+  lockedMessage=(item, index)=>{
+    alert('locked ' + strings[item.title]);     
+  }
+  
+  navigateToLearn=(item, index)=>{
+    if(item.type == 'Initial'){
+      this.props.navigation.navigate('HiraganaList',(
+        item
+      ));
+    }else{
+      this.props.navigation.navigate('TopicList',(
+        item
+      ));
+    }
+  }
+  
   static navigationOptions = {
     header: null,
     title: 'Study',
   };
 
   render() {
+    var image = '';
     return (
-      <ScrollView>
-        <View style={study.containerCentered}>
-          <View style={study.cardBox}>
-            <TouchableOpacity 
-              style={study.cardBoxDisabled}
-              onPress={()=>{alert("you clicked me")}}
-            >
-              <View style={study.cardImgDisabled}>
-                <Icon name='lock' />
-              </View>
+      <ScrollView style={study.StudyContainer}>
+          { StudyList.map((item, key)=>(
+          <View  key={key} style={study.cardBox}>
+            <TouchableOpacity style={study.titleContainer} onPress={this.navigateToLearn.bind(this, item, key)}>
               <Image
                 style={study.cardImg}
-                source={require('../../img/sample1.png')}
-                resizeMode="contain"
+                source={item.img}
+                resizeMode = 'cover'
               />
+              <Text style={study.title}> { strings[item.title] } </Text>
             </TouchableOpacity>
+              { item.lock ? (              
+                <TouchableOpacity style={study.lockButton} onPress={this.lockedMessage.bind(this, item, key)}>  
+                  <Icon name='lock'  color='#fff' size={40}/>
+                </TouchableOpacity>
+                ) : (
+                  <Text style={study.NotlockButton}>not lock</Text>
+              )}           
           </View>
-          <View style={study.cardBox}>
-            <TouchableOpacity onPress={() => this.selectList()}>
-              <Image
-                style={study.cardImg}
-                source={require('../../img/sample1.png')}
-                resizeMode="contain"
-              />
-            </TouchableOpacity>
-          </View>
-          <View style={study.cardBox}>
-          <TouchableOpacity onPress={this.selectList}>
-            <Image
-              style={study.cardImg}
-              source={require('../../img/sample1.png')}
-              resizeMode = 'cover'
-            />
-            </TouchableOpacity>
-          </View>
-          <View style={study.cardBox}>
-            <TouchableOpacity 
-              activeOpacity={0.8}
-              onPress={this.selectList}>
-              <Image
-                style={study.cardImg}
-                source={require('../../img/sample1.png')}
-                resizeMode = 'stretch'
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
+        
+        )
+      )}
       </ScrollView>
     );
   }
