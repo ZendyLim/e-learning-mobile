@@ -86,7 +86,7 @@ class TimerBar extends Component {
     }
 
     timerEnd(){
-        this.props.onUpdate('weeee');
+        this.props.onTimesUp(true);
     }
     
 }

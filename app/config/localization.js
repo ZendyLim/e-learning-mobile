@@ -11,6 +11,10 @@ export let strings = new LocalizedStrings({
    NUMBER_TITLE : "Number Lesson",
    GREETING_TITLE : "Greeting Lesson",
    TOPIC1_TITLE : "Me & Family",
+   // Question Panel
+   QUESTION_SELECT : "Select",
+   // Quiz
+   TIMES_UP: "Time's up"
  },
  ja: {
    loginGuest: "japan",
@@ -18,5 +22,8 @@ export let strings = new LocalizedStrings({
    NUMBER_TITLE : "数字勉強",
    GREETING_TITLE : "挨拶勉強",
    TOPIC1_TITLE : "私と家族",
+   // Question Panel
+   QUESTION_SELECT : "選ぶ",
+   TIMES_UP: "時間です"
 }
 });

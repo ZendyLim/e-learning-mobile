@@ -14,25 +14,35 @@ class CharacterImage extends Component {
   constructor(props) {
       super(props);
 
-      switch (this.props.expression) {
-          case 'happy':
-              this.image = require('../assets/img/char/char-happy.png');
-              break;
-
-          case 'sad':
-              this.image = require('../assets/img/char/char-sad.png');
-              break;
-
-          default:
-              this.image = require('../assets/img/char/char-default.png');
-              break;
+      this.state = {
+        image: require('../assets/img/char/char-happy.png')
       }
+
+      
   }
 
     render(){
+      this.chooseExpression();
+      
       return (
-        <Image source={this.image} style={[ styles.character, this.props.style || {} ]} />
+        <Image source={this.state.image} style={[ styles.character, this.props.style || {} ]} />
       );
+    }
+
+    chooseExpression(){
+      switch (this.props.expression) {
+          case 'happy':
+              this.state.image = require('../assets/img/char/char-happy.png');
+              break;
+
+          case 'sad':
+              this.state.image = require('../assets/img/char/char-sad.png');
+              break;
+
+          default:
+              this.state.image = require('../assets/img/char/char-default.png');
+              break;
+      }
     }
 }
 module.exports = CharacterImage;

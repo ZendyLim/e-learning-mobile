@@ -91,7 +91,14 @@ module.exports = StyleSheet.create({
 			shadowOpacity: 0.5,
 			elevation: 2
 		},  
-		
+		displayInlineContainer:{
+			flexWrap: 'wrap', 
+			flexDirection:'row',
+
+		},
+		displayInline:{
+			flexDirection:'column'
+		},
 		tabBar:{
 			backgroundColor: primaryColor,
 		},
@@ -342,10 +349,22 @@ module.exports = StyleSheet.create({
 		},
 		questionContainer:{
 			backgroundColor:'rgba(255,255,255,0.8)',
-			height:109
+			height:109,
+			padding:10,
+			flexWrap: 'wrap', 
+			alignItems: 'center',
+			flexDirection:'row',
 		},
 		questionBigText:{
-			fontSize: 60
+			fontSize: 60,
+			color: primaryColor
+		},
+		questionInsText:{
+			fontSize: 36,
+			color:textColor
+		},
+		questionText:{
+			flexDirection:'column'
 		},
 		//Quiz Screen
 		quizFlashTop: {
@@ -362,5 +381,33 @@ module.exports = StyleSheet.create({
 		quizBanner:{
 			flex:1,
 			zIndex:1
+		},
+		timesUp:{
+			position:'absolute',
+			width:'100%',
+			height:'100%',
+			top:0,
+			left:0,
+			backgroundColor:'rgba(0,0,0,0.7)',
+			zIndex:10,
+			alignItems: 'center',
+			justifyContent: 'center'
+		},
+		timesUpText:{
+			color:'#fff',
+			flexDirection:'column',
+			fontSize:36
+		},
+		quizBtn:{
+			height:125,
+			width:125,
+			backgroundColor:'#fff',
+			alignItems: 'center',
+			justifyContent: 'center',
+			borderRadius:5
+		},
+		quizBtnTextBig:{
+			fontSize:65,
+			color:textColor
 		}
 });
