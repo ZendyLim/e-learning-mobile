@@ -349,7 +349,7 @@ module.exports = StyleSheet.create({
 		},
 		questionContainer:{
 			backgroundColor:'rgba(255,255,255,0.8)',
-			height:109,
+			height:100,
 			padding:10,
 			flexWrap: 'wrap', 
 			alignItems: 'center',
@@ -368,7 +368,7 @@ module.exports = StyleSheet.create({
 		},
 		//Quiz Screen
 		quizFlashTop: {
-			height:200,
+			height:180,
 			zIndex:5,
 			overflow:'hidden'
 		},
@@ -404,10 +404,22 @@ module.exports = StyleSheet.create({
 			backgroundColor:'#fff',
 			alignItems: 'center',
 			justifyContent: 'center',
-			borderRadius:5
+			borderRadius:5,
+			margin:7
+		},
+		quizBtnPress:{
+			backgroundColor: primaryColor
+		},
+		quizBtnTextPress:{
+			color:'#fff'
 		},
 		quizBtnTextBig:{
 			fontSize:65,
 			color:textColor
+		},
+		answerContainer:{
+			alignItems: 'center',
+			justifyContent: 'center',
+			paddingTop:13
 		}
 });

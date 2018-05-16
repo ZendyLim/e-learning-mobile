@@ -8,6 +8,7 @@ import  { strings }   from '../config/localization';
 **/
 class QuestionPanel extends Component {
   static propTypes = {
+    children: PropTypes.string.isRequired,
     expression: PropTypes.string
   };
 
@@ -31,7 +32,7 @@ class QuestionPanel extends Component {
                     
                 </Text>
                 <Text style={ [styles.questionBigText, styles.questionText ] }>
-                    ひ
+                    { this.props.children }
                 </Text>
                 
             </View>

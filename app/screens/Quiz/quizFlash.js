@@ -17,7 +17,7 @@ import {
   import CharacterImage   from '../../component/character';
   import TimerBar   from '../../component/timer';
   import QuestionPanel   from '../../component/question';
-  import AnswerButton   from '../../component/answerButton';
+  import Quiz   from '../../component/quiz';
 
   const imageSource = require('../../assets/img/topic/1.0-class.jpg');
 
@@ -31,26 +31,24 @@ import {
 
     constructor(props){
       super(props);
-
-      this._onSetLanguageTo('en');
+      
+      this.optionsNumber = 4;
+      this.allQuestion = [];
 
       this.state = {
         timesUp: false,
         expression: 'default',
         time:7000,
         counter: 0,
-        question: '',
+        question: [],
         answerOptions: [],
         answer: '',
-        answersCount: {
-          nintendo: 0,
-          microsoft: 0,
-          sony: 0
-        },
         result: ''
       }
 
-      this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
+      this._onSetLanguageTo('en');
+
+      //this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
 
     }
 
@@ -72,21 +70,10 @@ import {
     }
 
     _renderAnswerButtons = () => {
-      // const { question } = this.props
-      // const { possibleArtists } = question
-  
-      // return possibleArtists.map((artist, i) =>
-      //   <AnswerButton
-      //     key={artist}
-      //     title={artist}
-      //     onPress={() => this.onAnswer(i)}
-      //     {...this.getAdditionalButtonProps(i)}
-      //   />,
-      // )
+      
+      
       return(
-        <AnswerButton textData={ quizItems } >
-          hi
-        </AnswerButton>
+        <Quiz answer={ this.state.question } answerOptions={ this.state.question.answerOption } />
       )
       
     };
@@ -94,7 +81,8 @@ import {
     render() {
       let display = this.state.timesUp;
       let expression = this.state.expression;
-      console.log(this.state.answerOptions);
+      let questionDisplay = this.state.question.moji
+      
       return (
         <View style={styles.container}>
             <View style={[styles.row]}>
@@ -104,7 +92,7 @@ import {
                       style={ styles.quizBanner }
                       source={ imageSource }
                   >
-                    <QuestionPanel></QuestionPanel>
+                    <QuestionPanel>{ questionDisplay }</QuestionPanel>
 
                     <CharacterImage expression={ expression } style={ styles.quizChar }/>
 
@@ -128,22 +116,56 @@ import {
     }
 
     componentWillMount() {
-      const shuffledAnswerOptions = quizItems.map((question) => this.shuffleArray(question.answers));
+      let shuffledQuiz = this.shuffleItems(quizItems);
+      
+      this.allQuestion = shuffledQuiz.map((question) => 
+        this.shuffleAnswers(question, shuffledQuiz)
+      );
+      
+      
 
       this.setState({
-        answerOptions: shuffledAnswerOptions[0]
-      });
+         question: this.allQuestion[0]
+       });
     }
 
-    shuffleArray(array) {
-      var currentIndex = 0;
-  
+    shuffleAnswers(array, allArray) {
+      var allArrayLength = allArray.length, temporaryValue, randomIndex;
+
+      var randomIndex = Math.floor(Math.random() * this.optionsNumber);
+      array.answerOption = [];
+      array.answerOption[randomIndex] = array;
+      
+      currentItems = [array.id];  
+
+      for(var i = 0; i < this.optionsNumber; i++){
+        if(array.answerOption[i] != undefined) continue;
+        randomItem = '';
+           
+        
+        while(!randomItem){
+          randomIndex = Math.floor(Math.random() * allArrayLength);
+          if(currentItems.indexOf(allArray[randomIndex].id) > -1) continue;
+          
+          currentItems[currentItems.length] = allArray[randomIndex].id;
+          randomItem = allArray[randomIndex];
+        }
+
+        array.answerOption[i] = randomItem;
+      }
+
+      return array;
+    };
+
+    shuffleItems(array) {
+      var currentIndex = array.length, temporaryValue, randomIndex;
+      
       // While there remain elements to shuffle...
-      while (currentIndex < 4) {
+      while (0 !== currentIndex) {
   
         // Pick a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex++;
+        currentIndex -= 1;
   
         // And swap it with the current element.
         temporaryValue = array[currentIndex];
@@ -154,28 +176,48 @@ import {
       return array;
     };
 
-    handleAnswerSelected(event) {
-      this.setUserAnswer(event.currentTarget.value);
-  
-      if (this.state.questionId < quizQuestions.length) {
-          setTimeout(() => this.setNextQuestion(), 300);
-      } else {
-          setTimeout(() => this.setResults(this.getResults()), 300);
-      }
-    }
 
-    setUserAnswer(answer) {
-      const updatedAnswersCount = update(this.state.answersCount, {
-        [answer]: {$apply: (currentValue) => currentValue + 1}
-      });
+
+
+    // handleAnswerSelected(event) {
+    //   this.setUserAnswer(event.currentTarget.value);
+  
+    //   if (this.state.questionId < quizQuestions.length) {
+    //       setTimeout(() => this.setNextQuestion(), 300);
+    //   } else {
+    //       setTimeout(() => this.setResults(this.getResults()), 300);
+    //   }
+    // }
+
+    // setUserAnswer(answer) {
+    //   const updatedAnswersCount = update(this.state.answersCount, {
+    //     [answer]: {$apply: (currentValue) => currentValue + 1}
+    //   });
+  
+    //   this.setState({
+    //       answersCount: updatedAnswersCount,
+    //       answer: answer
+    //   });
+    // }
+
+    setNextQuestion() {
+      const counter = this.state.counter + 1;
+      //const questionId = this.state.questionId + 1;
   
       this.setState({
-          answersCount: updatedAnswersCount,
-          answer: answer
+          counter: counter,
+          //questionId: questionId,
+          question: this.allQuestion[counter],
+          answerOptions: this.allQuestion[counter].answerOption,
+          answer: ''
       });
+
+      
     }
 
     onTimesUp = (val) => {
+      this.setNextQuestion();
+
       this.setState({
         timesUp: true,
         expression:'sad'

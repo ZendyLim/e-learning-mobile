@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { TouchableHighlight, Image, View, Text } from 'react-native';
 import PropTypes from 'prop-types';
-var Sound = require('react-native-sound');
 
 /**
   Quiz Button
@@ -9,18 +8,31 @@ var Sound = require('react-native-sound');
 class AnswerButton extends Component {
   static propTypes = {
     children: PropTypes.string.isRequired,
-    textData: PropTypes.object
+    textData: PropTypes.object,
+    selected: PropTypes.bool,
+    id: PropTypes.string
   };
 
   constructor(props) {
       super(props);
+
+  }
+
+  onSelectAnswer(){
+    this.props.onSelectAnswer(this.props.id);
   }
 
     render(){
       
       return (
-        <TouchableHighlight style={ [styles.quizBtn, styles.shadow] }>
-            <Text style={ [styles.quizBtnTextBig] }>{ this.props.children }</Text>
+        <TouchableHighlight 
+          style={ [styles.quizBtn, styles.shadow, this.props.selected && styles.quizBtnPress ] } 
+          onPress={() =>  this.onSelectAnswer() }
+          >
+            <Text 
+              style={ [styles.quizBtnTextBig, this.props.selected && styles.quizBtnTextPress] }>
+                { this.props.children }
+            </Text>
         </TouchableHighlight>       
       );
     }

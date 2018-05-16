@@ -15,7 +15,7 @@ class CharacterImage extends Component {
       super(props);
 
       this.state = {
-        image: require('../assets/img/char/char-happy.png')
+        image: ''
       }
 
       
@@ -23,7 +23,7 @@ class CharacterImage extends Component {
 
     render(){
       this.chooseExpression();
-      
+
       return (
         <Image source={this.state.image} style={[ styles.character, this.props.style || {} ]} />
       );

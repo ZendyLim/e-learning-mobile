@@ -1,56 +1,74 @@
-var quizItems = {
-    "quiz" : {
-      "h_ka": {
+var quizItems = [
+    {   
+        "id":"h_ka",
+        "type":"hiragana",      
         "romaji":"ka",
         "moji":"か",
         "audio":"ka.mp3"
-      },
-      "h_ki": {
+    },
+    {   
+        "id":"h_ki",
+        "type":"hiragana",      
         "romaji":"ki",
         "moji":"き",
         "audio":"ki.mp3"
-      },
-      "h_ku": {
+    },
+    {   
+        "id":"h_ku",
+        "type":"hiragana",      
         "romaji":"ku",
         "moji":"く",
         "audio":"ku.mp3"
-      },
-      "h_ke": {
+    },
+    {   
+        "id":"h_ke",
+        "type":"hiragana",      
         "romaji":"ke",
         "moji":"け",
         "audio":"ke.mp3"
-      },
-      "h_ko": {
+    },
+    {   
+        "id":"h_ko",
+        "type":"hiragana",      
         "romaji":"ko",
         "moji":"こ",
         "audio":"ko.mp3"
-      },
-      "h_sa": {
+    },
+    {   
+        "id":"h_sa",
+        "type":"hiragana",      
         "romaji":"sa",
         "moji":"さ",
         "audio":"sa.mp3"
-      },
-      "h_si": {
+    },
+    {   
+        "id":"h_shi",
+        "type":"hiragana",      
         "romaji":"shi",
         "moji":"し",
         "audio":"shi.mp3"
-      },
-      "h_su": {
+    },
+    {   
+        "id":"h_su",
+        "type":"hiragana",      
         "romaji":"su",
         "moji":"す",
         "audio":"su.mp3"
-      },
-      "h_se": {
+    },
+    {   
+        "id":"h_se",
+        "type":"hiragana",      
         "romaji":"se",
         "moji":"せ",
         "audio":"se.mp3"
-      },
-      "h_so": {
+    },
+    {   
+        "id":"h_so",
+        "type":"hiragana",      
         "romaji":"so",
         "moji":"そ",
         "audio":"so.mp3"
-      }
     }
-  }
+];
 
-  export default quizItems;
+export default quizItems;
