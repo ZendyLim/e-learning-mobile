@@ -14,12 +14,16 @@ import {
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
 import  { strings }   from '../../config/localization';
+import { ImageData } from '../../config/image_list';
 
 class HiraganaListScreen extends Component {
 
-  static navigationOptions = {
+  static navigationOptions = ({ navigation }) =>{
     //header: null,
-    title: 'HIRAGANA LIST',
+    const {state} = navigation;
+    return {
+      title: `${strings[state.params.studyType]}`,
+    };
   };
   state = {
     title:"",
@@ -30,6 +34,8 @@ class HiraganaListScreen extends Component {
     this.setState({
       title: navigation.getParam('title', null),
       img: navigation.getParam('img', null),
+      type: navigation.getParam('type', null),
+      studyType : navigation.getParam('studyType', null)
     });
     //Console.log(navigation.getParam('userName', null),"NIAMAK");
   }
@@ -52,17 +58,19 @@ class HiraganaListScreen extends Component {
     return (
       <ScrollView>
         <View style={study.StudyContainer}>
-          <Image 
-            style={ study.cardImg }
-            source= {this.state.img }
-            resizeMode="stretch"  
-          />
-          
+          <View style={[study.titleContainer , study.bgWhite]}>
+            <Image 
+              style={ study.cardImg }
+              source= { this.state.img ? ( ImageData[this.state.img] ) :   ImageData['loading'] }
+              resizeMode="stretch"  
+            />
+            <Text style={study.title}> { strings[this.state.title] } </Text>
+          </View>
           <View style={[study.cardBox, study.borderBox, study.p3]}>
             <Text style={[study.textLg, study.textBlack]}>Learn</Text>
             <View style={study.buttonContainer}>
               <TouchableOpacity style={[study.button, study.mR10]} onPress={this.navigateToLearn.bind(this, 'Learn')}>
-                <Icon name='play-arrow'/>
+                <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
               </TouchableOpacity>
             </View>
@@ -73,11 +81,11 @@ class HiraganaListScreen extends Component {
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
             <View style={study.buttonContainer}>
               <TouchableOpacity style={[study.button, study.mR10]}>
-                <Icon name='play-arrow'/>
+                <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
               </TouchableOpacity>
               <TouchableOpacity style={study.button}>
-                <Icon name='search'/>
+                <Icon name='search'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
             </View>
@@ -88,11 +96,11 @@ class HiraganaListScreen extends Component {
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
             <View style={study.buttonContainer}>
               <TouchableOpacity style={[study.button, study.mR10]}>
-                <Icon name='play-arrow'/>
+                <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
               </TouchableOpacity>
               <TouchableOpacity style={study.button}>
-                <Icon name='search'/>
+                <Icon name='search'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
             </View>

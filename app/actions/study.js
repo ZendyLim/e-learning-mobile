@@ -1,52 +1,64 @@
-import {FETCH_USER , FETCH_USER_SUCCESS ,  FETCH_USER_FAILED,  USER_REMOVE }  from '../lib/constants';
+import { START_TIME_LEARN, END_TIME_LEARN ,LEARN_FAILED , TAKE_QUIZ  }  from '../lib/constants';
 
 //================================   API FETCH ===================================
 
-export function startLearn(dataStart){
+export function startLearn(studyType, startLearn, studyID){
     return (dispatch) => {
-      dispatch(startLearnDispatch(dataStart))
+      dispatch(startLearnDispatch(studyType, startLearn, studyID))
     };        
 }
 
-export function finishLearn(dataAll){
-    return (dispatch) => {
-        fetch('http://www.mocky.io/v2/5af163c63100002a0096c946',{
-          method: 'PUT',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(userValue)
-        }).then(data => data.json())
-        .then(json => {
-          console.log('json:', json)
-          dispatch(fetchDataSuccess(json));
-        })
-        .catch(err => dispatch(fetchDataFailed(err)))
-      };        
-  }
-  
+export function endLearn(postValue){
+  console.log(JSON.stringify(postValue));
+
+  return (dispatch) => {
+    fetch('http://www.mocky.io/v2/5af163c63100002a0096c946',{
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(postValue)
+    }).then(data => data.json())
+    .then(json => {
+      dispatch(endLearnDispatch(postValue))
+    })
+    .catch(err => dispatch(endLearnFailedDispatch(err)))
+  };        
+}
+export function takeQuiz(studyData){
+  return (dispatch) => {
+    dispatch(takeQuizDispatch(studyData))
+  };        
+}
+
 
 // ===================================== ACTION SENDING DATA TO REDUCER =================================================
-export function startLearnDispatch(data) {
+export function startLearnDispatch(studyType, startLearn, studyID) {
   return {
-    type: START_LEARN_FETCH,
-    data: data
-
+    type: START_TIME_LEARN,
+    startLearn : startLearn,
+    studyType: studyType,
+    studyID: studyID,
   }
 }
 
-export function finishLearnDispatch() {
-    return {
-      type: FINISH_LEARN_FETCH,
-      data: data
-  
-    }
+export function endLearnDispatch(studyType) {
+  return {
+     type: END_TIME_LEARN,
+     endTime: studyType.endTime
   }
-  export function finishLearnFailedDispatch() {
-    return {
-      type: FINISH_LEARN_FAILED,
-      data: data
-  
-    }
+}
+export function endLearnFailedDispatch(err) {
+  return {
+    type: LEARN_FAILED,
+    err: err
   }
+}  
+export function takeQuizDispatch(studyData) {
+  console.log(studyData);
+  return {
+    type: TAKE_QUIZ,
+    studyRecord: studyData
+  }
+}

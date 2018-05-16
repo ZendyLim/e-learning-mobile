@@ -11,7 +11,7 @@ import {
   import { List, ListItem } from 'react-native-elements';
 
 
-import { AppStack , AuthStack }  from '../config/router';
+import { AppStack , AuthStack, MainStack }  from '../config/router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as Actions from '../actions/user'; //Import your actions
@@ -31,7 +31,7 @@ class MainScreen extends Component {
         console.log(this.props.data);
       if (this.props.data.id) {
         return (
-            <AppStack />
+            <MainStack />
           );
       }else{
         return (
