@@ -55,7 +55,8 @@ class TopicListScreen extends Component {
           title : this.state.title,
           index : this.state.index,
           type : this.state.type,
-          studyType : type, 
+          headerTitle : type, 
+          studyType : this.state.title + '_and_' +type, 
         }
       ));
   }
@@ -87,7 +88,7 @@ class TopicListScreen extends Component {
           />
           
           <View style={[study.buttonContainerTopic]}>
-            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'Vocabulary')}>
+            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'vocabulary')}>
               <Text style={[study.buttonTopicText]}>{ strings['vocabulary'] }</Text>
             </TouchableOpacity>
             <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'grammar')}>

@@ -22,7 +22,7 @@ class HiraganaListScreen extends Component {
     //header: null,
     const {state} = navigation;
     return {
-      title: `${strings[state.params.studyType]}`,
+      title: `${strings[state.params.headerTitle]}`,
     };
   };
   state = {
@@ -35,6 +35,7 @@ class HiraganaListScreen extends Component {
       title: navigation.getParam('title', null),
       img: navigation.getParam('img', null),
       type: navigation.getParam('type', null),
+      headerTitle : navigation.getParam('headerTitle', null),
       studyType : navigation.getParam('studyType', null)
     });
     //Console.log(navigation.getParam('userName', null),"NIAMAK");
@@ -45,7 +46,8 @@ class HiraganaListScreen extends Component {
       this.props.navigation.navigate('LearnListScreen',(
         {
           type : type,
-          title : this.state.title
+          title : this.state.title,
+          studyType: this.state.studyType
         }
       ));
     }else{

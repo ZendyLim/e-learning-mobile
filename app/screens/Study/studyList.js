@@ -35,6 +35,8 @@ class StudyListScreen extends Component {
   navigateToLearn=(item, index)=>{
     item['index'] = index;
     item['studyType'] = item.title;
+    item['headerTitle'] = item.title;
+    
     if(item.type == 'Initial'){
       item['studyType'] = item.title;
       this.props.navigation.navigate('HiraganaList',(

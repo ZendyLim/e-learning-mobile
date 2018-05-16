@@ -38,7 +38,6 @@ import {
         userName: navigation.getParam('userName', null),
         type: navigation.getParam('type',null),
       });
-      //Console.log(navigation.getParam('userName', null),"NIAMAK");
     }
 
     updateName = (name) => {

@@ -9,7 +9,6 @@ export function startLearn(studyType, startLearn, studyID){
 }
 
 export function endLearn(postValue){
-  console.log(JSON.stringify(postValue));
 
   return (dispatch) => {
     fetch('http://www.mocky.io/v2/5af163c63100002a0096c946',{
@@ -56,7 +55,6 @@ export function endLearnFailedDispatch(err) {
   }
 }  
 export function takeQuizDispatch(studyData) {
-  console.log(studyData);
   return {
     type: TAKE_QUIZ,
     studyRecord: studyData
