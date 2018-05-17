@@ -12,7 +12,6 @@ export function createUser(userValue){
           body: JSON.stringify(userValue)
         }).then(data => data.json())
         .then(json => {
-          console.log('json:', json)
           dispatch(fetchDataSuccess(json));
         })
         .catch(err => dispatch(fetchDataFailed(err)))
@@ -30,7 +29,6 @@ export function updateUser(userValue){
         body: JSON.stringify(userValue)
       }).then(data => data.json())
       .then(json => {
-        console.log('json:', json)
         dispatch(fetchDataSuccess(json));
       })
       .catch(err => dispatch(fetchDataFailed(err)))
@@ -39,7 +37,6 @@ export function updateUser(userValue){
 
 export function deleteUserState(){
   return (dispatch) => {
-    console.log('delete data');
       dispatch(deleteUserStateDispatch())
     };        
 }
@@ -58,7 +55,6 @@ export function fetchDataSuccess(data) {
   }
 }
 export function fetchDataFailed(error) {
-  console.log(error);
   return {
     type: FETCH_USER_FAILED,
     error: error

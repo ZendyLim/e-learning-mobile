@@ -5,7 +5,6 @@ export function getDataAPI(){
         fetch('http://www.mocky.io/v2/5af16325310000550096c943')
         .then(data => data.json())
         .then(json => {
-          console.log('json:', json)
           dispatch(SetDataSuccess(json));
         })
         .catch(err => dispatch(getPeopleFailure(err)))

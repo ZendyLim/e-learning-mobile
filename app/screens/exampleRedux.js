@@ -19,7 +19,6 @@ import {
   class LoginScreen extends Component {
     constructor(props) {
       super(props);
-        //console.log(this.props);
 
       this.renderItem = this.renderItem.bind(this);
   }

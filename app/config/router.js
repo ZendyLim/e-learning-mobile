@@ -22,6 +22,8 @@ import StudySummaryScreen from '../screens/Summary/studySummary';
 import QuizFlashScreen from '../screens/Quiz/quizFlash';
 //import setting data
 import SettingScreen from '../screens/Setting/setting';
+//import testing redux
+import StudyReduxScreen from '../screens/studyRedux';
 
 const styles = require('../styles/style');
 //import 
@@ -31,7 +33,6 @@ const StudyStack = StackNavigator({
     HiraganaList: HiraganaListScreen,
     QuizFlash: QuizFlashScreen,
     LearnListScreen:  LearnListScreen,
-    LearnHiraganaModule: LearnHiraganaModule,
 });
 
 const SummaryStack = StackNavigator({
@@ -44,23 +45,36 @@ const SettingStack = StackNavigator({
 
 
 export const AppStack = TabNavigator({ 
-    Home: HomeScreen,    
+    Home: {
+        screen: HomeScreen, 
+        navigationOptions: { 
+            tabBarLabel: () => {
+                return <Icon name="home"  type='font-awesome' size={25} color={"white"} />;
+              }
+        }
+    }, 
     Study: {
         screen: StudyStack, 
         navigationOptions: { 
-            tabBarLabel: 'Study' 
+            tabBarLabel: () => {
+                return <Icon name="book"  type='font-awesome'  size={25} color={"white"} />;
+              }
         }
     }, 
     Summary: { 
         screen: SummaryStack, 
         navigationOptions: { 
-            tabBarLabel: 'Summary' 
+            tabBarLabel: () => {
+                return <Icon name="list"  type='font-awesome'  size={25} color={"white"} />;
+              }
         }
     }, 
     Setting: { 
         screen: SettingStack, 
         navigationOptions: { 
-            tabBarLabel: 'Setting' 
+            tabBarLabel: () => {
+                return <Icon name="user" type='font-awesome'  size={25} color={"white"} />;
+              } 
         }
     }
 }, {
@@ -69,6 +83,17 @@ export const AppStack = TabNavigator({
         style:styles.tabBar
     }
 });
+
+export const MainStack = StackNavigator({
+    AppStack: {
+        screen: AppStack,
+        navigationOptions: { 
+            header: null 
+        }
+    },
+    LearnHiraganaModule: LearnHiraganaModule,
+    StudyReduxScreen: StudyReduxScreen,
+})
 
 export const AuthStack = StackNavigator(
     { 

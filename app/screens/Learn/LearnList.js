@@ -37,11 +37,11 @@ class LearnListScreen extends Component {
     this.setState({
       title: navigation.getParam('title', null),
       type: navigation.getParam('type', null),
-      item: LearnListData[navigation.getParam('title', null)],
+      studyType: navigation.getParam('studyType', null),
+      item: LearnListData[navigation.getParam('studyType', null)],
     });
   }
   navigateToPage=(item, index)=>{
-    console.log(item);
     if(item.type == 'Initial'){
       this.props.navigation.navigate('LearnHiraganaModule',(
         item
@@ -66,7 +66,7 @@ class LearnListScreen extends Component {
       );
     }else{
       return (
-        <Text></Text>
+        <Text>{ this.state.studyType }</Text> 
       );
     }
   }

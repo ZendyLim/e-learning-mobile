@@ -33,7 +33,7 @@ module.exports = StyleSheet.create({
     backgroundColor: 'steelblue',
     flex: 1,
     width: '100%', 
-    height: 150,
+    height: 180,
     alignItems: 'stretch', 
   },
   
@@ -148,6 +148,57 @@ module.exports = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 5,
     marginBottom: 5
+  },
+  buttonContainerTopic: {
+    flex: 1,
+    height : 100,
+    paddingTop : 10,
+    paddingBottom : 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  buttonTopic: {
+    height: 90,
+    width : '48%',
+    backgroundColor: '#ffffff',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: '#96d6f7',
+    borderWidth: 1,
+    borderRadius: 5,
+    
+  },buttonTopicText:{
+    color : '#000000', 
+    fontSize : 20,
+  },
+  ScrollViewColor : {
+    backgroundColor: '#d2fafc',
+  },
+  buttonContainerTopicNext: {
+    flex: 1,
+    height : 150,
+    paddingTop : 10,
+    paddingBottom : 10,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  nextTopic: {
+    height: 60,
+    width : '100%',
+    backgroundColor: '#cccccc',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderColor: '#cccccc',
+    borderWidth: 1,
+    borderRadius: 5,
+  },
+  buttonTopicNextText:{
+    color : '#ffffff', 
+    fontSize : 18,
+  },
+  bgWhite : {
+    backgroundColor: '#fff',
   }
 });
 

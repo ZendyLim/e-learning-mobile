@@ -39,7 +39,6 @@ class LearnHiraganaModule extends Component {
       type: navigation.getParam('type', null),
       study: navigation.getParam('study', null),
     });
-    console.log(navigation.getParam('study', null));
   }
   render() {
     if(this.state.type){
