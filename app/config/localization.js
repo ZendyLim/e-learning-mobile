@@ -32,6 +32,10 @@ export let strings = new LocalizedStrings({
    TOPIC14_TITLE : "Society",
    TOPIC15_TITLE : "Science and technology",
    TOPIC16_TITLE : "Language and Culture",
+   // Question Panel
+   QUESTION_SELECT : "Select",
+   // Quiz
+   TIMES_UP: "Time's up"
  },
  ja: {
    loginGuest: "japan",
@@ -60,5 +64,9 @@ export let strings = new LocalizedStrings({
    TOPIC14_TITLE : "社会",
    TOPIC15_TITLE : "科学技術",
    TOPIC16_TITLE : "科学技術",
+   // Question Panel
+   QUESTION_SELECT : "選ぶ",
+   // Quiz
+   TIMES_UP: "時間です"
 }
 });

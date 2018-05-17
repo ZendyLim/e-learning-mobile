@@ -2,7 +2,7 @@
 
 import {createStore, applyMiddleware, compose} from 'redux';
 import reducers from '../reducers';
-import { persistStore, persistReducer } from 'redux-persist';
+import { persistStore, persistReducer,  } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import {AsyncStorage} from 'react-native';
 import thunk from 'redux-thunk';
