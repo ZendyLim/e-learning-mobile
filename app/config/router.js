@@ -16,6 +16,7 @@ import TopicListScreen from '../screens/Study/topiclist';
 import HiraganaListScreen from '../screens/Study/hiraganaList';
 import LearnListScreen from '../screens/Learn/LearnList';
 import LearnHiraganaModule from '../screens/Learn/LearnModule';
+import ScoreScreen from '../screens/Study/score';
 //import Summary Screen
 import StudySummaryScreen from '../screens/Summary/studySummary';
 //import Quiz Flash Screen
@@ -90,6 +91,7 @@ export const MainStack = StackNavigator({
     },
     LearnHiraganaModule: LearnHiraganaModule,
     StudyReduxScreen: StudyReduxScreen,
+    ScoreScreen : ScoreScreen,
 })
 
 export const AuthStack = StackNavigator(

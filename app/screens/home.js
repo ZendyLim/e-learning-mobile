@@ -25,6 +25,8 @@ import {
           <Button title="Show me more of the app" onPress={this._showMoreApp} />
           <Button title="Quiz" onPress={this.takeQuiz} />
           <Button title="Study Redux" onPress={this.testRedux} />
+          <Button title="Score Screen" onPress={this.scoreScreen} />
+          
         </View>
       );
     }
@@ -39,6 +41,9 @@ import {
 
     testRedux = () => {
       this.props.navigation.navigate('StudyReduxScreen');
+    };
+    scoreScreen = () => {
+      this.props.navigation.navigate('ScoreScreen');
     };
   }
 
