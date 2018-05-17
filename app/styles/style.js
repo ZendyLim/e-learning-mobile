@@ -25,7 +25,7 @@ module.exports = StyleSheet.create({
 		container: {
 			flex: 1,
 			alignItems: 'center',
-			backgroundColor: 'powderblue',
+			backgroundColor: '#d2fafc',
 			position: 'relative',
 			// height: '100%',
 			// width: '100%',
