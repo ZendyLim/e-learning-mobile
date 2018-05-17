@@ -27,6 +27,7 @@ import {
     TODO:
     1. Score
     2. If Time's up show correct answer
+    2.1 If all quiz is done show score page
     3. Random All Quizzes
     4. Refine the code 
   */
