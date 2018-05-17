@@ -945,9 +945,17 @@ export const hiraganaList = [
     "hiragana": "や",
     "romaji": "ya",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "hiragana": "ゆ",
     "romaji": "yu",
+  },
+   {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "よ",
@@ -976,10 +984,18 @@ export const hiraganaList = [
   {
     "hiragana": "わ",
     "romaji": "wa",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "を",
     "romaji": "o(wo)",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "ん",
@@ -1090,10 +1106,18 @@ export const hiraganaList = [
   {
     "hiragana": "きゃ",
     "romaji": "kya",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "きゅ",
     "romaji": "kyu",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "きょ",
@@ -1102,10 +1126,18 @@ export const hiraganaList = [
   {
     "hiragana": "しゃ",
     "romaji": "sha",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "しゅ",
     "romaji": "shu",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "しょ",
@@ -1114,10 +1146,18 @@ export const hiraganaList = [
   {
     "hiragana": "ちゃ",
     "romaji": "cha",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "ちゅ",
     "romaji": "chu",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "ちょ",
@@ -1126,10 +1166,18 @@ export const hiraganaList = [
   {
     "hiragana": "にゃ",
     "romaji": "nya",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "にゅ",
     "romaji": "nyu",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "にょ",
@@ -1138,10 +1186,18 @@ export const hiraganaList = [
   {
     "hiragana": "ひゃ",
     "romaji": "hya",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "ひゅ",
     "romaji": "hyu",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "ひょ",
@@ -1150,10 +1206,18 @@ export const hiraganaList = [
   {
     "hiragana": "みゃ",
     "romaji": "mya",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "みゅ",
     "romaji": "myu",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "みょ",
@@ -1162,10 +1226,18 @@ export const hiraganaList = [
   {
     "hiragana": "りゃ",
     "romaji": "rya",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "りゅ",
     "romaji": "ryu",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "りょ",
@@ -1174,10 +1246,18 @@ export const hiraganaList = [
   {
     "hiragana": "ぎゃ",
     "romaji": "gya",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "ぎゅ",
     "romaji": "gyu",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "ぎょ",
@@ -1186,10 +1266,18 @@ export const hiraganaList = [
   {
     "hiragana": "じゃ",
     "romaji": "ja",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "じゅ",
     "romaji": "ju",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "じょ",
@@ -1198,10 +1286,18 @@ export const hiraganaList = [
   {
     "hiragana": "びゃ",
     "romaji": "bya",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "びゅ",
     "romaji": "byu",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "びょ",
@@ -1210,10 +1306,18 @@ export const hiraganaList = [
   {
     "hiragana": "ぴゃ",
     "romaji": "pya",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "ぴゅ",
     "romaji": "pyu",
+  }, 
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "hiragana": "ぴょ",
@@ -1368,9 +1472,17 @@ export const katakanaList = [
     "katakana": "ヤ",
     "romaji": "ya",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "ユ",
     "romaji": "yu",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "ヨ",
@@ -1400,9 +1512,17 @@ export const katakanaList = [
     "katakana": "ワ",
     "romaji": "wa",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "ヲ",
     "romaji": "o(wo)",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "ン",
@@ -1514,9 +1634,17 @@ export const katakanaList = [
     "katakana": "キャ",
     "romaji": "kya",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "キュ",
     "romaji": "kyu",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "キョ",
@@ -1526,9 +1654,17 @@ export const katakanaList = [
     "katakana": "シャ",
     "romaji": "sha",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "シュ",
     "romaji": "shu",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "ショ",
@@ -1538,9 +1674,17 @@ export const katakanaList = [
     "katakana": "チャ",
     "romaji": "cha",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "チュ",
     "romaji": "chu",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "チョ",
@@ -1550,9 +1694,17 @@ export const katakanaList = [
     "katakana": "ニャ",
     "romaji": "nya",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "ニュ",
     "romaji": "nyu",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "ニョ",
@@ -1562,9 +1714,17 @@ export const katakanaList = [
     "katakana": "ヒャ",
     "romaji": "hya",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "ヒュ",
     "romaji": "hyu",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "ヒョ",
@@ -1574,9 +1734,17 @@ export const katakanaList = [
     "katakana": "ミャ",
     "romaji": "mya",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "ミュ",
     "romaji": "myu",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "ミョ",
@@ -1586,9 +1754,17 @@ export const katakanaList = [
     "katakana": "リャ",
     "romaji": "rya",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "リュ",
     "romaji": "ryu",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "リョ",
@@ -1598,9 +1774,17 @@ export const katakanaList = [
     "katakana": "ギャ",
     "romaji": "gya",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "ギュ",
     "romaji": "gyu",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "ギョ",
@@ -1610,9 +1794,17 @@ export const katakanaList = [
     "katakana": "ジャ",
     "romaji": "ja",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "ジュ",
     "romaji": "ju",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "ジョ",
@@ -1622,9 +1814,17 @@ export const katakanaList = [
     "katakana": "ビャ",
     "romaji": "bya",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "ビュ",
     "romaji": "byu",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "ビョ",
@@ -1634,9 +1834,17 @@ export const katakanaList = [
     "katakana": "ピャ",
     "romaji": "pya",
   },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
+  },
   {
     "katakana": "ピュ",
     "romaji": "pyu",
+  },
+  {//blank
+    "hiragana": "",
+    "romaji": "",
   },
   {
     "katakana": "ピョ",

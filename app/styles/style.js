@@ -41,7 +41,8 @@ module.exports = StyleSheet.create({
     },
 		row: {
 			flexDirection: 'row',
-			flex: 1
+			flex: 1,
+			flexWrap:'wrap'
 		},
 		// 12 column grid system (Like Bootstrap)
 		col12 : {

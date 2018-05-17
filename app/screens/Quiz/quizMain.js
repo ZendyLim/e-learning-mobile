@@ -30,7 +30,7 @@ var quizListArray = [
 class QuizMainScreen extends Component {
 
   static navigationOptions = {
-    header: null,
+    // header: null,
     title: 'QuizList',
   };
 
