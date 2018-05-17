@@ -14,7 +14,9 @@ class Quiz extends Component {
 
   constructor(props) {
       super(props);
-    
+      
+      this.currentAnswer = this.props.answer;
+
       this.state = {
           selectedAnswer: ''
       }
@@ -40,8 +42,23 @@ class Quiz extends Component {
         );
     }
 
+    componentDidUpdate() {
+        this.resetSelected();
+    }
+
+    resetSelected = () => {
+        
+        if(this.currentAnswer.id != this.props.answer.id){
+            this.currentAnswer = this.props.answer
+            this.setState({
+                selectedAnswer: ''
+            })
+        }
+
+    }
+
     checkCorrect = (id) => {
-        console.log(this.state.selectedAnswer);
+        //console.log(this.state.selectedAnswer);
         if(this.state.selectedAnswer == ''){
             return -1;
         }
@@ -55,7 +72,7 @@ class Quiz extends Component {
 
     onSelect = (val) => {
         this.props.onAnswerSelected(true);
-        
+
         this.setState({
             selectedAnswer: val
         });

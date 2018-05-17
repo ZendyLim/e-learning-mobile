@@ -10,7 +10,8 @@ var availableWidth = width;
 class TimerBar extends Component {
   static propTypes = {
     time: PropTypes.number,
-    timerRun: PropTypes.bool
+    timerRun: PropTypes.bool,
+    timerRestart: PropTypes.bool
   };
 
   constructor(props) {
@@ -21,15 +22,14 @@ class TimerBar extends Component {
       this.seconds = this.duration / 1000;
 
       this.state = {
-        progress: 0
-      };
-
-      
+        progress: 0,
+        start: true
+      };   
       
   }
 
     render(){
-      this.timerStop();
+      
 
       return (
         <View style={[styles.timerWrapper, styles.shadow]}>
@@ -76,19 +76,39 @@ class TimerBar extends Component {
     }
 
     componentDidMount() {
-        this.progress.setValue(0);
-        this.progress.addListener((progress) => {
+
+      this.progress.addListener((progress) => {
           this.setState({
             progress: parseFloat(this.seconds - ((progress.value * this.seconds) / 100 )).toFixed(2) 
           });
-        });
-     
-        Animated.timing(this.progress, {
-          duration: this.duration,
-          toValue: 100
-        }).start(() => {
-            this.timerEnd();
-        });
+      });
+
+      this.timerStart();
+
+    }
+
+    componentDidUpdate() {
+      this.timerStop();
+      this.timerRestart();
+    }
+
+    componentWillMount() {
+      this.progress.removeListener();
+    }
+
+    timerStart(){
+
+      this.progress.setValue(0);
+      
+      Animated.timing(this.progress, {
+        duration: this.duration,
+        toValue: 100
+      }).start(() => {
+          this.timerEnd();
+      });
+
+      
+      this.props.onRestart(false);
     }
 
     timerEnd(){
@@ -102,9 +122,14 @@ class TimerBar extends Component {
         Animated.timing(
           this.progress
         ).stop();
+      }    
+    }
+
+    timerRestart(){
+      if(this.props.timerRestart){
+        this.timerStart();
       }
-      
-  }
+    }
 }
 module.exports = TimerBar;
 

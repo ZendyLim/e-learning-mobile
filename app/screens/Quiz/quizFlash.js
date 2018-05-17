@@ -22,6 +22,14 @@ import {
   const imageSource = require('../../assets/img/topic/1.0-class.jpg');
 
   import quizItems from '../../config/quiz';
+
+  /*
+    TODO:
+    1. Score
+    2. If Time's up show correct answer
+    3. Random All Quizzes
+    4. Refine the code 
+  */
   class QuizFlashScreen extends Component {
   
     static navigationOptions = {      
@@ -40,11 +48,13 @@ import {
         expression: 'default',
         time:7000,
         timerRun:true,
+        timerRestart:false,
         counter: 0,
         question: [],
         answerOptions: [],
         answer: '',
-        result: ''
+        result: '',
+        pause: 2000
       }
 
       this._onSetLanguageTo('en');
@@ -70,8 +80,7 @@ import {
       }
     }
 
-    _renderAnswerButtons = () => {
-      
+    _renderAnswerButtons = () => {      
       
       return(
           <Quiz 
@@ -88,7 +97,8 @@ import {
       let expression = this.state.expression;
       let questionDisplay = this.state.question.moji
       let timerRun = this.state.timerRun;
-      
+      let timerRestart = this.state.timerRestart;
+
       return (
         <View style={styles.container}>
             <View style={[styles.row]}>
@@ -101,14 +111,14 @@ import {
                     <QuestionPanel>{ questionDisplay }</QuestionPanel>
 
                     <CharacterImage expression={ expression } style={ styles.quizChar }/>
-
-                    { this._renderTimesup() }
+                    
                   </ImageBackground>
 
+                  { this._renderTimesup() }
               </View>
               
               <View style={[styles.col12]}>
-                <TimerBar time={ this.state.time } timerRun={ timerRun } onTimesUp={this.onTimesUp} />
+                <TimerBar time={ this.state.time } timerRestart={ timerRestart } timerRun={ timerRun } onTimesUp={this.onTimesUp} onRestart={this.onRestart} />
               </View>
 
               <View style={[ styles.col12, styles.quizAnswerWrapper]}>
@@ -214,7 +224,11 @@ import {
           //questionId: questionId,
           question: this.allQuestion[counter],
           answerOptions: this.allQuestion[counter].answerOption,
-          answer: ''
+          answer: '',
+          timerRun:true,
+          timerRestart:true,
+          timesUp: false,  
+          expression:'default',
       });
 
       
@@ -228,15 +242,27 @@ import {
         expression:'sad'
       });
 
+      setTimeout(() => {
+        this.setNextQuestion();
+      }, this.state.pause);
+    };
+
+    onRestart = () => {
+      this.setState({
+        timerRestart: false
+      });
     };
 
     stopTimer = () => {
-      
       this.setState({
         timerRun:false
       });
 
+      setTimeout(() => {
+        this.setNextQuestion();
+      }, this.state.pause);
     };
+    
   
   }
 
