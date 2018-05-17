@@ -39,6 +39,7 @@ import {
         timesUp: false,
         expression: 'default',
         time:7000,
+        timerRun:true,
         counter: 0,
         question: [],
         answerOptions: [],
@@ -73,7 +74,11 @@ import {
       
       
       return(
-        <Quiz answer={ this.state.question } answerOptions={ this.state.question.answerOption } />
+          <Quiz 
+            answer={ this.state.question } 
+            answerOptions={ this.state.question.answerOption }
+            onAnswerSelected={ this.stopTimer }
+          />
       )
       
     };
@@ -82,12 +87,13 @@ import {
       let display = this.state.timesUp;
       let expression = this.state.expression;
       let questionDisplay = this.state.question.moji
+      let timerRun = this.state.timerRun;
       
       return (
         <View style={styles.container}>
             <View style={[styles.row]}>
               <View style={[styles.col12, styles.quizFlashTop]}>
-
+                
                   <ImageBackground
                       style={ styles.quizBanner }
                       source={ imageSource }
@@ -102,11 +108,12 @@ import {
               </View>
               
               <View style={[styles.col12]}>
-                <TimerBar time={ this.state.time } onTimesUp={this.onTimesUp} />
+                <TimerBar time={ this.state.time } timerRun={ timerRun } onTimesUp={this.onTimesUp} />
               </View>
 
-              <View style={[ styles.col12]}>
-              { this._renderAnswerButtons() }
+              <View style={[ styles.col12, styles.quizAnswerWrapper]}>
+                <View style={ !timerRun && styles.blocker }></View>
+                { this._renderAnswerButtons() }
               </View>
 
             </View>
@@ -121,8 +128,6 @@ import {
       this.allQuestion = shuffledQuiz.map((question) => 
         this.shuffleAnswers(question, shuffledQuiz)
       );
-      
-      
 
       this.setState({
          question: this.allQuestion[0]
@@ -146,7 +151,7 @@ import {
         while(!randomItem){
           randomIndex = Math.floor(Math.random() * allArrayLength);
           if(currentItems.indexOf(allArray[randomIndex].id) > -1) continue;
-          
+
           currentItems[currentItems.length] = allArray[randomIndex].id;
           randomItem = allArray[randomIndex];
         }
@@ -216,11 +221,19 @@ import {
     }
 
     onTimesUp = (val) => {
-      this.setNextQuestion();
+      //this.setNextQuestion();
 
       this.setState({
         timesUp: true,
         expression:'sad'
+      });
+
+    };
+
+    stopTimer = () => {
+      
+      this.setState({
+        timerRun:false
       });
 
     };

@@ -398,6 +398,9 @@ module.exports = StyleSheet.create({
 			flexDirection:'column',
 			fontSize:36
 		},
+		quizBtnContainer:{
+			position:'relative'
+		},
 		quizBtn:{
 			height:125,
 			width:125,
@@ -405,7 +408,8 @@ module.exports = StyleSheet.create({
 			alignItems: 'center',
 			justifyContent: 'center',
 			borderRadius:5,
-			margin:7
+			margin:7,
+			zIndex:1
 		},
 		quizBtnPress:{
 			backgroundColor: primaryColor
@@ -417,9 +421,45 @@ module.exports = StyleSheet.create({
 			fontSize:65,
 			color:textColor
 		},
+		quizBtnIconWrapper:{
+			width:50,
+			height:50,
+			alignItems: 'center',
+			justifyContent: 'center',
+			borderRadius:50,
+			position:'absolute',
+			left:'50%',
+			top:-10,
+			marginLeft:-25,
+			zIndex:9,
+			elevation:2
+		},
+		quizBtnIcon:{
+			fontSize:36,
+			color:"#fff",
+			
+		},
+		quizBtnIconCorrect:{
+			backgroundColor:"#7fe900"
+		},
+		quizBtnIconWrong:{
+			backgroundColor:"#ec6f86"
+		},
 		answerContainer:{
 			alignItems: 'center',
 			justifyContent: 'center',
 			paddingTop:13
+		},
+		quizAnswerWrapper:{
+			position:'relative'
+		},
+		blocker:{
+			position:'absolute',
+			width:'100%',
+			height:'100%',
+			left:0,
+			top:0,
+			elevation:10,
+			zIndex:10
 		}
 });

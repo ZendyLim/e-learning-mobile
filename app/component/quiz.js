@@ -20,17 +20,6 @@ class Quiz extends Component {
       }
   }
 
-    _renderAnswerOptions(value) {
-
-        let display = value.romaji;
-
-        return (
-            <AnswerButton>
-                { display }
-            </AnswerButton>
-        );
-    }
-
     render(){
         
         return (
@@ -39,22 +28,34 @@ class Quiz extends Component {
                     <AnswerButton 
                         key={ item.id }
                         id={ item.id }
+                        textDisplay={ item.romaji }
                         style={ [ styles.displayInline ] } 
                         selected={ item.id == this.state.selectedAnswer } 
-                        onSelectAnswer={ this.onSelect }>
-                        
-                        { item.romaji }
-
-                    </AnswerButton>
+                        onSelectAnswer={ this.onSelect }
+                        isCorrect={ this.checkCorrect(item.id) }
+                    />
                 )
                 )}
             </View>
         );
     }
 
+    checkCorrect = (id) => {
+        console.log(this.state.selectedAnswer);
+        if(this.state.selectedAnswer == ''){
+            return -1;
+        }
+        else if(id != this.props.answer.id){
+            return 0;
+        }
+        else{
+            return 1;
+        }
+    }
 
     onSelect = (val) => {
-        console.log(val);
+        this.props.onAnswerSelected(true);
+        
         this.setState({
             selectedAnswer: val
         });

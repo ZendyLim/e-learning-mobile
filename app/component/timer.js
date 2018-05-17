@@ -9,7 +9,8 @@ var availableWidth = width;
 **/
 class TimerBar extends Component {
   static propTypes = {
-    time: PropTypes.number
+    time: PropTypes.number,
+    timerRun: PropTypes.bool
   };
 
   constructor(props) {
@@ -22,9 +23,14 @@ class TimerBar extends Component {
       this.state = {
         progress: 0
       };
+
+      
+      
   }
 
     render(){
+      this.timerStop();
+
       return (
         <View style={[styles.timerWrapper, styles.shadow]}>
           <View style={[styles.timerContainer]}>
@@ -86,9 +92,19 @@ class TimerBar extends Component {
     }
 
     timerEnd(){
-        this.props.onTimesUp(true);
+        if(this.props.timerRun){
+          this.props.onTimesUp(true);
+        }
     }
-    
+
+    timerStop(){
+      if(!this.props.timerRun){
+        Animated.timing(
+          this.progress
+        ).stop();
+      }
+      
+  }
 }
 module.exports = TimerBar;
 
