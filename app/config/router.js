@@ -26,7 +26,7 @@ import SettingScreen from '../screens/Setting/setting';
 //import testing redux
 import StudyReduxScreen from '../screens/studyRedux';
 
-
+const styles = require('../styles/style');
 //import 
 const StudyStack = StackNavigator({ 
     StudyList: StudyListScreen,
@@ -80,6 +80,9 @@ export const AppStack = TabNavigator({
     }
 }, {
     tabBarPosition: 'bottom',
+    tabBarOptions:{
+        style:styles.tabBar
+    }
 });
 
 export const MainStack = StackNavigator({
