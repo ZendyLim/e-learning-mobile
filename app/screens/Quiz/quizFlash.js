@@ -19,7 +19,7 @@ import {
   import QuestionPanel   from '../../component/question';
   import Quiz   from '../../component/quiz';
 
-  const imageSource = require('../../assets/img/topic/1.0-class.jpg');
+  
 
   import quizItems from '../../config/quiz';
 
@@ -28,7 +28,7 @@ import {
     1. Score
     2. If Time's up show correct answer
     2.1 If all quiz is done show score page
-    3. Random All Quizzes
+    3. Random All Quizzes [80%] Missing: Audio Quiz
     4. Refine the code 
   */
   class QuizFlashScreen extends Component {
@@ -42,7 +42,7 @@ import {
       super(props);
       
       this.optionsNumber = 4;
-      this.allQuestion = [];
+      this.allQuestion = [];      
 
       this.state = {
         timesUp: false,
@@ -55,11 +55,15 @@ import {
         answerOptions: [],
         answer: '',
         result: '',
+        answerFormat:'',
+        questionFormat:'',
         pause: 2000
       }
 
-      this._onSetLanguageTo('en');
+      this.imageSource = require('../../assets/img/topic/1.0-class.jpg');
 
+      this._onSetLanguageTo('en');
+      
       //this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
 
     }
@@ -88,6 +92,7 @@ import {
             answer={ this.state.question } 
             answerOptions={ this.state.question.answerOption }
             onAnswerSelected={ this.stopTimer }
+            format={ this.state.answerFormat }
           />
       )
       
@@ -96,7 +101,7 @@ import {
     render() {
       let display = this.state.timesUp;
       let expression = this.state.expression;
-      let questionDisplay = this.state.question.moji
+      let questionDisplay = this.state.question[this.state.questionFormat];
       let timerRun = this.state.timerRun;
       let timerRestart = this.state.timerRestart;
 
@@ -107,7 +112,7 @@ import {
                 
                   <ImageBackground
                       style={ styles.quizBanner }
-                      source={ imageSource }
+                      source={ this.imageSource }
                   >
                     <QuestionPanel>{ questionDisplay }</QuestionPanel>
 
@@ -135,6 +140,8 @@ import {
 
     componentWillMount() {
       let shuffledQuiz = this.shuffleItems(quizItems);
+
+      this.randomQuizFormat();
       
       this.allQuestion = shuffledQuiz.map((question) => 
         this.shuffleAnswers(question, shuffledQuiz)
@@ -192,7 +199,42 @@ import {
       return array;
     };
 
+    randomQuizFormat(){
+      var quizFormat = ['moji','romaji','audio_moji','audio_romaji'];
+      var quizFormatLength = quizFormat.length, randomIndex;
 
+      randomIndex = Math.floor(Math.random() * quizFormatLength);
+
+      switch (quizFormat[randomIndex]) {
+        case 'moji':
+          this.setState({
+            answerFormat: 'moji',
+            questionFormat: 'romaji'
+          });
+          break;
+        case 'romaji':
+          this.setState({
+            answerFormat: 'romaji',
+            questionFormat: 'moji'
+          });
+          break;
+
+        case 'audio_moji':
+          this.setState({
+            answerFormat: 'moji',
+            questionFormat: 'romaji'
+          });
+          break;
+      
+        default:
+          this.setState({
+            answerFormat: 'romaji',
+            questionFormat: 'moji'
+          });
+          break;
+          
+      }
+    }
 
 
     // handleAnswerSelected(event) {
@@ -219,6 +261,8 @@ import {
     setNextQuestion() {
       const counter = this.state.counter + 1;
       //const questionId = this.state.questionId + 1;
+
+      this.randomQuizFormat();
   
       this.setState({
           counter: counter,

@@ -10,6 +10,7 @@ class Quiz extends Component {
   static propTypes = {
     answer: PropTypes.object,
     answerOptions: PropTypes.array,
+    format:PropTypes.string
   };
 
   constructor(props) {
@@ -20,6 +21,7 @@ class Quiz extends Component {
       this.state = {
           selectedAnswer: ''
       }
+      
   }
 
     render(){
@@ -30,7 +32,7 @@ class Quiz extends Component {
                     <AnswerButton 
                         key={ item.id }
                         id={ item.id }
-                        textDisplay={ item.romaji }
+                        textDisplay={ item[this.props.format] }
                         style={ [ styles.displayInline ] } 
                         selected={ item.id == this.state.selectedAnswer } 
                         onSelectAnswer={ this.onSelect }
@@ -47,14 +49,12 @@ class Quiz extends Component {
     }
 
     resetSelected = () => {
-        
         if(this.currentAnswer.id != this.props.answer.id){
             this.currentAnswer = this.props.answer
             this.setState({
                 selectedAnswer: ''
             })
         }
-
     }
 
     checkCorrect = (id) => {
