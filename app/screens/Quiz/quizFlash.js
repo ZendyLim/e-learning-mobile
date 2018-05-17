@@ -25,9 +25,9 @@ import {
 
   /*
     TODO:
-    1. Score
-    2. If Time's up show correct answer
-    2.1 If all quiz is done show score page
+    1. Score [Done]
+    2. If Time's up show correct answer [Done]
+    2.1 If all quiz is done show score page [90%]
     3. Random All Quizzes [80%] Missing: Audio Quiz
     4. Refine the code 
   */
@@ -57,7 +57,8 @@ import {
         result: '',
         answerFormat:'',
         questionFormat:'',
-        pause: 2000
+        pause: 2000,
+        score:0,
       }
 
       this.imageSource = require('../../assets/img/topic/1.0-class.jpg');
@@ -93,6 +94,8 @@ import {
             answerOptions={ this.state.question.answerOption }
             onAnswerSelected={ this.stopTimer }
             format={ this.state.answerFormat }
+            timesUp={ this.state.timesUp }
+            isCorrect={ this.addScore }
           />
       )
       
@@ -261,20 +264,25 @@ import {
     setNextQuestion() {
       const counter = this.state.counter + 1;
       //const questionId = this.state.questionId + 1;
-
-      this.randomQuizFormat();
+      if(counter < this.allQuestion.length){
+        this.randomQuizFormat();
   
-      this.setState({
-          counter: counter,
-          //questionId: questionId,
-          question: this.allQuestion[counter],
-          answerOptions: this.allQuestion[counter].answerOption,
-          answer: '',
-          timerRun:true,
-          timerRestart:true,
-          timesUp: false,  
-          expression:'default',
-      });
+        this.setState({
+            counter: counter,
+            //questionId: questionId,
+            question: this.allQuestion[counter],
+            answerOptions: this.allQuestion[counter].answerOption,
+            answer: '',
+            timerRun:true,
+            timerRestart:true,
+            timesUp: false,  
+            expression:'default',
+        });
+      }
+      else{
+        alert('done');
+      }
+      
 
       
     }
@@ -308,6 +316,13 @@ import {
       }, this.state.pause);
     };
     
+    addScore = (isCorrect) => {
+      if(isCorrect){
+        this.setState({
+          score: this.state.score + 1
+        });
+      }
+    };
   
   }
 

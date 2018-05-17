@@ -10,7 +10,8 @@ class Quiz extends Component {
   static propTypes = {
     answer: PropTypes.object,
     answerOptions: PropTypes.array,
-    format:PropTypes.string
+    format:PropTypes.string,
+    timesUp:PropTypes.bool
   };
 
   constructor(props) {
@@ -59,7 +60,7 @@ class Quiz extends Component {
 
     checkCorrect = (id) => {
         //console.log(this.state.selectedAnswer);
-        if(this.state.selectedAnswer == ''){
+        if(this.state.selectedAnswer == '' && !this.props.timesUp){
             return -1;
         }
         else if(id != this.props.answer.id){
@@ -68,10 +69,16 @@ class Quiz extends Component {
         else{
             return 1;
         }
+        
+        
     }
 
     onSelect = (val) => {
         this.props.onAnswerSelected(true);
+
+        if(val == this.props.answer.id){
+            this.props.isCorrect(true);
+        }
 
         this.setState({
             selectedAnswer: val
