@@ -130,7 +130,7 @@ setTakeQuiz = () =>  {
                 , answer : {item.answer}
               </Text>
               <Text style={styles.description}>
-                , mistake :   {item.correct}
+                , correct :   {item.correct}
               </Text>
              
           </View>

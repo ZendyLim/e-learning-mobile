@@ -114,6 +114,7 @@ class TimerBar extends Component {
     timerEnd(){
         if(this.props.timerRun){
           this.props.onTimesUp(true);
+          this.props.timeStops(this.seconds - this.state.progress);
         }
     }
 
@@ -122,6 +123,8 @@ class TimerBar extends Component {
         Animated.timing(
           this.progress
         ).stop();
+
+        this.props.timeStops(this.state.progress);
       }    
     }
 

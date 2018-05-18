@@ -32,14 +32,14 @@ class QuestionPanel extends Component {
   componentWillMount() {
     if(this.props.format == 'audio'){
       this.loadAudio();
-      setTimeout(() => this.playAudio(true), 1000);
+      setTimeout(() => this.playAudio(true), 600);
     }
   }
 
   componentDidUpdate(){
     if(this.props.format == 'audio'){
       this.loadAudio();
-      setTimeout(() => this.playAudio(), 400);
+      setTimeout(() => this.playAudio(), 600);
     }
 
   }
@@ -85,14 +85,16 @@ class QuestionPanel extends Component {
           console.log('failed to load the sound', error);
           return;
         }
-        // loaded successfully
-        console.log('duration in seconds: ' + this.quizAudio.getDuration() + 'number of channels: ' + this.quizAudio.getNumberOfChannels());
+
       });
     }
 
     playAudio(forcePlay = false){
-        
-      if(this.currentAudio != this.props.question.id || forcePlay){
+      
+      playDifferentAudio = this.currentAudio != this.props.question.id && this.props.format == 'audio';
+
+      if(playDifferentAudio || forcePlay){    
+        console.log(this.currentAudio + ' - ' + this.props.question.id);    
         this.currentAudio = this.props.question.id;
 
         this.quizAudio.play((success) => {
@@ -101,6 +103,8 @@ class QuestionPanel extends Component {
           } 
         });
       }
+
+      
 
     }
 

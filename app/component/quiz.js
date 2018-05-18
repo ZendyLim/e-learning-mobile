@@ -8,7 +8,7 @@ import AnswerButton from './answerButton';
 **/
 class Quiz extends Component {
   static propTypes = {
-    answer: PropTypes.object,
+    question: PropTypes.object,
     answerOptions: PropTypes.array,
     format:PropTypes.string,
     timesUp:PropTypes.bool
@@ -17,7 +17,7 @@ class Quiz extends Component {
   constructor(props) {
       super(props);
       
-      this.currentAnswer = this.props.answer;
+      this.currentAnswer = this.props.question;
 
       this.state = {
           selectedAnswer: ''
@@ -50,8 +50,8 @@ class Quiz extends Component {
     }
 
     resetSelected = () => {
-        if(this.currentAnswer.id != this.props.answer.id){
-            this.currentAnswer = this.props.answer
+        if(this.currentAnswer.id != this.props.question.id){
+            this.currentAnswer = this.props.question
             this.setState({
                 selectedAnswer: ''
             })
@@ -63,7 +63,7 @@ class Quiz extends Component {
         if(this.state.selectedAnswer == '' && !this.props.timesUp){
             return -1;
         }
-        else if(id != this.props.answer.id){
+        else if(id != this.props.question.id){
             return 0;
         }
         else{
@@ -74,9 +74,9 @@ class Quiz extends Component {
     }
 
     onSelect = (val) => {
-        this.props.onAnswerSelected(true);
+        this.props.onAnswerSelected(val);
 
-        if(val == this.props.answer.id){
+        if(val == this.props.question.id){
             this.props.isCorrect(true);
         }
 
