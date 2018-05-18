@@ -13,23 +13,22 @@ import {
   import { List, ListItem } from 'react-native-elements';
   import  { strings }   from '../../config/localization';
 
+  import { bindActionCreators } from 'redux';
+  import { connect } from 'react-redux';
+  import * as Actions from '../../actions/study'; 
+  
   // Import Components
   import CharacterImage   from '../../component/character';
   import TimerBar   from '../../component/timer';
   import QuestionPanel   from '../../component/question';
   import Quiz   from '../../component/quiz';
 
-  const imageSource = require('../../assets/img/topic/1.0-class.jpg');
-
   import quizItems from '../../config/quiz';
 
   /*
     TODO:
-    1. Score
-    2. If Time's up show correct answer
-    2.1 If all quiz is done show score page
-    3. Random All Quizzes
-    4. Refine the code 
+    1.0 Refine the code 
+    1.1 Make the quiz flash usable to other section
   */
   class QuizFlashScreen extends Component {
   
@@ -43,23 +42,29 @@ import {
       
       this.optionsNumber = 4;
       this.allQuestion = [];
+      this.timeStops = 0;  
 
       this.state = {
         timesUp: false,
         expression: 'default',
-        time:7000,
+        time:5000,
         timerRun:true,
         timerRestart:false,
         counter: 0,
         question: [],
         answerOptions: [],
         answer: '',
-        result: '',
-        pause: 2000
+        answerFormat:'',
+        questionFormat:'',
+        pause: 2000,
+        score:0,
+        correct:0
       }
 
-      this._onSetLanguageTo('en');
+      this.imageSource = require('../../assets/img/topic/1.0-class.jpg');
 
+      this._onSetLanguageTo('en');
+      
       //this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
 
     }
@@ -85,9 +90,12 @@ import {
       
       return(
           <Quiz 
-            answer={ this.state.question } 
+            question={ this.state.question } 
             answerOptions={ this.state.question.answerOption }
             onAnswerSelected={ this.stopTimer }
+            format={ this.state.answerFormat }
+            timesUp={ this.state.timesUp }
+            isCorrect={ this.addScore }
           />
       )
       
@@ -96,7 +104,7 @@ import {
     render() {
       let display = this.state.timesUp;
       let expression = this.state.expression;
-      let questionDisplay = this.state.question.moji
+      let format = this.state.questionFormat;
       let timerRun = this.state.timerRun;
       let timerRestart = this.state.timerRestart;
 
@@ -107,9 +115,12 @@ import {
                 
                   <ImageBackground
                       style={ styles.quizBanner }
-                      source={ imageSource }
+                      source={ this.imageSource }
                   >
-                    <QuestionPanel>{ questionDisplay }</QuestionPanel>
+                    <QuestionPanel 
+                      question={ this.state.question } 
+                      format={ format } 
+                    />
 
                     <CharacterImage expression={ expression } style={ styles.quizChar }/>
                     
@@ -119,7 +130,14 @@ import {
               </View>
               
               <View style={[styles.col12]}>
-                <TimerBar time={ this.state.time } timerRestart={ timerRestart } timerRun={ timerRun } onTimesUp={this.onTimesUp} onRestart={this.onRestart} />
+                <TimerBar 
+                  time={ this.state.time } 
+                  timerRestart={ timerRestart } 
+                  timerRun={ timerRun } 
+                  onTimesUp={this.onTimesUp} 
+                  onRestart={this.onRestart}
+                  timeStops={this.setTimeStops}
+                />
               </View>
 
               <View style={[ styles.col12, styles.quizAnswerWrapper]}>
@@ -135,6 +153,8 @@ import {
 
     componentWillMount() {
       let shuffledQuiz = this.shuffleItems(quizItems);
+
+      this.randomQuizFormat();
       
       this.allQuestion = shuffledQuiz.map((question) => 
         this.shuffleAnswers(question, shuffledQuiz)
@@ -192,60 +212,98 @@ import {
       return array;
     };
 
+    randomQuizFormat(){
+      var quizFormat = ['moji','romaji','audio_moji','audio_romaji'];
+      var quizFormatLength = quizFormat.length, randomIndex;
 
+      randomIndex = Math.floor(Math.random() * quizFormatLength);
 
+      switch (quizFormat[randomIndex]) {
+        case 'moji':
+          this.setState({
+            answerFormat: 'moji',
+            questionFormat: 'romaji'
+          });
+          break;
+        case 'romaji':
+          this.setState({
+            answerFormat: 'romaji',
+            questionFormat: 'moji'
+          });
+          break;
 
-    // handleAnswerSelected(event) {
-    //   this.setUserAnswer(event.currentTarget.value);
-  
-    //   if (this.state.questionId < quizQuestions.length) {
-    //       setTimeout(() => this.setNextQuestion(), 300);
-    //   } else {
-    //       setTimeout(() => this.setResults(this.getResults()), 300);
-    //   }
-    // }
-
-    // setUserAnswer(answer) {
-    //   const updatedAnswersCount = update(this.state.answersCount, {
-    //     [answer]: {$apply: (currentValue) => currentValue + 1}
-    //   });
-  
-    //   this.setState({
-    //       answersCount: updatedAnswersCount,
-    //       answer: answer
-    //   });
-    // }
+        case 'audio_moji':
+          this.setState({
+            answerFormat: 'moji',
+            questionFormat: 'audio'
+          });
+          break;
+      
+        default:
+          this.setState({
+            answerFormat: 'romaji',
+            questionFormat: 'audio'
+          });
+          break;
+          
+      }
+    }
 
     setNextQuestion() {
       const counter = this.state.counter + 1;
-      //const questionId = this.state.questionId + 1;
-  
-      this.setState({
-          counter: counter,
-          //questionId: questionId,
-          question: this.allQuestion[counter],
-          answerOptions: this.allQuestion[counter].answerOption,
-          answer: '',
-          timerRun:true,
-          timerRestart:true,
-          timesUp: false,  
-          expression:'default',
-      });
+      this.setTakeQuiz();
 
-      
+      if(counter < this.allQuestion.length){
+        this.randomQuizFormat();
+
+        this.timeStops = 0;
+  
+        this.setState({
+            counter: counter,
+            //questionId: questionId,
+            question: this.allQuestion[counter],
+            answerOptions: this.allQuestion[counter].answerOption,
+            answer: '',
+            timerRun:true,
+            timerRestart:true,
+            timesUp: false,  
+            expression:'default',
+            correct: 0
+        });
+      }
+      else{
+        this.props.navigation.navigate('StudyReduxScreen');
+      }
+       
     }
 
+    setTakeQuiz = () =>  {
+
+        parseValue = {
+            questionID : this.state.question.id,
+            questionTime : this.state.questionTime,
+            answer :  this.state.answer,
+            correct : this.state.correct,
+            questionTime: this.timeStops
+        }
+      this.props.takeQuiz(parseValue); //call our action
+    };
+
     onTimesUp = (val) => {
-      //this.setNextQuestion();
 
       this.setState({
         timesUp: true,
         expression:'sad'
       });
-
+      
       setTimeout(() => {
         this.setNextQuestion();
       }, this.state.pause);
+    };
+
+    setTimeStops = (time) => {
+      this.timeStops = time;
+      
     };
 
     onRestart = () => {
@@ -254,9 +312,10 @@ import {
       });
     };
 
-    stopTimer = () => {
+    stopTimer = (answer) => {
       this.setState({
-        timerRun:false
+        timerRun:false,
+        answer:answer
       });
 
       setTimeout(() => {
@@ -264,10 +323,38 @@ import {
       }, this.state.pause);
     };
     
+    addScore = (isCorrect) => {
+      if(isCorrect){
+        this.setState({
+          score: this.state.score + 1,
+          correct:1
+        });
+      }
+    };
   
   }
 
   const styles = require('../../styles/style');
-  
-export default QuizFlashScreen;
 
+// The function takes data from the app current state,
+// and insert/links it into the props of our component.
+// This function makes Redux know that this component needs to be passed a piece of the state
+function mapStateToProps(state, props) {
+  return {
+      StudentID: state.user.user.id,
+      startTime: state.study.startTime,
+      endTime: state.study.endTime,
+      studyType: state.study.studyType,
+      studyRecord: state.study.studyRecord,
+      studyID: state.study.studyID,
+  }
+}
+
+// Doing this merges our actions into the component’s props,
+// while wrapping them in dispatch() so that they immediately dispatch an Action.
+// Just by doing this, we will have access to the actions defined in out actions file (action/home.js)
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(Actions, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(QuizFlashScreen);
