@@ -366,6 +366,10 @@ module.exports = StyleSheet.create({
 		questionText:{
 			flexDirection:'column'
 		},
+		questionRomaji:{
+			fontFamily:englishFont,
+			marginLeft:5
+		},
 		//Quiz Screen
 		quizFlashTop: {
 			height:180,

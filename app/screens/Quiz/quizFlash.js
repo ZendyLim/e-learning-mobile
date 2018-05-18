@@ -28,7 +28,7 @@ import {
     1. Score [Done]
     2. If Time's up show correct answer [Done]
     2.1 If all quiz is done show score page [90%]
-    3. Random All Quizzes [80%] Missing: Audio Quiz
+    3. Random All Quizzes [80%] Missing: Audio Quiz [Done]
     4. Refine the code 
   */
   class QuizFlashScreen extends Component {
@@ -47,7 +47,7 @@ import {
       this.state = {
         timesUp: false,
         expression: 'default',
-        time:7000,
+        time:5000,
         timerRun:true,
         timerRestart:false,
         counter: 0,
@@ -104,8 +104,9 @@ import {
     render() {
       let display = this.state.timesUp;
       let expression = this.state.expression;
-      let questionDisplay = this.state.question[this.state.questionFormat];
+      let format = this.state.questionFormat;
       let timerRun = this.state.timerRun;
+      //let timerRun = false;
       let timerRestart = this.state.timerRestart;
 
       return (
@@ -117,7 +118,10 @@ import {
                       style={ styles.quizBanner }
                       source={ this.imageSource }
                   >
-                    <QuestionPanel>{ questionDisplay }</QuestionPanel>
+                    <QuestionPanel 
+                      question={ this.state.question } 
+                      format={ format } 
+                    />
 
                     <CharacterImage expression={ expression } style={ styles.quizChar }/>
                     
@@ -225,14 +229,14 @@ import {
         case 'audio_moji':
           this.setState({
             answerFormat: 'moji',
-            questionFormat: 'romaji'
+            questionFormat: 'audio'
           });
           break;
       
         default:
           this.setState({
             answerFormat: 'romaji',
-            questionFormat: 'moji'
+            questionFormat: 'audio'
           });
           break;
           
