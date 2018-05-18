@@ -27,11 +27,8 @@ import {
 
   /*
     TODO:
-    1. Score [Done]
-    2. If Time's up show correct answer [Done]
-    2.1 If all quiz is done show score page [90%]
-    3. Random All Quizzes [80%] Missing: Audio Quiz [Done]
-    4. Refine the code 
+    1.0 Refine the code 
+    1.1 Make the quiz flash usable to other section
   */
   class QuizFlashScreen extends Component {
   
