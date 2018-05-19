@@ -1,0 +1,16 @@
+export const ImageData = {
+    loading : require('../img/image_loading.jpg'),
+    class : require('../img/class.jpg'),
+    health : require('../img/health.jpg'),
+    kotatsu_room : require('../img/kotatsu_room.jpg'),
+    market : require('../img/market.png'),
+    me_family : require('../img/me_family.jpg'),
+    number_chara : require('../img/number_chara.jpg'),
+    office : require('../img/office.jpg'),
+    ramen_shop : require('../img/ramen_shop.jpg'),
+    society : require('../img/society.jpg'),
+    travel : require('../img/travel.jpg'),
+    chara_sad : require('../img/travel.jpg'),
+    chara_happy : require('../img/travel.jpg'),
+    chara_normal : require('../img/travel.jpg'),   
+}

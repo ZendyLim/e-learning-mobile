@@ -8,6 +8,10 @@ var {
 
 let englishFont = 'Roboto-Regular';
 let japaneseFont = 'NotoSansJP-Regular';
+let primaryColor = '#45b4e7'; // blue
+let secondaryColor = '#d2f9fc';
+let textColor = '#333';
+let grayColor = '#ccc';
 
 module.exports = StyleSheet.create({
 
@@ -19,13 +23,13 @@ module.exports = StyleSheet.create({
     //     flexDirection: 'row',
 		//   },
 		wrapper:{
-			backgroundColor:'#d2f9fc',
+			backgroundColor:secondaryColor,
 			paddingLeft:10
 		},
 		container: {
 			flex: 1,
 			alignItems: 'center',
-			backgroundColor: 'powderblue',
+			backgroundColor: secondaryColor,
 			position: 'relative',
 			// height: '100%',
 			// width: '100%',
@@ -34,7 +38,7 @@ module.exports = StyleSheet.create({
 			flex: 1,
 			alignItems: 'center',
 			justifyContent: 'center',
-			backgroundColor: 'powderblue',
+			backgroundColor: secondaryColor,
 			position: 'relative',
 			// height: '100%',
 			// width: '100%',
@@ -42,7 +46,7 @@ module.exports = StyleSheet.create({
 		row: {
 			flexDirection: 'row',
 			flex: 1,
-			flexWrap:'wrap'
+			flexWrap: 'wrap'
 		},
 		// 12 column grid system (Like Bootstrap)
 		col12 : {
@@ -83,19 +87,31 @@ module.exports = StyleSheet.create({
 		}, 
 		// Helper
 		shadow : {
-			shadowColor: "#000000",
-			shadowOpacity: 1,
-		},   
+			shadowColor: "#000",
+			shadowOpacity: 0.5,
+			elevation: 2
+		},  
+		displayInlineContainer:{
+			flexWrap: 'wrap', 
+			flexDirection:'row',
+
+		},
+		displayInline:{
+			flexDirection:'column'
+		},
+		tabBar:{
+			backgroundColor: primaryColor,
+		},
       
 		toolbar: {
 			height: 56,
-			backgroundColor: '#45B5E7',
+			backgroundColor: primaryColor,
 		}, 
 
-	topbackground: {
-		backgroundColor: '#d2f9fc',
-		flex: 26,
-		width: '100%',
+    topbackground: {
+    	backgroundColor: secondaryColor,
+    	flex: 26,
+    	width: '100%',
  	 },
 
  	downbackground: {
@@ -216,9 +232,9 @@ module.exports = StyleSheet.create({
 		alignItems: 'stretch',
 		justifyContent: 'center',
 		padding: 10,
-		backgroundColor: '#d2f9fc',
-	},
-	containerWhite: {
+		backgroundColor: secondaryColor,
+	  },
+	  containerWhite: {
 		flex: 1,
 		flexDirection: 'column',
 		alignItems: 'stretch',
@@ -249,13 +265,12 @@ module.exports = StyleSheet.create({
 	},
 	textBlue: {
 		fontSize: 24,
-		color: '#45b4e7',
-	},
-	
-	buttonBlue:{
+		color: primaryColor,
+	  },
+	  buttonBlue:{
 		alignSelf: 'flex-end',
 		justifyContent: 'center',
-		backgroundColor: '#45b4e7',
+		backgroundColor: primaryColor,
 		padding:10,
 		borderRadius: 5,
 	},
@@ -291,8 +306,159 @@ module.exports = StyleSheet.create({
 	facebookText: {
 		color: "#ffffff",
 		},
+		//Character
+		character: {
+			width:112,
+			height:318
+		},
+		// Timer Bar
+		timerContainer: {
+			borderColor: '#333',
+			backgroundColor: '#fff'
+		},
+		timerStatus: {
+			color: '#222',
+			fontSize: 18,
+			position: 'absolute',
+			alignSelf: 'flex-end',
+		  right:5,
+			zIndex: 2
+		},
+		timerWrapper: {
+			position: 'relative',
+			zIndex:5,
+			backgroundColor:'#fff'
+		},
+		timerBox: {
+			zIndex:10,
+			backgroundColor: '#fff',
+			borderRadius: 5,
+			top:0,
+			height:25,
+			width:25,
+			marginLeft:-10,
+			position:'absolute'
+		},
+		// Question Panel
+		questionWrapper: {
+			padding:10,
+			flex: 1,
+			alignItems: 'center',
+			justifyContent: 'center',
+		},
+		questionContainer:{
+			backgroundColor:'rgba(255,255,255,0.8)',
+			height:100,
+			padding:10,
+			flexWrap: 'wrap', 
+			alignItems: 'center',
+			flexDirection:'row',
+		},
+		questionBigText:{
+			fontSize: 60,
+			color: primaryColor
+		},
+		questionInsText:{
+			fontSize: 36,
+			color:textColor
+		},
+		questionText:{
+			flexDirection:'column'
+		},
 		//Quiz Screen
 		quizFlashTop: {
-			height:200
+			height:180,
+			zIndex:5,
+			overflow:'hidden'
+		},
+		quizChar: {
+			position:'absolute',
+			right:5,
+			top: 5,
+			zIndex:5
+		},
+		quizBanner:{
+			flex:1,
+			zIndex:1
+		},
+		timesUp:{
+			position:'absolute',
+			width:'100%',
+			height:'100%',
+			top:0,
+			left:0,
+			backgroundColor:'rgba(0,0,0,0.7)',
+			zIndex:10,
+			alignItems: 'center',
+			justifyContent: 'center'
+		},
+		timesUpText:{
+			color:'#fff',
+			flexDirection:'column',
+			fontSize:36
+		},
+		quizBtnContainer:{
+			position:'relative'
+		},
+		quizBtn:{
+			height:125,
+			width:125,
+			backgroundColor:'#fff',
+			alignItems: 'center',
+			justifyContent: 'center',
+			borderRadius:5,
+			margin:7,
+			zIndex:1
+		},
+		quizBtnPress:{
+			backgroundColor: primaryColor
+		},
+		quizBtnTextPress:{
+			color:'#fff'
+		},
+		quizBtnTextBig:{
+			fontSize:65,
+			color:textColor
+		},
+		quizBtnIconWrapper:{
+			width:50,
+			height:50,
+			alignItems: 'center',
+			justifyContent: 'center',
+			borderRadius:50,
+			position:'absolute',
+			left:'50%',
+			top:-10,
+			marginLeft:-25,
+			zIndex:9,
+			elevation:2
+		},
+		quizBtnIcon:{
+			fontSize:36,
+			color:"#fff",
+			
+		},
+		quizBtnIconCorrect:{
+			backgroundColor:"#7fe900"
+		},
+		quizBtnIconWrong:{
+			backgroundColor:"#ec6f86"
+		},
+		answerContainer:{
+			alignItems: 'center',
+			justifyContent: 'center',
+			paddingTop:13
+		},
+		quizAnswerWrapper:{
+			position:'relative'
+		},
+		blocker:{
+			position:'absolute',
+			width:'100%',
+			height:'100%',
+			left:0,
+			top:0,
+			elevation:10,
+			zIndex:10
 		}
 });

@@ -23,6 +23,7 @@ import {
       return (
         <View style={styles.containerCenter}>
           <Button title="Show me more of the app" onPress={this._showMoreApp} />
+          <Button title="Study Redux" onPress={this.testRedux} />
           <Button title="Quiz" onPress={this.quiz} />
         </View>
       );
@@ -30,6 +31,14 @@ import {
     _showMoreApp = async () => {
       this.props.deleteUserState();
       this.props.navigation.navigate('AuthLoading');
+    };
+
+    takeQuiz = () => {
+      this.props.navigation.navigate('QuizFlash');
+    };
+
+    testRedux = () => {
+      this.props.navigation.navigate('StudyReduxScreen');
     };
     quiz = () => {
       this.props.navigation.navigate('QuizList');

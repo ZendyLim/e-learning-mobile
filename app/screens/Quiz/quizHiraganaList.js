@@ -25,6 +25,7 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
         statusCheckAll: false,
         stsList : false,
         statusPerRow: false,
+        idList:[],
     }
 
     constructor(props){
@@ -52,14 +53,14 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
                         <View key={key} style={(key + 1) % 5 == 0 ? ( quizStyles.listContainerRow2  ) : ( quizStyles.listContainerRow )}>
                             <View style={quizStyles.rowButton}>
                                 <TouchableOpacity
-                                style={[quizStyles.hiraganaList,this.state.stsList[key] && quizStyles.hiraganaListActive]}
+                                style={[quizStyles.mojiList,this.state.stsList[key] && quizStyles.mojiListActive]}
                                     onPress={()=> { this.checkSingle(key) }}
                                 >
-                                    <Text style={[quizStyles.hiraganaListText, this.state.stsList[key] 
-                                        && quizStyles.hiraganaListTextActive]}> {item.hiragana}
+                                    <Text style={[quizStyles.mojiListText, this.state.stsList[key] 
+                                        && quizStyles.mojiListTextActive]}> {item.moji}
                                     </Text>
-                                    <Text style={[quizStyles.hiraganaListRomaji, this.state.stsList[key] 
-                                        && quizStyles.hiraganaListRomajiActive]}> {item.romaji}
+                                    <Text style={[quizStyles.romajiList, this.state.stsList[key] 
+                                        && quizStyles.romajiListActive]}> {item.romaji}
                                     </Text>
                                 </TouchableOpacity>
                             </View>
@@ -87,11 +88,11 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
     checkSingle(key) {
         if(this.checkItems[key]){
             this.checkItems[key] = false;
-            this.setState({ stsList: this.checkItems });
+            this.setState({ stsList: this.checkItems});
         }
         else{
             this.checkItems[key] = true;
-            this.setState({ stsList: this.checkItems });
+            this.setState({ stsList: this.checkItems});
         }
     };
     checkAll(){
@@ -128,6 +129,9 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
                 key=key-1
             }    
         }
+    }
+    getActiveid(){
+     this.sta           
     }
 
   }

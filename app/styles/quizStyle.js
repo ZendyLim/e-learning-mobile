@@ -67,7 +67,7 @@ module.exports = StyleSheet.create({
 		flexDirection: 'row',
 		height: 70,
     },
-    hiraganaList:{
+    mojiList:{
         position: 'relative',
         backgroundColor:"#ffffff",
         borderRadius: 3,
@@ -78,7 +78,7 @@ module.exports = StyleSheet.create({
         margin:2,
         flexDirection: "row",
     },
-    hiraganaListActive:{
+    mojiListActive:{
         position: 'relative',
         backgroundColor:"#ec6f86",
         borderRadius: 3,
@@ -89,17 +89,17 @@ module.exports = StyleSheet.create({
         margin:2,
         flexDirection: "row",
     },
-    hiraganaListText: {
+    mojiListText: {
         color: "black",
         justifyContent: 'center',
         fontSize: 30,
     },
-    hiraganaListTextActive: {
+    mojiListTextActive: {
         color: "white",
         justifyContent: 'center',
         fontSize: 30,
     },
-    hiraganaListRomaji:{
+    romajiList:{
         position: 'absolute',
         bottom : 1,
         right: 1,
@@ -107,7 +107,7 @@ module.exports = StyleSheet.create({
         justifyContent: 'center',
         fontSize: 12,
     },
-    hiraganaListRomajiActive:{
+    romajiListActive:{
         position: 'absolute',
         bottom : 1,
         right: 1,

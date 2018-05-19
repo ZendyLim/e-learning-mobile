@@ -14,6 +14,8 @@ import {
 import { Icon } from 'react-native-elements';
 import  { strings }   from '../../config/localization';
 import { StudyList } from '../../config/studyList';
+import { ImageData } from '../../config/image_list';
+
 import style from 'react-native-datepicker/style';
 
 class StudyListScreen extends Component {
@@ -31,7 +33,12 @@ class StudyListScreen extends Component {
   }
   
   navigateToLearn=(item, index)=>{
+    item['index'] = index;
+    item['studyType'] = item.title;
+    item['headerTitle'] = item.title;
+    
     if(item.type == 'Initial'){
+      item['studyType'] = item.title;
       this.props.navigation.navigate('HiraganaList',(
         item
       ));
@@ -56,8 +63,7 @@ class StudyListScreen extends Component {
             <TouchableOpacity style={study.titleContainer} onPress={this.navigateToLearn.bind(this, item, key)}>
               <Image
                 style={study.cardImg}
-                source={item.img}
-                resizeMode = 'cover'
+                source={ ImageData[item.img] }
               />
               <Text style={study.title}> { strings[item.title] } </Text>
             </TouchableOpacity>
@@ -69,7 +75,6 @@ class StudyListScreen extends Component {
                   <Text style={study.NotlockButton}>not lock</Text>
               )}           
           </View>
-        
         )
       )}
       </ScrollView>
