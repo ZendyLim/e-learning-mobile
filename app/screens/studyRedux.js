@@ -163,4 +163,3 @@ function mapDispatchToProps(dispatch) {
 
 //Connect everything
 export default connect(mapStateToProps, mapDispatchToProps)(StudyReduxScreen);
-

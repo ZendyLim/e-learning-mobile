@@ -17,6 +17,7 @@ import HiraganaListScreen from '../screens/Study/hiraganaList';
 import LearnListScreen from '../screens/Learn/LearnList';
 import LearnHiraganaModule from '../screens/Learn/LearnModule';
 import HiraganaExplanationScreen from '../screens/Study/hiraganaExplanation';
+import ScoreScreen from '../screens/Study/score';
 //import Summary Screen
 import StudySummaryScreen from '../screens/Summary/studySummary';
 //import Quiz Flash Screen
@@ -32,10 +33,18 @@ const StudyStack = StackNavigator({
     StudyList: StudyListScreen,
     TopicList: TopicListScreen,
     HiraganaList: HiraganaListScreen,    
+    QuizFlash: QuizFlashScreen,
     LearnListScreen:  LearnListScreen,
-    LearnHiraganaModule: LearnHiraganaModule,
+    LearnHiraganaModule: 
+    {
+        screen: LearnHiraganaModule, 
+        navigationOptions: { tabBarVisible: false  }
+    },
+    ScoreScreen : {
+        screen: ScoreScreen, 
+        navigationOptions: { tabBarVisible: false  }
+    },
     StudyList: StudyListScreen ,
-    HiraganaList: HiraganaListScreen , 
     HiraganaExp: HiraganaExplanationScreen , 
 });
 
@@ -95,7 +104,6 @@ export const MainStack = StackNavigator({
             header: null 
         }
     },
-    LearnHiraganaModule: LearnHiraganaModule,
     StudyReduxScreen: StudyReduxScreen,
     QuizFlash: QuizFlashScreen,
 })
