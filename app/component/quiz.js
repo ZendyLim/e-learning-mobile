@@ -8,18 +8,21 @@ import AnswerButton from './answerButton';
 **/
 class Quiz extends Component {
   static propTypes = {
-    answer: PropTypes.object,
+    question: PropTypes.object,
     answerOptions: PropTypes.array,
+    format:PropTypes.string,
+    timesUp:PropTypes.bool
   };
 
   constructor(props) {
       super(props);
       
-      this.currentAnswer = this.props.answer;
+      this.currentAnswer = this.props.question;
 
       this.state = {
           selectedAnswer: ''
       }
+      
   }
 
     render(){
@@ -30,7 +33,7 @@ class Quiz extends Component {
                     <AnswerButton 
                         key={ item.id }
                         id={ item.id }
-                        textDisplay={ item.romaji }
+                        textDisplay={ item[this.props.format] }
                         style={ [ styles.displayInline ] } 
                         selected={ item.id == this.state.selectedAnswer } 
                         onSelectAnswer={ this.onSelect }
@@ -47,31 +50,35 @@ class Quiz extends Component {
     }
 
     resetSelected = () => {
-        
-        if(this.currentAnswer.id != this.props.answer.id){
-            this.currentAnswer = this.props.answer
+        if(this.currentAnswer.id != this.props.question.id){
+            this.currentAnswer = this.props.question
             this.setState({
                 selectedAnswer: ''
             })
         }
-
     }
 
     checkCorrect = (id) => {
         //console.log(this.state.selectedAnswer);
-        if(this.state.selectedAnswer == ''){
+        if(this.state.selectedAnswer == '' && !this.props.timesUp){
             return -1;
         }
-        else if(id != this.props.answer.id){
+        else if(id != this.props.question.id){
             return 0;
         }
         else{
             return 1;
         }
+        
+        
     }
 
     onSelect = (val) => {
-        this.props.onAnswerSelected(true);
+        this.props.onAnswerSelected(val);
+
+        if(val == this.props.question.id){
+            this.props.isCorrect(true);
+        }
 
         this.setState({
             selectedAnswer: val

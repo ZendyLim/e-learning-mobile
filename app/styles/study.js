@@ -20,6 +20,14 @@ module.exports = StyleSheet.create({
     flexWrap: 'wrap'
   },
 
+  containerBetween: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap'
+  },
+
   cardBox: {
     flex: 1,
     backgroundColor: 'white',
@@ -78,6 +86,10 @@ module.exports = StyleSheet.create({
     padding: '3%', 
   },
 
+  p8: {
+    padding: '8%', 
+  },
+
   buttonContainer: {
     flex: 1,
     flexDirection: 'row', 
@@ -108,6 +120,7 @@ module.exports = StyleSheet.create({
   textWhite: {
     color: 'white', 
   },
+
   title :{
     textAlign: 'center',
     fontSize: 25,
@@ -199,6 +212,94 @@ module.exports = StyleSheet.create({
   },
   bgWhite : {
     backgroundColor: '#fff',
-  }
+  },
+
+flipCard: {
+  width: '80%', 
+  height: '80%', 
+  alignItems: 'center', 
+  justifyContent: 'center',
+  backgroundColor: 'white', 
+  backfaceVisibility: 'hidden', 
+}, 
+
+flipCardBack: {
+  backgroundColor: 'white', 
+  position: 'absolute', 
+  top: 0, 
+}, 
+
+
+
+
+cardIcon: {
+  alignItems: 'flex-start', 
+  justifyContent: 'flex-start', 
+}, 
+
+cardText: {
+  alignItems: 'center', 
+  justifyContent: 'center', 
+  height: '100%'
+}, 
+
+textContent: {
+  color: 'black', 
+  textAlign: 'center', 
+  textAlignVertical: 'center',  
+  fontSize: 128
+}, 
+
+backgroundImg: {
+  flex: 1,
+  width: null,
+  height: null,
+}, 
+
+roundButton: {
+    backgroundColor:'#45B3EB',
+    borderRadius:50,
+    padding: '5%', 
+}, 
+
+boxButton: {
+  flex: 0.225,
+  borderWidth: 1,
+  borderColor: 'lightgray',
+  backgroundColor: "white",
+  alignItems: 'center',
+  justifyContent: 'center',
+  borderRadius: 5, 
+}, 
+
+cardContainer: { 
+  width: '100%', 
+  height: '80%', 
+  backgroundColor: 'white', 
+  borderRadius: 10, 
+}, 
+
+containerTopRel: {
+  flex: 0.8, 
+  width: '100%', 
+  position: 'relative'
+}, 
+
+containerBottom: {
+  flex: 0.2, 
+  width: '100%',
+  alignItems: 'center',
+  justifyContent: 'space-between' ,
+  flexDirection: 'row', 
+  flexWrap: 'wrap', 
+}, 
+
+iconContainer: {
+  position: 'absolute', 
+  top:  0,
+  left: 0,
+  zIndex: 2, 
+}, 
+
 });
 

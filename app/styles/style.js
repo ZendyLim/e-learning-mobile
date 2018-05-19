@@ -107,7 +107,32 @@ module.exports = StyleSheet.create({
 			height: 56,
 			backgroundColor: primaryColor,
 		}, 
-
+	//Header
+	headContainer:{
+		backgroundColor:primaryColor,
+		padding:10,
+		height:60,
+		flexWrap: 'wrap', 
+		alignItems: 'center',
+		flexDirection:'row',
+	},
+	titleHeadContainer:{
+		paddingLeft:10,
+		
+	},
+	titleHead:{
+		color:'#fff',
+		fontSize:20
+	},
+	subTitleHead:{
+		color:'#fff',
+		fontSize:16
+	},
+	headerIcon:{
+		fontSize:36,
+		color:'#fff',
+		
+	},
     topbackground: {
     	backgroundColor: secondaryColor,
     	flex: 26,
@@ -139,6 +164,7 @@ module.exports = StyleSheet.create({
 		alignContent: 'space-between',
 	  marginTop: 5, 
 	},
+	
 
     avatar: {
        borderWidth:1,
@@ -364,6 +390,10 @@ module.exports = StyleSheet.create({
 		},
 		questionText:{
 			flexDirection:'column'
+		},
+		questionRomaji:{
+			fontFamily:englishFont,
+			marginLeft:5
 		},
 		//Quiz Screen
 		quizFlashTop: {

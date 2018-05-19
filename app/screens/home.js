@@ -25,6 +25,9 @@ import {
           <Button title="Show me more of the app" onPress={this._showMoreApp} />
           <Button title="Study Redux" onPress={this.testRedux} />
           <Button title="Quiz" onPress={this.quiz} />
+          <Button title="Hiragana Exp" onPress={this._otherApp} />
+          <Button title="Score Screen Quiz" onPress={this.scoreScreen} />
+          <Button title="Score Screen Test" onPress={this.scoreScreenTest} />
         </View>
       );
     }
@@ -39,10 +42,25 @@ import {
 
     testRedux = () => {
       this.props.navigation.navigate('StudyReduxScreen');
+    }
+    _otherApp = async () => {
+      this.props.navigation.navigate('HiraganaExp');
     };
     quiz = () => {
       this.props.navigation.navigate('QuizList');
     };  
+    scoreScreen = () => {
+      this.props.navigation.navigate('ScoreScreen',{
+        index : 2,
+        typeQuiz : "Quiz",
+      });
+    };
+    scoreScreenTest = () => {
+      this.props.navigation.navigate('ScoreScreen',{
+        index : 2,
+        typeQuiz : "Test",
+      });
+    };
   }
 
 const styles = require('../styles/style');

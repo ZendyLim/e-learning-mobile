@@ -130,7 +130,7 @@ setTakeQuiz = () =>  {
                 , answer : {item.answer}
               </Text>
               <Text style={styles.description}>
-                , mistake :   {item.correct}
+                , correct :   {item.correct}
               </Text>
              
           </View>
@@ -163,4 +163,3 @@ function mapDispatchToProps(dispatch) {
 
 //Connect everything
 export default connect(mapStateToProps, mapDispatchToProps)(StudyReduxScreen);
-

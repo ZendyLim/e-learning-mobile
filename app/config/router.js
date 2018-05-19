@@ -20,6 +20,8 @@ import QuizMainScreen from '../screens/Quiz/quizMain';
 import QuizListScreen from '../screens/Quiz/quizList';
 import QuizHiraganaListScreen from '../screens/Quiz/quizHiraganaList';
 import QuizKatakanaListScreen from '../screens/Quiz/quizKatakanaList';
+import HiraganaExplanationScreen from '../screens/Study/hiraganaExplanation';
+import ScoreScreen from '../screens/Study/score';
 //import Summary Screen
 import StudySummaryScreen from '../screens/Summary/studySummary';
 //import Quiz Flash Screen
@@ -34,12 +36,22 @@ const styles = require('../styles/style');
 const StudyStack = StackNavigator({ 
     StudyList: StudyListScreen,
     TopicList: TopicListScreen,
-    HiraganaList: HiraganaListScreen,
+    HiraganaList: HiraganaListScreen,    
     QuizFlash: QuizFlashScreen,
     LearnListScreen:  LearnListScreen,
-    LearnHiraganaModule: LearnHiraganaModule,
     QuizMain: QuizMainScreen,
     QuizList: QuizListScreen,
+    LearnHiraganaModule: 
+    {
+        screen: LearnHiraganaModule, 
+        navigationOptions: { tabBarVisible: false  }
+    },
+    ScoreScreen : {
+        screen: ScoreScreen, 
+        navigationOptions: { tabBarVisible: false  }
+    },
+    StudyList: StudyListScreen ,
+    HiraganaExp: HiraganaExplanationScreen , 
 });
 
 const SummaryStack = StackNavigator({
@@ -111,8 +123,8 @@ export const MainStack = StackNavigator({
             header: null 
         }
     },
-    LearnHiraganaModule: LearnHiraganaModule,
     StudyReduxScreen: StudyReduxScreen,
+    QuizFlash: QuizFlashScreen,
 })
 
 export const AuthStack = StackNavigator(
