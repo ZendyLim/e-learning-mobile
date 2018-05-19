@@ -82,7 +82,7 @@ class HiraganaListScreen extends Component {
             <Text style={[study.textLg, study.textBlack]}>Quiz</Text>
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
             <View style={study.buttonContainer}>
-              <TouchableOpacity style={[study.button, study.mR10]}>
+              <TouchableOpacity style={[study.button, study.mR10]} onPress={ this.takeQuiz }>
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
               </TouchableOpacity>
@@ -118,6 +118,10 @@ class HiraganaListScreen extends Component {
     //await AsyncStorage.setItem('userToken', 'abc');
     this.props.navigation.navigate('NameIn');
   };
+
+  takeQuiz = () =>{
+    this.props.navigation.navigate('QuizFlash');
+  }
 }
 
 const styles = require('../../styles/style');
