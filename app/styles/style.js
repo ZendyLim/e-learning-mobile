@@ -109,15 +109,24 @@ module.exports = StyleSheet.create({
 		}, 
 	//Header
 	headContainer:{
-		backgroundColor:primaryColor
+		backgroundColor:primaryColor,
+		padding:10,
+		height:60,
+		flexWrap: 'wrap', 
+		alignItems: 'center',
+		flexDirection:'row',
 	},
 	titleHeadContainer:{
+		paddingLeft:10,
+		
 	},
 	titleHead:{
-		color:'#fff'
+		color:'#fff',
+		fontSize:20
 	},
 	subTitleHead:{
-		color:'#fff'
+		color:'#fff',
+		fontSize:16
 	},
 	headerIcon:{
 		fontSize:36,

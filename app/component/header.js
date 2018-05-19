@@ -36,19 +36,21 @@ class Header extends Component {
     render(){
 
       return (
-        <View style={ styles.headerContainer }>
-          <TouchableHighlight onPress={ this.onClickIcon }>
-            <Icon name={ this.icon } style={ styles.headerIcon } ></Icon>
-          </TouchableHighlight>
-            <View style={ styles.titleHeadContainer }>
-              { this._renderSubtitle }
+        <View style={ [styles.headContainer, styles.displayInlineContainer] }>
+          <View style={ styles.displayInline }>
+            <TouchableHighlight onPress={ this.onClickIcon }>
+              <Icon name={ this.icon } style={ styles.headerIcon } ></Icon>
+            </TouchableHighlight>
+          </View>
+          <View style={ [styles.titleHeadContainer, styles.displayInline] }>
+              { this._renderSubtitle() }
               <Text style={ styles.titleHead }>{ this.props.title }</Text>
-            </View>
+          </View>
         </View>
         
       );
     }
-    
+
     onClickIcon = () => {
         if(this.props.route){
             this.props.navigation.navigate(this.props.route);    

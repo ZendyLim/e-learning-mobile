@@ -42,7 +42,7 @@ import {
           title='Hiragana and Katakana' 
           subtitle='Quiz' 
           navigation={ navigation } 
-          route='StudyReduxScreen' />
+          />
         //headerStyle:require('../../styles/style').headContainer,
         //headerTitle:<Header title='Hiragana and Katakana' subtitle='Quiz' />
       }
