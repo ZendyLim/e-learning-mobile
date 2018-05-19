@@ -10,30 +10,154 @@ import {
     Text,
     TextInput,
     View,
+    ScrollView,
+    TouchableOpacity,
+    TouchableHighlight,
   } from 'react-native';
+  import { NavigationActions } from 'react-navigation'; 
   import { List, ListItem } from 'react-native-elements';
   import { ProgressCircle }  from 'react-native-svg-charts'
+  import { Icon } from 'react-native-elements';
 
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import * as Actions from '../../actions/study'; //Import your actions
-  
+  import { StudyList } from '../../config/studyList';
+
   class ScoreScreen extends Component {
     constructor(props) {
       super(props);
+      
   }
+  state = {
+    typeQuiz: ""
+  }
+
+  componentDidMount() {
+    const { navigation } = this.props;
+    this.setState({
+      typeQuiz: navigation.getParam('typeQuiz', null),
+      index: navigation.getParam('index', null),
+    });
+    
+    //Console.log(navigation.getParam('userName', null),"NIAMAK");
+  }
+  goToTopicSelection = () =>  {
+    if(this.state.typeQuiz == 'Test'){
+      const resetAction = NavigationActions.reset({ 
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'StudyList' }),
+        ]
+      });
+      this.props.navigation.dispatch(resetAction);
+    }else{
+      this.retry();
+    }
+  }
+  retry = () =>  {
+    var item = StudyList[this.state.index + 1];
+    item['index'] = this.state.index + 1;
+    item['studyType'] = item.title;
+    item['headerTitle'] = item.title;
+
+    const resetAction = NavigationActions.reset({ 
+      index: 1,
+      actions: [
+        NavigationActions.navigate({ routeName: 'StudyList' }),
+        NavigationActions.navigate({ routeName: 'HiraganaList' , params: item })
+
+      ]
+    });
+    
+    this.props.navigation.dispatch(resetAction);
+  
+  }
+
+  renderItem({item, index}) {
+    return (
+        <View style={scoreStyle.RecordRow}>
+            <Text style={scoreStyle.recordTitle}>
+                Title
+            </Text>
+            { item.correct == '1' ? (
+            <View style={scoreStyle.recordCorrect}>
+              <Icon name='check-circle'  type='font-awesome' color='#00ff00' size={30}/>
+            </View>
+            ) : (
+            <View style={scoreStyle.recordMistake}>
+              <Icon name='times-circle' type='font-awesome' color='#ff0000' size={30}/>
+            </View>
+           ) }
+           
+        </View>
+    )
+};
   render() {
     return (
-        <View>
-          <View>
-            <Text>You Pass</Text></View>
-          <View>
+        <View style={scoreStyle.scoreContainer}>
+          <View style={ scoreStyle.containerTitle }>
+            <Text style={ scoreStyle.textTitle }> { this.props.scoreTotal > 50 ? ( 'You Pass' ) : ('You Failed') }</Text>
+          </View>
+          <View style={ scoreStyle.containerGraph }>
+            <View style={ scoreStyle.absoluteText }>
+              <View style={ scoreStyle.containerScore }>
+                <Text style={ scoreStyle.scoreTotal }>{ this.props.scoreTotal}/100 </Text>
+              </View>
+            </View>
             <ProgressCircle
-                style={ { height: 200 } }
-                progress={ 0.7 }
-                progressColor={'rgb(134, 65, 244)'}
+                style={ { height: 140 } }
+                progress={ (this.props.scoreTotal / 100) }
+                progressColor={'#43b5e7'}
             />
           </View>
+          <View style={ scoreStyle.containerMistake }>
+            <ScrollView  style={ scoreStyle.containerMainMistake }>
+              <Text style={ scoreStyle.sumaryTitle }>SUMMARY</Text>
+              <Icon name='lock'  color='#fff' size={10}/>
+
+            {this.props.studyRecord[0] ? (
+              <FlatList
+                ref='listRef'
+                data={this.props.studyRecord}
+                renderItem={this.renderItem}
+                keyExtractor={(item, index) => index.toString()}/>
+                ) :<Text>No study data</Text> }
+            </ScrollView >
+          </View>
+          { this.props.scoreTotal > 20 ? ( 
+          <View style={ scoreStyle.containerMistake }>
+            <View style={ scoreStyle.RecordRowButton }>
+              <View style={ scoreStyle.RecordRowButtonContainer }>
+                <TouchableHighlight style={ scoreStyle.buttonWin} onPress={ this.retry }>
+                  <View>
+                    <Text style={ scoreStyle.buttonWinText }>Retry</Text>
+                 </View>  
+                </TouchableHighlight>
+              </View> 
+              <View style={{flex:0.1}}/>
+              <View style={ scoreStyle.RecordRowButtonContainer }>
+                <TouchableHighlight style={ scoreStyle.buttonWin} onPress={ this.goToTopicSelection }>
+                <View>
+                    <Text style={ scoreStyle.buttonWinText }> { this.state.typeQuiz == 'Test' ? ( 'Go To Topic' ) : ( 'Go Back To Study') }</Text>
+                </View>
+                </TouchableHighlight>
+              </View> 
+            </View> 
+          </View> 
+          ) : (
+            <View style={ scoreStyle.containerMistake }>
+            <View style={ scoreStyle.RecordRowButton }>
+              <View style={ scoreStyle.RecordRowButtonContainer }>
+                <TouchableHighlight style={ scoreStyle.buttonWin}  onPress={ this.retry }>
+                <View>
+                    <Text style={ scoreStyle.buttonWinText }>Retry</Text>
+                 </View>
+                </TouchableHighlight>
+              </View> 
+            </View> 
+          </View> 
+          ) }
         </View>
     );
   }
@@ -42,19 +166,31 @@ import {
   }
 
 const styles = require('../../styles/style');
+const scoreStyle = require('../../styles/score');
+const study = require('../../styles/study');
 
 // The function takes data from the app current state,
 // and insert/links it into the props of our component.
 // This function makes Redux know that this component needs to be passed a piece of the state
 function mapStateToProps(state, props) {
-    console.log( state.study.studyRecord);
+  const Score = '';
+  const CountQuest = state.study.studyRecord.length;
+  var correct = 0;
+  for(var i = 0; i < state.study.studyRecord.length; ++i) {
+    if(state.study.studyRecord[i].correct == '1'){
+     correct = correct + 1;
+   }
+  }
+  if(CountQuest !== 0 && correct !== 0){
+    score = ( correct / CountQuest) * 100;
+  }else{
+    score = 0;
+  }
   return {
       StudentID: state.user.user.id,
-      startTime: state.study.startTime,
-      endTime: state.study.endTime,
-      studyType: state.study.studyType,
       studyRecord: state.study.studyRecord,
       studyID: state.study.studyID,
+      scoreTotal : score,
   }
 }
 

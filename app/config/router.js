@@ -34,6 +34,19 @@ const StudyStack = StackNavigator({
     HiraganaList: HiraganaListScreen,
     QuizFlash: QuizFlashScreen,
     LearnListScreen:  LearnListScreen,
+    LearnHiraganaModule: 
+    {
+        screen: LearnHiraganaModule, 
+        navigationOptions: { tabBarVisible: false  }
+    },
+    ScoreScreen : {
+        screen: ScoreScreen, 
+        navigationOptions: { tabBarVisible: false  }
+    },
+    ScoreScreen : {
+        screen: ScoreScreen, 
+        navigationOptions: { tabBarVisible: false  }
+    },
 });
 
 const SummaryStack = StackNavigator({
@@ -92,9 +105,7 @@ export const MainStack = StackNavigator({
             header: null 
         }
     },
-    LearnHiraganaModule: LearnHiraganaModule,
     StudyReduxScreen: StudyReduxScreen,
-    ScoreScreen : ScoreScreen,
 })
 
 export const AuthStack = StackNavigator(
