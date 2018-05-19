@@ -22,6 +22,7 @@ import {
   import TimerBar   from '../../component/timer';
   import QuestionPanel   from '../../component/question';
   import Quiz   from '../../component/quiz';
+  import Header   from '../../component/header';
 
   import quizItems from '../../config/quiz';
 
@@ -32,9 +33,19 @@ import {
   */
   class QuizFlashScreen extends Component {
   
-    static navigationOptions = {      
-      title: 'Quiz',
-      tabBarVisible:false
+    static navigationOptions = ({ navigation }) => {      
+
+      return{
+        title: 'Quiz',
+        tabBarVisible:false,
+        header: props => <Header 
+          title='Hiragana and Katakana' 
+          subtitle='Quiz' 
+          navigation={ navigation } 
+          />
+        //headerStyle:require('../../styles/style').headContainer,
+        //headerTitle:<Header title='Hiragana and Katakana' subtitle='Quiz' />
+      }
     };
 
     constructor(props){
