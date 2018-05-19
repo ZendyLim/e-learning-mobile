@@ -267,29 +267,29 @@ module.exports = StyleSheet.create({
 		justifyContent: 'center',
 		padding: 10,
 		backgroundColor: '#ffffff',
-	  },
-	  containerWhiteTop: {
+	},
+	containerWhiteTop: {
 		flex: 1,
 		flexDirection: 'column',
 		alignItems: 'stretch',
 		justifyContent: 'flex-start',
 		padding: 10,
 		backgroundColor: '#ffffff',
-	  },
-	  createGuestButton: {
+	},
+	createGuestButton: {
 		backgroundColor: '#495057',
 		alignItems: 'center',
 		borderRadius: 5,
-	  },
-	  textWhite: {
+	},
+	textWhite: {
 		fontSize: 24,
 		color: '#ffffff',
-	  },
-	  textBlack: {
+	},
+	textBlack: {
 		fontSize: 24,
 		color: '#999999',
-	  },
-	  textBlue: {
+	},
+	textBlue: {
 		fontSize: 24,
 		color: primaryColor,
 	  },
@@ -299,38 +299,37 @@ module.exports = StyleSheet.create({
 		backgroundColor: primaryColor,
 		padding:10,
 		borderRadius: 5,
-		
-	  },
-	  picker: {
+	},
+	
+	picker: {
 		textDecorationLine: 'underline',
 		alignSelf: 'stretch',
-		
-	  },
-	  textCon: {
+	},
+	textCon: {
 		width: 320,
 		flexDirection: 'row',
 		justifyContent: 'space-between'
-	  },
-	  textSignWith: {
+	},
+	textSignWith: {
 		color: '#999999',
 		alignSelf: 'center',
-	  },
-	  socialContainer: {
+	},
+	socialContainer: {
 		flexDirection: 'row',
 		height: 150,
-	  },
-	  socialButton: {
+	},
+	socialButton: {
 		flex: 1,
-	  },
-	  socialFacebook:{
+	},
+	socialFacebook:{
 		marginTop: 5,
 		height: 40,
 		width: "100%",
 		backgroundColor: "#3B5998",
 		alignItems: "center",
 		justifyContent: "center",
-	  },
-	  facebookText: {
+	},
+	facebookText: {
 		color: "#ffffff",
 		},
 		//Character
