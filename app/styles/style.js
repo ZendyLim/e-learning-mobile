@@ -107,7 +107,23 @@ module.exports = StyleSheet.create({
 			height: 56,
 			backgroundColor: primaryColor,
 		}, 
-
+	//Header
+	headContainer:{
+		backgroundColor:primaryColor
+	},
+	titleHeadContainer:{
+	},
+	titleHead:{
+		color:'#fff'
+	},
+	subTitleHead:{
+		color:'#fff'
+	},
+	headerIcon:{
+		fontSize:36,
+		color:'#fff',
+		
+	},
     topbackground: {
     	backgroundColor: secondaryColor,
     	flex: 26,
@@ -139,6 +155,7 @@ module.exports = StyleSheet.create({
 		alignContent: 'space-between',
 	  marginTop: 5, 
 	},
+	
 
     avatar: {
        borderWidth:1,

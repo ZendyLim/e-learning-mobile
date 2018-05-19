@@ -30,8 +30,7 @@ const styles = require('../styles/style');
 const StudyStack = StackNavigator({ 
     StudyList: StudyListScreen,
     TopicList: TopicListScreen,
-    HiraganaList: HiraganaListScreen,
-    QuizFlash: QuizFlashScreen,
+    HiraganaList: HiraganaListScreen,    
     LearnListScreen:  LearnListScreen,
 });
 
@@ -93,6 +92,7 @@ export const MainStack = StackNavigator({
     },
     LearnHiraganaModule: LearnHiraganaModule,
     StudyReduxScreen: StudyReduxScreen,
+    QuizFlash: QuizFlashScreen,
 })
 
 export const AuthStack = StackNavigator(
