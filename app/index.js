@@ -16,8 +16,8 @@ import configureStore from './lib/store';
 const { persistor, store } = configureStore();
 
 //import component Splash screen
-import SplashScreen from './components/splashscreen';
-import MainScreen from './components/main';
+import SplashScreen from './screens/splashscreen';
+import MainScreen from './screens/main';
 
 import { PersistGate } from 'redux-persist/integration/react'
 

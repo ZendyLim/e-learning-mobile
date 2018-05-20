@@ -3,6 +3,10 @@ package com.learningtest2;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.horcrux.svg.SvgPackage;
+import com.zmxv.RNSound.RNSoundPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -25,8 +29,12 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNSoundPackage(),
+          new SvgPackage(),
+          new VectorIconsPackage(),
+          new RNGoogleSigninPackage(),
           new ReactNativeLocalizationPackage(),
-              new FacebookLoginPackage()
+          new FacebookLoginPackage()
       );
     }
 
