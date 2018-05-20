@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
 import  { strings }   from '../../config/localization';
+// import * as Actions from '../../../actions/Quiz'; //Import your actions
 import { ImageData } from '../../config/image_list';
 
 class HiraganaListScreen extends Component {
@@ -125,6 +126,9 @@ class HiraganaListScreen extends Component {
   createGuest = () => {
     //await AsyncStorage.setItem('userToken', 'abc');
     this.props.navigation.navigate('NameIn');
+  };
+  quiz = () => {
+    this.props.navigation.navigate('QuizMain');
   };
 }
 

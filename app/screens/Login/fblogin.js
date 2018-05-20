@@ -50,4 +50,4 @@ class FBLoginView extends Component {
 }
 module.exports = FBLoginView;
 
-const styles = require('../../styles/style');
+const styles = require('../styles/style');
