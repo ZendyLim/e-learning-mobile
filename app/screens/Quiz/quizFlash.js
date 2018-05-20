@@ -48,12 +48,12 @@ import {
       this.allQuestion = [];
       this.quizItems = quizItemsShort;
       this.timeStops = 0;  
+      this.studyRecord = [];
 
       this.state = {
         timesUp: false,
         expression: 'default',
-        //time:5000,
-        time:1000,
+        time:5000,        
         timerRun:true,
         timerRestart:false,
         counter: 0,
@@ -66,7 +66,9 @@ import {
         score:0,
         correct:0,
         title:'',
-        img:''
+        img:'',
+        startTime: null,
+        studyType:''
       }      
 
       this._onSetLanguageTo('en');      
@@ -128,12 +130,17 @@ import {
 
     componentWillMount() {            
       const { navigation } = this.props;
+
       this.setState({
         title: navigation.getParam('title', null),
         img: navigation.getParam('img', null),
-        type: navigation.getParam('type', null)
-      });      
-      
+        type: navigation.getParam('type', null),
+        topicId: navigation.getParam('topicId', null),
+        studyType: navigation.getParam('studyType',null),
+        typeQuiz: navigation.getParam('typeQuiz',null),
+        startTime: new Date().getTime()
+      });
+
       let shuffledQuiz = this.shuffleItems(this.quizItems);
 
       this.randomQuizFormat();
@@ -263,16 +270,33 @@ import {
     }
 
     setTakeQuiz = () =>  {
-
-        parseValue = {
+      
+      parseValue = {
             questionID : this.state.question.id,
             questionTime : this.state.questionTime,
             answer :  this.state.answer,
             correct : this.state.correct,
             questionTime: this.timeStops
-        }
+      }
+
+      this.studyRecord[this.studyRecord.length] = parseValue;
+      
       this.props.takeQuiz(parseValue); //call our action
     };
+
+    setendquiz = () =>  {
+      parseValue = {
+          StudentID : this.props.StudentID,
+          startTime : this.state.startTime,
+          endTime :  new Date().getTime(),
+          subjectTitle: navigation.getParam('title', null),
+          studyType : this.state.studyType,
+          studyID : this.state.topicId,
+          studyRecord : this.studyRecord,
+          typeQuiz:this.state.typeQuiz
+      }
+    this.props.endLearn(parseValue); //call our action
+  };
 
     onTimesUp = (val) => {
 
