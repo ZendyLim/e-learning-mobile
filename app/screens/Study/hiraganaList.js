@@ -50,6 +50,14 @@ class HiraganaListScreen extends Component {
           studyType: this.state.studyType
         }
       ));
+    }else   if(type == 'Quiz'){
+      this.props.navigation.navigate('QuizFlash',(
+        {
+          type : type,
+          title : this.state.title,
+          studyType: this.state.studyType
+        }
+      ));
     }else{
       this.props.navigation.navigate('TopicList',(
         item
@@ -82,7 +90,11 @@ class HiraganaListScreen extends Component {
             <Text style={[study.textLg, study.textBlack]}>Quiz</Text>
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
             <View style={study.buttonContainer}>
+<<<<<<< HEAD
               <TouchableOpacity style={[study.button, study.mR10]} onPress={ this.takeQuiz }>
+=======
+              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Quiz')}>
+>>>>>>> 74c5ea3404127e35f47de6fbe18cb904cbc6d538
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
               </TouchableOpacity>

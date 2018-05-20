@@ -15,6 +15,7 @@ import { Icon } from 'react-native-elements';
 import  { strings }   from '../../config/localization';
 import { LearnListData } from '../../config/studyList';
 import style from 'react-native-datepicker/style';
+import LearningModule from '../Study/hiraganaExplanation';
 
 class LearnHiraganaModule extends Component {
   constructor() {
@@ -52,7 +53,7 @@ class LearnHiraganaModule extends Component {
             );        
         }else if(this.state.type == 'HL3'){
             return (
-                <Text>HL3</Text>        
+                <LearningModule />     
             );        
         }else if(this.state.type == 'HL4'){
             return (

@@ -1,4 +1,4 @@
-var quizItems = [
+export const quizItems = [
     {   
         "id":"h_ka",
         "type":"hiragana",      
@@ -71,4 +71,50 @@ var quizItems = [
     }
 ];
 
-export default quizItems;
+export const numberQuiz = [
+    {   
+        "id":"num_1",
+        "type":"vocabulary",  
+        "romaji":"ichi",
+        "moji":"いち",
+        "kanji":"一",
+        "english":"one",
+        "audio":"ka.mp3"
+    },
+    {   
+        "id":"num_1",
+        "type":"vocabulary",      
+        "romaji":"ni",
+        "moji":"に",
+        "kanji":"二",
+        "english":"two",
+        "audio":"ki.mp3"
+    },
+    {   
+        "id":"num_1",
+        "type":"vocabulary",      
+        "romaji":"san",
+        "moji":"さん",
+        "kanji":"三",
+        "english":"three",
+        "audio":"ku.mp3"
+    },
+    {   
+        "id":"num_1",
+        "type":"vocabulary",      
+        "romaji":"yon",
+        "moji":"よん",
+        "kanji":"四",
+        "english":"four",
+        "audio":"ke.mp3"
+    },
+    {   
+        "id":"num_1",
+        "type":"vocabulary",      
+        "romaji":"go",
+        "moji":"ご",
+        "kanji":"五",
+        "english":"five",
+        "audio":"ko.mp3"
+    }
+];

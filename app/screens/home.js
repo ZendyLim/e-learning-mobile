@@ -26,6 +26,8 @@ import {
           <Button title="Quiz" onPress={this.takeQuiz} />
           <Button title="Study Redux" onPress={this.testRedux} />
           <Button title="Hiragana Exp" onPress={this._otherApp} />
+          <Button title="Score Screen Quiz" onPress={this.scoreScreen} />
+          <Button title="Score Screen Test" onPress={this.scoreScreenTest} />
         </View>
       );
     }
@@ -43,6 +45,18 @@ import {
     }
     _otherApp = async () => {
       this.props.navigation.navigate('HiraganaExp');
+    };
+    scoreScreen = () => {
+      this.props.navigation.navigate('ScoreScreen',{
+        index : 2,
+        typeQuiz : "Quiz",
+      });
+    };
+    scoreScreenTest = () => {
+      this.props.navigation.navigate('ScoreScreen',{
+        index : 2,
+        typeQuiz : "Test",
+      });
     };
   }
 
