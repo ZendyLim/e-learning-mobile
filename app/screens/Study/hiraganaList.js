@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
 import  { strings }   from '../../config/localization';
+// import * as Actions from '../../../actions/Quiz'; //Import your actions
 import { ImageData } from '../../config/image_list';
 
 class HiraganaListScreen extends Component {
@@ -131,9 +132,9 @@ class HiraganaListScreen extends Component {
     this.props.navigation.navigate('NameIn');
   };
 
-  takeQuiz = () =>{
-    this.props.navigation.navigate('QuizFlash');
-  }
+  quiz = () => {
+    this.props.navigation.navigate('QuizMain');
+  };
 }
 
 const styles = require('../../styles/style');

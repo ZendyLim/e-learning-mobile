@@ -16,6 +16,10 @@ import TopicListScreen from '../screens/Study/topiclist';
 import HiraganaListScreen from '../screens/Study/hiraganaList';
 import LearnListScreen from '../screens/Learn/LearnList';
 import LearnHiraganaModule from '../screens/Learn/LearnModule';
+import QuizMainScreen from '../screens/Quiz/quizMain';
+import QuizListScreen from '../screens/Quiz/quizList';
+import QuizHiraganaListScreen from '../screens/Quiz/quizHiraganaList';
+import QuizKatakanaListScreen from '../screens/Quiz/quizKatakanaList';
 import HiraganaExplanationScreen from '../screens/Study/hiraganaExplanation';
 import ScoreScreen from '../screens/Study/score';
 //import Summary Screen
@@ -35,6 +39,8 @@ const StudyStack = StackNavigator({
     HiraganaList: HiraganaListScreen,    
     QuizFlash: QuizFlashScreen,
     LearnListScreen:  LearnListScreen,
+    QuizMain: QuizMainScreen,
+    QuizList: QuizListScreen,
     LearnHiraganaModule: 
     {
         screen: LearnHiraganaModule, 
@@ -56,6 +62,12 @@ const SettingStack = StackNavigator({
     SettingList: SettingScreen
 });
 
+// const QuizHiraganaListStack = StackNavigator({
+//     QuizHiraganaList: QuizHiraganaListScreen
+// })
+// const QuizKatakanaListStack = StackNavigator({
+//     QuizKarakanaList: QuizKatakanaListScreen
+// })
 
 export const AppStack = TabNavigator({ 
     Home: {
@@ -95,6 +107,13 @@ export const AppStack = TabNavigator({
     tabBarOptions:{
         style:styles.tabBar
     }
+});
+
+export const QuizStack = TabNavigator({ 
+    QuizHiraganaList: QuizHiraganaListScreen, 
+    QuizKarakanaList: QuizKatakanaListScreen
+}, {
+    tabBarPosition: 'top',
 });
 
 export const MainStack = StackNavigator({
