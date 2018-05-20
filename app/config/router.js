@@ -124,7 +124,6 @@ export const MainStack = StackNavigator({
         }
     },
     StudyReduxScreen: StudyReduxScreen,
-    QuizFlash: QuizFlashScreen,
 })
 
 export const AuthStack = StackNavigator(

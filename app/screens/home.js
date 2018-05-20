@@ -24,7 +24,7 @@ import {
         <View style={styles.containerCenter}>
           <Button title="Show me more of the app" onPress={this._showMoreApp} />
           <Button title="Study Redux" onPress={this.testRedux} />
-          <Button title="Quiz" onPress={this.quiz} />
+          <Button title="Quiz" onPress={this.takeQuiz} />
           <Button title="Hiragana Exp" onPress={this._otherApp} />
           <Button title="Score Screen Quiz" onPress={this.scoreScreen} />
           <Button title="Score Screen Test" onPress={this.scoreScreenTest} />

@@ -71,6 +71,44 @@ export const quizItems = [
     }
 ];
 
+export const quizItemsShort = [
+    {   
+        "id":"h_ka",
+        "type":"hiragana",      
+        "romaji":"ka",
+        "moji":"か",
+        "audio":"ka.mp3"
+    },
+    {   
+        "id":"h_ki",
+        "type":"hiragana",      
+        "romaji":"ki",
+        "moji":"き",
+        "audio":"ki.mp3"
+    },
+    {   
+        "id":"h_ku",
+        "type":"hiragana",      
+        "romaji":"ku",
+        "moji":"く",
+        "audio":"ku.mp3"
+    },
+    {   
+        "id":"h_ke",
+        "type":"hiragana",      
+        "romaji":"ke",
+        "moji":"け",
+        "audio":"ke.mp3"
+    },
+    {   
+        "id":"h_ko",
+        "type":"hiragana",      
+        "romaji":"ko",
+        "moji":"こ",
+        "audio":"ko.mp3"
+    }
+];
+
 export const numberQuiz = [
     {   
         "id":"num_1",

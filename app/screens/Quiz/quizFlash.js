@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import {
-    ActivityIndicator,
-    AsyncStorage,
-    Button,
-    StatusBar,
-    StyleSheet,
     View,
-    ImageBackground,
     Text,
     TouchableHighlight
   } from 'react-native';
@@ -18,13 +12,12 @@ import {
   import * as Actions from '../../actions/study'; 
   
   // Import Components
-  import CharacterImage   from '../../component/character';
   import TimerBar   from '../../component/timer';
   import QuestionPanel   from '../../component/question';
   import Quiz   from '../../component/quiz';
   import Header   from '../../component/header';
 
-  import quizItems from '../../config/quiz';
+  import { quizItems, quizItemsShort } from '../../config/quiz';
 
   /*
     TODO:
@@ -53,12 +46,14 @@ import {
       
       this.optionsNumber = 4;
       this.allQuestion = [];
+      this.quizItems = quizItemsShort;
       this.timeStops = 0;  
 
       this.state = {
         timesUp: false,
         expression: 'default',
-        time:5000,
+        //time:5000,
+        time:1000,
         timerRun:true,
         timerRestart:false,
         counter: 0,
@@ -69,30 +64,17 @@ import {
         questionFormat:'',
         pause: 2000,
         score:0,
-        correct:0
-      }
-
-      this.imageSource = require('../../assets/img/topic/1.0-class.jpg');
+        correct:0,
+        title:'',
+        img:''
+      }      
 
       this._onSetLanguageTo('en');      
     }
 
     _onSetLanguageTo(value) {
       strings.setLanguage(value);
-    }
-
-    _renderTimesup(){
-      if(this.state.timesUp){
-        return(
-          <View style={[ styles.timesUp, styles.displayInlineContainer ]}>
-              <Text style={[ styles.timesUpText, styles.displayInline ]}>{ strings.TIMES_UP }</Text> 
-          </View>
-        );
-      }
-      else{
-        return null;
-      }
-    }
+    }    
   
     render() {
       let display = this.state.timesUp;
@@ -104,23 +86,15 @@ import {
       return (
         <View style={styles.container}>
             <View style={[styles.row]}>
-              <View style={[styles.col12, styles.quizFlashTop]}>
-                
-                  <ImageBackground
-                      style={ styles.quizBanner }
-                      source={ this.imageSource }
-                  >
-                    <QuestionPanel 
-                      question={ this.state.question } 
-                      format={ format } 
-                    />
 
-                    <CharacterImage expression={ expression } style={ styles.quizChar }/>
-                    
-                  </ImageBackground>
-
-                  { this._renderTimesup() }
-              </View>
+              <QuestionPanel 
+                  question={ this.state.question } 
+                  format={ format } 
+                  img={ this.state.img }
+                  style={[styles.col12, styles.quizFlashTop]}
+                  timesUp={ this.state.timesUp }
+                  expression={ this.state.expression }
+              />
               
               <View style={[styles.col12]}>
                 <TimerBar 
@@ -152,8 +126,15 @@ import {
       );
     }
 
-    componentWillMount() {
-      let shuffledQuiz = this.shuffleItems(quizItems);
+    componentWillMount() {            
+      const { navigation } = this.props;
+      this.setState({
+        title: navigation.getParam('title', null),
+        img: navigation.getParam('img', null),
+        type: navigation.getParam('type', null)
+      });      
+      
+      let shuffledQuiz = this.shuffleItems(this.quizItems);
 
       this.randomQuizFormat();
       
@@ -273,7 +254,10 @@ import {
         });
       }
       else{
-        this.props.navigation.navigate('StudyReduxScreen');
+        this.props.navigation.navigate('ScoreScreen',{
+          index : 2,
+          typeQuiz : "Quiz",
+        });
       }
        
     }

@@ -56,7 +56,8 @@ class HiraganaListScreen extends Component {
         {
           type : type,
           title : this.state.title,
-          studyType: this.state.studyType
+          studyType: this.state.studyType,
+          img: this.state.img
         }
       ));
     }else{
