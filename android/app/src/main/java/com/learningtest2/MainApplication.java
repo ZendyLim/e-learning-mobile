@@ -29,7 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new RNSoundPackage(),
+          new RNSoundPackage(),
           new SvgPackage(),
           new VectorIconsPackage(),
           new RNGoogleSigninPackage(),

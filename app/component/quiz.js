@@ -76,10 +76,8 @@ class Quiz extends Component {
     onSelect = (val) => {
         this.props.onAnswerSelected(val);
 
-        if(val == this.props.question.id){
-            this.props.isCorrect(true);
-        }
-
+        this.props.isCorrect(val == this.props.question.id);
+        
         this.setState({
             selectedAnswer: val
         });
