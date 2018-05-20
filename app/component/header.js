@@ -4,14 +4,13 @@ import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { NavigationActions } from 'react-navigation';
 
-import  { strings }   from '../config/localization';
-
 /**
   Character Class
   Different expression: default, sad, happy
 **/
 class Header extends Component {
   static propTypes = {
+    title: PropTypes.string,
     subtitle: PropTypes.string,
     icon: PropTypes.string,
     route: PropTypes.string
@@ -20,9 +19,7 @@ class Header extends Component {
   constructor(props) {
     super(props);
     
-    this.icon = this.props.icon ? this.props.icon : 'times';     
-    this.title = this.props.navigation.getParam('title', null);
-    this.type = this.props.navigation.getParam('type', null);
+    this.icon = this.props.icon ? this.props.icon : 'times';  
   }
 
   _renderSubtitle(){
@@ -47,7 +44,7 @@ class Header extends Component {
           </View>
           <View style={ [styles.titleHeadContainer, styles.displayInline] }>
               { this._renderSubtitle() }
-              <Text style={ styles.titleHead }>{ strings[this.title] }</Text>
+              <Text style={ styles.titleHead }>{ this.props.title }</Text>
           </View>
         </View>
         

@@ -27,13 +27,16 @@ import {
   class QuizFlashScreen extends Component {
   
     static navigationOptions = ({ navigation }) => {      
+      subtitle = navigation.getParam('typeQuiz', null);         
+      title = navigation.getParam('title', null);
+      type = navigation.getParam('type', null);
 
       return{
         title: 'Quiz',
         tabBarVisible:false,
         header: props => <Header 
-          title='Hiragana and Katakana' 
-          subtitle='Quiz' 
+          title={ strings[title] }
+          subtitle={ subtitle }
           navigation={ navigation } 
           />
         //headerStyle:require('../../styles/style').headContainer,
@@ -43,12 +46,16 @@ import {
 
     constructor(props){
       super(props);
+
+      const { navigation } = this.props;
       
       this.optionsNumber = 4;
       this.allQuestion = [];
       this.quizItems = quizItemsShort;
       this.timeStops = 0;  
       this.studyRecord = [];
+      this.startTime = null;
+      this.title = navigation.getParam('title', null);
 
       this.state = {
         timesUp: false,
@@ -67,9 +74,10 @@ import {
         correct:0,
         title:'',
         img:'',
-        startTime: null,
         studyType:''
       }      
+
+      
 
       this._onSetLanguageTo('en');      
     }
@@ -137,11 +145,12 @@ import {
         type: navigation.getParam('type', null),
         topicId: navigation.getParam('topicId', null),
         studyType: navigation.getParam('studyType',null),
-        typeQuiz: navigation.getParam('typeQuiz',null),
-        startTime: new Date().getTime()
+        typeQuiz: navigation.getParam('typeQuiz',null)
       });
 
       let shuffledQuiz = this.shuffleItems(this.quizItems);
+
+      this.setStartQuiz();
 
       this.randomQuizFormat();
       
@@ -261,12 +270,18 @@ import {
         });
       }
       else{
+        this.setEndQuiz();
         this.props.navigation.navigate('ScoreScreen',{
           index : 2,
           typeQuiz : "Quiz",
         });
       }
        
+    }
+
+    setStartQuiz = () =>  {
+      this.startTime = new Date().getTime();
+      this.props.startLearn(this.state.studyType, this.startTime,this.title); //call our action
     }
 
     setTakeQuiz = () =>  {
@@ -284,12 +299,12 @@ import {
       this.props.takeQuiz(parseValue); //call our action
     };
 
-    setendquiz = () =>  {
+    setEndQuiz = () =>  {
       parseValue = {
           StudentID : this.props.StudentID,
           startTime : this.state.startTime,
           endTime :  new Date().getTime(),
-          subjectTitle: navigation.getParam('title', null),
+          subjectTitle: this.title,
           studyType : this.state.studyType,
           studyID : this.state.topicId,
           studyRecord : this.studyRecord,
