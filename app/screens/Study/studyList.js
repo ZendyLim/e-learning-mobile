@@ -17,7 +17,7 @@ class StudyListScreen extends Component {
 
   static navigationOptions = {
     header: null,
-    title: 'Study',
+    // title: 'Study',
   };
 
   render() {
@@ -27,7 +27,7 @@ class StudyListScreen extends Component {
           <View style={study.cardBox}>
             <TouchableOpacity 
               style={study.cardBoxDisabled}
-              onPress={()=>{alert("you clicked me")}}
+              onPress={this.selectLearnHL1}
             >
               <View style={study.cardImgDisabled}>
                 <Icon name='lock' />
@@ -78,6 +78,14 @@ class StudyListScreen extends Component {
     //await AsyncStorage.setItem('userToken', 'abc');
     this.props.navigation.navigate('HiraganaList');
   };
+  selectLearnHL1 = () => {
+    //await AsyncStorage.setItem('userToken', 'abc');
+    this.props.navigation.navigate('LearnHL1');
+  };
+  // selectHiraganaLearn = () => {
+  //   //await AsyncStorage.setItem('userToken', 'abc');
+  //   this.props.navigation.navigate('HiraganaLearn');
+  // };
 }
 
 const styles = require('../../styles/style');

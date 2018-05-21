@@ -17,15 +17,21 @@ import HiraganaListScreen from '../screens/Study/hiraganaList';
 import StudySummaryScreen from '../screens/Summary/studySummary';
 //import setting data
 import SettingScreen from '../screens/Setting/setting';
+//import learn lh1 screen
+import LearnHL1Screen from '../screens/learn/learnhl1';
+import HiraganaLearnScreen from '../screens/learn/hiraganalearn';
+import KatakanaLearnScreen from '../screens/learn/katakanalearn';
 
 //import 
 const StudyStack = StackNavigator({ 
     StudyList: StudyListScreen ,
-    HiraganaList: HiraganaListScreen
+    HiraganaList: HiraganaListScreen,
+    LearnHL1: LearnHL1Screen,
+    // HiraganaLearn: HiraganaLearnScreen,
 });
 
 const SummaryStack = StackNavigator({
-    StudySummary: StudySummaryScreen
+    StudySummary: StudySummaryScreen,
 });
 
 const SettingStack = StackNavigator({
@@ -47,7 +53,7 @@ export const AppStack = TabNavigator({
             tabBarLabel: 'Summary' 
         }
     }, 
-    Setting: { 
+    Setting: {
         screen: SettingStack, 
         navigationOptions: { 
             tabBarLabel: 'Setting' 
@@ -63,6 +69,41 @@ export const AuthStack = StackNavigator(
         NameIn: NameScreen,
         TimeIn: TimeScreen,
         Confirmation: ConfirmationScreen,
+});
+
+export const HiraganaLearnStack = TabNavigator({
+    Hiragana: {
+        screen: HiraganaLearnScreen
+        }, 
+    Katakana: {
+        screen: KatakanaLearnScreen, 
+        }, 
+},
+{ 
+    navigationOptions: {
+        tabBarVisible: true,
+    },
+    tabBarPosition: 'top',
+    tabBarOptions: {
+        activeTintColor: '#45B5E7',
+        inactiveTintColor: 'black',
+        indicatorStyle: {
+            backgroundColor: '#45B5E7',
+            height: 1,
+            // width: '25%',
+            },
+        upperCaseLabel: false,
+        labelStyle: {
+            fontSize: 25,
+        },
+        style:{
+            backgroundColor: 'white',
+        },
+    },
+    tabBarVisible: true,
+    swipeEnabled: false,
+    // headerTitle: 'Learn',
+    // initialRouteName: 'Learn',
 });
 
 
