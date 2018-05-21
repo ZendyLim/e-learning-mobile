@@ -10,7 +10,8 @@ import {
     TouchableOpacity, 
     Text, 
     Image, 
-    ImageBackground
+    ImageBackground, 
+    TouchableWithoutFeedback
   } from 'react-native';
   import { List, ListItem, Icon } from 'react-native-elements';
   import {Dimensions} from 'react-native';
@@ -25,7 +26,8 @@ import {
       title: 'Summary',
     };
 
-    componentWillMount() {
+    constructor() {
+      super();
       this.animatedValue = new Animated.Value(0);
       this.value = 0;
       this.animatedValue.addListener(({ value }) => {
@@ -49,8 +51,10 @@ import {
       })
 
       this.state = {
-        front: hiraganaList['0'].moji,
-        back: hiraganaList[0].romaji, 
+        front: hiraganaList[0].moji,
+        back: hiraganaList[0].romaji,
+        fakeFront: null,
+        fakeBack: null, 
         flipped: false,
         img : ImageData.number_chara,
         isPause: false,
@@ -143,12 +147,14 @@ import {
       this.setState((previousState) => {
         let state = previousState;
 
-        if(this.value >= 90){
-          state.front = hiraganaList[this.progressCounter].moji;
-          state.back = hiraganaList[this.progressCounter].romaji;
-        } else {
-          state.front = hiraganaList[this.progressCounter].romaji;
-          state.back = hiraganaList[this.progressCounter].moji;
+        if(hiraganaList[this.progressCounter].id) {
+          if(this.value >= 90){
+            state.front = hiraganaList[this.progressCounter].moji;
+            state.fakeBack = hiraganaList[this.progressCounter].romaji;
+          } else {
+            state.fakeFront = hiraganaList[this.progressCounter].romaji;
+            state.back = hiraganaList[this.progressCounter].moji;
+          }
         }
         
         state.flipped = true;
@@ -165,13 +171,14 @@ import {
       this.progressCounter--;
       this.setState((previousState) => {
         let state = previousState;
-
-        if(this.value >= 90){
-          state.front = hiraganaList[this.progressCounter].moji;
-          state.back = hiraganaList[this.progressCounter].romaji;
-        } else {
-          state.front = hiraganaList[this.progressCounter].romaji;
-          state.back = hiraganaList[this.progressCounter].moji;
+        if(hiraganaList[this.progressCounter].id) {
+          if(this.value >= 90){
+            state.front = hiraganaList[this.progressCounter].moji;
+            state.fakeBack = hiraganaList[this.progressCounter].romaji;
+          } else {
+            state.fakeFront = hiraganaList[this.progressCounter].romaji;
+            state.back = hiraganaList[this.progressCounter].moji;
+          }
         }
         
         state.flipped = true;
@@ -187,7 +194,17 @@ import {
     
           this.setState((previousState) => {
             let state = previousState;
-            console.log(state.flipped);
+            
+            if(state.fakeBack != null){
+              state.back = state.fakeBack;
+              state.fakeBack = null;
+            }
+
+            if(state.fakeFront != null){
+              state.front = state.fakeFront;
+              state.fakeFront = null;
+            }
+
             state.flipped = !previousState.flipped;
             return state;
           })
@@ -197,14 +214,14 @@ import {
       if (this.value >= 90) {
         Animated.spring(this.animatedValue, {
           toValue: 0, 
-          friction: 8, 
-          tension: 10,  
+          friction: 30, 
+          tension: 40,  
         }).start(set);
       } else {
         Animated.spring(this.animatedValue, {
           toValue: 180, 
-          friction: 8, 
-          tension: 10,  
+          friction: 30, 
+          tension: 40,  
         }).start(set);
       }
     }
@@ -228,6 +245,10 @@ import {
         width: '100%', 
         height: '100%'
       }
+
+      const help = {
+        opacity: this.helpMe
+      }
       
       const autoHeight = {
         height: (Dimensions.get('window').width) * 0.2
@@ -241,18 +262,20 @@ import {
                   <Icon name='volume-up' color='#45B3EB' size={40}/>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity style={studyStyles.cardContainer} onPress={() => this.flipCard()}>
-                <Animated.View style={[frontAnimatedStyle]}>
-                  <View style={[studyStyles.cardText]}>
-                    <Text style={studyStyles.textContent}>{ this.state.front }</Text>
-                  </View>
-                </Animated.View>
-                <Animated.View  style={[backAnimatedStyle]}>
-                  <View style={[studyStyles.cardText]}>
-                    <Text style={studyStyles.textContent}>{ this.state.back }</Text>
-                  </View>
-                </Animated.View>
-              </TouchableOpacity>
+              <TouchableWithoutFeedback onPress={() => this.flipCard()}>
+                <View style={studyStyles.cardContainer}>
+                  <Animated.View style={[frontAnimatedStyle]}>
+                    <View style={[studyStyles.cardText]}>
+                      <Text style={studyStyles.textContent}>{ this.state.front }</Text>
+                    </View>
+                  </Animated.View>
+                  <Animated.View  style={[backAnimatedStyle]}>
+                    <View style={[studyStyles.cardText]}>
+                      <Text style={studyStyles.textContent}>{ this.state.back }</Text>
+                    </View>
+                  </Animated.View>
+                </View>
+              </TouchableWithoutFeedback>
             </View>
 
             <View style={[studyStyles.containerBottom, autoHeight]}>
