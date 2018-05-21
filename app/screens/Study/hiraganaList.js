@@ -13,41 +13,95 @@ import {
     TouchableOpacity, 
 } from 'react-native';
 import { List, ListItem, Icon } from 'react-native-elements';
+import  { strings }   from '../../config/localization';
+// import * as Actions from '../../../actions/Quiz'; //Import your actions
+import { ImageData } from '../../config/image_list';
 
 class HiraganaListScreen extends Component {
 
-  static navigationOptions = {
-    header: null,
-    title: 'HiraganaList',
+  static navigationOptions = ({ navigation }) =>{
+    //header: null,
+    const {state} = navigation;
+    return {
+      title: `${strings[state.params.headerTitle]}`,
+    };
   };
+  state = {
+    title:"",
+    img: "",
+  }
+  componentDidMount() {
+    const { navigation } = this.props;
+    this.setState({
+      title: navigation.getParam('title', null),
+      img: navigation.getParam('img', null),
+      type: navigation.getParam('type', null),
+      headerTitle : navigation.getParam('headerTitle', null),
+      studyType : navigation.getParam('studyType', null),
+      typeQuiz : navigation.getParam('typeQuiz', null),
+      topicId : navigation.getParam('id', null)
+    });
+    
+    //Console.log(navigation.getParam('userName', null),"NIAMAK");
+  }
 
+  navigateToLearn=(type)=>{
+    if(type == 'Learn'){
+      this.props.navigation.navigate('LearnListScreen',(
+        {
+          type : type,
+          title : this.state.title,
+          studyType: this.state.studyType
+        }
+      ));
+    }else   if(type == 'Quiz'){
+      this.props.navigation.navigate('QuizFlash',(
+        {
+          type : type,
+          title : this.state.title,
+          studyType: this.state.studyType,
+          img: this.state.img,
+          topicId: this.state.topicId,
+          typeQuiz: 'Quiz'
+        }
+      ));
+    }
+    else   if(type == 'Test'){
+      this.props.navigation.navigate('QuizFlash',(
+        {
+          type : type,
+          title : this.state.title,
+          studyType: this.state.studyType,
+          img: this.state.img,
+          topicId: this.state.topicId,
+          typeQuiz: 'Test'
+        }
+      ));
+    }
+    else{
+      this.props.navigation.navigate('TopicList',(
+        item
+      ));
+    }
+  }
   render() {
     return (
       <ScrollView>
-        <View style={study.container}>
-          <ToolbarAndroid
-              title="Hiragana & Katakana Lesson"
-              style={styles.toolbar}
-              titleColor='white'
-          />
-
-          <Image 
-            style={study.cardImg}
-            source={require('../../img/sample1.png')}
-            resizeMode="stretch"  
-          />
-          
+        <View style={study.StudyContainer}>
+          <View style={[study.titleContainer , study.bgWhite]}>
+            <Image 
+              style={ study.cardImg }
+              source= { this.state.img ? ( ImageData[this.state.img] ) :   ImageData['loading'] }
+              resizeMode="stretch"  
+            />
+            <Text style={study.title}> { strings[this.state.title] } </Text>
+          </View>
           <View style={[study.cardBox, study.borderBox, study.p3]}>
             <Text style={[study.textLg, study.textBlack]}>Learn</Text>
-            <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
             <View style={study.buttonContainer}>
-              <TouchableOpacity style={[study.button, study.mR10]}>
-                <Icon name='play-arrow'/>
+              <TouchableOpacity style={[study.button, study.mR10]} onPress={this.navigateToLearn.bind(this, 'Learn')}>
+                <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={study.button}>
-                <Icon name='search'/>
-                <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -56,12 +110,14 @@ class HiraganaListScreen extends Component {
             <Text style={[study.textLg, study.textBlack]}>Quiz</Text>
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
             <View style={study.buttonContainer}>
-              <TouchableOpacity style={[study.button, study.mR10]}>
-                <Icon name='play-arrow'/>
+
+              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Quiz')}>
+              
+                <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
               </TouchableOpacity>
               <TouchableOpacity style={study.button}>
-                <Icon name='search'/>
+                <Icon name='search'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
             </View>
@@ -71,12 +127,12 @@ class HiraganaListScreen extends Component {
             <Text style={[study.textLg, study.textBlack]}>Test</Text>
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
             <View style={study.buttonContainer}>
-              <TouchableOpacity style={[study.button, study.mR10]}>
-                <Icon name='play-arrow'/>
+              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Test')}>
+                <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
               </TouchableOpacity>
               <TouchableOpacity style={study.button}>
-                <Icon name='search'/>
+                <Icon name='search'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
             </View>
@@ -91,6 +147,10 @@ class HiraganaListScreen extends Component {
   createGuest = () => {
     //await AsyncStorage.setItem('userToken', 'abc');
     this.props.navigation.navigate('NameIn');
+  };
+
+  quiz = () => {
+    this.props.navigation.navigate('QuizMain');
   };
 }
 
