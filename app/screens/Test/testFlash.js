@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import {
+    ActivityIndicator,
+    AsyncStorage,
+    Button,
+    StatusBar,
+    StyleSheet,
     View,
+    ImageBackground,
     Text,
     TouchableHighlight
   } from 'react-native';
@@ -12,12 +18,12 @@ import {
   import * as Actions from '../../actions/study'; 
   
   // Import Components
+  import CharacterImage   from '../../component/character';
   import TimerBar   from '../../component/timer';
   import QuestionPanel   from '../../component/question';
   import Quiz   from '../../component/quiz';
-  import Header   from '../../component/header';
 
-  import { quizItems, quizItemsShort } from '../../config/quiz';
+  import quizItems from '../../config/quiz';
 
   /*
     TODO:
@@ -26,41 +32,22 @@ import {
   */
   class QuizFlashScreen extends Component {
   
-    static navigationOptions = ({ navigation }) => {      
-      subtitle = navigation.getParam('typeQuiz', null);         
-      title = navigation.getParam('title', null);
-      type = navigation.getParam('type', null);
-
-      return{
-        title: 'Quiz',
-        tabBarVisible:false,
-        header: props => <Header 
-          title={ strings[title] }
-          subtitle={ subtitle }
-          navigation={ navigation } 
-          />
-        //headerStyle:require('../../styles/style').headContainer,
-        //headerTitle:<Header title='Hiragana and Katakana' subtitle='Quiz' />
-      }
+    static navigationOptions = {      
+      title: 'Quiz',
+      tabBarVisible:false
     };
 
     constructor(props){
       super(props);
-
-      const { navigation } = this.props;
       
       this.optionsNumber = 4;
       this.allQuestion = [];
-      this.quizItems = quizItemsShort;
       this.timeStops = 0;  
-      this.studyRecord = [];
-      this.startTime = null;
-      this.title = navigation.getParam('title', null);
 
       this.state = {
         timesUp: false,
         expression: 'default',
-        time:5000,        
+        time:5000,
         timerRun:true,
         timerRestart:false,
         counter: 0,
@@ -71,20 +58,30 @@ import {
         questionFormat:'',
         pause: 2000,
         score:0,
-        correct:0,
-        title:'',
-        img:'',
-        studyType:''
-      }      
+        correct:0
+      }
 
-      
+      this.imageSource = require('../../assets/img/topic/1.0-class.jpg');
 
       this._onSetLanguageTo('en');      
     }
 
     _onSetLanguageTo(value) {
       strings.setLanguage(value);
-    }    
+    }
+
+    _renderTimesup(){
+      if(this.state.timesUp){
+        return(
+          <View style={[ styles.timesUp, styles.displayInlineContainer ]}>
+              <Text style={[ styles.timesUpText, styles.displayInline ]}>{ strings.TIMES_UP }</Text> 
+          </View>
+        );
+      }
+      else{
+        return null;
+      }
+    }
   
     render() {
       let display = this.state.timesUp;
@@ -96,15 +93,23 @@ import {
       return (
         <View style={styles.container}>
             <View style={[styles.row]}>
+              <View style={[styles.col12, styles.quizFlashTop]}>
+                
+                  <ImageBackground
+                      style={ styles.quizBanner }
+                      source={ this.imageSource }
+                  >
+                    <QuestionPanel 
+                      question={ this.state.question } 
+                      format={ format } 
+                    />
 
-              <QuestionPanel 
-                  question={ this.state.question } 
-                  format={ format } 
-                  img={ this.state.img }
-                  style={[styles.col12, styles.quizFlashTop]}
-                  timesUp={ this.state.timesUp }
-                  expression={ this.state.expression }
-              />
+                    <CharacterImage expression={ expression } style={ styles.quizChar }/>
+                    
+                  </ImageBackground>
+
+                  { this._renderTimesup() }
+              </View>
               
               <View style={[styles.col12]}>
                 <TimerBar 
@@ -136,21 +141,8 @@ import {
       );
     }
 
-    componentWillMount() {            
-      const { navigation } = this.props;
-
-      this.setState({
-        title: navigation.getParam('title', null),
-        img: navigation.getParam('img', null),
-        type: navigation.getParam('type', null),
-        topicId: navigation.getParam('topicId', null),
-        studyType: navigation.getParam('studyType',null),
-        typeQuiz: navigation.getParam('typeQuiz',null)
-      });
-
-      let shuffledQuiz = this.shuffleItems(this.quizItems);
-
-      this.setStartQuiz();
+    componentWillMount() {
+      let shuffledQuiz = this.shuffleItems(quizItems);
 
       this.randomQuizFormat();
       
@@ -270,48 +262,22 @@ import {
         });
       }
       else{
-        this.setEndQuiz();
-        this.props.navigation.navigate('ScoreScreen',{
-          index : 2,
-          typeQuiz : "Quiz",
-        });
+        this.props.navigation.navigate('StudyReduxScreen');
       }
        
     }
 
-    setStartQuiz = () =>  {
-      this.startTime = new Date().getTime();
-      this.props.startLearn(this.state.studyType, this.startTime,this.title); //call our action
-    }
-
     setTakeQuiz = () =>  {
-      
-      parseValue = {
+
+        parseValue = {
             questionID : this.state.question.id,
             questionTime : this.state.questionTime,
             answer :  this.state.answer,
             correct : this.state.correct,
             questionTime: this.timeStops
-      }
-
-      this.studyRecord[this.studyRecord.length] = parseValue;
-      
+        }
       this.props.takeQuiz(parseValue); //call our action
     };
-
-    setEndQuiz = () =>  {
-      parseValue = {
-          StudentID : this.props.StudentID,
-          startTime : this.state.startTime,
-          endTime :  new Date().getTime(),
-          subjectTitle: this.title,
-          studyType : this.state.studyType,
-          studyID : this.state.topicId,
-          studyRecord : this.studyRecord,
-          typeQuiz:this.state.typeQuiz
-      }
-    this.props.endLearn(parseValue); //call our action
-  };
 
     onTimesUp = (val) => {
 

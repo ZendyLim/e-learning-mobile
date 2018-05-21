@@ -78,7 +78,7 @@ import {
     return (
         <View style={scoreStyle.RecordRow}>
             <Text style={scoreStyle.recordTitle}>
-                Title
+                { item.questionID + ' - ' + item.answer }
             </Text>
             { item.correct == '1' ? (
             <View style={scoreStyle.recordCorrect}>

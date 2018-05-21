@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, Image} from 'react-native';
 import PropTypes from 'prop-types';
-
+// Config
+import { ImageData } from '../config/image_list';
 /**
   Character Class
   Different expression: default, sad, happy
@@ -30,19 +31,7 @@ class CharacterImage extends Component {
     }
 
     chooseExpression(){
-      switch (this.props.expression) {
-          case 'happy':
-              this.state.image = require('../assets/img/char/char-happy.png');
-              break;
-
-          case 'sad':
-              this.state.image = require('../assets/img/char/char-sad.png');
-              break;
-
-          default:
-              this.state.image = require('../assets/img/char/char-default.png');
-              break;
-      }
+      this.state.image = ImageData[this.props.expression] ? ImageData[this.props.expression] : ImageData.default;
     }
 }
 module.exports = CharacterImage;
