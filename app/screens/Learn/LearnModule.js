@@ -46,9 +46,15 @@ class LearnHiraganaModule extends Component {
   render() {
     if(this.state.type){
         if(this.state.type == 'HL1'){
-            return (
-                <HiraganaLearnStack />        
-            );        
+            if(this.state.title == 'HIRAGANA_HL1'){
+                return (
+                    <HiraganaLearnStack />        
+                );            
+            }else if(this.state.title == 'NUMBER_HL1'){
+                return (
+                    <Text>Number</Text>        
+                );            
+            }
         }else if(this.state.type == 'HL2'){
             return (
                 <HL2Screen />        

@@ -22,15 +22,54 @@ import {
   import { HiraganaLearnStack }  from '../../config/router';
   import * as Actions from '../../actions/user'; //Import your actions
 
+  var Sound = require('react-native-sound');
+
+  function setTestState(testInfo, component, status) {
+    component.setState({tests: {...component.state.tests, [testInfo.title]: status}});
+  } 
+
+  /**
+ * Generic play function for majority of tests
+ */
+function playSound(testInfo, component) {
+  setTestState(testInfo, component, 'pending');
+
+  const callback = (error, sound) => {
+    if (error) {
+      Alert.alert('error', error.message);
+      setTestState(testInfo, component, 'fail');
+      return;
+    }
+    setTestState(testInfo, component, 'playing');
+    // Run optional pre-play callback
+    testInfo.onPrepared && testInfo.onPrepared(sound, component);
+    sound.play(() => {
+      // Success counts as getting to the end
+      setTestState(testInfo, component, 'win');
+      // Release when it's done so we're not using up resources
+      sound.release();
+    });
+  };
+
+  // If the audio is a 'require' then the second parameter must be the callback.
+  if (testInfo.isRequire) {
+    const sound = new Sound(testInfo.url, error => callback(error, sound));
+  } else {
+    const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
+  }
+}
+
   class FlatListItem extends Component {
 
-    ButtonClick(item) {
+    ButtonClick = (item) => {
       Alert.alert(item);
     }
 
     render(){
       return(
-        <TouchableOpacity style={learnlh1.GridViewBlockStyle} onPress={this.ButtonClick.bind(this, this.props.item.hiragana)}>
+        <TouchableOpacity style={learnlh1.GridViewBlockStyle} onPress={() => {
+          return playSound(this.props.item , this.props.component);
+        }}>
           <Text style={learnlh1.HiraganaItem}>{this.props.item.hiragana}</Text>
           <Text style={learnlh1.RomajiItem} >{this.props.item.romaji}</Text>
         </TouchableOpacity>
@@ -39,29 +78,30 @@ import {
   }
 
   const data = [
-    {hiragana: 'ア', romaji: 'a'},
-    {hiragana: 'イ', romaji: 'i'},
-    {hiragana: 'ウ', romaji: 'u'},
-    {hiragana: 'エ', romaji: 'e'},
-    {hiragana: 'オ', romaji: 'o'},
-    {hiragana: 'カ', romaji: 'ka'},
-    {hiragana: 'キ', romaji: 'ki'},
-    {hiragana: 'ク', romaji: 'ku'},
-    {hiragana: 'ケ', romaji: 'ke'},
-    {hiragana: 'コ', romaji: 'ko'},
-    {hiragana: 'サ', romaji: 'sa'},
-    {hiragana: 'シ', romaji: 'shi'},
-    {hiragana: 'ス', romaji: 'su'},
-    {hiragana: 'セ', romaji: 'se'},
-    {hiragana: 'ソ', romaji: 'so'},
-    {hiragana: 'タ', romaji: 'ta'},
-    {hiragana: 'チ', romaji: 'chi'},
-    {hiragana: 'ツ', romaji: 'tsu'},
-    {hiragana: 'テ', romaji: 'te'},
-    {hiragana: 'ト', romaji: 'to'}
+    {hiragana: 'ア', romaji: 'a' , url: 'ka.mp3' },
+    {hiragana: 'イ', romaji: 'i' , url: 'ke.mp3' },
+    {hiragana: 'ウ', romaji: 'u' , url: 'ka.mp3' },
+    {hiragana: 'エ', romaji: 'e' , url: 'ka.mp3' },
+    {hiragana: 'オ', romaji: 'o' , url: 'ka.mp3' },
+    {hiragana: 'カ', romaji: 'ka' , url: 'ka.mp3' },
+    {hiragana: 'キ', romaji: 'ki' , url: 'ka.mp3' },
+    {hiragana: 'ク', romaji: 'ku' , url: 'ka.mp3' },
+    {hiragana: 'ケ', romaji: 'ke' , url: 'ka.mp3' },
+    {hiragana: 'コ', romaji: 'ko' , url: 'ka.mp3' },
+    {hiragana: 'サ', romaji: 'sa' , url: 'ka.mp3' },
+    {hiragana: 'シ', romaji: 'shi' , url: 'ka.mp3' },
+    {hiragana: 'ス', romaji: 'su' , url: 'ka.mp3' },
+    {hiragana: 'セ', romaji: 'se' , url: 'ka.mp3' },
+    {hiragana: 'ソ', romaji: 'so' , url: 'ka.mp3' },
+    {hiragana: 'タ', romaji: 'ta' , url: 'ka.mp3' },
+    {hiragana: 'チ', romaji: 'chi' , url: 'ka.mp3' },
+    {hiragana: 'ツ', romaji: 'tsu' , url: 'ka.mp3' },
+    {hiragana: 'テ', romaji: 'te' , url: 'ka.mp3' },
+    {hiragana: 'ト', romaji: 'to' , url: 'ka.mp3'}
   ];
 
-  export class HiraganaLearnScreen extends Component {
+
+  export class KatakanaLearnScreen extends Component {
 
     static navigationOptions = {
         // header: null,
@@ -71,7 +111,21 @@ import {
 
     constructor(props) {
       super(props);
-      this.state = {}
+      Sound.setCategory('Playback', true); // true = mixWithOthers
+
+      // Special case for stopping
+      this.stopSoundLooped = () => {
+        if (!this.state.loopingSound) {
+          return;
+        }
+  
+        this.state.loopingSound.stop().release();
+        this.setState({loopingSound: null, tests: {...this.state.tests, ['mp3 in bundle (looped)']: 'win'}});
+      };
+      this.state = {
+        loopingSound: undefined,
+        tests: {},
+      };    
     }
 
     render() {
@@ -81,7 +135,7 @@ import {
           data={data}
           renderItem={({item}) => {
             return(
-              <FlatListItem item={item}/>
+              <FlatListItem item={item} component={this}/>
               );
             }}
           numColumns={5}
@@ -106,5 +160,5 @@ import {
   }
   
   //Connect everything
-  export default connect(mapStateToProps, mapDispatchToProps)(HiraganaLearnScreen);
+  export default connect(mapStateToProps, mapDispatchToProps)(KatakanaLearnScreen);
   // export default LearnHL1Screen;

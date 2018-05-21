@@ -22,6 +22,7 @@ import QuizHiraganaListScreen from '../screens/Quiz/quizHiraganaList';
 import QuizKatakanaListScreen from '../screens/Quiz/quizKatakanaList';
 import HiraganaExplanationScreen from '../screens/Study/hiraganaExplanation';
 import ScoreScreen from '../screens/Study/score';
+import MainView from '../screens/sound';
 //import Summary Screen
 import StudySummaryScreen from '../screens/Summary/studySummary';
 //import Quiz Flash Screen
@@ -140,10 +141,16 @@ export const AuthStack = StackNavigator(
 
 export const HiraganaLearnStack = TabNavigator({
     Hiragana: {
-        screen: HiraganaLearnScreen
+        screen: HiraganaLearnScreen,
+        navigationOptions: { 
+            tabBarLabel: 'Hiragana',
+        }
         }, 
     Katakana: {
         screen: KatakanaLearnScreen, 
+        navigationOptions: { 
+            tabBarLabel: 'Katakana',
+        }
         }, 
 },
 { 
