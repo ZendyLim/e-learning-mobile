@@ -51,7 +51,7 @@ class StudyListScreen extends Component {
   
   static navigationOptions = {
     header: null,
-    title: 'Study',
+    // title: 'Study',
   };
 
   render() {
@@ -86,6 +86,14 @@ class StudyListScreen extends Component {
     //await AsyncStorage.setItem('userToken', 'abc');
     this.props.navigation.navigate('HiraganaList');
   };
+  selectLearnHL1 = () => {
+    //await AsyncStorage.setItem('userToken', 'abc');
+    this.props.navigation.navigate('LearnHL1');
+  };
+  // selectHiraganaLearn = () => {
+  //   //await AsyncStorage.setItem('userToken', 'abc');
+  //   this.props.navigation.navigate('HiraganaLearn');
+  // };
 }
 
 const styles = require('../../styles/style');
