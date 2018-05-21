@@ -10,15 +10,24 @@ import {
     Text,
     Image,
     TouchableOpacity, 
+    Modal,
+    TouchableHighlight
 } from 'react-native';
 import { Icon } from 'react-native-elements';
 import  { strings }   from '../../config/localization';
 import { StudyList } from '../../config/studyList';
 import { ImageData } from '../../config/image_list';
 
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as Actions from '../../actions/study'; //Import your actions
+
 import style from 'react-native-datepicker/style';
 
 class StudyListScreen extends Component {
+  state = {
+    modalVisible: true,
+  };
   constructor() {
     super();
     this._onSetLanguageTo('en');
@@ -26,6 +35,10 @@ class StudyListScreen extends Component {
   _onSetLanguageTo(value) {
     strings.setLanguage(value);
     //this.setState({});
+  }
+
+  setModalVisible(visible) {
+    this.setState({modalVisible: visible});
   }
 
   lockedMessage=(item, index)=>{
@@ -56,8 +69,30 @@ class StudyListScreen extends Component {
 
   render() {
     var image = '';
+    console.log(this.props.fukushu);
     return (
       <ScrollView style={study.StudyContainer}>
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={ this.props.fukushu ? this.props.fukushu : false }
+          onRequestClose={() => {
+            alert('Modal has been closed.');
+          }}>
+          <View style={{marginTop: 22}}>
+            <View>
+              <Text>Hello World!</Text>
+
+              <TouchableHighlight
+                onPress={() => {
+                  this.props.fukushu = false;
+                }}>
+                <Text>Hide Modal</Text>
+              </TouchableHighlight>
+            </View>
+          </View>
+        </Modal>
+
           { StudyList.map((item, key)=>(
           <View  key={key} style={study.cardBox}>
             <TouchableOpacity style={study.titleContainer} onPress={this.navigateToLearn.bind(this, item, key)}>
@@ -99,4 +134,22 @@ class StudyListScreen extends Component {
 const styles = require('../../styles/style');
 const study = require('../../styles/study');
 
-export default StudyListScreen;
+// The function takes data from the app current state,
+// and insert/links it into the props of our component.
+// This function makes Redux know that this component needs to be passed a piece of the state
+function mapStateToProps(state, props) {
+  return {
+      fukushu: state.study.fukushu,
+  }
+}
+
+// Doing this merges our actions into the component’s props,
+// while wrapping them in dispatch() so that they immediately dispatch an Action.
+// Just by doing this, we will have access to the actions defined in out actions file (action/home.js)
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(Actions, dispatch);
+}
+
+//Connect everything
+export default connect(mapStateToProps, mapDispatchToProps)(StudyListScreen);
+
