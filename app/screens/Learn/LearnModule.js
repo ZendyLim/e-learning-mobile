@@ -17,6 +17,7 @@ import { LearnListData } from '../../config/studyList';
 import style from 'react-native-datepicker/style';
 import LearningModule from '../Study/hiraganaFlashcard';
 import HL2Screen from '../Learn/HL2';
+import { HiraganaLearnStack } from '../../config/router';
 
 class LearnHiraganaModule extends Component {
   constructor() {
@@ -45,9 +46,15 @@ class LearnHiraganaModule extends Component {
   render() {
     if(this.state.type){
         if(this.state.type == 'HL1'){
-            return (
-                <Text>HL1</Text>        
-            );        
+            if(this.state.title == 'HIRAGANA_HL1'){
+                return (
+                    <HiraganaLearnStack />        
+                );            
+            }else if(this.state.title == 'NUMBER_HL1'){
+                return (
+                    <Text>Number</Text>        
+                );            
+            }
         }else if(this.state.type == 'HL2'){
             return (
                 <HL2Screen />        

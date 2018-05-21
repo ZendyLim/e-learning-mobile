@@ -22,6 +22,7 @@ import QuizHiraganaListScreen from '../screens/Quiz/quizHiraganaList';
 import QuizKatakanaListScreen from '../screens/Quiz/quizKatakanaList';
 import HiraganaFlashcardScreen from '../screens/Study/hiraganaFlashcard';
 import ScoreScreen from '../screens/Study/score';
+import MainView from '../screens/sound';
 //import Summary Screen
 import StudySummaryScreen from '../screens/Summary/studySummary';
 //import Quiz Flash Screen
@@ -30,6 +31,10 @@ import QuizFlashScreen from '../screens/Quiz/quizFlash';
 import SettingScreen from '../screens/Setting/setting';
 //import testing redux
 import StudyReduxScreen from '../screens/studyRedux';
+//import learn lh1 screen
+import LearnHL1Screen from '../screens/Learn/learnhl1';
+import HiraganaLearnScreen from '../screens/Learn/hiraganalearn';
+import KatakanaLearnScreen from '../screens/Learn/katakanalearn';
 
 const styles = require('../styles/style');
 //import 
@@ -52,10 +57,11 @@ const StudyStack = StackNavigator({
     },
     StudyList: StudyListScreen ,
     HiraganaFlash: HiraganaFlashcardScreen , 
+    LearnHL1: LearnHL1Screen,
 });
 
 const SummaryStack = StackNavigator({
-    StudySummary: StudySummaryScreen
+    StudySummary: StudySummaryScreen,
 });
 
 const SettingStack = StackNavigator({
@@ -94,7 +100,7 @@ export const AppStack = TabNavigator({
               }
         }
     }, 
-    Setting: { 
+    Setting: {
         screen: SettingStack, 
         navigationOptions: { 
             tabBarLabel: () => {
@@ -134,3 +140,43 @@ export const AuthStack = StackNavigator(
         Confirmation: ConfirmationScreen
 });
 
+export const HiraganaLearnStack = TabNavigator({
+    Hiragana: {
+        screen: HiraganaLearnScreen,
+        navigationOptions: { 
+            tabBarLabel: 'Hiragana',
+        }
+        }, 
+    Katakana: {
+        screen: KatakanaLearnScreen, 
+        navigationOptions: { 
+            tabBarLabel: 'Katakana',
+        }
+        }, 
+},
+{ 
+    navigationOptions: {
+        tabBarVisible: true,
+    },
+    tabBarPosition: 'top',
+    tabBarOptions: {
+        activeTintColor: '#45B5E7',
+        inactiveTintColor: 'black',
+        indicatorStyle: {
+            backgroundColor: '#45B5E7',
+            height: 1,
+            // width: '25%',
+            },
+        upperCaseLabel: false,
+        labelStyle: {
+            fontSize: 25,
+        },
+        style:{
+            backgroundColor: 'white',
+        },
+    },
+    tabBarVisible: true,
+    swipeEnabled: false,
+    // headerTitle: 'Learn',
+    // initialRouteName: 'Learn',
+});

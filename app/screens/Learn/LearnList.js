@@ -42,6 +42,9 @@ class LearnListScreen extends Component {
     });
   }
   navigateToPage=(item, index)=>{
+    item['studyType'] = this.state.studyType;
+    console.log(item);
+
     if(item.type == 'Initial'){
       this.props.navigation.navigate('LearnHiraganaModule',(
         item
