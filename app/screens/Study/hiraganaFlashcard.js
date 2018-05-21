@@ -16,8 +16,9 @@ import {
   import {Dimensions} from 'react-native';
   // Config
   import { ImageData } from '../../config/image_list';
+  import { hiraganaList } from '../../config/data';
   
-  class HiraganaExplanationScreen extends Component {
+  class HiraganaFlashcardScreen extends Component {
   
     static navigationOptions = {
       header: null,
@@ -47,41 +48,12 @@ import {
         outputRange: [0, 1]
       })
 
-      this.data = [
-        {
-          front: 'あ',
-          back: 'a'
-        },
-        {
-          front: 'い',
-          back: 'i'
-        },
-        {
-          front: 'う',
-          back: 'u'
-        },
-        {
-          front: 'え',
-          back: 'e'
-        },
-        {
-          front: 'お',
-          back: 'o'
-        },
-        {
-          front: 'か',
-          back: 'ka'
-        },
-      ],
-
       this.state = {
-        front: 'あ',
-        back: 'a', 
+        front: hiraganaList['0'].moji,
+        back: hiraganaList[0].romaji, 
         flipped: false,
         img : ImageData.number_chara,
         isPause: false,
-        isFront: true, 
-        isBack: false, 
       };
 
       this.progressCounter = 0;
@@ -162,7 +134,7 @@ import {
     }
 
     updateNext(){
-      if(this.progressCounter + 1 === this.data.length){
+      if(this.progressCounter + 1 === hiraganaList.length){
         return;
         //TODO Finnish the damn lesson
       }
@@ -172,11 +144,11 @@ import {
         let state = previousState;
 
         if(this.value >= 90){
-          state.front = this.data[this.progressCounter].front;
-          state.back = this.data[this.progressCounter].back;
+          state.front = hiraganaList[this.progressCounter].moji;
+          state.back = hiraganaList[this.progressCounter].romaji;
         } else {
-          state.front = this.data[this.progressCounter].back;
-          state.back = this.data[this.progressCounter].front;
+          state.front = hiraganaList[this.progressCounter].romaji;
+          state.back = hiraganaList[this.progressCounter].moji;
         }
         
         state.flipped = true;
@@ -195,11 +167,11 @@ import {
         let state = previousState;
 
         if(this.value >= 90){
-          state.front = this.data[this.progressCounter].front;
-          state.back = this.data[this.progressCounter].back;
+          state.front = hiraganaList[this.progressCounter].moji;
+          state.back = hiraganaList[this.progressCounter].romaji;
         } else {
-          state.front = this.data[this.progressCounter].back;
-          state.back = this.data[this.progressCounter].front;
+          state.front = hiraganaList[this.progressCounter].romaji;
+          state.back = hiraganaList[this.progressCounter].moji;
         }
         
         state.flipped = true;
@@ -335,4 +307,4 @@ import {
 
   const styles = require('../../styles/style');
   const studyStyles = require('../../styles/study');
-export default HiraganaExplanationScreen;
+export default HiraganaFlashcardScreen;

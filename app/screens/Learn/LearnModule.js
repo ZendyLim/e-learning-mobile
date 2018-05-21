@@ -15,7 +15,7 @@ import { Icon } from 'react-native-elements';
 import  { strings }   from '../../config/localization';
 import { LearnListData } from '../../config/studyList';
 import style from 'react-native-datepicker/style';
-import LearningModule from '../Study/hiraganaExplanation';
+import LearningModule from '../Study/hiraganaFlashcard';
 import HL2Screen from '../Learn/HL2';
 
 class LearnHiraganaModule extends Component {
