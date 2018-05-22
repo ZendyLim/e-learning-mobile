@@ -168,10 +168,6 @@ export const StudyList = [{
       type : 'HL1',
       study : '3'
     },{
-      title : 'EXPLANATION',
-      type : 'HL2',
-      study : '3'
-    },{
       title : 'FLASH_CARD',
       type : 'HL3',
       study : '3'

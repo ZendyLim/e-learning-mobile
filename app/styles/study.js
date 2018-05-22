@@ -300,6 +300,17 @@ iconContainer: {
   left: 0,
   zIndex: 2, 
 }, 
+HL2Font: {
+  fontSize: 15,
+},
+HL2img : {
+  marginTop:10,
+  height: 60,
+  width:  250,
+},
+tableContainer : {
+  width: '100%',
+}
 
 });
 

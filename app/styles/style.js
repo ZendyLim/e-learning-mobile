@@ -82,6 +82,9 @@ module.exports = StyleSheet.create({
 		col2 : {
 			width: '16.667%'
 		},
+		col2Tbl : {
+			width: '16%'
+		},
 		col1 : {
 			width: '8.333%'
 		}, 
