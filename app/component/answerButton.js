@@ -12,12 +12,13 @@ class AnswerButton extends Component {
     textData: PropTypes.object,
     selected: PropTypes.bool,
     id: PropTypes.string,
-    isCorrect: PropTypes.number
+    isCorrect: PropTypes.number,
+    styleFormat: PropTypes.string
   };
 
   constructor(props) {
       super(props);
-
+    
   }
 
     _renderIcon(){
@@ -38,7 +39,7 @@ class AnswerButton extends Component {
       }
 
       return(
-        <View style={[ styles.quizBtnIconWrapper, this.props.isCorrect ? styles.quizBtnIconCorrect : styles.quizBtnIconWrong  ]}>
+        <View style={[ styles.quizBtnIconWrapper, this.props.isCorrect ? styles.quizBtnIconCorrect : styles.quizBtnIconWrong, this.props.styleFormat != 'quizSquared' && styles.quizBtnIconLeft  ]}>
           <Icon name={ iconName }  style={ [ styles.quizBtnIcon ] } />
         </View>
       );
@@ -48,14 +49,14 @@ class AnswerButton extends Component {
     render(){
       
       return (
-        <View style={ this.quizBtnContainer }>
+        <View style={ [ styles.quizBtnContainer ] }>
           { this._renderIcon() }
           <TouchableHighlight 
-            style={ [styles.quizBtn, styles.shadow, this.props.selected && styles.quizBtnPress ] } 
+            style={ [styles.quizBtn, styles.shadow, styles[this.props.styleFormat], this.props.selected && styles.quizBtnPress ] } 
             onPress={() =>  this.onSelectAnswer() }
             >
                 <Text 
-                  style={ [styles.quizBtnTextBig, this.props.selected && styles.quizBtnTextPress] }>
+                  style={ [styles[this.props.styleFormat + 'Text'], this.props.selected && styles.quizBtnTextPress] }>
                     { this.props.textDisplay }
                 </Text>
           </TouchableHighlight>   

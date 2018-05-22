@@ -34,7 +34,8 @@ class LearnHiraganaModule extends Component {
   state = {
     title:"",
     type: "",
-    study: ""
+    study: "",
+    studyType: ""
   }
   componentDidMount() {
     const { navigation } = this.props;
@@ -62,10 +63,17 @@ class LearnHiraganaModule extends Component {
             return (
                 <HL2Screen />        
             );        
-        }else if(this.state.type == 'HL3'){
-            return (
-                <LearningModule />     
-            );        
+        }else if(this.state.type == 'HL3' || this.state.type == 'GL3'  || this.state.type == 'KL3' || this.state.type == 'BL3' ){
+            if(this.state.title == "FLASH_CARD_HIRAGANA" || this.state.title == 'FLASH_CARD_HIRAGANA'){
+                return (
+                    <LearningModule title={ this.state.title }/>     
+                );        
+                }else{
+                return (
+                    <LearningModule title={ this.state.studyType }/>     
+                );        
+    
+            }
         }else if(this.state.type == 'HL4'){
             return (
                 <Text>HL4</Text>        

@@ -4,7 +4,10 @@ var React = require('react-native');
 
 var {
   StyleSheet,
+  Dimensions
 } = React;
+
+const window = Dimensions.get('window');
 
 let englishFont = 'Roboto-Regular';
 let japaneseFont = 'NotoSansJP-Regular';
@@ -389,7 +392,17 @@ module.exports = StyleSheet.create({
 			color:textColor
 		},
 		questionText:{
-			flexDirection:'column'
+			flexDirection: 'column'
+		},
+		questionLongInstruction:{
+			fontSize: 32,
+			width:'100%',
+			lineHeight:32
+		},
+		questionLong:{
+			fontSize: 40,
+			width:'100%',
+			lineHeight:40
 		},
 		questionRomaji:{
 			fontFamily:englishFont,
@@ -431,14 +444,20 @@ module.exports = StyleSheet.create({
 			position:'relative'
 		},
 		quizBtn:{
-			height:125,
-			width:125,
 			backgroundColor:'#fff',
 			alignItems: 'center',
 			justifyContent: 'center',
 			borderRadius:5,
-			margin:7,
+			margin:5,
 			zIndex:1
+		},
+		quizSquared:{
+			height:125,
+			width:125,
+		},
+		quizLong:{
+			padding:5,
+			width: window.width - 30
 		},
 		quizBtnPress:{
 			backgroundColor: primaryColor
@@ -446,8 +465,12 @@ module.exports = StyleSheet.create({
 		quizBtnTextPress:{
 			color:'#fff'
 		},
-		quizBtnTextBig:{
-			fontSize:65,
+		quizSquaredText:{
+			fontSize:55,
+			color:textColor
+		},
+		quizLongText:{
+			fontSize:30,
 			color:textColor
 		},
 		quizBtnIconWrapper:{
@@ -463,10 +486,13 @@ module.exports = StyleSheet.create({
 			zIndex:9,
 			elevation:2
 		},
+		quizBtnIconLeft:{
+			left:-5,
+			marginLeft:0
+		},
 		quizBtnIcon:{
 			fontSize:36,
 			color:"#fff",
-			
 		},
 		quizBtnIconCorrect:{
 			backgroundColor:"#7fe900"

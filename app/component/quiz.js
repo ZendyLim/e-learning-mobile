@@ -34,7 +34,7 @@ class Quiz extends Component {
                         key={ item.id }
                         id={ item.id }
                         textDisplay={ item[this.props.format] }
-                        style={ [ styles.displayInline ] } 
+                        styleFormat={ this.props.styleFormat } 
                         selected={ item.id == this.state.selectedAnswer } 
                         onSelectAnswer={ this.onSelect }
                         isCorrect={ this.checkCorrect(item.id) }
@@ -68,8 +68,7 @@ class Quiz extends Component {
         }
         else{
             return 1;
-        }
-        
+        }        
         
     }
 

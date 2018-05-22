@@ -39,13 +39,14 @@ class HiraganaListScreen extends Component {
       headerTitle : navigation.getParam('headerTitle', null),
       studyType : navigation.getParam('studyType', null),
       typeQuiz : navigation.getParam('typeQuiz', null),
-      topicId : navigation.getParam('id', null)
+      topicId : navigation.getParam('id', null),
+      quizOptions : navigation.getParam('quizOptions', null)
     });
     
-    //Console.log(navigation.getParam('userName', null),"NIAMAK");
+    //console.log(navigation.getParam('quizOptions', null),"NIAMAK");
   }
 
-  navigateToLearn=(type)=>{
+  navigateToLearn=(type, topicId = null)=>{
     if(type == 'Learn'){
       this.props.navigation.navigate('LearnListScreen',(
         {
@@ -55,19 +56,38 @@ class HiraganaListScreen extends Component {
           img: this.state.img,
         }
       ));
-    }else   if(type == 'Quiz'){
-      this.props.navigation.navigate('QuizFlash',(
-        {
-          type : type,
-          title : this.state.title,
-          studyType: this.state.studyType,
-          img: this.state.img,
-          topicId: this.state.topicId,
-          typeQuiz: 'Quiz'
-        }
-      ));
+    }else if(type == 'Quiz'){
+      
+      if(topicId == 'T001'){
+        this.props.navigation.navigate('QuizMain',(
+          {
+            type : type,
+            title : this.state.title,
+            studyType: this.state.studyType,
+            img: this.state.img,
+            topicId: this.state.topicId,
+            typeQuiz: 'Quiz',
+            quizOptions:this.state.quizOptions
+          }
+        ));
+      }
+      else{
+        this.props.navigation.navigate('QuizFlash',(
+          {
+            type : type,
+            title : this.state.title,
+            studyType: this.state.studyType,
+            img: this.state.img,
+            topicId: this.state.topicId,
+            typeQuiz: 'Quiz',
+            quizOptions:this.state.quizOptions
+          }
+        )); 
+      }
+      
     }
     else   if(type == 'Test'){
+      console.log(this.state.quizOptions);
       this.props.navigation.navigate('QuizFlash',(
         {
           type : type,
@@ -75,7 +95,8 @@ class HiraganaListScreen extends Component {
           studyType: this.state.studyType,
           img: this.state.img,
           topicId: this.state.topicId,
-          typeQuiz: 'Test'
+          typeQuiz: 'Test',
+          quizOptions:this.state.quizOptions
         }
       ));
     }
@@ -112,7 +133,7 @@ class HiraganaListScreen extends Component {
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
             <View style={study.buttonContainer}>
 
-              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Quiz')}>
+              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Quiz', this.state.topicId)}>
               
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
