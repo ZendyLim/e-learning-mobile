@@ -35,7 +35,14 @@ export let strings = new LocalizedStrings({
    // Question Panel
    QUESTION_SELECT : "Select",
    // Quiz
-   TIMES_UP: "Time's up"
+   TIMES_UP: "Time's up",
+   WORD_LIST: "WORD LIST",
+   EXPLANATION: "EXPLANATION",
+   FLASH_CARD: "FLASH CARD",
+   DRAW: "DRAW",
+   GOI_LIST : "VOCABULARY LIST",
+   BUNPO_LIST : "GRAMMAR LIST",
+   KANJI_LIST : "KANJI LIST",
  },
  ja: {
    loginGuest: "japan",
@@ -67,6 +74,13 @@ export let strings = new LocalizedStrings({
    // Question Panel
    QUESTION_SELECT : "選ぶ",
    // Quiz
-   TIMES_UP: "時間です"
+   TIMES_UP: "時間です",
+   WORD_LIST: "WORD LIST",
+   EXPLANATION: "EXPLANATION",
+   FLASH_CARD: "FLASH CARD",
+   DRAW: "DRAW",
+   GOI_LIST : "VOCABULARY LIST",
+   BUNPO_LIST : "GRAMMAR LIST",
+   KANJI_LIST : "KANJI LIST",   
 }
 });

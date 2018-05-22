@@ -33,7 +33,8 @@ class LearnHiraganaModule extends Component {
   state = {
     title:"",
     type: "",
-    study: ""
+    study: "",
+    studyType: ""
   }
   componentDidMount() {
     const { navigation } = this.props;
@@ -41,6 +42,7 @@ class LearnHiraganaModule extends Component {
       title: navigation.getParam('title', null),
       type: navigation.getParam('type', null),
       study: navigation.getParam('study', null),
+      studyType: navigation.getParam('studyType', null),
     });
   }
   render() {
@@ -59,9 +61,9 @@ class LearnHiraganaModule extends Component {
             return (
                 <HL2Screen />        
             );        
-        }else if(this.state.type == 'HL3'){
+        }else if(this.state.type == 'HL3' || this.state.type == 'GL3'  || this.state.type == 'KL3' || this.state.type == 'BL3' ){
             return (
-                <LearningModule />     
+                <LearningModule title={ this.state.studyType }/>     
             );        
         }else if(this.state.type == 'HL4'){
             return (
