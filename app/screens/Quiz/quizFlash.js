@@ -57,7 +57,8 @@ import {
       this.startTime = null;
       this.quizOptions = [];
       this.title = navigation.getParam('title', null);
-
+      this.oneType = '';
+      
       this.state = {
         timesUp: false,
         expression: 'default',
@@ -142,6 +143,7 @@ import {
     componentWillMount() {            
       const { navigation } = this.props;
       this.quizOptions = navigation.getParam('quizOptions',null);
+      this.oneType = navigation.getParam('oneType',null);
 
       this.setState({
         title: navigation.getParam('title', null),
@@ -149,11 +151,24 @@ import {
         type: navigation.getParam('type', null),
         topicId: navigation.getParam('topicId', null),
         studyType: navigation.getParam('studyType',null),
-        typeQuiz: navigation.getParam('typeQuiz',null),
+        typeQuiz: navigation.getParam('typeQuiz',null),        
         quizOptions: this.quizOptions
       });
       //console.log(navigation.getParam('quizOptions',null));
       this.quizItems = quizItems[navigation.getParam('topicId', null)];
+      idList = navigation.getParam('idList', null);
+      
+      if(idList && idList.length){
+        var quizItemsTemp = [];
+        for(i = 0; i < idList.length; i++){
+          currentId = idList[i];
+          quizItemsTemp[quizItemsTemp.length] = this.quizItems.find(function (obj) { 
+            return obj.id == currentId; 
+          });
+        }
+
+        this.quizItems = quizItemsTemp;
+      }
 
       let shuffledQuiz = this.shuffleItems(this.quizItems);
 
@@ -219,10 +234,13 @@ import {
 
     randomQuizFormat(){
       //console.log(this.quizOptions);
-      var quizFormat = this.quizOptions.types;
+      
+      var quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
       var quizFormatLength = quizFormat.length, randomIndex;
 
       randomIndex = Math.floor(Math.random() * quizFormatLength);
+
+      
       
       switch (quizFormat[randomIndex]) {
         case 'romaji_moji':

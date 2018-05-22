@@ -53,8 +53,6 @@ class QuizMainScreen extends Component {
 
   quiz = (type) => {
     const { navigation } = this.props;
-    quizOptions = navigation.getParam('quizOptions',null);
-    quizOptions.types = [ type ];
 
     this.props.navigation.navigate('QuizList',(
         {
@@ -64,7 +62,8 @@ class QuizMainScreen extends Component {
             img: navigation.getParam('img',null),
             topicId: navigation.getParam('topicId',null),
             typeQuiz: navigation.getParam('typeQuiz',null),
-            quizOptions: quizOptions
+            quizOptions: navigation.getParam('quizOptions',null),
+            oneType: type
         }
       ));
   };  

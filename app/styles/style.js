@@ -466,7 +466,7 @@ module.exports = StyleSheet.create({
 			color:'#fff'
 		},
 		quizSquaredText:{
-			fontSize:65,
+			fontSize:55,
 			color:textColor
 		},
 		quizLongText:{

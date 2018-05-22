@@ -65,7 +65,7 @@ class HiraganaListScreen extends Component {
             studyType: this.state.studyType,
             img: this.state.img,
             topicId: this.state.topicId,
-            typeQuiz: 'Test',
+            typeQuiz: 'Quiz',
             quizOptions:this.state.quizOptions
           }
         ));
@@ -86,7 +86,7 @@ class HiraganaListScreen extends Component {
       
     }
     else   if(type == 'Test'){
-      
+      console.log(this.state.quizOptions);
       this.props.navigation.navigate('QuizFlash',(
         {
           type : type,
