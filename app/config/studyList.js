@@ -128,89 +128,81 @@ export const StudyList = [{
 
   export const LearnListData = {
     HIRAGANA_TITLE : [{
-      title : 'HIRAGANA_HL1',
+      title : 'WORD_LIST',
       type : 'HL1',
       study : '1'
     },{
-      title : 'HIRAGANA_HL2',
+      title : 'EXPLANATION',
       type : 'HL2',
       study : '1'
     },{
-      title : 'HIRAGANA_HL3',
+      title : 'FLASH_CARD_HIRAGANA',
       type : 'HL3',
       study : '1'
     },{
-      title : 'HIRAGANA_HL4',
+      title : 'FLASH_CARD_KATAKANA',
+      type : 'HL3',
+      study : '1'
+    },{
+      title : 'DRAW',
       type : 'HL4',
       study : '1'
     },
   ],
     NUMBER_TITLE :[{
-      title : 'NUMBER_HL1',
+      title : 'EXPLANATION',
       type : 'HL1',
       study : '2'
     },{
-      title : 'NUMBER_HL2',
+      title : 'EXPLANATION',
       type : 'HL2',
       study : '2'
     },{
-      title : 'NUMBER_HL3',
+      title : 'FLASH_CARD',
       type : 'HL3',
       study : '2'
     }
   ],
     GREETING_TITLE : [{
-      title : 'GREETING_HL1',
+      title : 'WORD_LIST',
       type : 'HL1',
       study : '3'
     },{
-      title : 'GREETING_HL2',
+      title : 'EXPLANATION',
       type : 'HL2',
       study : '3'
     },{
-      title : 'GREETING_HL3',
+      title : 'FLASH_CARD',
       type : 'HL3',
       study : '3'
     },
   ],
   TOPIC1_TITLE_and_vocabulary : [{
-    title : 'TOPIC1_GL1',
+    title : 'GOI_LIST',
     type : 'GL1',
     study : '4'
   },{
-    title : 'TOPIC1_GL2',
-    type : 'GL2',
-    study : '4'
-  },{
-    title : 'TOPIC1_GL3',
+    title : 'FLASH_CARD',
     type : 'GL3',
     study : '4'
   },
 ],  
 TOPIC1_TITLE_and_grammar : [{
-  title : 'TOPIC1_BL1',
+  title : 'BUNPO_LIST',
   type : 'BL1',
   study : '4'
 },{
-  title : 'TOPIC1_BL2',
-  type : 'BL2',
-  study : '4'
-},{
-  title : 'TOPIC1_BL3',
+  title : 'FLASH_CARD',
   type : 'BL3',
   study : '4'
 },
 ],
 TOPIC1_TITLE_and_kanji : [{
-  title : 'TOPIC1_KL1',
+  title : 'KANJI_LIST',
   type : 'KL1',
   study : '4'
 },{
-  title : 'TOPIC1_KL2',
-  type : 'KL2',
-  study : '4'
-},{
-  title : 'TOPIC1_KL3',
+  title : 'FLASH_CARD',
   type : 'KL3',
   study : '4'
 },

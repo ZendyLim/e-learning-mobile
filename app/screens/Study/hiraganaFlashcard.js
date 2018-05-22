@@ -87,6 +87,7 @@ import {
     }
 
     componentDidMount() {
+      console.log(this.props.title);
       this.flipperFunction(this.tickInterval / this.flipSpeed);
     }
 
