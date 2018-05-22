@@ -1,86 +1,146 @@
-export const quizItems = [
-    {   
-        "id":"h_ka",
-        "type":"hiragana",      
-        "romaji":"ka",
-        "moji":"か",
-        "audio":"ka.mp3"
-    },
-    {   
-        "id":"h_ki",
-        "type":"hiragana",      
-        "romaji":"ki",
-        "moji":"き",
-        "audio":"ki.mp3"
-    },
-    {   
-        "id":"h_ku",
-        "type":"hiragana",      
-        "romaji":"ku",
-        "moji":"く",
-        "audio":"ku.mp3"
-    },
-    {   
-        "id":"h_ke",
-        "type":"hiragana",      
-        "romaji":"ke",
-        "moji":"け",
-        "audio":"ke.mp3"
-    },
-    {   
-        "id":"h_ko",
-        "type":"hiragana",      
-        "romaji":"ko",
-        "moji":"こ",
-        "audio":"ko.mp3"
-    },
-    {   
-        "id":"h_sa",
-        "type":"hiragana",      
-        "romaji":"sa",
-        "moji":"さ",
-        "audio":"sa.mp3"
-    },
-    {   
-        "id":"h_shi",
-        "type":"hiragana",      
-        "romaji":"shi",
-        "moji":"し",
-        "audio":"shi.mp3"
-    },
-    {   
-        "id":"h_su",
-        "type":"hiragana",      
-        "romaji":"su",
-        "moji":"す",
-        "audio":"su.mp3"
-    },
-    {   
-        "id":"h_se",
-        "type":"hiragana",      
-        "romaji":"se",
-        "moji":"せ",
-        "audio":"se.mp3"
-    },
-    {   
-        "id":"h_so",
-        "type":"hiragana",      
-        "romaji":"so",
-        "moji":"そ",
-        "audio":"so.mp3"
-    }
-];
 
-export const quizItemsShort = [
+
+export const quizItems = {
+    "T001": [
+        {   
+            "id":"h_ka",
+            "type":"hiragana",      
+            "romaji":"ka",
+            "moji":"か",
+            "audio":"ka.mp3"
+        },
+        {   
+            "id":"h_ki",
+            "type":"hiragana",      
+            "romaji":"ki",
+            "moji":"き",
+            "audio":"ki.mp3"
+        },
+        {   
+            "id":"h_ku",
+            "type":"hiragana",      
+            "romaji":"ku",
+            "moji":"く",
+            "audio":"ku.mp3"
+        },
+        {   
+            "id":"h_ke",
+            "type":"hiragana",      
+            "romaji":"ke",
+            "moji":"け",
+            "audio":"ke.mp3"
+        },
+        {   
+            "id":"h_ko",
+            "type":"hiragana",      
+            "romaji":"ko",
+            "moji":"こ",
+            "audio":"ko.mp3"
+        },
+        {   
+            "id":"h_sa",
+            "type":"hiragana",      
+            "romaji":"sa",
+            "moji":"さ",
+            "audio":"sa.mp3"
+        },
+        {   
+            "id":"h_shi",
+            "type":"hiragana",      
+            "romaji":"shi",
+            "moji":"し",
+            "audio":"shi.mp3"
+        },
+        {   
+            "id":"h_su",
+            "type":"hiragana",      
+            "romaji":"su",
+            "moji":"す",
+            "audio":"su.mp3"
+        },
+        {   
+            "id":"h_se",
+            "type":"hiragana",      
+            "romaji":"se",
+            "moji":"せ",
+            "audio":"se.mp3"
+        },
+        {   
+            "id":"h_so",
+            "type":"hiragana",      
+            "romaji":"so",
+            "moji":"そ",
+            "audio":"so.mp3"
+        }
+    ],
+    "T002": [
+        {   
+            "id":"num_1",
+            "type":"vocabulary",  
+            "romaji":"ichi",
+            "moji":"いち",
+            "kanji":"一",
+            "english":"one",
+            "audio":"ka.mp3"
+        },
+        {   
+            "id":"num_2",
+            "type":"vocabulary",      
+            "romaji":"ni",
+            "moji":"に",
+            "kanji":"二",
+            "english":"two",
+            "audio":"ki.mp3"
+        },
+        {   
+            "id":"num_3",
+            "type":"vocabulary",      
+            "romaji":"san",
+            "moji":"さん",
+            "kanji":"三",
+            "english":"three",
+            "audio":"ku.mp3"
+        },
+        {   
+            "id":"num_4",
+            "type":"vocabulary",      
+            "romaji":"yon",
+            "moji":"よん",
+            "kanji":"四",
+            "english":"four",
+            "audio":"ke.mp3"
+        },
+        {   
+            "id":"num_5",
+            "type":"vocabulary",      
+            "romaji":"go",
+            "moji":"ご",
+            "kanji":"五",
+            "english":"five",
+            "audio":"ko.mp3"
+        },
+        {   
+            "id":"num_6",
+            "type":"vocabulary",      
+            "romaji":"roku",
+            "moji":"ろく",
+            "kanji":"六",
+            "english":"six",
+            "audio":"ko.mp3"
+        }
+    ]
+};
+
+export const katakana = [
     {   
-        "id":"h_ka",
+        "id":"k_ka",
         "type":"hiragana",      
         "romaji":"ka",
-        "moji":"か",
+        "moji":"カ",
         "audio":"ka.mp3"
     },
     {   
-        "id":"h_ki",
+        "id":"k_ki",
         "type":"hiragana",      
         "romaji":"ki",
         "moji":"き",
@@ -120,7 +180,7 @@ export const numberQuiz = [
         "audio":"ka.mp3"
     },
     {   
-        "id":"num_1",
+        "id":"num_2",
         "type":"vocabulary",      
         "romaji":"ni",
         "moji":"に",
@@ -129,7 +189,7 @@ export const numberQuiz = [
         "audio":"ki.mp3"
     },
     {   
-        "id":"num_1",
+        "id":"num_3",
         "type":"vocabulary",      
         "romaji":"san",
         "moji":"さん",
@@ -138,7 +198,7 @@ export const numberQuiz = [
         "audio":"ku.mp3"
     },
     {   
-        "id":"num_1",
+        "id":"num_4",
         "type":"vocabulary",      
         "romaji":"yon",
         "moji":"よん",
@@ -147,12 +207,21 @@ export const numberQuiz = [
         "audio":"ke.mp3"
     },
     {   
-        "id":"num_1",
+        "id":"num_5",
         "type":"vocabulary",      
         "romaji":"go",
         "moji":"ご",
         "kanji":"五",
         "english":"five",
+        "audio":"ko.mp3"
+    },
+    {   
+        "id":"num_6",
+        "type":"vocabulary",      
+        "romaji":"roku",
+        "moji":"ろく",
+        "kanji":"六",
+        "english":"six",
         "audio":"ko.mp3"
     }
 ];

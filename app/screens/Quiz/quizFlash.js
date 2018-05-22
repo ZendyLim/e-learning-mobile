@@ -17,7 +17,7 @@ import {
   import Quiz   from '../../component/quiz';
   import Header   from '../../component/header';
 
-  import { quizItems, quizItemsShort } from '../../config/quiz';
+  import { quizItems } from '../../config/quiz';
 
   /*
     TODO:
@@ -51,10 +51,11 @@ import {
       
       this.optionsNumber = 4;
       this.allQuestion = [];
-      this.quizItems = quizItemsShort;
+      this.quizItems = [];
       this.timeStops = 0;  
       this.studyRecord = [];
       this.startTime = null;
+      this.quizOptions = [];
       this.title = navigation.getParam('title', null);
 
       this.state = {
@@ -74,10 +75,9 @@ import {
         correct:0,
         title:'',
         img:'',
-        studyType:''
-      }      
-
-      
+        studyType:'',
+        quizOptions:''
+      }            
 
       this._onSetLanguageTo('en');      
     }
@@ -125,9 +125,11 @@ import {
                   answerOptions={ this.state.question.answerOption }
                   onAnswerSelected={ this.stopTimer }
                   format={ this.state.answerFormat }
+                  styleFormat={ this.state.quizOptions.style }
                   timesUp={ this.state.timesUp }
                   isCorrect={ this.addScore }
                 />
+
               </View>
 
             </View>
@@ -138,6 +140,7 @@ import {
 
     componentWillMount() {            
       const { navigation } = this.props;
+      this.quizOptions = navigation.getParam('quizOptions',null);
 
       this.setState({
         title: navigation.getParam('title', null),
@@ -145,8 +148,11 @@ import {
         type: navigation.getParam('type', null),
         topicId: navigation.getParam('topicId', null),
         studyType: navigation.getParam('studyType',null),
-        typeQuiz: navigation.getParam('typeQuiz',null)
+        typeQuiz: navigation.getParam('typeQuiz',null),
+        quizOptions: this.quizOptions
       });
+      //console.log(navigation.getParam('quizOptions',null));
+      this.quizItems = quizItems[navigation.getParam('topicId', null)];
 
       let shuffledQuiz = this.shuffleItems(this.quizItems);
 
@@ -211,22 +217,37 @@ import {
     };
 
     randomQuizFormat(){
-      var quizFormat = ['moji','romaji','audio_moji','audio_romaji'];
+      //console.log(this.quizOptions);
+      var quizFormat = this.quizOptions.types;
       var quizFormatLength = quizFormat.length, randomIndex;
 
       randomIndex = Math.floor(Math.random() * quizFormatLength);
-
+      
       switch (quizFormat[randomIndex]) {
-        case 'moji':
+        case 'romaji_moji':
           this.setState({
             answerFormat: 'moji',
             questionFormat: 'romaji'
           });
           break;
-        case 'romaji':
+        case 'moji_romaji':
           this.setState({
             answerFormat: 'romaji',
             questionFormat: 'moji'
+          });
+          break;
+
+        case 'moji_english':
+          this.setState({
+            answerFormat: 'english',
+            questionFormat: 'moji'
+          });
+          break;
+        
+        case 'english_moji':
+          this.setState({
+            answerFormat: 'moji',
+            questionFormat: 'english'
           });
           break;
 
@@ -236,11 +257,25 @@ import {
             questionFormat: 'audio'
           });
           break;
-      
-        default:
+        
+        case 'audio_romaji':
           this.setState({
             answerFormat: 'romaji',
             questionFormat: 'audio'
+          });
+          break;
+
+        case 'audio_english':
+          this.setState({
+            answerFormat: 'english',
+            questionFormat: 'audio'
+          });
+          break;
+      
+        default:
+          this.setState({
+            answerFormat: 'moji',
+            questionFormat: 'romaji'
           });
           break;
           

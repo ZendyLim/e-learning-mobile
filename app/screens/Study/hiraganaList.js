@@ -39,10 +39,11 @@ class HiraganaListScreen extends Component {
       headerTitle : navigation.getParam('headerTitle', null),
       studyType : navigation.getParam('studyType', null),
       typeQuiz : navigation.getParam('typeQuiz', null),
-      topicId : navigation.getParam('id', null)
+      topicId : navigation.getParam('id', null),
+      quizOptions : navigation.getParam('quizOptions', null)
     });
     
-    //Console.log(navigation.getParam('userName', null),"NIAMAK");
+    //console.log(navigation.getParam('quizOptions', null),"NIAMAK");
   }
 
   navigateToLearn=(type)=>{
@@ -62,7 +63,8 @@ class HiraganaListScreen extends Component {
           studyType: this.state.studyType,
           img: this.state.img,
           topicId: this.state.topicId,
-          typeQuiz: 'Quiz'
+          typeQuiz: 'Quiz',
+          quizOptions:this.state.quizOptions
         }
       ));
     }
