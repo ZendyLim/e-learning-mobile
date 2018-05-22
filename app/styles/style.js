@@ -392,7 +392,17 @@ module.exports = StyleSheet.create({
 			color:textColor
 		},
 		questionText:{
-			flexDirection:'column'
+			flexDirection: 'column'
+		},
+		questionLongInstruction:{
+			fontSize: 32,
+			width:'100%',
+			lineHeight:32
+		},
+		questionLong:{
+			fontSize: 40,
+			width:'100%',
+			lineHeight:40
 		},
 		questionRomaji:{
 			fontFamily:englishFont,

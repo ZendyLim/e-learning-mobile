@@ -17,7 +17,7 @@ export const StudyList = [{
     type : 'Initial',
     id: 'T002',
     quizOptions: {
-      random: true,
+      random: false,
       types:['moji_english', 'english_moji','audio_english','audio_moji'],
       withCorrection:true,
       style:'quizLong'
@@ -28,7 +28,13 @@ export const StudyList = [{
     img : 'loading',
     lock : false,
     type : 'Initial',
-    id: 'T003'
+    id: 'T003',
+    quizOptions: {
+      random: true,
+      types:['moji_english', 'english_moji','audio_english','audio_moji'],
+      withCorrection:true,
+      style:'quizLong'
+    }
   },
   {
     title : 'TOPIC1_TITLE',

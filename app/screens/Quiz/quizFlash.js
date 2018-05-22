@@ -102,6 +102,7 @@ import {
                   format={ format } 
                   img={ this.state.img }
                   style={[styles.col12, styles.quizFlashTop]}
+                  styleFormat={ this.state.quizOptions.style }
                   timesUp={ this.state.timesUp }
                   expression={ this.state.expression }
               />
