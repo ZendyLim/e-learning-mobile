@@ -7,7 +7,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"a",
         "moji":"あ",
-        "audio":"a.mp3",
+        "url":"a.mp3",
         "title":"a",
       },
       {
@@ -15,7 +15,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"i",
         "moji":"い",
-        "audio":"i.mp3",
+        "url":"i.mp3",
         "title":"i",
       },
       {
@@ -23,7 +23,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"u",
         "moji":"う",
-        "audio":"u.mp3",
+        "url":"u.mp3",
         "title":"u",
       },
       {
@@ -31,7 +31,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"e",
         "moji":"え",
-        "audio":"e.mp3",
+        "url":"e.mp3",
         "title":"e",
       },
       {
@@ -39,7 +39,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"o",
         "moji":"お",
-        "audio":"o.mp3",
+        "url":"o.mp3",
         "title":"o",
       },
       {
@@ -47,7 +47,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ka",
         "moji":"か",
-        "audio":"ka.mp3",
+        "url":"ka.mp3",
         "title":"ka",
       },
       {
@@ -55,7 +55,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ki",
         "moji":"き",
-        "audio":"ki.mp3",
+        "url":"ki.mp3",
         "title":"ki",
       },
       {
@@ -63,7 +63,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ku",
         "moji":"く",
-        "audio":"ku.mp3",
+        "url":"ku.mp3",
         "title":"ku",
       },
       {
@@ -71,7 +71,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ke",
         "moji":"け",
-        "audio":"ke.mp3",
+        "url":"ke.mp3",
         "title":"ke",
       },
       {
@@ -79,7 +79,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ko",
         "moji":"こ",
-        "audio":"ko.mp3",
+        "url":"ko.mp3",
         "title":"ko",
       },
       {
@@ -87,7 +87,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"sa",
         "moji":"さ",
-        "audio":"sa.mp3",
+        "url":"sa.mp3",
         "title":"sa",
       },
       {
@@ -95,7 +95,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"shi",
         "moji":"し",
-        "audio":"shi.mp3",
+        "url":"shi.mp3",
         "title":"shi",
       },
       {
@@ -103,7 +103,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"su",
         "moji":"す",
-        "audio":"su.mp3",
+        "url":"su.mp3",
         "title":"su",
       },
       {
@@ -111,7 +111,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"se",
         "moji":"せ",
-        "audio":"se.mp3",
+        "url":"se.mp3",
         "title":"se",
       },
       {
@@ -119,7 +119,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"so",
         "moji":"そ",
-        "audio":"so.mp3",
+        "url":"so.mp3",
         "title":"so",
       },
       {
@@ -127,7 +127,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ta",
         "moji":"た",
-        "audio":"ta.mp3",
+        "url":"ta.mp3",
         "title":"ta",
       },
       {
@@ -135,7 +135,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"chi",
         "moji":"ち",
-        "audio":"chi.mp3",
+        "url":"chi.mp3",
         "title":"chi",
       },
       {
@@ -143,7 +143,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"tsu",
         "moji":"つ",
-        "audio":"tsu.mp3",
+        "url":"tsu.mp3",
         "title":"tsu",
       },
       {
@@ -151,7 +151,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"te",
         "moji":"て",
-        "audio":"te.mp3",
+        "url":"te.mp3",
         "title":"te",
       },
       {
@@ -159,7 +159,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"to",
         "moji":"と",
-        "audio":"to.mp3",
+        "url":"to.mp3",
         "title":"to",
       },
       {
@@ -167,7 +167,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"na",
         "moji":"な",
-        "audio":"na.mp3",
+        "url":"na.mp3",
         "title":"na",
       },
       {
@@ -175,7 +175,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ni",
         "moji":"に",
-        "audio":"ni.mp3",
+        "url":"ni.mp3",
         "title":"ni",
       },
       {
@@ -183,7 +183,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"nu",
         "moji":"ぬ",
-        "audio":"nu.mp3",
+        "url":"nu.mp3",
         "title":"nu",
       },
       {
@@ -191,7 +191,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ne",
         "moji":"ね",
-        "audio":"ne.mp3",
+        "url":"ne.mp3",
         "title":"ne",
       },
       {
@@ -199,7 +199,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"no",
         "moji":"の",
-        "audio":"no.mp3",
+        "url":"no.mp3",
         "title":"no",
       },
       {
@@ -207,7 +207,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ha",
         "moji":"は",
-        "audio":"ha.mp3",
+        "url":"ha.mp3",
         "title":"ha",
       },
       {
@@ -215,7 +215,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"hi",
         "moji":"ひ",
-        "audio":"hi.mp3",
+        "url":"hi.mp3",
         "title":"hi",
       },
       {
@@ -223,7 +223,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"fu",
         "moji":"ふ",
-        "audio":"fu.mp3",
+        "url":"fu.mp3",
         "title":"fu",
       },
       {
@@ -231,7 +231,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"he",
         "moji":"へ",
-        "audio":"he.mp3",
+        "url":"he.mp3",
         "title":"he",
       },
       {
@@ -239,7 +239,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ho",
         "moji":"ほ",
-        "audio":"ho.mp3",
+        "url":"ho.mp3",
         "title":"ho",
       },
       {
@@ -247,7 +247,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ma",
         "moji":"ま",
-        "audio":"ma.mp3",
+        "url":"ma.mp3",
         "title":"ma",
       },
       {
@@ -255,7 +255,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"mi",
         "moji":"み",
-        "audio":"mi.mp3",
+        "url":"mi.mp3",
         "title":"mi",
       },
       {
@@ -263,7 +263,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"mu",
         "moji":"む",
-        "audio":"mu.mp3",
+        "url":"mu.mp3",
         "title":"mu",
       },
       {
@@ -271,7 +271,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"me",
         "moji":"め",
-        "audio":"me.mp3",
+        "url":"me.mp3",
         "title":"me",
       },
       {
@@ -279,7 +279,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"mo",
         "moji":"も",
-        "audio":"mo.mp3",
+        "url":"mo.mp3",
         "title":"mo",
       },
       {
@@ -287,7 +287,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ya",
         "moji":"や",
-        "audio":"ya.mp3",
+        "url":"ya.mp3",
         "title":"ya",
       },
       {
@@ -295,7 +295,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"yu",
         "moji":"ゆ",
-        "audio":"yu.mp3",
+        "url":"yu.mp3",
         "title":"yu",
       },
       {
@@ -303,7 +303,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"yo",
         "moji":"よ",
-        "audio":"yo.mp3",
+        "url":"yo.mp3",
         "title":"yo",
       },
       {
@@ -311,7 +311,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ra",
         "moji":"ら",
-        "audio":"ra.mp3",
+        "url":"ra.mp3",
         "title":"ra",
       },
       {
@@ -319,7 +319,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ri",
         "moji":"り",
-        "audio":"ri.mp3",
+        "url":"ri.mp3",
         "title":"ri",
       },
       {
@@ -327,7 +327,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ru",
         "moji":"る",
-        "audio":"ru.mp3",
+        "url":"ru.mp3",
         "title":"ru",
       },
       {
@@ -335,7 +335,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"re",
         "moji":"れ",
-        "audio":"re.mp3",
+        "url":"re.mp3",
         "title":"re",
       },
       {
@@ -343,7 +343,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ro",
         "moji":"ろ",
-        "audio":"ro.mp3",
+        "url":"ro.mp3",
         "title":"ro",
       },
       {
@@ -351,7 +351,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"wa",
         "moji":"わ",
-        "audio":"wa.mp3",
+        "url":"wa.mp3",
         "title":"wa",
       }, 
       {
@@ -359,7 +359,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"o(wo)",
         "moji":"を",
-        "audio":"wo.mp3",
+        "url":"wo.mp3",
         "title":"wo",
       },
       {
@@ -367,7 +367,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"n",
         "moji":"ん",
-        "audio":"n.mp3",
+        "url":"n.mp3",
         "title":"n",
       },
       //DakuOn
@@ -376,7 +376,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ga",
         "moji":"が",
-        "audio":"ga.mp3",
+        "url":"ga.mp3",
         "title":"ga",
       },
       {
@@ -384,7 +384,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"gi",
         "moji":"ぎ",
-        "audio":"gi.mp3",
+        "url":"gi.mp3",
         "title":"gi",
       },
       {
@@ -392,7 +392,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"gu",
         "moji":"ぐ",
-        "audio":"gu.mp3",
+        "url":"gu.mp3",
         "title":"gu",
       },
       {
@@ -400,7 +400,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ge",
         "moji":"げ",
-        "audio":"ge.mp3",
+        "url":"ge.mp3",
         "title":"ge",
       },
       {
@@ -408,7 +408,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"go",
         "moji":"ご",
-        "audio":"go.mp3",
+        "url":"go.mp3",
         "title":"go",
       },
       {
@@ -416,7 +416,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"za",
         "moji":"ざ",
-        "audio":"za.mp3",
+        "url":"za.mp3",
         "title":"za",
       },
       {
@@ -424,7 +424,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ji(zi)",
         "moji":"じ",
-        "audio":"ji.mp3",
+        "url":"ji.mp3",
         "title":"ji(zi)",
       },
       {
@@ -432,7 +432,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"zu",
         "moji":"ず",
-        "audio":"zu.mp3",
+        "url":"zu.mp3",
         "title":"zu",
       },
       {
@@ -440,7 +440,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ze",
         "moji":"ぜ",
-        "audio":"ze.mp3",
+        "url":"ze.mp3",
         "title":"ze",
       },
       {
@@ -448,7 +448,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"zo",
         "moji":"ぞ",
-        "audio":"zo.mp3",
+        "url":"zo.mp3",
         "title":"zo",
       },
       {
@@ -456,7 +456,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"da",
         "moji":"だ",
-        "audio":"da.mp3",
+        "url":"da.mp3",
         "title":"da",
       },
       {
@@ -464,7 +464,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ji(di)",
         "moji":"ぢ",
-        "audio":"di.mp3",
+        "url":"di.mp3",
         "title":"ji(di)",
       },
       {
@@ -472,7 +472,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"zu(du)",
         "moji":"づ",
-        "audio":"du.mp3",
+        "url":"du.mp3",
         "title":"zu(du)",
       },
       {
@@ -480,7 +480,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"de",
         "moji":"で",
-        "audio":"de.mp3",
+        "url":"de.mp3",
         "title":"de",
       },
       {
@@ -488,7 +488,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"do",
         "moji":"ど",
-        "audio":"do.mp3",
+        "url":"do.mp3",
         "title":"do",
       },
       {
@@ -496,7 +496,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ba",
         "moji":"ば",
-        "audio":"ba.mp3",
+        "url":"ba.mp3",
         "title":"ba",
       },
       {
@@ -504,7 +504,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"bi",
         "moji":"び",
-        "audio":"bi.mp3",
+        "url":"bi.mp3",
         "title":"bi",
       },
       {
@@ -512,7 +512,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"bu",
         "moji":"ぶ",
-        "audio":"bu.mp3",
+        "url":"bu.mp3",
         "title":"bu",
       },
       {
@@ -520,7 +520,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"be",
         "moji":"べ",
-        "audio":"be.mp3",
+        "url":"be.mp3",
         "title":"be",
       },
       {
@@ -528,7 +528,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"bo",
         "moji":"ぼ",
-        "audio":"bo.mp3",
+        "url":"bo.mp3",
         "title":"bo",
       },
       {
@@ -536,7 +536,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"pa",
         "moji":"ぱ",
-        "audio":"pa.mp3",
+        "url":"pa.mp3",
         "title":"pa",
       },
       {
@@ -544,7 +544,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"pi",
         "moji":"ぴ",
-        "audio":"pi.mp3",
+        "url":"pi.mp3",
         "title":"pi",
       },
       {
@@ -552,7 +552,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"pu",
         "moji":"ぷ",
-        "audio":"pu.mp3",
+        "url":"pu.mp3",
         "title":"pu",
       },
       {
@@ -560,7 +560,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"pe",
         "moji":"ぺ",
-        "audio":"pe.mp3",
+        "url":"pe.mp3",
         "title":"pe",
       },
       {
@@ -568,7 +568,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"po",
         "moji":"ぽ",
-        "audio":"po.mp3",
+        "url":"po.mp3",
         "title":"po",
       },
       //YoOn
@@ -577,7 +577,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"kya",
         "moji":"きゃ",
-        "audio":"kya.mp3",
+        "url":"kya.mp3",
         "title":"kya",
       }, 
       {
@@ -585,7 +585,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"kyu",
         "moji":"きゅ",
-        "audio":"kyu.mp3",
+        "url":"kyu.mp3",
         "title":"kyu",
       }, 
       {
@@ -593,7 +593,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"kyo",
         "moji":"きょ",
-        "audio":"kyo.mp3",
+        "url":"kyo.mp3",
         "title":"kyo",
       },
       {
@@ -601,7 +601,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"sha",
         "moji":"しゃ",
-        "audio":"sha.mp3",
+        "url":"sha.mp3",
         "title":"sha",
       }, 
       {
@@ -609,7 +609,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"shu",
         "moji":"しゅ",
-        "audio":"shu.mp3",
+        "url":"shu.mp3",
         "title":"shu",
       }, 
       {
@@ -617,7 +617,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"sho",
         "moji":"しょ",
-        "audio":"sho.mp3",
+        "url":"sho.mp3",
         "title":"sho",
       },
       {
@@ -625,7 +625,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"cha",
         "moji":"ちゃ",
-        "audio":"cha.mp3",
+        "url":"cha.mp3",
         "title":"cha",
       }, 
       {
@@ -633,7 +633,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"chu",
         "moji":"ちゅ",
-        "audio":"chu.mp3",
+        "url":"chu.mp3",
         "title":"chu",
       }, 
       {
@@ -641,7 +641,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"cho",
         "moji":"ちょ",
-        "audio":"cho.mp3",
+        "url":"cho.mp3",
         "title":"cho",
       },
       {
@@ -649,7 +649,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"nya",
         "moji":"にゃ",
-        "audio":"nya.mp3",
+        "url":"nya.mp3",
         "title":"nya",
       }, 
       {
@@ -657,7 +657,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"nyu",
         "moji":"にゅ",
-        "audio":"nyu.mp3",
+        "url":"nyu.mp3",
         "title":"nyu",
       }, 
       {
@@ -665,7 +665,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"nyo",
         "moji":"にょ",
-        "audio":"nyo.mp3",
+        "url":"nyo.mp3",
         "title":"nyo",
       },
       {
@@ -673,7 +673,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"hya",
         "moji":"ひゃ",
-        "audio":"hya.mp3",
+        "url":"hya.mp3",
         "title":"hya",
       },
       {
@@ -681,7 +681,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"hyu",
         "moji":"ひゅ",
-        "audio":"hyu.mp3",
+        "url":"hyu.mp3",
         "title":"hyu",
       }, 
       {
@@ -689,7 +689,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"hyo",
         "moji":"ひょ",
-        "audio":"hyo.mp3",
+        "url":"hyo.mp3",
         "title":"hyo",
       },
       {
@@ -697,7 +697,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"mya",
         "moji":"みゃ",
-        "audio":"mya.mp3",
+        "url":"mya.mp3",
         "title":"mya",
       },
       {
@@ -705,7 +705,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"myu",
         "moji":"みゅ",
-        "audio":"myu.mp3",
+        "url":"myu.mp3",
         "title":"myu",
       }, 
       {
@@ -713,7 +713,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"myo",
         "moji":"みょ",
-        "audio":"myo.mp3",
+        "url":"myo.mp3",
         "title":"myo",
       },
       {
@@ -721,7 +721,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"rya",
         "moji":"りゃ",
-        "audio":"rya.mp3",
+        "url":"rya.mp3",
         "title":"rya",
       }, 
       {
@@ -729,7 +729,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ryu",
         "moji":"りゅ",
-        "audio":"ryu.mp3",
+        "url":"ryu.mp3",
         "title":"ryu",
       },
       {
@@ -737,7 +737,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ryo",
         "moji":"りょ",
-        "audio":"ryo.mp3",
+        "url":"ryo.mp3",
         "title":"ryo",
       },
       {
@@ -745,7 +745,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"gya",
         "moji":"ぎゃ",
-        "audio":"gya.mp3",
+        "url":"gya.mp3",
         "title":"gya",
       }, 
       {
@@ -753,7 +753,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"gyu",
         "moji":"ぎゅ",
-        "audio":"gyu.mp3",
+        "url":"gyu.mp3",
         "title":"gyu",
       },
       {
@@ -761,7 +761,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"gyo",
         "moji":"ぎょ",
-        "audio":"gyo.mp3",
+        "url":"gyo.mp3",
         "title":"gyo",
       },
       {
@@ -769,7 +769,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ja",
         "moji":"じゃ",
-        "audio":"ja.mp3",
+        "url":"ja.mp3",
         "title":"ja",
       }, 
       {
@@ -777,7 +777,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"ju",
         "moji":"じゅ",
-        "audio":"ju.mp3",
+        "url":"ju.mp3",
         "title":"ju",
       }, 
       {
@@ -785,7 +785,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"jo",
         "moji":"じょ",
-        "audio":"jo.mp3",
+        "url":"jo.mp3",
         "title":"jo",
       },
       {
@@ -793,7 +793,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"bya",
         "moji":"びゃ",
-        "audio":"bya.mp3",
+        "url":"bya.mp3",
         "title":"bya",
       }, 
       {
@@ -801,7 +801,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"byu",
         "moji":"びゅ",
-        "audio":"byu.mp3",
+        "url":"byu.mp3",
         "title":"byu",
       }, 
       {
@@ -809,7 +809,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"byo",
         "moji":"びょ",
-        "audio":"byo.mp3",
+        "url":"byo.mp3",
         "title":"byo",
       },
       {
@@ -817,7 +817,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"pya",
         "moji":"ぴゃ",
-        "audio":"pya.mp3",
+        "url":"pya.mp3",
         "title":"pya",
       }, 
       {
@@ -825,7 +825,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"pyu",
         "moji":"ぴゅ",
-        "audio":"pyu.mp3",
+        "url":"pyu.mp3",
         "title":"pyu",
       }, 
       {
@@ -833,7 +833,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"pyo",
         "moji":"ぴょ",
-        "audio":"pyo.mp3",
+        "url":"pyo.mp3",
         "title":"pyo",
       }
     ],
@@ -845,7 +845,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"a",
         "moji":"ア",
-        "audio":"a.mp3",
+        "url":"a.mp3",
         "title":"a",
       },
       {
@@ -853,7 +853,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"i",
         "moji":"イ",
-        "audio":"i.mp3",
+        "url":"i.mp3",
         "title":"i",
       },
       {
@@ -861,7 +861,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"u",
         "moji":"ウ",
-        "audio":"u.mp3",
+        "url":"u.mp3",
         "title":"u",
       },
       {
@@ -869,7 +869,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"e",
         "moji":"エ",
-        "audio":"e.mp3",
+        "url":"e.mp3",
         "title":"e",
       },
       {
@@ -877,7 +877,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"o",
         "moji":"オ",
-        "audio":"o.mp3",
+        "url":"o.mp3",
         "title":"o",
       },
       {
@@ -885,7 +885,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ka",
         "moji":"カ",
-        "audio":"ka.mp3",
+        "url":"ka.mp3",
         "title":"ka",
       },
       {
@@ -893,7 +893,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ki",
         "moji":"キ",
-        "audio":"ki.mp3",
+        "url":"ki.mp3",
         "title":"ki",
       },
       {
@@ -901,7 +901,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ku",
         "moji":"ク",
-        "audio":"ku.mp3",
+        "url":"ku.mp3",
         "title":"ku",
       },
       {
@@ -909,7 +909,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ke",
         "moji":"ケ",
-        "audio":"ke.mp3",
+        "url":"ke.mp3",
         "title":"ke",
       },
       {
@@ -917,7 +917,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ko",
         "moji":"コ",
-        "audio":"ko.mp3",
+        "url":"ko.mp3",
         "title":"ko",
       },
       {
@@ -925,7 +925,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"sa",
         "moji":"サ",
-        "audio":"sa.mp3",
+        "url":"sa.mp3",
         "title":"sa",
       },
       {
@@ -933,7 +933,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"shi",
         "moji":"シ",
-        "audio":"shi.mp3",
+        "url":"shi.mp3",
         "title":"shi",
       },
       {
@@ -941,7 +941,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"su",
         "moji":"ス",
-        "audio":"su.mp3",
+        "url":"su.mp3",
         "title":"su",
       },
       {
@@ -949,7 +949,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"se",
         "moji":"セ",
-        "audio":"se.mp3",
+        "url":"se.mp3",
         "title":"se",
       },
       {
@@ -957,7 +957,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"so",
         "moji":"ソ",
-        "audio":"so.mp3",
+        "url":"so.mp3",
         "title":"so",
       },
       {
@@ -965,7 +965,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ta",
         "moji":"タ",
-        "audio":"ta.mp3",
+        "url":"ta.mp3",
         "title":"ta",
       },
       {
@@ -973,7 +973,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"chi",
         "moji":"チ",
-        "audio":"chi.mp3",
+        "url":"chi.mp3",
         "title":"chi",
       },
       {
@@ -981,7 +981,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"tsu",
         "moji":"ツ",
-        "audio":"tsu.mp3",
+        "url":"tsu.mp3",
         "title":"tsu",
       },
       {
@@ -989,7 +989,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"te",
         "moji":"テ",
-        "audio":"te.mp3",
+        "url":"te.mp3",
         "title":"te",
       },
       {
@@ -997,7 +997,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"to",
         "moji":"ト",
-        "audio":"to.mp3",
+        "url":"to.mp3",
         "title":"to",
       },
       {
@@ -1005,7 +1005,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"na",
         "moji":"ナ",
-        "audio":"na.mp3",
+        "url":"na.mp3",
         "title":"na",
       },
       {
@@ -1013,7 +1013,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ni",
         "moji":"ニ",
-        "audio":"ni.mp3",
+        "url":"ni.mp3",
         "title":"ni",
       },
       {
@@ -1021,7 +1021,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"nu",
         "moji":"ヌ",
-        "audio":"nu.mp3",
+        "url":"nu.mp3",
         "title":"nu",
       },
       {
@@ -1029,7 +1029,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ne",
         "moji":"ネ",
-        "audio":"ne.mp3",
+        "url":"ne.mp3",
         "title":"ne",
       },
       {
@@ -1037,7 +1037,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"no",
         "moji":"ノ",
-        "audio":"no.mp3",
+        "url":"no.mp3",
         "title":"no",
       },
       {
@@ -1045,7 +1045,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ha",
         "moji":"ハ",
-        "audio":"ha.mp3",
+        "url":"ha.mp3",
         "title":"ha",
       },
       {
@@ -1053,7 +1053,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"hi",
         "moji":"ヒ",
-        "audio":"hi.mp3",
+        "url":"hi.mp3",
         "title":"hi",
       },
       {
@@ -1061,7 +1061,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"fu",
         "moji":"フ",
-        "audio":"fu.mp3",
+        "url":"fu.mp3",
         "title":"fu",
       },
       {
@@ -1069,7 +1069,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"he",
         "moji":"ヘ",
-        "audio":"he.mp3",
+        "url":"he.mp3",
         "title":"he",
       },
       {
@@ -1077,7 +1077,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ho",
         "moji":"ホ",
-        "audio":"ho.mp3",
+        "url":"ho.mp3",
         "title":"ho",
       },
       {
@@ -1085,7 +1085,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ma",
         "moji":"マ",
-        "audio":"ma.mp3",
+        "url":"ma.mp3",
         "title":"ma",
       },
       {
@@ -1093,7 +1093,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ミ",
         "moji":"み",
-        "audio":"mi.mp3",
+        "url":"mi.mp3",
         "title":"mi",
       },
       {
@@ -1101,7 +1101,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"mu",
         "moji":"ム",
-        "audio":"mu.mp3",
+        "url":"mu.mp3",
         "title":"mu",
       },
       {
@@ -1109,7 +1109,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"me",
         "moji":"メ",
-        "audio":"me.mp3",
+        "url":"me.mp3",
         "title":"me",
       },
       {
@@ -1117,7 +1117,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"mo",
         "moji":"モ",
-        "audio":"mo.mp3",
+        "url":"mo.mp3",
         "title":"mo",
       },
       {
@@ -1125,7 +1125,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ya",
         "moji":"ヤ",
-        "audio":"ya.mp3",
+        "url":"ya.mp3",
         "title":"ya",
       },
       {
@@ -1133,7 +1133,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"yu",
         "moji":"ユ",
-        "audio":"yu.mp3",
+        "url":"yu.mp3",
         "title":"yu",
       },
       {
@@ -1141,7 +1141,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"yo",
         "moji":"ヨ",
-        "audio":"yo.mp3",
+        "url":"yo.mp3",
         "title":"yo",
       },
       {
@@ -1149,7 +1149,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ra",
         "moji":"ラ",
-        "audio":"ra.mp3",
+        "url":"ra.mp3",
         "title":"ra",
       },
       {
@@ -1157,7 +1157,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ri",
         "moji":"リ",
-        "audio":"ri.mp3",
+        "url":"ri.mp3",
         "title":"ri",
       },
       {
@@ -1165,7 +1165,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ru",
         "moji":"ル",
-        "audio":"ru.mp3",
+        "url":"ru.mp3",
         "title":"ru",
       },
       {
@@ -1173,7 +1173,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"re",
         "moji":"レ",
-        "audio":"re.mp3",
+        "url":"re.mp3",
         "title":"re",
       },
       {
@@ -1181,7 +1181,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ro",
         "moji":"ロ",
-        "audio":"ro.mp3",
+        "url":"ro.mp3",
         "title":"ro",
       },
       {
@@ -1189,7 +1189,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"wa",
         "moji":"ワ",
-        "audio":"wa.mp3",
+        "url":"wa.mp3",
         "title":"wa",
       }, 
       {
@@ -1197,7 +1197,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"o(wo)",
         "moji":"ヲ",
-        "audio":"wo.mp3",
+        "url":"wo.mp3",
         "title":"wo",
       },
       {
@@ -1205,7 +1205,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"n",
         "moji":"ン",
-        "audio":"n.mp3",
+        "url":"n.mp3",
         "title":"n",
       },
       //DakuOn
@@ -1214,7 +1214,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ga",
         "moji":"ガ",
-        "audio":"ga.mp3",
+        "url":"ga.mp3",
         "title":"ga",
       },
       {
@@ -1222,7 +1222,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"gi",
         "moji":"ギ",
-        "audio":"gi.mp3",
+        "url":"gi.mp3",
         "title":"gi",
       },
       {
@@ -1230,7 +1230,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"gu",
         "moji":"グ",
-        "audio":"gu.mp3",
+        "url":"gu.mp3",
         "title":"gu",
       },
       {
@@ -1238,7 +1238,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ge",
         "moji":"ゲ",
-        "audio":"ge.mp3",
+        "url":"ge.mp3",
         "title":"ge",
       },
       {
@@ -1246,7 +1246,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"go",
         "moji":"ゴ",
-        "audio":"go.mp3",
+        "url":"go.mp3",
         "title":"go",
       },
       {
@@ -1254,7 +1254,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"za",
         "moji":"ザ",
-        "audio":"za.mp3",
+        "url":"za.mp3",
         "title":"za",
       },
       {
@@ -1262,7 +1262,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ji(zi)",
         "moji":"ジ",
-        "audio":"ji.mp3",
+        "url":"ji.mp3",
         "title":"ji(zi)",
       },
       {
@@ -1270,7 +1270,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"zu",
         "moji":"ズ",
-        "audio":"zu.mp3",
+        "url":"zu.mp3",
         "title":"zu",
       },
       {
@@ -1278,7 +1278,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ze",
         "moji":"ゼ",
-        "audio":"ze.mp3",
+        "url":"ze.mp3",
         "title":"ze",
       },
       {
@@ -1286,7 +1286,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"zo",
         "moji":"ゾ",
-        "audio":"zo.mp3",
+        "url":"zo.mp3",
         "title":"zo",
       },
       {
@@ -1294,7 +1294,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"da",
         "moji":"ダ",
-        "audio":"da.mp3",
+        "url":"da.mp3",
         "title":"da",
       },
       {
@@ -1302,7 +1302,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ji(di)",
         "moji":"ヂ",
-        "audio":"di.mp3",
+        "url":"di.mp3",
         "title":"ji(di)",
       },
       {
@@ -1310,7 +1310,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"zu(du)",
         "moji":"ヅ",
-        "audio":"du.mp3",
+        "url":"du.mp3",
         "title":"zu(du)",
       },
       {
@@ -1318,7 +1318,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"de",
         "moji":"デ",
-        "audio":"de.mp3",
+        "url":"de.mp3",
         "title":"de",
       },
       {
@@ -1326,7 +1326,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"do",
         "moji":"ド",
-        "audio":"do.mp3",
+        "url":"do.mp3",
         "title":"do",
       },
       {
@@ -1334,7 +1334,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ba",
         "moji":"バ",
-        "audio":"ba.mp3",
+        "url":"ba.mp3",
         "title":"ba",
       },
       {
@@ -1342,7 +1342,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"bi",
         "moji":"ビ",
-        "audio":"bi.mp3",
+        "url":"bi.mp3",
         "title":"bi",
       },
       {
@@ -1350,7 +1350,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"bu",
         "moji":"ブ",
-        "audio":"bu.mp3",
+        "url":"bu.mp3",
         "title":"bu",
       },
       {
@@ -1358,7 +1358,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"be",
         "moji":"ベ",
-        "audio":"be.mp3",
+        "url":"be.mp3",
         "title":"be",
       },
       {
@@ -1366,7 +1366,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"bo",
         "moji":"ボ",
-        "audio":"bo.mp3",
+        "url":"bo.mp3",
         "title":"bo",
       },
       {
@@ -1374,7 +1374,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"pa",
         "moji":"パ",
-        "audio":"pa.mp3",
+        "url":"pa.mp3",
         "title":"pa",
       },
       {
@@ -1382,7 +1382,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"pi",
         "moji":"ピ",
-        "audio":"pi.mp3",
+        "url":"pi.mp3",
         "title":"pi",
       },
       {
@@ -1390,7 +1390,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"pu",
         "moji":"プ",
-        "audio":"pu.mp3",
+        "url":"pu.mp3",
         "title":"pu",
       },
       {
@@ -1398,7 +1398,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"pe",
         "moji":"ペ",
-        "audio":"pe.mp3",
+        "url":"pe.mp3",
         "title":"pe",
       },
       {
@@ -1406,7 +1406,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"po",
         "moji":"ポ",
-        "audio":"po.mp3",
+        "url":"po.mp3",
         "title":"po",
       },
       //YoOn
@@ -1415,7 +1415,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"kya",
         "moji":"キャ",
-        "audio":"kya.mp3",
+        "url":"kya.mp3",
         "title":"kya",
       }, 
       {
@@ -1423,7 +1423,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"kyu",
         "moji":"キュ",
-        "audio":"kyu.mp3",
+        "url":"kyu.mp3",
         "title":"kyu",
       }, 
       {
@@ -1431,7 +1431,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"kyo",
         "moji":"キョ",
-        "audio":"kyo.mp3",
+        "url":"kyo.mp3",
         "title":"kyo",
       },
       {
@@ -1439,7 +1439,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"sha",
         "moji":"シャ",
-        "audio":"sha.mp3",
+        "url":"sha.mp3",
         "title":"sha",
       }, 
       {
@@ -1447,7 +1447,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"shu",
         "moji":"シュ",
-        "audio":"shu.mp3",
+        "url":"shu.mp3",
         "title":"shu",
       }, 
       {
@@ -1455,7 +1455,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"sho",
         "moji":"ショ",
-        "audio":"sho.mp3",
+        "url":"sho.mp3",
         "title":"sho",
       },
       {
@@ -1463,7 +1463,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"cha",
         "moji":"チャ",
-        "audio":"cha.mp3",
+        "url":"cha.mp3",
         "title":"cha",
       }, 
       {
@@ -1471,7 +1471,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"chu",
         "moji":"チュ",
-        "audio":"chu.mp3",
+        "url":"chu.mp3",
         "title":"chu",
       }, 
       {
@@ -1479,7 +1479,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"cho",
         "moji":"チョ",
-        "audio":"cho.mp3",
+        "url":"cho.mp3",
         "title":"cho",
       },
       {
@@ -1487,7 +1487,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"nya",
         "moji":"ニャ",
-        "audio":"nya.mp3",
+        "url":"nya.mp3",
         "title":"nya",
       }, 
       {
@@ -1495,7 +1495,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"nyu",
         "moji":"ニュ",
-        "audio":"nyu.mp3",
+        "url":"nyu.mp3",
         "title":"nyu",
       }, 
       {
@@ -1503,7 +1503,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"nyo",
         "moji":"ニョ",
-        "audio":"nyo.mp3",
+        "url":"nyo.mp3",
         "title":"nyo",
       },
       {
@@ -1511,7 +1511,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"hya",
         "moji":"ヒャ",
-        "audio":"hya.mp3",
+        "url":"hya.mp3",
         "title":"hya",
       }, 
       {
@@ -1519,7 +1519,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"hyu",
         "moji":"ヒュ",
-        "audio":"hyu.mp3",
+        "url":"hyu.mp3",
         "title":"hyu",
       }, 
       {
@@ -1527,7 +1527,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"hyo",
         "moji":"ヒョ",
-        "audio":"hyo.mp3",
+        "url":"hyo.mp3",
         "title":"hyo",
       },
       {
@@ -1535,7 +1535,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"mya",
         "moji":"ミャ",
-        "audio":"mya.mp3",
+        "url":"mya.mp3",
         "title":"mya",
       }, 
       {
@@ -1543,7 +1543,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"myu",
         "moji":"ミュ",
-        "audio":"myu.mp3",
+        "url":"myu.mp3",
         "title":"myu",
       }, 
       {
@@ -1551,7 +1551,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"myo",
         "moji":"ミョ",
-        "audio":"myo.mp3",
+        "url":"myo.mp3",
         "title":"myo",
       },
       {
@@ -1559,7 +1559,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"rya",
         "moji":"リャ",
-        "audio":"rya.mp3",
+        "url":"rya.mp3",
         "title":"rya",
       }, 
       {
@@ -1567,7 +1567,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ryu",
         "moji":"リュ",
-        "audio":"ryu.mp3",
+        "url":"ryu.mp3",
         "title":"ryu",
       }, 
       {
@@ -1575,7 +1575,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ryo",
         "moji":"リョ",
-        "audio":"ryo.mp3",
+        "url":"ryo.mp3",
         "title":"ryo",
       },
       {
@@ -1583,7 +1583,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"gya",
         "moji":"ギャ",
-        "audio":"gya.mp3",
+        "url":"gya.mp3",
         "title":"gya",
       }, 
       {
@@ -1591,7 +1591,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"gyu",
         "moji":"ギュ",
-        "audio":"gyu.mp3",
+        "url":"gyu.mp3",
         "title":"gyu",
       }, 
       {
@@ -1599,7 +1599,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"gyo",
         "moji":"ギョ",
-        "audio":"gyo.mp3",
+        "url":"gyo.mp3",
         "title":"gyo",
       },
       {
@@ -1607,7 +1607,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ja",
         "moji":"ジャ",
-        "audio":"ja.mp3",
+        "url":"ja.mp3",
         "title":"ja",
       }, 
       {
@@ -1615,7 +1615,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"ju",
         "moji":"ジュ",
-        "audio":"ju.mp3",
+        "url":"ju.mp3",
         "title":"ju",
       },
       {
@@ -1623,7 +1623,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"jo",
         "moji":"ジョ",
-        "audio":"jo.mp3",
+        "url":"jo.mp3",
         "title":"jo",
       },
       {
@@ -1631,7 +1631,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"bya",
         "moji":"ビャ",
-        "audio":"bya.mp3",
+        "url":"bya.mp3",
         "title":"bya",
       },
       {
@@ -1639,7 +1639,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"byu",
         "moji":"ビュ",
-        "audio":"byu.mp3",
+        "url":"byu.mp3",
         "title":"byu",
       }, 
       {
@@ -1647,7 +1647,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"byo",
         "moji":"ビョ",
-        "audio":"byo.mp3",
+        "url":"byo.mp3",
         "title":"byo",
       },
       {
@@ -1655,7 +1655,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"pya",
         "moji":"ピャ",
-        "audio":"pya.mp3",
+        "url":"pya.mp3",
         "title":"pya",
       }, 
       {
@@ -1663,7 +1663,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"pyu",
         "moji":"ピュ",
-        "audio":"pyu.mp3",
+        "url":"pyu.mp3",
         "title":"pyu",
       },
       {
@@ -1671,7 +1671,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"pyo",
         "moji":"ピョ",
-        "audio":"pyo.mp3",
+        "url":"pyo.mp3",
         "title":"pyo",
       }
     ],
@@ -1685,7 +1685,7 @@ export const flashData = [
         "moji":"いち",
         "kanji":"一",
         "english":"one",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_2",
@@ -1694,7 +1694,7 @@ export const flashData = [
         "moji":"に",
         "kanji":"二",
         "english":"two",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_3",
@@ -1703,7 +1703,7 @@ export const flashData = [
         "moji":"さん",
         "kanji":"三",
         "english":"three",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       }, 
       { 
         "id":"num_4",
@@ -1712,7 +1712,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_5",
@@ -1721,7 +1721,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_6",
@@ -1730,7 +1730,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_7",
@@ -1739,7 +1739,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_8",
@@ -1748,7 +1748,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_9",
@@ -1757,7 +1757,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_10",
@@ -1766,7 +1766,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_20",
@@ -1775,7 +1775,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_100",
@@ -1784,7 +1784,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_200",
@@ -1793,7 +1793,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_1000",
@@ -1802,7 +1802,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_10000",
@@ -1811,7 +1811,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       },
       {   
         "id":"num_1000000",
@@ -1820,7 +1820,7 @@ export const flashData = [
         "moji":"よん",
         "kanji":"四",
         "english":"four",
-        "audio":"ka.mp3"
+        "url":"ka.mp3"
       }
     ]
   }

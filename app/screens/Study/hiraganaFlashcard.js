@@ -19,6 +19,46 @@ import {
   import { ImageData } from '../../config/image_list';
   import { flashData } from '../../config/flash';
   
+  var Sound = require('react-native-sound');
+
+  function setTestState(testInfo, component, status) {
+    component.setState({tests: {...component.state.tests, [testInfo.title]: status}});
+  } 
+
+  /**
+ * Generic play function for majority of tests
+ */
+function playSound(testInfo, component) {
+  console.log(testInfo);
+  setTestState(testInfo, component, 'pending');
+
+  const callback = (error, sound) => {
+    if (error) {
+      Alert.alert('error', error.message);
+      setTestState(testInfo, component, 'fail');
+      return;
+    }
+    setTestState(testInfo, component, 'playing');
+    // Run optional pre-play callback
+    testInfo.onPrepared && testInfo.onPrepared(sound, component);
+    sound.play(() => {
+      // Success counts as getting to the end
+      setTestState(testInfo, component, 'win');
+      // Release when it's done so we're not using up resources
+      sound.release();
+    });
+  };
+
+  // If the audio is a 'require' then the second parameter must be the callback.
+  if (testInfo.isRequire) {
+    const sound = new Sound(testInfo.url, error => callback(error, sound));
+  } else {
+    const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
+  }
+}
+
+
+
   class HiraganaFlashcardScreen extends Component {
     static navigationOptions = {
       header: null,
@@ -27,6 +67,19 @@ import {
 
     constructor(props) {
       super(props);
+
+      Sound.setCategory('Playback', true); // true = mixWithOthers
+
+      // Special case for stopping
+      this.stopSoundLooped = () => {
+        if (!this.state.loopingSound) {
+          return;
+        }
+  
+        this.state.loopingSound.stop().release();
+        this.setState({loopingSound: null, tests: {...this.state.tests, ['mp3 in bundle (looped)']: 'win'}});
+      };
+
       this.animatedValue = new Animated.Value(0);
       this.value = 0;
       this.animatedValue.addListener(({ value }) => {
@@ -54,11 +107,14 @@ import {
       this.state = {
         front: this.data[0].moji,
         back: this.data[0].romaji,
+        url: this.data[0].url,
         fakeFront: null,
         fakeBack: null, 
         flipped: false,
         img : ImageData.number_chara,
         isPause: false,
+        loopingSound: undefined,
+        tests: {},
       };
 
       this.progressCounter = 0;
@@ -224,6 +280,8 @@ import {
         }).start(set);
       }
     }
+
+
     
     render() {
       const frontAnimatedStyle = {
@@ -256,7 +314,9 @@ import {
         <ImageBackground source={this.state.img} style={studyStyles.backgroundImg} >
           <View style={[studyStyles.containerBetween, studyStyles.p3]}>
             <View style={[studyStyles.containerTopRel]}>
-              <TouchableOpacity style={studyStyles.iconContainer}>
+              <TouchableOpacity onPress={() => {
+                  return playSound(this.state , this);
+                }} style={studyStyles.iconContainer}>
                 <View style={studyStyles.cardIcon} >
                   <Icon name='volume-up' color='#45B3EB' size={40}/>
                 </View>
