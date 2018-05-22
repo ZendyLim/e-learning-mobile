@@ -77,7 +77,7 @@ const SettingStack = StackNavigator({
 
 export const AppStack = TabNavigator({ 
     Home: {
-        screen: example, 
+        screen: HomeScreen, 
         navigationOptions: { 
             tabBarLabel: () => {
                 return <Icon name="home"  type='font-awesome' size={25} color={"white"} />;

@@ -136,7 +136,11 @@ export const StudyList = [{
       type : 'HL2',
       study : '1'
     },{
-      title : 'FLASH_CARD',
+      title : 'FLASH_CARD_HIRAGANA',
+      type : 'HL3',
+      study : '1'
+    },{
+      title : 'FLASH_CARD_KATAKANA',
       type : 'HL3',
       study : '1'
     },{
@@ -177,7 +181,7 @@ export const StudyList = [{
     title : 'GOI_LIST',
     type : 'GL1',
     study : '4'
-  },,{
+  },{
     title : 'FLASH_CARD',
     type : 'GL3',
     study : '4'

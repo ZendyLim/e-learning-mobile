@@ -62,9 +62,16 @@ class LearnHiraganaModule extends Component {
                 <HL2Screen />        
             );        
         }else if(this.state.type == 'HL3' || this.state.type == 'GL3'  || this.state.type == 'KL3' || this.state.type == 'BL3' ){
-            return (
-                <LearningModule title={ this.state.studyType }/>     
-            );        
+            if(this.state.title == "FLASH_CARD_HIRAGANA" || this.state.title == 'FLASH_CARD_HIRAGANA'){
+                return (
+                    <LearningModule title={ this.state.title }/>     
+                );        
+                }else{
+                return (
+                    <LearningModule title={ this.state.studyType }/>     
+                );        
+    
+            }
         }else if(this.state.type == 'HL4'){
             return (
                 <Text>HL4</Text>        
