@@ -20,7 +20,7 @@ import QuizMainScreen from '../screens/Quiz/quizMain';
 import QuizListScreen from '../screens/Quiz/quizList';
 import QuizHiraganaListScreen from '../screens/Quiz/quizHiraganaList';
 import QuizKatakanaListScreen from '../screens/Quiz/quizKatakanaList';
-import HiraganaExplanationScreen from '../screens/Study/hiraganaExplanation';
+import HiraganaFlashcardScreen from '../screens/Study/hiraganaFlashcard';
 import ScoreScreen from '../screens/Study/score';
 //import MainView from '../screens/sound';
 import example from '../screens/sketch';
@@ -65,6 +65,7 @@ const StudyStack = StackNavigator({
         navigationOptions: { tabBarVisible: false  }
     },
     StudyList: StudyListScreen ,
+    HiraganaFlash: HiraganaFlashcardScreen , 
     LearnHL1: LearnHL1Screen,
 });
 

@@ -18,6 +18,7 @@ const { persistor, store } = configureStore();
 //import component Splash screen
 import SplashScreen from './screens/splashscreen';
 import MainScreen from './screens/main';
+import HL2Screen from './screens/Learn/HL2';
 
 import { PersistGate } from 'redux-persist/integration/react'
 
@@ -37,7 +38,8 @@ const Root =  SwitchNavigator(
 class App extends Component {
   render() {
       return (
-          <Provider store={store}>
+        // <HL2Screen />
+        <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
               <Root />
             </PersistGate>

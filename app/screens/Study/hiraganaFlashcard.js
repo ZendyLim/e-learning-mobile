@@ -10,21 +10,77 @@ import {
     TouchableOpacity, 
     Text, 
     Image, 
-    ImageBackground
+    ImageBackground, 
+    TouchableWithoutFeedback
   } from 'react-native';
   import { List, ListItem, Icon } from 'react-native-elements';
   import {Dimensions} from 'react-native';
   // Config
   import { ImageData } from '../../config/image_list';
+  import { flashData } from '../../config/flash';
+import LearnListScreen from '../Learn/LearnList';
   
-  class HiraganaExplanationScreen extends Component {
-  
+  var Sound = require('react-native-sound');
+
+  function setTestState(testInfo, component, status) {
+    component.setState({tests: {...component.state.tests, [testInfo.title]: status}});
+  } 
+
+  /**
+ * Generic play function for majority of tests
+ */
+function playSound(testInfo, component) {
+  console.log(testInfo);
+  setTestState(testInfo, component, 'pending');
+
+  const callback = (error, sound) => {
+    if (error) {
+      Alert.alert('error', error.message);
+      setTestState(testInfo, component, 'fail');
+      return;
+    }
+    setTestState(testInfo, component, 'playing');
+    // Run optional pre-play callback
+    testInfo.onPrepared && testInfo.onPrepared(sound, component);
+    sound.play(() => {
+      // Success counts as getting to the end
+      setTestState(testInfo, component, 'win');
+      // Release when it's done so we're not using up resources
+      sound.release();
+    });
+  };
+
+  // If the audio is a 'require' then the second parameter must be the callback.
+  if (testInfo.isRequire) {
+    const sound = new Sound(testInfo.url, error => callback(error, sound));
+  } else {
+    const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
+  }
+}
+
+
+
+  class HiraganaFlashcardScreen extends Component {
     static navigationOptions = {
       header: null,
       title: 'Summary',
     };
 
-    componentWillMount() {
+    constructor(props) {
+      super(props);
+
+      Sound.setCategory('Playback', true); // true = mixWithOthers
+
+      // Special case for stopping
+      this.stopSoundLooped = () => {
+        if (!this.state.loopingSound) {
+          return;
+        }
+  
+        this.state.loopingSound.stop().release();
+        this.setState({loopingSound: null, tests: {...this.state.tests, ['mp3 in bundle (looped)']: 'win'}});
+      };
+
       this.animatedValue = new Animated.Value(0);
       this.value = 0;
       this.animatedValue.addListener(({ value }) => {
@@ -47,41 +103,20 @@ import {
         outputRange: [0, 1]
       })
 
-      this.data = [
-        {
-          front: 'あ',
-          back: 'a'
-        },
-        {
-          front: 'い',
-          back: 'i'
-        },
-        {
-          front: 'う',
-          back: 'u'
-        },
-        {
-          front: 'え',
-          back: 'e'
-        },
-        {
-          front: 'お',
-          back: 'o'
-        },
-        {
-          front: 'か',
-          back: 'ka'
-        },
-      ],
+      this.data = flashData[0][this.props.title];
 
       this.state = {
-        front: 'あ',
-        back: 'a', 
+        front: this.data[0].moji,
+        back: this.data[0].romaji,
+        url: this.data[0].url,
+        fakeFront: null,
+        fakeBack: null, 
         flipped: false,
         img : ImageData.number_chara,
         isPause: false,
-        isFront: true, 
-        isBack: false, 
+        loopingSound: undefined,
+        tests: {},
+        btnDisable: true
       };
 
       this.progressCounter = 0;
@@ -111,7 +146,6 @@ import {
     }
 
     componentDidMount() {
-      console.log(this.props.title);
       this.flipperFunction(this.tickInterval / this.flipSpeed);
     }
 
@@ -163,21 +197,23 @@ import {
     }
 
     updateNext(){
-      if(this.progressCounter + 1 === this.data.length){
+      this.state.btnDisable = false;
+      if(this.progressCounter + 1 === this.data.length) {
+        this.props.goBack.props.navigation.goBack(null) ;
         return;
-        //TODO Finnish the damn lesson
       }
       this.pause();
       this.progressCounter++;
       this.setState((previousState) => {
         let state = previousState;
+        this.value = 180;
 
         if(this.value >= 90){
-          state.front = this.data[this.progressCounter].front;
-          state.back = this.data[this.progressCounter].back;
+          state.front = this.data[this.progressCounter].moji;
+          state.fakeBack = this.data[this.progressCounter].romaji;
         } else {
-          state.front = this.data[this.progressCounter].back;
-          state.back = this.data[this.progressCounter].front;
+          state.fakeFront = this.data[this.progressCounter].romaji;
+          state.back = this.data[this.progressCounter].moji;
         }
         
         state.flipped = true;
@@ -187,20 +223,20 @@ import {
 
     updatePrevious(){
       if(this.progressCounter < 1){
-        this.props.navigation.goBack();
+        this.state.btnDisable = true;
         return;
       }
       this.pause();
       this.progressCounter--;
       this.setState((previousState) => {
         let state = previousState;
-
+        this.value = 180;
         if(this.value >= 90){
-          state.front = this.data[this.progressCounter].front;
-          state.back = this.data[this.progressCounter].back;
+          state.front = this.data[this.progressCounter].moji;
+          state.fakeBack = this.data[this.progressCounter].romaji;
         } else {
-          state.front = this.data[this.progressCounter].back;
-          state.back = this.data[this.progressCounter].front;
+          state.fakeFront = this.data[this.progressCounter].romaji;
+          state.back = this.data[this.progressCounter].moji;
         }
         
         state.flipped = true;
@@ -212,11 +248,21 @@ import {
       const set = (finished) => {
         if(finished){
           this.pause();
-          this.resume();   
+          this.resume();
     
           this.setState((previousState) => {
             let state = previousState;
-            console.log(state.flipped);
+            
+            if(state.fakeBack != null){
+              state.back = state.fakeBack;
+              state.fakeBack = null;
+            }
+
+            if(state.fakeFront != null){
+              state.front = state.fakeFront;
+              state.fakeFront = null;
+            }
+
             state.flipped = !previousState.flipped;
             return state;
           })
@@ -226,17 +272,19 @@ import {
       if (this.value >= 90) {
         Animated.spring(this.animatedValue, {
           toValue: 0, 
-          friction: 8, 
-          tension: 10,  
+          friction: 30, 
+          tension: 40,  
         }).start(set);
       } else {
         Animated.spring(this.animatedValue, {
           toValue: 180, 
-          friction: 8, 
-          tension: 10,  
+          friction: 30, 
+          tension: 40,  
         }).start(set);
       }
     }
+
+
     
     render() {
       const frontAnimatedStyle = {
@@ -257,6 +305,10 @@ import {
         width: '100%', 
         height: '100%'
       }
+
+      const help = {
+        opacity: this.helpMe
+      }
       
       const autoHeight = {
         height: (Dimensions.get('window').width) * 0.2
@@ -265,28 +317,33 @@ import {
         <ImageBackground source={this.state.img} style={studyStyles.backgroundImg} >
           <View style={[studyStyles.containerBetween, studyStyles.p3]}>
             <View style={[studyStyles.containerTopRel]}>
-              <TouchableOpacity style={studyStyles.iconContainer}>
+              <TouchableOpacity onPress={() => {
+                  return playSound(this.state , this);
+                }} style={studyStyles.iconContainer}>
                 <View style={studyStyles.cardIcon} >
                   <Icon name='volume-up' color='#45B3EB' size={40}/>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity style={studyStyles.cardContainer} onPress={() => this.flipCard()}>
-                <Animated.View style={[frontAnimatedStyle]}>
-                  <View style={[studyStyles.cardText]}>
-                    <Text style={studyStyles.textContent}>{ this.state.front }</Text>
-                  </View>
-                </Animated.View>
-                <Animated.View  style={[backAnimatedStyle]}>
-                  <View style={[studyStyles.cardText]}>
-                    <Text style={studyStyles.textContent}>{ this.state.back }</Text>
-                  </View>
-                </Animated.View>
-              </TouchableOpacity>
+              <TouchableWithoutFeedback onPress={() => this.flipCard()}>
+                <View style={studyStyles.cardContainer}>
+                  <Animated.View style={[frontAnimatedStyle]}>
+                    <View style={[studyStyles.cardText]}>
+                      <Text style={studyStyles.textContent}>{ this.state.front }</Text>
+                    </View>
+                  </Animated.View>
+                  <Animated.View  style={[backAnimatedStyle]}>
+                    <View style={[studyStyles.cardText]}>
+                      <Text style={studyStyles.textContent}>{ this.state.back }</Text>
+                    </View>
+                  </Animated.View>
+                </View>
+              </TouchableWithoutFeedback>
             </View>
 
             <View style={[studyStyles.containerBottom, autoHeight]}>
               <View style={[studyStyles.boxButton, autoHeight]}>
                 <TouchableOpacity
+                  disabled={this.state.btnDisable}
                   style={studyStyles.roundButton}
                   onPress={() => this.updatePrevious()}
                 >
@@ -336,4 +393,4 @@ import {
 
   const styles = require('../../styles/style');
   const studyStyles = require('../../styles/study');
-export default HiraganaExplanationScreen;
+export default HiraganaFlashcardScreen;
