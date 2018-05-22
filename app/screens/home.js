@@ -47,7 +47,7 @@ import {
       this.props.navigation.navigate('HiraganaExp');
     };
     quiz = () => {
-      this.props.navigation.navigate('QuizList');
+      this.props.navigation.navigate('QuizMain');
     };  
     scoreScreen = () => {
       this.props.navigation.navigate('ScoreScreen',{
