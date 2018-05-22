@@ -45,6 +45,9 @@ class LearnHiraganaModule extends Component {
       studyType: navigation.getParam('studyType', null),
     });
   }
+  goBack = () => {
+     this.navigation.navigate('LearnListScreen');
+  }
   render() {
     if(this.state.type){
         if(this.state.type == 'HL1'){
@@ -64,11 +67,11 @@ class LearnHiraganaModule extends Component {
         }else if(this.state.type == 'HL3' || this.state.type == 'GL3'  || this.state.type == 'KL3' || this.state.type == 'BL3' ){
             if(this.state.title == "FLASH_CARD_HIRAGANA" || this.state.title == 'FLASH_CARD_KATAKANA'){
                 return (
-                    <LearningModule title={ this.state.title }/>     
+                    <LearningModule title={ this.state.title } goBack={this}/>     
                 );        
                 }else{
                 return (
-                    <LearningModule title={ this.state.studyType }/>     
+                    <LearningModule title={ this.state.studyType }  goBack={this}/>     
                 );        
     
             }

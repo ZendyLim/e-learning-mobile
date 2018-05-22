@@ -18,6 +18,7 @@ import {
   // Config
   import { ImageData } from '../../config/image_list';
   import { flashData } from '../../config/flash';
+import LearnListScreen from '../Learn/LearnList';
   
   var Sound = require('react-native-sound');
 
@@ -115,6 +116,7 @@ function playSound(testInfo, component) {
         isPause: false,
         loopingSound: undefined,
         tests: {},
+        btnDisable: true
       };
 
       this.progressCounter = 0;
@@ -195,9 +197,10 @@ function playSound(testInfo, component) {
     }
 
     updateNext(){
-      if(this.progressCounter + 1 === this.data.length){
+      this.state.btnDisable = false;
+      if(this.progressCounter + 1 === this.data.length) {
+        this.props.goBack.props.navigation.goBack(null) ;
         return;
-        //TODO Finnish the damn lesson
       }
       this.pause();
       this.progressCounter++;
@@ -220,7 +223,7 @@ function playSound(testInfo, component) {
 
     updatePrevious(){
       if(this.progressCounter < 1){
-        this.props.navigation.goBack();
+        this.state.btnDisable = true;
         return;
       }
       this.pause();
@@ -340,6 +343,7 @@ function playSound(testInfo, component) {
             <View style={[studyStyles.containerBottom, autoHeight]}>
               <View style={[studyStyles.boxButton, autoHeight]}>
                 <TouchableOpacity
+                  disabled={this.state.btnDisable}
                   style={studyStyles.roundButton}
                   onPress={() => this.updatePrevious()}
                 >

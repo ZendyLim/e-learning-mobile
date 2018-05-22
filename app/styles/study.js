@@ -247,7 +247,7 @@ textContent: {
   color: 'black', 
   textAlign: 'center', 
   textAlignVertical: 'center',  
-  fontSize: 128
+  fontSize: 120
 }, 
 
 backgroundImg: {
