@@ -14,6 +14,8 @@ import {
   } from 'react-native';
   import { List, ListItem, Icon } from 'react-native-elements';
   import {Dimensions} from 'react-native';
+  // Config
+  import { ImageData } from '../../config/image_list';
   
   class HiraganaExplanationScreen extends Component {
   
@@ -76,7 +78,7 @@ import {
         front: 'あ',
         back: 'a', 
         flipped: false,
-        img : require('../../img/number_chara.jpg'), 
+        img : ImageData.number_chara,
         isPause: false,
         isFront: true, 
         isBack: false, 
@@ -109,6 +111,7 @@ import {
     }
 
     componentDidMount() {
+      console.log(this.props.title);
       this.flipperFunction(this.tickInterval / this.flipSpeed);
     }
 

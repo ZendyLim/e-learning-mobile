@@ -42,6 +42,9 @@ class LearnListScreen extends Component {
     });
   }
   navigateToPage=(item, index)=>{
+    item['studyType'] = this.state.studyType;
+    console.log(item);
+
     if(item.type == 'Initial'){
       this.props.navigation.navigate('LearnHiraganaModule',(
         item
@@ -59,7 +62,7 @@ class LearnListScreen extends Component {
         <ScrollView style={study.StudyContainer}>
          { this.state.item.map((item, key)=>(
           <TouchableOpacity key={key} style={study.btnLearn} onPress={this.navigateToPage.bind(this, item, key)}>
-              <Text>{item.title}</Text>
+              <Text>{strings[item.title]}</Text>
           </TouchableOpacity>
         ))}
         </ScrollView>

@@ -10,6 +10,7 @@ import {
     Text,
     TextInput,
     View,
+    Modal,
   } from 'react-native';
   import { List, ListItem } from 'react-native-elements';
 

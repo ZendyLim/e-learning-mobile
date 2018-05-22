@@ -19,7 +19,7 @@ class Header extends Component {
   constructor(props) {
     super(props);
     
-    this.icon = this.props.icon ? this.props.icon : 'times';       
+    this.icon = this.props.icon ? this.props.icon : 'times';  
   }
 
   _renderSubtitle(){

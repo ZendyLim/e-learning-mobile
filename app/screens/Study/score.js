@@ -78,7 +78,7 @@ import {
     return (
         <View style={scoreStyle.RecordRow}>
             <Text style={scoreStyle.recordTitle}>
-                Title
+                { item.questionID + ' - ' + item.answer }
             </Text>
             { item.correct == '1' ? (
             <View style={scoreStyle.recordCorrect}>
@@ -139,7 +139,7 @@ import {
               <View style={ scoreStyle.RecordRowButtonContainer }>
                 <TouchableHighlight style={ scoreStyle.buttonWin} onPress={ this.goToTopicSelection }>
                 <View>
-                    <Text style={ scoreStyle.buttonWinText }> { this.state.typeQuiz == 'Test' ? ( 'Go To Topic' ) : ( 'Go Back To Study') }</Text>
+                    <Text style={ scoreStyle.buttonWinText }> { this.state.typeQuiz == 'Test' ? ( 'Topic List' ) : ( 'Study List') }</Text>
                 </View>
                 </TouchableHighlight>
               </View> 
@@ -182,7 +182,7 @@ function mapStateToProps(state, props) {
    }
   }
   if(CountQuest !== 0 && correct !== 0){
-    score = ( correct / CountQuest) * 100;
+    score = Math.floor(( correct / CountQuest) * 100 );
   }else{
     score = 0;
   }
