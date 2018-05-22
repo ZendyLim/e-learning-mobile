@@ -146,8 +146,9 @@ import {
       this.progressCounter++;
       this.setState((previousState) => {
         let state = previousState;
-
+        this.value = 180;
         if(hiraganaList[this.progressCounter].id) {
+          
           if(this.value >= 90){
             state.front = hiraganaList[this.progressCounter].moji;
             state.fakeBack = hiraganaList[this.progressCounter].romaji;
@@ -171,6 +172,7 @@ import {
       this.progressCounter--;
       this.setState((previousState) => {
         let state = previousState;
+        this.value = 180;
         if(hiraganaList[this.progressCounter].id) {
           if(this.value >= 90){
             state.front = hiraganaList[this.progressCounter].moji;
@@ -190,7 +192,7 @@ import {
       const set = (finished) => {
         if(finished){
           this.pause();
-          this.resume();   
+          this.resume();
     
           this.setState((previousState) => {
             let state = previousState;
