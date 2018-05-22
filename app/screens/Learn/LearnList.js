@@ -39,10 +39,12 @@ class LearnListScreen extends Component {
       type: navigation.getParam('type', null),
       studyType: navigation.getParam('studyType', null),
       item: LearnListData[navigation.getParam('studyType', null)],
+      img: navigation.getParam('img', null),
     });
   }
   navigateToPage=(item, index)=>{
     item['studyType'] = this.state.studyType;
+    item['img'] = this.state.img;
     console.log(item);
 
     if(item.type == 'Initial'){

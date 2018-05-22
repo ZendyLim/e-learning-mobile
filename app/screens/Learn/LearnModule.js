@@ -18,6 +18,7 @@ import style from 'react-native-datepicker/style';
 import LearningModule from '../Study/hiraganaExplanation';
 import HL2Screen from '../Learn/HL2';
 import { HiraganaLearnStack } from '../../config/router';
+import NumberLearnScreen from '../Learn/learnsl1';
 
 class LearnHiraganaModule extends Component {
   constructor() {
@@ -41,6 +42,8 @@ class LearnHiraganaModule extends Component {
       title: navigation.getParam('title', null),
       type: navigation.getParam('type', null),
       study: navigation.getParam('study', null),
+      studyType: navigation.getParam('studyType', null),
+      img: navigation.getParam('img', null),
     });
   }
   render() {
@@ -52,7 +55,7 @@ class LearnHiraganaModule extends Component {
                 );            
             }else if(this.state.title == 'NUMBER_HL1'){
                 return (
-                    <Text>Number</Text>        
+                    <NumberLearnScreen studyType={this.state.studyType} img={this.state.img}/>       
                 );            
             }
         }else if(this.state.type == 'HL2'){

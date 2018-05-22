@@ -13,13 +13,12 @@ import {
     Platform,
   } from 'react-native';
   import { List, ListItem, Icon } from 'react-native-elements';
-  // import {Table, TableWrapper, Row, Rows, Col, Cols, Cell} from 'react-native-table-component';
-  // import GridView from 'react-native-gridview';
   
   import { TabNavigator, StackNavigator } from 'react-navigation';
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import { HiraganaLearnStack }  from '../../config/router';
+  import { hiraganalearn } from '../../config/hiraganalearn'
   import * as Actions from '../../actions/user'; //Import your actions
 
   var Sound = require('react-native-sound');
@@ -77,29 +76,6 @@ function playSound(testInfo, component) {
     }
   }
 
-  const data = [
-    {hiragana: 'あ', romaji: 'a', url: 'ka.mp3'},
-    {hiragana: 'い', romaji: 'i',  url: 'ki.mp3'},
-    {hiragana: 'う', romaji: 'u',  url: 'ki.mp3'},
-    {hiragana: 'え', romaji: 'e',  url: 'ki.mp3'},
-    {hiragana: 'お', romaji: 'o',  url: 'ki.mp3'},
-    {hiragana: 'か', romaji: 'ka', url: 'ki.mp3'},
-    {hiragana: 'き', romaji: 'ki',  url: 'ki.mp3'},
-    {hiragana: 'く', romaji: 'ku', url: 'ki.mp3'},
-    {hiragana: 'け', romaji: 'ke',  url: 'ki.mp3a'},
-    {hiragana: 'こ', romaji: 'ko',  url: 'ka.mp3'},
-    {hiragana: 'さ', romaji: 'sa',  url: 'ka.mp3'},
-    {hiragana: 'し', romaji: 'shi',  url: 'ka.mp3'},
-    {hiragana: 'す', romaji: 'su',  url: 'ka.mp3'},
-    {hiragana: 'せ', romaji: 'se',  url: 'ka.mp3'},
-    {hiragana: 'そ', romaji: 'so',  url: 'ka.mp3'},
-    {hiragana: 'た', romaji: 'ta',  url: 'ka.mp3'},
-    {hiragana: 'ち', romaji: 'chi',  url: 'ka.mp3'},
-    {hiragana: 'つ', romaji: 'tsu',  url: 'ka.mp3'},
-    {hiragana: 'て', romaji: 'te',  url: 'ka.mp3'},
-    {hiragana: 'と', romaji: 'to',  url: 'ka.mp3',}
-  ];
-
   export class HiraganaLearnScreen extends Component {
 
     static navigationOptions = {
@@ -131,7 +107,7 @@ function playSound(testInfo, component) {
       return (
         <View style={learnlh1.MainContainer}>
           <FlatList 
-          data={data}
+          data={hiraganalearn}
           renderItem={({item}) => {
             return(
               <FlatListItem item={item} component={this}/>
