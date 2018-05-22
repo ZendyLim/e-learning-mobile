@@ -17,17 +17,16 @@ import {
   import {Dimensions} from 'react-native';
   // Config
   import { ImageData } from '../../config/image_list';
-  import { hiraganaList } from '../../config/data';
+  import { flashData } from '../../config/flash';
   
   class HiraganaFlashcardScreen extends Component {
-  
     static navigationOptions = {
       header: null,
       title: 'Summary',
     };
 
-    constructor() {
-      super();
+    constructor(props) {
+      super(props);
       this.animatedValue = new Animated.Value(0);
       this.value = 0;
       this.animatedValue.addListener(({ value }) => {
@@ -50,9 +49,11 @@ import {
         outputRange: [0, 1]
       })
 
+      this.data = flashData[0][this.props.title];
+
       this.state = {
-        front: hiraganaList[0].moji,
-        back: hiraganaList[0].romaji,
+        front: this.data[0].moji,
+        back: this.data[0].romaji,
         fakeFront: null,
         fakeBack: null, 
         flipped: false,
@@ -87,7 +88,6 @@ import {
     }
 
     componentDidMount() {
-      console.log(this.props.title);
       this.flipperFunction(this.tickInterval / this.flipSpeed);
     }
 
@@ -139,7 +139,7 @@ import {
     }
 
     updateNext(){
-      if(this.progressCounter + 1 === hiraganaList.length){
+      if(this.progressCounter + 1 === this.data.length){
         return;
         //TODO Finnish the damn lesson
       }
@@ -148,15 +148,13 @@ import {
       this.setState((previousState) => {
         let state = previousState;
         this.value = 180;
-        if(hiraganaList[this.progressCounter].id) {
-          
-          if(this.value >= 90){
-            state.front = hiraganaList[this.progressCounter].moji;
-            state.fakeBack = hiraganaList[this.progressCounter].romaji;
-          } else {
-            state.fakeFront = hiraganaList[this.progressCounter].romaji;
-            state.back = hiraganaList[this.progressCounter].moji;
-          }
+
+        if(this.value >= 90){
+          state.front = this.data[this.progressCounter].moji;
+          state.fakeBack = this.data[this.progressCounter].romaji;
+        } else {
+          state.fakeFront = this.data[this.progressCounter].romaji;
+          state.back = this.data[this.progressCounter].moji;
         }
         
         state.flipped = true;
@@ -174,14 +172,12 @@ import {
       this.setState((previousState) => {
         let state = previousState;
         this.value = 180;
-        if(hiraganaList[this.progressCounter].id) {
-          if(this.value >= 90){
-            state.front = hiraganaList[this.progressCounter].moji;
-            state.fakeBack = hiraganaList[this.progressCounter].romaji;
-          } else {
-            state.fakeFront = hiraganaList[this.progressCounter].romaji;
-            state.back = hiraganaList[this.progressCounter].moji;
-          }
+        if(this.value >= 90){
+          state.front = this.data[this.progressCounter].moji;
+          state.fakeBack = this.data[this.progressCounter].romaji;
+        } else {
+          state.fakeFront = this.data[this.progressCounter].romaji;
+          state.back = this.data[this.progressCounter].moji;
         }
         
         state.flipped = true;
