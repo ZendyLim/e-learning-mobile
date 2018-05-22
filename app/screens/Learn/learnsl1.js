@@ -13,14 +13,13 @@ import {
     Platform,
   } from 'react-native';
   import { List, ListItem, Icon } from 'react-native-elements';
-  // import {Table, TableWrapper, Row, Rows, Col, Cols, Cell} from 'react-native-table-component';
-  // import GridView from 'react-native-gridview';
   
-  import { TabNavigator, StackNavigator } from 'react-navigation';
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import { HiraganaLearnStack }  from '../../config/router';
-  import { katakanalearn } from '../../config/hiraganalearn';
+  import { number } from '../../config/numberlearn'
+  import { ImageData } from '../../config/image_list';
+  import  { strings }   from '../../config/localization';
   import * as Actions from '../../actions/user'; //Import your actions
 
   var Sound = require('react-native-sound');
@@ -68,23 +67,24 @@ function playSound(testInfo, component) {
 
     render(){
       return(
-        <TouchableOpacity style={learnlh1.GridViewBlockStyle} onPress={() => {
+        <TouchableOpacity style={learnsl1.GridViewBlockStyle} onPress={() => {
           return playSound(this.props.item , this.props.component);
         }}>
-          <Text style={learnlh1.HiraganaItem}>{this.props.item.hiragana}</Text>
-          <Text style={learnlh1.RomajiItem} >{this.props.item.romaji}</Text>
+          <Text style={learnsl1.NumberItem}>{this.props.item.number}</Text>
+          <Text style={learnsl1.HiraganaItem} >{this.props.item.hiragana}</Text>
+          <Text style={learnsl1.RomajiItem} >{this.props.item.romaji}</Text>
         </TouchableOpacity>
       );
     }
   }
 
-  export class KatakanaLearnScreen extends Component {
+  export class NumberLearnScreen extends Component {
 
-    static navigationOptions = {
+    // static navigationOptions = {
         // header: null,
         // title: 'LearnHL1',
-        tabBarLabel: 'Hiragana',
-      };
+        // tabBarLabel: 'Hiragana',
+      // };
 
     constructor(props) {
       super(props);
@@ -104,26 +104,48 @@ function playSound(testInfo, component) {
         tests: {},
       };    
     }
+    
+    componentWillMount() {
+      // const { navigation } = this.props;
+      this.setState({
+        // studyType: navigation.getParam('studyType', null),
+        studyType: this.props.studyType,
+        img: this.props.img,
+      });
+      }
 
     render() {
+      console.log(this.state.img);
+      console.log(this.state.studyType);
       return (
-        <View style={learnlh1.MainContainer}>
+      <ScrollView>
+        <View style={study.StudyContainer}>
+          <View style={[study.titleContainer , study.bgWhite]}>
+            <Image 
+              style={ study.cardImg }
+              source= { ImageData[this.state.img] }
+              // resizeMode="stretch"  
+            />
+            <Text style={study.title}> { strings[this.props.studyType] } </Text>
+          </View>
+          {/* <Text style={learnsl1.TextTitle}>{this.props.title}</Text> */}
           <FlatList 
-          data={katakanalearn}
+          data={number}
           renderItem={({item}) => {
             return(
               <FlatListItem item={item} component={this}/>
               );
             }}
-          numColumns={5}
+          numColumns={1}
           />
-
         </View>
+      </ScrollView>
       );
     }
   }
 
-  const learnlh1 = require('../../styles/learnhl1');
+  const learnsl1 = require('../../styles/learnsl1');
+  const study = require('../../styles/study');
   
   function mapStateToProps(state, props) {
     return {
@@ -137,5 +159,5 @@ function playSound(testInfo, component) {
   }
   
   //Connect everything
-  export default connect(mapStateToProps, mapDispatchToProps)(KatakanaLearnScreen);
+  export default connect(mapStateToProps, mapDispatchToProps)(NumberLearnScreen);
   // export default LearnHL1Screen;
