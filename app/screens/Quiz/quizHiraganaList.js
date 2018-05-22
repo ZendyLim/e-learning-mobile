@@ -140,7 +140,23 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
     }
 
     proceed = () => {
-        this.props.navigation.navigate('QuizFlash',this.state.idList);
+        const { navigation } = this.props;
+        
+        this.props.navigation.navigate('QuizFlash',
+        (
+            {
+                type: navigation.getParam('type',null),
+                title: navigation.getParam('title',null),
+                studyType: navigation.getParam('studyType',null),
+                img: navigation.getParam('img',null),
+                topicId: navigation.getParam('topicId',null),
+                typeQuiz: navigation.getParam('typeQuiz',null),
+                quizOptions: navigation.getParam('quizOptions',null),
+                oneType: navigation.getParam('quizOptions',null),
+                idList: this.state.idList
+            }
+        )
+        );
     };
 
     selectedList(key){

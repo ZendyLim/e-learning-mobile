@@ -3,21 +3,38 @@ export const StudyList = [{
     img : 'class',
     lock : false,
     type : 'Initial',
-    id: 'T001'
+    id: 'T001',
+    quizOptions: {
+      random: true,
+      types:['romaji_moji', 'moji_romaji','audio_moji','audio_romaji'],
+      style:'quizSquared'
+    }
   },
   {
     title : 'NUMBER_TITLE',
     img : 'number_chara',
     lock : false,
     type : 'Initial',
-    id: 'T002'
+    id: 'T002',
+    quizOptions: {
+      random: false,
+      types:['moji_english', 'english_moji','audio_english','audio_moji'],
+      withCorrection:true,
+      style:'quizLong'
+    }
   },
   {
     title : 'GREETING_TITLE',
     img : 'loading',
     lock : false,
     type : 'Initial',
-    id: 'T003'
+    id: 'T003',
+    quizOptions: {
+      random: true,
+      types:['moji_english', 'english_moji','audio_english','audio_moji'],
+      withCorrection:true,
+      style:'quizLong'
+    }
   },
   {
     title : 'TOPIC1_TITLE',
