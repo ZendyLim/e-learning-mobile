@@ -43,6 +43,9 @@ export let strings = new LocalizedStrings({
    GOI_LIST : "VOCABULARY LIST",
    BUNPO_LIST : "GRAMMAR LIST",
    KANJI_LIST : "KANJI LIST",
+   FLASH_CARD_HIRAGANA: "FLASH CARD HIRAGANA",
+   FLASH_CARD_KATAKANA: "FLASH CARD KATAKANA",
+   
  },
  ja: {
    loginGuest: "japan",
@@ -82,5 +85,8 @@ export let strings = new LocalizedStrings({
    GOI_LIST : "VOCABULARY LIST",
    BUNPO_LIST : "GRAMMAR LIST",
    KANJI_LIST : "KANJI LIST",   
-}
+   FLASH_CARD_HIRAGANA: "FLASH CARD HIRAGANA",
+   FLASH_CARD_KATAKANA: "FLASH CARD KATAKANA",
+
+  }
 });
