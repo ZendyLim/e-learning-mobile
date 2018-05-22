@@ -2099,8 +2099,8 @@ export const katakanaList = [
   {
     "id":"k_mi",
     "type":"katakana",      
-    "romaji":"ミ",
-    "moji":"み",
+    "romaji":"mi",
+    "moji":"ミ",
     "audio":"mi.mp3",
     "title":"mi",
   },

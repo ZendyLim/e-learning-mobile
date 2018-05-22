@@ -26,11 +26,21 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
         statusCheckAll: false,
         stsList : false,
         statusPerRow: false,
+        idList:[],
     }
+
+    componentDidMount() {
+        const { navigation } = this.props;
+        this.setState({
+            test: navigation.getParam('idList', null),
+        });
+        console.log(this.state.test,"niamak")
+      }
 
     constructor(props){
         super(props);
         this.checkItems = [katakanaList.map.length];
+        this.checkRows = [katakanaList.map.length];
     }
   
     render() {
@@ -43,7 +53,9 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
                     >
                         <Text style={quizStyles.buttonText}>{this.state.checkAllText}</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={quizStyles.menuButton}>
+                    <TouchableOpacity style={quizStyles.menuButton}
+                    onPress={this.proceed}
+                    >
                         <Text style={quizStyles.buttonText}>Proceed ></Text>
                     </TouchableOpacity>
                 </View>
@@ -88,10 +100,12 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
         if(this.checkItems[key]){
             this.checkItems[key] = false;
             this.setState({ stsList: this.checkItems });
+            this.selectedList(key)
         }
         else{
             this.checkItems[key] = true;
             this.setState({ stsList: this.checkItems });
+            this.selectedList(key)
         }
     };
     checkAll(){
@@ -99,36 +113,65 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
         if(this.state.statusCheckAll){
             {katakanaList.map((item, key)=>(
                 this.checkItems[key] = false,
-                this.setState({ stsList: this.checkItems })
+                this.setState({ stsList: this.checkItems }),
+                this.selectedList(key)
             ))};  
             this.setState({ checkAllText: "Check All" })     
         }else{
             {katakanaList.map((item, key)=>(
                 this.checkItems[key] = true,
-                this.setState({ stsList: this.checkItems })
+                this.setState({ stsList: this.checkItems }),
+                this.selectedList(key)
             ))};  
             this.setState({ checkAllText: "Uncheck All" })    
         }
     };
     checkRow(key){
-        if(this.checkItems[key]){
-            this.checkItems[key] = false,
-            this.setState({ statusPerRow: this.checkItems })
+        if(this.checkRows[key]){
+            this.checkRows[key] = false,
+            this.setState({ statusPerRow: this.checkRows })
             for(x=0;x<5;x++){
                 this.checkItems[key] = false,
                 this.setState({ stsList: this.checkItems })
+                this.selectedList(key)
                 key=key-1
             }     
         }else{
-            this.checkItems[key] = true,
-            this.setState({ statusPerRow: this.checkItems })
+            this.checkRows[key] = true,
+            this.setState({ statusPerRow: this.checkRows })
             for(x=0;x<5;x++){
                 this.checkItems[key] = true,
                 this.setState({ stsList: this.checkItems })
+                this.selectedList(key)
                 key=key-1
             }    
         }
     }
+
+    proceed = () => {
+        this.props.navigation.navigate('QuizFlash',this.state.idList);
+    };
+
+    selectedList(key){
+        if(this.checkItems[key]){
+            if(katakanaList[key].id !=""){
+                this.setState((previousState) => {
+                    previousState.idList.push(katakanaList[key].id);
+                    return previousState;
+                })
+            }
+        }else{
+            if(katakanaList[key].id !=""){
+                this.setState((previousState) => {
+                    var idIndex =  previousState.idList.indexOf(katakanaList[key].id);
+                    previousState.idList.splice(idIndex,1);
+                    return previousState;
+                })
+            }
+        }
+    }
+
+
   }
 
   const quizStyles = require('../../styles/quizStyle');

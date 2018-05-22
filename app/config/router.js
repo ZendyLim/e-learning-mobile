@@ -38,6 +38,14 @@ import HiraganaLearnScreen from '../screens/Learn/hiraganalearn';
 import KatakanaLearnScreen from '../screens/Learn/katakanalearn';
 
 const styles = require('../styles/style');
+
+export const QuizStack = TabNavigator({ 
+    QuizHiraganaList: QuizHiraganaListScreen, 
+    QuizKarakanaList: QuizKatakanaListScreen
+}, {
+    tabBarPosition: 'top',
+});
+
 //import 
 const StudyStack = StackNavigator({ 
     StudyList: StudyListScreen,
@@ -46,7 +54,7 @@ const StudyStack = StackNavigator({
     QuizFlash: QuizFlashScreen,
     LearnListScreen:  LearnListScreen,
     QuizMain: QuizMainScreen,
-    QuizList: QuizListScreen,
+    QuizList: QuizStack,
     LearnHiraganaModule: 
     {
         screen: LearnHiraganaModule, 
@@ -115,12 +123,6 @@ export const AppStack = TabNavigator({
     }
 });
 
-export const QuizStack = TabNavigator({ 
-    QuizHiraganaList: QuizHiraganaListScreen, 
-    QuizKarakanaList: QuizKatakanaListScreen
-}, {
-    tabBarPosition: 'top',
-});
 
 export const MainStack = StackNavigator({
     AppStack: {
