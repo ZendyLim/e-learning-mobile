@@ -144,7 +144,7 @@ module.exports = StyleSheet.create({
   },
   StudyContainer : {
     padding: '2%',
-    backgroundColor: '#d2fafc',
+    backgroundColor: 'white',
   },
   titleContainer : {
     borderColor: '#2771e8',
@@ -310,7 +310,28 @@ HL2img : {
 },
 tableContainer : {
   width: '100%',
+}, 
+
+table: {
+  flex: 1, 
+  flexDirection: 'row', 
+  justifyContent: 'space-between',
+  alignItems: 'center',
+}, 
+
+tableRow: {
+  justifyContent: 'space-between',
+  alignItems: 'center',
+}, 
+
+tableHeader : {
+  backgroundColor: '#45B3EB', 
+},
+
+tableBorder: {
+  borderWidth: 1,
 }
+
 
 });
 
