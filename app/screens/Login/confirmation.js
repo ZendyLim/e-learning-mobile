@@ -26,7 +26,10 @@ import {
         let toUnixTimestamps = navigation.state.params.finishDate;
         toUnixTimestamps = toUnixTimestamps + " 00:00:00";
         navigation.state.params.finishDate = (new Date(toUnixTimestamps).getTime()/1000)
-        this.props.createUser(navigation.state.params);
+        var nav = navigation.state.params;
+        nav['id'] = '1';
+        console.log(nav);
+        this.props.createUser(nav);
     };
 
     render() {
