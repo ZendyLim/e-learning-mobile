@@ -491,7 +491,7 @@ export const quizItems = {
             "type":"hiragana",      
             "romaji":"do",
             "moji":"ど",
-            "audio":"do.mp3",
+            "audio":"hl_do.mp3",
             "title":"do",
           },
           {

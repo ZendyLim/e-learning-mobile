@@ -62,7 +62,7 @@ import {
       this.state = {
         timesUp: false,
         expression: 'default',
-        time:500,        
+        time:6000,        
         timerRun:true,
         timerRestart:false,
         counter: 0,
@@ -71,7 +71,7 @@ import {
         answer: '',
         answerFormat:'',
         questionFormat:'',
-        pause: 500,
+        pause: 1000,
         score:0,
         correct:0,
         title:'',
