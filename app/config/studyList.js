@@ -167,7 +167,7 @@ export const StudyList = [{
     },
   ],
     NUMBER_TITLE :[{
-      title : 'EXPLANATION',
+      title : 'WORD_LIST',
       type : 'HL1',
       study : '2'
     },{

@@ -20,6 +20,7 @@ import HL2Screen from '../Learn/HL2';
 import SL2Screen from '../Learn/SL2';
 import { HiraganaLearnStack } from '../../config/router';
 import NumberLearnScreen from '../Learn/learnsl1';
+import GreetingLearnScreen from '../Learn/learngl1';
 
 class LearnHiraganaModule extends Component {
   constructor() {
@@ -54,15 +55,20 @@ class LearnHiraganaModule extends Component {
   render() {
     if(this.state.type){
         if(this.state.type == 'HL1'){
-            if(this.state.title == 'HIRAGANA_HL1'){
+            if(this.state.studyType == 'HIRAGANA_TITLE'){
                 return (
                     <HiraganaLearnStack />        
                 );            
-            }else if(this.state.title == 'NUMBER_HL1'){
+            }else if(this.state.studyType == 'NUMBER_TITLE'){
                 return (
                     <NumberLearnScreen studyType={this.state.studyType} img={this.state.img}/>       
                 );            
+            }else{
+                return (
+                    <GreetingLearnScreen studyType={this.state.studyType} img={this.state.img}/>       
+                );            
             }
+
         }else if(this.state.type == 'HL2'){
             if(this.state.studyType == 'HIRAGANA_TITLE'){
                 return (
