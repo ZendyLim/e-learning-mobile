@@ -72,26 +72,6 @@ class StudyListScreen extends Component {
     console.log(this.props.fukushu);
     return (
       <ScrollView style={study.StudyContainer}>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={ this.props.fukushu ? this.props.fukushu : false }
-          onRequestClose={() => {
-            alert('Modal has been closed.');
-          }}>
-          <View style={{marginTop: 22}}>
-            <View>
-              <Text>Hello World!</Text>
-
-              <TouchableHighlight
-                onPress={() => {
-                  this.props.fukushu = false;
-                }}>
-                <Text>Hide Modal</Text>
-              </TouchableHighlight>
-            </View>
-          </View>
-        </Modal>
 
           { StudyList.map((item, key)=>(
           <View  key={key} style={study.cardBox}>

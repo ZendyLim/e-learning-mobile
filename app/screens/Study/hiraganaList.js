@@ -33,6 +33,7 @@ class HiraganaListScreen extends Component {
   componentDidMount() {
     const { navigation } = this.props;
     this.setState({
+      index: navigation.getParam('index', null),
       title: navigation.getParam('title', null),
       img: navigation.getParam('img', null),
       type: navigation.getParam('type', null),
@@ -61,6 +62,7 @@ class HiraganaListScreen extends Component {
       if(topicId == 'T001'){
         this.props.navigation.navigate('QuizMain',(
           {
+            index : this.state.index,
             type : type,
             title : this.state.title,
             studyType: this.state.studyType,
@@ -74,6 +76,7 @@ class HiraganaListScreen extends Component {
       else{
         this.props.navigation.navigate('QuizFlash',(
           {
+            index : this.state.index,
             type : type,
             title : this.state.title,
             studyType: this.state.studyType,
@@ -90,6 +93,7 @@ class HiraganaListScreen extends Component {
       console.log(this.state.quizOptions);
       this.props.navigation.navigate('QuizFlash',(
         {
+          index : this.state.index,
           type : type,
           title : this.state.title,
           studyType: this.state.studyType,

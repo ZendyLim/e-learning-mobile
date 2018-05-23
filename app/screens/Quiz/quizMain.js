@@ -63,8 +63,8 @@ class QuizMainScreen extends Component {
             topicId: navigation.getParam('topicId',null),
             typeQuiz: navigation.getParam('typeQuiz',null),
             quizOptions: navigation.getParam('quizOptions',null),
-            oneType: type
-        }
+            oneType: type,
+            index:  navigation.getParam('index',null),        }
       ));
   };  
 }
