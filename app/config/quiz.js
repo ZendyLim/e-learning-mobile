@@ -1328,7 +1328,7 @@ export const quizItems = {
             "type":"katakana",      
             "romaji":"do",
             "moji":"ド",
-            "audio":"do.mp3",
+            "audio":"hl_do.mp3",
             "title":"do",
           },
           {
