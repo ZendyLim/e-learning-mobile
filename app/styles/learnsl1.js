@@ -25,7 +25,6 @@ module.exports = StyleSheet.create({
       padding: 5,
       backgroundColor: 'white'
     },
-    
     NumberItem: {
       flex: 1,
       color: 'black',
@@ -47,6 +46,27 @@ module.exports = StyleSheet.create({
       // textAlign: 'right',
       // textAlign: 'center',
      },
+     NumberItem2: {
+      flex: 1,
+      color: 'black',
+      fontSize: 30,
+      marginLeft: 10,
+      // textAlign: 'center',
+    },
+    HiraganaItem2: {
+      flex: 3,
+      color: 'black',
+      fontSize: 30,
+      // textAlign: 'center',
+       
+     },
+     RomajiItem2: {
+      flex: 3,
+      color: 'black',
+      fontSize: 30,
+      // textAlign: 'right',
+      // textAlign: 'center',
+     },     
      TextTitle: {
       color: 'black',
       fontSize: 35,
