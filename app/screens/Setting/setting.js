@@ -12,6 +12,8 @@ import {
     ScrollView,
     TextInput,
   } from 'react-native';
+  import PhotoUpload from 'react-native-photo-upload'
+ 
   import { List, ListItem } from 'react-native-elements';
   
   import { bindActionCreators } from 'redux';
@@ -47,7 +49,29 @@ import {
             </View>
 
           <View style={styles.mainscreen} >
+          <View style={ styles.absoluteScreen}>
+            <PhotoUpload
+                  onPhotoSelect={avatar => {
+                    if (avatar) {
+                      console.log('Image base64 string: ', avatar)
+                    }
+                  }}
+                >
+                  <Image
+                    style={{
+                      paddingVertical: 30,
+                      width: 100,
+                      height: 100,
+                      borderRadius: 50
+                    }}
+                    source={{
+                      uri: 'https://www.iconspng.com/images/funny-monkey-face/funny-monkey-face.jpg'
+                    }}
+                  />
+                </PhotoUpload>
+              </View>
             <View style={styles.topinfor}>
+ 
               <View style={styles.avatarinformation}>
                 <Text style={styles.txtbiginfor}>
                   {this.props.data.userName}
@@ -55,9 +79,7 @@ import {
                  </Text>
               
                </View>
-              <Image 
-                style={styles.avatar} 
-                source={{uri: 'https://www.iconspng.com/images/funny-monkey-face/funny-monkey-face.jpg'}} />
+               
              </View>
             <View style={styles.downinfor}>
               <Text style={styles.txtinfor}>School</Text>
