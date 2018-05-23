@@ -528,7 +528,7 @@ export const flashData = [
         "type":"hiragana",      
         "romaji":"bo",
         "moji":"ぼ",
-        "url":"bo.mp3",
+        "url":"bohl.mp3",
         "title":"bo",
       },
       {
@@ -1366,7 +1366,7 @@ export const flashData = [
         "type":"katakana",      
         "romaji":"bo",
         "moji":"ボ",
-        "url":"bo.mp3",
+        "url":"bohl.mp3",
         "title":"bo",
       },
       {

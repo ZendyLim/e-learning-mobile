@@ -10,7 +10,10 @@ import {
     View,
     Image,
     ScrollView,
+    TextInput,
   } from 'react-native';
+  import PhotoUpload from 'react-native-photo-upload'
+ 
   import { List, ListItem } from 'react-native-elements';
   
   import { bindActionCreators } from 'redux';
@@ -18,13 +21,24 @@ import {
   import * as Actions from '../../actions/user'; //Import your actions
   
   class SettingScreen extends Component {
+    constructor(props) {
+      super(props);
+      this.state = { nationality: '',
+      school: '',
+     };
+    }
     static navigationOptions = {
       header: null,
       title: 'Study',
     };
-  
+    componentWillMount() {
+      console.log('compoent', this.props);
+      this.setState({
+        nationality: this.props.nationality,
+        school: this.props.school,
+      });
+    }
     render() {
-      console.log(this.props);
       return (
         // <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.container}>
@@ -35,54 +49,63 @@ import {
             </View>
 
           <View style={styles.mainscreen} >
+          <View style={ styles.absoluteScreen}>
+            <PhotoUpload
+                  onPhotoSelect={avatar => {
+                    if (avatar) {
+                      console.log('Image base64 string: ', avatar)
+                    }
+                  }}
+                >
+                  <Image
+                    style={{
+                      paddingVertical: 30,
+                      width: 100,
+                      height: 100,
+                      borderRadius: 50
+                    }}
+                    source={{
+                      uri: 'https://www.iconspng.com/images/funny-monkey-face/funny-monkey-face.jpg'
+                    }}
+                  />
+                </PhotoUpload>
+              </View>
             <View style={styles.topinfor}>
+ 
               <View style={styles.avatarinformation}>
                 <Text style={styles.txtbiginfor}>
-                  kanako16
+                  {this.props.data.userName}
                   {/* ID: { this.props.data.id } */}
                  </Text>
-                <Text>
-                  {/* Name: { this.props.data.name } */}
-                  kanako16@gmail.com
-                 </Text>
+              
                </View>
-              <Image 
-                style={styles.avatar} 
-                source={{uri: 'https://www.iconspng.com/images/funny-monkey-face/funny-monkey-face.jpg'}} />
+               
              </View>
             <View style={styles.downinfor}>
               <Text style={styles.txtinfor}>School</Text>
-              <Text style={styles.txtdata}>BITTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</Text>
+              <TextInput
+                style={{height: 40,}}
+                onChangeText={(school) => this.setState({school})}
+                value={this.state.school}
+              />
               <View style={styles.vline}></View>
               <Text style={styles.txtinfor}>Nationaly</Text>
-              <Text style={styles.txtdata}>Chinese</Text>
+              <TextInput
+                style={{height: 40,}}
+                onChangeText={(nationality) => this.setState({nationality})}
+                value={this.state.nationality}
+              />
               <View style={styles.vline}></View>
               <Text style={styles.txtbiginfor}>Study Hours</Text>
               <Text style={styles.txtinfor}>How many times per week?</Text>
-              <Text style={styles.txtdata}>6</Text>
+              <Text style={styles.txtdata}>{this.props.data.day}</Text>
               <View style={styles.vline}></View>
               <Text style={styles.txtinfor}>How many times per day</Text>
-              <Text style={styles.txtdata}>6</Text>
+              <Text style={styles.txtdata}>{this.props.data.hours}</Text>
               <View style={styles.vline}></View>
-              <TouchableHighlight style={styles.btnupdate} onPress={this.updateProfile}>
+              <TouchableHighlight style={styles.btnupdate} onPress={this.updateProfile.bind(this)}>
                 <Text style={styles.txtbutton}>Update</Text>
               </TouchableHighlight>
-              <Text style={styles.txtbiginfor}>Account</Text>
-              <Text style={styles.txtinfor}>Sign in:</Text>
-              <View style={styles.vgsignin}>
-                <TouchableHighlight style={styles.btnsigning} onPress={this.selectList}>
-                  <Text style={styles.txtbutton}>
-                    <Text style={styles.txtbuttonicon}>G </Text>
-                    Google
-                  </Text>
-                </TouchableHighlight>
-                <TouchableHighlight style={styles.btnsigninf} onPress={this.selectList}> 
-                  <Text style={styles.txtbutton}>
-                    <Text style={styles.txtbuttonicon}>f </Text>
-                    Facebook
-                  </Text>
-                </TouchableHighlight>
-              </View>
              </View>
            </View>
           </ScrollView>
@@ -101,7 +124,9 @@ import {
         id: "2",
         name: "test",
       }
-      this.props.updateProfile(updateValue);
+      //console.log(this.state);
+      this.props.updateProfile(this.state);
+      alert('save');
     }
   }
 
@@ -110,7 +135,9 @@ import {
   function mapStateToProps(state, props) {
     return {
         loading: state.user.loading,
-        data: state.user.user
+        data: state.user.user,
+        school: state.user.school,
+        nationality: state.user.nationality,
     }
   }
   
