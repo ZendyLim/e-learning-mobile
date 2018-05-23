@@ -1,7 +1,7 @@
 
 
 export const quizItems = {
-    "T001": [
+    "HIRAGANA_TITLE": [
         {
             "id":"h_a",
             "type":"hiragana",      
@@ -491,7 +491,7 @@ export const quizItems = {
             "type":"hiragana",      
             "romaji":"do",
             "moji":"ど",
-            "audio":"do.mp3",
+            "audio":"hl_do.mp3",
             "title":"do",
           },
           {
@@ -1328,7 +1328,7 @@ export const quizItems = {
             "type":"katakana",      
             "romaji":"do",
             "moji":"ド",
-            "audio":"do.mp3",
+            "audio":"hl_do.mp3",
             "title":"do",
           },
           {
@@ -1677,7 +1677,7 @@ export const quizItems = {
             "title":"pyo",
           }
     ],
-    "T002": [
+    "NUMBER_TITLE": [
         {   
             "id":"num_1",
             "type":"vocabulary",  
@@ -1733,7 +1733,7 @@ export const quizItems = {
             "audio":"ko.mp3"
         }
     ],
-    "T003": [
+    "GREETING_TITLE": [
         {   
             "id":"greet_1",
             "type":"vocabulary",  

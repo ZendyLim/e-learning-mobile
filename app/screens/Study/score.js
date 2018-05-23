@@ -23,7 +23,7 @@ import {
   import { connect } from 'react-redux';
   import * as Actions from '../../actions/study'; //Import your actions
   import { StudyList } from '../../config/studyList';
-
+  import { quizItems } from '../../config/quiz';
   class ScoreScreen extends Component {
     constructor(props) {
       super(props);
@@ -39,7 +39,9 @@ import {
       typeQuiz: navigation.getParam('typeQuiz', null),
       index: navigation.getParam('index', null),
     });
-    
+
+    //this.processData(navigation.getParam('studyTitle', null));
+  
     //Console.log(navigation.getParam('userName', null),"NIAMAK");
   }
   goToTopicSelection = () =>  {
@@ -75,6 +77,7 @@ import {
   }
 
   renderItem({item, index}) {
+    
     return (
         <View style={scoreStyle.RecordRow}>
             <Text style={scoreStyle.recordTitle}>
@@ -116,7 +119,7 @@ import {
               <Text style={ scoreStyle.sumaryTitle }>SUMMARY</Text>
               <Icon name='lock'  color='#fff' size={10}/>
 
-            {this.props.studyRecord[0] ? (
+            {this.props.studyRecord[0]  ? (
               <FlatList
                 ref='listRef'
                 data={this.props.studyRecord}
@@ -160,6 +163,25 @@ import {
           ) }
         </View>
     );
+  }
+
+  processData(title){
+    
+      this.quizItems = quizItems[title];
+      for(i = 0; i < this.props.studyRecord.length; i++){
+        current = this.props.studyRecord[i];
+        current.questionData = this.getData(current.questionID);
+        current.answerData = this.getData(current.answer);   
+        
+        this.props.studyRecord[i] = current;
+      }
+    
+  }
+
+  getData(val){
+    return this.quizItems.find(function (obj) { 
+      return obj.id == val; 
+    });
   }
 
 
