@@ -39,9 +39,14 @@ class LearnListScreen extends Component {
       type: navigation.getParam('type', null),
       studyType: navigation.getParam('studyType', null),
       item: LearnListData[navigation.getParam('studyType', null)],
+      img: navigation.getParam('img', null),
     });
   }
   navigateToPage=(item, index)=>{
+    item['studyType'] = this.state.studyType;
+    item['img'] = this.state.img;
+    console.log(item);
+
     if(item.type == 'Initial'){
       this.props.navigation.navigate('LearnHiraganaModule',(
         item
@@ -59,7 +64,7 @@ class LearnListScreen extends Component {
         <ScrollView style={study.StudyContainer}>
          { this.state.item.map((item, key)=>(
           <TouchableOpacity key={key} style={study.btnLearn} onPress={this.navigateToPage.bind(this, item, key)}>
-              <Text>{item.title}</Text>
+              <Text>{strings[item.title]}</Text>
           </TouchableOpacity>
         ))}
         </ScrollView>

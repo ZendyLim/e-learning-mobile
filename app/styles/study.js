@@ -144,7 +144,7 @@ module.exports = StyleSheet.create({
   },
   StudyContainer : {
     padding: '2%',
-    backgroundColor: '#d2fafc',
+    backgroundColor: 'white',
   },
   titleContainer : {
     borderColor: '#2771e8',
@@ -247,7 +247,7 @@ textContent: {
   color: 'black', 
   textAlign: 'center', 
   textAlignVertical: 'center',  
-  fontSize: 128
+  fontSize: 120
 }, 
 
 backgroundImg: {
@@ -300,6 +300,38 @@ iconContainer: {
   left: 0,
   zIndex: 2, 
 }, 
+HL2Font: {
+  fontSize: 15,
+},
+HL2img : {
+  marginTop:10,
+  height: 60,
+  width:  250,
+},
+tableContainer : {
+  width: '100%',
+}, 
+
+table: {
+  flex: 1, 
+  flexDirection: 'row', 
+  justifyContent: 'space-between',
+  alignItems: 'center',
+}, 
+
+tableRow: {
+  justifyContent: 'space-between',
+  alignItems: 'center',
+}, 
+
+tableHeader : {
+  backgroundColor: '#45B3EB', 
+},
+
+tableBorder: {
+  borderWidth: 1,
+}
+
 
 });
 

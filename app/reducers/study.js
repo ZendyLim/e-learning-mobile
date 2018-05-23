@@ -7,7 +7,8 @@ const initialState = {
     studyID: '',
     studyRecord: [] ,
     err: '',
-    isErr: false
+    isErr: false,
+    fukushu: true,
 };
  
 export default function userReducer (state = initialState, action) {
