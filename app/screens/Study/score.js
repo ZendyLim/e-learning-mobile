@@ -58,6 +58,24 @@ import {
     }
   }
   retry = () =>  {
+    var item = StudyList[this.state.index ];
+    item['index'] = this.state.index;
+    item['studyType'] = item.title;
+    item['headerTitle'] = item.title;
+
+    const resetAction = NavigationActions.reset({ 
+      index: 1,
+      actions: [
+        NavigationActions.navigate({ routeName: 'StudyList' }),
+        NavigationActions.navigate({ routeName: 'HiraganaList' , params: item })
+
+      ]
+    });
+    
+    this.props.navigation.dispatch(resetAction);
+  
+  }
+  gotToNext = () =>  {
     var item = StudyList[this.state.index + 1];
     item['index'] = this.state.index + 1;
     item['studyType'] = item.title;
@@ -128,7 +146,7 @@ import {
                 ) :<Text>No study data</Text> }
             </ScrollView >
           </View>
-          { this.props.scoreTotal > 20 ? ( 
+          { this.props.scoreTotal > 50 ? ( 
           <View style={ scoreStyle.containerMistake }>
             <View style={ scoreStyle.RecordRowButton }>
               <View style={ scoreStyle.RecordRowButtonContainer }>

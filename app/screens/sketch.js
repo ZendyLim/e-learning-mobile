@@ -17,7 +17,7 @@ import {
 import RNSketchCanvas from '@terrylinla/react-native-sketch-canvas';
 import { SketchCanvas } from '@terrylinla/react-native-sketch-canvas';
 
-export default class example extends Component {
+export default class HL4 extends Component {
     constructor(props) {
         super(props)
     
@@ -32,92 +32,6 @@ export default class example extends Component {
       render() {
         return (
           <View style={styles.container}>
-            {
-              this.state.example === 0 &&
-              <View style={{ justifyContent: 'center', alignItems: 'center', width: 340 }}>
-                <TouchableOpacity onPress={() => {
-                  this.setState({ example: 1 })
-                }}>
-                  <Text style={{ alignSelf: 'center', marginTop: 15, fontSize: 18 }}>- Example 1 -</Text>
-                  <Text>Use build-in UI components</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => {
-                  this.setState({ example: 2 })
-                }}>
-                  <Text style={{ alignSelf: 'center', marginTop: 15, fontSize: 18 }}>- Example 2 -</Text>
-                  <Text>Use canvas only and customize UI components</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => {
-                  this.setState({ example: 3 })
-                }}>
-                  <Text style={{ alignSelf: 'center', marginTop: 15, fontSize: 18 }}>- Example 3 -</Text>
-                  <Text>Sync two canvases</Text>
-                  <Text>(but support only one canvas per iOS device)</Text>
-                </TouchableOpacity>
-              </View>
-            }
-    
-            {
-              this.state.example === 1 &&
-              <View style={{ flex: 1, flexDirection: 'row' }}>
-                <RNSketchCanvas
-                  containerStyle={{ backgroundColor: 'transparent', flex: 1 }}
-                  canvasStyle={{ backgroundColor: 'transparent', flex: 1 }}
-                  onStrokeEnd={data => {
-                  }}
-                  closeComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Close</Text></View>}
-                  onClosePressed={() => {
-                    this.setState({ example: 0 })
-                  }}
-                  undoComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Undo</Text></View>}
-                  onUndoPressed={(id) => {
-                    // Alert.alert('do something')
-                  }}
-                  clearComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Clear</Text></View>}
-                  onClearPressed={() => {
-                    // Alert.alert('do something')
-                  }}
-                  eraseComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Eraser</Text></View>}
-                  strokeComponent={color => (
-                    <View style={[{ backgroundColor: color }, styles.strokeColorButton]} />
-                  )}
-                  strokeSelectedComponent={(color, index, changed) => {
-                    return (
-                      <View style={[{ backgroundColor: color, borderWidth: 2 }, styles.strokeColorButton]} />
-                    )
-                  }}
-                  strokeWidthComponent={(w) => {
-                    return (<View style={styles.strokeWidthButton}>
-                      <View  style={{
-                      backgroundColor: 'white', marginHorizontal: 2.5,
-                      width: Math.sqrt(w / 3) * 10, height: Math.sqrt(w / 3) * 10, borderRadius: Math.sqrt(w / 3) * 10 / 2
-                      }} />
-                    </View>
-                  )}}
-                  defaultStrokeIndex={0}
-                  defaultStrokeWidth={5}
-                  saveComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Save</Text></View>}
-                  savePreference={() => {
-                    return {
-                      folder: 'RNSketchCanvas',
-                      filename: String(Math.ceil(Math.random() * 100000000)),
-                      transparent: false,
-                      imageType: 'png'
-                    }
-                  }}
-                  onSketchSaved={success => {
-                    Alert.alert('Image saved!')
-                    // Alert.alert(String(success))
-                  }}
-                  onPathsChange={(pathsCount) => {
-                    console.log('pathsCount', pathsCount)
-                  }}
-                />
-              </View>
-            }
-    
-            {
-              this.state.example === 2 &&
               <View style={{ flex: 1, flexDirection: 'row' }}>
                 <View style={{ flex: 1, flexDirection: 'column' }}>
                   <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -183,123 +97,7 @@ export default class example extends Component {
                   </View>
                 </View>
               </View>
-            }
-    
-            {
-              this.state.example === 3 &&
-              <View style={{ flex: 1, flexDirection: 'column' }}>
-                <RNSketchCanvas
-                  ref={ref => this.canvas1=ref}
-                  user={'user1'}
-                  containerStyle={{ backgroundColor: 'transparent', flex: 1 }}
-                  canvasStyle={{ backgroundColor: 'transparent', flex: 1 }}
-                  onStrokeEnd={data => {
-                  }}
-                  closeComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Close</Text></View>}
-                  onClosePressed={() => {
-                    this.setState({ example: 0 })
-                  }}
-                  undoComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Undo</Text></View>}
-                  onUndoPressed={(id) => {
-                    this.canvas2.deletePath(id)
-                  }}
-                  clearComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Clear</Text></View>}
-                  onClearPressed={() => {
-                    this.canvas2.clear()
-                  }}
-                  eraseComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Eraser</Text></View>}
-                  strokeComponent={color => (
-                    <View style={[{ backgroundColor: color }, styles.strokeColorButton]} />
-                  )}
-                  strokeSelectedComponent={(color, index, changed) => {
-                    return (
-                      <View style={[{ backgroundColor: color, borderWidth: 2 }, styles.strokeColorButton]} />
-                    )
-                  }}
-                  strokeWidthComponent={(w) => {
-                    return (<View style={styles.strokeWidthButton}>
-                      <View  style={{
-                      backgroundColor: 'white', marginHorizontal: 2.5,
-                      width: Math.sqrt(w / 3) * 10, height: Math.sqrt(w / 3) * 10, borderRadius: Math.sqrt(w / 3) * 10 / 2
-                      }} />
-                    </View>
-                  )}}
-                  defaultStrokeIndex={0}
-                  defaultStrokeWidth={5}
-                  saveComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Save</Text></View>}
-                  savePreference={() => {
-                    return {
-                      folder: 'RNSketchCanvas',
-                      filename: String(Math.ceil(Math.random() * 100000000)),
-                      transparent: true,
-                      imageType: 'jpg'
-                    }
-                  }}
-                  onSketchSaved={success => {
-                    Alert.alert(String(success))
-                  }}
-                  onStrokeEnd={(path) => {
-                    this.canvas2.addPath(path)
-                  }}
-                  onPathsChange={(pathsCount) => {
-                    console.log('pathsCount(user1)', pathsCount)
-                  }}
-                />
-                <RNSketchCanvas
-                  ref={ref => this.canvas2=ref}
-                  user={'user2'}
-                  containerStyle={{ backgroundColor: 'transparent', flex: 1 }}
-                  canvasStyle={{ backgroundColor: 'transparent', flex: 1 }}
-                  onStrokeEnd={data => {
-                  }}
-                  undoComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Undo</Text></View>}
-                  onUndoPressed={(id) => {
-                    this.canvas1.deletePath(id)
-                  }}
-                  clearComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Clear</Text></View>}
-                  onClearPressed={() => {
-                    this.canvas1.clear()
-                  }}
-                  eraseComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Eraser</Text></View>}
-                  strokeComponent={color => (
-                    <View style={[{ backgroundColor: color }, styles.strokeColorButton]} />
-                  )}
-                  strokeSelectedComponent={(color, index, changed) => {
-                    return (
-                      <View style={[{ backgroundColor: color, borderWidth: 2 }, styles.strokeColorButton]} />
-                    )
-                  }}
-                  strokeWidthComponent={(w) => {
-                    return (<View style={styles.strokeWidthButton}>
-                      <View  style={{
-                      backgroundColor: 'white', marginHorizontal: 2.5,
-                      width: Math.sqrt(w / 3) * 10, height: Math.sqrt(w / 3) * 10, borderRadius: Math.sqrt(w / 3) * 10 / 2
-                      }} />
-                    </View>
-                  )}}
-                  defaultStrokeIndex={0}
-                  defaultStrokeWidth={5}
-                  saveComponent={<View style={styles.functionButton}><Text style={{color: 'white'}}>Save</Text></View>}
-                  savePreference={() => {
-                    return {
-                      folder: 'RNSketchCanvas',
-                      filename: String(Math.ceil(Math.random() * 100000000)),
-                      transparent: true,
-                      imageType: 'jpg'
-                    }
-                  }}
-                  onSketchSaved={success => {
-                    Alert.alert(String(success))
-                  }}
-                  onStrokeEnd={(path) => {
-                    this.canvas1.addPath(path)
-                  }}
-                  onPathsChange={(pathsCount) => {
-                    console.log('pathsCount(user2)', pathsCount)
-                  }}
-                />
-              </View>
-            }
+
           </View>
         );
       }
