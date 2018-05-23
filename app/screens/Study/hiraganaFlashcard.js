@@ -18,7 +18,8 @@ import {
   // Config
   import { ImageData } from '../../config/image_list';
   import { flashData } from '../../config/flash';
-import LearnListScreen from '../Learn/LearnList';
+  import LearnListScreen from '../Learn/LearnList';
+
   
   var Sound = require('react-native-sound');
 
@@ -29,34 +30,34 @@ import LearnListScreen from '../Learn/LearnList';
   /**
  * Generic play function for majority of tests
  */
-function playSound(testInfo, component) {
-  console.log(testInfo);
-  setTestState(testInfo, component, 'pending');
+  function playSound(testInfo, component) {
+    console.log(testInfo);
+    setTestState(testInfo, component, 'pending');
 
-  const callback = (error, sound) => {
-    if (error) {
-      Alert.alert('error', error.message);
-      setTestState(testInfo, component, 'fail');
-      return;
+    const callback = (error, sound) => {
+      if (error) {
+        Alert.alert('error', error.message);
+        setTestState(testInfo, component, 'fail');
+        return;
+      }
+      setTestState(testInfo, component, 'playing');
+      // Run optional pre-play callback
+      testInfo.onPrepared && testInfo.onPrepared(sound, component);
+      sound.play(() => {
+        // Success counts as getting to the end
+        setTestState(testInfo, component, 'win');
+        // Release when it's done so we're not using up resources
+        sound.release();
+      });
+    };
+
+    // If the audio is a 'require' then the second parameter must be the callback.
+    if (testInfo.isRequire) {
+      const sound = new Sound(testInfo.url, error => callback(error, sound));
+    } else {
+      const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
     }
-    setTestState(testInfo, component, 'playing');
-    // Run optional pre-play callback
-    testInfo.onPrepared && testInfo.onPrepared(sound, component);
-    sound.play(() => {
-      // Success counts as getting to the end
-      setTestState(testInfo, component, 'win');
-      // Release when it's done so we're not using up resources
-      sound.release();
-    });
-  };
-
-  // If the audio is a 'require' then the second parameter must be the callback.
-  if (testInfo.isRequire) {
-    const sound = new Sound(testInfo.url, error => callback(error, sound));
-  } else {
-    const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
   }
-}
 
 
 
@@ -328,7 +329,7 @@ function playSound(testInfo, component) {
                 <View style={studyStyles.cardContainer}>
                   <Animated.View style={[frontAnimatedStyle]}>
                     <View style={[studyStyles.cardText]}>
-                      <Text style={studyStyles.textContent}>{ this.state.front }</Text>
+                      <Text allowFontScaling={false} style={studyStyles.textContent}>{ this.state.front }</Text>
                     </View>
                   </Animated.View>
                   <Animated.View  style={[backAnimatedStyle]}>

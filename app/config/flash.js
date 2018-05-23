@@ -1814,7 +1814,242 @@ export const flashData = [
         "moji":"さようなら",
         "url":"ka.mp3"
       },
-      
+    ], 
+    TOPIC1_TITLE_and_vocabulary : [
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Kazoku",
+        "moji"  : "かぞく",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Okaasan",
+        "moji"  : "おかあさん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Otousan",
+        "moji"  : "おとうさん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Oniisan",
+        "moji"  : "おにいさん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Oneesan",
+        "moji"  : "おねえさん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Imouto",
+        "moji"  : "いもうと",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Otouto",
+        "moji"  : "おとうと",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC1_TITLE_and_grammar : [
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Desu",
+        "moji"  : "です",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Imasu",
+        "moji"  : "います",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "No",
+        "moji"  : "の",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Ha",
+        "moji"  : "は",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC1_TITLE_and_kanji : [
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Family",
+        "moji"  : "家族",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "haha",
+        "moji"  : "母",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Father",
+        "moji"  : "父",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Older Brother",
+        "moji"  : "兄",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Older Sister",
+        "moji"  : "姉",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC2_TITLE_and_vocabulary : [
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "House",
+        "moji"  : "いえ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Room",
+        "moji"  : "へや",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Bedroom",
+        "moji"  : "しんしつ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Living Room",
+        "moji"  : "いま",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Kitchen",
+        "moji"  : "だいどころ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Garage",
+        "moji"  : "しゃこ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Cabinet",
+        "moji"  : "とだな",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC2_TITLE_and_grammar : [
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "De",
+        "moji"  : "で",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Kara",
+        "moji"  : "から",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Node",
+        "moji"  : "ので",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Noni",
+        "moji"  : "のに",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC2_TITLE_and_kanji : [
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "いえ",
+        "moji"  : "家",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "へや",
+        "moji"  : "部屋",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "しんしつ",
+        "moji"  : "寝室",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "いま",
+        "moji"  : "居間",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "だいどころ",
+        "moji"  : "台所",
+        "urL"   : ""
+      }, 
     ]
   }
 ]
