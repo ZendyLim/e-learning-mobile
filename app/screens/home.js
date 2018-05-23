@@ -6,6 +6,7 @@ import {
     StatusBar,
     StyleSheet,
     View,
+    Text,
   } from 'react-native';
   import { List, ListItem } from 'react-native-elements';
     
@@ -22,11 +23,12 @@ import {
    render() {
       return (
         <View style={styles.containerCenter}>
-          <Button title="Show me more of the app" onPress={this._showMoreApp} />
+          {/* <Button title="Show me more of the app" onPress={this._showMoreApp} />
           <Button title="Study Redux" onPress={this.testRedux} />
           <Button title="Quiz" onPress={this.takeQuiz} />
           <Button title="Score Screen Quiz" onPress={this.scoreScreen} />
-          <Button title="Score Screen Test" onPress={this.scoreScreenTest} />
+          <Button title="Score Screen Test" onPress={this.scoreScreenTest} /> */}
+          <Text>Home Screen</Text>
         </View>
       );
     }
