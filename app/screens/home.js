@@ -29,6 +29,7 @@ import {
           <Button title="Score Screen Quiz" onPress={this.scoreScreen} />
           <Button title="Score Screen Test" onPress={this.scoreScreenTest} /> */}
           <Text>Home Screen</Text>
+          <Button title="LogOut" onPress={this._showMoreApp} />
         </View>
       );
     }
