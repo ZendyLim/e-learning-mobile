@@ -40,9 +40,8 @@ import {
       index: navigation.getParam('index', null),
     });
 
-    
-    this.processData();
-    
+    //this.processData(navigation.getParam('studyTitle', null));
+  
     //Console.log(navigation.getParam('userName', null),"NIAMAK");
   }
   goToTopicSelection = () =>  {
@@ -82,7 +81,7 @@ import {
     return (
         <View style={scoreStyle.RecordRow}>
             <Text style={scoreStyle.recordTitle}>
-                { item.questionData.moji + ' - ' + item.answerData.moji }
+                { item.questionID + ' - ' + item.answer }
             </Text>
             { item.correct == '1' ? (
             <View style={scoreStyle.recordCorrect}>
@@ -120,7 +119,7 @@ import {
               <Text style={ scoreStyle.sumaryTitle }>SUMMARY</Text>
               <Icon name='lock'  color='#fff' size={10}/>
 
-            {this.props.studyRecord[0] && this.props.studyRecord[0].questionData ? (
+            {this.props.studyRecord[0]  ? (
               <FlatList
                 ref='listRef'
                 data={this.props.studyRecord}
@@ -166,10 +165,9 @@ import {
     );
   }
 
-  processData(){
-    if(this.props.studyRecord &&  this.props.studyRecord.length){
-      this.quizItems = quizItems[this.props.studyID];
+  processData(title){
     
+      this.quizItems = quizItems[title];
       for(i = 0; i < this.props.studyRecord.length; i++){
         current = this.props.studyRecord[i];
         current.questionData = this.getData(current.questionID);
@@ -177,8 +175,6 @@ import {
         
         this.props.studyRecord[i] = current;
       }
-
-    }
     
   }
 

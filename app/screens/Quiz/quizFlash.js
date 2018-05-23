@@ -62,7 +62,7 @@ import {
       this.state = {
         timesUp: false,
         expression: 'default',
-        time:5000,        
+        time:500,        
         timerRun:true,
         timerRestart:false,
         counter: 0,
@@ -71,7 +71,7 @@ import {
         answer: '',
         answerFormat:'',
         questionFormat:'',
-        pause: 2000,
+        pause: 500,
         score:0,
         correct:0,
         title:'',
@@ -328,6 +328,7 @@ import {
         this.props.navigation.navigate('ScoreScreen',{
           index : 2,
           typeQuiz : "Quiz",
+          studyTitle : this.title
         });
       }
        
