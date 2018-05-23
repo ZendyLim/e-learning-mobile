@@ -155,7 +155,7 @@ import {
         quizOptions: this.quizOptions
       });
       //console.log(navigation.getParam('quizOptions',null));
-      this.quizItems = quizItems[navigation.getParam('topicId', null)];
+      this.quizItems = quizItems[this.title];
       idList = navigation.getParam('idList', null);
       
       if(idList && idList.length){
@@ -234,7 +234,7 @@ import {
 
     randomQuizFormat(){
       //console.log(this.quizOptions);
-      
+        
       var quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
       var quizFormatLength = quizFormat.length, randomIndex;
 
@@ -360,7 +360,7 @@ import {
           endTime :  new Date().getTime(),
           subjectTitle: this.title,
           studyType : this.state.studyType,
-          studyID : this.state.topicId,
+          studyID : this.title,
           studyRecord : this.studyRecord,
           typeQuiz:this.state.typeQuiz
       }

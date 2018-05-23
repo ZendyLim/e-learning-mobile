@@ -23,7 +23,7 @@ import {
   import { connect } from 'react-redux';
   import * as Actions from '../../actions/study'; //Import your actions
   import { StudyList } from '../../config/studyList';
-
+  import { quizItems } from '../../config/quiz';
   class ScoreScreen extends Component {
     constructor(props) {
       super(props);
@@ -39,6 +39,9 @@ import {
       typeQuiz: navigation.getParam('typeQuiz', null),
       index: navigation.getParam('index', null),
     });
+
+    
+    this.processData();
     
     //Console.log(navigation.getParam('userName', null),"NIAMAK");
   }
@@ -75,10 +78,11 @@ import {
   }
 
   renderItem({item, index}) {
+    
     return (
         <View style={scoreStyle.RecordRow}>
             <Text style={scoreStyle.recordTitle}>
-                { item.questionID + ' - ' + item.answer }
+                { item.questionData.moji + ' - ' + item.answerData.moji }
             </Text>
             { item.correct == '1' ? (
             <View style={scoreStyle.recordCorrect}>
@@ -116,7 +120,7 @@ import {
               <Text style={ scoreStyle.sumaryTitle }>SUMMARY</Text>
               <Icon name='lock'  color='#fff' size={10}/>
 
-            {this.props.studyRecord[0] ? (
+            {this.props.studyRecord[0] && this.props.studyRecord[0].questionData ? (
               <FlatList
                 ref='listRef'
                 data={this.props.studyRecord}
@@ -160,6 +164,28 @@ import {
           ) }
         </View>
     );
+  }
+
+  processData(){
+    if(this.props.studyRecord &&  this.props.studyRecord.length){
+      this.quizItems = quizItems[this.props.studyID];
+    
+      for(i = 0; i < this.props.studyRecord.length; i++){
+        current = this.props.studyRecord[i];
+        current.questionData = this.getData(current.questionID);
+        current.answerData = this.getData(current.answer);   
+        
+        this.props.studyRecord[i] = current;
+      }
+
+    }
+    
+  }
+
+  getData(val){
+    return this.quizItems.find(function (obj) { 
+      return obj.id == val; 
+    });
   }
 
 
