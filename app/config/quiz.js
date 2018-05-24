@@ -1,4 +1,60 @@
 
+let topic_title_vocab_kanji = [
+  {   
+      "id":"tp1_1",
+      "type":"vocabulary",  
+      "romaji":"otoosan",
+      "moji":"おとおさん",
+      "kanji":"お父さん",
+      "english":"Father",
+      "audio":"ka.mp3"
+  },
+  {   
+      "id":"tp1_2",
+      "type":"vocabulary",      
+      "romaji":"okaasan",
+      "moji":"おかあさん",
+      "kanji":"お母さん",
+      "english":"Mother",
+      "audio":"ki.mp3"
+  },
+  {   
+      "id":"tp1_3",
+      "type":"vocabulary",      
+      "romaji":"oneesan",
+      "moji":"おねえさん",
+      "kanji":"お姉さん",
+      "english":"Sister",
+      "audio":"ku.mp3"
+  },
+  {   
+      "id":"tp1_4",
+      "type":"vocabulary",      
+      "romaji":"oniisan",
+      "moji":"おにいさん",
+      "kanji":"お兄さん",
+      "english":"Brother",
+      "audio":"ke.mp3"
+  },
+  {   
+      "id":"tp1_5",
+      "type":"vocabulary",      
+      "romaji":"imouto",
+      "moji":"いもうと",
+      "kanji":"妹",
+      "english":"Little Sister",
+      "audio":"ko.mp3"
+  },
+  {   
+      "id":"tp1_6",
+      "type":"vocabulary",      
+      "romaji":"otouto",
+      "moji":"おとうと",
+      "kanji":"弟",
+      "english":"Little Brother",
+      "audio":"ko.mp3"
+  }
+];
 
 export const quizItems = {
     "HIRAGANA_TITLE": [
@@ -1788,5 +1844,7 @@ export const quizItems = {
             "english":"six",
             "audio":"ko.mp3"
         }
-    ]
+    ],
+    "TOPIC1_TITLE_and_vocabulary": topic_title_vocab_kanji
 };
+

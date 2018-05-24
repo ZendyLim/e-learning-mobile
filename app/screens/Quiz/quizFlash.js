@@ -57,7 +57,8 @@ import {
       this.title = '';
       this.oneType = '';
       this.study = [];
-      this.initialParams = [];
+      this.initialParams = [];      
+      this.isMounted = true;
       
       this.state = {
         timesUp: false,
@@ -151,6 +152,7 @@ import {
     componentWillMount() {            
       const { navigation } = this.props;
       this.oneType = navigation.getParam('oneType',null);
+      this.mounted = true;
       idList = navigation.getParam('idList', null);
       let shuffledQuiz = [];
 
@@ -162,13 +164,13 @@ import {
         headerTitle:  navigation.getParam('headerTitle',null),
         index: navigation.getParam('index', null)
       }
-
+      console.log(this.initialParams);
       this.setState(this.initialParams);
 
       this.setInitial();
 
-      this.quizItems = quizItems[this.initialParams.title];
-
+      this.quizItems = quizItems[this.initialParams.studyType];
+      console.log(this.quizItems);
       this.setDefinedQuestion(idList);
 
       if(!this.quizItems){
@@ -198,6 +200,10 @@ import {
       }
 
       
+    }
+
+    componentWillUnmount(){
+      this.mounted = false;
     }
 
     // set items
@@ -342,35 +348,36 @@ import {
     }
 
     setNextQuestion() {
-      const counter = this.state.counter + 1;
+      const counter = this.state.counter + 1;      
+      
+      if(this.mounted){
+        this.setTakeQuiz();
+        if(counter < this.allQuestion.length){
+          this.randomQuizFormat();
 
-      this.setTakeQuiz();
-
-      if(counter < this.allQuestion.length){
-        this.randomQuizFormat();
-
-        this.timeStops = 0;
-  
-        this.setState({
-            counter: counter,
-            //questionId: questionId,
-            question: this.allQuestion[counter],
-            answerOptions: this.allQuestion[counter].answerOption,
-            answer: '',
-            timerRun:true,
-            timerRestart:true,
-            timesUp: false,  
-            expression:'default',
-            correct: 0
-        });
-      }
-      else{
-        this.setEndQuiz();
-        this.props.navigation.navigate('ScoreScreen',{
-          index : this.state.index,
-          typeQuiz : this.state.type,
-          studyTitle : this.title
-        });
+          this.timeStops = 0;
+    
+          this.setState({
+              counter: counter,
+              //questionId: questionId,
+              question: this.allQuestion[counter],
+              answerOptions: this.allQuestion[counter].answerOption,
+              answer: '',
+              timerRun:true,
+              timerRestart:true,
+              timesUp: false,  
+              expression:'default',
+              correct: 0
+          });
+        }
+        else{
+          this.setEndQuiz();
+          this.props.navigation.navigate('ScoreScreen',{
+            index : this.state.index,
+            typeQuiz : this.state.type,
+            studyTitle : this.title
+          });
+        }
       }
        
     }
