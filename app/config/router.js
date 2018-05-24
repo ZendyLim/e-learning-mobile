@@ -56,7 +56,7 @@ const StudyStack = StackNavigator({
     LearnListScreen:  LearnListScreen,
     QuizMain: QuizMainScreen,
     QuizList: QuizStack,
-    QuizBefore: QuizListScreen,
+    QuizBefore: QuizBeforeScreen,
     LearnHiraganaModule: 
     {
         screen: LearnHiraganaModule, 

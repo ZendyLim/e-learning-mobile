@@ -24,11 +24,12 @@ import {
   import * as Actions from '../../actions/study'; //Import your actions
   import { StudyList } from '../../config/studyList';
   import { quizItems } from '../../config/quiz';
+  import Header   from '../../component/header';
   class ScoreScreen extends Component {
     constructor(props) {
       super(props);
       
-  }
+    }
   state = {
     typeQuiz: ""
   }

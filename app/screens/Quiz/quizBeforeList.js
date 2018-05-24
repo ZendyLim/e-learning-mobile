@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import {
-    ActivityIndicator,
-    AsyncStorage,
-    Button,
-    StatusBar,
-    StyleSheet,
-    View, 
-    ToolbarAndroid, 
+    ScrollView,
     Text, 
     TouchableOpacity, 
 } from 'react-native';
@@ -14,6 +8,8 @@ import {
 import { withNavigation } from 'react-navigation';
 import  { strings }   from '../../config/localization';
 import { QuizListData } from '../../config/studyList';
+//component
+import Header   from '../../component/header';
 
 class QuizBeforeScreen extends Component {
 
@@ -34,47 +30,55 @@ class QuizBeforeScreen extends Component {
   
   constructor(props){
       super(props);
-      this.list = QuizListData.hiragana_katakana;
+      this.list = [];
+      this.param = [];
+
       this._onSetLanguageTo('en');
+  }
+
+  componentWillMount(){
+    const { navigation } = this.props;
+    
+    this.param = {
+        type: navigation.getParam('type',null),
+        title: navigation.getParam('title',null),
+        studyType: navigation.getParam('studyType',null),
+        img: navigation.getParam('img',null),
+        topicId: navigation.getParam('topicId',null),
+        typeQuiz: navigation.getParam('typeQuiz',null),
+        index:  navigation.getParam('index',null),   
+        headerTitle:  navigation.getParam('headerTitle',null)  
+    }
+
+    this.list = QuizListData[this.param.headerTitle];
   }
 
   _onSetLanguageTo(value) {
     strings.setLanguage(value);
   } 
 
-    render() {
+  render() {
     return (
-        <View style={styles.containerFlexColumn}>
+        <ScrollView style={study.StudyContainer}>
             {this.list.map((item, key)=>(
-            <View key={key} style={styles.quizList}>
-                <TouchableOpacity onPress={this.quiz.bind(this, item.type)}>
-                <Text style={styles.hiraganaListText}> {strings[item.title]} </Text>
+                <TouchableOpacity key={key} style={study.btnLearn}  onPress={this.quiz.bind(this, item.type)}>
+                    <Text> {strings[item.title]} </Text>
                 </TouchableOpacity>
-            </View>
             ))}
-        </View>
+       </ScrollView>
     );
   }
 
   quiz = (type) => {
-    const { navigation } = this.props;
+    this.param.oneType = type;
 
-    this.props.navigation.navigate('QuizList',(
-        {
-            type: navigation.getParam('type',null),
-            title: navigation.getParam('title',null),
-            studyType: navigation.getParam('studyType',null),
-            img: navigation.getParam('img',null),
-            topicId: navigation.getParam('topicId',null),
-            typeQuiz: navigation.getParam('typeQuiz',null),
-            quizOptions: navigation.getParam('quizOptions',null),
-            oneType: type,
-            index:  navigation.getParam('index',null),        
-        }
+    this.props.navigation.navigate('QuizFlash',(
+        this.param
       ));
   };  
 }
 
 const styles = require('../../styles/quizStyle');
+const study = require('../../styles/study');
 
 export default QuizBeforeScreen;

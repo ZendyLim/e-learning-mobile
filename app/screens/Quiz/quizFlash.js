@@ -10,6 +10,8 @@ import {
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import * as Actions from '../../actions/study'; 
+
+  import { NavigationActions } from 'react-navigation';
   
   // Import Components
   import TimerBar   from '../../component/timer';
@@ -28,7 +30,7 @@ import {
   class QuizFlashScreen extends Component {
   
     static navigationOptions = ({ navigation }) => {      
-      subtitle = navigation.getParam('typeQuiz', null);         
+      subtitle = navigation.getParam('type', null);         
       title = navigation.getParam('title', null);      
 
       return{
@@ -55,6 +57,7 @@ import {
       this.title = '';
       this.oneType = '';
       this.study = [];
+      this.initialParams = [];
       
       this.state = {
         timesUp: false,
@@ -63,7 +66,7 @@ import {
         timerRun:true,
         timerRestart:false,
         counter: 0,
-        question: [],
+        question: {},
         answerOptions: [],
         answer: '',
         answerFormat:'',
@@ -92,9 +95,11 @@ import {
       let format = this.state.questionFormat;
       let timerRun = this.state.timerRun;
       let timerRestart = this.state.timerRestart;
-
+      let question = this.state.question;
+      
       return (
         <View style={styles.container}>
+          { this.state.question && this.state.question.id ? (
             <View style={[styles.row]}>
 
               <QuestionPanel 
@@ -134,6 +139,10 @@ import {
               </View>
 
             </View>
+
+          ):(
+            <Text>Empty</Text>
+          ) }
             
         </View>
       );
@@ -141,42 +150,54 @@ import {
 
     componentWillMount() {            
       const { navigation } = this.props;
-
       this.oneType = navigation.getParam('oneType',null);
       idList = navigation.getParam('idList', null);
+      let shuffledQuiz = [];
 
-      const initialParams = {
+      this.initialParams = {
         title: navigation.getParam('title', null),
         img: navigation.getParam('img', null),
         type: navigation.getParam('type', null),
-        topicId: navigation.getParam('topicId', null),
         studyType: navigation.getParam('studyType',null),
-        typeQuiz: navigation.getParam('typeQuiz',null),   
+        headerTitle:  navigation.getParam('headerTitle',null),
         index: navigation.getParam('index', null)
       }
 
-      this.setState(initialParams);
+      this.setState(this.initialParams);
 
       this.setInitial();
 
-      this.quizItems = quizItems[initialParams.title];
-      
+      this.quizItems = quizItems[this.initialParams.title];
+
       this.setDefinedQuestion(idList);
 
-      let shuffledQuiz = this.shuffleItems(this.quizItems);
+      if(!this.quizItems){
+        const resetAction = NavigationActions.reset({
+          index: 0,
+          actions: [
+            NavigationActions.navigate({ routeName: 'StudyList'})
+          ]
+        });
+
+        this.props.navigation.dispatch(resetAction);
+      }
+      else{
+        shuffledQuiz = this.shuffleItems(this.quizItems);
+
+        this.randomQuizFormat();
+      
+        this.allQuestion = shuffledQuiz.map((question) => 
+          this.shuffleAnswers(question, shuffledQuiz)
+        );
+
+        this.setState({
+          question: this.allQuestion[0]
+        });
+
+        this.setStartQuiz();
+      }
 
       
-      this.randomQuizFormat();
-      
-      this.allQuestion = shuffledQuiz.map((question) => 
-        this.shuffleAnswers(question, shuffledQuiz)
-      );
-
-      this.setState({
-         question: this.allQuestion[0]
-       });
-
-       this.setStartQuiz();
     }
 
     // set items
@@ -185,7 +206,13 @@ import {
         return obj.title == this.title; 
       })
 
-      this.quizOptions = this.study.quizOptions;
+      if(this.study.type == 'Initial'){
+        this.quizOptions = this.study.quizOptions;
+      }
+      else{
+        this.quizOptions = this.study[this.initialParams.headerTitle];
+      }
+      
     }
 
     // will change all question based on what you put in 'idList'
@@ -341,7 +368,7 @@ import {
         this.setEndQuiz();
         this.props.navigation.navigate('ScoreScreen',{
           index : this.state.index,
-          typeQuiz : this.state.typeQuiz,
+          typeQuiz : this.state.type,
           studyTitle : this.title
         });
       }
@@ -376,7 +403,7 @@ import {
           studyType : this.state.studyType,
           studyID : this.title,
           studyRecord : this.studyRecord,
-          typeQuiz:this.state.typeQuiz
+          typeQuiz:this.state.type
       }
     this.props.endLearn(parseValue); //call our action
   };

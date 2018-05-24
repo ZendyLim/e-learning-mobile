@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import {
-    ActivityIndicator,
-    AsyncStorage,
-    Button,
-    StatusBar,
-    StyleSheet,
-    View, 
-    ToolbarAndroid, 
+    ScrollView,
     Text, 
     TouchableOpacity, 
 } from 'react-native';
@@ -34,15 +28,13 @@ class QuizMainScreen extends Component {
 
     render() {
     return (
-        <View style={styles.containerFlexColumn}>
+        <ScrollView style={study.StudyContainer}>
             {this.list.map((item, key)=>(
-            <View key={key} style={styles.quizList}>
-                <TouchableOpacity onPress={this.quiz.bind(this, item.type)}>
-                <Text style={styles.hiraganaListText}> {strings[item.title]} </Text>
+                <TouchableOpacity key={key} style={study.btnLearn}  onPress={this.quiz.bind(this, item.type)}>
+                    <Text> {strings[item.title]} </Text>
                 </TouchableOpacity>
-            </View>
             ))}
-        </View>
+       </ScrollView>
     );
   }
 
@@ -65,5 +57,6 @@ class QuizMainScreen extends Component {
 }
 
 const styles = require('../../styles/quizStyle');
+const study = require('../../styles/study');
 
 export default QuizMainScreen;
