@@ -5,7 +5,7 @@ export const StudyList = [{
     type : 'Initial',
     id: 'T001',
     quizOptions: {
-      random: true,
+      random: false,
       types:['romaji_moji', 'moji_romaji','audio_moji','audio_romaji'],
       style:'quizSquared'
     }
@@ -17,7 +17,7 @@ export const StudyList = [{
     type : 'Initial',
     id: 'T002',
     quizOptions: {
-      random: false,
+      random: true,
       types:['moji_english', 'english_moji','audio_english','audio_moji'],
       withCorrection:true,
       style:'quizLong'
@@ -39,9 +39,27 @@ export const StudyList = [{
   {
     title : 'TOPIC1_TITLE',
     img : 'me_family',
-    lock : true,
+    lock : false,
     type : 'Topic',
-    id: 'T004'
+    id: 'T004',
+    vocabulary:{     
+      random:true, 
+      types:['english_moji','english_fill','audio_english','audio_fill'],
+      withCorrection:true,
+      style:'quizLong'
+    },
+    grammar:{     
+      random:true, 
+      types:['english_moji','audio_english','fill','arrange'],
+      withCorrection:true,
+      style:'quizLong'
+    },
+    kanji:{     
+      random:true, 
+      types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],
+      withCorrection:true,
+      style:'quizLong'
+    }
   },
   {
     title : 'TOPIC2_TITLE',
@@ -217,3 +235,38 @@ TOPIC1_TITLE_and_kanji : [{
 },
 ],     
   };
+
+export const QuizListData = {
+  hiragana_katakana :[
+    {
+        title : 'HIKA_ROMA',
+        type  : 'moji_romaji'
+    },
+    {
+        title : 'ROMA_HIKA',
+        type  : 'romaji_moji'
+    },
+    {
+        title : 'LISTEN',
+        type  : 'audio_moji'
+    }
+  ],
+  grammar :[
+    {
+      title : 'TRANSLATE_SENTENCE',
+      type : 'english_moji',
+    },{
+      title : 'FLASH_CARD',
+      type : 'audio_english',
+    },
+    {
+      title : 'FILL_THE_BLANKS',
+      type : 'fill',
+    },
+    {
+      title : 'REARRANGE',
+      type : 'arrange',
+    }
+  ],
+  };
+

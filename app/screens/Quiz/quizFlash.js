@@ -18,6 +18,7 @@ import {
   import Header   from '../../component/header';
 
   import { quizItems } from '../../config/quiz';
+  import { StudyList } from '../../config/studyList';
 
   /*
     TODO:
@@ -28,27 +29,22 @@ import {
   
     static navigationOptions = ({ navigation }) => {      
       subtitle = navigation.getParam('typeQuiz', null);         
-      title = navigation.getParam('title', null);
-      type = navigation.getParam('type', null);
+      title = navigation.getParam('title', null);      
 
       return{
-        title: 'Quiz',
+        title: title,
         tabBarVisible:false,
         header: props => <Header 
           title={ strings[title] }
           subtitle={ subtitle }
           navigation={ navigation } 
           />
-        //headerStyle:require('../../styles/style').headContainer,
-        //headerTitle:<Header title='Hiragana and Katakana' subtitle='Quiz' />
       }
     };
 
     constructor(props){
       super(props);
-
-      const { navigation } = this.props;
-      
+    
       this.optionsNumber = 4;
       this.allQuestion = [];
       this.quizItems = [];
@@ -56,8 +52,9 @@ import {
       this.studyRecord = [];
       this.startTime = null;
       this.quizOptions = [];
-      this.title = navigation.getParam('title', null);
+      this.title = '';
       this.oneType = '';
+      this.study = [];
       
       this.state = {
         timesUp: false,
@@ -77,7 +74,6 @@ import {
         title:'',
         img:'',
         studyType:'',
-        quizOptions:'',
         typeQuiz : '',
         index : ''
       }            
@@ -85,14 +81,7 @@ import {
      
       this._onSetLanguageTo('en');      
     }
-    componentDidMount() {
-      const { navigation } = this.props;
-      this.setState({
-        index: navigation.getParam('index', null),
-        typeQuiz : navigation.getParam('typeQuiz', null),
-      });
-      
-    }
+
     _onSetLanguageTo(value) {
       strings.setLanguage(value);
     }    
@@ -113,7 +102,7 @@ import {
                   format={ format } 
                   img={ this.state.img }
                   style={[styles.col12, styles.quizFlashTop]}
-                  styleFormat={ this.state.quizOptions.style }
+                  styleFormat={ this.quizOptions.style }
                   timesUp={ this.state.timesUp }
                   expression={ this.state.expression }
               />
@@ -137,7 +126,7 @@ import {
                   answerOptions={ this.state.question.answerOption }
                   onAnswerSelected={ this.stopTimer }
                   format={ this.state.answerFormat }
-                  styleFormat={ this.state.quizOptions.style }
+                  styleFormat={ this.quizOptions.style }
                   timesUp={ this.state.timesUp }
                   isCorrect={ this.addScore }
                 />
@@ -152,38 +141,31 @@ import {
 
     componentWillMount() {            
       const { navigation } = this.props;
-      this.quizOptions = navigation.getParam('quizOptions',null);
-      this.oneType = navigation.getParam('oneType',null);
 
-      this.setState({
+      this.oneType = navigation.getParam('oneType',null);
+      idList = navigation.getParam('idList', null);
+
+      const initialParams = {
         title: navigation.getParam('title', null),
         img: navigation.getParam('img', null),
         type: navigation.getParam('type', null),
         topicId: navigation.getParam('topicId', null),
         studyType: navigation.getParam('studyType',null),
-        typeQuiz: navigation.getParam('typeQuiz',null),        
-        quizOptions: this.quizOptions
-      });
-      //console.log(navigation.getParam('quizOptions',null));
-      this.quizItems = quizItems[this.title];
-      idList = navigation.getParam('idList', null);
-      
-      if(idList && idList.length){
-        var quizItemsTemp = [];
-        for(i = 0; i < idList.length; i++){
-          currentId = idList[i];
-          quizItemsTemp[quizItemsTemp.length] = this.quizItems.find(function (obj) { 
-            return obj.id == currentId; 
-          });
-        }
-
-        this.quizItems = quizItemsTemp;
+        typeQuiz: navigation.getParam('typeQuiz',null),   
+        index: navigation.getParam('index', null)
       }
+
+      this.setState(initialParams);
+
+      this.setInitial();
+
+      this.quizItems = quizItems[initialParams.title];
+      
+      this.setDefinedQuestion(idList);
 
       let shuffledQuiz = this.shuffleItems(this.quizItems);
 
-      this.setStartQuiz();
-
+      
       this.randomQuizFormat();
       
       this.allQuestion = shuffledQuiz.map((question) => 
@@ -193,8 +175,36 @@ import {
       this.setState({
          question: this.allQuestion[0]
        });
+
+       this.setStartQuiz();
     }
 
+    // set items
+    setInitial(){
+      this.study = StudyList.find(function (obj) { 
+        return obj.title == this.title; 
+      })
+
+      this.quizOptions = this.study.quizOptions;
+    }
+
+    // will change all question based on what you put in 'idList'
+    setDefinedQuestion(idList){
+      if(idList && idList.length){
+        var quizItemsTemp = [];
+
+        for(i = 0; i < idList.length; i++){
+          currentId = idList[i];
+          quizItemsTemp[quizItemsTemp.length] = this.quizItems.find(function (obj) { 
+            return obj.id == currentId; 
+          });
+        }
+
+        this.quizItems = quizItemsTemp;
+      }
+    }
+
+    // randomized answer options
     shuffleAnswers(array, allArray) {
       var allArrayLength = allArray.length, temporaryValue, randomIndex;
 
@@ -223,17 +233,14 @@ import {
       return array;
     };
 
+    // randomized question
     shuffleItems(array) {
       var currentIndex = array.length, temporaryValue, randomIndex;
       
-      // While there remain elements to shuffle...
       while (0 !== currentIndex) {
-  
-        // Pick a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
-  
-        // And swap it with the current element.
+
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
@@ -242,15 +249,11 @@ import {
       return array;
     };
 
-    randomQuizFormat(){
-      //console.log(this.quizOptions);
-        
+    randomQuizFormat(){    
       var quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
       var quizFormatLength = quizFormat.length, randomIndex;
 
-      randomIndex = Math.floor(Math.random() * quizFormatLength);
-
-      
+      randomIndex = Math.floor(Math.random() * quizFormatLength);      
       
       switch (quizFormat[randomIndex]) {
         case 'romaji_moji':
@@ -313,6 +316,7 @@ import {
 
     setNextQuestion() {
       const counter = this.state.counter + 1;
+
       this.setTakeQuiz();
 
       if(counter < this.allQuestion.length){
@@ -349,8 +353,7 @@ import {
       this.props.startLearn(this.state.studyType, this.startTime,this.title); //call our action
     }
 
-    setTakeQuiz = () =>  {
-      
+    setTakeQuiz = () =>  {      
       parseValue = {
             questionID : this.state.question.id,
             questionTime : this.state.questionTime,
@@ -379,7 +382,6 @@ import {
   };
 
     onTimesUp = (val) => {
-
       this.setState({
         timesUp: true,
         expression:'sad'

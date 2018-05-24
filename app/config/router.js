@@ -18,6 +18,7 @@ import LearnListScreen from '../screens/Learn/LearnList';
 import LearnHiraganaModule from '../screens/Learn/LearnModule';
 import QuizMainScreen from '../screens/Quiz/quizMain';
 import QuizListScreen from '../screens/Quiz/quizList';
+import QuizBeforeScreen from '../screens/Quiz/quizBeforeList';
 import QuizHiraganaListScreen from '../screens/Quiz/quizHiraganaList';
 import QuizKatakanaListScreen from '../screens/Quiz/quizKatakanaList';
 import HiraganaFlashcardScreen from '../screens/Study/hiraganaFlashcard';
@@ -55,6 +56,7 @@ const StudyStack = StackNavigator({
     LearnListScreen:  LearnListScreen,
     QuizMain: QuizMainScreen,
     QuizList: QuizStack,
+    QuizBefore: QuizListScreen,
     LearnHiraganaModule: 
     {
         screen: LearnHiraganaModule, 

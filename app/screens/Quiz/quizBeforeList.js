@@ -15,11 +15,21 @@ import { withNavigation } from 'react-navigation';
 import  { strings }   from '../../config/localization';
 import { QuizListData } from '../../config/studyList';
 
-class QuizMainScreen extends Component {
+class QuizBeforeScreen extends Component {
 
-  static navigationOptions = {
-    // header: null,
-    title: 'QuizList',
+  static navigationOptions = ({ navigation }) => {      
+    subtitle = navigation.getParam('typeQuiz', null);         
+    title = navigation.getParam('title', null);      
+
+    return{
+      title: title,
+      tabBarVisible:false,
+      header: props => <Header 
+        title={ strings[title] }
+        subtitle={ subtitle }
+        navigation={ navigation } 
+        />
+    }
   };
   
   constructor(props){
@@ -59,11 +69,12 @@ class QuizMainScreen extends Component {
             typeQuiz: navigation.getParam('typeQuiz',null),
             quizOptions: navigation.getParam('quizOptions',null),
             oneType: type,
-            index:  navigation.getParam('index',null),        }
+            index:  navigation.getParam('index',null),        
+        }
       ));
   };  
 }
 
 const styles = require('../../styles/quizStyle');
 
-export default QuizMainScreen;
+export default QuizBeforeScreen;

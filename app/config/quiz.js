@@ -95,7 +95,7 @@ export const quizItems = {
             "type":"hiragana",      
             "romaji":"shi",
             "moji":"し",
-            "audio":"shi.mp3",
+            "audio":"si.mp3",
             "title":"shi",
           },
           {
@@ -932,7 +932,7 @@ export const quizItems = {
             "type":"katakana",      
             "romaji":"shi",
             "moji":"シ",
-            "audio":"shi.mp3",
+            "audio":"si.mp3",
             "title":"shi",
           },
           {
