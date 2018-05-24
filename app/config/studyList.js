@@ -250,4 +250,184 @@ export const StudyList = [{
       study : '4'
     },
   ], 
+    TOPIC3_TITLE_and_vocabulary : [{
+      title : 'GOI_LIST',
+      type : 'GL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'GL3',
+      study : '4'
+    },
+  ], 
+    TOPIC3_TITLE_and_grammar : [{
+      title : 'BUNPO_LIST',
+      type : 'BL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'BL3',
+      study : '4'
+    },
+  ],
+    TOPIC3_TITLE_and_kanji : [{
+      title : 'KANJI_LIST',
+      type : 'KL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'KL3',
+      study : '4'
+    },
+  ], 
+    TOPIC4_TITLE_and_vocabulary : [{
+      title : 'GOI_LIST',
+      type : 'GL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'GL3',
+      study : '4'
+    },
+  ], 
+    TOPIC4_TITLE_and_grammar : [{
+      title : 'BUNPO_LIST',
+      type : 'BL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'BL3',
+      study : '4'
+    },
+  ],
+    TOPIC4_TITLE_and_kanji : [{
+      title : 'KANJI_LIST',
+      type : 'KL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'KL3',
+      study : '4'
+    },
+  ], 
+    TOPIC5_TITLE_and_vocabulary : [{
+      title : 'GOI_LIST',
+      type : 'GL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'GL3',
+      study : '4'
+    },
+  ], 
+    TOPIC5_TITLE_and_grammar : [{
+      title : 'BUNPO_LIST',
+      type : 'BL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'BL3',
+      study : '4'
+    },
+  ],
+    TOPIC5_TITLE_and_kanji : [{
+      title : 'KANJI_LIST',
+      type : 'KL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'KL3',
+      study : '4'
+    },
+  ], 
+    TOPIC6_TITLE_and_vocabulary : [{
+      title : 'GOI_LIST',
+      type : 'GL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'GL3',
+      study : '4'
+    },
+  ], 
+    TOPIC6_TITLE_and_grammar : [{
+      title : 'BUNPO_LIST',
+      type : 'BL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'BL3',
+      study : '4'
+    },
+  ],
+    TOPIC6_TITLE_and_kanji : [{
+      title : 'KANJI_LIST',
+      type : 'KL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'KL3',
+      study : '4'
+    },
+  ], 
+    TOPIC7_TITLE_and_vocabulary : [{
+      title : 'GOI_LIST',
+      type : 'GL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'GL3',
+      study : '4'
+    },
+  ], 
+    TOPIC7_TITLE_and_grammar : [{
+      title : 'BUNPO_LIST',
+      type : 'BL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'BL3',
+      study : '4'
+    },
+  ],
+    TOPIC7_TITLE_and_kanji : [{
+      title : 'KANJI_LIST',
+      type : 'KL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'KL3',
+      study : '4'
+    },
+  ], 
+    TOPIC8_TITLE_and_vocabulary : [{
+      title : 'GOI_LIST',
+      type : 'GL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'GL3',
+      study : '4'
+    },
+  ], 
+    TOPIC8_TITLE_and_grammar : [{
+      title : 'BUNPO_LIST',
+      type : 'BL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'BL3',
+      study : '4'
+    },
+  ],
+    TOPIC8_TITLE_and_kanji : [{
+      title : 'KANJI_LIST',
+      type : 'KL1',
+      study : '4'
+    },{
+      title : 'FLASH_CARD',
+      type : 'KL3',
+      study : '4'
+    },
+  ], 
 };
