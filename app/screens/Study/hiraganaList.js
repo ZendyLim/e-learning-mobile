@@ -40,7 +40,7 @@ class HiraganaListScreen extends Component {
       headerTitle : navigation.getParam('headerTitle', null),
       studyType : navigation.getParam('studyType', null),
       typeQuiz : navigation.getParam('typeQuiz', null),
-      topicId : navigation.getParam('id', null),
+      topicId : navigation.getParam('topic_id', null),
       quizOptions : navigation.getParam('quizOptions', null)
     });
     
