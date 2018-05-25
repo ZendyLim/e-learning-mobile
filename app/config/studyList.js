@@ -3,7 +3,7 @@ export const StudyList = [{
     img : 'class',
     lock : false,
     type : 'Initial',
-    id: 'T001',
+    topic_id: 'T001',
     quizOptions: {
       random: true,
       types:['romaji_moji', 'moji_romaji','audio_moji','audio_romaji'],
@@ -15,7 +15,7 @@ export const StudyList = [{
     img : 'number_chara',
     lock : false,
     type : 'Initial',
-    id: 'T002',
+    topic_id: 'T002',
     quizOptions: {
       random: false,
       types:['moji_english', 'english_moji','audio_english','audio_moji'],
@@ -28,7 +28,7 @@ export const StudyList = [{
     img : 'loading',
     lock : false,
     type : 'Initial',
-    id: 'T003',
+    topic_id: 'T003',
     quizOptions: {
       random: true,
       types:['moji_english', 'english_moji','audio_english','audio_moji'],
@@ -41,104 +41,104 @@ export const StudyList = [{
     img : 'me_family',
     lock : true,
     type : 'Topic',
-    id: 'T004'
+    topic_id: 'T004'
   },
   {
     title : 'TOPIC2_TITLE',
     img : 'loading',
     lock : true,
     type : 'Topic',
-    id: 'T005'
+    topic_id: 'T005'
   },
   {
     title : 'TOPIC3_TITLE',
     img : 'loading',
     lock : true,
     type : 'Topic',
-    id: 'T006'
+    topic_id: 'T006'
   },{
     title : 'TOPIC4_TITLE',
     img : 'loading',
     lock : true,
     type : 'Topic',
-    id: 'T007'
+    topic_id: 'T007'
   },
   {
     title : 'TOPIC5_TITLE',
     img : 'office',
     lock : true,
     type : 'Topic',
-    id: 'T008'
+    topic_id: 'T008'
   },
   {
     title : 'TOPIC6_TITLE',
     img : 'travel',
     lock : true,
     type : 'Topic',
-    id: 'T009'
+    topic_id: 'T009'
   },
   {
     title : 'TOPIC7_TITLE',
     img : 'health',
     lock : true,
     type : 'Topic',
-    id: 'T010'
+    topic_id: 'T010'
   },
   {
     title : 'TOPIC8_TITLE',
     img : 'market',
     lock : true,
     type : 'Topic',
-    id: 'T011'
+    topic_id: 'T011'
   },
   {
     title : 'TOPIC9_TITLE',
     img : 'ramen_shop',
     lock : true,
     type : 'Topic',
-    id: 'T012'
+    topic_id: 'T012'
   },
   {
     title : 'TOPIC10_TITLE',
     img : 'loading',
     lock : true,
     type : 'Topic',
-    id: 'T013'
+    topic_id: 'T013'
   },
   {
     title : 'TOPIC11_TITLE',
     img : 'loading',
     lock : true,
     type : 'Topic',
-    id: 'T014'
+    topic_id: 'T014'
   },
   {
     title : 'TOPIC12_TITLE',
     img : 'loading',
     lock : true,
     type : 'Topic',
-    id: 'T015'
+    topic_id: 'T015'
   },
   {
     title : 'TOPIC13_TITLE',
     img : 'loading',
     lock : true,
     type : 'Topic',
-    id: 'T016'
+    topic_id: 'T016'
   },
   {
     title : 'TOPIC14_TITLE',
     img :'society',
     lock : true,
     type : 'Topic',
-    id: 'T017'
+    topic_id: 'T017'
   },
   {
     title : 'TOPIC15_TITLE',
     img : 'loading',
     lock : true,
     type : 'Topic',
-    id: 'T018'
+    topic_id: 'T018'
   },
   ];
 

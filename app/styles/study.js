@@ -330,8 +330,6 @@ tableHeader : {
 
 tableBorder: {
   borderWidth: 1,
-}
-
-
+},
 });
 
