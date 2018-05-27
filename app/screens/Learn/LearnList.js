@@ -45,7 +45,7 @@ class LearnListScreen extends Component {
   navigateToPage=(item, index)=>{
     item['studyType'] = this.state.studyType;
     item['img'] = this.state.img;
-    item['datatopic'] = this.state.datatopic;
+    // item['datatopic'] = this.state.datatopic;
     // item['config'] = this.state.config;
     console.log(item);
 
