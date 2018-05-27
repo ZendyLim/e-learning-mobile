@@ -19,6 +19,7 @@ import LearningModule from '../Study/hiraganaExplanation';
 import HL2Screen from '../Learn/HL2';
 import { HiraganaLearnStack } from '../../config/router';
 import NumberLearnScreen from '../Learn/learnsl1';
+import GoiLearn1 from '../Learn/goilearn1';
 
 class LearnHiraganaModule extends Component {
   constructor() {
@@ -44,6 +45,8 @@ class LearnHiraganaModule extends Component {
       study: navigation.getParam('study', null),
       studyType: navigation.getParam('studyType', null),
       img: navigation.getParam('img', null),
+    //   datatopic: navigation.getParam('datatopic', null),
+    //   config: navigation.getParam('config', null),
     });
   }
   render() {
@@ -70,6 +73,36 @@ class LearnHiraganaModule extends Component {
             return (
                 <Text>HL4</Text>        
             );        
+        }else if(this.state.type == 'GL1'){
+            if(this.state.title == 'TOPIC1_GL1'){
+                return (
+                    <GoiLearn1 
+                    studyType={this.state.studyType} img={this.state.img} 
+                    // datatopic={this.state.datatopic} 
+                    // config={this.state.config}
+                    />
+                );
+            }
+        } else if(this.state.type == 'BL1') {
+            if(this.state.title == 'TOPIC1_BL1'){
+                return (
+                    <GoiLearn1 
+                    studyType={this.state.studyType} img={this.state.img} 
+                    // datatopic={this.state.datatopic} 
+                    // config={this.state.config}
+                    />
+                );
+            }
+        } else if(this.state.type == 'KL1') {
+            if(this.state.title == 'TOPIC1_KL1'){
+                return (
+                    <GoiLearn1 
+                    studyType={this.state.studyType} img={this.state.img} 
+                    // datatopic={this.state.datatopic} 
+                    // config={this.state.config}
+                    />
+                );
+            }
         }
     }else{
         return (

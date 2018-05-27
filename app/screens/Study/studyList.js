@@ -50,6 +50,7 @@ class StudyListScreen extends Component {
     item['studyType'] = item.title;
     item['headerTitle'] = item.title;
     
+    console.log(item);
     if(item.type == 'Initial'){
       item['studyType'] = item.title;
       this.props.navigation.navigate('HiraganaList',(

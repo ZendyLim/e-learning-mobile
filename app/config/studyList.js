@@ -176,7 +176,9 @@ export const StudyList = [{
   TOPIC1_TITLE_and_vocabulary : [{
     title : 'TOPIC1_GL1',
     type : 'GL1',
-    study : '4'
+    study : '4',
+    datatopic : 'Goi',
+    config : 'mefamily'
   },{
     title : 'TOPIC1_GL2',
     type : 'GL2',
@@ -190,7 +192,9 @@ export const StudyList = [{
 TOPIC1_TITLE_and_grammar : [{
   title : 'TOPIC1_BL1',
   type : 'BL1',
-  study : '4'
+  study : '4',
+  datatopic : 'Bunpo',
+  config : 'mefamily'
 },{
   title : 'TOPIC1_BL2',
   type : 'BL2',
@@ -204,7 +208,9 @@ TOPIC1_TITLE_and_grammar : [{
 TOPIC1_TITLE_and_kanji : [{
   title : 'TOPIC1_KL1',
   type : 'KL1',
-  study : '4'
+  study : '4',
+  datatopic : 'Kanji',
+  config : 'mefamily'
 },{
   title : 'TOPIC1_KL2',
   type : 'KL2',

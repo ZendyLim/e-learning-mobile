@@ -45,6 +45,8 @@ class LearnListScreen extends Component {
   navigateToPage=(item, index)=>{
     item['studyType'] = this.state.studyType;
     item['img'] = this.state.img;
+    item['datatopic'] = this.state.datatopic;
+    // item['config'] = this.state.config;
     console.log(item);
 
     if(item.type == 'Initial'){
@@ -59,6 +61,12 @@ class LearnListScreen extends Component {
   }
 
   render() {
+    
+    console.log(this.state.title);
+    console.log(this.state.type);
+    console.log(this.state.item);
+    console.log(this.state.studyType);
+    console.log(this.state.img);
     if(this.state.item){
       return (
         <ScrollView style={study.StudyContainer}>
