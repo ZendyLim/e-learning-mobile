@@ -71,7 +71,7 @@ const StudyStack = StackNavigator({
     StudyList: StudyListScreen ,
     HiraganaFlash: HiraganaFlashcardScreen , 
     LearnHL1: LearnHL1Screen,
-    PickTopic : SummaryTopicList,
+    summaryLearnData : SummaryLearnDetail,
 });
 
 const SummaryStack = StackNavigator({

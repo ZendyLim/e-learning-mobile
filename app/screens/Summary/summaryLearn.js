@@ -35,7 +35,8 @@ class SummaryLearnDetail extends Component {
   componentDidMount() {
     const { navigation } = this.props;
     this.setState({
-        studyType: navigation.getParam('type', null),
+        studyType: navigation.getParam('studyType', null),
+        topic_id: navigation.getParam('topic_id', null),
     });
   }
  
