@@ -528,5 +528,31 @@ module.exports = StyleSheet.create({
 			height: 200,
 			zIndex:3
 			
+		},
+	// fill box
+		fillItem:{
+			margin:5,
+			minWidth:40,
+			minHeight:40,
+			padding:5,
+			borderRadius:5,
+			alignItems: 'center',
+			justifyContent: 'center',
+		},
+		fillText:{
+			fontSize:20,
+		},
+		fillAnswer:{
+			minHeight:100
+		},
+		fillEmptyBox: {
+			borderColor: '#566d97',
+			borderWidth: 1,		
+		},
+		fillBox:{
+			backgroundColor:'#fff',
+			shadowColor: "#000",
+			shadowOpacity: 0.5,
+			elevation: 2,
 		}
 });

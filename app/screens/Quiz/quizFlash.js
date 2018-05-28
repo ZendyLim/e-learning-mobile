@@ -79,7 +79,8 @@ import {
         img:'',
         studyType:'',
         typeQuiz : '',
-        index : ''
+        index : '',
+        format:''
       }            
 
      
@@ -131,7 +132,8 @@ import {
                   question={ this.state.question } 
                   answerOptions={ this.state.question.answerOption }
                   onAnswerSelected={ this.stopTimer }
-                  format={ this.state.answerFormat }
+                  displayFormat={ this.state.answerFormat }
+                  format={ this.state.format }
                   styleFormat={ this.quizOptions.style }
                   timesUp={ this.state.timesUp }
                   isCorrect={ this.addScore }
@@ -164,7 +166,7 @@ import {
         headerTitle:  navigation.getParam('headerTitle',null),
         index: navigation.getParam('index', null)
       }
-      console.log(this.initialParams);
+      
       this.setState(this.initialParams);
 
       this.setInitial();
@@ -285,66 +287,89 @@ import {
     randomQuizFormat(){    
       var quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
       var quizFormatLength = quizFormat.length, randomIndex;
+      var paramFormat,time;
 
       randomIndex = Math.floor(Math.random() * quizFormatLength);      
+
       
+      time = 6000;
+      console.log(quizFormat[randomIndex]);
       switch (quizFormat[randomIndex]) {
         case 'romaji_moji':
-          this.setState({
+          paramFormat = {
             answerFormat: 'moji',
             questionFormat: 'romaji'
-          });
+          };
           break;
         case 'moji_romaji':
-          this.setState({
+          paramFormat = {
             answerFormat: 'romaji',
             questionFormat: 'moji'
-          });
+          };
           break;
 
         case 'moji_english':
-          this.setState({
+          paramFormat = {
             answerFormat: 'english',
             questionFormat: 'moji'
-          });
+          };
           break;
         
         case 'english_moji':
-          this.setState({
+          paramFormat = {
             answerFormat: 'moji',
             questionFormat: 'english'
-          });
+          };
           break;
 
         case 'audio_moji':
-          this.setState({
+          paramFormat = {
             answerFormat: 'moji',
             questionFormat: 'audio'
-          });
+          };
           break;
         
         case 'audio_romaji':
-          this.setState({
+          paramFormat = {
             answerFormat: 'romaji',
             questionFormat: 'audio'
-          });
+          };
           break;
 
         case 'audio_english':
-          this.setState({
+          paramFormat = {
             answerFormat: 'english',
             questionFormat: 'audio'
-          });
+          };
+          break;
+
+        case 'audio_fill':
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'audio'
+          };
+
+          paramFormat.time = time * 1.5;
+          break;
+        
+        case 'english_fill':
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'english'
+          };
+
+          paramFormat.time = time * 1.5;
           break;
       
         default:
-          this.setState({
+          paramFormat = {
             answerFormat: 'moji',
             questionFormat: 'romaji'
-          });
-          break;
-          
+          };
+          break;          
       }
+      paramFormat.format = quizFormat[randomIndex];
+      this.setState(paramFormat);
     }
 
     setNextQuestion() {

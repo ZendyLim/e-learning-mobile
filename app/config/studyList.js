@@ -45,6 +45,7 @@ export const StudyList = [{
     vocabulary:{     
       random:true, 
       types:['english_moji','english_fill','audio_english','audio_fill'],
+      //types:['english_fill','audio_fill'],
       withCorrection:true,
       style:'quizLong'
     },
