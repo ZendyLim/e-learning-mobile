@@ -14,6 +14,7 @@ let japaneseFont = 'NotoSansJP-Regular';
 let primaryColor = '#45b4e7'; // blue
 let secondaryColor = '#d2f9fc';
 let textColor = '#333';
+let textSecondary = '#566d97';
 let grayColor = '#ccc';
 
 module.exports = StyleSheet.create({
@@ -224,6 +225,26 @@ module.exports = StyleSheet.create({
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		marginTop: 5,
+	},
+	btnContainer:{
+		alignItems: 'center',
+		justifyContent: 'center',
+		marginTop:10
+	},
+	btn:{
+		minWidth:170,
+		padding:10,
+		backgroundColor:primaryColor,
+		borderRadius:5,
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	btnText:{
+		color:'#fff',
+		fontSize:24
+	},
+	btnIcon:{
+		marginLeft:10
 	},
 	btnupdate: {
 		backgroundColor: '#4573e7',
@@ -546,7 +567,7 @@ module.exports = StyleSheet.create({
 			minHeight:100
 		},
 		fillEmptyBox: {
-			borderColor: '#566d97',
+			borderColor: textSecondary,
 			borderWidth: 1,		
 		},
 		fillBox:{
@@ -554,5 +575,40 @@ module.exports = StyleSheet.create({
 			shadowColor: "#000",
 			shadowOpacity: 0.5,
 			elevation: 2,
+		},
+		//Correct Panel
+		correctTitle:{
+			fontSize:22,
+			marginBottom:5,
+			color:textSecondary
+		},
+		correctHighlight:{
+			fontSize:18,
+			marginTop:10,
+			color:primaryColor	
+		},
+		correctWrapper:{
+			padding:10			
+		},
+		correctContainer:{
+			paddingRight:60,
+			padding:10,
+			backgroundColor:'#fff',
+			borderRadius:5,
+			borderColor:primaryColor,
+			borderWidth:1
+		},
+		correctAudio:{
+			position:'absolute',
+			top:10,
+			right:10,
+			zIndex:10,			
+		},
+		correctVolume:{
+			color:primaryColor,
+			fontSize:32
+		},
+		correctText:{
+			fontSize:22
 		}
 });

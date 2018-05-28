@@ -51,7 +51,9 @@ export let strings = new LocalizedStrings({
    TRANSLATE_SENTENCE: "Translate the sentence",
    FLASH_CARD: "Listening\n(Translate)",
    FILL_THE_BLANKS: "Fill in the blanks",
-   REARRANGE: "Rearrange the sentence"
+   REARRANGE: "Rearrange the sentence",
+   ENGLISH: "English",
+   NEXT:'Next'
  },
  ja: {
    loginGuest: "japan",
@@ -99,7 +101,8 @@ export let strings = new LocalizedStrings({
    TRANSLATE_SENTENCE: "Translate the sentence",
    FLASH_CARD: "Listening\n(Translate)",
    FILL_THE_BLANKS: "Fill in the blanks",
-   REARRANGE: "Rearrange the sentence"
-
+   REARRANGE: "Rearrange the sentence",
+   ENGLISH: "英語",
+   NEXT:'次'
   }
 });

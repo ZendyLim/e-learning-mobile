@@ -4,7 +4,7 @@ import {
     Text,
     TouchableHighlight
   } from 'react-native';
-  import { List, ListItem } from 'react-native-elements';
+  import { List, ListItem, ScrollView } from 'react-native-elements';
   import  { strings }   from '../../config/localization';
 
   import { bindActionCreators } from 'redux';
@@ -17,6 +17,8 @@ import {
   import TimerBar   from '../../component/timer';
   import QuestionPanel   from '../../component/question';
   import Quiz   from '../../component/quiz';
+  import CorrectPanel   from '../../component/correct';
+  import CustomButton   from '../../component/button';
   import Header   from '../../component/header';
 
   import { quizItems } from '../../config/quiz';
@@ -59,6 +61,7 @@ import {
       this.study = [];
       this.initialParams = [];      
       this.isMounted = true;
+      this.showCorrect = false;
       
       this.state = {
         timesUp: false,
@@ -80,7 +83,8 @@ import {
         studyType:'',
         typeQuiz : '',
         index : '',
-        format:''
+        format:'',
+        showCorrect:false
       }            
 
      
@@ -112,32 +116,47 @@ import {
                   styleFormat={ this.quizOptions.style }
                   timesUp={ this.state.timesUp }
                   expression={ this.state.expression }
+                  showCorrect={ this.state.showCorrect }
               />
               
               <View style={[styles.col12]}>
-                <TimerBar 
-                  time={ this.state.time } 
-                  timerRestart={ timerRestart } 
-                  timerRun={ timerRun } 
-                  onTimesUp={this.onTimesUp} 
-                  onRestart={this.onRestart}
-                  timeStops={this.setTimeStops}
-                />
+                { !this.state.showCorrect &&
+                  <TimerBar 
+                    time={ this.state.time } 
+                    timerRestart={ timerRestart } 
+                    timerRun={ timerRun } 
+                    onTimesUp={this.onTimesUp} 
+                    onRestart={this.onRestart}
+                    timeStops={this.setTimeStops}
+                  />
+                }
               </View>
 
               <View style={[ styles.col12, styles.quizAnswerWrapper]}>
                 <View style={ !timerRun && styles.blocker }></View>
                 
-                <Quiz 
-                  question={ this.state.question } 
-                  answerOptions={ this.state.question.answerOption }
-                  onAnswerSelected={ this.stopTimer }
-                  displayFormat={ this.state.answerFormat }
-                  format={ this.state.format }
-                  styleFormat={ this.quizOptions.style }
-                  timesUp={ this.state.timesUp }
-                  isCorrect={ this.addScore }
-                />
+                { !this.state.showCorrect ?
+                  (<Quiz 
+                    question={ this.state.question } 
+                    answerOptions={ this.state.question.answerOption }
+                    onAnswerSelected={ this.stopTimer }
+                    displayFormat={ this.state.answerFormat }
+                    format={ this.state.format }
+                    styleFormat={ this.quizOptions.style }
+                    timesUp={ this.state.timesUp }
+                    isCorrect={ this.addScore }
+                  />) :
+                  (<View>
+                    <CorrectPanel 
+                      question={ this.state.question } 
+                      format={ format }
+                      style={[styles.col12]}
+                      styleFormat={ this.quizOptions.style }
+                    />
+                    <CustomButton icon="chevron-right">{ strings.NEXT }</CustomButton>
+                  </View>
+                  )
+                }
 
               </View>
 
@@ -172,7 +191,7 @@ import {
       this.setInitial();
 
       this.quizItems = quizItems[this.initialParams.studyType];
-      console.log(this.quizItems);
+      
       this.setDefinedQuestion(idList);
 
       if(!this.quizItems){
@@ -293,7 +312,7 @@ import {
 
       
       time = 6000;
-      console.log(quizFormat[randomIndex]);
+      
       switch (quizFormat[randomIndex]) {
         case 'romaji_moji':
           paramFormat = {
@@ -441,14 +460,17 @@ import {
   };
 
     onTimesUp = (val) => {
-      this.setState({
-        timesUp: true,
-        expression:'sad'
-      });
+      if(!this.showCorrect){
+        this.setState({
+          timesUp: true,
+          expression:'sad'
+        });
+
+        setTimeout(() => {        
+          this.setNextQuestion();
+        }, this.state.pause); 
+      }
       
-      setTimeout(() => {
-        this.setNextQuestion();
-      }, this.state.pause);
     };
 
     setTimeStops = (time) => {
@@ -462,15 +484,27 @@ import {
       });
     };
 
-    stopTimer = (answer) => {      
-      this.setState({
+    stopTimer = (answer) => {   
+      stopTimerParam = {
         timerRun:false,
         answer:answer
-      });
-
-      setTimeout(() => {
-        this.setNextQuestion();
-      }, this.state.pause);
+      }   
+            
+      if(this.study.type == 'Topic' && this.state.type == 'Quiz'){
+        this.showCorrect = true;
+        stopTimerParam.showCorrect = this.showCorrect;
+        
+      }
+      else{
+        setTimeout(() => {
+          this.showCorrect = false;
+          this.setNextQuestion();
+        
+        }, this.state.pause);    
+      }
+      
+      this.setState(stopTimerParam);
+      
     };
     
     addScore = (isCorrect) => {
