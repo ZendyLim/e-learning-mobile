@@ -133,7 +133,7 @@ import {
       this.flipperFunction = (time) => {
 
         this.flipperInterval = setInterval(() => {
-          this.flipIndicator += 2;
+          this.flipIndicator += 4;
           if(this.flipIndicator >= 100) {
             if(this.state.flipped) {
               this.updateNext();
@@ -365,10 +365,12 @@ import {
               </View>
               <View style={[studyStyles.boxButton, autoHeight]}>
                 <TouchableOpacity
-                  style={studyStyles.roundButton}
+                  style={studyStyles.roundButtonText}
                   onPress={() => this.setToNSpeed()}
                 >
-                  <Icon name='fast-forward' color='#fff' size={40}/>
+                  <Text style={[studyStyles.textLg, studyStyles.textCenter, studyStyles.textWhite]}>
+                    &nbsp;{ this.flipSpeed }x&nbsp;
+                  </Text>
                 </TouchableOpacity>
               </View>
               <View style={[studyStyles.boxButton, autoHeight]}>
