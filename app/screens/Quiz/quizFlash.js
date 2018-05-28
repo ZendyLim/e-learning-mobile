@@ -77,12 +77,22 @@ import {
         title:'',
         img:'',
         studyType:'',
-        quizOptions:''
+        quizOptions:'',
+        typeQuiz : '',
+        index : ''
       }            
 
+     
       this._onSetLanguageTo('en');      
     }
-
+    componentDidMount() {
+      const { navigation } = this.props;
+      this.setState({
+        index: navigation.getParam('index', null),
+        typeQuiz : navigation.getParam('typeQuiz', null),
+      });
+      
+    }
     _onSetLanguageTo(value) {
       strings.setLanguage(value);
     }    
@@ -326,8 +336,8 @@ import {
       else{
         this.setEndQuiz();
         this.props.navigation.navigate('ScoreScreen',{
-          index : 2,
-          typeQuiz : "Quiz",
+          index : this.state.index,
+          typeQuiz : this.state.typeQuiz,
           studyTitle : this.title
         });
       }

@@ -33,13 +33,14 @@ class HiraganaListScreen extends Component {
   componentDidMount() {
     const { navigation } = this.props;
     this.setState({
+      index: navigation.getParam('index', null),
       title: navigation.getParam('title', null),
       img: navigation.getParam('img', null),
       type: navigation.getParam('type', null),
       headerTitle : navigation.getParam('headerTitle', null),
       studyType : navigation.getParam('studyType', null),
       typeQuiz : navigation.getParam('typeQuiz', null),
-      topicId : navigation.getParam('id', null),
+      topicId : navigation.getParam('topic_id', null),
       quizOptions : navigation.getParam('quizOptions', null)
     });
     
@@ -61,6 +62,7 @@ class HiraganaListScreen extends Component {
       if(topicId == 'T001'){
         this.props.navigation.navigate('QuizMain',(
           {
+            index : this.state.index,
             type : type,
             title : this.state.title,
             studyType: this.state.studyType,
@@ -74,6 +76,7 @@ class HiraganaListScreen extends Component {
       else{
         this.props.navigation.navigate('QuizFlash',(
           {
+            index : this.state.index,
             type : type,
             title : this.state.title,
             studyType: this.state.studyType,
@@ -90,6 +93,7 @@ class HiraganaListScreen extends Component {
       console.log(this.state.quizOptions);
       this.props.navigation.navigate('QuizFlash',(
         {
+          index : this.state.index,
           type : type,
           title : this.state.title,
           studyType: this.state.studyType,
@@ -105,6 +109,13 @@ class HiraganaListScreen extends Component {
         item
       ));
     }
+  }
+
+  navigateToSummary = (type, topicId = null) =>{
+    this.props.navigation.navigate('summaryLearnData',{
+      studyType : 'test',
+      topic_id : 'test',
+    });
   }
   render() {
     return (
@@ -138,7 +149,7 @@ class HiraganaListScreen extends Component {
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={study.button}>
+              <TouchableOpacity style={study.button} onPress={this.navigateToSummary.bind(this, 'Quiz')}>
                 <Icon name='search'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
@@ -152,10 +163,6 @@ class HiraganaListScreen extends Component {
               <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Test')}>
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={study.button}>
-                <Icon name='search'   color='#fff'/>
-                <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
             </View>
           </View>

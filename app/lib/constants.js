@@ -12,3 +12,7 @@ export const START_TIME_QUIZ = 'START_TIME_QUIZ'; //import the action for start 
 export const END_TIME_QUIZ = 'END_TIME_QUIZ'; //import the action for start time
 export const TAKE_QUIZ = 'TAKE_QUIZ'; //import the action for start time
 
+//summary 
+export const SUMMARY_HOME = 'SUMMARY_HOME'; //import the action for start time
+
+

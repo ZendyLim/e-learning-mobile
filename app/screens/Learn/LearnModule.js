@@ -21,6 +21,7 @@ import SL2Screen from '../Learn/SL2';
 import { HiraganaLearnStack } from '../../config/router';
 import NumberLearnScreen from '../Learn/learnsl1';
 import GreetingLearnScreen from '../Learn/learngl1';
+import HL4 from '../sketch';
 
 class LearnHiraganaModule extends Component {
   constructor() {
@@ -92,7 +93,7 @@ class LearnHiraganaModule extends Component {
             }
         }else if(this.state.type == 'HL4'){
             return (
-                <Text>HL4</Text>        
+                <HL4 />        
             );        
         }
     }else{

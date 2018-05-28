@@ -162,6 +162,23 @@ module.exports = StyleSheet.create({
     borderRadius: 5,
     marginBottom: 5
   },
+  summaryLearn : {
+    width: '100%',
+    height: 30,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems : 'center',
+    borderBottomColor: '#ddd',
+    borderBottomWidth: 1,
+    backgroundColor: '#fff',
+  },
+  summaryTitle : {
+    flex: 2,
+  },
+  summaryDetail : {
+    flex: 1,
+  },
   buttonContainerTopic: {
     flex: 1,
     height : 100,
@@ -228,10 +245,9 @@ flipCardBack: {
   position: 'absolute', 
   top: 0, 
 }, 
-
-
-
-
+fontBold:{
+  fontWeight: 'bold',
+},
 cardIcon: {
   alignItems: 'flex-start', 
   justifyContent: 'flex-start', 
@@ -330,8 +346,6 @@ tableHeader : {
 
 tableBorder: {
   borderWidth: 1,
-}
-
-
+},
 });
 

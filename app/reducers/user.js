@@ -6,8 +6,8 @@ const initialState = {
     loading: true,
     isFailed: false ,
     dataNew: [],
-    nationality: 'asdasd',
-    school: 'asdas',
+    nationality: '',
+    school: '',
 };
  
 export default function userReducer (state = initialState, action) {
