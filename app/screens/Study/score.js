@@ -23,7 +23,7 @@ import {
   import { connect } from 'react-redux';
   import * as Actions from '../../actions/study'; //Import your actions
   import { StudyList } from '../../config/studyList';
-
+  import { quizItems } from '../../config/quiz';
   class ScoreScreen extends Component {
     constructor(props) {
       super(props);
@@ -39,7 +39,9 @@ import {
       typeQuiz: navigation.getParam('typeQuiz', null),
       index: navigation.getParam('index', null),
     });
-    
+
+    //this.processData(navigation.getParam('studyTitle', null));
+  
     //Console.log(navigation.getParam('userName', null),"NIAMAK");
   }
   goToTopicSelection = () =>  {
@@ -56,6 +58,24 @@ import {
     }
   }
   retry = () =>  {
+    var item = StudyList[this.state.index ];
+    item['index'] = this.state.index;
+    item['studyType'] = item.title;
+    item['headerTitle'] = item.title;
+
+    const resetAction = NavigationActions.reset({ 
+      index: 1,
+      actions: [
+        NavigationActions.navigate({ routeName: 'StudyList' }),
+        NavigationActions.navigate({ routeName: 'HiraganaList' , params: item })
+
+      ]
+    });
+    
+    this.props.navigation.dispatch(resetAction);
+  
+  }
+  gotToNext = () =>  {
     var item = StudyList[this.state.index + 1];
     item['index'] = this.state.index + 1;
     item['studyType'] = item.title;
@@ -75,6 +95,7 @@ import {
   }
 
   renderItem({item, index}) {
+    
     return (
         <View style={scoreStyle.RecordRow}>
             <Text style={scoreStyle.recordTitle}>
@@ -116,7 +137,7 @@ import {
               <Text style={ scoreStyle.sumaryTitle }>SUMMARY</Text>
               <Icon name='lock'  color='#fff' size={10}/>
 
-            {this.props.studyRecord[0] ? (
+            {this.props.studyRecord[0]  ? (
               <FlatList
                 ref='listRef'
                 data={this.props.studyRecord}
@@ -125,7 +146,7 @@ import {
                 ) :<Text>No study data</Text> }
             </ScrollView >
           </View>
-          { this.props.scoreTotal > 20 ? ( 
+          { this.props.scoreTotal > 50 ? ( 
           <View style={ scoreStyle.containerMistake }>
             <View style={ scoreStyle.RecordRowButton }>
               <View style={ scoreStyle.RecordRowButtonContainer }>
@@ -160,6 +181,25 @@ import {
           ) }
         </View>
     );
+  }
+
+  processData(title){
+    
+      this.quizItems = quizItems[title];
+      for(i = 0; i < this.props.studyRecord.length; i++){
+        current = this.props.studyRecord[i];
+        current.questionData = this.getData(current.questionID);
+        current.answerData = this.getData(current.answer);   
+        
+        this.props.studyRecord[i] = current;
+      }
+    
+  }
+
+  getData(val){
+    return this.quizItems.find(function (obj) { 
+      return obj.id == val; 
+    });
   }
 
 

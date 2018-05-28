@@ -62,7 +62,7 @@ import {
       this.state = {
         timesUp: false,
         expression: 'default',
-        time:5000,        
+        time:6000,        
         timerRun:true,
         timerRestart:false,
         counter: 0,
@@ -71,18 +71,28 @@ import {
         answer: '',
         answerFormat:'',
         questionFormat:'',
-        pause: 2000,
+        pause: 1000,
         score:0,
         correct:0,
         title:'',
         img:'',
         studyType:'',
-        quizOptions:''
+        quizOptions:'',
+        typeQuiz : '',
+        index : ''
       }            
 
+     
       this._onSetLanguageTo('en');      
     }
-
+    componentDidMount() {
+      const { navigation } = this.props;
+      this.setState({
+        index: navigation.getParam('index', null),
+        typeQuiz : navigation.getParam('typeQuiz', null),
+      });
+      
+    }
     _onSetLanguageTo(value) {
       strings.setLanguage(value);
     }    
@@ -155,7 +165,7 @@ import {
         quizOptions: this.quizOptions
       });
       //console.log(navigation.getParam('quizOptions',null));
-      this.quizItems = quizItems[navigation.getParam('topicId', null)];
+      this.quizItems = quizItems[this.title];
       idList = navigation.getParam('idList', null);
       
       if(idList && idList.length){
@@ -234,7 +244,7 @@ import {
 
     randomQuizFormat(){
       //console.log(this.quizOptions);
-      
+        
       var quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
       var quizFormatLength = quizFormat.length, randomIndex;
 
@@ -326,8 +336,9 @@ import {
       else{
         this.setEndQuiz();
         this.props.navigation.navigate('ScoreScreen',{
-          index : 2,
-          typeQuiz : "Quiz",
+          index : this.state.index,
+          typeQuiz : this.state.typeQuiz,
+          studyTitle : this.title
         });
       }
        
@@ -360,7 +371,7 @@ import {
           endTime :  new Date().getTime(),
           subjectTitle: this.title,
           studyType : this.state.studyType,
-          studyID : this.state.topicId,
+          studyID : this.title,
           studyRecord : this.studyRecord,
           typeQuiz:this.state.typeQuiz
       }

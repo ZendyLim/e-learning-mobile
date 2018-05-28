@@ -16,4 +16,7 @@ export const ImageData = {
     sad : require('../assets/img/char/char-sad.png'),
     default : require('../assets/img/char/char-default.png'),   
     HL2 : require('../assets/img/HL2.png'),   
+    HomeImg : require('../assets/img/imgHome.png'), 
+    //topic Img
+      
 }

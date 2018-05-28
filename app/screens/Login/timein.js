@@ -32,7 +32,6 @@ import {
 
     componentDidMount() {
       const { navigation } = this.props;
-      console.log(navigation, "timein");
       this.setState({
         userName: navigation.getParam('userName', null),
         studyReason: navigation.getParam('studyReason',null),

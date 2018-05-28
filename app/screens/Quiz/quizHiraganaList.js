@@ -25,6 +25,8 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
         stsList : false,
         statusPerRow: false,
         idList:[],
+        index : '',
+        typeQuiz : '',
     }
 
     constructor(props){
@@ -32,7 +34,7 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
         this.checkItems = [hiraganaList.map.length];
         this.checkRows=[hiraganaList.map.length];
     }
-   
+
     render() {
       return ( 
         <ScrollView style={quizStyles.container}>
@@ -152,8 +154,9 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
                 topicId: navigation.getParam('topicId',null),
                 typeQuiz: navigation.getParam('typeQuiz',null),
                 quizOptions: navigation.getParam('quizOptions',null),
-                oneType: navigation.getParam('quizOptions',null),
-                idList: this.state.idList
+                oneType: navigation.getParam('oneType',null),
+                idList: this.state.idList,
+                index:  navigation.getParam('index',null),
             }
         )
         );

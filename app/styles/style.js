@@ -178,7 +178,8 @@ module.exports = StyleSheet.create({
        width:120,
        height:120,
 	   position: 'absolute',
-       borderRadius:100,
+	   borderRadius:100,
+	   zIndex: 3,
    	 },
 
  	avatarinformation: {
@@ -519,5 +520,13 @@ module.exports = StyleSheet.create({
 			top:0,
 			elevation:10,
 			zIndex:10
+		},
+		absoluteScreen : {
+			position: 'absolute',
+			top:0,
+			width: '100%',
+			height: 200,
+			zIndex:3
+			
 		}
 });
