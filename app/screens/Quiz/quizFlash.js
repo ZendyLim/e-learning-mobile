@@ -17,7 +17,7 @@ import {
   import Quiz   from '../../component/quiz';
   import Header   from '../../component/header';
 
-  import { quizItems, quizItemsShort } from '../../config/quiz';
+  import { quizItems } from '../../config/quiz';
 
   /*
     TODO:
@@ -51,16 +51,18 @@ import {
       
       this.optionsNumber = 4;
       this.allQuestion = [];
-      this.quizItems = quizItemsShort;
+      this.quizItems = [];
       this.timeStops = 0;  
       this.studyRecord = [];
       this.startTime = null;
+      this.quizOptions = [];
       this.title = navigation.getParam('title', null);
-
+      this.oneType = '';
+      
       this.state = {
         timesUp: false,
         expression: 'default',
-        time:5000,        
+        time:6000,        
         timerRun:true,
         timerRestart:false,
         counter: 0,
@@ -69,19 +71,28 @@ import {
         answer: '',
         answerFormat:'',
         questionFormat:'',
-        pause: 2000,
+        pause: 1000,
         score:0,
         correct:0,
         title:'',
         img:'',
-        studyType:''
-      }      
+        studyType:'',
+        quizOptions:'',
+        typeQuiz : '',
+        index : ''
+      }            
 
-      
-
+     
       this._onSetLanguageTo('en');      
     }
-
+    componentDidMount() {
+      const { navigation } = this.props;
+      this.setState({
+        index: navigation.getParam('index', null),
+        typeQuiz : navigation.getParam('typeQuiz', null),
+      });
+      
+    }
     _onSetLanguageTo(value) {
       strings.setLanguage(value);
     }    
@@ -102,6 +113,7 @@ import {
                   format={ format } 
                   img={ this.state.img }
                   style={[styles.col12, styles.quizFlashTop]}
+                  styleFormat={ this.state.quizOptions.style }
                   timesUp={ this.state.timesUp }
                   expression={ this.state.expression }
               />
@@ -125,9 +137,11 @@ import {
                   answerOptions={ this.state.question.answerOption }
                   onAnswerSelected={ this.stopTimer }
                   format={ this.state.answerFormat }
+                  styleFormat={ this.state.quizOptions.style }
                   timesUp={ this.state.timesUp }
                   isCorrect={ this.addScore }
                 />
+
               </View>
 
             </View>
@@ -138,6 +152,8 @@ import {
 
     componentWillMount() {            
       const { navigation } = this.props;
+      this.quizOptions = navigation.getParam('quizOptions',null);
+      this.oneType = navigation.getParam('oneType',null);
 
       this.setState({
         title: navigation.getParam('title', null),
@@ -145,8 +161,24 @@ import {
         type: navigation.getParam('type', null),
         topicId: navigation.getParam('topicId', null),
         studyType: navigation.getParam('studyType',null),
-        typeQuiz: navigation.getParam('typeQuiz',null)
+        typeQuiz: navigation.getParam('typeQuiz',null),        
+        quizOptions: this.quizOptions
       });
+      //console.log(navigation.getParam('quizOptions',null));
+      this.quizItems = quizItems[this.title];
+      idList = navigation.getParam('idList', null);
+      
+      if(idList && idList.length){
+        var quizItemsTemp = [];
+        for(i = 0; i < idList.length; i++){
+          currentId = idList[i];
+          quizItemsTemp[quizItemsTemp.length] = this.quizItems.find(function (obj) { 
+            return obj.id == currentId; 
+          });
+        }
+
+        this.quizItems = quizItemsTemp;
+      }
 
       let shuffledQuiz = this.shuffleItems(this.quizItems);
 
@@ -211,22 +243,40 @@ import {
     };
 
     randomQuizFormat(){
-      var quizFormat = ['moji','romaji','audio_moji','audio_romaji'];
+      //console.log(this.quizOptions);
+        
+      var quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
       var quizFormatLength = quizFormat.length, randomIndex;
 
       randomIndex = Math.floor(Math.random() * quizFormatLength);
 
+      
+      
       switch (quizFormat[randomIndex]) {
-        case 'moji':
+        case 'romaji_moji':
           this.setState({
             answerFormat: 'moji',
             questionFormat: 'romaji'
           });
           break;
-        case 'romaji':
+        case 'moji_romaji':
           this.setState({
             answerFormat: 'romaji',
             questionFormat: 'moji'
+          });
+          break;
+
+        case 'moji_english':
+          this.setState({
+            answerFormat: 'english',
+            questionFormat: 'moji'
+          });
+          break;
+        
+        case 'english_moji':
+          this.setState({
+            answerFormat: 'moji',
+            questionFormat: 'english'
           });
           break;
 
@@ -236,11 +286,25 @@ import {
             questionFormat: 'audio'
           });
           break;
-      
-        default:
+        
+        case 'audio_romaji':
           this.setState({
             answerFormat: 'romaji',
             questionFormat: 'audio'
+          });
+          break;
+
+        case 'audio_english':
+          this.setState({
+            answerFormat: 'english',
+            questionFormat: 'audio'
+          });
+          break;
+      
+        default:
+          this.setState({
+            answerFormat: 'moji',
+            questionFormat: 'romaji'
           });
           break;
           
@@ -272,8 +336,9 @@ import {
       else{
         this.setEndQuiz();
         this.props.navigation.navigate('ScoreScreen',{
-          index : 2,
-          typeQuiz : "Quiz",
+          index : this.state.index,
+          typeQuiz : this.state.typeQuiz,
+          studyTitle : this.title
         });
       }
        
@@ -306,7 +371,7 @@ import {
           endTime :  new Date().getTime(),
           subjectTitle: this.title,
           studyType : this.state.studyType,
-          studyID : this.state.topicId,
+          studyID : this.title,
           studyRecord : this.studyRecord,
           typeQuiz:this.state.typeQuiz
       }

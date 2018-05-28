@@ -2099,8 +2099,8 @@ export const katakanaList = [
   {
     "id":"k_mi",
     "type":"katakana",      
-    "romaji":"ミ",
-    "moji":"み",
+    "romaji":"mi",
+    "moji":"ミ",
     "audio":"mi.mp3",
     "title":"mi",
   },
@@ -2890,4 +2890,153 @@ export const katakanaList = [
     "audio":"pyo.mp3",
     "title":"pyo",
   }
+]
+
+export const numberList = [
+  //SeiOn
+  {   
+    "id":"num_1",
+    "type":"vocabulary",  
+    "romaji":"ichi",
+    "moji":"いち",
+    "kanji":"一",
+    "english":"one",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_2",
+    "type":"vocabulary",      
+    "romaji":"ni",
+    "moji":"に",
+    "kanji":"二",
+    "english":"two",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_3",
+    "type":"vocabulary",      
+    "romaji":"san",
+    "moji":"さん",
+    "kanji":"三",
+    "english":"three",
+    "audio":"ka.mp3"
+  }, 
+  { 
+    "id":"num_4",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_5",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_6",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_7",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_8",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_9",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_10",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_20",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_100",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_200",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_1000",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_10000",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+  {   
+    "id":"num_1000000",
+    "type":"vocabulary",      
+    "romaji":"yon",
+    "moji":"よん",
+    "kanji":"四",
+    "english":"four",
+    "audio":"ka.mp3"
+  },
+
 ]

@@ -144,7 +144,7 @@ module.exports = StyleSheet.create({
   },
   StudyContainer : {
     padding: '2%',
-    backgroundColor: '#d2fafc',
+    backgroundColor: 'white',
   },
   titleContainer : {
     borderColor: '#2771e8',
@@ -161,6 +161,23 @@ module.exports = StyleSheet.create({
     backgroundColor: '#fff',
     borderRadius: 5,
     marginBottom: 5
+  },
+  summaryLearn : {
+    width: '100%',
+    height: 30,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems : 'center',
+    borderBottomColor: '#ddd',
+    borderBottomWidth: 1,
+    backgroundColor: '#fff',
+  },
+  summaryTitle : {
+    flex: 2,
+  },
+  summaryDetail : {
+    flex: 1,
   },
   buttonContainerTopic: {
     flex: 1,
@@ -228,10 +245,9 @@ flipCardBack: {
   position: 'absolute', 
   top: 0, 
 }, 
-
-
-
-
+fontBold:{
+  fontWeight: 'bold',
+},
 cardIcon: {
   alignItems: 'flex-start', 
   justifyContent: 'flex-start', 
@@ -247,7 +263,7 @@ textContent: {
   color: 'black', 
   textAlign: 'center', 
   textAlignVertical: 'center',  
-  fontSize: 128
+  fontSize: 120
 }, 
 
 backgroundImg: {
@@ -300,6 +316,36 @@ iconContainer: {
   left: 0,
   zIndex: 2, 
 }, 
+HL2Font: {
+  fontSize: 15,
+},
+HL2img : {
+  marginTop:10,
+  height: 60,
+  width:  250,
+},
+tableContainer : {
+  width: '100%',
+}, 
 
+table: {
+  flex: 1, 
+  flexDirection: 'row', 
+  justifyContent: 'space-between',
+  alignItems: 'center',
+}, 
+
+tableRow: {
+  justifyContent: 'space-between',
+  alignItems: 'center',
+}, 
+
+tableHeader : {
+  backgroundColor: '#45B3EB', 
+},
+
+tableBorder: {
+  borderWidth: 1,
+},
 });
 

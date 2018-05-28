@@ -12,7 +12,7 @@ export function createUser(userValue){
           body: JSON.stringify(userValue)
         }).then(data => data.json())
         .then(json => {
-          dispatch(fetchDataSuccess(json));
+          dispatch(fetchDataSuccess(userValue));
         })
         .catch(err => dispatch(fetchDataFailed(err)))
       };        
@@ -41,6 +41,12 @@ export function deleteUserState(){
     };        
 }
 
+export function updateProfile(userVal){
+  return (dispatch) => {
+      dispatch(updateProfileDispatch(userVal))
+    };        
+}
+
 // ===================================== ACTION SENDING DATA TO REDUCER =================================================
 export function fetchData() {
   return {
@@ -51,7 +57,7 @@ export function fetchData() {
 export function fetchDataSuccess(data) {
   return {
     type: FETCH_USER_SUCCESS,
-    data: data.data
+    data: data
   }
 }
 export function fetchDataFailed(error) {
@@ -61,8 +67,15 @@ export function fetchDataFailed(error) {
   }
 }
 
-export function deleteUserStateDispatch() {;
+export function deleteUserStateDispatch() {
   return {
     type: USER_REMOVE
+  }
+}
+
+export function updateProfileDispatch(userVal) {
+  return {
+    type: "UpdateProfile",
+    data: userVal,
   }
 }

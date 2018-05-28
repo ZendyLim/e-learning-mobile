@@ -72,7 +72,7 @@ class LearnListScreen extends Component {
         <ScrollView style={study.StudyContainer}>
          { this.state.item.map((item, key)=>(
           <TouchableOpacity key={key} style={study.btnLearn} onPress={this.navigateToPage.bind(this, item, key)}>
-              <Text>{item.title}</Text>
+              <Text>{strings[item.title]}</Text>
           </TouchableOpacity>
         ))}
         </ScrollView>

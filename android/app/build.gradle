@@ -152,8 +152,12 @@ dependencies {
     compile (project(":react-native-google-signin")){
         exclude group: "com.google.android.gms" // very important
     }
+    compile project(':@terrylinla/react-native-sketch-canvas')
     compile 'com.google.android.gms:play-services-auth:11.8.0'
     compile project(':react-native-svg')
+    compile project(':react-native-image-picker')
+    compile project(':react-native-fs')
+    compile project(':react-native-image-resizer')
 }
 
 // Run this once to be able to run the application with BUCK

@@ -4,7 +4,10 @@ const initialState = {
     guestID:'', 
     user: [], 
     loading: true,
-    isFailed: false 
+    isFailed: false ,
+    dataNew: [],
+    nationality: '',
+    school: '',
 };
  
 export default function userReducer (state = initialState, action) {
@@ -31,6 +34,13 @@ export default function userReducer (state = initialState, action) {
         case USER_REMOVE:
             state = Object.assign({}, state, { 
                 user: []
+            });
+            return state;    
+        case "UpdateProfile":
+        console.log('update',action.data);
+            state = Object.assign({}, state, { 
+                nationality: action.data.nationality,
+                school: action.data.school
             });
             return state;           
         default:

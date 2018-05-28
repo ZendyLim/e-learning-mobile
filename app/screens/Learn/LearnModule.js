@@ -15,10 +15,13 @@ import { Icon } from 'react-native-elements';
 import  { strings }   from '../../config/localization';
 import { LearnListData } from '../../config/studyList';
 import style from 'react-native-datepicker/style';
-import LearningModule from '../Study/hiraganaExplanation';
+import LearningModule from '../Study/hiraganaFlashcard';
 import HL2Screen from '../Learn/HL2';
+import SL2Screen from '../Learn/SL2';
 import { HiraganaLearnStack } from '../../config/router';
 import NumberLearnScreen from '../Learn/learnsl1';
+import GreetingLearnScreen from '../Learn/learngl1';
+import HL4 from '../sketch';
 import GoiLearn1 from '../Learn/goilearn1';
 
 class LearnHiraganaModule extends Component {
@@ -35,7 +38,8 @@ class LearnHiraganaModule extends Component {
   state = {
     title:"",
     type: "",
-    study: ""
+    study: "",
+    studyType: ""
   }
   componentDidMount() {
     const { navigation } = this.props;
@@ -49,29 +53,50 @@ class LearnHiraganaModule extends Component {
     //   config: navigation.getParam('config', null),
     });
   }
+  goBack = () => {
+     this.navigation.navigate('LearnListScreen');
+  }
   render() {
     if(this.state.type){
         if(this.state.type == 'HL1'){
-            if(this.state.title == 'HIRAGANA_HL1'){
+            if(this.state.studyType == 'HIRAGANA_TITLE'){
                 return (
                     <HiraganaLearnStack />        
                 );            
-            }else if(this.state.title == 'NUMBER_HL1'){
+            }else if(this.state.studyType == 'NUMBER_TITLE'){
                 return (
                     <NumberLearnScreen studyType={this.state.studyType} img={this.state.img}/>       
                 );            
+            }else{
+                return (
+                    <GreetingLearnScreen studyType={this.state.studyType} img={this.state.img}/>       
+                );            
             }
+
         }else if(this.state.type == 'HL2'){
-            return (
-                <HL2Screen />        
-            );        
-        }else if(this.state.type == 'HL3'){
-            return (
-                <LearningModule />     
-            );        
+            if(this.state.studyType == 'HIRAGANA_TITLE'){
+                return (
+                    <HL2Screen />        
+                );            
+            }else if(this.state.studyType == 'NUMBER_TITLE'){
+                return (
+                    <SL2Screen />        
+                );            
+            }
+        }else if(this.state.type == 'HL3' || this.state.type == 'GL3'  || this.state.type == 'KL3' || this.state.type == 'BL3' ){
+            if(this.state.title == "FLASH_CARD_HIRAGANA" || this.state.title == 'FLASH_CARD_KATAKANA'){
+                return (
+                    <LearningModule title={ this.state.title } goBack={this}/>     
+                );        
+                }else{
+                return (
+                    <LearningModule title={ this.state.studyType }  goBack={this}/>     
+                );        
+    
+            }
         }else if(this.state.type == 'HL4'){
             return (
-                <Text>HL4</Text>        
+                <HL4 />        
             );        
         }else if(this.state.type == 'GL1'){
             if(this.state.title == 'TOPIC1_GL1'){

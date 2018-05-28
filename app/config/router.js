@@ -20,9 +20,10 @@ import QuizMainScreen from '../screens/Quiz/quizMain';
 import QuizListScreen from '../screens/Quiz/quizList';
 import QuizHiraganaListScreen from '../screens/Quiz/quizHiraganaList';
 import QuizKatakanaListScreen from '../screens/Quiz/quizKatakanaList';
-import HiraganaExplanationScreen from '../screens/Study/hiraganaExplanation';
+import HiraganaFlashcardScreen from '../screens/Study/hiraganaFlashcard';
 import ScoreScreen from '../screens/Study/score';
-import MainView from '../screens/sound';
+//import MainView from '../screens/sound';
+import example from '../screens/sketch';
 //import Summary Screen
 import StudySummaryScreen from '../screens/Summary/studySummary';
 //import Quiz Flash Screen
@@ -35,8 +36,20 @@ import StudyReduxScreen from '../screens/studyRedux';
 import LearnHL1Screen from '../screens/Learn/learnhl1';
 import HiraganaLearnScreen from '../screens/Learn/hiraganalearn';
 import KatakanaLearnScreen from '../screens/Learn/katakanalearn';
+//summary 
+import SummaryTopicList from '../screens/Summary/studyPick';
+import SummaryLearnDetail from '../screens/Summary/summaryLearn';
+
 
 const styles = require('../styles/style');
+
+export const QuizStack = TabNavigator({ 
+    QuizHiraganaList: QuizHiraganaListScreen, 
+    QuizKarakanaList: QuizKatakanaListScreen
+}, {
+    tabBarPosition: 'top',
+});
+
 //import 
 const StudyStack = StackNavigator({ 
     StudyList: StudyListScreen,
@@ -45,7 +58,7 @@ const StudyStack = StackNavigator({
     QuizFlash: QuizFlashScreen,
     LearnListScreen:  LearnListScreen,
     QuizMain: QuizMainScreen,
-    QuizList: QuizListScreen,
+    QuizList: QuizStack,
     LearnHiraganaModule: 
     {
         screen: LearnHiraganaModule, 
@@ -56,11 +69,16 @@ const StudyStack = StackNavigator({
         navigationOptions: { tabBarVisible: false  }
     },
     StudyList: StudyListScreen ,
+    HiraganaFlash: HiraganaFlashcardScreen , 
     LearnHL1: LearnHL1Screen,
+    summaryLearnData : SummaryLearnDetail,
 });
 
 const SummaryStack = StackNavigator({
     StudySummary: StudySummaryScreen,
+    PickTopicSummary : SummaryTopicList,
+    summaryLearn : SummaryLearnDetail,
+
 });
 
 const SettingStack = StackNavigator({
@@ -114,12 +132,6 @@ export const AppStack = TabNavigator({
     }
 });
 
-export const QuizStack = TabNavigator({ 
-    QuizHiraganaList: QuizHiraganaListScreen, 
-    QuizKarakanaList: QuizKatakanaListScreen
-}, {
-    tabBarPosition: 'top',
-});
 
 export const MainStack = StackNavigator({
     AppStack: {
