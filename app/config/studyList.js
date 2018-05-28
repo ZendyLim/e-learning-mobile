@@ -196,7 +196,9 @@ export const StudyList = [{
   TOPIC1_TITLE_and_vocabulary : [{
     title : 'GOI_LIST',
     type : 'GL1',
-    study : '4'
+    study : '4',
+    datatopic : 'Goi',
+    config : 'mefamily'
   },{
     title : 'FLASH_CARD',
     type : 'GL3',
@@ -206,7 +208,9 @@ export const StudyList = [{
 TOPIC1_TITLE_and_grammar : [{
   title : 'BUNPO_LIST',
   type : 'BL1',
-  study : '4'
+  study : '4',
+  datatopic : 'Bunpo',
+  config : 'mefamily'
 },{
   title : 'FLASH_CARD',
   type : 'BL3',
@@ -216,7 +220,9 @@ TOPIC1_TITLE_and_grammar : [{
 TOPIC1_TITLE_and_kanji : [{
   title : 'KANJI_LIST',
   type : 'KL1',
-  study : '4'
+  study : '4',
+  datatopic : 'Kanji',
+  config : 'mefamily'
 },{
   title : 'FLASH_CARD',
   type : 'KL3',
