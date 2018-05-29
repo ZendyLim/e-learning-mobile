@@ -275,14 +275,14 @@ import {
       if (this.value >= 90) {
         Animated.spring(this.animatedValue, {
           toValue: 0, 
-          friction: 30, 
-          tension: 40,  
+          friction: 100, 
+          tension: 100,  
         }).start(set);
       } else {
         Animated.spring(this.animatedValue, {
           toValue: 180, 
-          friction: 30, 
-          tension: 40,  
+          friction: 100, 
+          tension: 100,  
         }).start(set);
       }
     }
