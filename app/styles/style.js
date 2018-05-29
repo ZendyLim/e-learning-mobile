@@ -412,22 +412,36 @@ module.exports = StyleSheet.create({
 			flexDirection:'row',
 		},
 		questionBigText:{
-			fontSize: 60,
+			fontSize:60,
 			color: primaryColor
 		},
 		questionInsText:{
-			fontSize: 36,
 			color:textColor
 		},
-		questionText:{
+		quizSquaredInstruction:{
+			fontSize:36,
 			flexDirection: 'column'
 		},
-		questionLongInstruction:{
+		quizSquaredQuestion:{
+			fontSize:60,
+			flexDirection: 'column'
+		},
+		quizLongInstruction:{
 			fontSize: 32,
 			width:'100%',
 			lineHeight:32
 		},
-		questionLong:{
+		quizLongQuestion:{
+			fontSize: 38,
+			width:'100%',
+			lineHeight:40
+		},
+		quizKanjiInstruction:{
+			fontSize: 32,
+			width:'100%',
+			lineHeight:32
+		},
+		quizKanjiQuestion:{
 			fontSize: 40,
 			width:'100%',
 			lineHeight:40
@@ -480,8 +494,12 @@ module.exports = StyleSheet.create({
 			zIndex:1
 		},
 		quizSquared:{
-			height:125,
-			width:125,
+			height:(window.width/2.5) - 10,
+			width:(window.width/2.5) - 10,
+		},
+		quizKanji:{
+			height:(window.width/2.5) - 10,
+			width:(window.width/2.5) - 10,
 		},
 		quizLong:{
 			padding:5,
@@ -500,6 +518,11 @@ module.exports = StyleSheet.create({
 		quizLongText:{
 			fontSize:30,
 			color:textColor
+		},
+		quizKanjiText:{
+			fontSize:35,
+			color:textColor,
+			textAlign: 'center'
 		},
 		quizBtnIconWrapper:{
 			width:50,

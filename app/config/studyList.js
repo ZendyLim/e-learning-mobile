@@ -58,8 +58,9 @@ export const StudyList = [{
     kanji:{     
       random:true, 
       types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],
+      //types:['kanji_fill'],
       withCorrection:true,
-      style:'quizLong'
+      style:'quizKanji'
     }
   },
   {

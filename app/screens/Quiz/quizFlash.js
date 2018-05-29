@@ -282,7 +282,7 @@ import {
           currentItems[currentItems.length] = allArray[randomIndex].id;
           randomItem = allArray[randomIndex];
         }
-
+        
         array.answerOption[i] = randomItem;
       }
 
@@ -382,6 +382,44 @@ import {
 
           paramFormat.time = time * 1.5;
           break;
+        
+        case 'kanji_fill':
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'kanji'
+          };
+
+          paramFormat.time = time * 1.5;
+          break;
+
+        case 'kanji_moji':
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'kanji'
+          };
+          break;
+        
+        case 'kanji_english':
+          paramFormat = {
+            answerFormat: 'english',
+            questionFormat: 'kanji'
+          };
+          break;
+        
+        case 'audio_kanji':
+          paramFormat = {
+            answerFormat: 'kanji',
+            questionFormat: 'audio'
+          };
+          break;
+        
+        case 'moji_kanji':
+          paramFormat = {
+            answerFormat: 'kanji',
+            questionFormat: 'moji'
+          };
+          break;
+          
       
         default:
           paramFormat = {

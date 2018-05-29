@@ -77,11 +77,11 @@ class QuestionPanel extends Component {
     else{
       return(
           <View style={[ styles.questionContainer, styles.col12 ]}>
-            <Text style={ [styles.questionInsText, this.props.styleFormat == 'quizSquared' ? styles.questionText : styles.questionLongInstruction ] }>
+            <Text style={ [styles.questionInsText, styles[this.props.styleFormat + 'Instruction']]}>
                 {strings.QUESTION_SELECT}
             </Text>
             <Text 
-              style={ [styles.questionBigText, this.props.styleFormat == 'quizSquared' ? styles.questionText : styles.questionLong, 
+              style={ [styles.questionBigText, styles[this.props.styleFormat + 'Question'], 
                   this.props.format == 'romaji' && styles.questionRomaji ] }
               >
                 { this.props.question[this.props.format] }

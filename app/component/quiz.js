@@ -20,6 +20,7 @@ class Quiz extends Component {
 
       this.currentAnswer = this.props.question;
       this.isFill = false;
+      this.extraChar = '';
       
       this.state = {
           selectedAnswer: '',
@@ -29,7 +30,7 @@ class Quiz extends Component {
   }
 
   _renderAnswerButtons(){
-    fill = ['audio_fill','english_fill'];
+    fill = ['audio_fill','english_fill','kanji_fill'];
     this.isFill = fill.indexOf(this.props.format) > -1;
     
     if(this.isFill){      
@@ -40,6 +41,7 @@ class Quiz extends Component {
                     textDisplay={ this.props.question[this.props.displayFormat] }
                     onSelectAnswer={ this.onFilled }
                     isCorrect={ this.checkFilled() }
+                    extraChar={ this.extraChar }
                     reset={ this.state.reset } 
                 />
             </View>

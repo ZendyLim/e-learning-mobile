@@ -12,7 +12,8 @@ class FillButton extends Component {
     textData: PropTypes.object,
     id: PropTypes.string,
     isCorrect: PropTypes.number,
-    styleFormat: PropTypes.string
+    styleFormat: PropTypes.string,
+    extraChar: PropTypes.string,
   };
 
   constructor(props) {
@@ -23,6 +24,7 @@ class FillButton extends Component {
         answerButton:[]
       } 
       this.current = '';
+      this.answerLength = 0;
   }
 
     _renderIcon(){
@@ -52,12 +54,17 @@ class FillButton extends Component {
 
     setFillButtons(){
         if(this.current != this.props.textDisplay){
-            this.current = this.props.textDisplay;        
-            answerString = this.props.textDisplay;
-            answerString = answerString.split('');
+            this.current = this.props.textDisplay;    
+                
+            let answerString = this.props.textDisplay;
+            let extraString = this.props.extraChar;
+            
+            answerString = answerString.split('');            
+            
             this.emptyBox = [];
+            this.answerLength = answerString.length;
 
-            for(i = 0; i < answerString.length; i++){
+            for(i = 0; i < this.answerLength; i++){
                 answerString[i] = {
                     selected: false,
                     char: answerString[i]
@@ -69,6 +76,14 @@ class FillButton extends Component {
                 };
             }
 
+            for(i = 0; i < extraString.length; i++){
+                answerString[i] = {
+                    selected: false,
+                    char: extraString[i]
+                };
+            }
+
+            
             this.shuffledString =  this.shuffle(answerString);    
         }
         
@@ -129,7 +144,7 @@ class FillButton extends Component {
     fillEmpty(char,key) {
         filled = '';
         fillBox = true;
-        for(i = 0; i < this.shuffledString.length; i++){
+        for(i = 0; i < this.answerLength; i++){
             if(fillBox && !this.emptyBox[i].char){
                 this.emptyBox[i].char = char;
                 this.emptyBox[i].key = key;
