@@ -2,7 +2,7 @@ export const StudyList = [{
     title : 'HIRAGANA_TITLE',
     img : 'class',
     lock : false,
-    type : 'Initial',
+    type : 'INITIAL',
     topic_id: 'T001',
     quizOptions: {
       random: true,
@@ -14,7 +14,7 @@ export const StudyList = [{
     title : 'NUMBER_TITLE',
     img : 'number_chara',
     lock : false,
-    type : 'Initial',
+    type : 'INITIAL',
     topic_id: 'T002',
     quizOptions: {
       random: false,
@@ -27,7 +27,7 @@ export const StudyList = [{
     title : 'GREETING_TITLE',
     img : 'loading',
     lock : false,
-    type : 'Initial',
+    type : 'INITIAL',
     topic_id: 'T003',
     quizOptions: {
       random: true,
@@ -40,111 +40,111 @@ export const StudyList = [{
     title : 'TOPIC1_TITLE',
     img : 'me_family',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T004'
   },
   {
     title : 'TOPIC2_TITLE',
     img : 'loading',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T005'
   },
   {
     title : 'TOPIC3_TITLE',
     img : 'loading',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T006'
   },{
     title : 'TOPIC4_TITLE',
     img : 'loading',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T007'
   },
   {
     title : 'TOPIC5_TITLE',
     img : 'office',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T008'
   },
   {
     title : 'TOPIC6_TITLE',
     img : 'travel',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T009'
   },
   {
     title : 'TOPIC7_TITLE',
     img : 'health',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T010'
   },
   {
     title : 'TOPIC8_TITLE',
     img : 'market',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T011'
   },
   {
     title : 'TOPIC9_TITLE',
     img : 'ramen_shop',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T012'
   },
   {
     title : 'TOPIC10_TITLE',
     img : 'loading',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T013'
   },
   {
     title : 'TOPIC11_TITLE',
     img : 'loading',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T014'
   },
   {
     title : 'TOPIC12_TITLE',
     img : 'loading',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T015'
   },
   {
     title : 'TOPIC13_TITLE',
     img : 'loading',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T016'
   },
   {
     title : 'TOPIC14_TITLE',
     img :'society',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T017'
   },
   {
     title : 'TOPIC15_TITLE',
     img : 'loading',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T018'
   },
   {
     title : 'TOPIC16_TITLE',
     img : 'loading',
     lock : true,
-    type : 'Topic',
+    type : 'TOPIC',
     topic_id: 'T019'
   },
   ];
@@ -196,7 +196,9 @@ export const StudyList = [{
   TOPIC1_TITLE_and_vocabulary : [{
     title : 'GOI_LIST',
     type : 'GL1',
-    study : '4'
+    study : '4',
+    datatopic : 'Goi',
+    config : 'mefamily'
   },{
     title : 'FLASH_CARD',
     type : 'GL3',
@@ -206,7 +208,9 @@ export const StudyList = [{
 TOPIC1_TITLE_and_grammar : [{
   title : 'BUNPO_LIST',
   type : 'BL1',
-  study : '4'
+  study : '4',
+  datatopic : 'Bunpo',
+  config : 'mefamily'
 },{
   title : 'FLASH_CARD',
   type : 'BL3',
@@ -216,11 +220,13 @@ TOPIC1_TITLE_and_grammar : [{
 TOPIC1_TITLE_and_kanji : [{
   title : 'KANJI_LIST',
   type : 'KL1',
-  study : '4'
+  study : '4',
+  datatopic : 'Kanji',
+  config : 'mefamily'
 },{
   title : 'FLASH_CARD',
   type : 'KL3',
   study : '4'
 },
 ],     
-  };
+};
