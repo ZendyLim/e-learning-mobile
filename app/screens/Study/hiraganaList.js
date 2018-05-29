@@ -40,7 +40,7 @@ class HiraganaListScreen extends Component {
       headerTitle : navigation.getParam('headerTitle', null),
       studyType : navigation.getParam('studyType', null),
       typeQuiz : navigation.getParam('typeQuiz', null),
-      topicId : navigation.getParam('id', null)
+      topicId : navigation.getParam('topic_id', null)
     });
     
   }
@@ -95,6 +95,13 @@ class HiraganaListScreen extends Component {
       ));
     }
   }
+
+  navigateToSummary = (type, topicId = null) =>{
+    this.props.navigation.navigate('summaryLearnData',{
+      studyType : 'test',
+      topic_id : 'test',
+    });
+  }
   render() {
     return (
       <ScrollView>
@@ -127,7 +134,7 @@ class HiraganaListScreen extends Component {
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={study.button}>
+              <TouchableOpacity style={study.button} onPress={this.navigateToSummary.bind(this, 'Quiz')}>
                 <Icon name='search'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
@@ -141,10 +148,6 @@ class HiraganaListScreen extends Component {
               <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Test')}>
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={study.button}>
-                <Icon name='search'   color='#fff'/>
-                <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
             </View>
           </View>

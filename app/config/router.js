@@ -37,6 +37,10 @@ import StudyReduxScreen from '../screens/studyRedux';
 import LearnHL1Screen from '../screens/Learn/learnhl1';
 import HiraganaLearnScreen from '../screens/Learn/hiraganalearn';
 import KatakanaLearnScreen from '../screens/Learn/katakanalearn';
+//summary 
+import SummaryTopicList from '../screens/Summary/studyPick';
+import SummaryLearnDetail from '../screens/Summary/summaryLearn';
+
 
 const styles = require('../styles/style');
 
@@ -69,10 +73,14 @@ const StudyStack = StackNavigator({
     StudyList: StudyListScreen ,
     HiraganaFlash: HiraganaFlashcardScreen , 
     LearnHL1: LearnHL1Screen,
+    summaryLearnData : SummaryLearnDetail,
 });
 
 const SummaryStack = StackNavigator({
     StudySummary: StudySummaryScreen,
+    PickTopicSummary : SummaryTopicList,
+    summaryLearn : SummaryLearnDetail,
+
 });
 
 const SettingStack = StackNavigator({
