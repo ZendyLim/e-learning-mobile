@@ -235,7 +235,7 @@ import {
         return obj.title == this.title; 
       })
 
-      if(this.study.type == 'Initial'){
+      if(this.study.type == 'INITIAL'){
         this.quizOptions = this.study.quizOptions;
       }
       else{
@@ -306,6 +306,7 @@ import {
     };
 
     randomQuizFormat(){    
+
       var quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
       var quizFormatLength = quizFormat.length, randomIndex;
       var paramFormat,time;
@@ -503,7 +504,7 @@ import {
       
       this.addScore(isCorrect);
 
-      if(this.study.type == 'Topic' && this.state.type == 'Quiz' && this.showCorrect){
+      if(this.study.type == 'TOPIC' && this.state.type == 'Quiz' && this.showCorrect){
         
         stopTimerParam.showCorrect = this.showCorrect;
         
