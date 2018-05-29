@@ -62,7 +62,7 @@ import {
       this.initialParams = [];      
       this.isMounted = true;
       this.showCorrect = false;
-      
+
       this.state = {
         timesUp: false,
         expression: 'default',
@@ -143,8 +143,7 @@ import {
                     displayFormat={ this.state.answerFormat }
                     format={ this.state.format }
                     styleFormat={ this.quizOptions.style }
-                    timesUp={ this.state.timesUp }
-                    isCorrect={ this.addScore }
+                    timesUp={ this.state.timesUp }                    
                   />) :
                   (<View>
                     <CorrectPanel 
@@ -153,7 +152,10 @@ import {
                       style={[styles.col12]}
                       styleFormat={ this.quizOptions.style }
                     />
-                    <CustomButton icon="chevron-right">{ strings.NEXT }</CustomButton>
+                    
+                    <TouchableHighlight style={[ styles.highPrio ]} onPress={() =>  this.goNextQuestion() }>
+                      <CustomButton icon="chevron-right">{ strings.NEXT }</CustomButton>  
+                    </TouchableHighlight> 
                   </View>
                   )
                 }
@@ -397,9 +399,10 @@ import {
       if(this.mounted){
         this.setTakeQuiz();
         if(counter < this.allQuestion.length){
-          this.randomQuizFormat();
-
+          this.showCorrect = false;
           this.timeStops = 0;
+
+          this.randomQuizFormat();
     
           this.setState({
               counter: counter,
@@ -411,7 +414,8 @@ import {
               timerRestart:true,
               timesUp: false,  
               expression:'default',
-              correct: 0
+              correct: 0,
+              showCorrect:false
           });
         }
         else{
@@ -437,7 +441,8 @@ import {
             questionTime : this.state.questionTime,
             answer :  this.state.answer,
             correct : this.state.correct,
-            questionTime: this.timeStops
+            questionTime: this.timeStops,
+            correct_title: this.state.question.moji
       }
 
       this.studyRecord[this.studyRecord.length] = parseValue;
@@ -458,6 +463,12 @@ import {
       }
     this.props.endLearn(parseValue); //call our action
   };
+
+    goNextQuestion() {      
+      
+        this.setNextQuestion();
+        
+    }
 
     onTimesUp = (val) => {
       if(!this.showCorrect){
@@ -484,14 +495,16 @@ import {
       });
     };
 
-    stopTimer = (answer) => {   
+    stopTimer = (answer, isCorrect) => {   
       stopTimerParam = {
         timerRun:false,
         answer:answer
       }   
-            
-      if(this.study.type == 'Topic' && this.state.type == 'Quiz'){
-        this.showCorrect = true;
+      
+      this.addScore(isCorrect);
+
+      if(this.study.type == 'Topic' && this.state.type == 'Quiz' && this.showCorrect){
+        
         stopTimerParam.showCorrect = this.showCorrect;
         
       }
@@ -510,6 +523,8 @@ import {
     addScore = (isCorrect) => {
       
       if(isCorrect){
+        this.showCorrect = false;
+
         this.setState({
           score: this.state.score + 1,
           correct:1,
@@ -518,11 +533,16 @@ import {
         
       }
       else{
+        this.showCorrect = true;
+
         this.setState({
           expression:'sad'
         });
       }
-    };
+      
+    };    
+
+    
   
   }
 

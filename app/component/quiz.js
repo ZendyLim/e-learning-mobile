@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TouchableHighlight, Image, View, Text } from 'react-native';
+import { TouchableHighlight, Image, View, Text, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 import AnswerButton from './answerButton';
 import FillButton from './fillButton';
@@ -35,18 +35,20 @@ class Quiz extends Component {
     if(this.isFill){      
         console.log(this.props.question);
         return(
-            <FillButton
-                textDisplay={ this.props.question[this.props.displayFormat] }
-                onSelectAnswer={ this.onFilled }
-                isCorrect={ this.checkFilled() }
-                reset={ this.state.reset } 
-            />
+            <View style={ [styles.displayInlineContainer, styles.answerContainer] }>
+                <FillButton
+                    textDisplay={ this.props.question[this.props.displayFormat] }
+                    onSelectAnswer={ this.onFilled }
+                    isCorrect={ this.checkFilled() }
+                    reset={ this.state.reset } 
+                />
+            </View>
         );   
                         
     }
     else{
         return(
-            <View>
+            <View style={ [styles.displayInlineContainer, styles.answerContainer] }>
                 { this.props.answerOptions.map((item)=>(
                     <AnswerButton 
                         key={ item.id }
@@ -68,9 +70,9 @@ class Quiz extends Component {
     render(){
         
         return (
-            <View style={ [styles.answerContainer, styles.displayInlineContainer] }>
+            <ScrollView>
                 { this._renderAnswerButtons() }
-            </View>
+            </ScrollView>
         );
     }
 
@@ -104,9 +106,8 @@ class Quiz extends Component {
     }
 
     onSelect = (val) => {
-        this.props.onAnswerSelected(val);
 
-        this.props.isCorrect(val == this.props.question.id);
+        this.props.onAnswerSelected(val, val == this.props.question.id);
         
         this.setState({
             selectedAnswer: val
@@ -128,9 +129,7 @@ class Quiz extends Component {
     }
     
     onFilled = (val) => {
-        this.props.onAnswerSelected(val);
-
-        this.props.isCorrect(val == this.props.question[this.props.displayFormat]);
+        this.props.onAnswerSelected(val, val == this.props.question[this.props.displayFormat]);
         
         this.setState({
             selectedAnswer: val

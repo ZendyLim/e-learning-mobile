@@ -114,6 +114,9 @@ module.exports = StyleSheet.create({
 			height: 56,
 			backgroundColor: primaryColor,
 		}, 
+		highPrio: {
+			zIndex:999
+		},
 	//Header
 	headContainer:{
 		backgroundColor:primaryColor,
