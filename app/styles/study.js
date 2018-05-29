@@ -263,13 +263,6 @@ cardText: {
   height: '100%'
 }, 
 
-textContent: {
-  color: 'black', 
-  textAlign: 'center', 
-  textAlignVertical: 'center',  
-  fontSize: 120
-}, 
-
 backgroundImg: {
   flex: 1,
   width: null,

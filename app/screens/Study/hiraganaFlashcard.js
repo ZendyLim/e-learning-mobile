@@ -19,6 +19,7 @@ import {
   import { ImageData } from '../../config/image_list';
   import { flashData } from '../../config/flash';
   import LearnListScreen from '../Learn/LearnList';
+  import ResponsiveText from '../../component/responsiveText';
 
   
   var Sound = require('react-native-sound');
@@ -117,7 +118,8 @@ import {
         isPause: false,
         loopingSound: undefined,
         tests: {},
-        btnDisable: true
+        btnDisable: true,
+        isFinish: false
       };
 
       this.progressCounter = 0;
@@ -200,7 +202,7 @@ import {
     updateNext(){
       this.state.btnDisable = false;
       if(this.progressCounter + 1 === this.data.length) {
-        this.props.goBack.props.navigation.goBack(null) ;
+        this.state.isFinish = true;
         return;
       }
       this.pause();
@@ -329,12 +331,12 @@ import {
                 <View style={studyStyles.cardContainer}>
                   <Animated.View style={[frontAnimatedStyle]}>
                     <View style={[studyStyles.cardText]}>
-                      <Text allowFontScaling={false} style={studyStyles.textContent}>{ this.state.front }</Text>
+                      <ResponsiveText content={this.state.front} title={this.props.title} />
                     </View>
                   </Animated.View>
                   <Animated.View  style={[backAnimatedStyle]}>
                     <View style={[studyStyles.cardText]}>
-                      <Text style={studyStyles.textContent}>{ this.state.back }</Text>
+                    <ResponsiveText content={this.state.back} title={this.props.title} />
                     </View>
                   </Animated.View>
                 </View>
@@ -378,7 +380,11 @@ import {
                   style={studyStyles.roundButton}
                   onPress={() => this.updateNext()}
                 >
-                  <Icon name='arrow-forward' color='#fff' size={40}/>
+                   { this.state.isFinish ? 
+                    (<Icon name='home' color='#fff' size={40}/>) : 
+                    (<Icon name='arrow-forward' color='#fff' size={40}/>) 
+                   }
+                  
                 </TouchableOpacity>  
               </View>
             </View>
