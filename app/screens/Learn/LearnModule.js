@@ -34,6 +34,7 @@ class LearnHiraganaModule extends Component {
   } 
   static navigationOptions = {
     title: 'Learn',
+    swipeEnabled: false
   };
   state = {
     title:"",
