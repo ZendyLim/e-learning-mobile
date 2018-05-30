@@ -124,7 +124,7 @@ function playSound(testInfo, component) {
             <Image 
               style={ study.cardImg }
               source= { ImageData[this.state.img] }
-              // resizeMode="stretch"  
+              // resizeMode="stretch" 
             />
             <Text style={study.title}> { strings[this.props.studyType] } </Text>
           </View>

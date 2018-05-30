@@ -214,12 +214,17 @@ import {
         if(this.value >= 90){
           state.front = this.data[this.progressCounter].moji;
           state.fakeBack = this.data[this.progressCounter].romaji;
+          state.url == this.data[this.progressCounter].url;
         } else {
           state.fakeFront = this.data[this.progressCounter].romaji;
           state.back = this.data[this.progressCounter].moji;
+          state.url == this.data[this.progressCounter].url;
         }
         
         state.flipped = true;
+        console.log(this);
+        playSound(this.state , this);
+
         return state;
       }, this.flipCard)
     }
