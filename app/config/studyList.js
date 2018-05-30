@@ -39,15 +39,15 @@ export const StudyList = [{
   {
     title : 'TOPIC1_TITLE',
     img : 'me_family',
-    lock : true,
-    type : 'TOPIC',
+    lock : false,
+    type : 'Topic',
     topic_id: 'T004'
   },
   {
     title : 'TOPIC2_TITLE',
     img : 'loading',
-    lock : true,
-    type : 'TOPIC',
+    lock : false,
+    type : 'Topic',
     topic_id: 'T005'
   },
   {
