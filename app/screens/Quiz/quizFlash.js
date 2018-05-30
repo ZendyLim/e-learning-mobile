@@ -34,18 +34,31 @@ import {
     static navigationOptions = ({ navigation }) => {      
       subtitle = navigation.getParam('type', null);         
       title = navigation.getParam('title', null);      
+      confirm = true;
+
+      testCall = (val) => {
+        
+        navigation.setParams({
+          pauseTime:val
+        });
+      }
 
       return{
         title: title,
         tabBarVisible:false,
-        header: props => <Header 
+        header: ({props, state}) => <Header 
           title={ strings[title] }
           subtitle={ subtitle }
           navigation={ navigation } 
+          confirm={ confirm }
+          state={ state }
+          testCall={ this.testCall }
           />
       }
     };
 
+
+    
     constructor(props){
       super(props);
     
@@ -62,7 +75,8 @@ import {
       this.initialParams = [];      
       this.isMounted = true;
       this.showCorrect = false;
-
+      this.isPause = null;
+      this.timerResume = false;
       this.state = {
         timesUp: false,
         expression: 'default',
@@ -84,7 +98,7 @@ import {
         typeQuiz : '',
         index : '',
         format:'',
-        showCorrect:false
+        showCorrect:false        
       }            
 
      
@@ -128,6 +142,7 @@ import {
                     onTimesUp={this.onTimesUp} 
                     onRestart={this.onRestart}
                     timeStops={this.setTimeStops}
+                    timerResume={this.timerResume}
                   />
                 }
               </View>
@@ -220,8 +235,23 @@ import {
         });
 
         this.setStartQuiz();
-      }
+      }      
+    }
 
+    componentDidUpdate(){      
+        const { navigation } = this.props;
+        this.timerResume = false;
+      
+      if(this.isPause != navigation.getParam('pauseTime', null)){
+
+        this.isPause = navigation.getParam('pauseTime', null);
+        this.timerResume = true;
+
+        this.setState({
+          timerRun:this.isPause,          
+        });
+
+      }
       
     }
 
@@ -454,7 +484,7 @@ import {
               timesUp: false,  
               expression:'default',
               correct: 0,
-              showCorrect:false
+              showCorrect:false              
           });
         }
         else{
