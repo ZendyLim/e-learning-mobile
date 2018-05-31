@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { TouchableHighlight, Image, View, Text } from 'react-native';
+import { TouchableHighlight, Image, View, Text, ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 import AnswerButton from './answerButton';
+import FillButton from './fillButton';
 
 /**
   Quiz Button
@@ -16,24 +17,45 @@ class Quiz extends Component {
 
   constructor(props) {
       super(props);
-      
-      this.currentAnswer = this.props.question;
 
+      this.currentAnswer = this.props.question;
+      this.isFill = false;
+      this.extraChar = '';
+      
       this.state = {
-          selectedAnswer: ''
+          selectedAnswer: '',
+          question:''
       }
       
   }
 
-    render(){
-        
-        return (
-            <View style={ [styles.answerContainer, styles.displayInlineContainer] }>
+  _renderAnswerButtons(){
+    fill = ['audio_fill','english_fill','kanji_fill'];
+    this.isFill = fill.indexOf(this.props.format) > -1;
+    
+    if(this.isFill){      
+        console.log(this.props.question);
+        return(
+            <View style={ [styles.displayInlineContainer, styles.answerContainer] }>
+                <FillButton
+                    textDisplay={ this.props.question[this.props.displayFormat] }
+                    onSelectAnswer={ this.onFilled }
+                    isCorrect={ this.checkFilled() }
+                    extraChar={ this.extraChar }
+                    reset={ this.state.reset } 
+                />
+            </View>
+        );   
+                        
+    }
+    else{
+        return(
+            <View style={ [styles.displayInlineContainer, styles.answerContainer] }>
                 { this.props.answerOptions.map((item)=>(
                     <AnswerButton 
                         key={ item.id }
                         id={ item.id }
-                        textDisplay={ item[this.props.format] }
+                        textDisplay={ item[this.props.displayFormat] }
                         styleFormat={ this.props.styleFormat } 
                         selected={ item.id == this.state.selectedAnswer } 
                         onSelectAnswer={ this.onSelect }
@@ -43,9 +65,21 @@ class Quiz extends Component {
                 )}
             </View>
         );
+
+    }
+  }
+
+    render(){
+        
+        return (
+            <ScrollView>
+                { this._renderAnswerButtons() }
+            </ScrollView>
+        );
     }
 
     componentDidUpdate() {
+        
         this.resetSelected();
     }
 
@@ -53,7 +87,8 @@ class Quiz extends Component {
         if(this.currentAnswer.id != this.props.question.id){
             this.currentAnswer = this.props.question
             this.setState({
-                selectedAnswer: ''
+                selectedAnswer: '',
+                reset:0
             })
         }
     }
@@ -73,15 +108,35 @@ class Quiz extends Component {
     }
 
     onSelect = (val) => {
-        this.props.onAnswerSelected(val);
 
-        this.props.isCorrect(val == this.props.question.id);
+        this.props.onAnswerSelected(val, val == this.props.question.id);
         
         this.setState({
             selectedAnswer: val
         });
+    } 
+
+    checkFilled = (id) => {
+        
+        if(this.state.selectedAnswer == '' && !this.props.timesUp){
+            return -1;
+        }
+        else if(this.state.selectedAnswer != this.props.question[this.props.displayFormat]){
+            return 0;
+        }
+        else{
+            return 1;
+        }        
+        
     }
     
+    onFilled = (val) => {
+        this.props.onAnswerSelected(val, val == this.props.question[this.props.displayFormat]);
+        
+        this.setState({
+            selectedAnswer: val
+        });
+    } 
 
 }
 
