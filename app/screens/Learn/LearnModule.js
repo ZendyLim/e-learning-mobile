@@ -25,8 +25,8 @@ import HL4 from '../sketch';
 import GoiLearn1 from '../Learn/goilearn1';
 
 class LearnHiraganaModule extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this._onSetLanguageTo('en');
   }
   _onSetLanguageTo(value) {
@@ -90,11 +90,11 @@ class LearnHiraganaModule extends Component {
         }else if(this.state.type == 'HL3' || this.state.type == 'GL3'  || this.state.type == 'KL3' || this.state.type == 'BL3' ){
             if(this.state.title == "FLASH_CARD_HIRAGANA" || this.state.title == 'FLASH_CARD_KATAKANA'){
                 return (
-                    <LearningModule title={ this.state.title } goBack={this}/>     
+                    <LearningModule navigation={this.props.navigation} title={ this.state.title } goBack={this}/>     
                 );        
                 }else{
                 return (
-                    <LearningModule title={ this.state.studyType }  goBack={this}/>     
+                    <LearningModule navigation={this.props.navigation} title={ this.state.studyType }  goBack={this}/>     
                 );        
     
             }
