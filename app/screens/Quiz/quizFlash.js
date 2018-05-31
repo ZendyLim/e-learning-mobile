@@ -540,7 +540,12 @@ import {
     }
 
     onTimesUp = (val) => {
-      if(!this.showCorrect){
+      if(this.study.type == 'TOPIC' && this.state.type == 'Quiz'){        
+        this.setState({
+          showCorrect:true
+        });     
+      }
+      else{
         this.setState({
           timesUp: true,
           expression:'sad'

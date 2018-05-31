@@ -60,7 +60,7 @@ let topic_title_vocab_kanji = [
 let topic_title_vocab_kanji2 = [
   {   
       "id":"tp1_1",
-      "type":"vocabulary",  
+      "type":"kanji",  
       "romaji":"onna",
       "moji":"おんな",
       "kanji":"女",
@@ -69,7 +69,7 @@ let topic_title_vocab_kanji2 = [
   },
   {   
       "id":"tp1_2",
-      "type":"vocabulary",      
+      "type":"kanji",      
       "romaji":"chichi",
       "moji":"ちち",
       "kanji":"父",
@@ -78,7 +78,7 @@ let topic_title_vocab_kanji2 = [
   },
   {   
       "id":"tp1_3",
-      "type":"vocabulary",      
+      "type":"kanji",      
       "romaji":"otoko",
       "moji":"おとこ",
       "kanji":"男",
@@ -87,7 +87,7 @@ let topic_title_vocab_kanji2 = [
   },
   {   
       "id":"tp1_4",
-      "type":"vocabulary",      
+      "type":"kanji",      
       "romaji":"haha",
       "moji":"はは",
       "kanji":"母",
@@ -96,7 +96,7 @@ let topic_title_vocab_kanji2 = [
   },
   {   
       "id":"tp1_5",
-      "type":"vocabulary",      
+      "type":"kanji",      
       "romaji":"inu",
       "moji":"いぬ",
       "kanji":"犬",
@@ -105,11 +105,59 @@ let topic_title_vocab_kanji2 = [
   },
   {   
       "id":"tp1_6",
-      "type":"vocabulary",      
+      "type":"kanji",      
       "romaji":"neko",
       "moji":"ねこ",
       "kanji":"猫",
       "english":"Cat",
+      "audio":"ne.mp3"
+  }
+];
+
+let topic_title_grammar= [
+  {   
+      "id":"tpg1_1",
+      "type":"grammar",      
+      "romaji":"kanako-san ha gakusei desu.",
+      "moji":"かなこさんはがくせいです。",
+      "kanji":"かなこさんは学生です",
+      "english":"Kanako is a student",
+      "audio":"ne.mp3"
+  },
+  {   
+      "id":"tpg1_2",
+      "type":"grammar",      
+      "romaji":"kanako-san ha jaarimasen.",
+      "moji":"かなこさんはがくせいじゃありません。",
+      "kanji":"かなこさんは学生じゃありません",
+      "english":"Kanako is not a student",
+      "audio":"ne.mp3"
+  },
+  {   
+      "id":"tpg1_3",
+      "type":"grammar",      
+      "romaji":"kanako-san ha desu ka.",
+      "moji":"かなこさんはがくせいですか。",
+      "kanji":"かなこさんは学生ですか",
+      "english":"Is kanako a student?",
+      "audio":"ne.mp3"
+  },
+  {   
+      "id":"tpg1_4",
+      "type":"grammar",      
+      "romaji":"kanako-san ha takumi-san ga wakarimasu.",
+      "moji":"かなこさんはたくみさんがわかります。",
+      "kanji":"かなこさんはたくみさんが分かります。",
+      "english":"Kanako knows Takumi",
+      "audio":"ne.mp3"
+  },
+  {   
+      "id":"tpg1_5",
+      "type":"grammar",      
+      "romaji":"kanako-san ha takumi-san ga wakarimasen.",
+      "moji":"かなこさんはたくみさんがわかりません。",
+      "kanji":"かなこさんはたくみさんが分かりません。",
+      "english":"Kanako does not know Takumi",
       "audio":"ne.mp3"
   }
 ];
@@ -1904,6 +1952,7 @@ export const quizItems = {
         }
     ],
     "TOPIC1_TITLE_and_vocabulary": topic_title_vocab_kanji,
-    "TOPIC1_TITLE_and_kanji": topic_title_vocab_kanji2
+    "TOPIC1_TITLE_and_kanji": topic_title_vocab_kanji2,
+    "TOPIC1_TITLE_and_grammar": topic_title_grammar
 };
 

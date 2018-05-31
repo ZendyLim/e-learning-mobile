@@ -53,7 +53,7 @@ export const StudyList = [{
       random:true, 
       types:['english_moji','audio_english','fill','arrange'],
       withCorrection:true,
-      style:'quizLong'
+      style:'quizGrammar'
     },
     kanji:{     
       random:true, 

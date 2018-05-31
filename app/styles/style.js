@@ -446,6 +446,16 @@ module.exports = StyleSheet.create({
 			width:'100%',
 			lineHeight:40
 		},
+		quizGrammarInstruction:{
+			fontSize: 24,
+			width:'100%',
+			lineHeight:24
+		},
+		quizGrammarQuestion:{
+			fontSize: 26,
+			width:'100%',
+			lineHeight:26
+		},
 		questionRomaji:{
 			fontFamily:englishFont,
 			marginLeft:5
@@ -464,7 +474,8 @@ module.exports = StyleSheet.create({
 		},
 		quizBanner:{
 			flex:1,
-			zIndex:1
+			zIndex:1,
+			paddingRight:80
 		},
 		timesUp:{
 			position:'absolute',
@@ -505,6 +516,12 @@ module.exports = StyleSheet.create({
 			padding:5,
 			width: window.width - 30
 		},
+		quizGrammar:{
+			padding:5,
+			paddingLeft:10,
+			paddingRight:10,
+			width: window.width - 30
+		},
 		quizBtnPress:{
 			backgroundColor: primaryColor
 		},
@@ -521,6 +538,11 @@ module.exports = StyleSheet.create({
 		},
 		quizKanjiText:{
 			fontSize:35,
+			color:textColor,
+			textAlign: 'center'
+		},
+		quizGrammarText:{
+			fontSize:20,
 			color:textColor,
 			textAlign: 'center'
 		},
