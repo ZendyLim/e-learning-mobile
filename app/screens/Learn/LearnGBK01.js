@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-    StyleSheet,
     Text,
     View,
     ScrollView,
@@ -13,8 +12,7 @@ import {
   
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-// import { HiraganaLearnStack }  from '../../config/router';
-import { goi } from '../../config/MeFamilyLearn'
+import { goi, bunpo, kanji } from '../../config/MeFamilyLearn'
 import { ImageData } from '../../config/image_list';
 import  { strings }   from '../../config/localization';
 import * as Actions from '../../actions/user'; //Import your actions
@@ -68,7 +66,9 @@ function playSound(testInfo, component) {
           </View>
           <View style={learn1.ButtonGroup}>
             <Icon reverseColor={'black'} name="info-circle"  type='font-awesome' size={45} color={"#45B5E7"} containerStyle={{flex: 1}}
-            onPress={this.props.onPressButtonItem}/>
+            onPress={this.props.onPressButtonItem}
+            // onPress={this._setModalVisible.bin(this, true, this.props.item.title, this.props.item.meaning)}
+            />
             <Icon name="play-circle"  type='font-awesome' size={45} color={"#45B5E7"} containerStyle={{flex: 1}}
             onPress={() => {return playSound(this.props.item , this.props.component);}}
             />
@@ -80,7 +80,7 @@ function playSound(testInfo, component) {
     }
   }
 
-  export class GoiLearn1 extends Component {
+  export class LearnGBK01Screen extends Component {
 
     constructor(props) {
       super(props);
@@ -103,12 +103,29 @@ function playSound(testInfo, component) {
         detail: '',
         studyType: this.props.studyType,
         img: this.props.img,
-        datatopic: this.props.datatopic,
+        listType: this.props.listType,
         // config: this.props.config,
       };    
     }
+
+    _getFlatListData = () => {
+      var data;
+      if(this.state.listType == 'GL1') {
+        data = goi;
+      } else if(this.state.listType == 'BL1') {
+        data = bunpo;
+      } else if(this.state.listType == 'KL1') {
+        data = kanji;
+      }else{
+        data = kanji;
+      }
+      return data;
+    }
     
     render() {
+      var dataDisplay = this._getFlatListData();
+      console.log('dataDisplay');
+      console.log(dataDisplay);
       return (
       <ScrollView>
         <View style={learn1.MainContainer}>
@@ -121,18 +138,25 @@ function playSound(testInfo, component) {
           </View>
           <FlatList 
           // keyExtractor={this._keyExtractor}
-          data={goi}
-          renderItem={({item, id}) => {
+          data={ dataDisplay }
+          keyExtractor={this._keyExtractor} 
+          renderItem={({item}) => {
             return(
-              <FlatListItem item={item} component={this} onPressButtonItem={() => {this._setModalVisible(true, item.title, item.detail)}}/>
-              );
+              <FlatListItem id={item.key} item={item} component={this} 
+              onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.title, item.detail)}}
+              // onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.title, item.detail)}}
+              />);
             }}
           numColumns={1}
           />
         </View>
           <Modal
-            animationType="slide"
+            // animationType="fade"
             isVisible = {this.state.modalVisible}
+            animationIn={'zoomInDown'}
+            animationOut={'zoomOutUp'}
+            animationInTiming={500}
+            animationOutTiming={500}
             onRequestClose={() => {
               this._setModalVisible(!this.state.modalVisible);
             }}
@@ -144,7 +168,7 @@ function playSound(testInfo, component) {
       );
     }
 
-    // _keyExtractor = (item, index) => item.id;
+    _keyExtractor = (item) => item.key;
   
     _setModalVisible = (visible, title, detail) => {
       this.setState({modalVisible: visible , title: title, detail: detail});
@@ -187,5 +211,5 @@ function playSound(testInfo, component) {
   }
   
   //Connect everything
-  export default connect(mapStateToProps, mapDispatchToProps)(GoiLearn1);
-  // export default GoiLearn1;
+  export default connect(mapStateToProps, mapDispatchToProps)(LearnGBK01Screen);
+  // export default LearnGBK01Screen;

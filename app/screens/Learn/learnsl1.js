@@ -17,7 +17,8 @@ import {
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import { HiraganaLearnStack }  from '../../config/router';
-  import { number } from '../../config/numberlearn'
+  // import { number } from '../../config/numberlearn';
+  import { numberList } from '../../config/data';
   import { ImageData } from '../../config/image_list';
   import  { strings }   from '../../config/localization';
   import * as Actions from '../../actions/user'; //Import your actions
@@ -53,25 +54,21 @@ function playSound(testInfo, component) {
 
   // If the audio is a 'require' then the second parameter must be the callback.
   if (testInfo.isRequire) {
-    const sound = new Sound(testInfo.url, error => callback(error, sound));
+    const sound = new Sound(testInfo.audio, error => callback(error, sound));
   } else {
-    const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
+    const sound = new Sound(testInfo.audio, testInfo.basePath, error => callback(error, sound));
   }
 }
 
   class FlatListItem extends Component {
-
-    ButtonClick = (item) => {
-      Alert.alert(item);
-    }
 
     render(){
       return(
         <TouchableOpacity style={learnsl1.GridViewBlockStyle} onPress={() => {
           return playSound(this.props.item , this.props.component);
         }}>
-          <Text style={learnsl1.NumberItem}>{this.props.item.number}</Text>
-          <Text style={learnsl1.HiraganaItem} >{this.props.item.hiragana}</Text>
+          <Text style={learnsl1.NumberItem}>{this.props.item.kanji}</Text>
+          <Text style={learnsl1.HiraganaItem} >{this.props.item.moji}</Text>
           <Text style={learnsl1.RomajiItem} >{this.props.item.romaji}</Text>
         </TouchableOpacity>
       );
@@ -79,12 +76,6 @@ function playSound(testInfo, component) {
   }
 
   export class NumberLearnScreen extends Component {
-
-    // static navigationOptions = {
-        // header: null,
-        // title: 'LearnHL1',
-        // tabBarLabel: 'Hiragana',
-      // };
 
     constructor(props) {
       super(props);
@@ -106,9 +97,7 @@ function playSound(testInfo, component) {
     }
     
     componentWillMount() {
-      // const { navigation } = this.props;
       this.setState({
-        // studyType: navigation.getParam('studyType', null),
         studyType: this.props.studyType,
         img: this.props.img,
       });
@@ -124,13 +113,11 @@ function playSound(testInfo, component) {
             <Image 
               style={ study.cardImg }
               source= { ImageData[this.state.img] }
-              // resizeMode="stretch" 
             />
             <Text style={study.title}> { strings[this.props.studyType] } </Text>
           </View>
-          {/* <Text style={learnsl1.TextTitle}>{this.props.title}</Text> */}
           <FlatList 
-          data={number}
+          data={numberList}
           renderItem={({item}) => {
             return(
               <FlatListItem item={item} component={this}/>

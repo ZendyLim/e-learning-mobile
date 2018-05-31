@@ -20,7 +20,7 @@ import {
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import { HiraganaLearnStack }  from '../../config/router';
-  import { katakanalearn } from '../../config/hiraganalearn';
+  import { katakanaList } from '../../config/data'
   import * as Actions from '../../actions/user'; //Import your actions
 
   var Sound = require('react-native-sound');
@@ -54,9 +54,9 @@ function playSound(testInfo, component) {
 
   // If the audio is a 'require' then the second parameter must be the callback.
   if (testInfo.isRequire) {
-    const sound = new Sound(testInfo.url, error => callback(error, sound));
+    const sound = new Sound(testInfo.audio, error => callback(error, sound));
   } else {
-    const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
+    const sound = new Sound(testInfo.audio, testInfo.basePath, error => callback(error, sound));
   }
 }
 
@@ -71,7 +71,7 @@ function playSound(testInfo, component) {
         <TouchableOpacity style={learnlh1.GridViewBlockStyle} onPress={() => {
           return playSound(this.props.item , this.props.component);
         }}>
-          <Text style={learnlh1.HiraganaItem}>{this.props.item.hiragana}</Text>
+          <Text style={learnlh1.HiraganaItem}>{this.props.item.moji}</Text>
           <Text style={learnlh1.RomajiItem} >{this.props.item.romaji}</Text>
         </TouchableOpacity>
       );
@@ -109,7 +109,7 @@ function playSound(testInfo, component) {
       return (
         <View style={learnlh1.MainContainer}>
           <FlatList 
-          data={katakanalearn}
+          data={katakanaList}
           renderItem={({item}) => {
             return(
               <FlatListItem item={item} component={this}/>
@@ -138,4 +138,4 @@ function playSound(testInfo, component) {
   
   //Connect everything
   export default connect(mapStateToProps, mapDispatchToProps)(KatakanaLearnScreen);
-  // export default LearnHL1Screen;
+  // export default KatakanaLearnScreen;

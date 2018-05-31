@@ -22,7 +22,7 @@ import { HiraganaLearnStack } from '../../config/router';
 import NumberLearnScreen from '../Learn/learnsl1';
 import GreetingLearnScreen from '../Learn/learngl1';
 import HL4 from '../sketch';
-import GoiLearn1 from '../Learn/goilearn1';
+import LearnGBK01Screen from '../Learn/LearnGBK01';
 
 class LearnHiraganaModule extends Component {
   constructor() {
@@ -49,8 +49,6 @@ class LearnHiraganaModule extends Component {
       study: navigation.getParam('study', null),
       studyType: navigation.getParam('studyType', null),
       img: navigation.getParam('img', null),
-    //   datatopic: navigation.getParam('datatopic', null),
-    //   config: navigation.getParam('config', null),
     });
   }
   goBack = () => {
@@ -98,36 +96,27 @@ class LearnHiraganaModule extends Component {
             return (
                 <HL4 />        
             );        
-        }else if(this.state.type == 'GL1'){
-            if(this.state.title == 'TOPIC1_GL1'){
+        }else 
+        if(this.state.type == 'GL1'){
                 return (
-                    <GoiLearn1 
-                    studyType={this.state.studyType} img={this.state.img} 
-                    // datatopic={this.state.datatopic} 
-                    // config={this.state.config}
+                    <LearnGBK01Screen 
+                    studyType={this.state.studyType} img={this.state.img} listType={this.state.type} 
                     />
                 );
-            }
-        } else if(this.state.type == 'BL1') {
-            if(this.state.title == 'TOPIC1_BL1'){
+        } else 
+        if(this.state.type == 'BL1') {
                 return (
-                    <GoiLearn1 
-                    studyType={this.state.studyType} img={this.state.img} 
-                    // datatopic={this.state.datatopic} 
-                    // config={this.state.config}
+                    <LearnGBK01Screen 
+                    studyType={this.state.studyType} img={this.state.img} listType={this.state.type} 
                     />
                 );
-            }
-        } else if(this.state.type == 'KL1') {
-            if(this.state.title == 'TOPIC1_KL1'){
+        } else 
+        if(this.state.type == 'KL1') {
                 return (
-                    <GoiLearn1 
-                    studyType={this.state.studyType} img={this.state.img} 
-                    // datatopic={this.state.datatopic} 
-                    // config={this.state.config}
+                    <LearnGBK01Screen 
+                    studyType={this.state.studyType} img={this.state.img} listType={this.state.type} 
                     />
                 );
-            }
         }
     }else{
         return (

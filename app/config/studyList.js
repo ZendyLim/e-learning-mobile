@@ -91,62 +91,62 @@ export const StudyList = [{
     type : 'Topic',
     topic_id: 'T011'
   },
-  {
-    title : 'TOPIC9_TITLE',
-    img : 'ramen_shop',
-    lock : true,
-    type : 'Topic',
-    topic_id: 'T012'
-  },
-  {
-    title : 'TOPIC10_TITLE',
-    img : 'loading',
-    lock : true,
-    type : 'Topic',
-    topic_id: 'T013'
-  },
-  {
-    title : 'TOPIC11_TITLE',
-    img : 'loading',
-    lock : true,
-    type : 'Topic',
-    topic_id: 'T014'
-  },
-  {
-    title : 'TOPIC12_TITLE',
-    img : 'loading',
-    lock : true,
-    type : 'Topic',
-    topic_id: 'T015'
-  },
-  {
-    title : 'TOPIC13_TITLE',
-    img : 'loading',
-    lock : true,
-    type : 'Topic',
-    topic_id: 'T016'
-  },
-  {
-    title : 'TOPIC14_TITLE',
-    img :'society',
-    lock : true,
-    type : 'Topic',
-    topic_id: 'T017'
-  },
-  {
-    title : 'TOPIC15_TITLE',
-    img : 'loading',
-    lock : true,
-    type : 'Topic',
-    topic_id: 'T018'
-  },
-  {
-    title : 'TOPIC16_TITLE',
-    img : 'loading',
-    lock : true,
-    type : 'Topic',
-    topic_id: 'T019'
-  },
+  // {
+  //   title : 'TOPIC9_TITLE',
+  //   img : 'ramen_shop',
+  //   lock : true,
+  //   type : 'Topic',
+  //   topic_id: 'T012'
+  // },
+  // {
+  //   title : 'TOPIC10_TITLE',
+  //   img : 'loading',
+  //   lock : true,
+  //   type : 'Topic',
+  //   topic_id: 'T013'
+  // },
+  // {
+  //   title : 'TOPIC11_TITLE',
+  //   img : 'loading',
+  //   lock : true,
+  //   type : 'Topic',
+  //   topic_id: 'T014'
+  // },
+  // {
+  //   title : 'TOPIC12_TITLE',
+  //   img : 'loading',
+  //   lock : true,
+  //   type : 'Topic',
+  //   topic_id: 'T015'
+  // },
+  // {
+  //   title : 'TOPIC13_TITLE',
+  //   img : 'loading',
+  //   lock : true,
+  //   type : 'Topic',
+  //   topic_id: 'T016'
+  // },
+  // {
+  //   title : 'TOPIC14_TITLE',
+  //   img :'society',
+  //   lock : true,
+  //   type : 'Topic',
+  //   topic_id: 'T017'
+  // },
+  // {
+  //   title : 'TOPIC15_TITLE',
+  //   img : 'loading',
+  //   lock : true,
+  //   type : 'Topic',
+  //   topic_id: 'T018'
+  // },
+  // {
+  //   title : 'TOPIC16_TITLE',
+  //   img : 'loading',
+  //   lock : true,
+  //   type : 'Topic',
+  //   topic_id: 'T019'
+  // },
   ];
 
 
@@ -197,36 +197,216 @@ export const StudyList = [{
     title : 'GOI_LIST',
     type : 'GL1',
     study : '4',
-    datatopic : 'Goi',
-    config : 'mefamily'
   },{
     title : 'FLASH_CARD',
     type : 'GL3',
     study : '4'
-  },
-],  
-TOPIC1_TITLE_and_grammar : [{
-  title : 'BUNPO_LIST',
-  type : 'BL1',
-  study : '4',
-  datatopic : 'Bunpo',
-  config : 'mefamily'
-},{
-  title : 'FLASH_CARD',
-  type : 'BL3',
-  study : '4'
-},
-],
-TOPIC1_TITLE_and_kanji : [{
-  title : 'KANJI_LIST',
-  type : 'KL1',
-  study : '4',
-  datatopic : 'Kanji',
-  config : 'mefamily'
-},{
-  title : 'FLASH_CARD',
-  type : 'KL3',
-  study : '4'
-},
-],     
+  },],
+  TOPIC2_TITLE_and_vocabulary : [{
+    title : 'GOI_LIST',
+    type : 'GL1',
+    study : '5',
+  },{
+    title : 'FLASH_CARD',
+    type : 'GL3',
+    study : '5'
+  },],
+  TOPIC3_TITLE_and_vocabulary : [{
+    title : 'GOI_LIST',
+    type : 'GL1',
+    study : '6',
+  },{
+    title : 'FLASH_CARD',
+    type : 'GL3',
+    study : '6'
+  },],
+  TOPIC4_TITLE_and_vocabulary : [{
+    title : 'GOI_LIST',
+    type : 'GL1',
+    study : '7',
+  },{
+    title : 'FLASH_CARD',
+    type : 'GL3',
+    study : '7'
+  },],
+  TOPIC5_TITLE_and_vocabulary : [{
+    title : 'GOI_LIST',
+    type : 'GL1',
+    study : '8',
+  },{
+    title : 'FLASH_CARD',
+    type : 'GL3',
+    study : '8'
+  },],
+  TOPIC6_TITLE_and_vocabulary : [{
+    title : 'GOI_LIST',
+    type : 'GL1',
+    study : '9',
+  },{
+    title : 'FLASH_CARD',
+    type : 'GL3',
+    study : '9'
+  },],
+  TOPIC7_TITLE_and_vocabulary : [{
+    title : 'GOI_LIST',
+    type : 'GL1',
+    study : '10',
+  },{
+    title : 'FLASH_CARD',
+    type : 'GL3',
+    study : '10'
+  },],
+  TOPIC8_TITLE_and_vocabulary : [{
+    title : 'GOI_LIST',
+    type : 'GL1',
+    study : '11',
+  },{
+    title : 'FLASH_CARD',
+    type : 'GL3',
+    study : '11'
+  },],
+  TOPIC1_TITLE_and_grammar : [{
+    title : 'BUNPO_LIST',
+    type : 'BL1',
+    study : '4',
+  },{
+    title : 'FLASH_CARD',
+    type : 'BL3',
+    study : '4'
+  },],
+  TOPIC2_TITLE_and_grammar : [{
+    title : 'BUNPO_LIST',
+    type : 'BL1',
+    study : '5',
+  },{
+    title : 'FLASH_CARD',
+    type : 'BL3',
+    study : '5'
+  },],
+  TOPIC3_TITLE_and_grammar : [{
+    title : 'BUNPO_LIST',
+    type : 'BL1',
+    study : '6',
+  },{
+    title : 'FLASH_CARD',
+    type : 'BL3',
+    study : '6'
+  },],
+  TOPIC4_TITLE_and_grammar : [{
+    title : 'BUNPO_LIST',
+    type : 'BL1',
+    study : '7',
+  },{
+    title : 'FLASH_CARD',
+    type : 'BL3',
+    study : '7'
+  },],
+  TOPIC5_TITLE_and_grammar : [{
+    title : 'BUNPO_LIST',
+    type : 'BL1',
+    study : '8',
+  },{
+    title : 'FLASH_CARD',
+    type : 'BL3',
+    study : '8'
+  },],
+  TOPIC6_TITLE_and_grammar : [{
+    title : 'BUNPO_LIST',
+    type : 'BL1',
+    study : '9',
+  },{
+    title : 'FLASH_CARD',
+    type : 'BL3',
+    study : '9'
+  },],
+  TOPIC7_TITLE_and_grammar : [{
+    title : 'BUNPO_LIST',
+    type : 'BL1',
+    study : '10',
+  },{
+    title : 'FLASH_CARD',
+    type : 'BL3',
+    study : '10'
+  },],
+  TOPIC8_TITLE_and_grammar : [{
+    title : 'BUNPO_LIST',
+    type : 'BL1',
+    study : '11',
+  },{
+    title : 'FLASH_CARD',
+    type : 'BL3',
+    study : '11'
+  },],
+  TOPIC1_TITLE_and_kanji : [{
+    title : 'KANJI_LIST',
+    type : 'KL1',
+    study : '4',
+  },{
+    title : 'FLASH_CARD',
+    type : 'KL3',
+    study : '4'
+  },],     
+  TOPIC2_TITLE_and_kanji : [{
+    title : 'KANJI_LIST',
+    type : 'KL1',
+    study : '5',
+  },{
+    title : 'FLASH_CARD',
+    type : 'KL3',
+    study : '5'
+  },],
+  TOPIC3_TITLE_and_kanji : [{
+    title : 'KANJI_LIST',
+    type : 'KL1',
+    study : '6',
+  },{
+    title : 'FLASH_CARD',
+    type : 'KL3',
+    study : '6'
+  },],
+  TOPIC4_TITLE_and_kanji : [{
+    title : 'KANJI_LIST',
+    type : 'KL1',
+    study : '7',
+  },{
+    title : 'FLASH_CARD',
+    type : 'KL3',
+    study : '7'
+  },],
+  TOPIC5_TITLE_and_kanji : [{
+    title : 'KANJI_LIST',
+    type : 'KL1',
+    study : '8',
+  },{
+    title : 'FLASH_CARD',
+    type : 'KL3',
+    study : '8'
+  },],
+  TOPIC6_TITLE_and_kanji : [{
+    title : 'KANJI_LIST',
+    type : 'KL1',
+    study : '9',
+  },{
+    title : 'FLASH_CARD',
+    type : 'KL3',
+    study : '9'
+  },],
+  TOPIC7_TITLE_and_kanji : [{
+    title : 'KANJI_LIST',
+    type : 'KL1',
+    study : '10',
+  },{
+    title : 'FLASH_CARD',
+    type : 'KL3',
+    study : '10'
+  },],
+  TOPIC8_TITLE_and_kanji : [{
+    title : 'KANJI_LIST',
+    type : 'KL1',
+    study : '11',
+  },{
+    title : 'FLASH_CARD',
+    type : 'KL3',
+    study : '11'
+  },],
   };
