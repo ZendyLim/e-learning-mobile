@@ -54,6 +54,9 @@ class LearnHiraganaModule extends Component {
     //   config: navigation.getParam('config', null),
     });
   }
+  componentWillUnmount(){
+      console.log("redux send quiz");
+  }
   goBack = () => {
      this.navigation.navigate('LearnListScreen');
   }

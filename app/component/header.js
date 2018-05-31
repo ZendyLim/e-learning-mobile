@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableHighlight } from 'react-native';
+import { View, Text, TouchableHighlight, Alert } from 'react-native';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { NavigationActions } from 'react-navigation';
@@ -13,13 +13,16 @@ class Header extends Component {
     title: PropTypes.string,
     subtitle: PropTypes.string,
     icon: PropTypes.string,
-    route: PropTypes.string
+    route: PropTypes.string,
+    confirm: PropTypes.bool,
+    confirmMessage: PropTypes.string
   };
 
   constructor(props) {
     super(props);
     
     this.icon = this.props.icon ? this.props.icon : 'times';  
+    this.pause = false;
   }
 
   _renderSubtitle(){
@@ -52,13 +55,39 @@ class Header extends Component {
     }
 
     onClickIcon = () => {
-        if(this.props.route){
-            this.props.navigation.navigate(this.props.route);    
-        }
-        else{
-          this.props.navigation.goBack(null);          
-        }
+      
+      if(confirm){
+        this.props.testCall(false);
+
+        setTimeout(() => {
+          Alert.alert("Confirm", "Do you want to quit?", [{
+            text: "OK",
+            onPress: () => this.proceedNavigate()
+          },
+          {text: 'Cancel', onPress: () => this.props.testCall(true), style: 'cancel'}
+          ],
+          {
+            cancelable:false
+          }
+        )
+        }, 100); 
+      }
+      else{
+        this.proceedNavigate();
+      }
+      
         
+        
+    }
+
+    proceedNavigate(){
+      this.props.testCall(false);
+      if(this.props.route){
+          this.props.navigation.navigate(this.props.route);    
+      }
+      else{
+        this.props.navigation.goBack(null);          
+      }
     }
 }
 module.exports = Header;

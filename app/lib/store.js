@@ -6,7 +6,6 @@ import { persistStore, persistReducer,  } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import {AsyncStorage} from 'react-native';
 import thunk from 'redux-thunk';
-import { offline } from 'redux-offline';
 import offlineConfig from 'redux-offline/lib/defaults';
 
 const config = {
@@ -25,8 +24,7 @@ export default function configureStore(onComplete) {
   let store = createStore(
     reducer,
     compose(
-      applyMiddleware(thunk),
-      offline(offlineConfig)
+      applyMiddleware(thunk)
     )
   );  
   let persistor = persistStore(store)

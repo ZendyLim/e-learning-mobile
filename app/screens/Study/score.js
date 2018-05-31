@@ -24,11 +24,12 @@ import {
   import * as Actions from '../../actions/study'; //Import your actions
   import { StudyList } from '../../config/studyList';
   import { quizItems } from '../../config/quiz';
+  import Header   from '../../component/header';
   class ScoreScreen extends Component {
     constructor(props) {
       super(props);
       
-  }
+    }
   state = {
     typeQuiz: ""
   }
@@ -99,7 +100,7 @@ import {
     return (
         <View style={scoreStyle.RecordRow}>
             <Text style={scoreStyle.recordTitle}>
-                { item.questionID + ' - ' + item.answer }
+                { item.correct_title }
             </Text>
             { item.correct == '1' ? (
             <View style={scoreStyle.recordCorrect}>
