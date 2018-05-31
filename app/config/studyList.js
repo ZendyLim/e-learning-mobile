@@ -66,8 +66,8 @@ export const StudyList = [{
   {
     title : 'TOPIC2_TITLE',
     img : 'loading',
-    lock : true,
-    type : 'TOPIC',
+    lock : false,
+    type : 'Topic',
     topic_id: 'T005'
   },
   {
