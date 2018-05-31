@@ -90,6 +90,7 @@ class TimerBar extends Component {
     componentDidUpdate() {
       this.timerStop();
       this.timerRestart();
+      this.timerResume();
     }
 
     componentWillMount() {
@@ -98,7 +99,7 @@ class TimerBar extends Component {
 
     timerStart(){
 
-      this.progress.setValue(0);
+      
       
       Animated.timing(this.progress, {
         duration: this.duration,
@@ -118,18 +119,25 @@ class TimerBar extends Component {
         }
     }
 
-    timerStop(){
+    timerStop(){      
       if(!this.props.timerRun){
         Animated.timing(
           this.progress
         ).stop();
 
         this.props.timeStops(this.state.progress);
-      }    
+      }      
     }
 
-    timerRestart(){
+    timerResume(){      
+      if(this.props.timerResume){
+        this.timerStart();
+      }
+    }
+
+    timerRestart(){      
       if(this.props.timerRestart){
+        this.progress.setValue(0);
         this.timerStart();
       }
     }

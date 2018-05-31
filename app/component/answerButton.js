@@ -38,8 +38,11 @@ class AnswerButton extends Component {
           break;
       }
 
+      centerIcon = ['quizSquared','quizKanji'];
+      center = centerIcon.indexOf(this.props.styleFormat) > -1;
+
       return(
-        <View style={[ styles.quizBtnIconWrapper, this.props.isCorrect ? styles.quizBtnIconCorrect : styles.quizBtnIconWrong, this.props.styleFormat != 'quizSquared' && styles.quizBtnIconLeft  ]}>
+        <View style={[ styles.quizBtnIconWrapper, this.props.isCorrect ? styles.quizBtnIconCorrect : styles.quizBtnIconWrong, !center && styles.quizBtnIconLeft  ]}>
           <Icon name={ iconName }  style={ [ styles.quizBtnIcon ] } />
         </View>
       );

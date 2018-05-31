@@ -43,8 +43,9 @@ class HiraganaListScreen extends Component {
       topicId : navigation.getParam('topic_id', null),
       quizOptions : navigation.getParam('quizOptions', null)
     });
+
     
-    //console.log(navigation.getParam('quizOptions', null),"NIAMAK");
+    
   }
 
   navigateToLearn=(type, topicId = null)=>{
@@ -57,52 +58,39 @@ class HiraganaListScreen extends Component {
           img: this.state.img,
         }
       ));
-    }else if(type == 'Quiz'){
+    }else if(type == 'Quiz' || type == 'Test'){
       
+      param = {
+        index : this.state.index,
+        type : type,
+        title : this.state.title,
+        studyType: this.state.studyType,
+        img: this.state.img,
+        topicId: this.state.topicId,
+        headerTitle: this.state.headerTitle
+      };
+        
       if(topicId == 'T001'){
         this.props.navigation.navigate('QuizMain',(
-          {
-            index : this.state.index,
-            type : type,
-            title : this.state.title,
-            studyType: this.state.studyType,
-            img: this.state.img,
-            topicId: this.state.topicId,
-            typeQuiz: 'Quiz',
-            quizOptions:this.state.quizOptions
-          }
+          param
         ));
+      }
+      else if(this.state.headerTitle == 'grammar'){
+        this.props.navigation.navigate('QuizBefore',(
+          param
+        ));
+      }
+      else if(type == 'Quiz'){
+        this.props.navigation.navigate('QuizFlash',(
+          param
+        )); 
       }
       else{
         this.props.navigation.navigate('QuizFlash',(
-          {
-            index : this.state.index,
-            type : type,
-            title : this.state.title,
-            studyType: this.state.studyType,
-            img: this.state.img,
-            topicId: this.state.topicId,
-            typeQuiz: 'Quiz',
-            quizOptions:this.state.quizOptions
-          }
-        )); 
+          param
+        ));
       }
       
-    }
-    else   if(type == 'Test'){
-      console.log(this.state.quizOptions);
-      this.props.navigation.navigate('QuizFlash',(
-        {
-          index : this.state.index,
-          type : type,
-          title : this.state.title,
-          studyType: this.state.studyType,
-          img: this.state.img,
-          topicId: this.state.topicId,
-          typeQuiz: 'Test',
-          quizOptions:this.state.quizOptions
-        }
-      ));
     }
     else{
       this.props.navigation.navigate('TopicList',(
