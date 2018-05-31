@@ -15,11 +15,13 @@ import {
   } from 'react-native';
   import { List, ListItem, Icon } from 'react-native-elements';
   import {Dimensions} from 'react-native';
+  import {NavigationActions} from 'react-navigation';
   // Config
   import { ImageData } from '../../config/image_list';
   import { flashData } from '../../config/flash';
   import LearnListScreen from '../Learn/LearnList';
   import ResponsiveText from '../../component/responsiveText';
+  import FlashButton from '../../component/flashButton';
 
   
   var Sound = require('react-native-sound');
@@ -32,7 +34,6 @@ import {
  * Generic play function for majority of tests
  */
   function playSound(testInfo, component) {
-    console.log(testInfo);
     setTestState(testInfo, component, 'pending');
 
     const callback = (error, sound) => {
@@ -59,8 +60,6 @@ import {
       const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
     }
   }
-
-
 
   class HiraganaFlashcardScreen extends Component {
     static navigationOptions = {
@@ -106,6 +105,9 @@ import {
       })
 
       this.data = flashData[0][this.props.title];
+      this.data.sort(function() {
+        return 0.5 - Math.random()
+      })
 
       this.state = {
         front: this.data[0].moji,
@@ -150,8 +152,9 @@ import {
 
     componentDidMount() {
       this.flipperFunction(this.tickInterval / this.flipSpeed);
+      playSound(this.state , this);
     }
-
+    
     pause(){
       this.flipIndicator = 0;
       clearInterval(this.flipperInterval);
@@ -200,13 +203,21 @@ import {
     }
 
     updateNext(){
-      this.state.btnDisable = false;
+      this.setState({
+        btnDisable: false
+      });
       if(this.progressCounter + 1 === this.data.length) {
-        this.state.isFinish = true;
+        this.setState({
+          isFinish: true
+        });
         return;
       }
       this.pause();
       this.progressCounter++;
+      this.setState({
+        url: this.data[this.progressCounter].url
+      });
+      playSound(this.state , this);
       this.setState((previousState) => {
         let state = previousState;
         this.value = 180;
@@ -214,16 +225,12 @@ import {
         if(this.value >= 90){
           state.front = this.data[this.progressCounter].moji;
           state.fakeBack = this.data[this.progressCounter].romaji;
-          state.url == this.data[this.progressCounter].url;
         } else {
           state.fakeFront = this.data[this.progressCounter].romaji;
           state.back = this.data[this.progressCounter].moji;
-          state.url == this.data[this.progressCounter].url;
         }
         
         state.flipped = true;
-        console.log(this);
-        playSound(this.state , this);
 
         return state;
       }, this.flipCard)
@@ -231,11 +238,17 @@ import {
 
     updatePrevious(){
       if(this.progressCounter < 1){
-        this.state.btnDisable = true;
+        this.setState({
+          btnDisable: true
+        });
         return;
       }
       this.pause();
       this.progressCounter--;
+      this.setState({
+        url: this.data[this.progressCounter].url
+      });
+      playSound(this.state , this);
       this.setState((previousState) => {
         let state = previousState;
         this.value = 180;
@@ -292,8 +305,6 @@ import {
       }
     }
 
-
-    
     render() {
       const frontAnimatedStyle = {
         transform: [
@@ -349,49 +360,28 @@ import {
             </View>
 
             <View style={[studyStyles.containerBottom, autoHeight]}>
-              <View style={[studyStyles.boxButton, autoHeight]}>
-                <TouchableOpacity
-                  disabled={this.state.btnDisable}
-                  style={studyStyles.roundButton}
-                  onPress={() => this.updatePrevious()}
-                >
-                  <Icon name='arrow-back' color='#fff' size={40}/>
-                </TouchableOpacity>
-              </View>
-              <View style={[studyStyles.boxButton, autoHeight]}>
-                <TouchableOpacity
-                  style={studyStyles.roundButton}
-                  onPress={() => this.setAutoOrManual()}
-                >
-                  { this.state.isPause ? 
-                  (<Icon name='play-arrow' color='#fff' size={40}/>) : 
-                  (<Icon name='pause' color='#fff' size={40}/>) 
-                  }
-                  
-                </TouchableOpacity>
-              </View>
-              <View style={[studyStyles.boxButton, autoHeight]}>
-                <TouchableOpacity
-                  style={studyStyles.roundButtonText}
-                  onPress={() => this.setToNSpeed()}
-                >
-                  <Text style={[studyStyles.textLg, studyStyles.textCenter, studyStyles.textWhite]}>
-                    &nbsp;{ this.flipSpeed }x&nbsp;
-                  </Text>
-                </TouchableOpacity>
-              </View>
-              <View style={[studyStyles.boxButton, autoHeight]}>
-                <TouchableOpacity
-                  style={studyStyles.roundButton}
-                  onPress={() => this.updateNext()}
-                >
-                   { this.state.isFinish ? 
-                    (<Icon name='home' color='#fff' size={40}/>) : 
-                    (<Icon name='arrow-forward' color='#fff' size={40}/>) 
-                   }
-                  
-                </TouchableOpacity>  
-              </View>
+              <FlashButton btnType={'icon'}
+                iconName={'arrow-back'}
+                disabled={this.state.btnDisable}
+                onPress={() => this.updatePrevious()} />
+
+              <FlashButton btnType={'icon'} 
+                iconName={ this.state.isPause ? 'play-arrow' : 'pause' }
+                onPress={() => this.setAutoOrManual()} />
+          
+              <FlashButton btnType={'text'} 
+                textName={ this.flipSpeed }
+                onPress={() => this.setToNSpeed()} />
+
+              {this.state.isFinish ? (
+                <FlashButton btnType={'icon'} 
+                  iconName={ 'home'}
+                  onPress={() => this.props.navigation.goBack()} />
+              ): (
+                <FlashButton btnType={'icon'} 
+                  iconName={'arrow-forward'}
+                  onPress={() => this.updateNext()} />
+              )}
             </View>
           </View>
         </ImageBackground>
@@ -403,6 +393,7 @@ import {
       //await AsyncStorage.setItem('userToken', 'abc');
       this.props.navigation.navigate('NameIn');
     };
+
   }
 
   const styles = require('../../styles/style');

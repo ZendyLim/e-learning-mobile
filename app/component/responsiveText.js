@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, } from 'react-native';
+import { View, Text, StyleSheet, } from 'react-native';
 import PropTypes from 'prop-types';
 
 /**
@@ -24,7 +24,7 @@ class ResponsiveText extends Component {
       this.state.textSize = 120;
     } else {
       this.state.test = 'HOHO';
-      this.state.textSize = 60;
+      this.state.textSize = 50;
     }
   }
 
@@ -32,7 +32,13 @@ class ResponsiveText extends Component {
     const { textSize, content, test } = this.props;
     
     return (
-      <Text numberOfLines={1} style={[studyStyles.textContent, {fontSize: this.state.textSize}]}>{ this.props.content }</Text>
+      <View style={[studyStyles.box]}>
+        <Text 
+          numberOfLines={1} 
+          style={[studyStyles.textContent, {fontSize: this.state.textSize}]} >
+            { this.props.content }
+        </Text>
+      </View>
     );
   }
 }
@@ -46,4 +52,8 @@ const studyStyles = StyleSheet.create({
     textAlign: 'center', 
     textAlignVertical: 'center',  
   }, 
+
+  box: {
+    width: '100%',
+  }
 });
