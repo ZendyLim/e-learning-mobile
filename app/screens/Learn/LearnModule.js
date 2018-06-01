@@ -22,7 +22,7 @@ import { HiraganaLearnStack } from '../../config/router';
 import NumberLearnScreen from '../Learn/learnsl1';
 import GreetingLearnScreen from '../Learn/learngl1';
 import HL4 from '../sketch';
-import GoiLearn1 from '../Learn/goilearn1';
+//import GoiLearn1 from '../Learn/goilearn1';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as Actions from '../../actions/study'; //Import your actions

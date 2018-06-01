@@ -1,6 +1,6 @@
 export const StudyList = [{
     title : 'HIRAGANA_TITLE',
-    img : 'class',
+    img : 'T001',
     lock : false,
     type : 'INITIAL',
     topic_id: 'T001',
@@ -12,7 +12,7 @@ export const StudyList = [{
   },
   {
     title : 'NUMBER_TITLE',
-    img : 'number_chara',
+    img : 'T002',
     lock : false,
     type : 'INITIAL',
     topic_id: 'T002',
@@ -25,7 +25,7 @@ export const StudyList = [{
   },
   {
     title : 'GREETING_TITLE',
-    img : 'loading',
+    img : 'T003',
     lock : false,
     type : 'INITIAL',
     topic_id: 'T003',
@@ -38,7 +38,7 @@ export const StudyList = [{
   },
   {
     title : 'TOPIC1_TITLE',
-    img : 'me_family',
+    img : 'T004',
     lock : false,
     type : 'TOPIC',
     topic_id: 'T004',
@@ -65,55 +65,55 @@ export const StudyList = [{
   },
   {
     title : 'TOPIC2_TITLE',
-    img : 'loading',
+    img : 'T005',
     lock : false,
     type : 'Topic',
     topic_id: 'T005'
   },
   {
     title : 'TOPIC3_TITLE',
-    img : 'loading',
-    lock : true,
+    img : 'T006',
+    lock : false,
     type : 'TOPIC',
     topic_id: 'T006'
   },{
     title : 'TOPIC4_TITLE',
-    img : 'loading',
-    lock : true,
+    img : 'T007',
+    lock : false,
     type : 'TOPIC',
     topic_id: 'T007'
   },
   {
     title : 'TOPIC5_TITLE',
-    img : 'office',
-    lock : true,
+    img : 'T008',
+    lock : false,
     type : 'TOPIC',
     topic_id: 'T008'
   },
   {
     title : 'TOPIC6_TITLE',
-    img : 'travel',
+    img : 'T009',
     lock : true,
     type : 'TOPIC',
     topic_id: 'T009'
   },
   {
     title : 'TOPIC7_TITLE',
-    img : 'health',
+    img : 'T010',
     lock : true,
     type : 'TOPIC',
     topic_id: 'T010'
   },
   {
     title : 'TOPIC8_TITLE',
-    img : 'market',
+    img : 'T011',
     lock : true,
     type : 'TOPIC',
     topic_id: 'T011'
   },
   {
     title : 'TOPIC9_TITLE',
-    img : 'ramen_shop',
+    img : 'T012',
     lock : true,
     type : 'TOPIC',
     topic_id: 'T012'
@@ -127,14 +127,14 @@ export const StudyList = [{
   },
   {
     title : 'TOPIC11_TITLE',
-    img : 'loading',
+    img : 'T014',
     lock : true,
     type : 'TOPIC',
     topic_id: 'T014'
   },
   {
     title : 'TOPIC12_TITLE',
-    img : 'loading',
+    img : 'T015',
     lock : true,
     type : 'TOPIC',
     topic_id: 'T015'
@@ -430,3 +430,37 @@ export const StudyList = [{
     study : '11'
   },],
   };
+
+  export const QuizListData = {
+    hiragana_katakana :[
+      {
+          title : 'HIKA_ROMA',
+          type  : 'moji_romaji'
+      },
+      {
+          title : 'ROMA_HIKA',
+          type  : 'romaji_moji'
+      },
+      {
+          title : 'LISTEN',
+          type  : 'audio_moji'
+      }
+    ],
+    grammar :[
+      {
+        title : 'TRANSLATE_SENTENCE',
+        type : 'english_moji',
+      },{
+        title : 'FLASH_CARD',
+        type : 'audio_english',
+      },
+      {
+        title : 'FILL_THE_BLANKS',
+        type : 'fill',
+      },
+      {
+        title : 'REARRANGE',
+        type : 'arrange',
+      }
+    ],
+    };
