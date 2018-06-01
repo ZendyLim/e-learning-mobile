@@ -84,23 +84,36 @@ import {
     }
  
     signIn = async () => {
-      this.props.login(this.state, data => {
-        this.setState({ userId: data.userId });
-        if(!this.validation(data)){
-          this.props.navigation.navigate('UserData',(this.state));
-        }
-      });
-    
+      if(!this.validation()){
+        this.props.login(this.state, data => {
+          this.setState({ userId: data.userId });
+          if(!this.checkUserValid(data)){
+            this.props.navigation.navigate('UserData',(this.state));
+          }
+        });
+      }
      
     };
 
 
-    validation = (data) => {
+    checkUserValid= (data) => {
+      let error = '';
+      if(data.success==false) error ="Username and password is wrong";
+      if (error) {
+        Alert.alert('Warning', error);
+        return true; 
+      }
+      else{
+        return false;
+      } 
+    }
+
+    validation = () => {
       const { username, password} = this.state;
       let error = '';
       if (!username) error = "User name is required";
       else if (!password) error = "Password is required";
-      else if(data.success==false) error ="Username and password is wrong";
+      // else if(data.success==false) error ="Username and password is wrong";
       // else if (userPass.length < 6) error = "Password at least contain 6 character"; 
       // else if (!userPassConfirm) error = "Confirm password is required";
       // else if (userPass != userPassConfirm) error = "Password is not same";
