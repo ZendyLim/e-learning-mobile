@@ -16,6 +16,9 @@ import { List, ListItem, Icon } from 'react-native-elements';
 import  { strings }   from '../../config/localization';
 // import * as Actions from '../../../actions/Quiz'; //Import your actions
 import { ImageData } from '../../config/image_list';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as Actions from '../../actions/summary'; //Import your actions
 
 class HiraganaListScreen extends Component {
 
@@ -44,9 +47,8 @@ class HiraganaListScreen extends Component {
       topicId : navigation.getParam('topic_id', null),
       quizOptions : navigation.getParam('quizOptions', null)
     });
-
-    
-    
+    console.log('run');
+    this.props.getSummaryRecord('QUIZ',navigation.getParam('topic_id', null), navigation.getParam('topic_id', null) + navigation.getParam('categoryId', null), navigation.getParam('topic_id', null) + navigation.getParam('categoryId', null));      
   }
 
   navigateToLearn=(type, topicId = null)=>{
@@ -109,7 +111,56 @@ class HiraganaListScreen extends Component {
       topic_id : 'test',
     });
   }
+  getquizScore = () =>{
+    if(this.props.quiz){
+      var quiz = this.props.quiz;
+      var count = 0;
+      for(var i = 0; i<quiz.length;i++){
+        if(quiz[i].correct == 1){
+          count += 1;
+        }
+      }
+      if(count == 0){
+        return "0/100";
+      }else{
+        var result = (count / quiz.length) * 100;
+        return result + '/100';
+      }
+    }else{
+      return '0/0';
+    }
+  }
+  gettestScore = () =>{
+    if(this.props.test){
+      var quiz = this.props.test;
+      var count = 0;
+      for(var i = 0; i<quiz.length;i++){
+        if(quiz[i].correct == 1){
+          count += 1;
+        }
+      }
+      if(count == 0){
+        return "0/100";
+      }else{
+        var result = (count / quiz.length) * 100;
+        return result + '/100';
+      }
+    }else{
+      return '0/0';
+    }
+  }
+
+  navigateReview = (type) => {
+    this.props.navigation.navigate('reviewScreen',(
+      {
+        type : type
+      }
+    ));
+  }
   render() {
+    var scoreQuiz = this.getquizScore();
+    var scoreTest = this.gettestScore();
+
     return (
       <ScrollView>
         <View style={study.StudyContainer}>
@@ -133,7 +184,7 @@ class HiraganaListScreen extends Component {
 
           <View style={[study.cardBox, study.borderBox, study.p3]}>
             <Text style={[study.textLg, study.textBlack]}>Quiz</Text>
-            <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
+            <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>{ scoreQuiz }</Text>
             <View style={study.buttonContainer}>
 
               <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Quiz', this.state.topicId)}>
@@ -141,7 +192,7 @@ class HiraganaListScreen extends Component {
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={study.button} onPress={this.navigateToSummary.bind(this, 'Quiz')}>
+              <TouchableOpacity style={study.button} onPress={this.navigateReview.bind(this, 'QUIZ')}>
                 <Icon name='search'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
@@ -150,11 +201,15 @@ class HiraganaListScreen extends Component {
 
           <View style={[study.cardBox, study.borderBox, study.p3]}>
             <Text style={[study.textLg, study.textBlack]}>Test</Text>
-            <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>80/100</Text>
+            <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>{ scoreTest }</Text>
             <View style={study.buttonContainer}>
               <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Test')}>
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > Start</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={study.button} onPress={this.navigateReview.bind(this, 'TEST')}>
+                <Icon name='search'   color='#fff'/>
+                <Text style={[study.textWhite, study.textMd]} > Review</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -178,4 +233,16 @@ class HiraganaListScreen extends Component {
 const styles = require('../../styles/style');
 const study = require('../../styles/study');
 
-export default HiraganaListScreen;
+function mapStateToProps(state, props) {
+  return {
+      test: state.summary.testData,
+      quiz: state.summary.quizData
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(Actions, dispatch);
+}
+
+//Connect everything
+export default connect(mapStateToProps, mapDispatchToProps)(HiraganaListScreen);

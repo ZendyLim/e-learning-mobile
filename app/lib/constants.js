@@ -14,5 +14,7 @@ export const TAKE_QUIZ = 'TAKE_QUIZ'; //import the action for start time
 
 //summary 
 export const SUMMARY_HOME = 'SUMMARY_HOME'; //import the action for start time
+export const SUMMARY_TEST = 'SUMMARY_TEST'; //import the action for Summary Test
+export const SUMMARY_QUIZ = 'SUMMARY_QUIZ'; //import the action for Summary Quix
 
 

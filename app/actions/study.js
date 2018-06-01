@@ -9,7 +9,6 @@ export function startLearn(studyType, startLearn, studyID){
 }
 
 export function endLearn(postValue){
-
   return (dispatch) => {
     fetch('https://e-learning-backend.herokuapp.com/api/v1/finishStudy',{
       method: 'POST',

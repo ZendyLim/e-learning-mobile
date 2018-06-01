@@ -40,6 +40,7 @@ import KatakanaLearnScreen from '../screens/Learn/katakanalearn';
 //summary 
 import SummaryTopicList from '../screens/Summary/studyPick';
 import SummaryLearnDetail from '../screens/Summary/summaryLearn';
+import reviewScreen from '../screens/Summary/reviewSummary';
 
 
 const styles = require('../styles/style');
@@ -74,6 +75,7 @@ const StudyStack = StackNavigator({
     HiraganaFlash: HiraganaFlashcardScreen , 
     LearnHL1: LearnHL1Screen,
     summaryLearnData : SummaryLearnDetail,
+    reviewScreen : reviewScreen,
 });
 
 const SummaryStack = StackNavigator({

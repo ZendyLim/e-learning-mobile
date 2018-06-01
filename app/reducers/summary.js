@@ -1,8 +1,10 @@
-import { SUMMARY_HOME  }  from '../lib/constants';
+import { SUMMARY_HOME  , SUMMARY_TEST , SUMMARY_QUIZ }  from '../lib/constants';
 
 const initialState = { 
     dateFrom:'', 
     dateTo: '', 
+    testData: [],
+    quizData: []
 };
 
 export default function userReducer (state = initialState, action) {
@@ -13,6 +15,18 @@ export default function userReducer (state = initialState, action) {
                 dateTo : new Date(action.data.dateTo*1000),
             });   
             return state;
+        case SUMMARY_TEST:
+            state = Object.assign({}, state, { 
+                testData:  [],
+                testData : action.data,
+            });   
+            return state;            
+        case SUMMARY_QUIZ:
+            state = Object.assign({}, state, { 
+                quizData:  [],
+                quizData : action.data,
+            });   
+            return state;            
         default:
             return state;
 }
