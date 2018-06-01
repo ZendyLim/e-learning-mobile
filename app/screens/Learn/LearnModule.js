@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import { Icon } from 'react-native-elements';
 import  { strings }   from '../../config/localization';
-import { LearnListData } from '../../config/studyList';
+import { LearnListData , StudyList} from '../../config/studyList';
 import style from 'react-native-datepicker/style';
 import LearningModule from '../Study/hiraganaFlashcard';
 import HL2Screen from '../Learn/HL2';
@@ -23,6 +23,10 @@ import NumberLearnScreen from '../Learn/learnsl1';
 import GreetingLearnScreen from '../Learn/learngl1';
 import HL4 from '../sketch';
 import GoiLearn1 from '../Learn/goilearn1';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as Actions from '../../actions/study'; //Import your actions
+import { studyList } from '../Study/studyList';
 
 class LearnHiraganaModule extends Component {
   constructor(props) {
@@ -37,25 +41,45 @@ class LearnHiraganaModule extends Component {
     swipeEnabled: false
   };
   state = {
+    index: "",
     title:"",
     type: "",
     study: "",
-    studyType: ""
+    studyType: "",
+    categoryId : "",
+    reduxData : [],
   }
   componentDidMount() {
     const { navigation } = this.props;
     this.setState({
+      index: navigation.getParam('index', null),
       title: navigation.getParam('title', null),
       type: navigation.getParam('type', null),
       study: navigation.getParam('study', null),
       studyType: navigation.getParam('studyType', null),
       img: navigation.getParam('img', null),
-    //   datatopic: navigation.getParam('datatopic', null),
-    //   config: navigation.getParam('config', null),
-    });
+      categoryId : navigation.getParam('categoryId', null),
+      startTime : ( new Date().getTime() / 1000),
+      reduxData : this.setSentParamStart(navigation.getParam('index', null), navigation.getParam('categoryId', null), navigation.getParam('type', null)) 
+    }); 
+  }
+
+  setSentParamStart = (index, categoryId, type ) =>{
+    var startTime = ( new Date().getTime() / 1000);
+    var value = {
+        type : "LEARN",
+        topicId : StudyList[index].topic_id,
+        startTime : startTime,
+        categoryId : StudyList[index].topic_id + categoryId, 
+        studyId : StudyList[index].topic_id + categoryId + type
+      }
+
+      return value;
   }
   componentWillUnmount(){
-      console.log("redux send quiz");
+        var data = this.state.reduxData;
+        data['finishTime'] = ( new Date().getTime() / 1000);
+        this.props.endLearn(data);
   }
   goBack = () => {
      this.navigation.navigate('LearnListScreen');
@@ -151,4 +175,24 @@ class LearnHiraganaModule extends Component {
 const styles = require('../../styles/style');
 const study = require('../../styles/study');
 
-export default LearnHiraganaModule;
+
+// The function takes data from the app current state,
+// and insert/links it into the props of our component.
+// This function makes Redux know that this component needs to be passed a piece of the state
+function mapStateToProps(state, props) {
+    return {
+        StudentID: state.user.user.id,
+       
+    }
+  }
+  
+  // Doing this merges our actions into the component’s props,
+  // while wrapping them in dispatch() so that they immediately dispatch an Action.
+  // Just by doing this, we will have access to the actions defined in out actions file (action/home.js)
+  function mapDispatchToProps(dispatch) {
+    return bindActionCreators(Actions, dispatch);
+  }
+  
+  //Connect everything
+  export default connect(mapStateToProps, mapDispatchToProps)(LearnHiraganaModule);
+  

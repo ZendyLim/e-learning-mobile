@@ -37,6 +37,7 @@ class HiraganaListScreen extends Component {
       title: navigation.getParam('title', null),
       img: navigation.getParam('img', null),
       type: navigation.getParam('type', null),
+      categoryId :  navigation.getParam('categoryId', null),
       headerTitle : navigation.getParam('headerTitle', null),
       studyType : navigation.getParam('studyType', null),
       typeQuiz : navigation.getParam('typeQuiz', null),
@@ -52,8 +53,10 @@ class HiraganaListScreen extends Component {
     if(type == 'Learn'){
       this.props.navigation.navigate('LearnListScreen',(
         {
+          index : this.state.index,
           type : type,
           title : this.state.title,
+          categoryId : this.state.categoryId,
           studyType: this.state.studyType,
           img: this.state.img,
         }
@@ -65,6 +68,7 @@ class HiraganaListScreen extends Component {
         type : type,
         title : this.state.title,
         studyType: this.state.studyType,
+        categoryId : this.state.categoryId,
         img: this.state.img,
         topicId: this.state.topicId,
         headerTitle: this.state.headerTitle
