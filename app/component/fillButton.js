@@ -45,7 +45,7 @@ class FillButton extends Component {
       }
 
       return(
-        <View style={[ styles.quizBtnIconWrapper, this.props.isCorrect ? styles.quizBtnIconCorrect : styles.quizBtnIconWrong  ]}>
+        <View style={[ styles.quizBtnIconWrapper, this.props.isCorrect ? styles.quizBtnIconCorrect : styles.quizBtnIconWrong, this.props.styleFormat != 'quizSquared' && styles.quizBtnIconLeft  ]}>
           <Icon name={ iconName }  style={ [ styles.quizBtnIcon ] } />
         </View>
       );
