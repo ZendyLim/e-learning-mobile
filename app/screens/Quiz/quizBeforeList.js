@@ -47,7 +47,8 @@ class QuizBeforeScreen extends Component {
         topicId: navigation.getParam('topicId',null),
         typeQuiz: navigation.getParam('typeQuiz',null),
         index:  navigation.getParam('index',null),   
-        headerTitle:  navigation.getParam('headerTitle',null)  
+        headerTitle:  navigation.getParam('headerTitle',null),
+        categoryId :  navigation.getParam('categoryId',null),     
     }
 
     this.list = QuizListData[this.param.headerTitle];

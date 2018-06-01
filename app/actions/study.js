@@ -21,7 +21,6 @@ export function endLearn(postValue){
       body: JSON.stringify(postValue)
     }).then(data => data.json())
     .then(json => {
-      console.log(json, 'pasrse back');
       dispatch(endLearnDispatch(postValue))
     })
     .catch(err => dispatch(endLearnFailedDispatch(err)))

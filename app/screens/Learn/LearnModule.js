@@ -64,7 +64,7 @@ class LearnHiraganaModule extends Component {
     }); 
   }
 
-  setSentParamStart(index, categoryId, type){
+  setSentParamStart = (index, categoryId, type ) =>{
     var startTime = ( new Date().getTime() / 1000);
     var value = {
         type : "LEARN",

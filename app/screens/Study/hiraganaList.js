@@ -68,6 +68,7 @@ class HiraganaListScreen extends Component {
         type : type,
         title : this.state.title,
         studyType: this.state.studyType,
+        categoryId : this.state.categoryId,
         img: this.state.img,
         topicId: this.state.topicId,
         headerTitle: this.state.headerTitle
