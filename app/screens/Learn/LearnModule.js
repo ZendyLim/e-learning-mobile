@@ -27,10 +27,11 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as Actions from '../../actions/study'; //Import your actions
 import { studyList } from '../Study/studyList';
+import LearnGBK01Screen from '../Learn/LearnGBK01';
 
 class LearnHiraganaModule extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this._onSetLanguageTo('en');
   }
   _onSetLanguageTo(value) {
@@ -114,11 +115,11 @@ class LearnHiraganaModule extends Component {
         }else if(this.state.type == 'HL3' || this.state.type == 'GL3'  || this.state.type == 'KL3' || this.state.type == 'BL3' ){
             if(this.state.title == "FLASH_CARD_HIRAGANA" || this.state.title == 'FLASH_CARD_KATAKANA'){
                 return (
-                    <LearningModule title={ this.state.title } goBack={this}/>     
+                    <LearningModule navigation={this.props.navigation} title={ this.state.title } goBack={this}/>     
                 );        
                 }else{
                 return (
-                    <LearningModule title={ this.state.studyType }  goBack={this}/>     
+                    <LearningModule navigation={this.props.navigation} title={ this.state.studyType }  goBack={this}/>     
                 );        
     
             }
@@ -126,36 +127,27 @@ class LearnHiraganaModule extends Component {
             return (
                 <HL4 />        
             );        
-        }else if(this.state.type == 'GL1'){
-            if(this.state.title == 'TOPIC1_GL1'){
+        }else 
+        if(this.state.type == 'GL1'){
                 return (
-                    <GoiLearn1 
-                    studyType={this.state.studyType} img={this.state.img} 
-                    // datatopic={this.state.datatopic} 
-                    // config={this.state.config}
+                    <LearnGBK01Screen 
+                    studyType={this.state.studyType} img={this.state.img} listType={this.state.type} 
                     />
                 );
-            }
-        } else if(this.state.type == 'BL1') {
-            if(this.state.title == 'TOPIC1_BL1'){
+        } else 
+        if(this.state.type == 'BL1') {
                 return (
-                    <GoiLearn1 
-                    studyType={this.state.studyType} img={this.state.img} 
-                    // datatopic={this.state.datatopic} 
-                    // config={this.state.config}
+                    <LearnGBK01Screen 
+                    studyType={this.state.studyType} img={this.state.img} listType={this.state.type} 
                     />
                 );
-            }
-        } else if(this.state.type == 'KL1') {
-            if(this.state.title == 'TOPIC1_KL1'){
+        } else 
+        if(this.state.type == 'KL1') {
                 return (
-                    <GoiLearn1 
-                    studyType={this.state.studyType} img={this.state.img} 
-                    // datatopic={this.state.datatopic} 
-                    // config={this.state.config}
+                    <LearnGBK01Screen 
+                    studyType={this.state.studyType} img={this.state.img} listType={this.state.type} 
                     />
                 );
-            }
         }
     }else{
         return (

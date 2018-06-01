@@ -1814,7 +1814,1206 @@ export const flashData = [
         "moji":"さようなら",
         "url":"ka.mp3"
       },
+    ], 
+    TOPIC1_TITLE_and_vocabulary : [
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Kazoku",
+        "moji"  : "かぞく",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Okaasan",
+        "moji"  : "おかあさん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Otousan",
+        "moji"  : "おとうさん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Oniisan",
+        "moji"  : "おにいさん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Oneesan",
+        "moji"  : "おねえさん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Imouto",
+        "moji"  : "いもうと",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Otouto",
+        "moji"  : "おとうと",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC1_TITLE_and_grammar : [
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Desu",
+        "moji"  : "です",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Imasu",
+        "moji"  : "います",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "No",
+        "moji"  : "の",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Ha",
+        "moji"  : "は",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC1_TITLE_and_kanji : [
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Family",
+        "moji"  : "家族",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "haha",
+        "moji"  : "母",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Father",
+        "moji"  : "父",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Older Brother",
+        "moji"  : "兄",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Older Sister",
+        "moji"  : "姉",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC2_TITLE_and_vocabulary : [
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "House",
+        "moji"  : "いえ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Room",
+        "moji"  : "へや",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Bedroom",
+        "moji"  : "しんしつ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Living Room",
+        "moji"  : "いま",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Kitchen",
+        "moji"  : "だいどころ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Garage",
+        "moji"  : "しゃこ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Cabinet",
+        "moji"  : "とだな",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC2_TITLE_and_grammar : [
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Done in the same way as A",
+        "moji"  : "A のように",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "a B like/similar to A",
+        "moji"  : "A のような B",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC2_TITLE_and_kanji : [
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "House",
+        "moji"  : "家",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Room",
+        "moji"  : "部屋",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Bedroom",
+        "moji"  : "寝室",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Living Room",
+        "moji"  : "居間",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Kitchen",
+        "moji"  : "台所",
+        "urL"   : ""
+      }, 
+    ],
+    TOPIC3_TITLE_and_vocabulary : [
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Exercise",
+        "moji"  : "うんどう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Physical Education",
+        "moji"  : "たいいく",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Baseball",
+        "moji"  : "やきゅう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Sumo Wrestling",
+        "moji"  : "すもう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Judo",
+        "moji"  : "じゅうどう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Kendo",
+        "moji"  : "けんどう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Aikido",
+        "moji"  : "あいきどう",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC3_TITLE_and_grammar : [
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "I'm playing A",
+        "moji"  : "Aをします",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC3_TITLE_and_kanji : [
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Exercise/Sport",
+        "moji"  : "運動",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Physical Education",
+        "moji"  : "体育",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Baseball",
+        "moji"  : "野球",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Sumo Wrestling",
+        "moji"  : "相撲",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Judo",
+        "moji"  : "柔道",
+        "urL"   : ""
+      }, 
+    ],
+
+    TOPIC4_TITLE_and_vocabulary : [
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Morning",
+        "moji"  : "あさ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Morning",
+        "moji"  : "あさごはん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Yen",
+        "moji"  : "えん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Ah!",
+        "moji"  : "ああ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "To meet",
+        "moji"  : "あう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Blue",
+        "moji"  : "あおい",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Red",
+        "moji"  : "あかい",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Light; Bright",
+        "moji"  : "あかるい",
+        "urL"   : ""
+      }, 
       
-    ]
+    ], 
+    TOPIC4_TITLE_and_grammar : [
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "A is B",
+        "moji"  : "AはBです",
+        "urL"   : ""
+      }, 
+      
+    ], 
+    TOPIC4_TITLE_and_kanji : [
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Meet",
+        "moji"  : "会",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Blue",
+        "moji"  : "青",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Red",
+        "moji"  : "赤",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Autumn; Fall",
+        "moji"  : "秋",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Morning",
+        "moji"  : "朝",
+        "urL"   : ""
+      }, 
+    ],
+    TOPIC5_TITLE_and_vocabulary : [
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Occupation",
+        "moji"  : "しょくぎょう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Doctor",
+        "moji"  : "いしゃ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Female Nurse",
+        "moji"  : "かんごふ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Nurse",
+        "moji"  : "かんごし",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Dentist",
+        "moji"  : "しかい",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Scientist",
+        "moji"  : "かがくしゃ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Hairdresser",
+        "moji"  : "びようし",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Teacher",
+        "moji"  : "きょうし",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Teacher",
+        "moji"  : "せんせい",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Singer",
+        "moji"  : "かしゅ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Chauffeur",
+        "moji"  : "うんてんしゅ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Baseball Player",
+        "moji"  : "やきゅうせんしゅ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Painter/Artist",
+        "moji"  : "がか",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Artist",
+        "moji"  : "げいじゅつか",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Photographer",
+        "moji"  : "しゃしんか",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Author/Writer",
+        "moji"  : "さっか",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Speaker/Orator",
+        "moji"  : "えんぜつか",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Performing Musician",
+        "moji"  : "えんそうか",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Producer/Director",
+        "moji"  : "えんしゅつか",
+        "urL"   : ""
+      }, 
+    ], 
+    TOPIC5_TITLE_and_grammar : [
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "to be",
+        "moji"  : "だ・です",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Used to be (past)",
+        "moji"  : "だった・でした",
+        "urL"   : ""
+      }, 
+      
+    ], 
+    TOPIC5_TITLE_and_kanji : [
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Occupation",
+        "moji"  : "職業",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Doctor",
+        "moji"  : "医者",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Female Nurse",
+        "moji"  : "看護婦",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Nurse",
+        "moji"  : "看護師",
+        "urL"   : ""
+      },  
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Dentist",
+        "moji"  : "歯科医",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Scientist",
+        "moji"  : "科学者",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Hairdresser / Beauty Artist",
+        "moji"  : "美容師",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Teacher",
+        "moji"  : "教師",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Teacher",
+        "moji"  : "先生",
+        "urL"   : ""
+      }, 
+    ],
+    TOPIC6_TITLE_and_vocabulary : [
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Travel / Trip / Journey",
+        "moji"  : "たび",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Travel / Trip / Tour",
+        "moji"  : "りょこう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Group Tou",
+        "moji"  : "だんたいりょこう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Personal Tour",
+        "moji"  : "こじんりょこう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Package Tour",
+        "moji"  : "パックりょこう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Day Trip",
+        "moji"  : "ひがえりりょこう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Sightseeing Tour",
+        "moji"  : "かんこうりょこう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Overseas Travel / Traveling Abroad",
+        "moji"  : "かいがいりょこう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Foreign Travel / Oversea Trip",
+        "moji"  : "がいこくりょこう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Observation Tour",
+        "moji"  : "けんがくりょこう",
+        "urL"   : ""
+      }, 
+      
+    ], 
+    TOPIC6_TITLE_and_grammar : [
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "only; just; as much as",
+        "moji"  : "だけ",
+        "urL"   : ""
+      }, 
+      
+    ], 
+    TOPIC6_TITLE_and_kanji : [
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Travel / Trip / Journey",
+        "moji"  : "旅",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Travel / Trip / Tour",
+        "moji"  : "旅行",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Group Tour",
+        "moji"  : "団体旅行",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Personal Tour",
+        "moji"  : "個人旅行",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Sightseeing Tour",
+        "moji"  : "観光旅行",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Overseas Travel / Traveling Abroad",
+        "moji"  : "海外旅行",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Foreign Travel / Oversea Trip",
+        "moji"  : "外国旅行",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Observation Tour",
+        "moji"  : "見学旅行",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "School Excursion / School Trip",
+        "moji"  : "修学旅行",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Honeymoon",
+        "moji"  : "新婚旅行",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Scientific Expedition",
+        "moji"  : "研究旅行",
+        "urL"   : ""
+      }, 
+
+    ],
+    TOPIC7_TITLE_and_vocabulary : [
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Don’t look too good",
+        "moji"  : "顔色が悪い",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "To catch a cold",
+        "moji"  : "風邪をひく",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "To not feel good",
+        "moji"  : "気持ち悪い",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Sick",
+        "moji"  : "びょうき",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Heavy",
+        "moji"  : "おもい",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Mental illness",
+        "moji"  : "せいしんびょうき",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Body condition",
+        "moji"  : "たいちょう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Condition",
+        "moji"  : "ぐあい",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Sympyom(s) of an illness",
+        "moji"  : "しょうじょう",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Diarrhea",
+        "moji"  : "げり",
+        "urL"   : ""
+      }
+    ], 
+    TOPIC7_TITLE_and_grammar : [
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "There is; is (living things)",
+        "moji"  : "がいる",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "There is; is (non-living things)",
+        "moji"  : "がある",
+        "urL"   : ""
+      }, 
+      
+    ], 
+    TOPIC7_TITLE_and_kanji : [
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Sick",
+        "moji"  : "病気",
+        "urL"   : ""
+      },  
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Heavy",
+        "moji"  : "重",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Mental illness",
+        "moji"  : "精神病気",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Body condition",
+        "moji"  : "体調",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Condition",
+        "moji"  : "具合",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Sympyom(s)",
+        "moji"  : "症状",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Diarrhea",
+        "moji"  : "下痢",
+        "urL"   : ""
+      }, 
+    ],
+    TOPIC8_TITLE_and_vocabulary : [
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Shop / Store",
+        "moji"  : "みせ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Shop / Store",
+        "moji"  : "しょうてん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Long-established Shop",
+        "moji"  : "しにせ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Beauty Salon / Hairdresser's Salon",
+        "moji"  : "びよういん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Hair Salon",
+        "moji"  : "りようしつ",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Barbershop / Barber",
+        "moji"  : "とこや",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Barbershop",
+        "moji"  : "りはつてん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Stationery Shop / Stationer",
+        "moji"  : "ぶんぼうぐてん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Department Store",
+        "moji"  : "ひゃっかてん",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Department Store",
+        "moji"  : "デパート",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Supermarket",
+        "moji"  : "スーパー",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Greengrocer / Vegetable Shop",
+        "moji"  : "やおや",
+        "urL"   : ""
+      }, 
+      
+      
+    ], 
+    TOPIC8_TITLE_and_grammar : [
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Plan to ~; intend to",
+        "moji"  : "つもり",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Please do",
+        "moji"  : "てください",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Ongoing action or current state",
+        "moji"  : "ている",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Is/has been done",
+        "moji"  : "てある",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Want to do something",
+        "moji"  : "たい",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Please don't do",
+        "moji"  : "ないでください",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Because; since; from",
+        "moji"  : "から",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "To not be (am not; is not; are not)",
+        "moji"  : "じゃない・ではない",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "De",
+        "moji"  : "で",
+        "urL"   : ""
+      },
+      
+    ], 
+    TOPIC8_TITLE_and_kanji : [
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Shop / Store",
+        "moji"  : "店",
+        "urL"   : ""
+      }, 
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Shop / Store",
+        "moji"  : "商店",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Long-established Shop",
+        "moji"  : "老舗",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Hair Salon",
+        "moji"  : "理容室",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Stationery Shop / Stationer",
+        "moji"  : "文房具店",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Department Store",
+        "moji"  : "百貨店",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Greengrocer / Vegetable Shop",
+        "moji"  : "八百屋",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Grocery Store",
+        "moji"  : "乾物屋",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Butcher / Meat Shop",
+        "moji"  : "肉屋",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Fish Dealer / Fishmonger",
+        "moji"  : "魚屋",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Liquor Store",
+        "moji"  : "酒屋",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Japanese-style Bar",
+        "moji"  : "居酒屋",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Florist",
+        "moji"  : "花屋",
+        "urL"   : ""
+      },
+      {
+        "id"    : "1k_a",
+        "type"  : "kanji",
+        "romaji": "Bookstore / Bookshop",
+        "moji"  : "本屋",
+        "urL"   : ""
+      },
+    ],
   }
 ]
