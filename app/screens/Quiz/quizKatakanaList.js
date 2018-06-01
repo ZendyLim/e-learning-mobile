@@ -85,7 +85,7 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
                                 /> 
                             </View>      
                             ) : (
-                                <Text style={quizStyles.displayNone}>None </Text>
+                                <Text style={quizStyles.displayNone}>None</Text>
                             ) }
  
                         </View>
