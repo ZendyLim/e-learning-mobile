@@ -28,7 +28,7 @@ class MainScreen extends Component {
   
     // Render any loading content that you like here
     render() {
-      if (this.props.data.id) {
+      if (this.props.data) {
         return (
             <MainStack />
           );
@@ -45,7 +45,8 @@ class MainScreen extends Component {
 
 function mapStateToProps(state, props) {
   return {
-      data: state.user.user
+      data: state.user.user,
+      login: state.user.isLogin
   }
 }
 function mapDispatchToProps(dispatch) {

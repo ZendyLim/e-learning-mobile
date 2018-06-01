@@ -290,6 +290,7 @@ module.exports = StyleSheet.create({
 		justifyContent: 'center',
 		padding: 10,
 		backgroundColor: secondaryColor,
+		position:"relative",
 	  },
 	  containerWhite: {
 		flex: 1,
@@ -304,8 +305,9 @@ module.exports = StyleSheet.create({
 		flexDirection: 'column',
 		alignItems: 'stretch',
 		justifyContent: 'flex-start',
-		padding: 10,
+		// padding: 10,
 		backgroundColor: '#ffffff',
+		position:"relative"
 	},
 	createGuestButton: {
 		backgroundColor: '#495057',
@@ -345,11 +347,11 @@ module.exports = StyleSheet.create({
 		color: '#999999',
 		alignSelf: 'center',
 	},
-	socialContainer: {
+	flexRow: {
 		flexDirection: 'row',
-		height: 150,
+		height: 100,
 	},
-	socialButton: {
+	flex1: {
 		flex: 1,
 	},
 	socialFacebook:{
@@ -658,5 +660,81 @@ module.exports = StyleSheet.create({
 		},
 		correctText:{
 			fontSize:22
+		},
+		//Login Page
+		loginButton: {
+			backgroundColor: '#495057',
+			alignItems: 'center',
+			borderRadius: 5,
+			width:"100%",
+			position:"absolute",
+			left:"3%",
+			bottom : 60,
+			zIndex:2
+		},
+		loginCharacter:{
+			height:400,
+			width:150,
+			marginLeft:"60%",
+			position:"absolute",
+			zIndex:1,
+		},
+		loginTextNormal:{
+			fontSize:20,
+			color:"#566d97",
+			fontWeight:"bold",
+		},
+		loginTextN5:{
+			fontSize:30,
+			color:"#566d97",
+			fontWeight:"bold",
+		},
+		loginText:{
+			position:"absolute",
+			left:"25%",
+			top:"30%",	
+		},
+		characterFixLogin:{
+			height:400,
+			width:150,
+			position:"absolute",
+			bottom: -150,
+			right: -10,
+			zIndex:2,
+		},
+		characterFixBottom:{
+			height:400,
+			width:150,
+			position:"absolute",
+			bottom: -200,
+			right: -10,
+			zIndex:2,
+		},
+		characterChatContainer:{
+			width:"100%",
+			height:80,
+			position:"absolute",
+			bottom:0,
+			right:0,
+			zIndex:1,
+			borderColor:"#999999",
+			backgroundColor:"#ffffff",
+			borderWidth:1,
+			paddingRight:"30%"
+		},
+
+		
+		contentPadding10:{
+			padding:10
+		},
+		contentLoginData:{
+			padding:10,
+			marginBottom:190,
 		}
+
+
+
+
+
+		
 });
