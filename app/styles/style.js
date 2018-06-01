@@ -579,7 +579,9 @@ module.exports = StyleSheet.create({
 			paddingTop:13
 		},
 		quizAnswerWrapper:{
-			position:'relative'
+			position:'relative',
+			backgroundColor:'red',
+			height: window.height - 100
 		},
 		blocker:{
 			position:'absolute',

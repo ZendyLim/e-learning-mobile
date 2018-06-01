@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import {
     View,
     Text,
-    TouchableHighlight
+    TouchableHighlight,
+    ScrollView
   } from 'react-native';
-  import { List, ListItem, ScrollView } from 'react-native-elements';
+
   import  { strings }   from '../../config/localization';
 
   import { bindActionCreators } from 'redux';
@@ -147,7 +148,7 @@ import {
                 }
               </View>
 
-              <View style={[ styles.col12, styles.quizAnswerWrapper]}>
+              <ScrollView style={[ styles.col12 ]}>
                 <View style={ !timerRun && styles.blocker }></View>
                 
                 { !this.state.showCorrect ?
@@ -175,7 +176,7 @@ import {
                   )
                 }
 
-              </View>
+              </ScrollView>
 
             </View>
 
@@ -189,6 +190,8 @@ import {
 
     componentWillMount() {            
       const { navigation } = this.props;
+
+      console.log(this.props.navigation);
       this.oneType = navigation.getParam('oneType',null);
       this.mounted = true;
       idList = navigation.getParam('idList', null);

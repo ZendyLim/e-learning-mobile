@@ -50,7 +50,7 @@ class Quiz extends Component {
     }
     else{
         return(
-            <View style={ [styles.displayInlineContainer, styles.answerContainer] }>
+            <View style={ [ styles.displayInlineContainer, styles.answerContainer ] }>
                 { this.props.answerOptions.map((item)=>(
                     <AnswerButton 
                         key={ item.id }
@@ -72,9 +72,9 @@ class Quiz extends Component {
     render(){
         
         return (
-            <ScrollView>
+            <View>
                 { this._renderAnswerButtons() }
-            </ScrollView>
+            </View>
         );
     }
 
