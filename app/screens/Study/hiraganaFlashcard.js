@@ -15,10 +15,14 @@ import {
   } from 'react-native';
   import { List, ListItem, Icon } from 'react-native-elements';
   import {Dimensions} from 'react-native';
+  import {NavigationActions} from 'react-navigation';
   // Config
   import { ImageData } from '../../config/image_list';
   import { flashData } from '../../config/flash';
-import LearnListScreen from '../Learn/LearnList';
+  import LearnListScreen from '../Learn/LearnList';
+  import ResponsiveText from '../../component/responsiveText';
+  import FlashButton from '../../component/flashButton';
+
   
   var Sound = require('react-native-sound');
 
@@ -29,36 +33,33 @@ import LearnListScreen from '../Learn/LearnList';
   /**
  * Generic play function for majority of tests
  */
-function playSound(testInfo, component) {
-  console.log(testInfo);
-  setTestState(testInfo, component, 'pending');
+  function playSound(testInfo, component) {
+    setTestState(testInfo, component, 'pending');
 
-  const callback = (error, sound) => {
-    if (error) {
-      Alert.alert('error', error.message);
-      setTestState(testInfo, component, 'fail');
-      return;
+    const callback = (error, sound) => {
+      if (error) {
+        Alert.alert('error', error.message);
+        setTestState(testInfo, component, 'fail');
+        return;
+      }
+      setTestState(testInfo, component, 'playing');
+      // Run optional pre-play callback
+      testInfo.onPrepared && testInfo.onPrepared(sound, component);
+      sound.play(() => {
+        // Success counts as getting to the end
+        setTestState(testInfo, component, 'win');
+        // Release when it's done so we're not using up resources
+        sound.release();
+      });
+    };
+
+    // If the audio is a 'require' then the second parameter must be the callback.
+    if (testInfo.isRequire) {
+      const sound = new Sound(testInfo.url, error => callback(error, sound));
+    } else {
+      const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
     }
-    setTestState(testInfo, component, 'playing');
-    // Run optional pre-play callback
-    testInfo.onPrepared && testInfo.onPrepared(sound, component);
-    sound.play(() => {
-      // Success counts as getting to the end
-      setTestState(testInfo, component, 'win');
-      // Release when it's done so we're not using up resources
-      sound.release();
-    });
-  };
-
-  // If the audio is a 'require' then the second parameter must be the callback.
-  if (testInfo.isRequire) {
-    const sound = new Sound(testInfo.url, error => callback(error, sound));
-  } else {
-    const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
   }
-}
-
-
 
   class HiraganaFlashcardScreen extends Component {
     static navigationOptions = {
@@ -104,6 +105,9 @@ function playSound(testInfo, component) {
       })
 
       this.data = flashData[0][this.props.title];
+      this.data.sort(function() {
+        return 0.5 - Math.random()
+      })
 
       this.state = {
         front: this.data[0].moji,
@@ -116,7 +120,8 @@ function playSound(testInfo, component) {
         isPause: false,
         loopingSound: undefined,
         tests: {},
-        btnDisable: true
+        btnDisable: true,
+        isFinish: false
       };
 
       this.progressCounter = 0;
@@ -132,7 +137,7 @@ function playSound(testInfo, component) {
       this.flipperFunction = (time) => {
 
         this.flipperInterval = setInterval(() => {
-          this.flipIndicator += 2;
+          this.flipIndicator += 4;
           if(this.flipIndicator >= 100) {
             if(this.state.flipped) {
               this.updateNext();
@@ -147,8 +152,9 @@ function playSound(testInfo, component) {
 
     componentDidMount() {
       this.flipperFunction(this.tickInterval / this.flipSpeed);
+      playSound(this.state , this);
     }
-
+    
     pause(){
       this.flipIndicator = 0;
       clearInterval(this.flipperInterval);
@@ -197,13 +203,21 @@ function playSound(testInfo, component) {
     }
 
     updateNext(){
-      this.state.btnDisable = false;
+      this.setState({
+        btnDisable: false
+      });
       if(this.progressCounter + 1 === this.data.length) {
-        this.props.goBack.props.navigation.goBack(null) ;
+        this.setState({
+          isFinish: true
+        });
         return;
       }
       this.pause();
       this.progressCounter++;
+      this.setState({
+        url: this.data[this.progressCounter].url
+      });
+      playSound(this.state , this);
       this.setState((previousState) => {
         let state = previousState;
         this.value = 180;
@@ -217,17 +231,24 @@ function playSound(testInfo, component) {
         }
         
         state.flipped = true;
+
         return state;
       }, this.flipCard)
     }
 
     updatePrevious(){
       if(this.progressCounter < 1){
-        this.state.btnDisable = true;
+        this.setState({
+          btnDisable: true
+        });
         return;
       }
       this.pause();
       this.progressCounter--;
+      this.setState({
+        url: this.data[this.progressCounter].url
+      });
+      playSound(this.state , this);
       this.setState((previousState) => {
         let state = previousState;
         this.value = 180;
@@ -272,20 +293,18 @@ function playSound(testInfo, component) {
       if (this.value >= 90) {
         Animated.spring(this.animatedValue, {
           toValue: 0, 
-          friction: 30, 
-          tension: 40,  
+          friction: 100, 
+          tension: 100,  
         }).start(set);
       } else {
         Animated.spring(this.animatedValue, {
           toValue: 180, 
-          friction: 30, 
-          tension: 40,  
+          friction: 100, 
+          tension: 100,  
         }).start(set);
       }
     }
 
-
-    
     render() {
       const frontAnimatedStyle = {
         transform: [
@@ -328,12 +347,12 @@ function playSound(testInfo, component) {
                 <View style={studyStyles.cardContainer}>
                   <Animated.View style={[frontAnimatedStyle]}>
                     <View style={[studyStyles.cardText]}>
-                      <Text style={studyStyles.textContent}>{ this.state.front }</Text>
+                      <ResponsiveText content={this.state.front} title={this.props.title} />
                     </View>
                   </Animated.View>
                   <Animated.View  style={[backAnimatedStyle]}>
                     <View style={[studyStyles.cardText]}>
-                      <Text style={studyStyles.textContent}>{ this.state.back }</Text>
+                    <ResponsiveText content={this.state.back} title={this.props.title} />
                     </View>
                   </Animated.View>
                 </View>
@@ -341,43 +360,28 @@ function playSound(testInfo, component) {
             </View>
 
             <View style={[studyStyles.containerBottom, autoHeight]}>
-              <View style={[studyStyles.boxButton, autoHeight]}>
-                <TouchableOpacity
-                  disabled={this.state.btnDisable}
-                  style={studyStyles.roundButton}
-                  onPress={() => this.updatePrevious()}
-                >
-                  <Icon name='arrow-back' color='#fff' size={40}/>
-                </TouchableOpacity>
-              </View>
-              <View style={[studyStyles.boxButton, autoHeight]}>
-                <TouchableOpacity
-                  style={studyStyles.roundButton}
-                  onPress={() => this.setAutoOrManual()}
-                >
-                  { this.state.isPause ? 
-                  (<Icon name='play-arrow' color='#fff' size={40}/>) : 
-                  (<Icon name='pause' color='#fff' size={40}/>) 
-                  }
-                  
-                </TouchableOpacity>
-              </View>
-              <View style={[studyStyles.boxButton, autoHeight]}>
-                <TouchableOpacity
-                  style={studyStyles.roundButton}
-                  onPress={() => this.setToNSpeed()}
-                >
-                  <Icon name='fast-forward' color='#fff' size={40}/>
-                </TouchableOpacity>
-              </View>
-              <View style={[studyStyles.boxButton, autoHeight]}>
-                <TouchableOpacity
-                  style={studyStyles.roundButton}
-                  onPress={() => this.updateNext()}
-                >
-                  <Icon name='arrow-forward' color='#fff' size={40}/>
-                </TouchableOpacity>  
-              </View>
+              <FlashButton btnType={'icon'}
+                iconName={'arrow-back'}
+                disabled={this.state.btnDisable}
+                onPress={() => this.updatePrevious()} />
+
+              <FlashButton btnType={'icon'} 
+                iconName={ this.state.isPause ? 'play-arrow' : 'pause' }
+                onPress={() => this.setAutoOrManual()} />
+          
+              <FlashButton btnType={'text'} 
+                textName={ this.flipSpeed }
+                onPress={() => this.setToNSpeed()} />
+
+              {this.state.isFinish ? (
+                <FlashButton btnType={'icon'} 
+                  iconName={ 'home'}
+                  onPress={() => this.props.navigation.goBack()} />
+              ): (
+                <FlashButton btnType={'icon'} 
+                  iconName={'arrow-forward'}
+                  onPress={() => this.updateNext()} />
+              )}
             </View>
           </View>
         </ImageBackground>
@@ -389,6 +393,7 @@ function playSound(testInfo, component) {
       //await AsyncStorage.setItem('userToken', 'abc');
       this.props.navigation.navigate('NameIn');
     };
+
   }
 
   const styles = require('../../styles/style');

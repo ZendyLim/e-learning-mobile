@@ -45,7 +45,15 @@ export let strings = new LocalizedStrings({
    KANJI_LIST : "KANJI LIST",
    FLASH_CARD_HIRAGANA: "FLASH CARD HIRAGANA",
    FLASH_CARD_KATAKANA: "FLASH CARD KATAKANA",
-   
+   HIKA_ROMA: "Hiragana/Katakana to Romaji",
+   ROMA_HIKA: "Romaji to Hiragana/Katakana",
+   LISTEN: "Listening",
+   TRANSLATE_SENTENCE: "Translate the sentence",
+   FLASH_CARD: "Listening\n(Translate)",
+   FILL_THE_BLANKS: "Fill in the blanks",
+   REARRANGE: "Rearrange the sentence",
+   ENGLISH: "English",
+   NEXT:'Next'
  },
  ja: {
    loginGuest: "japan",
@@ -87,6 +95,14 @@ export let strings = new LocalizedStrings({
    KANJI_LIST : "KANJI LIST",   
    FLASH_CARD_HIRAGANA: "FLASH CARD HIRAGANA",
    FLASH_CARD_KATAKANA: "FLASH CARD KATAKANA",
-
+   HIKA_ROMA: "Hiragana/Katakana to Romaji",
+   ROMA_HIKA: "Romaji to Hiragana/Katakana",
+   LISTEN: "Listening",
+   TRANSLATE_SENTENCE: "Translate the sentence",
+   FLASH_CARD: "Listening\n(Translate)",
+   FILL_THE_BLANKS: "Fill in the blanks",
+   REARRANGE: "Rearrange the sentence",
+   ENGLISH: "英語",
+   NEXT:'次'
   }
 });

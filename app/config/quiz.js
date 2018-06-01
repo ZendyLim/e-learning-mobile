@@ -1,4 +1,166 @@
 
+let topic_title_vocab_kanji = [
+  {   
+      "id":"tp1_1",
+      "type":"vocabulary",  
+      "romaji":"otoosan",
+      "moji":"おとおさん",
+      "kanji":"お父さん",
+      "english":"Father",
+      "audio":"ka.mp3"
+  },
+  {   
+      "id":"tp1_2",
+      "type":"vocabulary",      
+      "romaji":"okaasan",
+      "moji":"おかあさん",
+      "kanji":"お母さん",
+      "english":"Mother",
+      "audio":"ki.mp3"
+  },
+  {   
+      "id":"tp1_3",
+      "type":"vocabulary",      
+      "romaji":"oneesan",
+      "moji":"おねえさん",
+      "kanji":"お姉さん",
+      "english":"Sister",
+      "audio":"ku.mp3"
+  },
+  {   
+      "id":"tp1_4",
+      "type":"vocabulary",      
+      "romaji":"oniisan",
+      "moji":"おにいさん",
+      "kanji":"お兄さん",
+      "english":"Brother",
+      "audio":"ke.mp3"
+  },
+  {   
+      "id":"tp1_5",
+      "type":"vocabulary",      
+      "romaji":"imouto",
+      "moji":"いもうと",
+      "kanji":"妹",
+      "english":"Little Sister",
+      "audio":"ko.mp3"
+  },
+  {   
+      "id":"tp1_6",
+      "type":"vocabulary",      
+      "romaji":"otouto",
+      "moji":"おとうと",
+      "kanji":"弟",
+      "english":"Little Brother",
+      "audio":"ko.mp3"
+  }
+];
+
+
+let topic_title_vocab_kanji2 = [
+  {   
+      "id":"tp1_1",
+      "type":"kanji",  
+      "romaji":"onna",
+      "moji":"おんな",
+      "kanji":"女",
+      "english":"Woman",
+      "audio":"o.mp3"
+  },
+  {   
+      "id":"tp1_2",
+      "type":"kanji",      
+      "romaji":"chichi",
+      "moji":"ちち",
+      "kanji":"父",
+      "english":"Father",
+      "audio":"chi.mp3"
+  },
+  {   
+      "id":"tp1_3",
+      "type":"kanji",      
+      "romaji":"otoko",
+      "moji":"おとこ",
+      "kanji":"男",
+      "english":"Boy",
+      "audio":"o.mp3"
+  },
+  {   
+      "id":"tp1_4",
+      "type":"kanji",      
+      "romaji":"haha",
+      "moji":"はは",
+      "kanji":"母",
+      "english":"Mother",
+      "audio":"ha.mp3"
+  },
+  {   
+      "id":"tp1_5",
+      "type":"kanji",      
+      "romaji":"inu",
+      "moji":"いぬ",
+      "kanji":"犬",
+      "english":"Dog",
+      "audio":"i.mp3"
+  },
+  {   
+      "id":"tp1_6",
+      "type":"kanji",      
+      "romaji":"neko",
+      "moji":"ねこ",
+      "kanji":"猫",
+      "english":"Cat",
+      "audio":"ne.mp3"
+  }
+];
+
+let topic_title_grammar= [
+  {   
+      "id":"tpg1_1",
+      "type":"grammar",      
+      "romaji":"kanako-san ha gakusei desu.",
+      "moji":"かなこさんはがくせいです。",
+      "kanji":"かなこさんは学生です",
+      "english":"Kanako is a student",
+      "audio":"ne.mp3"
+  },
+  {   
+      "id":"tpg1_2",
+      "type":"grammar",      
+      "romaji":"kanako-san ha jaarimasen.",
+      "moji":"かなこさんはがくせいじゃありません。",
+      "kanji":"かなこさんは学生じゃありません",
+      "english":"Kanako is not a student",
+      "audio":"ne.mp3"
+  },
+  {   
+      "id":"tpg1_3",
+      "type":"grammar",      
+      "romaji":"kanako-san ha desu ka.",
+      "moji":"かなこさんはがくせいですか。",
+      "kanji":"かなこさんは学生ですか",
+      "english":"Is kanako a student?",
+      "audio":"ne.mp3"
+  },
+  {   
+      "id":"tpg1_4",
+      "type":"grammar",      
+      "romaji":"kanako-san ha takumi-san ga wakarimasu.",
+      "moji":"かなこさんはたくみさんがわかります。",
+      "kanji":"かなこさんはたくみさんが分かります。",
+      "english":"Kanako knows Takumi",
+      "audio":"ne.mp3"
+  },
+  {   
+      "id":"tpg1_5",
+      "type":"grammar",      
+      "romaji":"kanako-san ha takumi-san ga wakarimasen.",
+      "moji":"かなこさんはたくみさんがわかりません。",
+      "kanji":"かなこさんはたくみさんが分かりません。",
+      "english":"Kanako does not know Takumi",
+      "audio":"ne.mp3"
+  }
+];
 
 export const quizItems = {
     "HIRAGANA_TITLE": [
@@ -95,7 +257,7 @@ export const quizItems = {
             "type":"hiragana",      
             "romaji":"shi",
             "moji":"し",
-            "audio":"shi.mp3",
+            "audio":"si.mp3",
             "title":"shi",
           },
           {
@@ -932,7 +1094,7 @@ export const quizItems = {
             "type":"katakana",      
             "romaji":"shi",
             "moji":"シ",
-            "audio":"shi.mp3",
+            "audio":"si.mp3",
             "title":"shi",
           },
           {
@@ -1788,5 +1950,9 @@ export const quizItems = {
             "english":"six",
             "audio":"ko.mp3"
         }
-    ]
+    ],
+    "TOPIC1_TITLE_and_vocabulary": topic_title_vocab_kanji,
+    "TOPIC1_TITLE_and_kanji": topic_title_vocab_kanji2,
+    "TOPIC1_TITLE_and_grammar": topic_title_grammar
 };
+

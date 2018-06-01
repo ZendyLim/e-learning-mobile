@@ -15,7 +15,6 @@ export function getHomeSummary(studentID){
 
 // ===================================== ACTION SENDING DATA TO REDUCER =================================================
 export function setHomeSummary(homeData){
-    console.log(homeData);
     return {
         type: SUMMARY_HOME,
         data : homeData.data,

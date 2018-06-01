@@ -4,20 +4,25 @@ import {
     Text,
     TouchableHighlight
   } from 'react-native';
-  import { List, ListItem } from 'react-native-elements';
+  import { List, ListItem, ScrollView } from 'react-native-elements';
   import  { strings }   from '../../config/localization';
 
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import * as Actions from '../../actions/study'; 
+
+  import { NavigationActions } from 'react-navigation';
   
   // Import Components
   import TimerBar   from '../../component/timer';
   import QuestionPanel   from '../../component/question';
   import Quiz   from '../../component/quiz';
+  import CorrectPanel   from '../../component/correct';
+  import CustomButton   from '../../component/button';
   import Header   from '../../component/header';
 
   import { quizItems } from '../../config/quiz';
+  import { StudyList } from '../../config/studyList';
 
   /*
     TODO:
@@ -27,28 +32,36 @@ import {
   class QuizFlashScreen extends Component {
   
     static navigationOptions = ({ navigation }) => {      
-      subtitle = navigation.getParam('typeQuiz', null);         
-      title = navigation.getParam('title', null);
-      type = navigation.getParam('type', null);
+      subtitle = navigation.getParam('type', null);         
+      title = navigation.getParam('title', null);      
+      confirm = true;
+
+      testCall = (val) => {
+        
+        navigation.setParams({
+          pauseTime:val
+        });
+      }
 
       return{
-        title: 'Quiz',
+        title: title,
         tabBarVisible:false,
-        header: props => <Header 
+        header: ({props, state}) => <Header 
           title={ strings[title] }
           subtitle={ subtitle }
           navigation={ navigation } 
+          confirm={ confirm }
+          state={ state }
+          testCall={ this.testCall }
           />
-        //headerStyle:require('../../styles/style').headContainer,
-        //headerTitle:<Header title='Hiragana and Katakana' subtitle='Quiz' />
       }
     };
 
+
+    
     constructor(props){
       super(props);
-
-      const { navigation } = this.props;
-      
+    
       this.optionsNumber = 4;
       this.allQuestion = [];
       this.quizItems = [];
@@ -56,9 +69,15 @@ import {
       this.studyRecord = [];
       this.startTime = null;
       this.quizOptions = [];
-      this.title = navigation.getParam('title', null);
+      this.reduxParam = [];
+      this.title = '';
       this.oneType = '';
-      
+      this.study = [];
+      this.initialParams = [];      
+      this.isMounted = true;
+      this.showCorrect = false;
+      this.isPause = null;
+      this.timerResume = false;
       this.state = {
         timesUp: false,
         expression: 'default',
@@ -66,7 +85,7 @@ import {
         timerRun:true,
         timerRestart:false,
         counter: 0,
-        question: [],
+        question: {},
         answerOptions: [],
         answer: '',
         answerFormat:'',
@@ -77,22 +96,16 @@ import {
         title:'',
         img:'',
         studyType:'',
-        quizOptions:'',
         typeQuiz : '',
-        index : ''
+        index : '',
+        format:'',
+        showCorrect:false        
       }            
 
      
       this._onSetLanguageTo('en');      
     }
-    componentDidMount() {
-      const { navigation } = this.props;
-      this.setState({
-        index: navigation.getParam('index', null),
-        typeQuiz : navigation.getParam('typeQuiz', null),
-      });
-      
-    }
+
     _onSetLanguageTo(value) {
       strings.setLanguage(value);
     }    
@@ -103,9 +116,11 @@ import {
       let format = this.state.questionFormat;
       let timerRun = this.state.timerRun;
       let timerRestart = this.state.timerRestart;
-
+      let question = this.state.question;
+      
       return (
         <View style={styles.container}>
+          { this.state.question && this.state.question.id ? (
             <View style={[styles.row]}>
 
               <QuestionPanel 
@@ -113,38 +128,61 @@ import {
                   format={ format } 
                   img={ this.state.img }
                   style={[styles.col12, styles.quizFlashTop]}
-                  styleFormat={ this.state.quizOptions.style }
+                  styleFormat={ this.quizOptions.style }
                   timesUp={ this.state.timesUp }
                   expression={ this.state.expression }
+                  showCorrect={ this.state.showCorrect }
               />
               
               <View style={[styles.col12]}>
-                <TimerBar 
-                  time={ this.state.time } 
-                  timerRestart={ timerRestart } 
-                  timerRun={ timerRun } 
-                  onTimesUp={this.onTimesUp} 
-                  onRestart={this.onRestart}
-                  timeStops={this.setTimeStops}
-                />
+                { !this.state.showCorrect &&
+                  <TimerBar 
+                    time={ this.state.time } 
+                    timerRestart={ timerRestart } 
+                    timerRun={ timerRun } 
+                    onTimesUp={this.onTimesUp} 
+                    onRestart={this.onRestart}
+                    timeStops={this.setTimeStops}
+                    timerResume={this.timerResume}
+                  />
+                }
               </View>
 
               <View style={[ styles.col12, styles.quizAnswerWrapper]}>
                 <View style={ !timerRun && styles.blocker }></View>
                 
-                <Quiz 
-                  question={ this.state.question } 
-                  answerOptions={ this.state.question.answerOption }
-                  onAnswerSelected={ this.stopTimer }
-                  format={ this.state.answerFormat }
-                  styleFormat={ this.state.quizOptions.style }
-                  timesUp={ this.state.timesUp }
-                  isCorrect={ this.addScore }
-                />
+                { !this.state.showCorrect ?
+                  (<Quiz 
+                    question={ this.state.question } 
+                    answerOptions={ this.state.question.answerOption }
+                    onAnswerSelected={ this.stopTimer }
+                    displayFormat={ this.state.answerFormat }
+                    format={ this.state.format }
+                    styleFormat={ this.quizOptions.style }
+                    timesUp={ this.state.timesUp }                    
+                  />) :
+                  (<View>
+                    <CorrectPanel 
+                      question={ this.state.question } 
+                      format={ format }
+                      style={[styles.col12]}
+                      styleFormat={ this.quizOptions.style }
+                    />
+                    
+                    <TouchableHighlight style={[ styles.highPrio ]} onPress={() =>  this.goNextQuestion() }>
+                      <CustomButton icon="chevron-right">{ strings.NEXT }</CustomButton>  
+                    </TouchableHighlight> 
+                  </View>
+                  )
+                }
 
               </View>
 
             </View>
+
+          ):(
+            <Text>Empty</Text>
+          ) }
             
         </View>
       );
@@ -152,24 +190,96 @@ import {
 
     componentWillMount() {            
       const { navigation } = this.props;
-      this.quizOptions = navigation.getParam('quizOptions',null);
       this.oneType = navigation.getParam('oneType',null);
+      this.mounted = true;
+      idList = navigation.getParam('idList', null);
+      let shuffledQuiz = [];
 
-      this.setState({
+      this.initialParams = {
         title: navigation.getParam('title', null),
         img: navigation.getParam('img', null),
         type: navigation.getParam('type', null),
-        topicId: navigation.getParam('topicId', null),
         studyType: navigation.getParam('studyType',null),
-        typeQuiz: navigation.getParam('typeQuiz',null),        
-        quizOptions: this.quizOptions
-      });
-      //console.log(navigation.getParam('quizOptions',null));
-      this.quizItems = quizItems[this.title];
-      idList = navigation.getParam('idList', null);
+        headerTitle:  navigation.getParam('headerTitle',null),
+        index: navigation.getParam('index', null)
+      }
       
+      this.setState(this.initialParams);
+
+      this.setInitial();
+
+      this.quizItems = quizItems[this.initialParams.studyType];
+      
+      this.setDefinedQuestion(idList);
+
+      if(!this.quizItems){
+        const resetAction = NavigationActions.reset({
+          index: 0,
+          actions: [
+            NavigationActions.navigate({ routeName: 'StudyList'})
+          ]
+        });
+
+        this.props.navigation.dispatch(resetAction);
+      }
+      else{
+        shuffledQuiz = this.shuffleItems(this.quizItems);
+
+        this.randomQuizFormat();
+      
+        this.allQuestion = shuffledQuiz.map((question) => 
+          this.shuffleAnswers(question, shuffledQuiz)
+        );
+
+        this.setState({
+          question: this.allQuestion[0]
+        });
+
+        this.setStartQuiz();
+      }      
+    }
+
+    componentDidUpdate(){      
+        const { navigation } = this.props;
+        this.timerResume = false;
+      
+      if(this.isPause != navigation.getParam('pauseTime', null)){
+
+        this.isPause = navigation.getParam('pauseTime', null);
+        this.timerResume = true;
+
+        this.setState({
+          timerRun:this.isPause,          
+        });
+
+      }
+      
+    }
+
+    componentWillUnmount(){
+      this.mounted = false;
+    }
+
+    // set items
+    setInitial(){
+      this.study = StudyList.find(function (obj) { 
+        return obj.title == this.title; 
+      })
+
+      if(this.study.type == 'INITIAL'){
+        this.quizOptions = this.study.quizOptions;
+      }
+      else{
+        this.quizOptions = this.study[this.initialParams.headerTitle];
+      }
+      
+    }
+
+    // will change all question based on what you put in 'idList'
+    setDefinedQuestion(idList){
       if(idList && idList.length){
         var quizItemsTemp = [];
+
         for(i = 0; i < idList.length; i++){
           currentId = idList[i];
           quizItemsTemp[quizItemsTemp.length] = this.quizItems.find(function (obj) { 
@@ -179,22 +289,9 @@ import {
 
         this.quizItems = quizItemsTemp;
       }
-
-      let shuffledQuiz = this.shuffleItems(this.quizItems);
-
-      this.setStartQuiz();
-
-      this.randomQuizFormat();
-      
-      this.allQuestion = shuffledQuiz.map((question) => 
-        this.shuffleAnswers(question, shuffledQuiz)
-      );
-
-      this.setState({
-         question: this.allQuestion[0]
-       });
     }
 
+    // randomized answer options
     shuffleAnswers(array, allArray) {
       var allArrayLength = allArray.length, temporaryValue, randomIndex;
 
@@ -216,24 +313,21 @@ import {
           currentItems[currentItems.length] = allArray[randomIndex].id;
           randomItem = allArray[randomIndex];
         }
-
+        
         array.answerOption[i] = randomItem;
       }
 
       return array;
     };
 
+    // randomized question
     shuffleItems(array) {
       var currentIndex = array.length, temporaryValue, randomIndex;
       
-      // While there remain elements to shuffle...
       while (0 !== currentIndex) {
-  
-        // Pick a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
-  
-        // And swap it with the current element.
+
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
@@ -242,121 +336,202 @@ import {
       return array;
     };
 
-    randomQuizFormat(){
-      //console.log(this.quizOptions);
-        
+    randomQuizFormat(){    
+
       var quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
       var quizFormatLength = quizFormat.length, randomIndex;
+      var paramFormat,time;
 
-      randomIndex = Math.floor(Math.random() * quizFormatLength);
+      randomIndex = Math.floor(Math.random() * quizFormatLength);      
 
       
+      time = 6000;
       
       switch (quizFormat[randomIndex]) {
         case 'romaji_moji':
-          this.setState({
+          paramFormat = {
             answerFormat: 'moji',
             questionFormat: 'romaji'
-          });
+          };
           break;
         case 'moji_romaji':
-          this.setState({
+          paramFormat = {
             answerFormat: 'romaji',
             questionFormat: 'moji'
-          });
+          };
           break;
 
         case 'moji_english':
-          this.setState({
+          paramFormat = {
             answerFormat: 'english',
             questionFormat: 'moji'
-          });
+          };
           break;
         
         case 'english_moji':
-          this.setState({
+          paramFormat = {
             answerFormat: 'moji',
             questionFormat: 'english'
-          });
+          };
           break;
 
         case 'audio_moji':
-          this.setState({
+          paramFormat = {
             answerFormat: 'moji',
             questionFormat: 'audio'
-          });
+          };
           break;
         
         case 'audio_romaji':
-          this.setState({
+          paramFormat = {
             answerFormat: 'romaji',
             questionFormat: 'audio'
-          });
+          };
           break;
 
         case 'audio_english':
-          this.setState({
+          paramFormat = {
             answerFormat: 'english',
             questionFormat: 'audio'
-          });
+          };
           break;
-      
-        default:
-          this.setState({
+
+        case 'audio_fill':
+          paramFormat = {
             answerFormat: 'moji',
-            questionFormat: 'romaji'
-          });
+            questionFormat: 'audio'
+          };
+
+          paramFormat.time = time * 1.5;
+          break;
+        
+        case 'english_fill':
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'english'
+          };
+
+          paramFormat.time = time * 1.5;
+          break;
+        
+        case 'kanji_fill':
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'kanji'
+          };
+
+          paramFormat.time = time * 1.5;
+          break;
+
+        case 'kanji_moji':
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'kanji'
+          };
+          break;
+        
+        case 'kanji_english':
+          paramFormat = {
+            answerFormat: 'english',
+            questionFormat: 'kanji'
+          };
+          break;
+        
+        case 'audio_kanji':
+          paramFormat = {
+            answerFormat: 'kanji',
+            questionFormat: 'audio'
+          };
+          break;
+        
+        case 'moji_kanji':
+          paramFormat = {
+            answerFormat: 'kanji',
+            questionFormat: 'moji'
+          };
           break;
           
+      
+        default:
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'romaji'
+          };
+          break;          
       }
+      paramFormat.format = quizFormat[randomIndex];
+      this.setState(paramFormat);
     }
 
     setNextQuestion() {
-      const counter = this.state.counter + 1;
-      this.setTakeQuiz();
+      const counter = this.state.counter + 1;      
+      
+      if(this.mounted){
+        this.setTakeQuiz();
+        if(counter < this.allQuestion.length){
+          this.showCorrect = false;
+          this.timeStops = 0;
 
-      if(counter < this.allQuestion.length){
-        this.randomQuizFormat();
-
-        this.timeStops = 0;
-  
-        this.setState({
-            counter: counter,
-            //questionId: questionId,
-            question: this.allQuestion[counter],
-            answerOptions: this.allQuestion[counter].answerOption,
-            answer: '',
-            timerRun:true,
-            timerRestart:true,
-            timesUp: false,  
-            expression:'default',
-            correct: 0
-        });
-      }
-      else{
-        this.setEndQuiz();
-        this.props.navigation.navigate('ScoreScreen',{
-          index : this.state.index,
-          typeQuiz : this.state.typeQuiz,
-          studyTitle : this.title
-        });
+          this.randomQuizFormat();
+    
+          this.setState({
+              counter: counter,
+              //questionId: questionId,
+              question: this.allQuestion[counter],
+              answerOptions: this.allQuestion[counter].answerOption,
+              answer: '',
+              timerRun:true,
+              timerRestart:true,
+              timesUp: false,  
+              expression:'default',
+              correct: 0,
+              showCorrect:false              
+          });
+        }
+        else{
+          this.setEndQuiz();
+          this.props.navigation.navigate('ScoreScreen',{
+            index : this.state.index,
+            typeQuiz : this.state.type,
+            studyTitle : this.title
+          });
+        }
       }
        
     }
 
+    setSentParamStart = (index, categoryId, type ) =>{
+      var startTime = ( new Date().getTime() / 1000);
+      if(type == 'Test'){
+        var reduxType = "TEST";
+      }else{
+        var reduxType = "QUIZ";        
+      }
+      var value = {
+          type : reduxType,
+          topicId : StudyList[index].topic_id,
+          startTime : startTime,
+          categoryId : StudyList[index].topic_id + categoryId, 
+          studyId : StudyList[index].topic_id + categoryId 
+        }
+  
+        return value;
+    }
+
     setStartQuiz = () =>  {
-      this.startTime = new Date().getTime();
+      const { navigation } = this.props;
+      this.reduxParam = this.setSentParamStart(navigation.getParam('index', null), navigation.getParam('categoryId', null), navigation.getParam('type', null));
       this.props.startLearn(this.state.studyType, this.startTime,this.title); //call our action
     }
 
-    setTakeQuiz = () =>  {
-      
+    setTakeQuiz = () =>  {      
       parseValue = {
             questionID : this.state.question.id,
             questionTime : this.state.questionTime,
             answer :  this.state.answer,
             correct : this.state.correct,
-            questionTime: this.timeStops
+            questionTime: this.timeStops,
+            correct_title: this.state.question.moji
       }
 
       this.studyRecord[this.studyRecord.length] = parseValue;
@@ -365,29 +540,38 @@ import {
     };
 
     setEndQuiz = () =>  {
-      parseValue = {
-          StudentID : this.props.StudentID,
-          startTime : this.state.startTime,
-          endTime :  new Date().getTime(),
-          subjectTitle: this.title,
-          studyType : this.state.studyType,
-          studyID : this.title,
-          studyRecord : this.studyRecord,
-          typeQuiz:this.state.typeQuiz
-      }
-    this.props.endLearn(parseValue); //call our action
+      var endTime = ( new Date().getTime() / 1000);
+
+      var parseValue = this.reduxParam;
+      console.log(parseValue);
+      parseValue['finishTime'] = endTime;
+      parseValue['quizData'] = this.studyRecord;
+      this.props.endLearn(parseValue); //call our action
   };
 
-    onTimesUp = (val) => {
-
-      this.setState({
-        timesUp: true,
-        expression:'sad'
-      });
+    goNextQuestion() {      
       
-      setTimeout(() => {
         this.setNextQuestion();
-      }, this.state.pause);
+        
+    }
+
+    onTimesUp = (val) => {
+      if(this.study.type == 'TOPIC' && this.state.type == 'Quiz'){        
+        this.setState({
+          showCorrect:true
+        });     
+      }
+      else{
+        this.setState({
+          timesUp: true,
+          expression:'sad'
+        });
+
+        setTimeout(() => {        
+          this.setNextQuestion();
+        }, this.state.pause); 
+      }
+      
     };
 
     setTimeStops = (time) => {
@@ -401,20 +585,36 @@ import {
       });
     };
 
-    stopTimer = (answer) => {      
-      this.setState({
+    stopTimer = (answer, isCorrect) => {   
+      stopTimerParam = {
         timerRun:false,
         answer:answer
-      });
+      }   
+      
+      this.addScore(isCorrect);
 
-      setTimeout(() => {
-        this.setNextQuestion();
-      }, this.state.pause);
+      if(this.study.type == 'TOPIC' && this.state.type == 'Quiz' && this.showCorrect){
+        
+        stopTimerParam.showCorrect = this.showCorrect;
+        
+      }
+      else{
+        setTimeout(() => {
+          this.showCorrect = false;
+          this.setNextQuestion();
+        
+        }, this.state.pause);    
+      }
+      
+      this.setState(stopTimerParam);
+      
     };
     
     addScore = (isCorrect) => {
       
       if(isCorrect){
+        this.showCorrect = false;
+
         this.setState({
           score: this.state.score + 1,
           correct:1,
@@ -423,11 +623,16 @@ import {
         
       }
       else{
+        this.showCorrect = true;
+
         this.setState({
           expression:'sad'
         });
       }
-    };
+      
+    };    
+
+    
   
   }
 

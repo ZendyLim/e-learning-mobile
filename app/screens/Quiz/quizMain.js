@@ -1,34 +1,13 @@
 import React, { Component } from 'react';
 import {
-    ActivityIndicator,
-    AsyncStorage,
-    Button,
-    StatusBar,
-    StyleSheet,
-    View, 
-    ToolbarAndroid, 
+    ScrollView,
     Text, 
     TouchableOpacity, 
 } from 'react-native';
 
 import { withNavigation } from 'react-navigation';
-var quizListArray = [
-    {
-        title : 'Hiragana/Katakana to Romaji',
-        type  : 'moji_romaji'
-        //  action : () => {this.props.navigation.navigate('QuizHiraganaList')},
-    },
-    {
-        title : 'Romaji to Hiragana/Katakana',
-        type  : 'romaji_moji'
-        // action : () => {this.props.navigation.navigate('TimeIn')}
-    },
-    {
-        title : 'Listening',
-        type  : 'audio_moji'
-        // action : () => {this.props.navigation.navigate('TimeIn')}
-    }
-]
+import  { strings }   from '../../config/localization';
+import { QuizListData } from '../../config/studyList';
 
 class QuizMainScreen extends Component {
 
@@ -36,18 +15,26 @@ class QuizMainScreen extends Component {
     // header: null,
     title: 'QuizList',
   };
+  
+  constructor(props){
+      super(props);
+      this.list = QuizListData.hiragana_katakana;
+      this._onSetLanguageTo('en');
+  }
+
+  _onSetLanguageTo(value) {
+    strings.setLanguage(value);
+  } 
 
     render() {
     return (
-        <View style={styles.containerFlexColumn}>
-            {quizListArray.map((item, key)=>(
-            <View key={key} style={styles.quizList}>
-                <TouchableOpacity onPress={this.quiz.bind(this, item.type)}>
-                <Text style={styles.hiraganaListText}> {item.title} </Text>
+        <ScrollView style={study.StudyContainer}>
+            {this.list.map((item, key)=>(
+                <TouchableOpacity key={key} style={study.btnLearn}  onPress={this.quiz.bind(this, item.type)}>
+                    <Text> {strings[item.title]} </Text>
                 </TouchableOpacity>
-            </View>
             ))}
-        </View>
+       </ScrollView>
     );
   }
 
@@ -64,11 +51,14 @@ class QuizMainScreen extends Component {
             typeQuiz: navigation.getParam('typeQuiz',null),
             quizOptions: navigation.getParam('quizOptions',null),
             oneType: type,
-            index:  navigation.getParam('index',null),        }
+            index:  navigation.getParam('index',null),        
+            categoryId :  navigation.getParam('categoryId',null),  
+        }
       ));
   };  
 }
 
 const styles = require('../../styles/quizStyle');
+const study = require('../../styles/study');
 
 export default QuizMainScreen;

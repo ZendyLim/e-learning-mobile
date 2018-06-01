@@ -14,6 +14,7 @@ let japaneseFont = 'NotoSansJP-Regular';
 let primaryColor = '#45b4e7'; // blue
 let secondaryColor = '#d2f9fc';
 let textColor = '#333';
+let textSecondary = '#566d97';
 let grayColor = '#ccc';
 
 module.exports = StyleSheet.create({
@@ -113,6 +114,9 @@ module.exports = StyleSheet.create({
 			height: 56,
 			backgroundColor: primaryColor,
 		}, 
+		highPrio: {
+			zIndex:999
+		},
 	//Header
 	headContainer:{
 		backgroundColor:primaryColor,
@@ -224,6 +228,26 @@ module.exports = StyleSheet.create({
 		flexDirection: 'row',
 		justifyContent: 'space-between',
 		marginTop: 5,
+	},
+	btnContainer:{
+		alignItems: 'center',
+		justifyContent: 'center',
+		marginTop:10
+	},
+	btn:{
+		minWidth:170,
+		padding:10,
+		backgroundColor:primaryColor,
+		borderRadius:5,
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	btnText:{
+		color:'#fff',
+		fontSize:24
+	},
+	btnIcon:{
+		marginLeft:10
 	},
 	btnupdate: {
 		backgroundColor: '#4573e7',
@@ -388,25 +412,49 @@ module.exports = StyleSheet.create({
 			flexDirection:'row',
 		},
 		questionBigText:{
-			fontSize: 60,
+			fontSize:60,
 			color: primaryColor
 		},
 		questionInsText:{
-			fontSize: 36,
 			color:textColor
 		},
-		questionText:{
+		quizSquaredInstruction:{
+			fontSize:36,
 			flexDirection: 'column'
 		},
-		questionLongInstruction:{
+		quizSquaredQuestion:{
+			fontSize:60,
+			flexDirection: 'column'
+		},
+		quizLongInstruction:{
 			fontSize: 32,
 			width:'100%',
 			lineHeight:32
 		},
-		questionLong:{
+		quizLongQuestion:{
+			fontSize: 38,
+			width:'100%',
+			lineHeight:40
+		},
+		quizKanjiInstruction:{
+			fontSize: 32,
+			width:'100%',
+			lineHeight:32
+		},
+		quizKanjiQuestion:{
 			fontSize: 40,
 			width:'100%',
 			lineHeight:40
+		},
+		quizGrammarInstruction:{
+			fontSize: 24,
+			width:'100%',
+			lineHeight:24
+		},
+		quizGrammarQuestion:{
+			fontSize: 26,
+			width:'100%',
+			lineHeight:26
 		},
 		questionRomaji:{
 			fontFamily:englishFont,
@@ -426,7 +474,8 @@ module.exports = StyleSheet.create({
 		},
 		quizBanner:{
 			flex:1,
-			zIndex:1
+			zIndex:1,
+			paddingRight:80
 		},
 		timesUp:{
 			position:'absolute',
@@ -456,11 +505,21 @@ module.exports = StyleSheet.create({
 			zIndex:1
 		},
 		quizSquared:{
-			height:125,
-			width:125,
+			height:(window.width/2.5) - 10,
+			width:(window.width/2.5) - 10,
+		},
+		quizKanji:{
+			height:(window.width/2.5) - 10,
+			width:(window.width/2.5) - 10,
 		},
 		quizLong:{
 			padding:5,
+			width: window.width - 30
+		},
+		quizGrammar:{
+			padding:5,
+			paddingLeft:10,
+			paddingRight:10,
 			width: window.width - 30
 		},
 		quizBtnPress:{
@@ -476,6 +535,16 @@ module.exports = StyleSheet.create({
 		quizLongText:{
 			fontSize:30,
 			color:textColor
+		},
+		quizKanjiText:{
+			fontSize:35,
+			color:textColor,
+			textAlign: 'center'
+		},
+		quizGrammarText:{
+			fontSize:20,
+			color:textColor,
+			textAlign: 'center'
 		},
 		quizBtnIconWrapper:{
 			width:50,
@@ -528,5 +597,66 @@ module.exports = StyleSheet.create({
 			height: 200,
 			zIndex:3
 			
+		},
+	// fill box
+		fillItem:{
+			margin:5,
+			minWidth:40,
+			minHeight:40,
+			padding:5,
+			borderRadius:5,
+			alignItems: 'center',
+			justifyContent: 'center',
+		},
+		fillText:{
+			fontSize:20,
+		},
+		fillAnswer:{
+			minHeight:100
+		},
+		fillEmptyBox: {
+			borderColor: textSecondary,
+			borderWidth: 1,		
+		},
+		fillBox:{
+			backgroundColor:'#fff',
+			shadowColor: "#000",
+			shadowOpacity: 0.5,
+			elevation: 2,
+		},
+		//Correct Panel
+		correctTitle:{
+			fontSize:22,
+			marginBottom:5,
+			color:textSecondary
+		},
+		correctHighlight:{
+			fontSize:18,
+			marginTop:10,
+			color:primaryColor	
+		},
+		correctWrapper:{
+			padding:10			
+		},
+		correctContainer:{
+			paddingRight:60,
+			padding:10,
+			backgroundColor:'#fff',
+			borderRadius:5,
+			borderColor:primaryColor,
+			borderWidth:1
+		},
+		correctAudio:{
+			position:'absolute',
+			top:10,
+			right:10,
+			zIndex:10,			
+		},
+		correctVolume:{
+			color:primaryColor,
+			fontSize:32
+		},
+		correctText:{
+			fontSize:22
 		}
 });

@@ -35,23 +35,29 @@ class LearnListScreen extends Component {
   componentDidMount() {
     const { navigation } = this.props;
     this.setState({
+      index: navigation.getParam('index', null),
       title: navigation.getParam('title', null),
       type: navigation.getParam('type', null),
       studyType: navigation.getParam('studyType', null),
+      categoryId:  navigation.getParam('categoryId', null),
       item: LearnListData[navigation.getParam('studyType', null)],
       img: navigation.getParam('img', null),
     });
   }
   navigateToPage=(item, index)=>{
+    item['index'] = this.state.index;
     item['studyType'] = this.state.studyType;
     item['img'] = this.state.img;
-    console.log('item');
+    item['categoryId'] = this.state.categoryId;
+    // item['datatopic'] = this.state.datatopic;
+    // item['config'] = this.state.config;
     console.log(item);
 
     this.props.navigation.navigate('LearnHiraganaModule',(item));
   }
 
   render() {
+    
     if(this.state.item){
       return (
         <ScrollView style={study.StudyContainer}>
