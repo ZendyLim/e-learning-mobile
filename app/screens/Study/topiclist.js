@@ -49,19 +49,28 @@ class TopicListScreen extends Component {
   }
 
   navigateToLearn=(type)=>{
+
+    param = {
+      img : this.state.img,
+      title : this.state.title,
+      index : this.state.index,
+      type : this.state.type,
+      headerTitle : type, 
+      studyType : this.state.title + '_and_' +type, 
+    };
+
     if(type == 'topic_test'){
 
+      param.isTopicTest = true;
+      param.studyType = this.state.title;
+
+      this.props.navigation.navigate('QuizFlash',(
+        param
+      ));
     }
     else{
       this.props.navigation.navigate('HiraganaList',(
-        {
-          img : this.state.img,
-          title : this.state.title,
-          index : this.state.index,
-          type : this.state.type,
-          headerTitle : type, 
-          studyType : this.state.title + '_and_' +type, 
-        }
+        param
       ));
     }      
   }

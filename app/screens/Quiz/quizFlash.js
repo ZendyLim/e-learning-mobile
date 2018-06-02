@@ -65,6 +65,7 @@ import {
     
       this.optionsNumber = 4;
       this.allQuestion = [];
+      this.currentQuestion = [];
       this.quizItems = [];
       this.timeStops = 0;  
       this.studyRecord = [];
@@ -205,14 +206,15 @@ import {
         type: navigation.getParam('type', null),
         studyType: navigation.getParam('studyType',null),
         headerTitle:  navigation.getParam('headerTitle',null),
-        index: navigation.getParam('index', null)
+        index: navigation.getParam('index', null),
+        isTopicTest: navigation.getParam('isTopicTest', null)
       }
       
       this.setState(this.initialParams);
 
       this.setInitial();
-
-      this.quizItems = quizItems[this.initialParams.studyType];
+      
+      this.setListQuestion()
       
       this.setDefinedQuestion(idList);
 
@@ -227,17 +229,20 @@ import {
         this.props.navigation.dispatch(resetAction);
       }
       else{
+        console.log(this.quizItems);
         shuffledQuiz = this.shuffleItems(this.quizItems);
-
-        this.randomQuizFormat();
-      
+              
         this.allQuestion = shuffledQuiz.map((question) => 
           this.shuffleAnswers(question, shuffledQuiz)
         );
 
+        this.currentQuestion = this.allQuestion[0];
+        
         this.setState({
-          question: this.allQuestion[0]
+          question: this.currentQuestion
         });
+
+        this.randomQuizFormat();
 
         this.setStartQuiz();
       }      
@@ -277,6 +282,23 @@ import {
         this.quizOptions = this.study[this.initialParams.headerTitle];
       }
       
+    }
+
+    setListQuestion(){
+      if(this.initialParams.isTopicTest){
+        topics = ['vocabulary', 'grammar', 'kanji'];
+        for(i = 0; i < topics.length; i++){
+          
+          tempQuiz = quizItems[this.initialParams.studyType + '_and_' + topics[i]];
+          
+          for(a = 0; a < tempQuiz.length; a++){
+            this.quizItems.push(tempQuiz[a]);
+          }
+        }
+      }
+      else{
+        this.quizItems = quizItems[this.initialParams.studyType];
+      }
     }
 
     // will change all question based on what you put in 'idList'
@@ -340,12 +362,16 @@ import {
       return array;
     };
 
-    randomQuizFormat(){    
+    randomQuizFormat(){
+      let quizFormat, quizFormatLength, paramFormat, time;
 
-      var quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
-      var quizFormatLength = quizFormat.length, randomIndex;
-      var paramFormat,time;
+      if(this.initialParams.isTopicTest){
+        questionType = this.currentQuestion.type;        
+        this.quizOptions = this.study[questionType];        
+      }
 
+      quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
+      quizFormatLength = quizFormat.length;
       randomIndex = Math.floor(Math.random() * quizFormatLength);      
           
       
@@ -489,14 +515,15 @@ import {
         if(counter < this.allQuestion.length){
           this.showCorrect = false;
           this.timeStops = 0;
-
+          this.currentQuestion = this.allQuestion[counter];
+          
           this.randomQuizFormat();
-    
+          
           this.setState({
               counter: counter,
               //questionId: questionId,
-              question: this.allQuestion[counter],
-              answerOptions: this.allQuestion[counter].answerOption,
+              question: this.currentQuestion,
+              answerOptions: this.currentQuestion.answerOption,
               answer: '',
               timerRun:true,
               timerRestart:true,
