@@ -59,7 +59,7 @@ navigateToLearn=(type, categoryId)=>{
       categoryId : categoryId,
       studyType : this.state.title + '_and_' +type, 
     };
-
+    console.log(param, 'wooo');
     if(type == 'topic_test'){
 
       param.isTopicTest = true;

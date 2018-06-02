@@ -211,7 +211,7 @@ import {
         index: navigation.getParam('index', null),
         isTopicTest: navigation.getParam('isTopicTest', null)
       }
-      
+      console.log(this.initialParams);
       this.setState(this.initialParams);
 
       this.setInitial();
