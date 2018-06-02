@@ -3040,3 +3040,107 @@ export const numberList = [
   },
 
 ]
+
+export const englishLevel = [
+  {
+    "id" : 0,
+    "text" : "Choose english level"
+  },
+  {
+    "id" : 1,
+    "text" : "Beginner"
+  },
+  {
+    "id" : 2,
+    "text" : "elementary"
+  },
+  {
+    "id" : 3,
+    "text" : "Intermediate"
+  },
+  {
+    "id" : 4,
+    "text" : "Advanced"
+  },
+]
+  
+export const japaneseStudyHistory =[
+  {
+    "id" : 0,
+    "text" : "Choose Japanese history"
+  },
+  {
+    "id" : 1,
+    "text" : "None"
+  },
+  {
+    "id" : 2,
+    "text" : "School"
+  },
+  {
+    "id" : 3,
+    "text" : "University"
+  },
+  {
+    "id" : 3,
+    "text" : "Myself"
+  },
+  {
+    "id" : 4,
+    "text" : "Other"
+  }
+]
+
+export const latestEducation =[
+  {
+    "id" : 0,
+    "text" : "Choose latest education"
+  },
+  {
+    "id" : 1,
+    "text" : "Primary School"
+  },
+  {
+    "id" : 2,
+    "text" : "Junior High School"
+  },
+  {
+    "id" : 3,
+    "text" : "Senior High School"
+  },
+  {
+    "id" : 4,
+    "text" : "University"
+  }
+]
+
+export const studyDays =[
+  {
+    "id" : 1,
+    "text" : "Monday"
+  },
+  {
+    "id" : 2,
+    "text" : "Tuesday"
+  },
+  {
+    "id" : 3,
+    "text" : "Wednesday"
+  },
+  {
+    "id" : 4,
+    "text" : "Thursday"
+  },
+  {
+    "id" : 5,
+    "text" : "Friday"
+  },
+  {
+    "id" : 6,
+    "text" : "Saturday"
+  },
+  {
+    "id" : 7,
+    "text" : "Sunday"
+  }
+]
