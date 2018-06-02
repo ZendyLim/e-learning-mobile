@@ -71,6 +71,7 @@ import {
       this.studyRecord = [];
       this.startTime = null;
       this.quizOptions = [];
+      this.byCategory = [];
       this.reduxParam = [];
       this.title = '';
       this.oneType = '';
@@ -229,8 +230,7 @@ import {
 
         this.props.navigation.dispatch(resetAction);
       }
-      else{
-        console.log(this.quizItems);
+      else{        
         shuffledQuiz = this.shuffleItems(this.quizItems);
               
         this.allQuestion = shuffledQuiz.map((question) => 
@@ -291,7 +291,7 @@ import {
         for(i = 0; i < topics.length; i++){
           
           tempQuiz = quizItems[this.initialParams.studyType + '_and_' + topics[i]];
-          
+          this.byCategory[topics[i]] = tempQuiz;
           for(a = 0; a < tempQuiz.length; a++){
             this.quizItems.push(tempQuiz[a]);
           }
@@ -327,23 +327,34 @@ import {
       array.answerOption[randomIndex] = array;
       
       currentItems = [array.id];  
-
+      type = array.type;
+      
       for(var i = 0; i < this.optionsNumber; i++){
         if(array.answerOption[i] != undefined) continue;
         randomItem = '';
-           
-        
+                                   
         while(!randomItem){
-          randomIndex = Math.floor(Math.random() * allArrayLength);
-          if(currentItems.indexOf(allArray[randomIndex].id) > -1) continue;
+          if(this.initialParams.isTopicTest){
+            byCat = this.byCategory[type];
+            randomIndex = Math.floor(Math.random() * byCat.length);
+            if(currentItems.indexOf(byCat[randomIndex].id) > -1) continue;
 
-          currentItems[currentItems.length] = allArray[randomIndex].id;
-          randomItem = allArray[randomIndex];
+            currentItems[currentItems.length] = byCat[randomIndex].id;
+            randomItem = byCat[randomIndex];
+          }
+          else{
+            randomIndex = Math.floor(Math.random() * allArrayLength);
+            if(currentItems.indexOf(allArray[randomIndex].id) > -1) continue;
+
+            currentItems[currentItems.length] = allArray[randomIndex].id;
+            randomItem = allArray[randomIndex];
+          }
+          
         }
         
         array.answerOption[i] = randomItem;
       }
-
+      console.log(array);
       return array;
     };
 
