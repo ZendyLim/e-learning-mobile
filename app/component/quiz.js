@@ -30,9 +30,9 @@ class Quiz extends Component {
   }
 
   _renderAnswerButtons(){
-    fill = ['audio_fill','english_fill','kanji_fill'];
+    fill = ['audio_fill','english_fill','kanji_fill','arrange'];
     this.isFill = fill.indexOf(this.props.format) > -1;
-    
+
     if(this.isFill){      
         console.log(this.props.question);
         return(
@@ -42,7 +42,8 @@ class Quiz extends Component {
                     onSelectAnswer={ this.onFilled }
                     isCorrect={ this.checkFilled() }
                     extraChar={ this.extraChar }
-                    reset={ this.state.reset } 
+                    reset={ this.state.reset }
+                    format={ this.props.format }
                 />
             </View>
         );   
@@ -55,7 +56,7 @@ class Quiz extends Component {
                     <AnswerButton 
                         key={ item.id }
                         id={ item.id }
-                        textDisplay={ item[this.props.displayFormat] }
+                        textDisplay={ this.stripSpace(item[this.props.displayFormat]) }
                         styleFormat={ this.props.styleFormat } 
                         selected={ item.id == this.state.selectedAnswer } 
                         onSelectAnswer={ this.onSelect }
@@ -121,7 +122,7 @@ class Quiz extends Component {
         if(this.state.selectedAnswer == '' && !this.props.timesUp){
             return -1;
         }
-        else if(this.state.selectedAnswer != this.props.question[this.props.displayFormat]){
+        else if(this.state.selectedAnswer != this.stripSpace(this.props.question[this.props.displayFormat]) ){
             return 0;
         }
         else{
@@ -131,12 +132,17 @@ class Quiz extends Component {
     }
     
     onFilled = (val) => {
-        this.props.onAnswerSelected(val, val == this.props.question[this.props.displayFormat]);
+        console.log(val, 'weee', this.stripSpace(this.props.question[this.props.displayFormat]));
+        this.props.onAnswerSelected(val, val == this.stripSpace(this.props.question[this.props.displayFormat]) );
         
         this.setState({
             selectedAnswer: val
         });
     } 
+
+    stripSpace(val){        
+        return this.props.displayFormat == 'moji' ? val.replace(/\s/g,'') : val;
+    }
 
 }
 

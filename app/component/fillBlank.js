@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 /**
   Quiz Button
 **/
-class FillButton extends Component {
+class FillBlank extends Component {
   static propTypes = {
     textDisplay: PropTypes.string.isRequired,
     textData: PropTypes.object,
@@ -198,6 +198,6 @@ class FillButton extends Component {
       }
     
 }
-module.exports = FillButton;
+module.exports = FillBlank;
 
 const styles = require('../styles/style');

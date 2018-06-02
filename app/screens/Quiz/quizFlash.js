@@ -78,10 +78,12 @@ import {
       this.showCorrect = false;
       this.isPause = null;
       this.timerResume = false;
+      this.time = 6000;
+
       this.state = {
         timesUp: false,
         expression: 'default',
-        time:6000,        
+        time:this.time,        
         timerRun:true,
         timerRestart:false,
         counter: 0,
@@ -148,7 +150,7 @@ import {
                 }
               </View>
 
-              <ScrollView style={[ styles.col12 ]}>
+              <ScrollView style={[ styles.col12, styles.quizAnswerWrapper ]}>
                 <View style={ !timerRun && styles.blocker }></View>
                 
                 { !this.state.showCorrect ?
@@ -345,9 +347,7 @@ import {
       var paramFormat,time;
 
       randomIndex = Math.floor(Math.random() * quizFormatLength);      
-
-      
-      time = 6000;
+          
       
       switch (quizFormat[randomIndex]) {
         case 'romaji_moji':
@@ -401,28 +401,28 @@ import {
         case 'audio_fill':
           paramFormat = {
             answerFormat: 'moji',
-            questionFormat: 'audio'
+            questionFormat: 'audio',
+            time:  this.state.time * 1.5
           };
-
-          paramFormat.time = time * 1.5;
+          
           break;
         
         case 'english_fill':
           paramFormat = {
             answerFormat: 'moji',
-            questionFormat: 'english'
+            questionFormat: 'english',
+            time:this.state.time * 1.5
           };
-
-          paramFormat.time = time * 1.5;
+          
           break;
         
         case 'kanji_fill':
           paramFormat = {
             answerFormat: 'moji',
-            questionFormat: 'kanji'
+            questionFormat: 'kanji',
+            time:this.state.time * 1.5
           };
-
-          paramFormat.time = time * 1.5;
+          
           break;
 
         case 'kanji_moji':
@@ -451,6 +451,14 @@ import {
             answerFormat: 'kanji',
             questionFormat: 'moji'
           };
+          break;
+        
+        case 'arrange':
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'english',
+            time:this.state.time * 2
+          };          
           break;
           
       
@@ -487,7 +495,8 @@ import {
               timesUp: false,  
               expression:'default',
               correct: 0,
-              showCorrect:false              
+              showCorrect:false,
+              time:this.time            
           });
         }
         else{

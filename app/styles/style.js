@@ -576,11 +576,11 @@ module.exports = StyleSheet.create({
 		answerContainer:{
 			alignItems: 'center',
 			justifyContent: 'center',
-			paddingTop:13
+			paddingTop:13,
+			paddingBottom:20
 		},
 		quizAnswerWrapper:{
 			position:'relative',
-			backgroundColor:'red',
 			height: window.height - 100
 		},
 		blocker:{
@@ -610,11 +610,12 @@ module.exports = StyleSheet.create({
 			alignItems: 'center',
 			justifyContent: 'center',
 		},
+		fillItemWrapper:{
+			justifyContent: 'center',
+			marginBottom:20
+		},
 		fillText:{
 			fontSize:20,
-		},
-		fillAnswer:{
-			minHeight:100
 		},
 		fillEmptyBox: {
 			borderColor: textSecondary,
