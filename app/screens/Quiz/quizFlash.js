@@ -363,7 +363,7 @@ import {
     };
 
     randomQuizFormat(){
-      let quizFormat, quizFormatLength, paramFormat, time;
+      let quizFormat, quizFormatLength, paramFormat, time, randomIndex;
 
       if(this.initialParams.isTopicTest){
         questionType = this.currentQuestion.type;        
