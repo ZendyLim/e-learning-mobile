@@ -49,6 +49,10 @@ class TopicListScreen extends Component {
   }
 
   navigateToLearn=(type)=>{
+    if(type == 'topic_test'){
+
+    }
+    else{
       this.props.navigation.navigate('HiraganaList',(
         {
           img : this.state.img,
@@ -59,6 +63,7 @@ class TopicListScreen extends Component {
           studyType : this.state.title + '_and_' +type, 
         }
       ));
+    }      
   }
 
   navigateToNextTopic=()=>{

@@ -3,6 +3,7 @@ import { TouchableHighlight, Image, View, Text, ScrollView } from 'react-native'
 import PropTypes from 'prop-types';
 import AnswerButton from './answerButton';
 import FillButton from './fillButton';
+import FillBlank from './fillBlank';
 
 /**
   Quiz Button
@@ -33,7 +34,21 @@ class Quiz extends Component {
     fill = ['audio_fill','english_fill','kanji_fill','arrange'];
     this.isFill = fill.indexOf(this.props.format) > -1;
 
-    if(this.isFill){      
+    if(this.props.format == 'fill'){
+        return(
+            <View style={ [styles.displayInlineContainer, styles.answerContainer] }>
+                <FillBlank
+                    textDisplay={ this.props.question[this.props.displayFormat] }
+                    onSelectAnswer={ this.onFilled }
+                    isCorrect={ this.checkFilled() }
+                    extraChar={ this.extraChar }
+                    reset={ this.state.reset }
+                    format={ this.props.format }
+                />
+            </View>
+        );
+    }
+    else if(this.isFill){      
         console.log(this.props.question);
         return(
             <View style={ [styles.displayInlineContainer, styles.answerContainer] }>
@@ -132,7 +147,7 @@ class Quiz extends Component {
     }
     
     onFilled = (val) => {
-        console.log(val, 'weee', this.stripSpace(this.props.question[this.props.displayFormat]));
+        
         this.props.onAnswerSelected(val, val == this.stripSpace(this.props.question[this.props.displayFormat]) );
         
         this.setState({

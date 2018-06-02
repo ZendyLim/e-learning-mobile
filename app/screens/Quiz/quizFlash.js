@@ -453,10 +453,18 @@ import {
           };
           break;
         
+        case 'fill':
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'fill',
+            time:this.state.time * 1.5
+          };          
+          break;
+        
         case 'arrange':
           paramFormat = {
             answerFormat: 'moji',
-            questionFormat: 'english',
+            questionFormat: 'arrange',
             time:this.state.time * 2
           };          
           break;
@@ -523,7 +531,7 @@ import {
             answer :  this.state.answer,
             correct : this.state.correct,
             questionTime: this.timeStops,
-            correct_title: this.state.question.moji
+            correct_title: this.stripSpace(this.state.question.moji)
       }
 
       this.studyRecord[this.studyRecord.length] = parseValue;
@@ -628,6 +636,9 @@ import {
       
     };    
 
+    stripSpace(val){        
+      return  val.replace(/\s/g,'');
+    }
     
   
   }

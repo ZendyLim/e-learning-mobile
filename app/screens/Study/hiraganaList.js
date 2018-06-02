@@ -75,7 +75,7 @@ class HiraganaListScreen extends Component {
           param
         ));
       }
-      else if(this.state.headerTitle == 'grammar'){
+      else if(this.state.headerTitle == 'grammar' && type == 'Quiz'){
         this.props.navigation.navigate('QuizBefore',(
           param
         ));

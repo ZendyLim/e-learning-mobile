@@ -57,7 +57,7 @@ class Header extends Component {
 
     onClickIcon = () => {
       
-      if(confirm){
+      if(this.props.confirm){
         this.props.testCall(false);
 
         setTimeout(() => {
@@ -82,7 +82,7 @@ class Header extends Component {
     }
 
     proceedNavigate(){
-      if(confirm){
+      if(this.props.confirm){
         this.props.testCall(false);
       }
 

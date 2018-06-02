@@ -58,41 +58,88 @@ class FillBlank extends Component {
             this.current = this.props.textDisplay;    
                 
             let answerString = this.props.textDisplay;
-            let extraString = this.props.extraChar;
+            let answerStringArray = [];
+            let willEmpty = [];
+            let extraString = this.props.extraChar;            
             
-            if(this.props.format == 'arrange'){
-                answerString = answerString.split(' ');
-            }
-            else{
-                answerString = answerString.split('');
-            }
-            
+            answerString = answerString.split(' ');        
             
             this.emptyBox = [];
-            this.answerLength = answerString.length;            
-
+            this.answerLength = answerString.length;   
+            
+            ctr = 0;
+            while(ctr < 2){
+                randomIndex = Math.floor(Math.random() * this.answerLength);
+                if(willEmpty.indexOf(randomIndex) > -1) continue;
+      
+                willEmpty[willEmpty.length] = randomIndex;
+                ctr++;
+            }
+            
             for(i = 0; i < this.answerLength; i++){
-                answerString[i] = {
-                    selected: false,
-                    char: answerString[i]
+                char = answerString[i];
+                selected = true;
+                hide = true;
+                if(willEmpty.indexOf(i) > -1){
+                    char =  '';
+                    selected = false;
+                    hide = false;
+                }
+
+                answerStringArray[i] = {
+                    selected: selected,
+                    char: answerString[i],
+                    hide: hide
                 };
-                
+                                
                 this.emptyBox[i] = {
-                    char:'',
-                    key:''
+                    char:char,
+                    key:'',
+                    clickable: !hide
                 };
             }
 
             for(i = 0; i < extraString.length; i++){
-                answerString[i] = {
+                answerStringArray[i] = {
                     selected: false,
                     char: extraString[i]
                 };
             }
 
             
-            this.shuffledString =  this.shuffle(answerString);    
+            this.shuffledString =  this.shuffle(answerStringArray);    
         }
+        
+    }
+
+    _renderFillBlankEmpty(hide){
+        if(!hide){
+            return(
+                <View style={[ styles.fillEmptyBox, styles.fillItem ]}></View>
+            );    
+        }
+        else{
+            return null;
+        }
+        
+    }
+
+    _renderFillAnswerBox(item, key){
+        if(item.clickable){
+            return(
+                (<TouchableHighlight style={[ styles.fillBox, styles.fillItem ]} onPress={ this.removeFill.bind(this,key) }>
+                    <Text style={ styles.fillText }>{ item.char }</Text>
+                </TouchableHighlight>)
+            );   
+        }
+        else{
+            return(
+                <View style={[ styles.fillBlank ]}>
+                    <Text style={ styles.fillText }>{ item.char }</Text>
+                </View>
+            );
+        }
+       
         
     }
 
@@ -101,14 +148,12 @@ class FillBlank extends Component {
       return (
         <View style={ [ styles.quizBtnContainer ] }>
           { this._renderIcon() }
-          <View style={[ styles.displayInlineContainer, styles.fillItemWrapper ]}>
+          <View style={[ styles.displayInlineContainer, styles.fillBlankWrapper, styles.shadow ]}>
                 { this.emptyBox.map((item, key)=>( 
                     <View style={ styles.displayInline } key={key}>
                     { !item.char ? 
                         (<View style={[ styles.fillEmptyBox, styles.fillItem ]}></View>) : 
-                        (<TouchableHighlight style={[ styles.fillBox, styles.fillItem ]} onPress={ this.removeFill.bind(this,key) }>
-                            <Text style={ styles.fillText }>{ item.char }</Text>
-                        </TouchableHighlight>)
+                        (this._renderFillAnswerBox(item, key))
                     }
                     </View>
                     
@@ -118,8 +163,8 @@ class FillBlank extends Component {
           <View style={ [styles.displayInlineContainer, styles.fillItemWrapper] }>
                 { this.shuffledString.map((item, key)=>( 
                     <View style={ styles.displayInline } key={key}>
-                    { item.selected ? 
-                        (<View style={[ styles.fillEmptyBox, styles.fillItem ]}></View>) : 
+                    { item.selected ?                        
+                        (this._renderFillBlankEmpty(item.hide)) : 
                         (<TouchableHighlight style={[ styles.fillBox, styles.fillItem ]} onPress={ this.fillSelect.bind(this,key) }>
                             <Text style={ styles.fillText }>{ item.char }</Text>
                         </TouchableHighlight>)

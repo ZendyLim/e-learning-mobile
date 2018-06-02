@@ -418,6 +418,9 @@ module.exports = StyleSheet.create({
 		questionInsText:{
 			color:textColor
 		},
+		questionMediumText:{
+			fontSize:36
+		},
 		quizSquaredInstruction:{
 			fontSize:36,
 			flexDirection: 'column'
@@ -626,6 +629,23 @@ module.exports = StyleSheet.create({
 			shadowColor: "#000",
 			shadowOpacity: 0.5,
 			elevation: 2,
+		},
+		// Fillblank
+		fillBlank:{
+			marginTop:5,
+			marginBottom:5,
+			minHeight:40,						
+			alignItems: 'center',
+			justifyContent: 'center',
+		},
+		fillBlankWrapper:{			
+			backgroundColor:'#fff',
+			borderColor: primaryColor,
+			borderWidth: 1,
+			marginBottom:20,
+			borderRadius:5,
+			padding:10,
+			width:window.width - 20
 		},
 		//Correct Panel
 		correctTitle:{
