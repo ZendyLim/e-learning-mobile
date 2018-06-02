@@ -48,7 +48,7 @@ class TopicListScreen extends Component {
     //Console.log(navigation.getParam('userName', null),"NIAMAK");
   }
 
-  navigateToLearn=(type)=>{
+navigateToLearn=(type, categoryId)=>{
 
     param = {
       img : this.state.img,
@@ -56,6 +56,7 @@ class TopicListScreen extends Component {
       index : this.state.index,
       type : this.state.type,
       headerTitle : type, 
+      categoryId : categoryId,
       studyType : this.state.title + '_and_' +type, 
     };
 
@@ -102,18 +103,18 @@ class TopicListScreen extends Component {
           />
           
           <View style={[study.buttonContainerTopic]}>
-            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'vocabulary')}>
+            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'vocabulary', 'C001')}>
               <Text style={[study.buttonTopicText]}>{ strings['vocabulary'] }</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'grammar')}>
+            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'grammar', 'C002')}>
               <Text style={[study.buttonTopicText]}>{ strings['grammar'] }</Text>
             </TouchableOpacity>
           </View>
           <View style={[study.buttonContainerTopic]}>
-            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'kanji')}>
+            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'kanji', 'C003')}>
               <Text style={[study.buttonTopicText]}>{ strings['kanji'] }</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'topic_test')}>
+            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'topic_test', 'T001')}>
               <Text style={[study.buttonTopicText]}>{ strings['topic_test'] }</Text>
             </TouchableOpacity>
           </View>

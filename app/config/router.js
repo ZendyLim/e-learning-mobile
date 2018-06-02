@@ -10,6 +10,9 @@ import LoginScreen from '../screens/Login/login';
 import NameScreen from '../screens/Login/namein';
 import TimeScreen from '../screens/Login/timein';
 import ConfirmationScreen from '../screens/Login/confirmation';
+
+import UsernameScreen from '../screens/Login/username'; 
+import UserDataScreen from '../screens/Login/userData';
 //import study screen
 import StudyListScreen from '../screens/Study/studyList';
 import TopicListScreen from '../screens/Study/topiclist';
@@ -31,6 +34,8 @@ import StudySummaryScreen from '../screens/Summary/studySummary';
 import QuizFlashScreen from '../screens/Quiz/quizFlash';
 //import setting data
 import SettingScreen from '../screens/Setting/setting';
+//import profile screen
+import ProfileScreen from '../screens/Profile/profile';
 //import testing redux
 import StudyReduxScreen from '../screens/studyRedux';
 //import learn lh1 screen
@@ -40,6 +45,7 @@ import KatakanaLearnScreen from '../screens/Learn/katakanalearn';
 //summary 
 import SummaryTopicList from '../screens/Summary/studyPick';
 import SummaryLearnDetail from '../screens/Summary/summaryLearn';
+import reviewScreen from '../screens/Summary/reviewSummary';
 
 
 const styles = require('../styles/style');
@@ -74,6 +80,7 @@ const StudyStack = StackNavigator({
     HiraganaFlash: HiraganaFlashcardScreen , 
     LearnHL1: LearnHL1Screen,
     summaryLearnData : SummaryLearnDetail,
+    reviewScreen : reviewScreen,
 });
 
 const SummaryStack = StackNavigator({
@@ -87,6 +94,9 @@ const SettingStack = StackNavigator({
     SettingList: SettingScreen
 });
 
+const ProfileStack = StackNavigator({
+    ProfileMain: ProfileScreen
+});
 // const QuizHiraganaListStack = StackNavigator({
 //     QuizHiraganaList: QuizHiraganaListScreen
 // })
@@ -119,14 +129,22 @@ export const AppStack = TabNavigator({
               }
         }
     }, 
-    Setting: {
-        screen: SettingStack, 
+    Profile: {
+        screen: ProfileStack, 
         navigationOptions: { 
             tabBarLabel: () => {
                 return <Icon name="user" type='font-awesome'  size={25} color={"white"} />;
               } 
         }
-    }
+    },
+    // Setting: {
+    //     screen: SettingStack, 
+    //     navigationOptions: { 
+    //         tabBarLabel: () => {
+    //             return <Icon name="user" type='font-awesome'  size={25} color={"white"} />;
+    //           } 
+    //     }
+    // }
 }, {
     tabBarPosition: 'bottom',
     tabBarOptions:{
@@ -150,7 +168,9 @@ export const AuthStack = StackNavigator(
         LoginSr: LoginScreen,
         NameIn: NameScreen,
         TimeIn: TimeScreen,
-        Confirmation: ConfirmationScreen
+        Confirmation: ConfirmationScreen,
+        Username : UsernameScreen,
+        UserData : UserDataScreen,
 });
 
 export const HiraganaLearnStack = TabNavigator({

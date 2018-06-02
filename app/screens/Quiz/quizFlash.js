@@ -71,6 +71,7 @@ import {
       this.studyRecord = [];
       this.startTime = null;
       this.quizOptions = [];
+      this.reduxParam = [];
       this.title = '';
       this.oneType = '';
       this.study = [];
@@ -546,8 +547,27 @@ import {
        
     }
 
+    setSentParamStart = (index, categoryId, type ) =>{
+      var startTime = ( new Date().getTime() / 1000);
+      if(type == 'Test'){
+        var reduxType = "TEST";
+      }else{
+        var reduxType = "QUIZ";        
+      }
+      var value = {
+          type : reduxType,
+          topicId : StudyList[index].topic_id,
+          startTime : startTime,
+          categoryId : StudyList[index].topic_id + categoryId, 
+          studyId : StudyList[index].topic_id + categoryId 
+        }
+  
+        return value;
+    }
+
     setStartQuiz = () =>  {
-      this.startTime = new Date().getTime();
+      const { navigation } = this.props;
+      this.reduxParam = this.setSentParamStart(navigation.getParam('index', null), navigation.getParam('categoryId', null), navigation.getParam('type', null));
       this.props.startLearn(this.state.studyType, this.startTime,this.title); //call our action
     }
 
@@ -567,17 +587,13 @@ import {
     };
 
     setEndQuiz = () =>  {
-      parseValue = {
-          StudentID : this.props.StudentID,
-          startTime : this.state.startTime,
-          endTime :  new Date().getTime(),
-          subjectTitle: this.title,
-          studyType : this.state.studyType,
-          studyID : this.title,
-          studyRecord : this.studyRecord,
-          typeQuiz:this.state.type
-      }
-    this.props.endLearn(parseValue); //call our action
+      var endTime = ( new Date().getTime() / 1000);
+
+      var parseValue = this.reduxParam;
+      console.log(parseValue);
+      parseValue['finishTime'] = endTime;
+      parseValue['quizData'] = this.studyRecord;
+      this.props.endLearn(parseValue); //call our action
   };
 
     goNextQuestion() {      

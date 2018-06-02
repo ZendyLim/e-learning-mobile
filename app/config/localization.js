@@ -6,7 +6,7 @@ import LocalizedStrings from 'react-native-localization';
 
 export let strings = new LocalizedStrings({
  en:{
-   loginGuest: "Create Guest Account",
+   loginGuest: "Login",
    vocabulary : "Vocabulary",
    grammar : "Grammar",
    kanji : "Kanji",

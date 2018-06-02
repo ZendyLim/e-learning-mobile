@@ -49,8 +49,8 @@ class StudyListScreen extends Component {
     item['index'] = index;
     item['studyType'] = item.title;
     item['headerTitle'] = item.title;
-    
-    console.log(item);
+    item['categoryId'] = 'C001';
+
     if(item.type == 'INITIAL'){
       item['studyType'] = item.title;
       this.props.navigation.navigate('HiraganaList',(
@@ -83,13 +83,13 @@ class StudyListScreen extends Component {
               />
               <Text style={study.title}> { strings[item.title] } </Text>
             </TouchableOpacity>
-              { item.lock ? (              
+              {/* { item.lock ? (              
                 <TouchableOpacity style={study.lockButton} onPress={this.lockedMessage.bind(this, item, key)}>  
                   <Icon name='lock'  color='#fff' size={40}/>
                 </TouchableOpacity>
                 ) : (
                   <Text style={study.NotlockButton}>not lock</Text>
-              )}           
+              )}            */}
           </View>
         )
       )}

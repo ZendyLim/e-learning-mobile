@@ -35,44 +35,35 @@ class LearnListScreen extends Component {
   componentDidMount() {
     const { navigation } = this.props;
     this.setState({
+      index: navigation.getParam('index', null),
       title: navigation.getParam('title', null),
       type: navigation.getParam('type', null),
       studyType: navigation.getParam('studyType', null),
+      categoryId:  navigation.getParam('categoryId', null),
       item: LearnListData[navigation.getParam('studyType', null)],
       img: navigation.getParam('img', null),
     });
   }
   navigateToPage=(item, index)=>{
+    item['index'] = this.state.index;
     item['studyType'] = this.state.studyType;
     item['img'] = this.state.img;
+    item['categoryId'] = this.state.categoryId;
     // item['datatopic'] = this.state.datatopic;
     // item['config'] = this.state.config;
     console.log(item);
 
-    if(item.type == 'Initial'){
-      this.props.navigation.navigate('LearnHiraganaModule',(
-        item
-      ));
-    }else{
-      this.props.navigation.navigate('LearnHiraganaModule',(
-        item
-      ));
-    }
+    this.props.navigation.navigate('LearnHiraganaModule',(item));
   }
 
   render() {
     
-    console.log(this.state.title);
-    console.log(this.state.type);
-    console.log(this.state.item);
-    console.log(this.state.studyType);
-    console.log(this.state.img);
     if(this.state.item){
       return (
         <ScrollView style={study.StudyContainer}>
          { this.state.item.map((item, key)=>(
           <TouchableOpacity key={key} style={study.btnLearn} onPress={this.navigateToPage.bind(this, item, key)}>
-              <Text>{strings[item.title]}</Text>
+              <Text>{item.title}</Text>
           </TouchableOpacity>
         ))}
         </ScrollView>

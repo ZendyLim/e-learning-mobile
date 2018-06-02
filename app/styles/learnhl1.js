@@ -20,23 +20,19 @@ module.exports = StyleSheet.create({
       borderWidth: 1,
       flex:1,
       flexDirection: 'column',
-      flexWrap: 'wrap',
-      margin: 5,
-      padding: 5,
-      backgroundColor: 'white'
-     
+      margin: 2,
+      backgroundColor: 'white',
+      justifyContent: 'center',
+      alignItems: 'center',
     }
     ,
      
     HiraganaItem: {
        color: 'black',
-       fontSize: 34,
-      textAlign: 'left',
-       
+       fontSize: 25,
      },
      RomajiItem: {
       color: 'black',
       fontSize: 15,
-      textAlign: 'right',
      },
 });

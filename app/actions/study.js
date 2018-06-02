@@ -9,11 +9,11 @@ export function startLearn(studyType, startLearn, studyID){
 }
 
 export function endLearn(postValue){
-
   return (dispatch) => {
-    fetch('http://www.mocky.io/v2/5af163c63100002a0096c946',{
+    fetch('https://e-learning-backend.herokuapp.com/api/v1/finishStudy',{
       method: 'POST',
       headers: {
+        'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjViMGI0ZWYzMjMwZjJmMjMyNjI3NjI4YSIsInJvbGUiOiJVU0VSIn0sImlhdCI6MTUyNzcyNjMwNywiZXhwIjoxNjg1NDI2MzA3fQ.jRQSMxc1AezfuTUFoHitSjQ74sDzUngArzQr8yTlhDM',
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },

@@ -70,6 +70,10 @@ module.exports = StyleSheet.create({
     fontSize: 28,
   }, 
 
+  text32: {
+    fontSize: 32,
+  }, 
+
   textMd: {
     fontSize: 22,
   }, 
@@ -259,13 +263,6 @@ cardText: {
   height: '100%'
 }, 
 
-textContent: {
-  color: 'black', 
-  textAlign: 'center', 
-  textAlignVertical: 'center',  
-  fontSize: 120
-}, 
-
 backgroundImg: {
   flex: 1,
   width: null,
@@ -276,6 +273,17 @@ roundButton: {
     backgroundColor:'#45B3EB',
     borderRadius:50,
     padding: '5%', 
+    overflow: 'hidden', 
+}, 
+
+roundButtonText: {
+  backgroundColor:'#45B3EB',
+  borderRadius:50,
+  paddingLeft: '3%',
+  paddingRight: '3%',
+  paddingBottom: '6%',
+  paddingTop: '6%',  
+  overflow: 'hidden',
 }, 
 
 boxButton: {
