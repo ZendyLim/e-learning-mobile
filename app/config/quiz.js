@@ -119,8 +119,8 @@ let topic_title_grammar= [
       "id":"tpg1_1",
       "type":"grammar",      
       "romaji":"kanako-san ha gakusei desu.",
-      "moji":"かなこさんはがくせいです。",
-      "kanji":"かなこさんは学生です",
+      "moji":"かなこさん は がくせい です。",
+      "kanji":"かなこさん は 学生 です",
       "english":"Kanako is a student",
       "audio":"ne.mp3"
   },
@@ -128,7 +128,7 @@ let topic_title_grammar= [
       "id":"tpg1_2",
       "type":"grammar",      
       "romaji":"kanako-san ha jaarimasen.",
-      "moji":"かなこさんはがくせいじゃありません。",
+      "moji":"かなこさん は がくせい じゃありません。",
       "kanji":"かなこさんは学生じゃありません",
       "english":"Kanako is not a student",
       "audio":"ne.mp3"
@@ -137,8 +137,8 @@ let topic_title_grammar= [
       "id":"tpg1_3",
       "type":"grammar",      
       "romaji":"kanako-san ha desu ka.",
-      "moji":"かなこさんはがくせいですか。",
-      "kanji":"かなこさんは学生ですか",
+      "moji":"かなこさん は がくせい です か。",
+      "kanji":"かなこさん は 学生 です か",
       "english":"Is kanako a student?",
       "audio":"ne.mp3"
   },
@@ -146,8 +146,8 @@ let topic_title_grammar= [
       "id":"tpg1_4",
       "type":"grammar",      
       "romaji":"kanako-san ha takumi-san ga wakarimasu.",
-      "moji":"かなこさんはたくみさんがわかります。",
-      "kanji":"かなこさんはたくみさんが分かります。",
+      "moji":"かなこさん は たくみさん が わかります。",
+      "kanji":"かなこさん は たくみさん が 分かります。",
       "english":"Kanako knows Takumi",
       "audio":"ne.mp3"
   },
@@ -155,8 +155,8 @@ let topic_title_grammar= [
       "id":"tpg1_5",
       "type":"grammar",      
       "romaji":"kanako-san ha takumi-san ga wakarimasen.",
-      "moji":"かなこさんはたくみさんがわかりません。",
-      "kanji":"かなこさんはたくみさんが分かりません。",
+      "moji":"かなこさん は たくみさん が わかりません。",
+      "kanji":"かなこさん は たくみさん が 分かりません。",
       "english":"Kanako does not know Takumi",
       "audio":"ne.mp3"
   }

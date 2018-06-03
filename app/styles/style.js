@@ -420,6 +420,9 @@ module.exports = StyleSheet.create({
 		questionInsText:{
 			color:textColor
 		},
+		questionMediumText:{
+			fontSize:36
+		},
 		quizSquaredInstruction:{
 			fontSize:36,
 			flexDirection: 'column'
@@ -578,10 +581,12 @@ module.exports = StyleSheet.create({
 		answerContainer:{
 			alignItems: 'center',
 			justifyContent: 'center',
-			paddingTop:13
+			paddingTop:13,
+			paddingBottom:20
 		},
 		quizAnswerWrapper:{
-			position:'relative'
+			position:'relative',
+			height: window.height - 100
 		},
 		blocker:{
 			position:'absolute',
@@ -610,11 +615,12 @@ module.exports = StyleSheet.create({
 			alignItems: 'center',
 			justifyContent: 'center',
 		},
+		fillItemWrapper:{
+			justifyContent: 'center',
+			marginBottom:20
+		},
 		fillText:{
 			fontSize:20,
-		},
-		fillAnswer:{
-			minHeight:100
 		},
 		fillEmptyBox: {
 			borderColor: textSecondary,
@@ -625,6 +631,23 @@ module.exports = StyleSheet.create({
 			shadowColor: "#000",
 			shadowOpacity: 0.5,
 			elevation: 2,
+		},
+		// Fillblank
+		fillBlank:{
+			marginTop:5,
+			marginBottom:5,
+			minHeight:40,						
+			alignItems: 'center',
+			justifyContent: 'center',
+		},
+		fillBlankWrapper:{			
+			backgroundColor:'#fff',
+			borderColor: primaryColor,
+			borderWidth: 1,
+			marginBottom:20,
+			borderRadius:5,
+			padding:10,
+			width:window.width - 20
 		},
 		//Correct Panel
 		correctTitle:{

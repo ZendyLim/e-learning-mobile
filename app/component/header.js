@@ -15,7 +15,8 @@ class Header extends Component {
     icon: PropTypes.string,
     route: PropTypes.string,
     confirm: PropTypes.bool,
-    confirmMessage: PropTypes.string
+    confirmMessage: PropTypes.string,
+    testCall:PropTypes.func
   };
 
   constructor(props) {
@@ -56,7 +57,7 @@ class Header extends Component {
 
     onClickIcon = () => {
       
-      if(confirm){
+      if(this.props.confirm){
         this.props.testCall(false);
 
         setTimeout(() => {
@@ -81,7 +82,10 @@ class Header extends Component {
     }
 
     proceedNavigate(){
-      this.props.testCall(false);
+      if(this.props.confirm){
+        this.props.testCall(false);
+      }
+
       if(this.props.route){
           this.props.navigation.navigate(this.props.route);    
       }

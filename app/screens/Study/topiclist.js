@@ -48,18 +48,32 @@ class TopicListScreen extends Component {
     //Console.log(navigation.getParam('userName', null),"NIAMAK");
   }
 
-  navigateToLearn=(type, categoryId)=>{
-      this.props.navigation.navigate('HiraganaList',(
-        {
-          img : this.state.img,
-          title : this.state.title,
-          index : this.state.index,
-          type : this.state.type,
-          headerTitle : type, 
-          categoryId : categoryId,
-          studyType : this.state.title + '_and_' +type, 
-        }
+navigateToLearn=(type, categoryId)=>{
+
+    param = {
+      img : this.state.img,
+      title : this.state.title,
+      index : this.state.index,
+      type : this.state.type,
+      headerTitle : type, 
+      categoryId : categoryId,
+      studyType : this.state.title + '_and_' +type, 
+    };
+    console.log(param, 'wooo');
+    if(type == 'topic_test'){
+
+      param.isTopicTest = true;
+      param.studyType = this.state.title;
+
+      this.props.navigation.navigate('QuizFlash',(
+        param
       ));
+    }
+    else{
+      this.props.navigation.navigate('HiraganaList',(
+        param
+      ));
+    }      
   }
 
   navigateToNextTopic=()=>{
