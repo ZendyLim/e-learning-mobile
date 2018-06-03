@@ -55,7 +55,17 @@ export let strings = new LocalizedStrings({
    FILL_THE_BLANKS: "Fill in the blanks",
    REARRANGE: "Rearrange the sentence",
    ENGLISH: "English",
-   NEXT:'Next'
+   NEXT:'Next',
+   WORD_LIST_LEARN: "WORD LIST",
+   EXPLANATION_LEARN: "EXPLANATION",
+   FLASH_CARD_LEARN: "FLASH CARD",
+   DRAW_LEARN: "DRAW",
+   GOI_LIST_LEARN : "VOCABULARY LIST",
+   BUNPO_LIST_LEARN : "GRAMMAR LIST",
+   KANJI_LIST_LEARN : "KANJI LIST",
+   FLASH_CARD_HIRAGANA_LEARN: "FLASH CARD HIRAGANA",
+   FLASH_CARD_KATAKANA_LEARN: "FLASH CARD KATAKANA",
+
  },
  ja: {
    loginGuest: "japan",
@@ -107,6 +117,16 @@ export let strings = new LocalizedStrings({
    FILL_THE_BLANKS: "Fill in the blanks",
    REARRANGE: "Rearrange the sentence",
    ENGLISH: "英語",
-   NEXT:'次'
+   NEXT:'次',
+   WORD_LIST_LEARN: "WORD LIST",
+   EXPLANATION_LEARN: "EXPLANATION",
+   FLASH_CARD_LEARN: "FLASH CARD",
+   DRAW_LEARN: "DRAW",
+   GOI_LIST_LEARN : "VOCABULARY LIST",
+   BUNPO_LIST_LEARN : "GRAMMAR LIST",
+   KANJI_LIST_LEARN : "KANJI LIST",
+   FLASH_CARD_HIRAGANA_LEARN: "FLASH CARD HIRAGANA",
+   FLASH_CARD_KATAKANA_LEARN: "FLASH CARD KATAKANA",
+   
   }
 });
