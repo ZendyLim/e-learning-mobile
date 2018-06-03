@@ -35,13 +35,13 @@ class SummaryLearnDetail extends Component {
   componentDidMount() {
     const { navigation } = this.props;
     this.setState({
-        studyType: navigation.getParam('studyType', null),
+        categoryId: navigation.getParam('categoryId', null),
         topic_id: navigation.getParam('topic_id', null),
     });
   }
  
   render() {
-    if(this.state.studyType ){
+    if(this.state.categoryId ){
       return (
         <ScrollView style={study.StudyContainer}>
             <Image 

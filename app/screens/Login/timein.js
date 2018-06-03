@@ -70,7 +70,6 @@ import {
         startDate : navigation.getParam('startDate', null),
 
       });
-      console.log(this.state.userId,"lolololo")
     }
 
     onDateChange = (date) => {
@@ -87,17 +86,14 @@ import {
       var userData = this.state;
       userData['studyDay'] = this.combineDays();
       // this.combineDays()
-      console.log(this.state,"mamak");
-      // if(!this.validation()){
-      //   this.props.navigation.navigate('Confirmation',(this.state));
-      // }
-      this.props.navigation.navigate('Confirmation',(userData));
+      if(!this.validation()){
+        this.props.navigation.navigate('Confirmation',(this.state));
+      }
     };
 
     validation = () => {
       const { studyReason, statusDays, finishDate} = this.state;
       let error = '';
-      console.log(statusDays[1],"shit")
       if (studyReason == "Choose your Reason") error = "Study reason is required";
       else if (!statusDays[0] && !statusDays[1] && !statusDays[2] && !statusDays[3]
         && !statusDays[4] && !statusDays[5] && !statusDays[6]) error = "You need to choose at least 1 day";
