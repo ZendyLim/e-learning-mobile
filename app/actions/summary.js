@@ -1,26 +1,44 @@
 import { SUMMARY_HOME , SUMMARY_TEST , SUMMARY_QUIZ  }  from '../lib/constants';
+import { AsyncStorage } from 'react-native';
 
+
+async function saveJWT(token){ 
+  try {
+    await AsyncStorage.setItem('@MySuperStore:jwtToken', token);
+  } catch (error) {
+    console.log(error);
+  }
+   
+};
+
+async function getJWT(){ 
+    return  await AsyncStorage.getItem('@MySuperStore:jwtToken');
+}
 //================================   API FETCH ===================================
 
 export function getSummaryRecord(type, topicId, categoryId, studyId){
     return (dispatch) => {
-        fetch('https://e-learning-backend.herokuapp.com/api/v1/lastReview?type=' + type + '&topicId=' + topicId + '&categoryId='+ categoryId +'&studyId='+ studyId,{
-          method: 'GET',
-          headers: {
-            'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjViMGI0ZWYzMjMwZjJmMjMyNjI3NjI4YSIsInJvbGUiOiJVU0VSIn0sImlhdCI6MTUyNzcyNjMwNywiZXhwIjoxNjg1NDI2MzA3fQ.jRQSMxc1AezfuTUFoHitSjQ74sDzUngArzQr8yTlhDM',
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-          },
-        }).then(data => data.json())
-        .then(json => {
-            if(type == 'QUIZ'){
-                dispatch(summaryRecordQuizDispatch(json, type))
-            }else{
-                dispatch(summaryRecordTestDispatch(json, type))            
-            }
+        getJWT().then( JWT => {
+            fetch('https://e-learning-backend.herokuapp.com/api/v1/lastReview?type=' + type + '&topicId=' + topicId + '&categoryId='+ categoryId +'&studyId='+ studyId,{
+              method: 'GET',
+              headers: {
+                'Authorization' : JWT,
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+              },
+            }).then(data => data.json())
+            .then(json => {
+                if(type == 'QUIZ'){
+                    dispatch(summaryRecordQuizDispatch(json, type))
+                }else{
+                    dispatch(summaryRecordTestDispatch(json, type))            
+                }
+            })
+            .catch(err => dispatch(failedSummary(err)))
         })
-        .catch(err => dispatch(failedSummary(err)))
-      };      
+    };    
+    
+     
 }
 
 export function getHomeSummary(studentID){

@@ -49,7 +49,7 @@ import DatePicker from 'react-native-datepicker';
     }
     
     getData(){
-      this.props.getUserProfile()
+      //this.props.getUserProfile()
       if(this.props.user){
         this.setState({
           userName: this.props.user.username,
@@ -67,16 +67,16 @@ import DatePicker from 'react-native-datepicker';
     }
 
 
-    updateUserData = async () => {
-      const { navigation } = this.props;
-      let toUnixTimestamps = navigation.state.params.finishDate;
-      toUnixTimestamps = toUnixTimestamps + " 00:00:00";
-      navigation.state.params.finishDate = (new Date(toUnixTimestamps).getTime()/1000)
-      var nav = navigation.state.params;
-      nav['id'] = '1';
-      console.log(nav);
-      this.props.updateUserProfile(nav);
-    };
+    // updateUserData = async () => {
+    //   const { navigation } = this.props;
+    //   let toUnixTimestamps = navigation.state.params.finishDate;
+    //   toUnixTimestamps = toUnixTimestamps + " 00:00:00";
+    //   navigation.state.params.finishDate = (new Date(toUnixTimestamps).getTime()/1000)
+    //   var nav = navigation.state.params;
+    //   nav['id'] = '1';
+    //   console.log(nav);
+    //   this.props.updateUserProfile(nav);
+    // };
 
     _showMoreApp = async () => {
       this.props.deleteUserState();

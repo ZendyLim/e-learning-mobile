@@ -29,6 +29,7 @@ import {
       userId: "",
       username: "",
       password: "",
+      startTime: "",
       // userPassConfirm:"",
     }
     
@@ -86,7 +87,8 @@ import {
     signIn = async () => {
       if(!this.validation()){
         this.props.login(this.state, data => {
-          this.setState({ userId: data.userId });
+          var startDate =  new Date() / 1000 ;
+          this.setState({ userId: data.userId , startDate : startDate });
           if(!this.checkUserValid(data)){
             this.props.navigation.navigate('UserData',(this.state));
           }

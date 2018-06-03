@@ -67,6 +67,8 @@ import {
         japaneseSchoolName : navigation.getParam('japaneseSchoolName', null),
         dateFrom : navigation.getParam('dateFrom', null),
         dateTo : navigation.getParam('dateTo', null),
+        startDate : navigation.getParam('startDate', null),
+
       });
       console.log(this.state.userId,"lolololo")
     }
