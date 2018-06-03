@@ -26,10 +26,10 @@ import {
     };
 
 
-    gotoSelectTopic = (typeValue) => {
+    gotoSelectTopic = (categoryId) => {
       //await AsyncStorage.setItem('userToken', 'abc');
       this.props.navigation.navigate('PickTopicSummary', {
-        type : typeValue
+        categoryId : categoryId
       });
     };
     
@@ -77,7 +77,7 @@ import {
             <View style={summary.flexRow}>
               <View style={summary.flexBot1}>
                 <View   style={summary.conGraph}>
-                  <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'vocabulary')}>
+                  <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C001')}>
                     <View style={summary.graphButton}>
                     <View style={ summary.absoluteGr }>
                         <Text style={ summary.btnText }>200/200{"\n"}Words{"\n"}learned</Text>
@@ -94,7 +94,7 @@ import {
               </View>
               <View style={summary.flexBot1}>
                 <View   style={summary.conGraph}>
-                <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'grammar')}>
+                <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C002')}>
                   <View style={summary.graphButton}>
                     <View style={ summary.absoluteGr }>
                         <Text style={ summary.btnText }>200/200{"\n"}Words{"\n"}learned</Text>
@@ -111,7 +111,7 @@ import {
               </View>
               <View style={summary.flexBot1}>
                 <View   style={summary.conGraph}>
-                <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'kanji')}>
+                <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C003')}>
                     <View style={summary.graphButton}>
                     <View style={ summary.absoluteGr }>
                         <Text style={ summary.btnText }>200/200{"\n"}Words{"\n"}learned</Text>

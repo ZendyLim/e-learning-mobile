@@ -148,12 +148,16 @@ module.exports = StyleSheet.create({
   },
   StudyContainer : {
     padding: '2%',
+    paddingBottom: 200,
     backgroundColor: 'white',
   },
   titleContainer : {
     borderColor: '#2771e8',
     borderWidth: 1,
     borderTopWidth : 0, 
+  },
+  height40 : {
+    height : 40,
   },
   btnLearn : {
     width: '100%',

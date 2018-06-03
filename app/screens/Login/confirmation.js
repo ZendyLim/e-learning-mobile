@@ -78,8 +78,8 @@ import {
     unixTimeStamps = (date) =>{
       let toUnixTimestamps = date;
       toUnixTimestamps = toUnixTimestamps + " 00:00:00";
-      date = (new Date(toUnixTimestamps).getTime()/1000)
-      return date
+      var dateVal = (new Date(toUnixTimestamps).getTime()/1000)
+      return dateVal
     }
 
     
