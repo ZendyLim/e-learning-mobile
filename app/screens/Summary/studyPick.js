@@ -34,26 +34,32 @@ class SummaryTopicList extends Component {
   componentDidMount() {
     const { navigation } = this.props;
     this.setState({
-        studyType: navigation.getParam('type', null),
+        categoryId: navigation.getParam('categoryId', null),
     });
   }
  
   navigateToPage=(item, index)=>{
-    item['studyType'] = this.state.studyType;
+    item['categoryId'] = this.state.categoryId;
     this.props.navigation.navigate('summaryLearn',(
         item
     ));
   }
 
   render() {
-    if(this.state.studyType ){
+    if(this.state.categoryId == "C001"){
+      var exportData = StudyList.slice(0, StudyList.length);
+    }else{
+      var exportData = StudyList.slice(3, StudyList.length);
+    }
+    if(this.state.categoryId ){
       return (
         <ScrollView style={study.StudyContainer}>
-            { StudyList.map((item, key)=>(
+            { exportData.map((item, key)=>(
                 <TouchableOpacity key={key} style={study.btnLearn} onPress={this.navigateToPage.bind(this, item, key)}>
                     <Text>{strings[item.title]}</Text>
                 </TouchableOpacity>
             ))}
+            <View style={study.height40}></View>
         </ScrollView>
       );
     }else{
