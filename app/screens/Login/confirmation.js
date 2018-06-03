@@ -65,12 +65,13 @@ import {
       });
     }
 
-    saveUserData = async () => {
+    saveUserData = () => {
         var userData = this.state;
-        userData.graduationDate =this.unixTimeStamps(this.state.graduationDate) ;
-        userData.dateFrom = this.unixTimeStamps(this.state.dateFrom);
-        userData['dateTo'] = this.unixTimeStamps(this.state.dateTo); 
-        userData['finishDate'] = this.unixTimeStamps(this.state.finishDate);
+        // userData.graduationDate =this.unixTimeStamps(this.state.graduationDate) ;
+        // userData.dateFrom = this.unixTimeStamps(this.state.dateFrom);
+        // userData['dateTo'] = this.unixTimeStamps(this.state.dateTo); 
+        var newFinish = (new Date(this.state.finishDate));
+        userData['finishDate'] = newFinish.getTime()/1000;
         this.props.updateProfile(userData);
 
     };
@@ -78,8 +79,9 @@ import {
     unixTimeStamps = (date) =>{
       let toUnixTimestamps = date;
       toUnixTimestamps = toUnixTimestamps + " 00:00:00";
-      var dateVal = (new Date(toUnixTimestamps).getTime()/1000)
-      return dateVal
+      dateVal = (new Date(toUnixTimestamps).getTime()/1000);
+      console.log(dateVal, "datevak");
+      return dateVal;
     }
 
     
