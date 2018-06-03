@@ -1,5 +1,19 @@
 import { START_TIME_LEARN, END_TIME_LEARN ,LEARN_FAILED , TAKE_QUIZ  }  from '../lib/constants';
+import { AsyncStorage } from 'react-native';
 
+
+async function saveJWT(token){ 
+  try {
+    await AsyncStorage.setItem('@MySuperStore:jwtToken', token);
+  } catch (error) {
+    console.log(error);
+  }
+   
+};
+
+async function getJWT(){ 
+    return  await AsyncStorage.getItem('@MySuperStore:jwtToken');
+}
 //================================   API FETCH ===================================
 
 export function startLearn(studyType, startLearn, studyID){
@@ -9,21 +23,25 @@ export function startLearn(studyType, startLearn, studyID){
 }
 
 export function endLearn(postValue){
+  console.log(postValue);
   return (dispatch) => {
-    fetch('https://e-learning-backend.herokuapp.com/api/v1/finishStudy',{
-      method: 'POST',
-      headers: {
-        'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjViMGI0ZWYzMjMwZjJmMjMyNjI3NjI4YSIsInJvbGUiOiJVU0VSIn0sImlhdCI6MTUyNzcyNjMwNywiZXhwIjoxNjg1NDI2MzA3fQ.jRQSMxc1AezfuTUFoHitSjQ74sDzUngArzQr8yTlhDM',
-        'Accept': 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(postValue)
-    }).then(data => data.json())
-    .then(json => {
-      dispatch(endLearnDispatch(postValue))
-    })
-    .catch(err => dispatch(endLearnFailedDispatch(err)))
-  };        
+    getJWT().then( JWT => {
+      console.log(JWT);
+      fetch('https://e-learning-backend.herokuapp.com/api/v1/finishStudy',{
+        method: 'POST',
+        headers: {
+          'Authorization' : JWT,
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postValue)
+      }).then(data => data.json())
+      .then(json => {
+        dispatch(endLearnDispatch(postValue))
+      })
+      .catch(err => dispatch(endLearnFailedDispatch(err)))
+    });
+  };              
 }
 export function takeQuiz(studyData){
   return (dispatch) => {

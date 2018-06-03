@@ -49,15 +49,19 @@ module.exports = StyleSheet.create({
     },
     containerMistake : {
         padding : 15,
+        height : 240,
     },
     containerMainMistake : {
         padding : 15,
-        height : 240,
         backgroundColor : '#fff',
         borderColor: '#ccc',
         borderWidth: 1,     
         borderRadius: 5,   
-    },    
+        paddingBottom: 20,
+    }, 
+    getData :{
+        height: 40,
+    },
     sumaryTitle : {
         fontSize : 20,
         fontWeight : 'bold',

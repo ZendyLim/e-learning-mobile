@@ -39,7 +39,8 @@ import {
       japaneseType: "",
       japaneseSchoolName : "",
       dateFrom:"",
-      dateTo:""
+      dateTo:"",
+      startDate : ""
     }
     
     validation () {
@@ -69,6 +70,7 @@ import {
         userId: navigation.getParam('userId', null),
         userName: navigation.getParam('userName', null),
         userPass: navigation.getParam('userPass', null),
+        startDate : navigation.getParam('startDate', null),
       });
     }
 

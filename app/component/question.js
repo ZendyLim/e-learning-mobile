@@ -74,6 +74,24 @@ class QuestionPanel extends Component {
         </View>
       );
     }
+    else if(this.props.format == 'fill'){
+      return(
+        <View style={[ styles.questionContainer, styles.col12 ]}>
+          <Text style={ [styles.questionInsText, styles.questionMediumText ]}>
+              {strings.QUESTION_FILL}
+          </Text>
+        </View>
+      );
+    }
+    else if(this.props.format == 'arrange'){
+      return(
+        <View style={[ styles.questionContainer, styles.col12 ]}>
+          <Text style={ [styles.questionInsText, styles.questionMediumText ]}>
+              {strings.QUESTION_ARRANGE}
+          </Text>
+        </View>
+      );
+    }
     else{
       return(
           <View style={[ styles.questionContainer, styles.col12 ]}>

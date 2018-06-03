@@ -60,17 +60,17 @@ import {
         studyHours : navigation.getParam('studyHours', null),
         studyReason : navigation.getParam('studyReason', null),
         finishDate : navigation.getParam('finishDate', null),
+        startDate : navigation.getParam('startDate', null),
+
       });
     }
 
     saveUserData = async () => {
         var userData = this.state;
-        var startDate = (new Date().getTime());
         userData.graduationDate =this.unixTimeStamps(this.state.graduationDate) ;
         userData.dateFrom = this.unixTimeStamps(this.state.dateFrom);
         userData['dateTo'] = this.unixTimeStamps(this.state.dateTo); 
         userData['finishDate'] = this.unixTimeStamps(this.state.finishDate);
-        userData['startDate'] = this.unixTimeStamps(startDate);
         this.props.updateProfile(userData);
 
     };

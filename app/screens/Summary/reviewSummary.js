@@ -177,11 +177,14 @@ import score from '../Study/score';
               <Icon name='lock'  color='#fff' size={10}/>
 
             {recordStudy[0]  ? (
-              <FlatList
-                ref='listRef'
-                data={recordStudy}
-                renderItem={this.renderItem}
-                keyExtractor={(item, index) => index.toString()}/>
+              <View>
+                <FlatList
+                  ref='listRef'
+                  data={recordStudy}
+                  renderItem={this.renderItem}
+                  keyExtractor={(item, index) => index.toString()}/>
+                <View style={ scoreStyle.getData }></View>
+              </View>
                 ) :<Text>No study data</Text> }
             </ScrollView >
           </View>

@@ -41,7 +41,7 @@ import {
         var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
 
         var firstDate = new Date();
-        var secondDate = new Date(dateTo);
+        var secondDate = new Date(dateTo * 1000);
   
         var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
         return diffDays;
@@ -55,13 +55,13 @@ import {
         var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
 
         var firstDate = new Date();
-        var secondDate = new Date(dateTo);
-        var startDate = new Date(dateFrom);
+        var secondDate = new Date(dateTo * 1000);
+        var startDate = new Date(dateFrom  * 1000);
   
         var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
         var total = Math.round(Math.abs((startDate.getTime() - secondDate.getTime())/(oneDay)));
-        var totalPersen = (diffDays/total) ;
-        console.log(totalPersen);
+  
+        var totalPersen = 1 - (diffDays/total) ;
    
         return totalPersen;
   
@@ -69,13 +69,20 @@ import {
     }
 
     getDateFormat = (dateTo) =>{
-      return 0;
+      var dateTo = new Date(dateTo * 1000);
+
+      const monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+
+      return  monthNames[dateTo.getMonth()] + " " + dateTo.getDate() + ", " + dateTo.getFullYear();
     }
    render() {
-     if(this.props.dateTo && this.props.dateFrom){
-      var diffDays = this.updateDate(this.props.dateTo);
-      var targetDate = this.getDateFormat(this.props.dateTo);
-      var persenTotal = this.persen(this.props.dateTo, this.props.dateFrom);
+     console.log(this.props.data);
+     if(this.props.data.finishDate && this.props.data.startDate){
+      var diffDays = this.updateDate(this.props.data.finishDate);
+      var targetDate = this.getDateFormat(this.props.data.finishDate);
+      var persenTotal = this.persen(this.props.data.finishDate, this.props.data.startDate);
      }else{
       var diffDays = 0;
       var targetDate = '';
@@ -96,7 +103,7 @@ import {
               <View style={ scoreStyle.containerScoreHome }>
                 <Text style={ scoreStyle.scoreTotal }>{ diffDays ? ( diffDays ) : ( 0 ) }d Left </Text>
                 <Text style={ [scoreStyle.scoreText2 , scoreStyle.fontBold] }>Target Date </Text>
-                <Text style={ scoreStyle.scoreText2 }>July 16, 2018 </Text>
+                <Text style={ scoreStyle.scoreText2 }>{ targetDate } </Text>
               </View>
             </View>
             <ProgressCircle

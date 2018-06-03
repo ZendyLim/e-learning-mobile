@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import {
     View,
     Text,
-    TouchableHighlight
+    TouchableHighlight,
+    ScrollView
   } from 'react-native';
-  import { List, ListItem, ScrollView } from 'react-native-elements';
+
   import  { strings }   from '../../config/localization';
 
   import { bindActionCreators } from 'redux';
@@ -64,11 +65,13 @@ import {
     
       this.optionsNumber = 4;
       this.allQuestion = [];
+      this.currentQuestion = [];
       this.quizItems = [];
       this.timeStops = 0;  
       this.studyRecord = [];
       this.startTime = null;
       this.quizOptions = [];
+      this.byCategory = [];
       this.reduxParam = [];
       this.title = '';
       this.oneType = '';
@@ -78,10 +81,12 @@ import {
       this.showCorrect = false;
       this.isPause = null;
       this.timerResume = false;
+      this.time = 6000;
+
       this.state = {
         timesUp: false,
         expression: 'default',
-        time:6000,        
+        time:this.time,        
         timerRun:true,
         timerRestart:false,
         counter: 0,
@@ -148,7 +153,7 @@ import {
                 }
               </View>
 
-              <View style={[ styles.col12, styles.quizAnswerWrapper]}>
+              <ScrollView style={[ styles.col12, styles.quizAnswerWrapper ]}>
                 <View style={ !timerRun && styles.blocker }></View>
                 
                 { !this.state.showCorrect ?
@@ -176,7 +181,7 @@ import {
                   )
                 }
 
-              </View>
+              </ScrollView>
 
             </View>
 
@@ -190,6 +195,8 @@ import {
 
     componentWillMount() {            
       const { navigation } = this.props;
+
+      console.log(this.props.navigation);
       this.oneType = navigation.getParam('oneType',null);
       this.mounted = true;
       idList = navigation.getParam('idList', null);
@@ -201,14 +208,15 @@ import {
         type: navigation.getParam('type', null),
         studyType: navigation.getParam('studyType',null),
         headerTitle:  navigation.getParam('headerTitle',null),
-        index: navigation.getParam('index', null)
+        index: navigation.getParam('index', null),
+        isTopicTest: navigation.getParam('isTopicTest', null)
       }
-      
+      console.log(this.initialParams);
       this.setState(this.initialParams);
 
       this.setInitial();
-
-      this.quizItems = quizItems[this.initialParams.studyType];
+      
+      this.setListQuestion()
       
       this.setDefinedQuestion(idList);
 
@@ -222,18 +230,20 @@ import {
 
         this.props.navigation.dispatch(resetAction);
       }
-      else{
+      else{        
         shuffledQuiz = this.shuffleItems(this.quizItems);
-
-        this.randomQuizFormat();
-      
+              
         this.allQuestion = shuffledQuiz.map((question) => 
           this.shuffleAnswers(question, shuffledQuiz)
         );
 
+        this.currentQuestion = this.allQuestion[0];
+        
         this.setState({
-          question: this.allQuestion[0]
+          question: this.currentQuestion
         });
+
+        this.randomQuizFormat();
 
         this.setStartQuiz();
       }      
@@ -275,6 +285,23 @@ import {
       
     }
 
+    setListQuestion(){
+      if(this.initialParams.isTopicTest){
+        topics = ['vocabulary', 'grammar', 'kanji'];
+        for(i = 0; i < topics.length; i++){
+          
+          tempQuiz = quizItems[this.initialParams.studyType + '_and_' + topics[i]];
+          this.byCategory[topics[i]] = tempQuiz;
+          for(a = 0; a < tempQuiz.length; a++){
+            this.quizItems.push(tempQuiz[a]);
+          }
+        }
+      }
+      else{
+        this.quizItems = quizItems[this.initialParams.studyType];
+      }
+    }
+
     // will change all question based on what you put in 'idList'
     setDefinedQuestion(idList){
       if(idList && idList.length){
@@ -300,23 +327,34 @@ import {
       array.answerOption[randomIndex] = array;
       
       currentItems = [array.id];  
-
+      type = array.type;
+      
       for(var i = 0; i < this.optionsNumber; i++){
         if(array.answerOption[i] != undefined) continue;
         randomItem = '';
-           
-        
+                                   
         while(!randomItem){
-          randomIndex = Math.floor(Math.random() * allArrayLength);
-          if(currentItems.indexOf(allArray[randomIndex].id) > -1) continue;
+          if(this.initialParams.isTopicTest){
+            byCat = this.byCategory[type];
+            randomIndex = Math.floor(Math.random() * byCat.length);
+            if(currentItems.indexOf(byCat[randomIndex].id) > -1) continue;
 
-          currentItems[currentItems.length] = allArray[randomIndex].id;
-          randomItem = allArray[randomIndex];
+            currentItems[currentItems.length] = byCat[randomIndex].id;
+            randomItem = byCat[randomIndex];
+          }
+          else{
+            randomIndex = Math.floor(Math.random() * allArrayLength);
+            if(currentItems.indexOf(allArray[randomIndex].id) > -1) continue;
+
+            currentItems[currentItems.length] = allArray[randomIndex].id;
+            randomItem = allArray[randomIndex];
+          }
+          
         }
         
         array.answerOption[i] = randomItem;
       }
-
+      console.log(array);
       return array;
     };
 
@@ -336,16 +374,18 @@ import {
       return array;
     };
 
-    randomQuizFormat(){    
+    randomQuizFormat(){
+      let quizFormat, quizFormatLength, paramFormat, time, randomIndex;
 
-      var quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
-      var quizFormatLength = quizFormat.length, randomIndex;
-      var paramFormat,time;
+      if(this.initialParams.isTopicTest){
+        questionType = this.currentQuestion.type;        
+        this.quizOptions = this.study[questionType];        
+      }
 
+      quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
+      quizFormatLength = quizFormat.length;
       randomIndex = Math.floor(Math.random() * quizFormatLength);      
-
-      
-      time = 6000;
+          
       
       switch (quizFormat[randomIndex]) {
         case 'romaji_moji':
@@ -399,28 +439,28 @@ import {
         case 'audio_fill':
           paramFormat = {
             answerFormat: 'moji',
-            questionFormat: 'audio'
+            questionFormat: 'audio',
+            time:  this.state.time * 1.5
           };
-
-          paramFormat.time = time * 1.5;
+          
           break;
         
         case 'english_fill':
           paramFormat = {
             answerFormat: 'moji',
-            questionFormat: 'english'
+            questionFormat: 'english',
+            time:this.state.time * 1.5
           };
-
-          paramFormat.time = time * 1.5;
+          
           break;
         
         case 'kanji_fill':
           paramFormat = {
             answerFormat: 'moji',
-            questionFormat: 'kanji'
+            questionFormat: 'kanji',
+            time:this.state.time * 1.5
           };
-
-          paramFormat.time = time * 1.5;
+          
           break;
 
         case 'kanji_moji':
@@ -450,6 +490,22 @@ import {
             questionFormat: 'moji'
           };
           break;
+        
+        case 'fill':
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'fill',
+            time:this.state.time * 1.5
+          };          
+          break;
+        
+        case 'arrange':
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'arrange',
+            time:this.state.time * 2
+          };          
+          break;
           
       
         default:
@@ -471,21 +527,23 @@ import {
         if(counter < this.allQuestion.length){
           this.showCorrect = false;
           this.timeStops = 0;
-
+          this.currentQuestion = this.allQuestion[counter];
+          
           this.randomQuizFormat();
-    
+          
           this.setState({
               counter: counter,
               //questionId: questionId,
-              question: this.allQuestion[counter],
-              answerOptions: this.allQuestion[counter].answerOption,
+              question: this.currentQuestion,
+              answerOptions: this.currentQuestion.answerOption,
               answer: '',
               timerRun:true,
               timerRestart:true,
               timesUp: false,  
               expression:'default',
               correct: 0,
-              showCorrect:false              
+              showCorrect:false,
+              time:this.time            
           });
         }
         else{
@@ -531,7 +589,7 @@ import {
             answer :  this.state.answer,
             correct : this.state.correct,
             questionTime: this.timeStops,
-            correct_title: this.state.question.moji
+            correct_title: this.stripSpace(this.state.question.moji)
       }
 
       this.studyRecord[this.studyRecord.length] = parseValue;
@@ -632,6 +690,9 @@ import {
       
     };    
 
+    stripSpace(val){        
+      return  val.replace(/\s/g,'');
+    }
     
   
   }

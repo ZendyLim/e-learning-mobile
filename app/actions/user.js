@@ -3,18 +3,18 @@ import { USER_LOGIN_SUCCESS, USER_LOGIN_FAILED, USER_UPDATE_SUCCESS} from '../li
 import { AsyncStorage } from 'react-native';
 
 
-saveJWT = async (token) => { 
+async function saveJWT(token){ 
   try {
-    await AsyncStorage.setItem('jwtToken', token);
+    await AsyncStorage.setItem('@MySuperStore:jwtToken', token);
   } catch (error) {
-    console.log("Error saving data" + error);
+    console.log(error);
   }
-}
+   
+};
 
-getJWT = async (callback) => { 
-    const value = await AsyncStorage.getItem('jwtToken').then( data => {
-      callback(data);
-    });
+
+async function getJWT(){ 
+    return  await AsyncStorage.getItem('@MySuperStore:jwtToken');
 }
 //================================   API FETCH ===================================
 export function createUser(userValue){
@@ -54,6 +54,7 @@ export function updateUser(userValue){
 }
 
 export function login(userValue,callback){
+  console.log(userValue);
   return (dispatch) => {
       fetch('https://e-learning-backend.herokuapp.com/api/v1/login',{
         method: 'POST',
@@ -63,8 +64,10 @@ export function login(userValue,callback){
         },
         body: JSON.stringify(userValue)
         }).then(data  => {
-          saveJWT(data.headers.map.authorization[0]);
-          data.json()
+          if(data.headers.map.authorization){
+            saveJWT(data.headers.map.authorization[0])
+          }
+            data.json()
           .then( json =>{
             callback(json);
             dispatch(fetchDataSuccess(json));          
@@ -173,6 +176,7 @@ export function updateProfileSuccess(userVal) {
 }
 
 export function userLoginFailed(error){
+  console.log(error); 
   return{
     type: USER_LOGIN_FAILED,
     error: error,
