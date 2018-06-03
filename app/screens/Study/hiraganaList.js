@@ -52,6 +52,8 @@ class HiraganaListScreen extends Component {
     this.img = navigation.getParam('img', null);
     
     this.props.getSummaryRecord('QUIZ',navigation.getParam('topic_id', null), navigation.getParam('topic_id', null) + navigation.getParam('categoryId', null), navigation.getParam('topic_id', null) + navigation.getParam('categoryId', null));      
+    this.props.getSummaryRecord('TEST',navigation.getParam('topic_id', null), navigation.getParam('topic_id', null) + navigation.getParam('categoryId', null), navigation.getParam('topic_id', null) + navigation.getParam('categoryId', null));      
+
   }
 
   navigateToLearn=(type, topicId = null)=>{
@@ -126,7 +128,7 @@ class HiraganaListScreen extends Component {
       if(count == 0){
         return "0/100";
       }else{
-        var result = (count / quiz.length) * 100;
+        var result =  Math.floor((count / quiz.length) * 100);
         return result + '/100';
       }
     }else{
@@ -145,7 +147,7 @@ class HiraganaListScreen extends Component {
       if(count == 0){
         return "0/100";
       }else{
-        var result = (count / quiz.length) * 100;
+        var result =  Math.floor((count / quiz.length) * 100);
         return result + '/100';
       }
     }else{
@@ -154,12 +156,28 @@ class HiraganaListScreen extends Component {
   }
 
   navigateReview = (type) => {
+    if(type == "QUIZ"){
+      if(this.props.quiz !== undefined){
+        this.goToReview(type);
+      }else{
+        alert("No Data");
+      }
+    }else{
+      if(this.props.quiz !== undefined){
+        this.goToReview(type);          
+      }else{
+        alert("No Data");
+      }
+    }
+  }
+
+  goToReview = (type) => {
     this.props.navigation.navigate('reviewScreen',(
       {
         type : type
       }
-    ));
-  }
+    ));  
+  }  
   render() {
     var scoreQuiz = this.getquizScore();
     var scoreTest = this.gettestScore();
