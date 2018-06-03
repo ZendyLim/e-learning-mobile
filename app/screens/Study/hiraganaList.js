@@ -33,6 +33,7 @@ class HiraganaListScreen extends Component {
     title:"",
     img: "",
   }
+  
   componentDidMount() {
     const { navigation } = this.props;
     this.setState({
@@ -47,7 +48,9 @@ class HiraganaListScreen extends Component {
       topicId : navigation.getParam('topic_id', null),
       quizOptions : navigation.getParam('quizOptions', null)
     });
-    console.log('run');
+    
+    this.img = navigation.getParam('img', null);
+    
     this.props.getSummaryRecord('QUIZ',navigation.getParam('topic_id', null), navigation.getParam('topic_id', null) + navigation.getParam('categoryId', null), navigation.getParam('topic_id', null) + navigation.getParam('categoryId', null));      
   }
 
@@ -81,7 +84,7 @@ class HiraganaListScreen extends Component {
           param
         ));
       }
-      else if(this.state.headerTitle == 'grammar'){
+      else if(this.state.headerTitle == 'grammar' && type == 'Quiz'){
         this.props.navigation.navigate('QuizBefore',(
           param
         ));
@@ -160,16 +163,15 @@ class HiraganaListScreen extends Component {
   render() {
     var scoreQuiz = this.getquizScore();
     var scoreTest = this.gettestScore();
-
+    
     return (
       <ScrollView>
         <View style={study.StudyContainer}>
           <View style={[study.titleContainer , study.bgWhite]}>
-            <Image 
-              style={ study.cardImg }
-              source= { this.state.img ? ( ImageData[this.state.img] ) :   ImageData['loading'] }
-              resizeMode="stretch"  
-            />
+            <Image
+                style={study.cardImg}
+                source={ ImageData[this.img] }
+              />
             <Text style={study.title}> { strings[this.state.title] } </Text>
           </View>
           <View style={[study.cardBox, study.borderBox, study.p3]}>

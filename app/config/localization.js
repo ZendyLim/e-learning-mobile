@@ -34,6 +34,8 @@ export let strings = new LocalizedStrings({
    TOPIC16_TITLE : "Language and Culture",
    // Question Panel
    QUESTION_SELECT : "Select",
+   QUESTION_FILL : "Fill in the blanks",
+   QUESTION_ARRANGE : "Arrange the sentence",
    // Quiz
    TIMES_UP: "Time's up",
    WORD_LIST: "WORD LIST",
@@ -84,6 +86,8 @@ export let strings = new LocalizedStrings({
    TOPIC16_TITLE : "言語と文化",
    // Question Panel
    QUESTION_SELECT : "選ぶ",
+   QUESTION_FILL : "Fill in the blanks",
+   QUESTION_ARRANGE : "Arrange the sentence",
    // Quiz
    TIMES_UP: "時間です",
    WORD_LIST: "WORD LIST",

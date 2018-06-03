@@ -47,11 +47,13 @@ class CorrectPanel extends Component {
 
 
   _renderQuestion(){
+
+    displayToText = this.props.question.type == 'kanji' ? this.props.question.kanji : this.props.question.moji;
     
       return(
         <View style={[ styles.correctContainer, styles.shadow ]}>
           <View>
-            <Text style={ styles.correctText }>{ this.props.question.moji }</Text>
+            <Text style={ styles.correctText }>{ this.stripSpace(displayToText) }</Text>
             <Text style={ styles.correctText }>{ this.props.question.romaji }</Text>
             <Text style={ styles.correctHighlight }>English</Text>
             <Text style={ styles.correctText }>{ this.props.question.english }</Text>
@@ -105,6 +107,10 @@ class CorrectPanel extends Component {
         });
       }
 
+    }
+
+    stripSpace(val){        
+      return val.replace(/\s/g,'');
     }
 
 }

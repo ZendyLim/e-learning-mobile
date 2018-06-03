@@ -137,7 +137,7 @@ module.exports = StyleSheet.create({
         zIndex:3,
         alignItems:'center',
     },
-    vline: {
+    vline2: {
         borderWidth: 1, 
         borderColor:'#999999',
         marginTop: 5,
