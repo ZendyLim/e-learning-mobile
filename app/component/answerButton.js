@@ -23,7 +23,7 @@ class AnswerButton extends Component {
 
     _renderIcon(){
       let iconName = '';
-      console.log(this.props.isCorrect);
+      
       switch (this.props.isCorrect) {
         case 1:
           iconName = 'circle-o';
