@@ -37,9 +37,11 @@ export function createUser(userValue){
 
 export function updateUser(userValue){
   return (dispatch) => {
+    getJWT().then( JWT => {
       fetch('http://www.mocky.io/v2/5af163c63100002a0096c946',{
         method: 'PUT',
         headers: {
+          'Authorization' : JWT,
           'Accept': 'application/json',
           'Content-Type': 'application/json',
         },
@@ -50,6 +52,7 @@ export function updateUser(userValue){
         dispatch(fetchDataSuccess(json));
       })
       .catch(err => dispatch(fetchDataFailed(err)))
+      });
     };        
 }
 
@@ -87,8 +90,26 @@ export function deleteUserState(){
 
 export function updateProfile(userVal){
   return (dispatch) => {
-      dispatch(updateProfileSuccess(userVal))
-    };        
+    console.log('run');
+    getJWT().then( JWT => {
+      console.log(JWT);
+      console.log(JSON.stringify(userVal));
+      fetch('https://e-learning-backend.herokuapp.com/api/v1/updateProfile',{
+        method: 'POST',
+        headers: {
+          'Authorization' : JWT,
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userVal)
+      })
+      .then(data => data.json())
+      .then(json => {
+        dispatch(updateProfileSuccess(json))
+      })
+      .catch(err => dispatch(fetchDataFailed(err)))
+      });
+    };      
 }
 
 export function getUserProfile(){
@@ -169,9 +190,10 @@ export function userLoginSuccess(data){
 }
 
 export function updateProfileSuccess(userVal) {
+  console.log(userVal, "json parse");
   return {
     type: USER_UPDATE_SUCCESS,
-    data: userVal,
+    data: userVal.data,
   }
 }
 
