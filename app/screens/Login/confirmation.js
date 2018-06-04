@@ -22,9 +22,6 @@ import {
       title: 'Create Guest Account',
     };
     state = {
-      userId:"",
-      userName : "",
-      userPass: "",
       latestEducation : "",
       latestEducationName : "",
       major : "",
@@ -44,9 +41,6 @@ import {
     componentDidMount() {
       const { navigation } = this.props;
       this.setState({
-        userId : navigation.getParam('userId', null),
-        userName : navigation.getParam('userName', null),
-        userPass : navigation.getParam('userPass',null),
         latestEducation : navigation.getParam('latestEducation', null),
         latestEducationName : navigation.getParam('latestEducationName', null),
         major : navigation.getParam('major', null),
@@ -72,7 +66,11 @@ import {
         // userData['dateTo'] = this.unixTimeStamps(this.state.dateTo); 
         var newFinish = (new Date(this.state.finishDate));
         userData['finishDate'] = newFinish.getTime()/1000;
-        this.props.updateProfile(userData);
+        var sentParse = {
+          data : userData
+        }
+        console.log(sentParse,'parse');
+        this.props.updateProfile(sentParse);
 
     };
 
