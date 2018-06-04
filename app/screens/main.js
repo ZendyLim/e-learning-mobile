@@ -29,8 +29,8 @@ class MainScreen extends Component {
     // Render any loading content that you like here
     render() {
       console.log(this.props.data);
-      if (this.props.data) {
-        if(this.props.data.userId){
+      if (true) {
+        if(true){
           return (
             <MainStack />
           );
