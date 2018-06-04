@@ -28,6 +28,7 @@ import DatePicker from 'react-native-datepicker';
       header: null,
       title: 'Profile',
     };
+    unknownImage = "data:image/gif;base64,R0lGODlhGAEYAZEAAP///+Xl5ZmZmQAAACwAAAAAGAEYAQAC/4yPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLVgrG4bJxjE6r1+y1+b1ry+dzuD1Gz+vV975pDxjo5kfIIXiIKFC4OJHo+KjIKBkAWVk5SWip6Yh5t/mZ2PkGSnooGlaaCnjKpeoayGr1OgsbO0WLq2crldtbtwvlKzwI3DR8jFZsjMysLMYM7fwDTc0m7VOdnXbNo+0dyW3zPQ4eLkP+bQ6Dzq7Owg5f7k4SXz//Vx9/P5Jvvx/Sz9+/DgHzDTRUUOBBDAkVLrTQUN9DhhHhTbxQ0eJFCv8ZNW6U0NHjxwch242EUBLdSZQpx61s0NLkywQxVc5EUNPmTQM5dd7sSW4nT6AudxItOvNo0J9KvRlt6jQpVG1Mp0Z7arVZ1azIsHLtKvUr2JViqb0sa3Yk2rQb17Kd6LZa27hX4dLVavfusbl6h13sO3Yh4L15B/cqbDgX4sS0/jJWvPixKseSZ/GtPJky5lSXN5Pq7PnTx9CfR5MWffK0JrKqL6VuDYk1bE6vZ4eSbVvQ2dy6w/LO4/X3L9/C5QQvbm0rcmLEl2877pyM0OjMmzsXOpS69Onat3PXjj179PDir5PvTp4S9fTqx6cHfx4+dPPK5Vt3X3/9fPy7uyf/y68fgPTdtxx2/nlHIHIG+hfegQ0yuCB6EdonYHEPSvhdgBMOmCGH+/32HoUf8haihh0WWKKHI9rGnogngsheewrGKKNwNNZI4o04sqjjjD3CqOOOrQV5AJBE5khkkbMlucCQTCqg2pNQkiZlk55VaWVlWDKA2ZZcaunllI+FmSVjZJZp2JlipqkmTWa26SabcCo52JxxAmYnTnXmqWdffPap15903iXooHQVWp5biCa61qJCiuUoo5BGemikj2Zl6aVWZVoppXFx+qmlnTo66qKlInpqoakKuuqfrfL5ap6x2jnrnLXCeWubuaq565m9kvlrmMF6GaqoioLaKLJo6WWqKVTMFutpsqQSqqqctI5pa5e8hiZslFjyyCSSP9p4o4orLhmfi7ipq9aB8tTmYH/uvhuZu6DN+9w/+K7izr63SeOvJbsEDMopBGdWyMGN+aHwYaM0LAwqEAemxcRvyWJxNlVk7NMyHHeMxMf9hCxyQkSU3NDJKBek8sojD+FyQC3HLJEQNBsE8801B6HzzkD0LNLPQIOMzdBL2Ww0UjwnnU7OTFPl9NNyRS11XUtXffE0WGdd9NZ4Xe01YUiHLTbYZPsy89kOj6322ma3vTDbcMf99tyupG333VTnjXDdfJcm99+lkFAAADs=";
     state = {
       userName: "",
       latestEducation : "",
@@ -38,18 +39,17 @@ import DatePicker from 'react-native-datepicker';
       japaneseType: "",
       japaneseSchoolName : "",
       dateFrom:"",
-      dateTo:""
+      dateTo :"",
+      image : "data:image/gif;base64,R0lGODlhGAEYAZEAAP///+Xl5ZmZmQAAACwAAAAAGAEYAQAC/4yPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLVgrG4bJxjE6r1+y1+b1ry+dzuD1Gz+vV975pDxjo5kfIIXiIKFC4OJHo+KjIKBkAWVk5SWip6Yh5t/mZ2PkGSnooGlaaCnjKpeoayGr1OgsbO0WLq2crldtbtwvlKzwI3DR8jFZsjMysLMYM7fwDTc0m7VOdnXbNo+0dyW3zPQ4eLkP+bQ6Dzq7Owg5f7k4SXz//Vx9/P5Jvvx/Sz9+/DgHzDTRUUOBBDAkVLrTQUN9DhhHhTbxQ0eJFCv8ZNW6U0NHjxwch242EUBLdSZQpx61s0NLkywQxVc5EUNPmTQM5dd7sSW4nT6AudxItOvNo0J9KvRlt6jQpVG1Mp0Z7arVZ1azIsHLtKvUr2JViqb0sa3Yk2rQb17Kd6LZa27hX4dLVavfusbl6h13sO3Yh4L15B/cqbDgX4sS0/jJWvPixKseSZ/GtPJky5lSXN5Pq7PnTx9CfR5MWffK0JrKqL6VuDYk1bE6vZ4eSbVvQ2dy6w/LO4/X3L9/C5QQvbm0rcmLEl2877pyM0OjMmzsXOpS69Onat3PXjj179PDir5PvTp4S9fTqx6cHfx4+dPPK5Vt3X3/9fPy7uyf/y68fgPTdtxx2/nlHIHIG+hfegQ0yuCB6EdonYHEPSvhdgBMOmCGH+/32HoUf8haihh0WWKKHI9rGnogngsheewrGKKNwNNZI4o04sqjjjD3CqOOOrQV5AJBE5khkkbMlucCQTCqg2pNQkiZlk55VaWVlWDKA2ZZcaunllI+FmSVjZJZp2JlipqkmTWa26SabcCo52JxxAmYnTnXmqWdffPap15903iXooHQVWp5biCa61qJCiuUoo5BGemikj2Zl6aVWZVoppXFx+qmlnTo66qKlInpqoakKuuqfrfL5ap6x2jnrnLXCeWubuaq565m9kvlrmMF6GaqoioLaKLJo6WWqKVTMFutpsqQSqqqctI5pa5e8hiZslFjyyCSSP9p4o4orLhmfi7ipq9aB8tTmYH/uvhuZu6DN+9w/+K7izr63SeOvJbsEDMopBGdWyMGN+aHwYaM0LAwqEAemxcRvyWJxNlVk7NMyHHeMxMf9hCxyQkSU3NDJKBek8sojD+FyQC3HLJEQNBsE8801B6HzzkD0LNLPQIOMzdBL2Ww0UjwnnU7OTFPl9NNyRS11XUtXffE0WGdd9NZ4Xe01YUiHLTbYZPsy89kOj6322ma3vTDbcMf99tyupG333VTnjXDdfJcm99+lkFAAADs=",
     }
     componentWillMount(){
+      console.log('update');
      this.getData();
     }
-
-    componentWillUpdate(){
-      this.getData();
-    }
     
-    getData(){
+    getData = () =>{
       //this.props.getUserProfile()
+      console.log(this.props.user.image,'Update');
       if(this.props.user){
         this.setState({
           userName: this.props.user.username,
@@ -62,6 +62,7 @@ import DatePicker from 'react-native-datepicker';
           japaneseSchoolName: this.props.user.japaneseSchoolName,
           dateFrom: this.props.user.dateFrom,
           dateTo: this.props.user.dateTo,
+          image: this.props.user.image,
         });
       }
     }
@@ -89,7 +90,36 @@ import DatePicker from 'react-native-datepicker';
       });
     };
 
+    saveUserData = () => {
+      var userData = this.state;
+      // userData.graduationDate =this.unixTimeStamps(this.state.graduationDate) ;
+      // userData.dateFrom = this.unixTimeStamps(this.state.dateFrom);
+      // userData['dateTo'] = this.unixTimeStamps(this.state.dateTo); 
+      var newFinish = (new Date(this.state.finishDate));
+      var sentParse = {
+        data : userData
+      }
+      alert("DATA UPDATED");
+      this.props.updateProfile(sentParse);
+
+  };
+
+  saveUserDataImage = (image) => {
+    var userData = this.state;
+    // userData.graduationDate =this.unixTimeStamps(this.state.graduationDate) ;
+    // userData.dateFrom = this.unixTimeStamps(this.state.dateFrom);
+    // userData['dateTo'] = this.unixTimeStamps(this.state.dateTo); 
+    var sentParse = {
+      data : {
+        image : image
+      }
+    }
+    alert("DATA UPDATED");
+    this.props.updateProfile(sentParse);
+
+};
     render() {
+      console.log(this.props.user);
       return (
         <ScrollView>
           <View style={styles.container}>
@@ -103,7 +133,8 @@ import DatePicker from 'react-native-datepicker';
               <PhotoUpload
                 onPhotoSelect={avatar => {
                   if (avatar) {
-                    console.log('Image base64 string: ', avatar)
+                    console.log(avatar);
+                    this.saveUserDataImage(avatar);
                   }
                 }}
               >
@@ -115,7 +146,7 @@ import DatePicker from 'react-native-datepicker';
                   borderRadius: 50
                 }}
                 source={{
-                  uri: 'https://www.iconspng.com/images/funny-monkey-face/funny-monkey-face.jpg'
+                  uri: this.state.image
                 }}
               />
               </PhotoUpload>
@@ -216,7 +247,7 @@ import DatePicker from 'react-native-datepicker';
                 />
               </View>  
               <TouchableHighlight style={styles.btnupdate}
-              //  onPress={this.updateProfile.bind(this)}
+                onPress={this.saveUserData.bind(this)}
               >
                 <Text style={styles.txtupdateButton}>Update</Text>
               </TouchableHighlight>
