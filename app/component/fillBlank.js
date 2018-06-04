@@ -206,7 +206,7 @@ class FillBlank extends Component {
             if(this.emptyBox[i].char) filled[filled.length] = this.emptyBox[i].char;
             
         }
-        console.log(this.shuffledString.length, 'wee', filled.length);
+        
         if(filled.length == this.shuffledString.length){
             
             this.onSelectAnswer(filled.join(''));            

@@ -64,7 +64,8 @@ navigateToLearn=(type, categoryId)=>{
 
       param.isTopicTest = true;
       param.studyType = this.state.title;
-
+      param.type = 'Test';
+      
       this.props.navigation.navigate('QuizFlash',(
         param
       ));
