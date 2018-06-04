@@ -143,7 +143,7 @@ class QuestionPanel extends Component {
       playDifferentAudio = this.currentAudio != this.props.question.id && this.props.format == 'audio';
 
       if(playDifferentAudio || forcePlay){    
-        console.log(this.currentAudio + ' - ' + this.props.question.id);    
+            
         this.currentAudio = this.props.question.id;
 
         this.quizAudio.play((success) => {
