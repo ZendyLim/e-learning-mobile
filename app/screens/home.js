@@ -125,7 +125,7 @@ import {
                     </View>
                     <Text style={ scoreStyle.IconText } >Summary</Text>
                 </TouchableOpacity>
-                <TouchableOpacity  style={ scoreStyle.ButtonText } onPress={this.navigatePage.bind(this,'Setting')}>
+                <TouchableOpacity  style={ scoreStyle.ButtonText } onPress={this.navigatePage.bind(this,'Profile')}>
                     <View style={ scoreStyle.HomeIcon }>
                       <Icon name="user" type='font-awesome'  color="#fff"  size={18}/>
                     </View>
