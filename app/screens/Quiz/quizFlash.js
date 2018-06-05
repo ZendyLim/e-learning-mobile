@@ -83,8 +83,7 @@ import {
       this.timerResume = false;
       this.time = 6000;
 
-
-      this.state = {
+      this.initialState = {
         timesUp: false,
         expression: 'default',
         time:this.time,        
@@ -108,6 +107,7 @@ import {
         showCorrect:false 
       }
 
+      this.state = this.initialState;
      
       this._onSetLanguageTo('en');      
     }
@@ -211,7 +211,7 @@ import {
         index: navigation.getParam('index', null),
         isTopicTest: navigation.getParam('isTopicTest', null)
       }
-      
+      console.log(navigation.getParam('index', null),'sss');
       this.setState(this.initialParams);
 
       this.setInitial();
@@ -232,11 +232,11 @@ import {
       }
       else{        
         shuffledQuiz = this.shuffleItems(this.quizItems);
-        console.log(shuffledQuiz,'a--');
+        
         this.allQuestion = shuffledQuiz.map((question) => 
           this.shuffleAnswers(question, shuffledQuiz)
         );
-        console.log(this.allQuestion,'s--');
+        
         this.currentQuestion = this.allQuestion[0];
         
         this.setState({
@@ -267,7 +267,8 @@ import {
     }
 
     componentWillUnmount(){
-      this.mounted = false;            
+      this.mounted = false;  
+               
     }
 
     // set items
@@ -361,7 +362,8 @@ import {
     // randomized question
     shuffleItems(array) {      
       var currentIndex = array.length, temporaryValue, randomIndex, output = [];      
-      var limit = this.initialParams.type == 'Test' ? 25 : array.length;      
+      var limit = this.initialParams.type == 'Test' ? 5 : array.length;      
+      
 
       while (0 !== currentIndex) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -371,10 +373,8 @@ import {
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;        
       }
-
-      for(i = 0; i < limit; i++){
-        output[i] = array[i];
-      }
+            
+      output = array.slice(0, limit);            
       
       return output;
     };
@@ -534,7 +534,7 @@ import {
       paramFormat.time = time;
       paramFormat.format = quizFormat[randomIndex];
 
-      console.log(paramFormat.time,'time2',this.time);
+      
       this.setState(paramFormat);
     }
 
@@ -543,6 +543,7 @@ import {
       
       if(this.mounted){
         this.setTakeQuiz();
+
         if(counter < this.allQuestion.length){
           this.showCorrect = false;
           this.timeStops = 0;
@@ -550,28 +551,43 @@ import {
           
           this.randomQuizFormat();
           
-          this.setState({
-              counter: counter,
-              //questionId: questionId,
-              question: this.currentQuestion,
-              answerOptions: this.currentQuestion.answerOption,
-              answer: '',
-              timerRun:true,
-              timerRestart:true,
-              timesUp: false,  
-              expression:'default',
-              correct: 0,
-              showCorrect:false                 
-          });
+          reset = {
+            counter: counter,
+            //questionId: questionId,
+            question: this.currentQuestion,
+            answerOptions: this.currentQuestion.answerOption,
+            answer: '',            
+            timerRun:true,
+            timerRestart:true,
+            timesUp: false,  
+            expression:'default',
+            correct: 0,
+            showCorrect:false                 
+          };
+          console.log(reset, 'check-res');
+          this.setState(reset);
         }
         else{
           this.setEndQuiz();
-          
-          this.props.navigation.navigate('ScoreScreen',{
-            index : this.state.index,
-            typeQuiz : this.state.type,
-            studyTitle : this.title
+          console.log(this.initialParams);
+          const resetAction = NavigationActions.reset({
+            index: 0,
+            actions: [
+              NavigationActions.navigate({
+                routeName: "ScoreScreen",
+                params: this.initialParams
+              })
+            ]
           });
+
+          this.setState(this.initialState);
+          this.props.navigation.dispatch(resetAction);
+
+          // this.props.navigation.navigate('ScoreScreen',{
+          //   index : this.state.index,
+          //   typeQuiz : this.state.type,
+          //   studyTitle : this.title
+          // });
           
         }
       }
@@ -628,7 +644,9 @@ import {
   };
 
     goNextQuestion() {            
-        this.setNextQuestion();        
+        setTimeout(() => {
+          this.setNextQuestion();
+        }, this.state.pause); 
     }
 
     onTimesUp = (val) => {
@@ -715,7 +733,13 @@ import {
     };    
 
     stripSpace(val){        
-      return  val.replace(/\s/g,'');
+      if(val){
+        return  val.replace(/\s/g,'');
+      }
+      else{
+        return val;
+      }
+      
     }
     
   

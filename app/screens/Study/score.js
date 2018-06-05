@@ -29,6 +29,7 @@ import {
     constructor(props) {
       super(props);
       
+      this.item = [];
     }
   state = {
     typeQuiz: ""
@@ -36,16 +37,22 @@ import {
 
   componentDidMount() {
     const { navigation } = this.props;
-    this.setState({
+    initialParams = {
       typeQuiz: navigation.getParam('typeQuiz', null),
       index: navigation.getParam('index', null),
-    });
+      headerTitle: navigation.getParam('headerTitle', null),
+      studyType: navigation.getParam('studyType', null),
+    }    
 
-    //this.processData(navigation.getParam('studyTitle', null));
-  
-    //Console.log(navigation.getParam('userName', null),"NIAMAK");
+    this.item = StudyList[initialParams.index];
+    this.item['index'] = initialParams.index;
+    this.item['studyType'] = initialParams.studyType;
+    //this.item['headerTitle'] = this.item.title; 
+    this.item['headerTitle'] = initialParams.headerTitle;
+    console.log(this.item);
   }
-  goToTopicSelection = () =>  {
+  goToTopicSelection = () =>  {    
+
     if(this.state.typeQuiz == 'Test'){
       const resetAction = NavigationActions.reset({ 
         index: 0,
@@ -54,28 +61,48 @@ import {
         ]
       });
       this.props.navigation.dispatch(resetAction);
+      
     }else{
       this.retry();
     }
   }
+  
   retry = () =>  {
-    var item = StudyList[this.state.index ];
-    item['index'] = this.state.index;
-    item['studyType'] = item.title;
-    item['headerTitle'] = item.title;
-
-    const resetAction = NavigationActions.reset({ 
-      index: 1,
-      actions: [
-        NavigationActions.navigate({ routeName: 'StudyList' }),
-        NavigationActions.navigate({ routeName: 'HiraganaList' , params: item })
-
-      ]
-    });
+    
+    var nav = this.setNav(this.state.type, 1);
+                     
+    const resetAction = NavigationActions.reset(nav);
     
     this.props.navigation.dispatch(resetAction);
   
   }
+
+  setNav(type, index) {
+    let nav;
+
+    if(this.headerTitle == 'topic_test'){
+      nav = { 
+        index: index,
+        actions: [
+          NavigationActions.navigate({ routeName: 'StudyList' }),
+          NavigationActions.navigate({ routeName: 'TopicList' , params: this.item })
+        ]
+      };
+    }
+    else{
+      console.log(this.item);
+      nav = { 
+        index: index,
+        actions: [
+          NavigationActions.navigate({ routeName: 'StudyList' }),
+          NavigationActions.navigate({ routeName: 'HiraganaList' , params: this.item })
+        ]
+      };
+    }
+
+    return nav;
+  }
+
   gotToNext = () =>  {
     var item = StudyList[this.state.index + 1];
     item['index'] = this.state.index + 1;
