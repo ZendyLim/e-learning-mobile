@@ -80,7 +80,7 @@ import {
   setNav(type, index) {
     let nav;
 
-    if(this.headerTitle == 'topic_test'){
+    if(this.item.headerTitle == 'topic_test'){
       nav = { 
         index: index,
         actions: [
