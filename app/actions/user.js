@@ -57,7 +57,6 @@ export function updateUser(userValue){
 }
 
 export function login(userValue,callback){
-  console.log(userValue);
   return (dispatch) => {
       fetch('https://e-learning-backend.herokuapp.com/api/v1/login',{
         method: 'POST',
@@ -150,7 +149,7 @@ export function fetchData() {
 export function fetchDataSuccess(data) {
   return {
     type: FETCH_USER_SUCCESS,
-    data: data.data
+    data: data.user
   }
 }
 export function fetchDataFailed(error) {

@@ -44,7 +44,7 @@ class TopicListScreen extends Component {
       type: navigation.getParam('type', null),
       index: navigation.getParam('index', null),
     });
-    
+    console.log(navigation.getParam('index', null));
     //Console.log(navigation.getParam('userName', null),"NIAMAK");
   }
 

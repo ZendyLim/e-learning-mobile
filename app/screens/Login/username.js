@@ -88,7 +88,7 @@ import {
       if(!this.validation()){
         this.props.login(this.state, data => {
           var startDate =  new Date() / 1000 ;
-          this.setState({ userId: data.userId , startDate : startDate });
+          this.setState({ userId: data.user._id , startDate : startDate });
           if(!this.checkUserValid(data)){
             this.props.navigation.navigate('UserData',(this.state));
           }
