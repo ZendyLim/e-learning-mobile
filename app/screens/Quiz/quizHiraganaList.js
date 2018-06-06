@@ -9,7 +9,7 @@ import {
     Text,
     ScrollView,
     TouchableOpacity,
-    
+    Alert
   } from 'react-native';
 import { hiraganaList } from '../../config/data';
 import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox'; 
@@ -22,7 +22,7 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
     state = {
         checkAllText: "Check All",
         statusCheckAll: false,
-        stsList : false,
+        stsList : "",
         statusPerRow: false,
         idList:[],
         index : '',
@@ -31,11 +31,16 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
 
     constructor(props){
         super(props);
-        this.checkItems = [hiraganaList.map.length];
-        this.checkRows=[hiraganaList.map.length];
+        this.checkItems = [];
+        this.checkRows = [];
     }
 
+    componentDidMount(){
+        this.setStatusfalse();
+    }
+    
     render() {
+        let idLength = 0;
       return ( 
         <ScrollView style={quizStyles.container}>
              <View style={quizStyles.containerWhiteTop}>
@@ -53,15 +58,13 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
                 </View>
                 <View style={styles.row}>
                     {hiraganaList.map((item, key)=>(
+                        idLength=item.moji.length,
                         <View key={key} style={(key + 1) % 5 == 0 ? ( quizStyles.listContainerRow2  ) : ( quizStyles.listContainerRow )}>
                             <View style={quizStyles.rowButton}>
                                 <TouchableOpacity
                                 style={[quizStyles.mojiList,this.state.stsList[key] && quizStyles.mojiListActive]}
-                                    onPress={()=> { this.checkSingle(key) }}
                                 >
-                                    <Text style={[quizStyles.mojiListText, this.state.stsList[key] 
-                                        && quizStyles.mojiListTextActive]}> {item.moji}
-                                    </Text>
+                                    { this.mojiAutoSize(idLength, item.moji, key) }
                                     <Text style={[quizStyles.romajiList, this.state.stsList[key] 
                                         && quizStyles.romajiListActive]}> {item.romaji}
                                     </Text>
@@ -74,12 +77,11 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
                                     onToggle={(checked) => this.checkRow(key)}
                                     outerColor ={"#ec6f86"}
                                     innerColor ={"#ec6f86"}
-                                /> 
+                                />
                             </View>      
                             ) : (
                                 <Text style={quizStyles.displayNone}>None </Text>
                             ) }
- 
                         </View>
                     ))}
                 </View>
@@ -87,33 +89,92 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
         </ScrollView>
       );
     }
-    
-    checkSingle(key) {
-        if(this.checkItems[key]){
-            this.checkItems[key] = false;
-            this.setState({ stsList: this.checkItems});
-            this.selectedList(key)   
+
+
+    validation = () => {
+        // const { studyReason, statusDays, finishDate} = this.state;
+        let error = '';
+        let status = false;
+        for(i=0;i<hiraganaList.length;i++){
+            if(this.checkRows[i] == true){
+                this.setState({statusCheckAll: !this.state.statusCheckAll})
+                this.setState({ checkAllText: "Check All" }) 
+                status=true;
+            }
+        }
+        if (status == false) error = "You need to choose at least 1 row";
+        if (error) {
+          Alert.alert('Warning', error);
+          return true; 
         }
         else{
-            this.checkItems[key] = true;
-            this.setState({ stsList: this.checkItems});
-            this.selectedList(key)
+          return false;
         }
-    };
+      }
+    
+    // checkSingle(key) {
+    //     if(this.checkItems[key]){
+    //         this.checkItems[key] = false;
+    //         this.setState({ stsList: this.checkItems});
+    //         this.selectedList(key)   
+    //     }
+    //     else{
+    //         this.checkItems[key] = true;
+    //         this.setState({ stsList: this.checkItems});
+    //         this.selectedList(key)
+    //     }
+    // };
+
+    setStatusfalse(){
+        for(i=0;i<hiraganaList.length;i++){
+            if((i + 1) % 5 == 0){
+                this.checkRows[i] = false
+                this.setState({ statusPerRow: this.checkRows })
+            }
+        }
+    }
+
+
+    mojiAutoSize(length, moji, key){
+        if(length == 2){
+            return(
+            <Text style={[quizStyles.mojiListText2, this.state.stsList[key] 
+                && quizStyles.mojiListTextActive2]}
+            > 
+            {moji}
+            </Text>
+            )
+        }else{
+            return(
+            <Text style={[quizStyles.mojiListText, this.state.stsList[key] 
+                && quizStyles.mojiListTextActive]}
+            > 
+            {moji}
+            </Text>
+            )
+        }
+     }
+
     checkAll(){
         this.setState({statusCheckAll: !this.state.statusCheckAll})
         if(this.state.statusCheckAll){
             hiraganaList.map((item, key)=>(
                 this.checkItems[key] = false,
                 this.setState({ stsList: this.checkItems }),
-                this.selectedList(key)
+                this.selectedList(key),
+
+                this.checkRows[key] = false,
+                this.setState({ statusPerRow: this.checkRows })
             ));  
             this.setState({ checkAllText: "Check All" })     
         }else{
             {hiraganaList.map((item, key)=>(
                 this.checkItems[key] = true,
                 this.setState({ stsList: this.checkItems }),
-                this.selectedList(key)
+                this.selectedList(key),
+
+                this.checkRows[key] = true,
+                this.setState({ statusPerRow: this.checkRows })
             ))};  
             this.setState({ checkAllText: "Uncheck All" })    
         }
@@ -123,6 +184,8 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
         if(this.checkRows[key]){
             this.checkRows[key] = false,
             this.setState({ statusPerRow: this.checkRows })
+            this.checkAllStatus();
+
             for(x=0;x<5;x++){
                 this.checkItems[key] = false,
                 this.setState({ stsList: this.checkItems })
@@ -132,6 +195,8 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
         }else{
             this.checkRows[key] = true,
             this.setState({ statusPerRow: this.checkRows })
+            this.checkAllStatus();
+
             for(x=0;x<5;x++){
                 this.checkItems[key] = true,
                 this.setState({ stsList: this.checkItems })
@@ -141,27 +206,40 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
         }
     }
 
+    checkRowStatus(status) {
+        return status == true;
+    }
+    checkAllStatus = () => {   
+        if(this.checkRows.every(this.checkRowStatus)){
+            this.setState({statusCheckAll: true})
+            this.setState({ checkAllText: "Uncheck All" }) 
+        }else{
+            this.setState({statusCheckAll: false})
+            this.setState({ checkAllText: "Check All" }) 
+        }
+    }
+
     proceed = () => {
         const { navigation } = this.props;
-        
-        this.props.navigation.navigate('QuizFlash',
-        (
-            {
-                type: navigation.getParam('type',null),
-                title: navigation.getParam('title',null),
-                studyType: navigation.getParam('studyType',null),
-                img: navigation.getParam('img',null),
-                topicId: navigation.getParam('topicId',null),
-                typeQuiz: navigation.getParam('typeQuiz',null),
-                quizOptions: navigation.getParam('quizOptions',null),
-                oneType: navigation.getParam('oneType',null),
-                idList: this.state.idList,
-                index:  navigation.getParam('index',null),
-                categoryId :  navigation.getParam('categoryId',null),  
- 
-            }
-        )
-        );
+        if(!this.validation()){
+            this.props.navigation.navigate('QuizFlash',
+                (
+                    {
+                        type: navigation.getParam('type',null),
+                        title: navigation.getParam('title',null),
+                        studyType: navigation.getParam('studyType',null),
+                        img: navigation.getParam('img',null),
+                        topicId: navigation.getParam('topicId',null),
+                        typeQuiz: navigation.getParam('typeQuiz',null),
+                        quizOptions: navigation.getParam('quizOptions',null),
+                        oneType: navigation.getParam('oneType',null),
+                        idList: this.state.idList,
+                        index:  navigation.getParam('index',null),
+                        categoryId :  navigation.getParam('categoryId',null),  
+                    }
+                )
+            );
+        }     
     };
 
     selectedList(key){

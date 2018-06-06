@@ -92,12 +92,22 @@ module.exports = StyleSheet.create({
     mojiListText: {
         color: "black",
         justifyContent: 'center',
-        fontSize: 30,
+        fontSize: 0.60 * 50,
     },
     mojiListTextActive: {
         color: "white",
         justifyContent: 'center',
-        fontSize: 30,
+        fontSize: 0.60 * 50,
+    },
+    mojiListText2: {
+        color: "black",
+        justifyContent: 'center',
+        fontSize: 0.40 * 50,
+    },
+    mojiListTextActive2: {
+        color: "white",
+        justifyContent: 'center',
+        fontSize: 0.40 * 50,
     },
     romajiList:{
         position: 'absolute',
@@ -148,5 +158,8 @@ module.exports = StyleSheet.create({
         top:15,
         right: 0,
     },
+    test:{
+        
+    }
 });
 
