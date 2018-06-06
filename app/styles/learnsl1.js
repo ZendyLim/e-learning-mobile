@@ -8,12 +8,12 @@ var {
 
 module.exports = StyleSheet.create({
   MainContainer :{
-    justifyContent: 'center',
+    // justifyContent: 'center',
     flex:1,
-    padding: 10,
-    backgroundColor: '#fff',
+    padding: '2%',
+    backgroundColor: 'white',
     },
-     
+
     GridViewBlockStyle: {
       borderRadius: 5,
       borderColor: 'gray',

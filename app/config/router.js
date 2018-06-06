@@ -149,7 +149,8 @@ export const AppStack = TabNavigator({
     tabBarPosition: 'bottom',
     tabBarOptions:{
         style:styles.tabBar
-    }
+    },
+    swipeEnabled: false,
 });
 
 

@@ -98,8 +98,8 @@ class TimerBar extends Component {
     }
 
     timerStart(){
-
-      
+      this.duration = this.props.time;
+      this.seconds = this.duration / 1000;
       
       Animated.timing(this.progress, {
         duration: this.duration,
@@ -130,7 +130,7 @@ class TimerBar extends Component {
     }
 
     timerResume(){      
-      if(this.props.timerResume){
+      if(this.props.timerResume){        
         this.timerStart();
       }
     }

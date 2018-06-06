@@ -108,7 +108,7 @@ function playSound(testInfo, component) {
       console.log(this.state.studyType);
       return (
       <ScrollView>
-        <View style={study.StudyContainer}>
+        <View style={learnsl1.MainContainer}>
           <View style={[study.titleContainer , study.bgWhite]}>
             <Image 
               style={ study.cardImg }

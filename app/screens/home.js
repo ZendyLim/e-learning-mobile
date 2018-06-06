@@ -69,13 +69,13 @@ import {
     }
 
     getDateFormat = (dateTo) =>{
-      var dateTo = new Date(dateTo * 1000);
+      var datefinish = new Date(dateTo * 1000);
 
       const monthNames = ["January", "February", "March", "April", "May", "June",
       "July", "August", "September", "October", "November", "December"
     ];
 
-      return  monthNames[dateTo.getMonth()] + " " + dateTo.getDate() + ", " + dateTo.getFullYear();
+      return  monthNames[datefinish.getMonth()] + " " + datefinish.getDate() + ", " + datefinish.getFullYear();
     }
    render() {
      console.log(this.props.data);

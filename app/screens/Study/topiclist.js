@@ -44,7 +44,7 @@ class TopicListScreen extends Component {
       type: navigation.getParam('type', null),
       index: navigation.getParam('index', null),
     });
-    
+    console.log(navigation.getParam('index', null));
     //Console.log(navigation.getParam('userName', null),"NIAMAK");
   }
 
@@ -64,7 +64,8 @@ navigateToLearn=(type, categoryId)=>{
 
       param.isTopicTest = true;
       param.studyType = this.state.title;
-
+      param.type = 'Test';
+      
       this.props.navigation.navigate('QuizFlash',(
         param
       ));
