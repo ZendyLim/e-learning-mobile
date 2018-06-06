@@ -84,88 +84,116 @@ export const StudyList = [{
     topic_id: 'T007'
   },
   {
-    title : 'TOPIC5_TITLE',
-    img : 'T008',
+    title : 'FUKUSHU1_TITLE',
+    img : 'loading',
     lock : false,
-    type : 'TOPIC',
+    type : 'FUKUSHU',
     topic_id: 'T008'
   },
   {
-    title : 'TOPIC6_TITLE',
+    title : 'TOPIC5_TITLE',
     img : 'T009',
-    lock : true,
+    lock : false,
     type : 'TOPIC',
     topic_id: 'T009'
   },
   {
-    title : 'TOPIC7_TITLE',
+    title : 'TOPIC6_TITLE',
     img : 'T010',
     lock : true,
     type : 'TOPIC',
     topic_id: 'T010'
   },
   {
-    title : 'TOPIC8_TITLE',
+    title : 'TOPIC7_TITLE',
     img : 'T011',
     lock : true,
     type : 'TOPIC',
     topic_id: 'T011'
   },
   {
-    title : 'TOPIC9_TITLE',
+    title : 'TOPIC8_TITLE',
     img : 'T012',
     lock : true,
     type : 'TOPIC',
     topic_id: 'T012'
   },
   {
-    title : 'TOPIC10_TITLE',
+    title : 'FUKUSHU2_TITLE',
     img : 'loading',
     lock : true,
-    type : 'TOPIC',
+    type : 'FUKUSHU',
     topic_id: 'T013'
   },
   {
-    title : 'TOPIC11_TITLE',
+    title : 'TOPIC9_TITLE',
     img : 'T014',
     lock : true,
     type : 'TOPIC',
     topic_id: 'T014'
   },
   {
-    title : 'TOPIC12_TITLE',
-    img : 'T015',
+    title : 'TOPIC10_TITLE',
+    img : 'loading',
     lock : true,
     type : 'TOPIC',
     topic_id: 'T015'
+  },
+  {
+    title : 'TOPIC11_TITLE',
+    img : 'T016',
+    lock : true,
+    type : 'TOPIC',
+    topic_id: 'T016'
+  },
+  {
+    title : 'TOPIC12_TITLE',
+    img : 'T017',
+    lock : true,
+    type : 'TOPIC',
+    topic_id: 'T017'
+  },
+  {
+    title : 'FUKUSHU3_TITLE',
+    img : 'loading',
+    lock : true,
+    type : 'FUKUSHU',
+    topic_id: 'T018'
   },
   {
     title : 'TOPIC13_TITLE',
     img : 'loading',
     lock : true,
     type : 'TOPIC',
-    topic_id: 'T016'
+    topic_id: 'T019'
   },
   {
     title : 'TOPIC14_TITLE',
-    img :'society',
+    img :'loading',
     lock : true,
     type : 'TOPIC',
-    topic_id: 'T017'
+    topic_id: 'T020'
   },
   {
     title : 'TOPIC15_TITLE',
     img : 'loading',
     lock : true,
     type : 'TOPIC',
-    topic_id: 'T018'
+    topic_id: 'T021'
   },
   {
     title : 'TOPIC16_TITLE',
     img : 'loading',
     lock : true,
     type : 'TOPIC',
-    topic_id: 'T019'
+    topic_id: 'T022'
+  },  
+  {
+    title : 'FUKUSHU4_TITLE',
+    img : 'loading',
+    lock : true,
+    type : 'FUKUSHU',
+    topic_id: 'T023'
   },
   ];
 
