@@ -153,7 +153,7 @@ import {
       this.flipperFunction(this.tickInterval / this.flipSpeed);
       playSound(this.state , this);
     }
-    
+
     pause(){
       this.flipIndicator = 0;
       clearInterval(this.flipperInterval);
@@ -245,6 +245,7 @@ import {
       this.pause();
       this.progressCounter--;
       this.setState({
+        isFinish: false, 
         url: this.data[this.progressCounter].url
       });
       playSound(this.data[this.progressCounter] , this);
