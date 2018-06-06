@@ -28,6 +28,8 @@ class MainScreen extends Component {
   
     // Render any loading content that you like here
     render() {
+      
+
       if (this.props.data) {
         if (this.props.data.finishDate) {        
           return (
