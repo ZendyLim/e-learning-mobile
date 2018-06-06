@@ -49,7 +49,7 @@ class Quiz extends Component {
         );
     }
     else if(this.isFill){      
-        console.log(this.props.question);
+        //console.log(this.props.question);
         return(
             <View style={ [styles.displayInlineContainer, styles.answerContainer] }>
                 <FillButton
@@ -110,7 +110,7 @@ class Quiz extends Component {
     }
 
     checkCorrect = (id) => {
-        //console.log(this.state.selectedAnswer);
+        
         if(this.state.selectedAnswer == '' && !this.props.timesUp){
             return -1;
         }

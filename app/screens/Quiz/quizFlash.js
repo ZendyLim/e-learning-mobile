@@ -3,7 +3,9 @@ import {
     View,
     Text,
     TouchableHighlight,
-    ScrollView
+    ScrollView,
+    BackHandler,
+    Alert
   } from 'react-native';
 
   import  { strings }   from '../../config/localization';
@@ -175,7 +177,7 @@ import {
                       styleFormat={ this.quizOptions.style }
                     />
                     
-                    <TouchableHighlight style={[ styles.highPrio ]} onPress={() =>  this.goNextQuestion() }>
+                    <TouchableHighlight underlayColor="rgba(0,0,0,0)" style={[ styles.highPrio ]} onPress={() =>  this.goNextQuestion() }>
                       <CustomButton icon="chevron-right">{ strings.NEXT }</CustomButton>  
                     </TouchableHighlight> 
                   </View>
@@ -194,8 +196,10 @@ import {
       );
     }
 
-    componentDidMount() {            
+    componentDidMount() {      
       const { navigation } = this.props;
+
+      BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
       
       this.oneType = navigation.getParam('oneType',null);
       this.mounted = true;
@@ -267,8 +271,12 @@ import {
     }
 
     componentWillUnmount(){
-      this.mounted = false;  
-               
+      this.mounted = false;   
+      BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);              
+    }
+
+    handleBackButton() {
+      return true;      
     }
 
     // set items
@@ -362,7 +370,7 @@ import {
     // randomized question
     shuffleItems(array) {      
       var currentIndex = array.length, temporaryValue, randomIndex, output = [];      
-      var limit = this.initialParams.type == 'Test' ? 5 : array.length;      
+      var limit = this.initialParams.type == 'Test' ? 25 : array.length;      
       
 
       while (0 !== currentIndex) {
@@ -539,6 +547,7 @@ import {
     }
 
     setNextQuestion() {
+      
       const counter = this.state.counter + 1;      
       
       if(this.mounted){
@@ -646,7 +655,7 @@ import {
     goNextQuestion() {            
         setTimeout(() => {
           this.setNextQuestion();
-        }, this.state.pause); 
+        }, 200); 
     }
 
     onTimesUp = (val) => {
