@@ -23,7 +23,6 @@ import {
   import ResponsiveText from '../../component/responsiveText';
   import FlashButton from '../../component/flashButton';
 
-  
   var Sound = require('react-native-sound');
 
   function setTestState(testInfo, component, status) {
@@ -217,7 +216,7 @@ import {
       this.setState({
         url: this.data[this.progressCounter].url
       });
-      playSound(this.state , this);
+      playSound(this.data[this.progressCounter], this);
       this.setState((previousState) => {
         let state = previousState;
         this.value = 180;
@@ -248,7 +247,7 @@ import {
       this.setState({
         url: this.data[this.progressCounter].url
       });
-      playSound(this.state , this);
+      playSound(this.data[this.progressCounter] , this);
       this.setState((previousState) => {
         let state = previousState;
         this.value = 180;
