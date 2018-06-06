@@ -38,7 +38,6 @@ class Header extends Component {
   }
 
     render(){
-
       return (
         <View style={ [styles.headContainer, styles.displayInlineContainer] }>
           <View style={ styles.displayInline }>
@@ -51,7 +50,6 @@ class Header extends Component {
               <Text style={ styles.titleHead }>{ this.props.title }</Text>
           </View>
         </View>
-        
       );
     }
 
@@ -76,9 +74,7 @@ class Header extends Component {
       else{
         this.proceedNavigate();
       }
-      
-        
-        
+                      
     }
 
     proceedNavigate(){

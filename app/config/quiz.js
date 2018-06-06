@@ -59,7 +59,7 @@ let topic_title_vocab_kanji = [
 
 let topic_title_vocab_kanji2 = [
   {   
-      "id":"tp1_1",
+      "id":"tpk1_1",
       "type":"kanji",  
       "romaji":"onna",
       "moji":"おんな",
@@ -68,7 +68,7 @@ let topic_title_vocab_kanji2 = [
       "audio":"o.mp3"
   },
   {   
-      "id":"tp1_2",
+      "id":"tpk1_2",
       "type":"kanji",      
       "romaji":"chichi",
       "moji":"ちち",
@@ -77,7 +77,7 @@ let topic_title_vocab_kanji2 = [
       "audio":"chi.mp3"
   },
   {   
-      "id":"tp1_3",
+      "id":"tpk1_3",
       "type":"kanji",      
       "romaji":"otoko",
       "moji":"おとこ",
@@ -86,7 +86,7 @@ let topic_title_vocab_kanji2 = [
       "audio":"o.mp3"
   },
   {   
-      "id":"tp1_4",
+      "id":"tpk1_4",
       "type":"kanji",      
       "romaji":"haha",
       "moji":"はは",
@@ -95,7 +95,7 @@ let topic_title_vocab_kanji2 = [
       "audio":"ha.mp3"
   },
   {   
-      "id":"tp1_5",
+      "id":"tpk1_5",
       "type":"kanji",      
       "romaji":"inu",
       "moji":"いぬ",
@@ -104,7 +104,7 @@ let topic_title_vocab_kanji2 = [
       "audio":"i.mp3"
   },
   {   
-      "id":"tp1_6",
+      "id":"tpk1_6",
       "type":"kanji",      
       "romaji":"neko",
       "moji":"ねこ",
