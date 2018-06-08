@@ -34,13 +34,14 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
         this.setState({
             test: navigation.getParam('idList', null),
         });
-        console.log(this.state.test,"niamak")
+        
       }
 
     constructor(props){
         super(props);
         this.checkItems = [katakanaList.map.length];
         this.checkRows = [katakanaList.map.length];
+        
     }
   
     render() {
@@ -163,7 +164,7 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
             idList: this.state.idList,
             index:  navigation.getParam('index',null),
             categoryId :  navigation.getParam('categoryId',null),              
-
+            headerTitle:  navigation.getParam('headerTitle',null),
         });
     };
 

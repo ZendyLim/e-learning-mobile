@@ -370,9 +370,8 @@ import {
     // randomized question
     shuffleItems(array) {      
       var currentIndex = array.length, temporaryValue, randomIndex, output = [];      
-      var limit = this.initialParams.type == 'Test' ? 25 : array.length;      
+      var limit = this.initialParams.type == 'Test' ? 50 : 25;      
       
-
       while (0 !== currentIndex) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
@@ -578,7 +577,7 @@ import {
         }
         else{
           this.setEndQuiz();
-          console.log(this.initialParams);
+          
           const resetAction = NavigationActions.reset({
             index: 0,
             actions: [
@@ -627,14 +626,17 @@ import {
       this.props.startLearn(this.state.studyType, this.startTime,this.title); //call our action
     }
 
-    setTakeQuiz = () =>  {      
+    setTakeQuiz = () =>  {       
+      correctTitle = this.state.question.type == 'kanji' ? this.state.question.kanji : this.state.question.moji;
+      
       parseValue = {
             questionID : this.state.question.id,
-            questionTime : this.state.questionTime,
             answer :  this.state.answer,
             correct : this.state.correct,
-            questionTime: this.timeStops,
-            correct_title: this.stripSpace(this.state.question.moji)
+            questionTime: (this.timeStops * 1000),            
+            questionTotalTime : this.state.time,
+            type: this.state.question.type,
+            correctTitle: this.stripSpace(correctTitle)
       }
 
       this.studyRecord[this.studyRecord.length] = parseValue;
@@ -646,16 +648,17 @@ import {
       var endTime = ( new Date().getTime() / 1000);
 
       var parseValue = this.reduxParam;
-      
+            
       parseValue['finishTime'] = endTime;
       parseValue['quizData'] = this.studyRecord;
+      
       this.props.endLearn(parseValue); //call our action
   };
 
     goNextQuestion() {            
-        setTimeout(() => {
+        
           this.setNextQuestion();
-        }, 200); 
+        
     }
 
     onTimesUp = (val) => {

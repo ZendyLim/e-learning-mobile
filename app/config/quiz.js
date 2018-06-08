@@ -166,7 +166,7 @@ export const quizItems = {
     "HIRAGANA_TITLE": [
         {
             "id":"h_a",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"a",
             "moji":"あ",
             "audio":"a.mp3",
@@ -174,7 +174,7 @@ export const quizItems = {
           },
           {
             "id":"h_i",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"i",
             "moji":"い",
             "audio":"i.mp3",
@@ -182,7 +182,7 @@ export const quizItems = {
           },
           {
             "id":"h_u",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"u",
             "moji":"う",
             "audio":"u.mp3",
@@ -190,7 +190,7 @@ export const quizItems = {
           },
           {
             "id":"h_e",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"e",
             "moji":"え",
             "audio":"e.mp3",
@@ -198,7 +198,7 @@ export const quizItems = {
           },
           {
             "id":"h_o",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"o",
             "moji":"お",
             "audio":"o.mp3",
@@ -206,7 +206,7 @@ export const quizItems = {
           },
           {
             "id":"h_ka",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ka",
             "moji":"か",
             "audio":"ka.mp3",
@@ -214,7 +214,7 @@ export const quizItems = {
           },
           {
             "id":"h_ki",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ki",
             "moji":"き",
             "audio":"ki.mp3",
@@ -222,7 +222,7 @@ export const quizItems = {
           },
           {
             "id":"h_ku",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ku",
             "moji":"く",
             "audio":"ku.mp3",
@@ -230,7 +230,7 @@ export const quizItems = {
           },
           {
             "id":"h_ke",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ke",
             "moji":"け",
             "audio":"ke.mp3",
@@ -238,7 +238,7 @@ export const quizItems = {
           },
           {
             "id":"h_ko",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ko",
             "moji":"こ",
             "audio":"ko.mp3",
@@ -246,7 +246,7 @@ export const quizItems = {
           },
           {
             "id":"h_sa",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"sa",
             "moji":"さ",
             "audio":"sa.mp3",
@@ -254,7 +254,7 @@ export const quizItems = {
           },
           {
             "id":"h_shi",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"shi",
             "moji":"し",
             "audio":"si.mp3",
@@ -262,7 +262,7 @@ export const quizItems = {
           },
           {
             "id":"h_su",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"su",
             "moji":"す",
             "audio":"su.mp3",
@@ -270,7 +270,7 @@ export const quizItems = {
           },
           {
             "id":"h_se",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"se",
             "moji":"せ",
             "audio":"se.mp3",
@@ -278,7 +278,7 @@ export const quizItems = {
           },
           {
             "id":"h_so",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"so",
             "moji":"そ",
             "audio":"so.mp3",
@@ -286,7 +286,7 @@ export const quizItems = {
           },
           {
             "id":"h_ta",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ta",
             "moji":"た",
             "audio":"ta.mp3",
@@ -294,7 +294,7 @@ export const quizItems = {
           },
           {
             "id":"h_chi",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"chi",
             "moji":"ち",
             "audio":"chi.mp3",
@@ -302,7 +302,7 @@ export const quizItems = {
           },
           {
             "id":"h_tsu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"tsu",
             "moji":"つ",
             "audio":"tsu.mp3",
@@ -310,7 +310,7 @@ export const quizItems = {
           },
           {
             "id":"h_te",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"te",
             "moji":"て",
             "audio":"te.mp3",
@@ -318,7 +318,7 @@ export const quizItems = {
           },
           {
             "id":"h_to",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"to",
             "moji":"と",
             "audio":"to.mp3",
@@ -326,7 +326,7 @@ export const quizItems = {
           },
           {
             "id":"h_na",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"na",
             "moji":"な",
             "audio":"na.mp3",
@@ -334,7 +334,7 @@ export const quizItems = {
           },
           {
             "id":"h_ni",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ni",
             "moji":"に",
             "audio":"ni.mp3",
@@ -342,7 +342,7 @@ export const quizItems = {
           },
           {
             "id":"h_nu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"nu",
             "moji":"ぬ",
             "audio":"nu.mp3",
@@ -350,7 +350,7 @@ export const quizItems = {
           },
           {
             "id":"h_ne",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ne",
             "moji":"ね",
             "audio":"ne.mp3",
@@ -358,7 +358,7 @@ export const quizItems = {
           },
           {
             "id":"h_no",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"no",
             "moji":"の",
             "audio":"no.mp3",
@@ -366,7 +366,7 @@ export const quizItems = {
           },
           {
             "id":"h_ha",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ha",
             "moji":"は",
             "audio":"ha.mp3",
@@ -374,7 +374,7 @@ export const quizItems = {
           },
           {
             "id":"h_hi",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"hi",
             "moji":"ひ",
             "audio":"hi.mp3",
@@ -382,7 +382,7 @@ export const quizItems = {
           },
           {
             "id":"h_fu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"fu",
             "moji":"ふ",
             "audio":"fu.mp3",
@@ -390,7 +390,7 @@ export const quizItems = {
           },
           {
             "id":"h_he",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"he",
             "moji":"へ",
             "audio":"he.mp3",
@@ -398,7 +398,7 @@ export const quizItems = {
           },
           {
             "id":"h_ho",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ho",
             "moji":"ほ",
             "audio":"ho.mp3",
@@ -406,7 +406,7 @@ export const quizItems = {
           },
           {
             "id":"h_ma",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ma",
             "moji":"ま",
             "audio":"ma.mp3",
@@ -414,7 +414,7 @@ export const quizItems = {
           },
           {
             "id":"h_mi",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"mi",
             "moji":"み",
             "audio":"mi.mp3",
@@ -422,7 +422,7 @@ export const quizItems = {
           },
           {
             "id":"h_mu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"mu",
             "moji":"む",
             "audio":"mu.mp3",
@@ -430,7 +430,7 @@ export const quizItems = {
           },
           {
             "id":"h_me",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"me",
             "moji":"め",
             "audio":"me.mp3",
@@ -438,7 +438,7 @@ export const quizItems = {
           },
           {
             "id":"h_mo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"mo",
             "moji":"も",
             "audio":"mo.mp3",
@@ -446,7 +446,7 @@ export const quizItems = {
           },
           {
             "id":"h_ya",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ya",
             "moji":"や",
             "audio":"ya.mp3",
@@ -455,7 +455,7 @@ export const quizItems = {
           
           {
             "id":"h_yu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"yu",
             "moji":"ゆ",
             "audio":"yu.mp3",
@@ -464,7 +464,7 @@ export const quizItems = {
            
           {
             "id":"h_yo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"yo",
             "moji":"よ",
             "audio":"yo.mp3",
@@ -472,7 +472,7 @@ export const quizItems = {
           },
           {
             "id":"h_ra",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ra",
             "moji":"ら",
             "audio":"ra.mp3",
@@ -480,7 +480,7 @@ export const quizItems = {
           },
           {
             "id":"h_ri",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ri",
             "moji":"り",
             "audio":"ri.mp3",
@@ -488,7 +488,7 @@ export const quizItems = {
           },
           {
             "id":"h_ru",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ru",
             "moji":"る",
             "audio":"ru.mp3",
@@ -496,7 +496,7 @@ export const quizItems = {
           },
           {
             "id":"h_re",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"re",
             "moji":"れ",
             "audio":"re.mp3",
@@ -504,7 +504,7 @@ export const quizItems = {
           },
           {
             "id":"h_ro",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ro",
             "moji":"ろ",
             "audio":"ro.mp3",
@@ -512,7 +512,7 @@ export const quizItems = {
           },
           {
             "id":"h_wa",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"wa",
             "moji":"わ",
             "audio":"wa.mp3",
@@ -520,7 +520,7 @@ export const quizItems = {
           },
           {
             "id":"h_wo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"wo",
             "moji":"を",
             "audio":"wo.mp3",
@@ -529,7 +529,7 @@ export const quizItems = {
           
           {
             "id":"h_n",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"n",
             "moji":"ん",
             "audio":"n.mp3",
@@ -538,7 +538,7 @@ export const quizItems = {
           //DakuOn
           {
             "id":"h_ga",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ga",
             "moji":"が",
             "audio":"ga.mp3",
@@ -546,7 +546,7 @@ export const quizItems = {
           },
           {
             "id":"h_gi",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"gi",
             "moji":"ぎ",
             "audio":"gi.mp3",
@@ -554,7 +554,7 @@ export const quizItems = {
           },
           {
             "id":"h_gu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"gu",
             "moji":"ぐ",
             "audio":"gu.mp3",
@@ -562,7 +562,7 @@ export const quizItems = {
           },
           {
             "id":"h_ge",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ge",
             "moji":"げ",
             "audio":"ge.mp3",
@@ -570,7 +570,7 @@ export const quizItems = {
           },
           {
             "id":"h_go",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"go",
             "moji":"ご",
             "audio":"go.mp3",
@@ -578,7 +578,7 @@ export const quizItems = {
           },
           {
             "id":"h_za",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"za",
             "moji":"ざ",
             "audio":"za.mp3",
@@ -586,7 +586,7 @@ export const quizItems = {
           },
           {
             "id":"h_ji",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ji(zi)",
             "moji":"じ",
             "audio":"ji.mp3",
@@ -594,7 +594,7 @@ export const quizItems = {
           },
           {
             "id":"h_zu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"zu",
             "moji":"ず",
             "audio":"zu.mp3",
@@ -602,7 +602,7 @@ export const quizItems = {
           },
           {
             "id":"h_ze",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ze",
             "moji":"ぜ",
             "audio":"ze.mp3",
@@ -610,7 +610,7 @@ export const quizItems = {
           },
           {
             "id":"h_zo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"zo",
             "moji":"ぞ",
             "audio":"zo.mp3",
@@ -618,7 +618,7 @@ export const quizItems = {
           },
           {
             "id":"h_da",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"da",
             "moji":"だ",
             "audio":"da.mp3",
@@ -626,7 +626,7 @@ export const quizItems = {
           },
           {
             "id":"h_di",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ji(di)",
             "moji":"ぢ",
             "audio":"di.mp3",
@@ -634,7 +634,7 @@ export const quizItems = {
           },
           {
             "id":"h_du",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"zu",
             "moji":"づ",
             "audio":"du.mp3",
@@ -642,7 +642,7 @@ export const quizItems = {
           },
           {
             "id":"h_de",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"de",
             "moji":"で",
             "audio":"de.mp3",
@@ -650,7 +650,7 @@ export const quizItems = {
           },
           {
             "id":"h_do",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"do",
             "moji":"ど",
             "audio":"hl_do.mp3",
@@ -658,7 +658,7 @@ export const quizItems = {
           },
           {
             "id":"h_ba",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ba",
             "moji":"ば",
             "audio":"ba.mp3",
@@ -666,7 +666,7 @@ export const quizItems = {
           },
           {
             "id":"h_bi",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"bi",
             "moji":"び",
             "audio":"bi.mp3",
@@ -674,7 +674,7 @@ export const quizItems = {
           },
           {
             "id":"h_bu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"bu",
             "moji":"ぶ",
             "audio":"bu.mp3",
@@ -682,7 +682,7 @@ export const quizItems = {
           },
           {
             "id":"h_be",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"be",
             "moji":"べ",
             "audio":"be.mp3",
@@ -690,7 +690,7 @@ export const quizItems = {
           },
           {
             "id":"h_bo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"bo",
             "moji":"ぼ",
             "audio":"bo.mp3",
@@ -698,7 +698,7 @@ export const quizItems = {
           },
           {
             "id":"h_pa",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"pa",
             "moji":"ぱ",
             "audio":"pa.mp3",
@@ -706,7 +706,7 @@ export const quizItems = {
           },
           {
             "id":"h_pi",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"pi",
             "moji":"ぴ",
             "audio":"pi.mp3",
@@ -714,7 +714,7 @@ export const quizItems = {
           },
           {
             "id":"h_pu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"pu",
             "moji":"ぷ",
             "audio":"pu.mp3",
@@ -722,7 +722,7 @@ export const quizItems = {
           },
           {
             "id":"h_pe",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"pe",
             "moji":"ぺ",
             "audio":"pe.mp3",
@@ -730,7 +730,7 @@ export const quizItems = {
           },
           {
             "id":"h_po",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"po",
             "moji":"ぽ",
             "audio":"po.mp3",
@@ -739,7 +739,7 @@ export const quizItems = {
           //YoOn
           {
             "id":"h_kya",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"kya",
             "moji":"きゃ",
             "audio":"kya.mp3",
@@ -747,7 +747,7 @@ export const quizItems = {
           },
           {
             "id":"h_kyu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"kyu",
             "moji":"きゅ",
             "audio":"kyu.mp3",
@@ -755,7 +755,7 @@ export const quizItems = {
           },
           {
             "id":"h_kyo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"kyo",
             "moji":"きょ",
             "audio":"kyo.mp3",
@@ -763,7 +763,7 @@ export const quizItems = {
           },
           {
             "id":"h_sha",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"sha",
             "moji":"しゃ",
             "audio":"sha.mp3",
@@ -771,7 +771,7 @@ export const quizItems = {
           },
           {
             "id":"h_shu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"shu",
             "moji":"しゅ",
             "audio":"shu.mp3",
@@ -779,7 +779,7 @@ export const quizItems = {
           },
           {
             "id":"h_sho",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"sho",
             "moji":"しょ",
             "audio":"sho.mp3",
@@ -787,7 +787,7 @@ export const quizItems = {
           },
           {
             "id":"h_cha",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"cha",
             "moji":"ちゃ",
             "audio":"cha.mp3",
@@ -795,7 +795,7 @@ export const quizItems = {
           },
           {
             "id":"h_chu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"chu",
             "moji":"ちゅ",
             "audio":"chu.mp3",
@@ -803,7 +803,7 @@ export const quizItems = {
           },
           {
             "id":"h_cho",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"cho",
             "moji":"ちょ",
             "audio":"cho.mp3",
@@ -811,7 +811,7 @@ export const quizItems = {
           },
           {
             "id":"h_nya",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"nya",
             "moji":"にゃ",
             "audio":"nya.mp3",
@@ -819,7 +819,7 @@ export const quizItems = {
           },
           {
             "id":"h_nyu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"nyu",
             "moji":"にゅ",
             "audio":"nyu.mp3",
@@ -827,7 +827,7 @@ export const quizItems = {
           },
           {
             "id":"h_nyo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"nyo",
             "moji":"にょ",
             "audio":"nyo.mp3",
@@ -835,7 +835,7 @@ export const quizItems = {
           },
           {
             "id":"h_hya",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"hya",
             "moji":"ひゃ",
             "audio":"hya.mp3",
@@ -843,7 +843,7 @@ export const quizItems = {
           },
           {
             "id":"h_hyu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"hyu",
             "moji":"ひゅ",
             "audio":"hyu.mp3",
@@ -851,7 +851,7 @@ export const quizItems = {
           },
           {
             "id":"h_hyo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"hyo",
             "moji":"ひょ",
             "audio":"hyo.mp3",
@@ -859,7 +859,7 @@ export const quizItems = {
           },
           {
             "id":"h_mya",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"mya",
             "moji":"みゃ",
             "audio":"mya.mp3",
@@ -867,7 +867,7 @@ export const quizItems = {
           },
           {
             "id":"h_myu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"myu",
             "moji":"みゅ",
             "audio":"myu.mp3",
@@ -875,7 +875,7 @@ export const quizItems = {
           },
           {
             "id":"h_myo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"myo",
             "moji":"みょ",
             "audio":"myo.mp3",
@@ -883,7 +883,7 @@ export const quizItems = {
           },
           {
             "id":"h_rya",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"rya",
             "moji":"りゃ",
             "audio":"rya.mp3",
@@ -891,7 +891,7 @@ export const quizItems = {
           },
           {
             "id":"h_ryu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ryu",
             "moji":"りゅ",
             "audio":"ryu.mp3",
@@ -899,7 +899,7 @@ export const quizItems = {
           },
           {
             "id":"h_ryo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ryo",
             "moji":"りょ",
             "audio":"ryo.mp3",
@@ -907,7 +907,7 @@ export const quizItems = {
           },
           {
             "id":"h_gya",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"gya",
             "moji":"ぎゃ",
             "audio":"gya.mp3",
@@ -915,7 +915,7 @@ export const quizItems = {
           },
           {
             "id":"h_gyu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"gyu",
             "moji":"ぎゅ",
             "audio":"gyu.mp3",
@@ -923,7 +923,7 @@ export const quizItems = {
           },
           {
             "id":"h_gyo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"gyo",
             "moji":"ぎょ",
             "audio":"gyo.mp3",
@@ -931,7 +931,7 @@ export const quizItems = {
           },
           {
             "id":"h_ja",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ja",
             "moji":"じゃ",
             "audio":"ja.mp3",
@@ -939,7 +939,7 @@ export const quizItems = {
           },
           {
             "id":"h_ju",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"ju",
             "moji":"じゅ",
             "audio":"ju.mp3",
@@ -947,7 +947,7 @@ export const quizItems = {
           },
           {
             "id":"h_jo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"jo",
             "moji":"じょ",
             "audio":"jo.mp3",
@@ -955,7 +955,7 @@ export const quizItems = {
           },
           {
             "id":"h_bya",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"bya",
             "moji":"びゃ",
             "audio":"bya.mp3",
@@ -963,7 +963,7 @@ export const quizItems = {
           },
           {
             "id":"h_byu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"byu",
             "moji":"びゅ",
             "audio":"byu.mp3",
@@ -971,7 +971,7 @@ export const quizItems = {
           },
           {
             "id":"h_byo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"byo",
             "moji":"びょ",
             "audio":"byo.mp3",
@@ -979,7 +979,7 @@ export const quizItems = {
           },
           {
             "id":"h_pya",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"pya",
             "moji":"ぴゃ",
             "audio":"pya.mp3",
@@ -987,7 +987,7 @@ export const quizItems = {
           },
           {
             "id":"h_pyu",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"pyu",
             "moji":"ぴゅ",
             "audio":"pyu.mp3",
@@ -995,7 +995,7 @@ export const quizItems = {
           },
           {
             "id":"h_pyo",
-            "type":"hiragana",      
+            "type":"initial",      
             "romaji":"pyo",
             "moji":"ぴょ",
             "audio":"pyo.mp3",
@@ -1003,7 +1003,7 @@ export const quizItems = {
           },
           {
             "id":"k_a",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"a",
             "moji":"ア",
             "audio":"a.mp3",
@@ -1011,7 +1011,7 @@ export const quizItems = {
           },
           {
             "id":"k_i",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"i",
             "moji":"イ",
             "audio":"i.mp3",
@@ -1019,7 +1019,7 @@ export const quizItems = {
           },
           {
             "id":"k_u",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"u",
             "moji":"ウ",
             "audio":"u.mp3",
@@ -1027,7 +1027,7 @@ export const quizItems = {
           },
           {
             "id":"k_e",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"e",
             "moji":"エ",
             "audio":"e.mp3",
@@ -1035,7 +1035,7 @@ export const quizItems = {
           },
           {
             "id":"k_o",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"o",
             "moji":"オ",
             "audio":"o.mp3",
@@ -1043,7 +1043,7 @@ export const quizItems = {
           },
           {
             "id":"k_ka",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ka",
             "moji":"カ",
             "audio":"ka.mp3",
@@ -1051,7 +1051,7 @@ export const quizItems = {
           },
           {
             "id":"k_ki",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ki",
             "moji":"キ",
             "audio":"ki.mp3",
@@ -1059,7 +1059,7 @@ export const quizItems = {
           },
           {
             "id":"k_ku",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ku",
             "moji":"ク",
             "audio":"ku.mp3",
@@ -1067,7 +1067,7 @@ export const quizItems = {
           },
           {
             "id":"k_ke",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ke",
             "moji":"ケ",
             "audio":"ke.mp3",
@@ -1075,7 +1075,7 @@ export const quizItems = {
           },
           {
             "id":"k_ko",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ko",
             "moji":"コ",
             "audio":"ko.mp3",
@@ -1083,7 +1083,7 @@ export const quizItems = {
           },
           {
             "id":"k_sa",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"sa",
             "moji":"サ",
             "audio":"sa.mp3",
@@ -1091,7 +1091,7 @@ export const quizItems = {
           },
           {
             "id":"k_shi",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"shi",
             "moji":"シ",
             "audio":"si.mp3",
@@ -1099,7 +1099,7 @@ export const quizItems = {
           },
           {
             "id":"k_su",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"su",
             "moji":"ス",
             "audio":"su.mp3",
@@ -1107,7 +1107,7 @@ export const quizItems = {
           },
           {
             "id":"k_se",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"se",
             "moji":"セ",
             "audio":"se.mp3",
@@ -1115,7 +1115,7 @@ export const quizItems = {
           },
           {
             "id":"k_so",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"so",
             "moji":"ソ",
             "audio":"so.mp3",
@@ -1123,7 +1123,7 @@ export const quizItems = {
           },
           {
             "id":"k_ta",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ta",
             "moji":"タ",
             "audio":"ta.mp3",
@@ -1131,7 +1131,7 @@ export const quizItems = {
           },
           {
             "id":"k_chi",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"chi",
             "moji":"チ",
             "audio":"chi.mp3",
@@ -1139,7 +1139,7 @@ export const quizItems = {
           },
           {
             "id":"k_tsu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"tsu",
             "moji":"ツ",
             "audio":"tsu.mp3",
@@ -1147,7 +1147,7 @@ export const quizItems = {
           },
           {
             "id":"k_te",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"te",
             "moji":"テ",
             "audio":"te.mp3",
@@ -1155,7 +1155,7 @@ export const quizItems = {
           },
           {
             "id":"k_to",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"to",
             "moji":"ト",
             "audio":"to.mp3",
@@ -1163,7 +1163,7 @@ export const quizItems = {
           },
           {
             "id":"k_na",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"na",
             "moji":"ナ",
             "audio":"na.mp3",
@@ -1171,7 +1171,7 @@ export const quizItems = {
           },
           {
             "id":"k_ni",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ni",
             "moji":"ニ",
             "audio":"ni.mp3",
@@ -1179,7 +1179,7 @@ export const quizItems = {
           },
           {
             "id":"k_nu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"nu",
             "moji":"ヌ",
             "audio":"nu.mp3",
@@ -1187,7 +1187,7 @@ export const quizItems = {
           },
           {
             "id":"k_ne",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ne",
             "moji":"ネ",
             "audio":"ne.mp3",
@@ -1195,7 +1195,7 @@ export const quizItems = {
           },
           {
             "id":"k_no",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"no",
             "moji":"ノ",
             "audio":"no.mp3",
@@ -1203,7 +1203,7 @@ export const quizItems = {
           },
           {
             "id":"k_ha",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ha",
             "moji":"ハ",
             "audio":"ha.mp3",
@@ -1211,7 +1211,7 @@ export const quizItems = {
           },
           {
             "id":"k_hi",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"hi",
             "moji":"ヒ",
             "audio":"hi.mp3",
@@ -1219,7 +1219,7 @@ export const quizItems = {
           },
           {
             "id":"k_fu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"fu",
             "moji":"フ",
             "audio":"fu.mp3",
@@ -1227,7 +1227,7 @@ export const quizItems = {
           },
           {
             "id":"k_he",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"he",
             "moji":"ヘ",
             "audio":"he.mp3",
@@ -1235,7 +1235,7 @@ export const quizItems = {
           },
           {
             "id":"k_ho",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ho",
             "moji":"ホ",
             "audio":"ho.mp3",
@@ -1243,7 +1243,7 @@ export const quizItems = {
           },
           {
             "id":"k_ma",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ma",
             "moji":"マ",
             "audio":"ma.mp3",
@@ -1251,7 +1251,7 @@ export const quizItems = {
           },
           {
             "id":"k_mi",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ミ",
             "moji":"み",
             "audio":"mi.mp3",
@@ -1259,7 +1259,7 @@ export const quizItems = {
           },
           {
             "id":"k_mu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"mu",
             "moji":"ム",
             "audio":"mu.mp3",
@@ -1267,7 +1267,7 @@ export const quizItems = {
           },
           {
             "id":"k_me",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"me",
             "moji":"メ",
             "audio":"me.mp3",
@@ -1275,7 +1275,7 @@ export const quizItems = {
           },
           {
             "id":"k_mo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"mo",
             "moji":"モ",
             "audio":"mo.mp3",
@@ -1283,7 +1283,7 @@ export const quizItems = {
           },
           {
             "id":"k_ya",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ya",
             "moji":"ヤ",
             "audio":"ya.mp3",
@@ -1292,7 +1292,7 @@ export const quizItems = {
           
           {
             "id":"k_yu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"yu",
             "moji":"ユ",
             "audio":"yu.mp3",
@@ -1301,7 +1301,7 @@ export const quizItems = {
            
           {
             "id":"k_yo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"yo",
             "moji":"ヨ",
             "audio":"yo.mp3",
@@ -1309,7 +1309,7 @@ export const quizItems = {
           },
           {
             "id":"k_ra",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ra",
             "moji":"ラ",
             "audio":"ra.mp3",
@@ -1317,7 +1317,7 @@ export const quizItems = {
           },
           {
             "id":"k_ri",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ri",
             "moji":"リ",
             "audio":"ri.mp3",
@@ -1325,7 +1325,7 @@ export const quizItems = {
           },
           {
             "id":"k_ru",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ru",
             "moji":"ル",
             "audio":"ru.mp3",
@@ -1333,7 +1333,7 @@ export const quizItems = {
           },
           {
             "id":"k_re",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"re",
             "moji":"レ",
             "audio":"re.mp3",
@@ -1341,7 +1341,7 @@ export const quizItems = {
           },
           {
             "id":"k_ro",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ro",
             "moji":"ロ",
             "audio":"ro.mp3",
@@ -1349,7 +1349,7 @@ export const quizItems = {
           },
           {
             "id":"k_wa",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"wa",
             "moji":"ワ",
             "audio":"wa.mp3",
@@ -1357,7 +1357,7 @@ export const quizItems = {
           },
           {
             "id":"k_wo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"wo",
             "moji":"ヲ",
             "audio":"wo.mp3",
@@ -1366,7 +1366,7 @@ export const quizItems = {
           
           {
             "id":"k_n",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"n",
             "moji":"ン",
             "audio":"n.mp3",
@@ -1375,7 +1375,7 @@ export const quizItems = {
           //DakuOn
           {
             "id":"k_ga",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ga",
             "moji":"ガ",
             "audio":"ga.mp3",
@@ -1383,7 +1383,7 @@ export const quizItems = {
           },
           {
             "id":"k_gi",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"gi",
             "moji":"ギ",
             "audio":"gi.mp3",
@@ -1391,7 +1391,7 @@ export const quizItems = {
           },
           {
             "id":"k_gu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"gu",
             "moji":"グ",
             "audio":"gu.mp3",
@@ -1399,7 +1399,7 @@ export const quizItems = {
           },
           {
             "id":"k_ge",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ge",
             "moji":"ゲ",
             "audio":"ge.mp3",
@@ -1407,7 +1407,7 @@ export const quizItems = {
           },
           {
             "id":"k_go",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"go",
             "moji":"ゴ",
             "audio":"go.mp3",
@@ -1415,7 +1415,7 @@ export const quizItems = {
           },
           {
             "id":"k_za",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"za",
             "moji":"ザ",
             "audio":"za.mp3",
@@ -1423,7 +1423,7 @@ export const quizItems = {
           },
           {
             "id":"k_ji",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ji(zi)",
             "moji":"ジ",
             "audio":"ji.mp3",
@@ -1431,7 +1431,7 @@ export const quizItems = {
           },
           {
             "id":"k_zu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"zu",
             "moji":"ズ",
             "audio":"zu.mp3",
@@ -1439,7 +1439,7 @@ export const quizItems = {
           },
           {
             "id":"k_ze",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ze",
             "moji":"ゼ",
             "audio":"ze.mp3",
@@ -1447,7 +1447,7 @@ export const quizItems = {
           },
           {
             "id":"k_zo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"zo",
             "moji":"ゾ",
             "audio":"zo.mp3",
@@ -1455,7 +1455,7 @@ export const quizItems = {
           },
           {
             "id":"k_da",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"da",
             "moji":"ダ",
             "audio":"da.mp3",
@@ -1463,7 +1463,7 @@ export const quizItems = {
           },
           {
             "id":"k_di",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ji(di)",
             "moji":"ヂ",
             "audio":"di.mp3",
@@ -1471,7 +1471,7 @@ export const quizItems = {
           },
           {
             "id":"k_du",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"zu",
             "moji":"ヅ",
             "audio":"du.mp3",
@@ -1479,7 +1479,7 @@ export const quizItems = {
           },
           {
             "id":"k_de",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"de",
             "moji":"デ",
             "audio":"de.mp3",
@@ -1487,7 +1487,7 @@ export const quizItems = {
           },
           {
             "id":"k_do",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"do",
             "moji":"ド",
             "audio":"hl_do.mp3",
@@ -1495,7 +1495,7 @@ export const quizItems = {
           },
           {
             "id":"k_ba",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ba",
             "moji":"バ",
             "audio":"ba.mp3",
@@ -1503,7 +1503,7 @@ export const quizItems = {
           },
           {
             "id":"k_bi",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"bi",
             "moji":"ビ",
             "audio":"bi.mp3",
@@ -1511,7 +1511,7 @@ export const quizItems = {
           },
           {
             "id":"k_bu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"bu",
             "moji":"ブ",
             "audio":"bu.mp3",
@@ -1519,7 +1519,7 @@ export const quizItems = {
           },
           {
             "id":"k_be",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"be",
             "moji":"ベ",
             "audio":"be.mp3",
@@ -1527,7 +1527,7 @@ export const quizItems = {
           },
           {
             "id":"k_bo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"bo",
             "moji":"ボ",
             "audio":"bo.mp3",
@@ -1535,7 +1535,7 @@ export const quizItems = {
           },
           {
             "id":"k_pa",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"pa",
             "moji":"パ",
             "audio":"pa.mp3",
@@ -1543,7 +1543,7 @@ export const quizItems = {
           },
           {
             "id":"k_pi",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"pi",
             "moji":"ピ",
             "audio":"pi.mp3",
@@ -1551,7 +1551,7 @@ export const quizItems = {
           },
           {
             "id":"k_pu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"pu",
             "moji":"プ",
             "audio":"pu.mp3",
@@ -1559,7 +1559,7 @@ export const quizItems = {
           },
           {
             "id":"k_pe",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"pe",
             "moji":"ペ",
             "audio":"pe.mp3",
@@ -1567,7 +1567,7 @@ export const quizItems = {
           },
           {
             "id":"k_po",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"po",
             "moji":"ポ",
             "audio":"po.mp3",
@@ -1576,7 +1576,7 @@ export const quizItems = {
           //YoOn
           {
             "id":"k_kya",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"kya",
             "moji":"キャ",
             "audio":"kya.mp3",
@@ -1584,7 +1584,7 @@ export const quizItems = {
           },
           {
             "id":"k_kyu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"kyu",
             "moji":"キュ",
             "audio":"kyu.mp3",
@@ -1592,7 +1592,7 @@ export const quizItems = {
           },
           {
             "id":"k_kyo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"kyo",
             "moji":"キョ",
             "audio":"kyo.mp3",
@@ -1600,7 +1600,7 @@ export const quizItems = {
           },
           {
             "id":"k_sha",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"sha",
             "moji":"シャ",
             "audio":"sha.mp3",
@@ -1608,7 +1608,7 @@ export const quizItems = {
           },
           {
             "id":"k_shu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"shu",
             "moji":"シュ",
             "audio":"shu.mp3",
@@ -1616,7 +1616,7 @@ export const quizItems = {
           },
           {
             "id":"k_sho",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"sho",
             "moji":"ショ",
             "audio":"sho.mp3",
@@ -1624,7 +1624,7 @@ export const quizItems = {
           },
           {
             "id":"k_cha",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"cha",
             "moji":"チャ",
             "audio":"cha.mp3",
@@ -1632,7 +1632,7 @@ export const quizItems = {
           },
           {
             "id":"k_chu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"chu",
             "moji":"チュ",
             "audio":"chu.mp3",
@@ -1640,7 +1640,7 @@ export const quizItems = {
           },
           {
             "id":"k_cho",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"cho",
             "moji":"チョ",
             "audio":"cho.mp3",
@@ -1648,7 +1648,7 @@ export const quizItems = {
           },
           {
             "id":"k_nya",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"nya",
             "moji":"ニャ",
             "audio":"nya.mp3",
@@ -1656,7 +1656,7 @@ export const quizItems = {
           },
           {
             "id":"k_nyu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"nyu",
             "moji":"ニュ",
             "audio":"nyu.mp3",
@@ -1664,7 +1664,7 @@ export const quizItems = {
           },
           {
             "id":"k_nyo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"nyo",
             "moji":"ニョ",
             "audio":"nyo.mp3",
@@ -1672,7 +1672,7 @@ export const quizItems = {
           },
           {
             "id":"k_hya",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"hya",
             "moji":"ヒャ",
             "audio":"hya.mp3",
@@ -1680,7 +1680,7 @@ export const quizItems = {
           },
           {
             "id":"k_hyu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"hyu",
             "moji":"ヒュ",
             "audio":"hyu.mp3",
@@ -1688,7 +1688,7 @@ export const quizItems = {
           },
           {
             "id":"k_hyo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"hyo",
             "moji":"ヒョ",
             "audio":"hyo.mp3",
@@ -1696,7 +1696,7 @@ export const quizItems = {
           },
           {
             "id":"k_mya",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"mya",
             "moji":"ミャ",
             "audio":"mya.mp3",
@@ -1704,7 +1704,7 @@ export const quizItems = {
           },
           {
             "id":"k_myu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"myu",
             "moji":"ミュ",
             "audio":"myu.mp3",
@@ -1712,7 +1712,7 @@ export const quizItems = {
           },
           {
             "id":"k_myo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"myo",
             "moji":"ミョ",
             "audio":"myo.mp3",
@@ -1720,7 +1720,7 @@ export const quizItems = {
           },
           {
             "id":"k_rya",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"rya",
             "moji":"リャ",
             "audio":"rya.mp3",
@@ -1728,7 +1728,7 @@ export const quizItems = {
           },
           {
             "id":"k_ryu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ryu",
             "moji":"リュ",
             "audio":"ryu.mp3",
@@ -1736,7 +1736,7 @@ export const quizItems = {
           },
           {
             "id":"k_ryo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ryo",
             "moji":"リョ",
             "audio":"ryo.mp3",
@@ -1744,7 +1744,7 @@ export const quizItems = {
           },
           {
             "id":"k_gya",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"gya",
             "moji":"ギャ",
             "audio":"gya.mp3",
@@ -1752,7 +1752,7 @@ export const quizItems = {
           },
           {
             "id":"k_gyu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"gyu",
             "moji":"ギュ",
             "audio":"gyu.mp3",
@@ -1760,7 +1760,7 @@ export const quizItems = {
           },
           {
             "id":"k_gyo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"gyo",
             "moji":"ギョ",
             "audio":"gyo.mp3",
@@ -1768,7 +1768,7 @@ export const quizItems = {
           },
           {
             "id":"k_ja",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ja",
             "moji":"ジャ",
             "audio":"ja.mp3",
@@ -1776,7 +1776,7 @@ export const quizItems = {
           },
           {
             "id":"k_ju",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"ju",
             "moji":"ジュ",
             "audio":"ju.mp3",
@@ -1784,7 +1784,7 @@ export const quizItems = {
           },
           {
             "id":"k_jo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"jo",
             "moji":"ジョ",
             "audio":"jo.mp3",
@@ -1792,7 +1792,7 @@ export const quizItems = {
           },
           {
             "id":"k_bya",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"bya",
             "moji":"ビャ",
             "audio":"bya.mp3",
@@ -1800,7 +1800,7 @@ export const quizItems = {
           },
           {
             "id":"k_byu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"byu",
             "moji":"ビュ",
             "audio":"byu.mp3",
@@ -1808,7 +1808,7 @@ export const quizItems = {
           },
           {
             "id":"k_byo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"byo",
             "moji":"ビョ",
             "audio":"byo.mp3",
@@ -1816,7 +1816,7 @@ export const quizItems = {
           },
           {
             "id":"k_pya",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"pya",
             "moji":"ピャ",
             "audio":"pya.mp3",
@@ -1824,7 +1824,7 @@ export const quizItems = {
           },
           {
             "id":"k_pyu",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"pyu",
             "moji":"ピュ",
             "audio":"pyu.mp3",
@@ -1832,7 +1832,7 @@ export const quizItems = {
           },
           {
             "id":"k_pyo",
-            "type":"katakana",      
+            "type":"initial",      
             "romaji":"pyo",
             "moji":"ピョ",
             "audio":"pyo.mp3",
@@ -1878,7 +1878,7 @@ export const quizItems = {
         },
         {   
             "id":"num_5",
-            "type":"vocabulary",      
+            "type":"reading",      
             "romaji":"go",
             "moji":"ご",
             "kanji":"五",
@@ -1887,7 +1887,7 @@ export const quizItems = {
         },
         {   
             "id":"num_6",
-            "type":"vocabulary",      
+            "type":"listening",      
             "romaji":"roku",
             "moji":"ろく",
             "kanji":"六",

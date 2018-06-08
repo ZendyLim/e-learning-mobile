@@ -52,7 +52,8 @@ class QuizMainScreen extends Component {
             quizOptions: navigation.getParam('quizOptions',null),
             oneType: type,
             index:  navigation.getParam('index',null),        
-            categoryId :  navigation.getParam('categoryId',null),  
+            categoryId :  navigation.getParam('categoryId',null), 
+            headerTitle :  navigation.getParam('headerTitle',null),
         }
       ));
   };  

@@ -158,7 +158,7 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
                 idList: this.state.idList,
                 index:  navigation.getParam('index',null),
                 categoryId :  navigation.getParam('categoryId',null),  
- 
+                headerTitle:  navigation.getParam('headerTitle',null),
             }
         )
         );
