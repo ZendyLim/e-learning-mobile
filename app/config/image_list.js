@@ -15,14 +15,14 @@ export const ImageData = {
     T005 : require('../assets/img/topic/5.jpg'), 
     T006 : require('../assets/img/topic/6.jpg'), 
     T007 : require('../assets/img/topic/7.jpg'), 
-    T008 : require('../assets/img/topic/8.jpg'), 
-    T009 : require('../assets/img/topic/9.jpg'), 
-    T010 : require('../assets/img/topic/10.jpg'), 
-    T011 : require('../assets/img/topic/11.jpg'), 
-    T012 : require('../assets/img/topic/12.jpg'), 
+    T009 : require('../assets/img/topic/8.jpg'), 
+    T010 : require('../assets/img/topic/9.jpg'), 
+    T011 : require('../assets/img/topic/10.jpg'), 
+    T012 : require('../assets/img/topic/11.jpg'), 
+    T014 : require('../assets/img/topic/12.jpg'), 
     
-    T014 : require('../assets/img/topic/14.jpg'), 
-    T015 : require('../assets/img/topic/15.jpg'), 
+    T016 : require('../assets/img/topic/14.jpg'), 
+    T017 : require('../assets/img/topic/15.jpg'), 
     
       
 }

@@ -56,7 +56,12 @@ class StudyListScreen extends Component {
       this.props.navigation.navigate('HiraganaList',(
         item
       ));
-    }else{
+    }else if(item.type == 'FUKUSHU'){
+      this.props.navigation.navigate('TopicList',(
+        item
+      ));
+    }
+    else{
       this.props.navigation.navigate('TopicList',(
         item
       ));
