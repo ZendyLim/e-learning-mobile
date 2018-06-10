@@ -19,12 +19,8 @@ class QuizMainScreen extends Component {
   constructor(props){
       super(props);
       this.list = QuizListData.hiragana_katakana;
-      this._onSetLanguageTo('en');
   }
 
-  _onSetLanguageTo(value) {
-    strings.setLanguage(value);
-  } 
 
     render() {
     return (

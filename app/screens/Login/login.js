@@ -24,11 +24,6 @@ import {
   class LoginScreen extends Component {
     constructor() {
       super();
-      this._onSetLanguageTo('en');
-    }
-    _onSetLanguageTo(value) {
-      strings.setLanguage(value);
-      //this.setState({});
     }
     static navigationOptions = {
       header: null,

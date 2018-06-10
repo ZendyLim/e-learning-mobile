@@ -111,12 +111,8 @@ import {
 
       this.state = this.initialState;
      
-      this._onSetLanguageTo('en');      
     }
 
-    _onSetLanguageTo(value) {
-      strings.setLanguage(value);
-    }    
   
     render() {
       let display = this.state.timesUp;
