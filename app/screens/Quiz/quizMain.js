@@ -19,12 +19,8 @@ class QuizMainScreen extends Component {
   constructor(props){
       super(props);
       this.list = QuizListData.hiragana_katakana;
-      this._onSetLanguageTo('en');
   }
 
-  _onSetLanguageTo(value) {
-    strings.setLanguage(value);
-  } 
 
     render() {
     return (
@@ -52,7 +48,8 @@ class QuizMainScreen extends Component {
             quizOptions: navigation.getParam('quizOptions',null),
             oneType: type,
             index:  navigation.getParam('index',null),        
-            categoryId :  navigation.getParam('categoryId',null),  
+            categoryId :  navigation.getParam('categoryId',null), 
+            headerTitle :  navigation.getParam('headerTitle',null),
         }
       ));
   };  

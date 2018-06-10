@@ -32,11 +32,7 @@ import LearnGBK01Screen from '../Learn/LearnGBK01';
 class LearnHiraganaModule extends Component {
   constructor(props) {
     super(props);
-    this._onSetLanguageTo('en');
   }
-  _onSetLanguageTo(value) {
-    strings.setLanguage(value);
-  } 
   static navigationOptions = {
     title: 'Learn',
     swipeEnabled: false

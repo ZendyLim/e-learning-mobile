@@ -19,6 +19,7 @@ import { ImageData } from '../../config/image_list';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as Actions from '../../actions/summary'; //Import your actions
+import * as Helper from '../../actions/helper';  
 
 class HiraganaListScreen extends Component {
 
@@ -117,41 +118,22 @@ class HiraganaListScreen extends Component {
     });
   }
   getquizScore = () =>{
+    
     if(this.props.quiz){
       var quiz = this.props.quiz;
-      var count = 0;
-      for(var i = 0; i<quiz.length;i++){
-        if(quiz[i].correct == 1){
-          count += 1;
-        }
-      }
-      if(count == 0){
-        return "0/100";
-      }else{
-        var result =  Math.floor((count / quiz.length) * 100);
-        return result + '/100';
-      }
+
+      return Helper.countScore(quiz) + '/100';
     }else{
-      return '0/0';
+      return '0/100';
     }
   }
   gettestScore = () =>{
     if(this.props.test){
       var quiz = this.props.test;
-      var count = 0;
-      for(var i = 0; i<quiz.length;i++){
-        if(quiz[i].correct == 1){
-          count += 1;
-        }
-      }
-      if(count == 0){
-        return "0/100";
-      }else{
-        var result =  Math.floor((count / quiz.length) * 100);
-        return result + '/100';
-      }
+      
+      return Helper.countScore(quiz) + '/100';
     }else{
-      return '0/0';
+      return '0/100';
     }
   }
 
@@ -193,43 +175,43 @@ class HiraganaListScreen extends Component {
             <Text style={study.title}> { strings[this.state.title] } </Text>
           </View>
           <View style={[study.cardBox, study.borderBox, study.p3]}>
-            <Text style={[study.textLg, study.textBlack]}>Learn</Text>
+            <Text style={[study.textLg, study.textBlack]}>{ strings['STUDY_LEARN'] }</Text>
             <View style={study.buttonContainer}>
               <TouchableOpacity style={[study.button, study.mR10]} onPress={this.navigateToLearn.bind(this, 'Learn')}>
                 <Icon name='play-arrow'   color='#fff'/>
-                <Text style={[study.textWhite, study.textMd]} > Start</Text>
+                <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_START'] }</Text>
               </TouchableOpacity>
             </View>
           </View>
 
           <View style={[study.cardBox, study.borderBox, study.p3]}>
-            <Text style={[study.textLg, study.textBlack]}>Quiz</Text>
+            <Text style={[study.textLg, study.textBlack]}>{ strings['STUDY_QUIZ'] }</Text>
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>{ scoreQuiz }</Text>
             <View style={study.buttonContainer}>
 
               <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Quiz', this.state.topicId)}>
               
                 <Icon name='play-arrow'   color='#fff'/>
-                <Text style={[study.textWhite, study.textMd]} > Start</Text>
+                <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_START'] }</Text>
               </TouchableOpacity>
               <TouchableOpacity style={study.button} onPress={this.navigateReview.bind(this, 'QUIZ')}>
                 <Icon name='search'   color='#fff'/>
-                <Text style={[study.textWhite, study.textMd]} > Review</Text>
+                <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_REVIEW'] }</Text>
               </TouchableOpacity>
             </View>
           </View>
 
           <View style={[study.cardBox, study.borderBox, study.p3]}>
-            <Text style={[study.textLg, study.textBlack]}>Test</Text>
+            <Text style={[study.textLg, study.textBlack]}>{ strings['STUDY_TEST'] }</Text>
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>{ scoreTest }</Text>
             <View style={study.buttonContainer}>
               <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Test')}>
                 <Icon name='play-arrow'   color='#fff'/>
-                <Text style={[study.textWhite, study.textMd]} > Start</Text>
+                <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_START'] }</Text>
               </TouchableOpacity>
               <TouchableOpacity style={study.button} onPress={this.navigateReview.bind(this, 'TEST')}>
                 <Icon name='search'   color='#fff'/>
-                <Text style={[study.textWhite, study.textMd]} > Review</Text>
+                <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_REVIEW'] }</Text>
               </TouchableOpacity>
             </View>
           </View>
