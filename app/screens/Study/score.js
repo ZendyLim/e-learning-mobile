@@ -23,7 +23,7 @@ import {
   import { connect } from 'react-redux';
   import * as Actions from '../../actions/study'; //Import your actions
   import { StudyList } from '../../config/studyList';
-  import { quizItems } from '../../config/quiz';
+  import * as Helper from '../../actions/helper';  
   import Header   from '../../component/header';
   class ScoreScreen extends Component {
     constructor(props) {
@@ -127,7 +127,7 @@ import {
     return (
         <View style={scoreStyle.RecordRow}>
             <Text style={scoreStyle.recordTitle}>
-                { item.correct_title }
+                { item.correctTitle }
             </Text>
             { item.correct == '1' ? (
             <View style={scoreStyle.recordCorrect}>
@@ -143,6 +143,7 @@ import {
     )
 };
   render() {
+    console.log(this.props.studyRecord,'ss');
     return (
         <View style={scoreStyle.scoreContainer}>
           <View style={ scoreStyle.containerTitle }>
@@ -244,19 +245,8 @@ const study = require('../../styles/study');
 // and insert/links it into the props of our component.
 // This function makes Redux know that this component needs to be passed a piece of the state
 function mapStateToProps(state, props) {
-  const Score = '';
-  const CountQuest = state.study.studyRecord.length;
-  var correct = 0;
-  for(var i = 0; i < state.study.studyRecord.length; ++i) {
-    if(state.study.studyRecord[i].correct == '1'){
-     correct = correct + 1;
-   }
-  }
-  if(CountQuest !== 0 && correct !== 0){
-    score = Math.floor(( correct / CountQuest) * 100 );
-  }else{
-    score = 0;
-  }
+  const score = Helper.countScore(state.study.studyRecord);
+
   return {
       StudentID: state.user.user.id,
       studyRecord: state.study.studyRecord,
