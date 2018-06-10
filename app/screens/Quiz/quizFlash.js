@@ -24,7 +24,7 @@ import {
   import CustomButton   from '../../component/button';
   import Header   from '../../component/header';
 
-  import { quizItems } from '../../config/quiz';
+  import { quizItems } from '../../config/quiz/index';
   import { StudyList } from '../../config/studyList';
 
   /*
@@ -140,6 +140,7 @@ import {
                   timesUp={ this.state.timesUp }
                   expression={ this.state.expression }
                   showCorrect={ this.state.showCorrect }
+                  questionReady={ this.questionReady }
               />
               
               <View style={[styles.col12]}>
@@ -215,7 +216,7 @@ import {
         index: navigation.getParam('index', null),
         isTopicTest: navigation.getParam('isTopicTest', null)
       }
-      console.log(navigation.getParam('index', null),'sss');
+      
       this.setState(this.initialParams);
 
       this.setInitial();
@@ -235,8 +236,9 @@ import {
         this.props.navigation.dispatch(resetAction);
       }
       else{        
+        console.log(this.quizItems);
         shuffledQuiz = this.shuffleItems(this.quizItems);
-        
+        console.log(shuffledQuiz);
         this.allQuestion = shuffledQuiz.map((question) => 
           this.shuffleAnswers(question, shuffledQuiz)
         );
@@ -399,7 +401,30 @@ import {
       randomIndex = Math.floor(Math.random() * quizFormatLength);      
       time = this.time;
       
-      switch (quizFormat[randomIndex]) {
+      paramFormat = this.setQuizFormat(quizFormat[randomIndex],time);
+      
+      this.setState(paramFormat);
+    }
+
+    setQuizFormat(quizFormat, time){
+      let paramFormat;
+      
+      
+      if (this.currentQuestion.moji.indexOf('/') > -1 && quizFormat.indexOf('fill') > -1)
+      {
+        switch(this.currentQuestion.type){
+          case 'kanji':
+            quizFormat = 'kanji_english';
+          break;
+
+          default:
+            quizFormat = 'english_moji';
+          break;
+        }
+
+      }
+      
+      switch (quizFormat) {
         case 'romaji_moji':
           paramFormat = {
             answerFormat: 'moji',
@@ -512,8 +537,7 @@ import {
         case 'fill':
           paramFormat = {
             answerFormat: 'moji',
-            questionFormat: 'fill',
-            
+            questionFormat: 'fill',            
           };
           
           time = time * 1.5;
@@ -538,11 +562,10 @@ import {
           };
           break;          
       }
-      paramFormat.time = time;
-      paramFormat.format = quizFormat[randomIndex];
 
-      
-      this.setState(paramFormat);
+      paramFormat.format = quizFormat;
+      paramFormat.time = time;
+      return paramFormat;
     }
 
     setNextQuestion() {
@@ -565,7 +588,7 @@ import {
             question: this.currentQuestion,
             answerOptions: this.currentQuestion.answerOption,
             answer: '',            
-            timerRun:true,
+            //timerRun:true,
             timerRestart:true,
             timesUp: false,  
             expression:'default',
@@ -721,6 +744,18 @@ import {
       
       
     };
+
+    questionReady= (isReady) => {
+      if(isReady){
+        param = {
+          timerRun:true,
+          timerRestart:true,
+        }
+
+        this.setState(param);  
+      }
+      
+    }
     
     addScore = (isCorrect) => {
       

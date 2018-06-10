@@ -367,8 +367,8 @@ module.exports = StyleSheet.create({
 		},
 		//Character
 		character: {
-			width:112,
-			height:318
+			width:100,
+			height:284
 		},
 		// Timer Bar
 		timerContainer: {
@@ -407,7 +407,7 @@ module.exports = StyleSheet.create({
 		},
 		questionContainer:{
 			backgroundColor:'rgba(255,255,255,0.8)',
-			height:100,
+			minHeight:100,
 			padding:10,
 			flexWrap: 'wrap', 
 			alignItems: 'center',
@@ -440,6 +440,16 @@ module.exports = StyleSheet.create({
 			fontSize: 38,
 			width:'100%',
 			lineHeight:40
+		},
+		quizVocabInstruction:{
+			fontSize: 30,
+			width:'100%',
+			lineHeight:30
+		},
+		quizVocabQuestion:{
+			fontSize: 32,
+			width:'100%',
+			lineHeight:33
 		},
 		quizKanjiInstruction:{
 			fontSize: 32,
@@ -527,6 +537,10 @@ module.exports = StyleSheet.create({
 			paddingRight:10,
 			width: window.width - 30
 		},
+		quizVocab:{
+			padding:5,
+			width: window.width - 30
+		},
 		quizBtnPress:{
 			backgroundColor: primaryColor
 		},
@@ -539,6 +553,10 @@ module.exports = StyleSheet.create({
 		},
 		quizLongText:{
 			fontSize:30,
+			color:textColor
+		},
+		quizVocabText:{
+			fontSize:25,
 			color:textColor
 		},
 		quizKanjiText:{
