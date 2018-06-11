@@ -24,17 +24,9 @@ class CorrectPanel extends Component {
 
   constructor(props) {
       super(props);
-
-      this._onSetLanguageTo('en');
-      this.currentAudio = this.props.question.id;
-      
+      this.currentAudio = this.props.question.id;      
       this.imageSource = this.props.img ? ( ImageData[this.props.img] ) : ImageData.default_bg;
   }
-
-  _onSetLanguageTo(value) {
-    strings.setLanguage(value);
-  }
-
   componentWillMount() {
     
       this.loadAudio();        

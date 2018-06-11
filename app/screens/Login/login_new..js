@@ -29,11 +29,6 @@ import {
         Username: '',
         Password: '',
       };
-      this._onSetLanguageTo('en');
-    }
-    _onSetLanguageTo(value) {
-      strings.setLanguage(value);
-      //this.setState({});
     }
     static navigationOptions = {
       header: null,

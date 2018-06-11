@@ -20,11 +20,7 @@ import { StudyList } from '../../config/studyList';
 class SummaryTopicList extends Component {
   constructor() {
     super();
-    this._onSetLanguageTo('en');
   }
-  _onSetLanguageTo(value) {
-    strings.setLanguage(value);
-  } 
   static navigationOptions = {
     title: 'Learn',
   };

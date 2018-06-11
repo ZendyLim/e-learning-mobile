@@ -14,7 +14,8 @@ import {
   import { List, ListItem , Icon} from 'react-native-elements';
 
   import { AppStack , AuthStack }  from '../config/router';
-  
+  import  { strings }   from '../config/localization';
+
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import { ProgressCircle }  from 'react-native-svg-charts'
@@ -77,8 +78,16 @@ import {
 
       return  monthNames[datefinish.getMonth()] + " " + datefinish.getDate() + ", " + datefinish.getFullYear();
     }
+
+    _onSetLanguageTo = (value) => {
+      if(value){
+        strings.setLanguage(value);
+      }else{
+        strings.setLanguage('en');
+      }
+    }
    render() {
-     console.log(this.props.data);
+    this._onSetLanguageTo(this.props.lang);
      if(this.props.data.finishDate && this.props.data.startDate){
       var diffDays = this.updateDate(this.props.data.finishDate);
       var targetDate = this.getDateFormat(this.props.data.finishDate);
@@ -101,8 +110,8 @@ import {
           <View style={ [scoreStyle.containerGraph , scoreStyle.homeTop] }>
             <View style={ scoreStyle.absoluteTextHome }>
               <View style={ scoreStyle.containerScoreHome }>
-                <Text style={ scoreStyle.scoreTotal }>{ diffDays ? ( diffDays ) : ( 0 ) }d Left </Text>
-                <Text style={ [scoreStyle.scoreText2 , scoreStyle.fontBold] }>Target Date </Text>
+                <Text style={ scoreStyle.scoreTotal }>{ diffDays ? ( diffDays ) : ( 0 ) } { strings['HOME_LEFT'] } </Text>
+                <Text style={ [scoreStyle.scoreText2 , scoreStyle.fontBold] }> { strings['HOME_TARGET'] } </Text>
                 <Text style={ scoreStyle.scoreText2 }>{ targetDate } </Text>
               </View>
             </View>
@@ -117,26 +126,24 @@ import {
                     <View style={ scoreStyle.HomeIcon }>
                       <Icon  name="book"  type='font-awesome' color="#fff"  size={18}/>
                     </View>
-                    <Text style={ scoreStyle.IconText } >Study</Text>
+                    <Text style={ scoreStyle.IconText } >{ strings['HOME_STUDY'] }</Text>
                 </TouchableOpacity>
                 <TouchableOpacity  style={ scoreStyle.ButtonText } onPress={this.navigatePage.bind(this,'Summary')}>
                     <View style={ scoreStyle.HomeIcon }>
                       <Icon  name="list"  type='font-awesome' color="#fff"   size={18}/>
                     </View>
-                    <Text style={ scoreStyle.IconText } >Summary</Text>
+                    <Text style={ scoreStyle.IconText } >{ strings['HOME_SUMMARY'] }</Text>
                 </TouchableOpacity>
                 <TouchableOpacity  style={ scoreStyle.ButtonText } onPress={this.navigatePage.bind(this,'Profile')}>
                     <View style={ scoreStyle.HomeIcon }>
                       <Icon name="user" type='font-awesome'  color="#fff"  size={18}/>
                     </View>
-                    <Text style={ scoreStyle.IconText } >Profile</Text>
+                    <Text style={ scoreStyle.IconText } >{ strings['HOME_PROFILE'] }</Text>
                 </TouchableOpacity>
               </View>
             </View>
             <View style={ scoreStyle.menuBottom }>
-              <Text>
-                こんにちは！お元気ですか？{'\n'}
-                勉強しましょう！
+              <Text>{ strings['HOME_MESSAGE']}
               </Text>
             </View>
             <View style={ scoreStyle.imageHomeCon}>
@@ -189,6 +196,7 @@ function mapStateToProps(state, props) {
       data: state.user.user,
       dateFrom: state.summary.dateFrom,
       dateTo: state.summary.dateTo,
+      lang : state.user.lang      
   }
 }
 
