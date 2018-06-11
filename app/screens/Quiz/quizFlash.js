@@ -156,8 +156,9 @@ import {
                   />
                 }
               </View>
-
-              <ScrollView style={[ styles.col12, styles.quizAnswerWrapper ]}>
+              
+              <View style={[ styles.col12, styles.quizAnswerWrapper ]}> 
+              <ScrollView>
                 <View style={ !timerRun && styles.blocker }></View>
                 
                 { !this.state.showCorrect ?
@@ -186,7 +187,7 @@ import {
                 }
 
               </ScrollView>
-
+              </View>
             </View>
 
           ):(
@@ -235,10 +236,8 @@ import {
 
         this.props.navigation.dispatch(resetAction);
       }
-      else{        
-        console.log(this.quizItems);
-        shuffledQuiz = this.shuffleItems(this.quizItems);
-        console.log(shuffledQuiz);
+      else{                
+        shuffledQuiz = this.shuffleItems(this.quizItems);        
         this.allQuestion = shuffledQuiz.map((question) => 
           this.shuffleAnswers(question, shuffledQuiz)
         );
@@ -391,7 +390,7 @@ import {
     randomQuizFormat(){
       let quizFormat, quizFormatLength, paramFormat, time, randomIndex;
 
-      if(this.initialParams.isTopicTest){
+      if(this.initialParams.isTopicTest){        
         questionType = this.currentQuestion.type;        
         this.quizOptions = this.study[questionType];        
       }
@@ -401,8 +400,7 @@ import {
       randomIndex = Math.floor(Math.random() * quizFormatLength);      
       time = this.time;
       
-      paramFormat = this.setQuizFormat(quizFormat[randomIndex],time);
-      
+      paramFormat = this.setQuizFormat(quizFormat[randomIndex],time);      
       this.setState(paramFormat);
     }
 
@@ -580,8 +578,7 @@ import {
           this.timeStops = 0;
           this.currentQuestion = this.allQuestion[counter];
           
-          this.randomQuizFormat();
-          
+          this.randomQuizFormat();          
           reset = {
             counter: counter,
             //questionId: questionId,
@@ -592,10 +589,11 @@ import {
             timerRestart:true,
             timesUp: false,  
             expression:'default',
-            correct: 0,
+            correct: false,
             showCorrect:false                 
           };
-          console.log(reset, 'check-res');
+
+                    
           this.setState(reset);
         }
         else{
@@ -685,6 +683,7 @@ import {
     }
 
     onTimesUp = (val) => {
+      
       if(this.study.type == 'TOPIC' && this.state.type == 'Quiz'){        
         this.setState({
           showCorrect:true
@@ -764,7 +763,7 @@ import {
 
         this.setState({
           score: this.state.score + 1,
-          correct:1,
+          correct:true,
           expression:'happy'
         });
         
