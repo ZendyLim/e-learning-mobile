@@ -19,6 +19,7 @@ import { ImageData } from '../../config/image_list';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as Actions from '../../actions/summary'; //Import your actions
+import * as Helper from '../../actions/helper';  
 
 class HiraganaListScreen extends Component {
 
@@ -117,41 +118,22 @@ class HiraganaListScreen extends Component {
     });
   }
   getquizScore = () =>{
+    
     if(this.props.quiz){
       var quiz = this.props.quiz;
-      var count = 0;
-      for(var i = 0; i<quiz.length;i++){
-        if(quiz[i].correct == 1){
-          count += 1;
-        }
-      }
-      if(count == 0){
-        return "0/100";
-      }else{
-        var result =  Math.floor((count / quiz.length) * 100);
-        return result + '/100';
-      }
+
+      return Helper.countScore(quiz) + '/100';
     }else{
-      return '0/0';
+      return '0/100';
     }
   }
   gettestScore = () =>{
     if(this.props.test){
       var quiz = this.props.test;
-      var count = 0;
-      for(var i = 0; i<quiz.length;i++){
-        if(quiz[i].correct == 1){
-          count += 1;
-        }
-      }
-      if(count == 0){
-        return "0/100";
-      }else{
-        var result =  Math.floor((count / quiz.length) * 100);
-        return result + '/100';
-      }
+      
+      return Helper.countScore(quiz) + '/100';
     }else{
-      return '0/0';
+      return '0/100';
     }
   }
 

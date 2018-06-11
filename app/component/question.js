@@ -28,7 +28,7 @@ class QuestionPanel extends Component {
 
       this._onSetLanguageTo('en');
       this.currentAudio = this.props.question.id;
-      
+      this.currentQuestion = '';
       this.imageSource = this.props.img ? ( ImageData[this.props.img] ) : ImageData.default_bg;
   }
 
@@ -37,17 +37,29 @@ class QuestionPanel extends Component {
   }
 
   componentWillMount() {
+    this.currentQuestion = this.props.question.id;
     if(this.props.format == 'audio'){
       this.loadAudio();
-      setTimeout(() => this.playAudio(true), 600);
+      setTimeout(() => {
+        this.playAudio(true)}, 500);
     }
   }
 
   componentDidUpdate(){
-    if(this.props.format == 'audio'){
-      this.loadAudio();
-      setTimeout(() => this.playAudio(), 600);
+    if(this.currentQuestion != this.props.question.id){
+      this.currentQuestion = this.props.question.id;
+      if(this.props.format == 'audio'){
+        this.loadAudio();
+        setTimeout(() => {
+          this.playAudio()
+          this.props.questionReady(true);
+        }, 500);
+      }
+      else{
+        this.props.questionReady(true);
+      }
     }
+    
 
   }
 

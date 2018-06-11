@@ -123,9 +123,8 @@ class Quiz extends Component {
         
     }
 
-    onSelect = (val) => {
-
-        this.props.onAnswerSelected(val, val == this.props.question.id);
+    onSelect = (val,textDisplay) => {
+        this.props.onAnswerSelected(textDisplay, val == this.props.question.id);
         
         this.setState({
             selectedAnswer: val

@@ -39,6 +39,7 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
 
     constructor(props){
         super(props);
+        
         this.checkItems = [];
         this.checkRows = [];
     }
@@ -221,6 +222,7 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
 
     proceed = () => {
         const { navigation } = this.props;
+        
         if(!this.validation()){
             this.props.navigation.navigate('QuizFlash', {
                 type: navigation.getParam('type',null),
@@ -234,7 +236,7 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
                 idList: this.state.idList,
                 index:  navigation.getParam('index',null),
                 categoryId :  navigation.getParam('categoryId',null),              
-
+                headerTitle:  navigation.getParam('headerTitle',null),
             });
         }
     };
