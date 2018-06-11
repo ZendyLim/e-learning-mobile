@@ -19,13 +19,13 @@ import {
   
   class ConfirmationScreen extends Component {
     static navigationOptions = {
-      title: 'Create Guest Account',
+      title: 'Confirmation',
     };
     state = {
       latestEducation : "",
       latestEducationName : "",
       major : "",
-      graduationDate : "",
+      graduationYear : "",
       englishLevel : "",
       japaneseType : "",
       japaneseSchoolName : "",
@@ -44,7 +44,7 @@ import {
         latestEducation : navigation.getParam('latestEducation', null),
         latestEducationName : navigation.getParam('latestEducationName', null),
         major : navigation.getParam('major', null),
-        graduationDate : navigation.getParam('graduationDate', null),
+        graduationYear : navigation.getParam('graduationYear', null),
         englishLevel : navigation.getParam('englishLevel', null),
         japaneseType : navigation.getParam('japaneseType', null),
         japaneseSchoolName : navigation.getParam('japaneseSchoolName', null),
@@ -61,7 +61,7 @@ import {
 
     saveUserData = () => {
         var userData = this.state;
-        // userData.graduationDate =this.unixTimeStamps(this.state.graduationDate) ;
+        // userData.graduationYear =this.unixTimeStamps(this.state.graduationYear) ;
         // userData.dateFrom = this.unixTimeStamps(this.state.dateFrom);
         // userData['dateTo'] = this.unixTimeStamps(this.state.dateTo); 
         var newFinish = (new Date(this.state.finishDate));
@@ -90,7 +90,7 @@ import {
       // const latestEducation = navigation.getParam('latestEducation', null);
       // const latestEducationName = navigation.getParam('latestEducationName', null);
       // const major = navigation.getParam('major', null);
-      // const graduationDate = navigation.getParam('graduationDate', null);
+      // const graduationYear = navigation.getParam('graduationYear', null);
       // const englishLevel = navigation.getParam('englishLevel', null);
       // const japaneseType = navigation.getParam('japaneseType', null);
       // const japaneseSchoolName = navigation.getParam('japaneseSchoolName', null);
@@ -109,7 +109,7 @@ import {
               <Text style={styles.textBlue}>Major</Text>
               <Text style={styles.textBlack}>{this.state.major}</Text>
               <Text style={styles.textBlue}>Graduation date</Text>        
-              <Text style={styles.textBlack}>{this.state.graduationDate}</Text>
+              <Text style={styles.textBlack}>{this.state.graduationYear}</Text>
               <Text style={styles.textBlue}>Your english level</Text>
               <Text style={styles.textBlack}>{this.state.englishLevel}</Text>
               <Text style={styles.textBlue}>Japanese study history</Text>

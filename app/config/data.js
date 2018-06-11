@@ -781,20 +781,28 @@ export const users = [
 
 export const studyReasonOption = [
 {
-  "id" : 0,
-  "text" : "Choose your Reason"
-},
-{
   "id" : 1,
-  "text" : "I want to go to Japan"
+  "text" : "it is necessary for work"
 },
 {
   "id" : 2,
-  "text" : "I want to go to Africa"
+  "text" : "it is a company order"
 },
 {
   "id" : 3,
-  "text" : "I want to go to Indog"
+  "text" : "I want to improve my career"
+},
+{
+  "id" : 4,
+  "text" : "I want to study abroad"
+},
+{
+  "id" : 5,
+  "text" : "I am interested in Japanese culture"
+},
+{
+  "id" : 6,
+  "text" : "Other"
 },
 ]
 
@@ -3065,10 +3073,10 @@ export const englishLevel = [
 ]
   
 export const japaneseStudyHistory =[
-  {
-    "id" : 0,
-    "text" : "Choose Japanese history"
-  },
+  // {
+  //   "id" : 0,
+  //   "text" : "Choose Japanese history"
+  // },
   {
     "id" : 1,
     "text" : "None"
@@ -3142,5 +3150,32 @@ export const studyDays =[
   {
     "id" : 7,
     "text" : "Sunday"
+  }
+]
+
+export const major =[
+  {
+    "id" : 0,
+    "text" : "Choose your major"
+  },
+  {
+    "id" : 1,
+    "text" : "Foreign language"
+  },
+  {
+    "id" : 2,
+    "text" : "Business Administration"
+  },
+  {
+    "id" : 3,
+    "text" : "other Arts"
+  },
+  {
+    "id" : 4,
+    "text" : "Engineering"
+  },
+  {
+    "id" : 5,
+    "text" : "Other Science"
   }
 ]

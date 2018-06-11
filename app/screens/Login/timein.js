@@ -25,7 +25,7 @@ import {
   
   class TimeScreen extends Component {
     static navigationOptions = {
-      title: 'Create Guest Account',  
+      title: 'Update Study Plan',  
     };
     state = {
       userId : "",
@@ -34,7 +34,7 @@ import {
       latestEducation : "",
       latestEducationName : "",
       major : "",
-      graduationDate : "",
+      graduationYear : "",
       englishLevel : "",
       japaneseType : "",
       japaneseSchoolName : "",
@@ -45,11 +45,14 @@ import {
       studyReason: "Choose your Reason",
       finishDate: "",
       statusDays:false,
+      statusReasons:false,
+      minFinishDate:new Date(),
     }
     constructor(props){
       super(props);
-      this.checkDays = [studyDays.map.length];
-  }
+      this.checkDays = [];
+      this.checkReasons =[];
+    }
 
     componentDidMount() {
       const { navigation } = this.props;
@@ -61,7 +64,7 @@ import {
         latestEducation : navigation.getParam('latestEducation', null),
         latestEducationName : navigation.getParam('latestEducationName', null),
         major : navigation.getParam('major', null),
-        graduationDate : navigation.getParam('graduationDate', null),
+        graduationYear : navigation.getParam('graduationYear', null),
         englishLevel : navigation.getParam('englishLevel', null),
         japaneseType : navigation.getParam('japaneseType', null),
         japaneseSchoolName : navigation.getParam('japaneseSchoolName', null),
@@ -94,8 +97,8 @@ import {
     validation = () => {
       const { studyReason, statusDays, finishDate} = this.state;
       let error = '';
-      if (studyReason == "Choose your Reason") error = "Study reason is required";
-      else if (!statusDays[0] && !statusDays[1] && !statusDays[2] && !statusDays[3]
+      // if (studyReason == "Choose your Reason") error = "Study reason is required";
+       if (!statusDays[0] && !statusDays[1] && !statusDays[2] && !statusDays[3]
         && !statusDays[4] && !statusDays[5] && !statusDays[6]) error = "You need to choose at least 1 day";
       else if (!finishDate) error = "Desired finish date is required";
       if (error) {
@@ -107,7 +110,6 @@ import {
       }
     }
     
-
     render() {
       const { navigation } = this.props;
       return (
@@ -117,14 +119,13 @@ import {
             <View style={styles.contentLoginData}>
               <Text style={styles.textBlue}>Study Plan</Text>
               <Text style={styles.textBlack}>Why you want to study Japanese?</Text>
-              <Picker style={[styles.picker]}
-                style={{ height: 50, width: 250 }}
-                selectedValue = {this.state.studyReason} onValueChange = {this.updateReason}
-              >
-                {studyReasonOption.map((item, key) => (
-                  <Picker.Item label={item.text} value={item.text} key={key} />
-                ))}
-              </Picker>
+              {studyReasonOption.map((item, key)=>(
+                <CheckBox
+                  title={item.text}
+                  checked={this.state.statusReasons[key]}
+                  onPress={(checked) => this.checkReason(key)}
+                />
+              ))}
 
               <Text style={styles.textBlack}>How many times per week?</Text>
               {studyDays.map((item, key)=>(
@@ -138,13 +139,13 @@ import {
             
               <Slider
                 minimumValue = {0.5}
-                maximumValue = {24}
+                maximumValue = {8}
                 step = {0.5}
                 thumbTintColor ='#45b4e7'
                 minimumTrackTintColor = '#45b4e7'
                 maximumTrackTintColor = '#999999'
                 value={this.state.studyHours}
-                onValueChange={(studyHours) => this.setState({studyHours})} 
+                onValueChange={(studyHours) => [this.setState({studyHours}), this.setFinishDate()]} 
               />
               <Text>{this.state.studyHours} Hours</Text>
               <Text style={styles.textBlack}>Until when do you plan to finish your japanese studies?</Text>
@@ -154,7 +155,7 @@ import {
                 mode="date"
                 placeholder="select date"
                 format="YYYY-MM-DD"
-                minDate={new Date()}
+                minDate={this.state.minFinishDate}
                 confirmBtnText="Confirm"
                 cancelBtnText="Cancel"
                 customStyles={{
@@ -173,7 +174,6 @@ import {
               <TouchableOpacity
                 style= {styles.buttonBlue}
                 onPress= {this.saveStudyTime}
-                // onPress= {this.saveStudyTime}
               >
               <Text style={styles.textWhite}>Done</Text>
               </TouchableOpacity>
@@ -203,7 +203,21 @@ import {
           this.checkDays[key] = true;
           this.setState({ statusDays: this.checkDays });
       }
+      this.setFinishDate()
     };
+
+    checkReason(key) {
+      console.log("reason")
+      if(this.checkReason[key]==true){
+          this.checkReason[key] = false;
+          this.setState({ statusReasons: this.checkReason });
+      }
+      else{
+          this.checkReason[key] = true;
+          this.setState({ statusReasons: this.checkReason });
+      }
+    };
+
     combineDays = () =>{
       var test="";
       for(x=0;x<7;x++){
@@ -217,7 +231,30 @@ import {
       } 
       return test;
     }
+
+    setFinishDate(){
+      const totalHours=70;
+      const days = this.countDays();
+      const hours = this.state.studyHours;
+
+      var test= Math.ceil((totalHours/(days * hours)))
+      var today=new Date(); 
+      var minDate=new Date(today.getFullYear(),today.getMonth(),today.getDate()+(test*7))
+      this.setState({ minFinishDate: minDate });
+    }
+
+    countDays(){
+      let totalDays=0;
+      for(x=0;x<7;x++){
+        if(this.checkDays[x] == true){
+          totalDays= totalDays+1
+        }
+      }
+      return totalDays;
+    }
   }
+
+ 
 
   const styles = require('../../styles/style');
   function mapStateToProps(state, props) {

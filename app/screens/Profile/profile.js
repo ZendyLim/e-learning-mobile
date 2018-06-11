@@ -34,7 +34,7 @@ import DatePicker from 'react-native-datepicker';
       latestEducation : "",
       latestEducationName: "",
       major: "",
-      graduationDate: "",
+      graduationYear: "",
       englishLevel: "",
       japaneseType: "",
       japaneseSchoolName : "",
@@ -49,7 +49,7 @@ import DatePicker from 'react-native-datepicker';
           latestEducation: this.props.user.latestEducation,
           latestEducationName: this.props.user.latestEducationName,
           major: this.props.user.major,
-          graduationDate: this.props.user.graduationDate,
+          graduationYear: this.props.user.graduationYear,
           englishLevel: this.props.user.englishLevel,
           japaneseType: this.props.user.japaneseType,
           japaneseSchoolName: this.props.user.japaneseSchoolName,
@@ -84,19 +84,20 @@ import DatePicker from 'react-native-datepicker';
 
     onDateChange = (date) => {
       this.setState({
-        graduationDate: date
+        graduationYear: date
       });
     };
 
     saveUserData = () => {
       var userData = this.state;
-      // userData.graduationDate =this.unixTimeStamps(this.state.graduationDate) ;
+      // userData.graduationYear =this.unixTimeStamps(this.state.graduationYear) ;
       // userData.dateFrom = this.unixTimeStamps(this.state.dateFrom);
       // userData['dateTo'] = this.unixTimeStamps(this.state.dateTo); 
       var newFinish = (new Date(this.state.finishDate));
       var sentParse = {
         data : userData
       }
+      console.log(sentParse,"parse");
       alert("DATA UPDATED");
       this.props.updateProfile(sentParse);
 
@@ -104,7 +105,7 @@ import DatePicker from 'react-native-datepicker';
 
   saveUserDataImage = (image) => {
     var userData = this.state;
-    // userData.graduationDate =this.unixTimeStamps(this.state.graduationDate) ;
+    // userData.graduationYear =this.unixTimeStamps(this.state.graduationYear) ;
     // userData.dateFrom = this.unixTimeStamps(this.state.dateFrom);
     // userData['dateTo'] = this.unixTimeStamps(this.state.dateTo); 
     var sentParse = {
@@ -165,7 +166,7 @@ import DatePicker from 'react-native-datepicker';
               <Text style={styles.userProfileLabelChild}>Graduation Year</Text>
               <DatePicker
                 style={{width: 100}}
-                date={this.state.graduationDate}
+                date={this.state.graduationYear}
                 mode="date"
                 placeholder="select date"
                 format="YYYY-MM"

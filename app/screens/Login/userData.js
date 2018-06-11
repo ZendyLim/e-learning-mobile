@@ -16,7 +16,7 @@ import {
     Image
   } from 'react-native';
   import { List, ListItem } from 'react-native-elements';
-  import { latestEducation, englishLevel, japaneseStudyHistory } from '../../config/data';
+  import { latestEducation, englishLevel, japaneseStudyHistory, major } from '../../config/data';
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import * as Actions from '../../actions/user'; //Import your actions
@@ -25,7 +25,7 @@ import {
   
   class UserDataScreen extends Component {
     static navigationOptions = {
-      title: 'Create Guest Account',
+      title: 'Update Education History',
     };
     state = {
       userId : "",
@@ -34,9 +34,9 @@ import {
       latestEducation : "Choose latest education",
       latestEducationName: "",
       major: "",
-      graduationDate: "",
+      graduationYear: "",
       englishLevel: "Choose english level",
-      japaneseType: "",
+      japaneseType: "None",
       japaneseSchoolName : "",
       dateFrom:"",
       dateTo:"",
@@ -44,15 +44,20 @@ import {
     }
     
     validation () {
-        const { latestEducation, latestEducationName, major, graduationDate, englishLevel, 
+        const { latestEducation, latestEducationName, major, graduationYear, englishLevel, 
             japaneseType, japaneseSchoolName, dateFrom, dateTo} = this.state;
         let error = '';
         console.log(latestEducation,"latest")
         if (latestEducation == "Choose latest education") error = "Latest Education is required";
         else if (!latestEducationName) error = "School / University name is required";
         else if (latestEducation == "University" && !major) error = "Major is required";
-        else if (!graduationDate) error = "Graduation date is required";
+        else if (!graduationYear) error = "Graduation year is required";
         else if (englishLevel == "Choose english level") error = "English level is required";
+        if(japaneseType !="None"){
+            if(!dateFrom) error ="Date From is required";
+            else if(!dateTo) error = "Date to is required";
+            else if(dateTo <= dateFrom) error = "Date From Cannot < than date to";
+        }
         if (error) {
           Alert.alert('Warning', error);
           return true; 
@@ -80,7 +85,7 @@ import {
 
     onDateChange = (date) => {
         this.setState({
-            graduationDate: date,
+            graduationYear: date,
         });
     };
 
@@ -103,6 +108,9 @@ import {
       }
     updateJapaneseType = (japaneseTypeUpdate) => {
         this.setState({ japaneseType: japaneseTypeUpdate })
+    }
+    updateMajor = (majorUpdate) => {
+        this.setState({ major: majorUpdate })
     }
     
     render() {
@@ -128,14 +136,20 @@ import {
                     />
 
                     <Text style={styles.textBlue}>Major</Text>
-                    <TextInput style={{height: 40, borderColor: 'gray'}}
-                        onChangeText={(major) => this.setState({major})}
-                        value={this.state.major}
-                    />
-                    <Text style={styles.textBlue}>Graduation date</Text>
+                    <Picker style={[styles.picker]}
+                        style={{ height: 50, width: 200 }}
+                        selectedValue = {this.state.major} onValueChange = {this.updateMajor}
+                    >
+                        {major.map((item, key) => (
+                        <Picker.Item label={item.text} value={item.text} key={key} />
+                        ))}
+                    </Picker>
+
+                    <Text style={styles.textBlue}>Graduation Year</Text>
                     <DatePicker
                     style={{width: 130}}
-                    date={this.state.graduationDate}
+                    date={this.state.graduationYear}
+                    androidMode="spinner"
                     mode="date"
                     placeholder="select date"
                     format="YYYY-MM"
@@ -174,17 +188,13 @@ import {
                         ))}
                     </Picker>
                             
-                    <Text style={styles.textBlue}>Japanese school name</Text>
-                    <TextInput style={{height: 40, borderColor: 'gray'}}
-                        onChangeText={(japaneseSchoolName) => this.setState({japaneseSchoolName})}
-                        value={this.state.japaneseSchoolName}
-                    />
                     <View style={styles.flexRow}>
                         <View style={styles.flex1}>
                             <Text style={styles.textBlue}>From</Text>
                             <DatePicker
                                 style={{width: 130}}
                                 date={this.state.dateFrom}
+                                androidMode="spinner"
                                 mode="date"
                                 placeholder="select date"
                                 format="YYYY-MM"
@@ -209,6 +219,7 @@ import {
                             <DatePicker
                                 style={{width: 130}}
                                 date={this.state.dateTo}
+                                androidMode="spinner"
                                 mode="date"
                                 placeholder="select date"
                                 format="YYYY-MM"

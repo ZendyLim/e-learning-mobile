@@ -23,7 +23,7 @@ import {
   
   class UsernameScreen extends Component {
     static navigationOptions = {
-      title: 'Create Guest Account',
+      title: 'Sign In',
     };
     state = {
       userId: "",
