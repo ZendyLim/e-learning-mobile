@@ -30,17 +30,11 @@ class StudyListScreen extends Component {
   };
   constructor() {
     super();
-    this._onSetLanguageTo('en');
-  }
-  _onSetLanguageTo(value) {
-    strings.setLanguage(value);
-    //this.setState({});
   }
 
   setModalVisible(visible) {
     this.setState({modalVisible: visible});
   }
-
   lockedMessage=(item, index)=>{
     alert('locked ' + strings[item.title]);     
   }
@@ -72,10 +66,16 @@ class StudyListScreen extends Component {
     header: null,
     // title: 'Study',
   };
-
+  _onSetLanguageTo = (value) => {
+    if(value){
+      strings.setLanguage(value);
+    }else{
+      strings.setLanguage('en');
+    }
+  }
   render() {
     var image = '';
-    console.log(this.props.fukushu);
+    this._onSetLanguageTo(this.props.lang);
     return (
       <ScrollView style={study.StudyContainer}>
 
@@ -126,6 +126,7 @@ const study = require('../../styles/study');
 function mapStateToProps(state, props) {
   return {
       fukushu: state.study.fukushu,
+      lang : state.user.lang
   }
 }
 

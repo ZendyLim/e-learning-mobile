@@ -12,6 +12,7 @@ import {
   View,
   Alert,
   TouchableOpacity,
+  TouchableHighlight
 } from 'react-native';
 
 import RNSketchCanvas from '@terrylinla/react-native-sketch-canvas';
@@ -150,8 +151,6 @@ export default class HL4 extends Component {
             check += 1;
           }
         }
-        console.log(check/count,"persent");
-
         if(check == 0){
           return false;
         }else{
@@ -205,7 +204,14 @@ export default class HL4 extends Component {
                   </View>
               </View>
               <View style={{ flex: 1, flexDirection: 'row' }}>
-                <Text>dasda</Text>
+                <TouchableHighlight><Text>HIRAGANA</Text></TouchableHighlight>
+                <TouchableHighlight><Text>KATAKANA</Text></TouchableHighlight>
+                <TouchableHighlight><Text>RESET</Text></TouchableHighlight>
+              </View>
+              <View style={{ flex: 1, flexDirection: 'row' }}>
+                <TouchableHighlight><Text>NEXT</Text></TouchableHighlight>
+                <TouchableHighlight><Text>RANDOM</Text></TouchableHighlight>
+                <TouchableHighlight><Text>HOME</Text></TouchableHighlight>
               </View>
           </View>
         );
