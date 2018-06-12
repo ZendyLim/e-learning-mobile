@@ -10,7 +10,7 @@ export function countScore(studyRecord,quizItems = 0) {
         }        
         countQuest += pointsList[studyRecord[i].type];
     }
-
+    
     if(quizItems){
         countQuest = 100;
     }

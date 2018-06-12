@@ -229,7 +229,7 @@ import {
       this.setInitial();
       
       this.setListQuestion();
-            
+
       this.setDefinedQuestion(idList);
 
       if(!this.quizItems){
@@ -585,8 +585,8 @@ import {
       paramFormat.format = quizFormat;
     
       if(this.initialParams.isTopicTest){
-        //paramFormat.time = 900000; //15mins
-        paramFormat.time = 5000; //15mins
+        paramFormat.time = 900000; //15mins
+        //paramFormat.time = 5000; //15mins
       }
       else{
         paramFormat.time = time;
@@ -672,9 +672,15 @@ import {
 
     setStartQuiz = () =>  {
       const { navigation } = this.props;
+      let quizSizes = 0;
+
       this.reduxParam = this.setSentParamStart(navigation.getParam('index', null), navigation.getParam('categoryId', null), navigation.getParam('type', null));
 
-      this.props.startLearn(this.state.studyType, this.startTime,this.title, this.allQuestion.length); //call our action
+      if(this.isTopicTest){
+        quizSizes = this.allQuestion.length;
+      }
+      
+      this.props.startLearn(this.state.studyType, this.startTime,this.title, quizSizes); //call our action
     }
 
     setTakeQuiz = () =>  {       

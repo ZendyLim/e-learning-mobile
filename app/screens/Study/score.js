@@ -143,7 +143,7 @@ import {
     )
 };
   render() {
-    console.log(this.props.studyRecord,'ss');
+    
     return (
         <View style={scoreStyle.scoreContainer}>
           <View style={ scoreStyle.containerTitle }>
