@@ -121,7 +121,6 @@ class HiraganaListScreen extends Component {
     
     if(this.props.quiz){
       var quiz = this.props.quiz;
-
       return Helper.countScore(quiz) + '/100';
     }else{
       return '0/100';

@@ -109,6 +109,14 @@ import {
         showCorrect:false 
       }
 
+      this.testItemCount = {
+        vocabulary: 10,
+        kanji: 10,
+        grammar: 15,
+        reading: 10,
+        listening: 10
+      }
+
       this.state = this.initialState;
      
       this._onSetLanguageTo('en');      
@@ -153,6 +161,8 @@ import {
                     onRestart={this.onRestart}
                     timeStops={this.setTimeStops}
                     timerResume={this.timerResume}
+                    isTopicTest={this.initialParams.isTopicTest}
+                    onTestEnd={this.onTestEnd}
                   />
                 }
               </View>
@@ -222,8 +232,8 @@ import {
 
       this.setInitial();
       
-      this.setListQuestion()
-      
+      this.setListQuestion();
+            
       this.setDefinedQuestion(idList);
 
       if(!this.quizItems){
@@ -298,13 +308,28 @@ import {
     setListQuestion(){
       if(this.initialParams.isTopicTest){
         topics = ['vocabulary', 'grammar', 'kanji'];
+        currentItems = [];
+
         for(i = 0; i < topics.length; i++){
           
           tempQuiz = quizItems[this.initialParams.studyType + '_and_' + topics[i]];
           this.byCategory[topics[i]] = tempQuiz;
-          for(a = 0; a < tempQuiz.length; a++){
-            this.quizItems.push(tempQuiz[a]);
+                  
+          for(c = 0; c < this.testItemCount[topics[i]]; c++){
+            randomItem = '';
+
+            while(!randomItem){
+              randomIndex = Math.floor(Math.random() * tempQuiz.length);
+              if(currentItems.indexOf(tempQuiz[randomIndex].id) > -1) continue;
+              
+                currentItems[currentItems.length] = tempQuiz[randomIndex].id;
+                randomItem = tempQuiz[randomIndex];     
+                this.quizItems.push(randomItem);
+            }
           }
+          
+
+          
         }
       }
       else{
@@ -562,18 +587,26 @@ import {
       }
 
       paramFormat.format = quizFormat;
-      paramFormat.time = time;
+    
+      if(this.initialParams.isTopicTest){
+        //paramFormat.time = 900000; //15mins
+        paramFormat.time = 5000; //15mins
+      }
+      else{
+        paramFormat.time = time;
+      }
+
       return paramFormat;
     }
 
-    setNextQuestion() {
+    setNextQuestion(forceEnd = 0) {
       
       const counter = this.state.counter + 1;      
       
       if(this.mounted){
         this.setTakeQuiz();
 
-        if(counter < this.allQuestion.length){
+        if(counter < this.allQuestion.length && !forceEnd){
           this.showCorrect = false;
           this.timeStops = 0;
           this.currentQuestion = this.allQuestion[counter];
@@ -644,7 +677,8 @@ import {
     setStartQuiz = () =>  {
       const { navigation } = this.props;
       this.reduxParam = this.setSentParamStart(navigation.getParam('index', null), navigation.getParam('categoryId', null), navigation.getParam('type', null));
-      this.props.startLearn(this.state.studyType, this.startTime,this.title); //call our action
+
+      this.props.startLearn(this.state.studyType, this.startTime,this.title, this.allQuestion.length); //call our action
     }
 
     setTakeQuiz = () =>  {       
@@ -659,7 +693,7 @@ import {
             type: this.state.question.type,
             correctTitle: this.stripSpace(correctTitle)
       }
-
+      
       this.studyRecord[this.studyRecord.length] = parseValue;
       
       this.props.takeQuiz(parseValue); //call our action
@@ -671,8 +705,7 @@ import {
       var parseValue = this.reduxParam;
             
       parseValue['finishTime'] = endTime;
-      parseValue['quizData'] = this.studyRecord;
-      
+      parseValue['quizData'] = this.studyRecord;            
       this.props.endLearn(parseValue); //call our action
   };
 
@@ -701,6 +734,10 @@ import {
       }
       
     };
+
+    onTestEnd = (val) => {      
+      this.setNextQuestion(val);
+    }
 
     setTimeStops = (time) => {
       this.timeStops = time;
