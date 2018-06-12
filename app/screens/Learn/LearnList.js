@@ -20,8 +20,12 @@ class LearnListScreen extends Component {
   constructor() {
     super();
   }
-  static navigationOptions = {
-    title: 'Learn',
+  static navigationOptions = ({ navigation }) =>{
+    //header: null,
+    const {state} = navigation;
+    return {
+      title: `${strings['TITLE_LEARN']}`,
+    };
   };
   state = {
     title:"",
