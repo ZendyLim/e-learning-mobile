@@ -18,7 +18,7 @@ import { List, ListItem } from 'react-native-elements';
 class mainSettings extends Component {
     render() {
         return (
-            <View></View>
+            <View>Setting</View>
         )}   
     
 }

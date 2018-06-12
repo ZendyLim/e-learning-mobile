@@ -21,11 +21,7 @@ import { ImageData } from '../../config/image_list';
 class SummaryLearnDetail extends Component {
   constructor() {
     super();
-    this._onSetLanguageTo('en');
   }
-  _onSetLanguageTo(value) {
-    strings.setLanguage(value);
-  } 
   static navigationOptions = {
     title: 'Learn',
   };

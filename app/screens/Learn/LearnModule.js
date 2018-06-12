@@ -32,15 +32,16 @@ import LearnGBK01Screen from '../Learn/LearnGBK01';
 class LearnHiraganaModule extends Component {
   constructor(props) {
     super(props);
-    this._onSetLanguageTo('en');
   }
-  _onSetLanguageTo(value) {
-    strings.setLanguage(value);
-  } 
-  static navigationOptions = {
-    title: 'Learn',
-    swipeEnabled: false
+  static navigationOptions = ({ navigation }) =>{
+    //header: null,
+    const {state} = navigation;
+    return {
+      title: `${strings['TITLE_LEARN']}`,
+      swipeEnabled: false
+    };
   };
+
   state = {
     index: "",
     title:"",
@@ -112,7 +113,7 @@ class LearnHiraganaModule extends Component {
                     <SL2Screen />        
                 );            
             }
-        }else if(this.state.type == 'HL3' || this.state.type == 'GL3'  || this.state.type == 'KL3' || this.state.type == 'BL3' ){
+        }else if(this.state.type == 'HL3' || this.state.type == 'GL2'  || this.state.type == 'KL2' || this.state.type == 'BL2' ){
             if(this.state.title == "FLASH_CARD_HIRAGANA" || this.state.title == 'FLASH_CARD_KATAKANA'){
                 return (
                     <LearningModule navigation={this.props.navigation} title={ this.state.title } goBack={this}/>     
@@ -123,7 +124,13 @@ class LearnHiraganaModule extends Component {
                 );        
     
             }
-        }else if(this.state.type == 'HL4'){
+        }if( this.state.type == 'GL3'  || this.state.type == 'KL3' || this.state.type == 'BL3' ){
+                return (
+                   // <LearningModule navigation={this.props.navigation} title={ this.state.studyType }  goBack={this}/>     
+                   <Text>New</Text>
+                );            
+        }   
+        else if(this.state.type == 'HL4'){
             return (
                 <HL4 />        
             );        

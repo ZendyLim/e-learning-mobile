@@ -46,6 +46,7 @@ import KatakanaLearnScreen from '../screens/Learn/katakanalearn';
 import SummaryTopicList from '../screens/Summary/studyPick';
 import SummaryLearnDetail from '../screens/Summary/summaryLearn';
 import reviewScreen from '../screens/Summary/reviewSummary';
+import mainSettings from '../screens/Setting/mainsetting';
 
 
 const styles = require('../styles/style');
@@ -95,7 +96,8 @@ const SettingStack = StackNavigator({
 });
 
 const ProfileStack = StackNavigator({
-    ProfileMain: ProfileScreen
+    ProfileMain: ProfileScreen,
+    MainSettingScreen : mainSettings
 });
 // const QuizHiraganaListStack = StackNavigator({
 //     QuizHiraganaList: QuizHiraganaListScreen

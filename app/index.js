@@ -38,7 +38,7 @@ const Root =  SwitchNavigator(
 class App extends Component {
   render() {
       return (
-        //<HL4 />
+        // <HL4 />
         <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
               <Root />
