@@ -13,12 +13,11 @@ import {
     Platform,
   } from 'react-native';
   import { List, ListItem, Icon } from 'react-native-elements';
-  
+  import  { strings }   from '../../config/localization';
   import { TabNavigator, StackNavigator } from 'react-navigation';
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import { HiraganaLearnStack }  from '../../config/router';
-  // import { hiraganalearn } from '../../config/hiraganalearn'
   import { hiraganaList, katakanaList } from '../../config/data'
   import * as Actions from '../../actions/user'; //Import your actions
 
@@ -79,11 +78,13 @@ function playSound(testInfo, component) {
 
   export class HiraganaLearnScreen extends Component {
 
-    static navigationOptions = {
-        // header: null,
-        // title: 'LearnHL1',
-        tabBarLabel: 'Hiragana',
+    static navigationOptions = ({ navigation }) => {
+    const {state} = navigation;
+      return {
+        title: `${strings['HIRAGANA_LIST_TITLE']}`,
       };
+    swipeEnabled: false
+    };
 
     constructor(props) {
       super(props);

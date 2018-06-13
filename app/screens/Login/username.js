@@ -19,11 +19,12 @@ import {
   import { connect } from 'react-redux';
   import * as Actions from '../../actions/user'; //Import your actions
   import {isLogin} from '../../reducers/user';
+  import  { strings }   from '../../config/localization';
   
   
   class UsernameScreen extends Component {
     static navigationOptions = {
-      title: 'Create Guest Account',
+      title: strings['SIGN_IN'],
     };
     state = {
       userId: "",
@@ -56,12 +57,12 @@ import {
       return (
         <View style={styles.containerWhiteTop}>
           <View style={styles.contentPadding10}>
-            <Text style={styles.textBlue}>Username</Text>
+            <Text style={styles.textBlue}>{strings['SIGN_IN_USERNAME']}</Text>
             <TextInput style={{height: 40, borderColor: 'gray'}}
               onChangeText={(username) => this.setState({username})}
               value={this.state.username}
             />
-            <Text style={styles.textBlue}>Password</Text>
+            <Text style={styles.textBlue}>{strings['SIGN_IN_PASSWORD']}</Text>
             <TextInput secureTextEntry={true} style={{height: 40, borderColor: 'gray'}}
               onChangeText={(password) => this.setState({password})}
               value={this.state.password}
@@ -70,11 +71,11 @@ import {
               style={styles.buttonBlue}
               onPress={this.signIn}
             >
-            <Text style={styles.textWhite}>Sign In</Text>
+            <Text style={styles.textWhite}>{strings['SIGN_IN']}</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.characterChatContainer}>
-            <Text>Input your username and password</Text>
+            <Text>{strings['SIGN_IN_MESSAGE']}</Text>
           </View>
           <Image
           style={styles.characterFixLogin}
@@ -93,14 +94,13 @@ import {
             this.props.navigation.navigate('UserData',(this.state));
           }
         });
-      }
-     
+      }    
     };
 
 
     checkUserValid= (data) => {
       let error = '';
-      if(data.success==false) error ="Username and password is wrong";
+      if(data.success==false) error = strings['SIGN_IN_VALIDATION_FAILED'];
       if (error) {
         Alert.alert('Warning', error);
         return true; 
@@ -113,12 +113,8 @@ import {
     validation = () => {
       const { username, password} = this.state;
       let error = '';
-      if (!username) error = "User name is required";
-      else if (!password) error = "Password is required";
-      // else if(data.success==false) error ="Username and password is wrong";
-      // else if (userPass.length < 6) error = "Password at least contain 6 character"; 
-      // else if (!userPassConfirm) error = "Confirm password is required";
-      // else if (userPass != userPassConfirm) error = "Password is not same";
+      if (!username) error = strings['SIGN_IN_VALIDATION_USERNAME'];
+      else if (!password) error = strings['SIGN_IN_VALIDATION_PASSWORD'];
       if (error) {
         Alert.alert('Warning', error);
         return true; 
