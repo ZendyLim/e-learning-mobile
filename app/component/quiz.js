@@ -33,20 +33,25 @@ class Quiz extends Component {
   _renderAnswerButtons(){
     fill = ['audio_fill','english_fill','kanji_fill','arrange'];
     this.isFill = fill.indexOf(this.props.format) > -1;
-
+    
     if(this.props.format == 'fill'){
-        return(
-            <View style={ [styles.displayInlineContainer, styles.answerContainer] }>
-                <FillBlank
-                    textDisplay={ this.props.question[this.props.displayFormat] }
-                    onSelectAnswer={ this.onFilled }
-                    isCorrect={ this.checkFilled() }
-                    extraChar={ this.extraChar }
-                    reset={ this.state.reset }
-                    format={ this.props.format }
-                />
-            </View>
-        );
+        textDisplay = this.props.question[this.props.displayFormat].split(' ');  
+
+        if(textDisplay.length > 1){
+            return(
+                <View style={ [styles.displayInlineContainer, styles.answerContainer] }>
+                    <FillBlank
+                        textDisplay={ this.props.question[this.props.displayFormat] }
+                        onSelectAnswer={ this.onFilled }
+                        isCorrect={ this.checkFilled() }
+                        extraChar={ this.extraChar }
+                        reset={ this.state.reset }
+                        format={ this.props.format }
+                    />
+                </View>
+            );    
+        }
+        
     }
     else if(this.isFill){      
         //console.log(this.props.question);

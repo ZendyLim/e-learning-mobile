@@ -143,7 +143,7 @@ import {
     )
 };
   render() {
-    console.log(this.props.studyRecord,'ss');
+    
     return (
         <View style={scoreStyle.scoreContainer}>
           <View style={ scoreStyle.containerTitle }>
@@ -245,7 +245,8 @@ const study = require('../../styles/study');
 // and insert/links it into the props of our component.
 // This function makes Redux know that this component needs to be passed a piece of the state
 function mapStateToProps(state, props) {
-  const score = Helper.countScore(state.study.studyRecord);
+
+  const score = Helper.countScore(state.study.studyRecord,state.study.quizSize);
 
   return {
       StudentID: state.user.user.id,
