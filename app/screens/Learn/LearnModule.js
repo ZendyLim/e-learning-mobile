@@ -91,7 +91,7 @@ class LearnHiraganaModule extends Component {
         if(this.state.type == 'HL1'){
             if(this.state.studyType == 'HIRAGANA_TITLE'){
                 return (
-                    <HiraganaLearnStack />        
+                    <HiraganaLearnStack />  
                 );            
             }else if(this.state.studyType == 'NUMBER_TITLE'){
                 return (
