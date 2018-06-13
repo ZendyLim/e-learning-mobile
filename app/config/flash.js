@@ -837,7 +837,6 @@ export const flashData = [
         "title":"pyo",
       }
     ],
-
     FLASH_CARD_KATAKANA : [
       //SeiOn
       {
@@ -1675,7 +1674,6 @@ export const flashData = [
         "title":"pyo",
       }
     ],
-
     NUMBER_TITLE : [
       //SeiOn
       {   
@@ -1819,50 +1817,316 @@ export const flashData = [
       {
         "id"    : "1v_a",
         "type"  : "vocab",
-        "romaji": "Kazoku",
+        "romaji": "you",
+        "moji"  : "あなた",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "America/U.S.A.",
+        "moji"  : "アメリカ",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "No./Don't mention it./No problem",
+        "moji"  : "いいえ",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "how many",
+        "moji"  : "いくつ",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "how much",
+        "moji"  : "いくら",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Indonesia",
+        "moji"  : "インドネシア",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "English language",
+        "moji"  : "えいご",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "engineer",
+        "moji"  : "エンジニア",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "green tea",
+        "moji"  : "おちゃ",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Man",
+        "moji"  : "おとこ",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Woman",
+        "moji"  : "おんな",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "foreign country",
+        "moji"  : "がいこく",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Company",
+        "moji"  : "かいしゃ",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "business person",
+        "moji"  : "かいしゃいん",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "",
+        "moji"  : "",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Student",
+        "moji"  : "がくせい",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Family",
         "moji"  : "かぞく",
         "url"   : ""
       }, 
       {
         "id"    : "1v_a",
         "type"  : "vocab",
-        "romaji": "Okaasan",
-        "moji"  : "おかあさん",
+        "romaji": "School",
+        "moji"  : "がっこう",
         "url"   : ""
       }, 
       {
         "id"    : "1v_a",
         "type"  : "vocab",
-        "romaji": "Otousan",
-        "moji"  : "おとうさん",
+        "romaji": "bag, basket",
+        "moji"  : "かばん",
         "url"   : ""
       }, 
       {
         "id"    : "1v_a",
         "type"  : "vocab",
-        "romaji": "Oniisan",
-        "moji"  : "おにいさん",
+        "romaji": "Tuesday",
+        "moji"  : "かようび",
         "url"   : ""
       }, 
       {
         "id"    : "1v_a",
         "type"  : "vocab",
-        "romaji": "Oneesan",
-        "moji"  : "おねえさん",
+        "romaji": "teacher",
+        "moji"  : "きょうし",
         "url"   : ""
       }, 
       {
         "id"    : "1v_a",
         "type"  : "vocab",
-        "romaji": "Imouto",
-        "moji"  : "いもうと",
+        "romaji": "Friday",
+        "moji"  : "きんようび",
         "url"   : ""
       }, 
       {
         "id"    : "1v_a",
         "type"  : "vocab",
-        "romaji": "Otouto",
-        "moji"  : "おとうと",
+        "romaji": "Country",
+        "moji"  : "くに",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "car, vehicle",
+        "moji"  : "くるま",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Monday",
+        "moji"  : "げつようび",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "language identifier",
+        "moji"  : "～ご",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Job",
+        "moji"  : "しごと",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Dictionary",
+        "moji"  : "じしょ",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "company employee",
+        "moji"  : "しゃいん",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "nationality, race",
+        "moji"  : "～じん",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Wednesday",
+        "moji"  : "すいようび",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "teacher, doctor",
+        "moji"  : "せんせい",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "university",
+        "moji"  : "だいがく",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "who",
+        "moji"  : "だれ",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "birthday",
+        "moji"  : "たんじょうび",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "China",
+        "moji"  : "ちゅうごく",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "to be able to",
+        "moji"  : "できます",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "where",
+        "moji"  : "どこ／どちら",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "Saturday",
+        "moji"  : "どようび",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "what",
+        "moji"  : "なに／なん",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "name",
+        "moji"  : "なまえ",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "",
+        "moji"  : "にちようび",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "",
+        "moji"  : "",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "",
+        "moji"  : "",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1v_a",
+        "type"  : "vocab",
+        "romaji": "",
+        "moji"  : "",
         "url"   : ""
       }, 
     ], 
@@ -1870,31 +2134,66 @@ export const flashData = [
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "Desu",
-        "moji"  : "です",
+        "romaji": '「です」 is the Japanese copula that links the subject and predicate. \n In English, it is usually translated as "to be" or "it is" \n 「は」is the particle that marks the topic of the sentence.',
+        "moji"  : "N1　は　N2　です",
         "url"   : ""
       }, 
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "Imasu",
-        "moji"  : "います",
+        "romaji": "「N+じゃありません」 is the negative form of 「です」.\n「じゃ」 is the shorten form 「では」which is often used in semi-casual conversations.\n「は」is the particle that marks the topic of the sentence.",
+        "moji"  : "N1　は　N2　じゃ/では　ありません",
         "url"   : ""
       }, 
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "No",
-        "moji"  : "の",
+        "romaji": '「です+か」 the addition of 「か」transforms a sentence into the interrogative or question form.\n「は」is the particle that marks the topic of the sentence.',
+        "moji"  : "N1　は　N2　ですか",
         "url"   : ""
       }, 
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "Ha",
-        "moji"  : "は",
+        "romaji": '「わかります」 is affirmative form of "understand".\n「が」is the particle that marks the subject of the sentence.',
+        "moji"  : "N1　は　N2　がわかります",
+        "url"   : ""
+      },  
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": '「わかりません」is negative form of "understand".\n「が」is the particle that marks the subject of the sentence.',
+        "moji"  : "N1　は　N2　がわかりません",
+        "url"   : ""
+      },  
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": '「わかりますか」 is interrogative form of "understand".\n「が」is the particle that marks the subject of the sentence.',
+        "moji"  : "N1　は　N2　がわかりますか",
         "url"   : ""
       }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": 'も is used to mark another noun instead of は when the established or declared statement is also true for it.',
+        "moji"  : "N　も",
+        "url"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": '①N1 is part of (a subset) N2. \n②N1 explains or defines what N2 is about.\n③「の」as a particle denoting possession would mean N1 owns N2.\n④「の」as a modifier (functions as an adjective)would mean N2 is made in N1(Place).',
+        "moji"  : "N1　の　N2",
+        "url"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": '「できます is the verb which expresses capability to do something.\n「できません」is the negative form of「できます」.',
+        "moji"  : "N　が　できます",
+        "url"   : ""
+      },
     ], 
     TOPIC1_TITLE_and_kanji : [
       {
@@ -1988,17 +2287,73 @@ export const flashData = [
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "Done in the same way as A",
-        "moji"  : "A のように",
+        "romaji": "A verb with ます works as a predicate.\nます is used when a sentence expresses a habitual thing or a truth. It is also when a sentence expresses a thing that will occur in the future. The negative form is ません.\n「を」 is a particle that marks the direct object of a transitive verb.",
+        "moji"  : "N　を　V　ます",
         "url"   : ""
       }, 
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "a B like/similar to A",
-        "moji"  : "A のような B",
+        "romaji": "「へ」is a particle that denotes movement to a destination, it immediately follows a place or direction and a verb that indicates movement (ex.いきます、きます、かえります) is placed after it.",
+        "moji"  : "N（place）へ",
         "url"   : ""
       }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "「で」marks the place where an action occurs.",
+        "moji"  : "N（place）で",
+        "url"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "When a verb denotes a momentary action or movement, in a certain period of time, it is marked with the particle 「に」.",
+        "moji"  : "N（time）に",
+        "url"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "「から」marks the starting point of time or distance, 「まで」marks the endpoint of time or distance.",
+        "moji"  : "Nから　Nまで",
+        "url"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "The particle「で」denotes a method or a mean to preform an action.",
+        "moji"  : "N（tool）で",
+        "url"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "①The particle「と」is used to connects two nouns.\n②「と」is also used when an action is done together with another person.",
+        "moji"  : "Nと",
+        "url"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "This grammatical patern is used to list and connect nouns that are related by inserting the particle「や」in between nouns. Sometimes「など」is placed after the last noun to explicitly express that there are also some other things related to that noun. While「と」enumerates all specific items, 「や」is a loose enumeration of items.",
+        "moji"  : "NやNなど",
+        "url"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": '「どこか」denotes the question "where" (somewhere), 「何か」denotes the question "what" (something), 「だれか」denotes the question "who/whom" (someone/somebody).',
+        "moji"  : "＜疑問詞＞＋か",
+        "url"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "When an interrogative word if followed by the particle「も」and the verb following it is in negative form, it denotes abstinence in doing the verb.",
+        "moji"  : "＜疑問詞＞＋も＋否定",
+        "url"   : ""
+      },
     ], 
     TOPIC2_TITLE_and_kanji : [
       {
@@ -2092,8 +2447,50 @@ export const flashData = [
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "I'm playing A",
-        "moji"  : "Aをします",
+        "romaji": 'In Japanese, adjectives are used as 1)predicates and 2)noun modifiers. According to the inflection, adjectives are devide into two groups, い-adjectives and な-adjectives.\n①NはAです\nAn い-adj usually ends with い then です, while a な-adj doesn\'t have to end with an い and な is added before です.\n②Nはい-adj（～い）くないです\nThe negative form of い-adj is formed by replacing the last い with くand adding ない at the end, making it ~くないです。\n③Nはな-adjじゃありません\nThe negative form of な-adj です is formed by adding ~じゃありません at the end.\n④い-adj（～い）＋N、な-adjな＋N\nAn adjective is placed before a noun to modify it. For な-adj, an additional な must be placed before the noun it modifies.',
+        "moji"  : "形容詞",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "This grammartical pattern is used to compare N1 against N2. N1 being lesser in degree or N2 being geater in degree in terms of adjective A",
+        "moji"  : "N1　は　N2　より　A　です",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "どちら denotes a question of comparison between N1 and N2 in terms of adjective A.",
+        "moji"  : "N1と　N2と、どちらが　A　ですか",
+        "url"   : ""
+      },
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "In this sentence pattern, N2 is part of set N1 and is declared as the most favorable choice in terms of ajective A.",
+        "moji"  : "N1（のなか）で　N2が　一番　A　です",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "To indicate the existence or presence of a thing or person this sentence pattern is used. The particle が is used to mark the thing(s) or person(s) in the sentence which are treated as the subject.\n・あります is used for inanimate or things that do not move by itself. Things, plants and places belong to this category.\n・For animate and things that move by itself, います is used. People and animals belong to this category. \n・When it is a place then it is indicated by the particle に.\n・N1(thing, person, place) の N2(position)",
+        "moji"  : "います/あります",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "The past tense form of a verb is formed by changing the end of the verb into ました, and the negative form of it is ませんでした.A",
+        "moji"  : "動詞過去形",
+        "url"   : ""
+      },  
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": 'There are two Japanese verbs forgiving. Deciding which one to use depends on the direction of the transaction. Imagine that you are in a set of concentric spheres of relative psychological distances, with X at the center, you next to X, and all the others are on the edge. When an item moves away from the center, the verb あげます is used to describe the transaction. When a thing moves toward the center, the verb we use is くれます.\nIn the case of あげます and くれます, the giver is the subject of the sentence, and the particle は or が is placed next to the subject while the recipient is accompanied by the particle に.\nIf thetransaction is described with the verb くれます, it can also be described in terms of "receiving" or もらいます. For もらいます, the recipient is the subject of the sentence, marked with は or が, and the giver is accompanied by the particle に or から.',
+        "moji"  : "あげもらい",
         "url"   : ""
       }, 
     ], 
@@ -2134,7 +2531,6 @@ export const flashData = [
         "url"   : ""
       }, 
     ],
-
     TOPIC4_TITLE_and_vocabulary : [
       {
         "id"    : "1v_a",
@@ -2198,11 +2594,52 @@ export const flashData = [
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "A is B",
-        "moji"  : "AはBです",
+        "romaji": "In this sentence partern, いきます、きます、かえります are used to expresse purpose. The purpose is marked with the particle に. The noun before に is denotes an action.",
+        "moji"  : "Ｎ(place)　へ　Ｖます形／Ｎ　＋　に行きます／来ます／帰ります",
         "url"   : ""
       }, 
-      
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "ませんか is used when you want to invite someone to do something.",
+        "moji"  : "Ｖます＋ませんか",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "ましょうか is used when a speaker is positively inviting the listener to do something together. It is also used as a positive response to an invitation.",
+        "moji"  : "Vます＋ましょう",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "This expression is used to express frequency in doing something.",
+        "moji"  : "期間に～回～ます",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "This sentence partern expresses the speaker's desire to do something. It can also be used to ask what the listener wants to do. In this expression, the particle が can be used to replace the particle を. Other particles cannot be replaced by が. In addition, ～たいです inflects as an い-adjective.",
+        "moji"  : "Ｖます＋たいです",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "・Past tense form of い-adjectives\nAffirmative　～いです→～かったです\nNegative 　～くないです→～くなかったです\n・Past tense form of nouns and な-adjectives\nAffirmative　～です→～でした\nNegative 　～じゃありません→～じゃありませんでした",
+        "moji"  : "形容詞・名詞　過去形",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "から can be used to express reason or causality between two sentences or phrases. S1 is the reason or cause for S2. The interrogative どうして is used to ask for a reason or cause.",
+        "moji"  : "S1　から　S2",
+        "url"   : ""
+      },
     ], 
     TOPIC4_TITLE_and_kanji : [
       {
@@ -2380,15 +2817,43 @@ export const flashData = [
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "to be",
-        "moji"  : "だ・です",
+        "romaji": "The verb and adjectives whose objects are marked with が are those kinds that describe preference, ability, possession, the like, desire.",
+        "moji"  : "Nが　好きです／ほしいです",
         "url"   : ""
       }, 
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "Used to be (past)",
-        "moji"  : "だった・でした",
+        "romaji": '①Verb conjugation\nVerb in Japanese change their forms,i.e., they conjugate, and they are divided into three groups according to the type of conjugation. Depending on the following phrases, you can make sentences with various meanings.\n②Verb groups\n1) Group Ⅰ verbs\nIn the verbs of this group, the last sound of the ます-form is that of the い-line. (ex:かきます、のみます)\n2) Group Ⅱ verbs\n\nIn most of the verbs of this group, the last sound of the ます-form is that of the え-line, but in some verbs the last sound of the ます-form is that of the い-line.（ex:たべます、みます、かります）\n\n3) Group Ⅲ verbs\n\nVerbs of this group include します and "noun denoting an action + します" as well as きます.(ex:勉強します、買い物します)\n\n③Verb て-form\n\nThe verb form which ends with て or で is called the て-form. How to make the て-form of a verb depends on which group the verb belongs to.\n\n1) Group Ⅰ verbs：Depending on the last sound of the ます-form, the て-form of the verbs of this group is made as shown in the form table. Note that the て-form of the verb いきます, いって, is an exception.\n\n2) Group Ⅱ verbs：Attach て to the ます-form.\n\n3) Group Ⅲ verbs：Attach て to the ます-form.\n\n④Vて-form ＋　ください\n\nThis sentence pattern is used to ask, instruct or encourage the listener to do sometihng. Nationally, if the listener is one\'s superior, this expression cannot be used for giving instructions to him/her.',
+        "moji"  : "Vて形　＋　ください",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "This sentence pattern indicates that a certain action or motion is in progress.",
+        "moji"  : "Vて形　＋　います（進行）",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "To connect verb sentences, the て-form is used. When two or more actions take place in succession, the actions are mentioned in the order of occurresnce by using the て-form. The tense of the sentence is determined by the tense form of the last verb in the sentence.",
+        "moji"  : "Vて形",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "This sentence pattern indicates that upon completion of the action denoted by V1, the action of V2 is to be conducted. The tense of the sentence is determined by the tense form of the last verb in the sentence.",
+        "moji"  : "V1て形　＋　から、V2",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "This expression is used to grant permission.\nTo ask for permission, the question form of this sentence is used.",
+        "moji"  : "Vて形　＋　もいいです",
         "url"   : ""
       }, 
       
@@ -2535,8 +3000,36 @@ export const flashData = [
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "only; just; as much as",
-        "moji"  : "だけ",
+        "romaji": "・As well as indicating what someone is doing now,this sentence pattern can also be used to indicate a habitual behaviour. Such a behaviour taking place in the past is indicated by Vて-form　いまいた。\n・To show that the state resulting from the action indicated by the verb is still continuing.",
+        "moji"  : "Ｖて形＋います（習慣・結果の状態）",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "This sentence pattern indicates that the topic (N1) has the characteristic N2 が adj",
+        "moji"  : "はが文",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "two or more sentences can be joined together using～て（で.\n～て（で）cannot be used to connect two adjective sentences having the same subject if they present two contrasting descriptions. In such a case, が is used.\n× この部屋は狭くて、きれいです。\n〇この部屋は狭いですが、きれいです。This room is small but clean.",
+        "moji"  : "いA／なA／N　て形、～（並列）",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "なります indocates a change of state.",
+        "moji"  : "いA／なA／N＋なります",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "Using the V-dictionary form こと enables the interest to be described more specifically than just using a noun.",
+        "moji"  : "なります indocates a change of state.",
         "url"   : ""
       }, 
       
@@ -2697,15 +3190,36 @@ export const flashData = [
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "There is; is (living things)",
-        "moji"  : "がいる",
+        "romaji": 'もう means "already" and is used with Vました. In this case, Vました means that the action has been finished.\nまだ Vて-form いません means that something has not taken place or has not been done yet.',
+        "moji"  : "もう～Ｖました／まだ　Vて形＋いません",
         "url"   : ""
       }, 
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "There is; is (non-living things)",
-        "moji"  : "がある",
+        "romaji": "た-form is made by changing て and で of the て-form into た and だ respectively.\n\nThis sentence pattern means the action or occurrence denoted by V2 takes place after the action or occurrence denoted by V1 or N has taken place.\nCompared with Vて-form　から、which has a similar meaning, Vた-form  あとで emphasizes the time context in which the respective events happen.",
+        "moji"  : "Ｖ1た形／Nの＋あとで+",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "This sentence pattern is used in referring to some actions among many other actions. The tense of this sentence pattern is shown at the end of the sentence.",
+        "moji"  : "Ｖた形＋り、Ｖた形＋り～",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "This sentence pattern means that one person does two different actions at the same time. The action denoted by V2 is the more emphasized of the two actions.\nThis sentence pattern is also used when the two actions take place over a period of time.",
+        "moji"  : "Ｖ1ます形＋ながら＋V2",
+        "url"   : ""
+      }, 
+      {
+        "id"    : "1g_a",
+        "type"  : "grammar",
+        "romaji": "・verb\nThie sentence pattern indicates that the action of V2 occurs before the action of V1 takes place. Even when the tense of V2 is in the past tense or the furture tense, V1 is always in the dictionary form.\n・noun\nWhen まえに comes after a noun, the particle の is put between the noun and まえに. Nouns before まえに are nouns  which express actions or nouns which imply actions.\nBut,when まえに comes after a quantifier(period), the particle の is not necessary.\n",
+        "moji"  : "Ｖ1辞書形/N＋まえに＋V2",
         "url"   : ""
       }, 
       
@@ -2853,67 +3367,45 @@ export const flashData = [
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "Plan to ~; intend to",
-        "moji"  : "つもり",
+        "romaji": "Thie sentence pattern is used to express prohibition.",
+        "moji"  : "Ｖて形＋はいけません",
         "url"   : ""
       }, 
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "Please do",
-        "moji"  : "てください",
+        "romaji": "・Vない-form\nThe verb form used with ない is called the ない-form. How to make the ない-form is given below.\n1)GroupⅠ\nIn the verbs of this group the last sound of the ます-form is always the sound in the い-line. So, replace it with the sound of the あ-line to make a ない-form. わ is the last sound of the ない-form in these verbs instead of あ.\nかきます→かかない、かえります→かえらない、あいます→あわない\n2)GroupⅡ\nThe ない-form of verbs of this group is just the same as the ます-form.\nたべます→たべない、みます→みない\n3)GroupⅢ\nします→しない、きます→こない\n\nないでください is used to ask or instruct someone not to do something.",
+        "moji"  : "Ｖない形＋ないでください",
         "url"   : ""
       },
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "Ongoing action or current state",
-        "moji"  : "ている",
+        "romaji": "This expression mesns something has to be done regardless of the will of the actor. Note that this doesn't have a negative meaning.",
+        "moji"  : "Ｖない形＋なければなりません",
         "url"   : ""
       },
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "Is/has been done",
-        "moji"  : "てある",
+        "romaji": "とき is used to connects two sentences while expressing a time or occasion when the state or action described in the main sentence exists or occurs. The form of the word preceding とき is the same as the form that modifies a noun.\nThe tense if the clause modifying とき is not affected by the tense of the main clause.\nWhen the verb in front of とき is in the dictionary form, whatever is described in the main clause happened before whatever is described in the ～とき clause. When the verb in front of とき is in the た-form, whatever is described in the main clause happened after whatever in the ～とき clause.",
+        "moji"  : "とき",
         "url"   : ""
       },
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "Want to do something",
-        "moji"  : "たい",
+        "romaji": "You learned how to modify nouns.\nわたしの うち　　my house\nあたらしい うち  a new house\nきれいな うち      a beautiful house\nIn Japanese, whatever modifies a word, whether it’s a word or a sentence, it always comes before the words to be modified. Here you learn another way to modify nouns.\nThis predicate of the sentence which modifies a noun is in the plain form. In the case of ナ-adjective sentence, ～だ become ～な. In the case of noun sentences ～だ becomes ～の.",
+        "moji"  : "名詞修飾",
         "url"   : ""
       },
       {
         "id"    : "1g_a",
         "type"  : "grammar",
-        "romaji": "Please don't do",
-        "moji"  : "ないでください",
+        "romaji": "Japanese language has two styles of speech: polite style and plain style.The predicates which are used in polite style sentences and accompanied by either です or ます are called the polite form, while the predicates used in plain style sentences are called the plain form.\nQuestions in the plain style generally omit the particle か, which denotes a question, and end with a rinsing intonation.\nIn noun and なA questions, だ, which is the plain form of です, is omitted. In an answer in the affirmative, ending the sentence with だ could sound too rough. You can either omit だ or add some sentence final particle to soften the tone of the sentence. Women seldom use だ.",
+        "moji"  : "友達言葉",
         "url"   : ""
       },
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "Because; since; from",
-        "moji"  : "から",
-        "url"   : ""
-      },
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "To not be (am not; is not; are not)",
-        "moji"  : "じゃない・ではない",
-        "url"   : ""
-      },
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "De",
-        "moji"  : "で",
-        "url"   : ""
-      },
-      
     ], 
     TOPIC8_TITLE_and_kanji : [
       {
