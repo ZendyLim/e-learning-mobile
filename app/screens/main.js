@@ -31,6 +31,7 @@ class MainScreen extends Component {
       
 
       if (this.props.data) {
+        console.log(this.props.data,"main")
         if (this.props.data.finishDate) {        
           return (
             <MainStack />
