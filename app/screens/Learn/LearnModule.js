@@ -33,8 +33,12 @@ class LearnHiraganaModule extends Component {
   constructor(props) {
     super(props);
   }
-  static navigationOptions = {
-    title: 'Learn',
+  static navigationOptions = ({ navigation }) => {
+    // title: 'Learn',
+    const {state} = navigation;
+    return {
+      title: `${strings[state.params.studyType]}`,
+    };
     swipeEnabled: false
   };
   state = {
@@ -86,7 +90,7 @@ class LearnHiraganaModule extends Component {
         if(this.state.type == 'HL1'){
             if(this.state.studyType == 'HIRAGANA_TITLE'){
                 return (
-                    <HiraganaLearnStack />        
+                    <HiraganaLearnStack />  
                 );            
             }else if(this.state.studyType == 'NUMBER_TITLE'){
                 return (
