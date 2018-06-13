@@ -149,5 +149,67 @@ module.exports = StyleSheet.create({
  		fontSize: 15,
  		color: 'black',
     },
+    modalContainer : {
+        height: "100%",
+        width: "100%",
+        justifyContent : 'center',
+        alignItems : 'center'
+    },
+    modalContainerInside : {
+        backgroundColor : '#ffffff',
+        height: 200,
+        width : '100%',
+        justifyContent : 'center',
+        alignItems : 'center'
+    },
+    modalTitle : {
+        fontWeight : 'bold',
+        fontSize : 20,
+    },
+    modalRow : {
+        flex : 1,
+        flexDirection: 'row',
+        justifyContent:'space-between',
+        height : 50,
+        padding: 30,
+    },
+    modalActiveContainer:{
+        flex : 1,
+        padding: 10,
+        height : 70,
+    },
+    modalActive :{
+        justifyContent : 'center',
+        alignItems : 'center',
+        borderColor: '#0000ff',
+        borderWidth : 2,
+        height: 50,
+        borderRadius: 10
+    },
+    modalNonActive :{
+        justifyContent : 'center',
+        alignItems : 'center',
+        borderColor: '#dddddd',
+        borderWidth : 2,
+        height: 50,
+        borderRadius: 10
+    },
+    modalClose : {
+        justifyContent: 'center',
+        borderColor: '#dddddd',
+        backgroundColor : '#dddddd',
+        borderWidth : 2,
+        borderRadius: 10,
+        paddingTop: 5 ,
+        paddingBottom: 5 ,
+        paddingLeft: 10 ,
+        paddingRight: 10 ,
+        marginBottom: 10,
+    },
+    modalCloseText : {
+        fontSize: 14,
+        color: '#ffffff',
+        fontWeight : 'bold',
+    }
 });
 

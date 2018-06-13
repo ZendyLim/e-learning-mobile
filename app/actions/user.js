@@ -1,4 +1,4 @@
-import {FETCH_USER , FETCH_USER_SUCCESS ,  FETCH_USER_FAILED,  USER_REMOVE}  from '../lib/constants';
+import {FETCH_USER , FETCH_USER_SUCCESS ,  FETCH_USER_FAILED,  USER_REMOVE , LOCALIZATION}  from '../lib/constants';
 import { USER_LOGIN_SUCCESS, USER_LOGIN_FAILED, USER_UPDATE_SUCCESS} from '../lib/constants';
 import { AsyncStorage } from 'react-native';
 
@@ -87,12 +87,17 @@ export function deleteUserState(){
     };        
 }
 
+export function localization(Value){
+  return (dispatch) => {
+      dispatch(localizationDispatch(Value))
+    };        
+}
+
+
 export function updateProfile(userVal){
   return (dispatch) => {
     console.log('run');
     getJWT().then( JWT => {
-      console.log(JWT);
-      console.log(JSON.stringify(userVal));
       fetch('https://e-learning-backend.herokuapp.com/api/v1/updateProfile',{
         method: 'POST',
         headers: {
@@ -201,5 +206,12 @@ export function userLoginFailed(error){
   return{
     type: USER_LOGIN_FAILED,
     error: error,
+  }
+}
+
+export function localizationDispatch(value){
+  return{
+    type: LOCALIZATION,
+    data: value,
   }
 }

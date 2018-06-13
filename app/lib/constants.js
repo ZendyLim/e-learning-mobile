@@ -16,6 +16,7 @@ export const TAKE_QUIZ = 'TAKE_QUIZ'; //import the action for start time
 export const USER_LOGIN_SUCCESS = "USER_LOGIN_SUCCESS";
 export const USER_LOGIN_FAILED = " USER_LOGIN_FAILED";
 export const USER_UPDATE_SUCCESS = "USER_UPDATE_SUCCESS";
+export const LOCALIZATION = "LOCALIZATION";
 //summary 
 export const SUMMARY_HOME = 'SUMMARY_HOME'; //import the action for start time
 export const SUMMARY_TEST = 'SUMMARY_TEST'; //import the action for Summary Test

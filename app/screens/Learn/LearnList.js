@@ -19,13 +19,13 @@ import style from 'react-native-datepicker/style';
 class LearnListScreen extends Component {
   constructor() {
     super();
-    this._onSetLanguageTo('en');
   }
-  _onSetLanguageTo(value) {
-    strings.setLanguage(value);
-  } 
-  static navigationOptions = {
-    title: 'Learn',
+  static navigationOptions = ({ navigation }) =>{
+    //header: null,
+    const {state} = navigation;
+    return {
+      title: `${strings['TITLE_LEARN']}`,
+    };
   };
   state = {
     title:"",

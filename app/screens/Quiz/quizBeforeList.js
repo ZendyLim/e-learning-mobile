@@ -33,7 +33,6 @@ class QuizBeforeScreen extends Component {
       this.list = [];
       this.param = [];
 
-      this._onSetLanguageTo('en');
   }
 
   componentWillMount(){
@@ -53,10 +52,6 @@ class QuizBeforeScreen extends Component {
 
     this.list = QuizListData[this.param.headerTitle];
   }
-
-  _onSetLanguageTo(value) {
-    strings.setLanguage(value);
-  } 
 
   render() {
     return (

@@ -221,6 +221,7 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
 
     proceed = () => {
         const { navigation } = this.props;
+
         if(!this.validation()){
             this.props.navigation.navigate('QuizFlash',
                 (
@@ -235,7 +236,8 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
                         oneType: navigation.getParam('oneType',null),
                         idList: this.state.idList,
                         index:  navigation.getParam('index',null),
-                        categoryId :  navigation.getParam('categoryId',null),  
+                        categoryId :  navigation.getParam('categoryId',null), 
+                        headerTitle:  navigation.getParam('headerTitle',null), 
                     }
                 )
             );

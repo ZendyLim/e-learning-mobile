@@ -16,14 +16,13 @@ async function getJWT(){
 }
 //================================   API FETCH ===================================
 
-export function startLearn(studyType, startLearn, studyID){
+export function startLearn(studyType, startLearn, studyID, quizSize){
     return (dispatch) => {
-      dispatch(startLearnDispatch(studyType, startLearn, studyID))
+      dispatch(startLearnDispatch(studyType, startLearn, studyID, quizSize))
     };        
 }
 
-export function endLearn(postValue){
-  console.log(postValue);
+export function endLearn(postValue){  
   return (dispatch) => {
     getJWT().then( JWT => {
       console.log(JWT);
@@ -51,12 +50,13 @@ export function takeQuiz(studyData){
 
 
 // ===================================== ACTION SENDING DATA TO REDUCER =================================================
-export function startLearnDispatch(studyType, startLearn, studyID) {
+export function startLearnDispatch(studyType, startLearn, studyID, quizSize) {
   return {
     type: START_TIME_LEARN,
     startLearn : startLearn,
     studyType: studyType,
     studyID: studyID,
+    quizSize: quizSize
   }
 }
 

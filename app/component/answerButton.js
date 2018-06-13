@@ -69,7 +69,7 @@ class AnswerButton extends Component {
 
     onSelectAnswer(){
       if(this.props.isCorrect == -1){
-        this.props.onSelectAnswer(this.props.id);
+        this.props.onSelectAnswer(this.props.id,this.props.textDisplay);
       }
       
     }
