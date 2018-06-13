@@ -83,6 +83,8 @@ export let strings = new LocalizedStrings({
    STUDY_START : "START",
    STUDY_REVIEW : "REVIEW",
    PROFILE_MODAL_CLOSE : "CANCEL",
+   TITLE_LEARN : 'LEARN',
+   EXPLAINATION_LEARN : 'Explanation card',
 
   //login part
   SIGN_IN : "Sign In",
@@ -193,6 +195,8 @@ export let strings = new LocalizedStrings({
    STUDY_START : "スタート",
    STUDY_REVIEW : "レビュー",
    PROFILE_MODAL_CLOSE : "キャンセル",
+   TITLE_LEARN : '学ぶ',
+   EXPLAINATION_LEARN : '説明カード',   
    
     //login part
   SIGN_IN : "サインイン",

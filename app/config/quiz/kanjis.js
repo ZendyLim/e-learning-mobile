@@ -1,0 +1,1089 @@
+kanji [{
+	"id":"tp1_k_1",
+	"type":"kanji",
+	"romaji":"ichi",
+	"moji":"いち",
+	"kanji":"一",
+	"english":"one",
+	"audio":"one.mp3"
+},
+{
+	"id":"tp1_k_2",
+	"type":"kanji",
+	"romaji":"ni",
+	"moji":"に",
+	"kanji":"二",
+	"english":"two",
+	"audio":"two.mp3"
+},
+{
+	"id":"tp1_k_3",
+	"type":"kanji",
+	"romaji":"san",
+	"moji":"さん",
+	"kanji":"三",
+	"english":"three",
+	"audio":"three.mp3"
+},
+{
+	"id":"tp1_k_4",
+	"type":"kanji",
+	"romaji":"shi/ yon",
+	"moji":"し/よん",
+	"kanji":"四",
+	"english":"four",
+	"audio":"four.mp3"
+},
+{
+	"id":"tp1_k_5",
+	"type":"kanji",
+	"romaji":"go",
+	"moji":"ご",
+	"kanji":"五",
+	"english":"five",
+	"audio":"five.mp3"
+},
+{
+	"id":"tp1_k_6",
+	"type":"kanji",
+	"romaji":"roku",
+	"moji":"ろく",
+	"kanji":"六",
+	"english":"six",
+	"audio":"six.mp3"
+},
+{
+	"id":"tp1_k_7",
+	"type":"kanji",
+	"romaji":"nana/ shichi",
+	"moji":"なな/しち",
+	"kanji":"七",
+	"english":"seven",
+	"audio":"seven.mp3"
+},
+{
+	"id":"tp1_k_8",
+	"type":"kanji",
+	"romaji":"hachi",
+	"moji":"はち",
+	"kanji":"八",
+	"english":"eight",
+	"audio":"eight.mp3"
+},
+{
+	"id":"tp1_k_9",
+	"type":"kanji",
+	"romaji":"kyū/ ku",
+	"moji":"きゅう/く",
+	"kanji":"九",
+	"english":"nine",
+	"audio":"nine.mp3"
+},
+{
+	"id":"tp1_k_10",
+	"type":"kanji",
+	"romaji":"jū",
+	"moji":"じゅう",
+	"kanji":"十",
+	"english":"ten",
+	"audio":"ten.mp3"
+},
+{
+	"id":"tp1_k_11",
+	"type":"kanji",
+	"romaji":"hyaku",
+	"moji":"ひゃく",
+	"kanji":"百",
+	"english":"hundred",
+	"audio":"hundred.mp3"
+},
+{
+	"id":"tp1_k_12",
+	"type":"kanji",
+	"romaji":"sen",
+	"moji":"せん",
+	"kanji":"千",
+	"english":"thousand",
+	"audio":"thousand.mp3"
+},
+{
+	"id":"tp1_k_13",
+	"type":"kanji",
+	"romaji":"ma n",
+	"moji":"まん",
+	"kanji":"万",
+	"english":"ten thousand",
+	"audio":"ten thousand.mp3"
+},
+{
+	"id":"tp1_k_14",
+	"type":"kanji",
+	"romaji":"e n",
+	"moji":"えん",
+	"kanji":"円",
+	"english":"yen",
+	"audio":"yen.mp3"
+},
+/////// 1
+{
+	"id":"tp1_k_15",
+	"type":"kanji",
+	"romaji":"nani, nan",
+	"moji":"なに、なん",
+	"kanji":"何",
+	"english":"what",
+	"audio":"what.mp3"
+},
+{
+	"id":"tp2_k_1",
+	"type":"kanji",
+	"romaji":"sha/ kuruma",
+	"moji":"しゃ/くるま",
+	"kanji":"車",
+	"english":"car",
+	"audio":"car.mp3"
+},
+{
+	"id":"tp2_k_2",
+	"type":"kanji",
+	"romaji":"i",
+	"moji":"い",
+	"kanji":"行",
+	"english":"to go",
+	"audio":"to go.mp3"
+},
+{
+	"id":"tp2_k_3",
+	"type":"kanji",
+	"romaji":"rai/ ki, ku",
+	"moji":"らい/き、く",
+	"kanji":"来",
+	"english":"to come",
+	"audio":"to come.mp3"
+},
+{
+	"id":"tp2_k_4",
+	"type":"kanji",
+	"romaji":"ki/ kae",
+	"moji":"き/かえ",
+	"kanji":"帰",
+	"english":"to return",
+	"audio":"to return.mp3"
+},
+{
+	"id":"tp2_k_5",
+	"type":"kanji",
+	"romaji":"hi, bi, ka/ nichi",
+	"moji":"ひ、び、か/にち",
+	"kanji":"日",
+	"english":"day, sun",
+	"audio":"day, sun.mp3"
+},
+{
+	"id":"tp2_k_6",
+	"type":"kanji",
+	"romaji":"gatsu, getsu/ tsuki",
+	"moji":"がつ、げつ/つき",
+	"kanji":"月",
+	"english":"month, moon",
+	"audio":"month, moon.mp3"
+},
+{
+	"id":"tp2_k_7",
+	"type":"kanji",
+	"romaji":"ka",
+	"moji":"か",
+	"kanji":"火",
+	"english":"fire",
+	"audio":"fire.mp3"
+},
+{
+	"id":"tp2_k_8",
+	"type":"kanji",
+	"romaji":"sui/ mizu",
+	"moji":"すい/みず",
+	"kanji":"水",
+	"english":"water",
+	"audio":"water.mp3"
+},
+{
+	"id":"tp2_k_9",
+	"type":"kanji",
+	"romaji":"moku/ ki",
+	"moji":"もく/き",
+	"kanji":"木",
+	"english":"tree",
+	"audio":"tree.mp3"
+},
+{
+	"id":"tp2_k_10",
+	"type":"kanji",
+	"romaji":"kin/ kane",
+	"moji":"きん/かね",
+	"kanji":"金",
+	"english":"gold",
+	"audio":"gold.mp3"
+},
+{
+	"id":"tp2_k_11",
+	"type":"kanji",
+	"romaji":"do",
+	"moji":"ど",
+	"kanji":"土",
+	"english":"soil",
+	"audio":"soil.mp3"
+},
+{
+	"id":"tp2_k_12",
+	"type":"kanji",
+	"romaji":"ji",
+	"moji":"じ",
+	"kanji":"時",
+	"english":"time",
+	"audio":"time.mp3"
+},
+{
+	"id":"tp2_k_13",
+	"type":"kanji",
+	"romaji":"fun, pun, bun",
+	"moji":"ふん、ぷん、ぶん",
+	"kanji":"分",
+	"english":"minute",
+	"audio":"minute.mp3"
+},
+{
+	"id":"tp2_k_14",
+	"type":"kanji",
+	"romaji":"han",
+	"moji":"はん",
+	"kanji":"半",
+	"english":"half",
+	"audio":"half.mp3"
+},
+/////// 2
+{
+	"id":"tp2_k_15",
+	"type":"kanji",
+	"romaji":"kon/ ima",
+	"moji":"こん/いま",
+	"kanji":"今",
+	"english":"now",
+	"audio":"now.mp3"
+},
+{
+	"id":"tp3_k_1",
+	"type":"kanji",
+	"romaji":"Shū",
+	"moji":"しゅう",
+	"kanji":"週",
+	"english":"week",
+	"audio":"week.mp3"
+},
+{
+	"id":"tp3_k_2",
+	"type":"kanji",
+	"romaji":"nen/ Toshi",
+	"moji":"ねん/とし",
+	"kanji":"年",
+	"english":"year",
+	"audio":"year.mp3"
+},
+{
+	"id":"tp3_k_3",
+	"type":"kanji",
+	"romaji":"Mai",
+	"moji":"まい",
+	"kanji":"毎",
+	"english":"every",
+	"audio":"every.mp3"
+},
+{
+	"id":"tp3_k_4",
+	"type":"kanji",
+	"romaji":"dai/ ō",
+	"moji":"だい/おお",
+	"kanji":"大",
+	"english":"big",
+	"audio":"big.mp3"
+},
+{
+	"id":"tp3_k_5",
+	"type":"kanji",
+	"romaji":"shō/ Chī",
+	"moji":"しょう/ちい",
+	"kanji":"小",
+	"english":"small",
+	"audio":"small.mp3"
+},
+{
+	"id":"tp3_k_6",
+	"type":"kanji",
+	"romaji":"Shin/ atara",
+	"moji":"しん/あたら",
+	"kanji":"新",
+	"english":"new",
+	"audio":"new.mp3"
+},
+{
+	"id":"tp3_k_7",
+	"type":"kanji",
+	"romaji":"furu",
+	"moji":"ふる",
+	"kanji":"古",
+	"english":"old",
+	"audio":"old.mp3"
+},
+{
+	"id":"tp3_k_8",
+	"type":"kanji",
+	"romaji":"kō/ Taka",
+	"moji":"こう/たか",
+	"kanji":"高",
+	"english":"expensive / tall",
+	"audio":"expensive / tall.mp3"
+},
+{
+	"id":"tp3_k_9",
+	"type":"kanji",
+	"romaji":"Yasu",
+	"moji":"やす",
+	"kanji":"安",
+	"english":"cheap",
+	"audio":"cheap.mp3"
+},
+{
+	"id":"tp3_k_10",
+	"type":"kanji",
+	"romaji":"ō",
+	"moji":"おお",
+	"kanji":"多",
+	"english":"many",
+	"audio":"many.mp3"
+},
+{
+	"id":"tp3_k_11",
+	"type":"kanji",
+	"romaji":"suku, suko",
+	"moji":"すく、すこ",
+	"kanji":"少",
+	"english":"few",
+	"audio":"few.mp3"
+},
+{
+	"id":"tp3_k_12",
+	"type":"kanji",
+	"romaji":"na ga",
+	"moji":"なが",
+	"kanji":"長",
+	"english":"long",
+	"audio":"long.mp3"
+},
+{
+	"id":"tp3_k_13",
+	"type":"kanji",
+	"romaji":"haya",
+	"moji":"はや",
+	"kanji":"早",
+	"english":"early",
+	"audio":"early.mp3"
+},
+{
+	"id":"tp3_k_14",
+	"type":"kanji",
+	"romaji":"su",
+	"moji":"す",
+	"kanji":"好",
+	"english":"to like",
+	"audio":"to like.mp3"
+},
+/////// 3
+{
+	"id":"tp3_k_15",
+	"type":"kanji",
+	"romaji":"machi",
+	"moji":"まち",
+	"kanji":"町",
+	"english":"town",
+	"audio":"town.mp3"
+},
+{
+	"id":"tp4_k_1",
+	"type":"kanji",
+	"romaji":"jin, ni n/ hito",
+	"moji":"じん、にん/ひと",
+	"kanji":"人",
+	"english":"person",
+	"audio":"person.mp3"
+},
+{
+	"id":"tp4_k_2",
+	"type":"kanji",
+	"romaji":"otoko",
+	"moji":"おとこ",
+	"kanji":"男",
+	"english":"man",
+	"audio":"man.mp3"
+},
+{
+	"id":"tp4_k_3",
+	"type":"kanji",
+	"romaji":"onna",
+	"moji":"おんな",
+	"kanji":"女",
+	"english":"woman",
+	"audio":"woman.mp3"
+},
+{
+	"id":"tp4_k_4",
+	"type":"kanji",
+	"romaji":"ko",
+	"moji":"こ",
+	"kanji":"子",
+	"english":"child",
+	"audio":"child.mp3"
+},
+{
+	"id":"tp4_k_5",
+	"type":"kanji",
+	"romaji":"sen/ Saki",
+	"moji":"せん/さき",
+	"kanji":"先",
+	"english":"ahead",
+	"audio":"ahead.mp3"
+},
+{
+	"id":"tp4_k_6",
+	"type":"kanji",
+	"romaji":"sei",
+	"moji":"せい",
+	"kanji":"生",
+	"english":"birth",
+	"audio":"birth.mp3"
+},
+{
+	"id":"tp4_k_7",
+	"type":"kanji",
+	"romaji":"tomo",
+	"moji":"とも",
+	"kanji":"友",
+	"english":"friend",
+	"audio":"friend.mp3"
+},
+{
+	"id":"tp4_k_8",
+	"type":"kanji",
+	"romaji":"gaku/ ga",
+	"moji":"がく/がっ",
+	"kanji":"学",
+	"english":"learning",
+	"audio":"learning.mp3"
+},
+{
+	"id":"tp4_k_9",
+	"type":"kanji",
+	"romaji":"kō",
+	"moji":"こう",
+	"kanji":"校",
+	"english":"school",
+	"audio":"school.mp3"
+},
+{
+	"id":"tp4_k_10",
+	"type":"kanji",
+	"romaji":"ka i/ a",
+	"moji":"かい/あ",
+	"kanji":"会",
+	"english":"to meet",
+	"audio":"to meet.mp3"
+},
+{
+	"id":"tp4_k_11",
+	"type":"kanji",
+	"romaji":"sha",
+	"moji":"しゃ",
+	"kanji":"社",
+	"english":"company",
+	"audio":"company.mp3"
+},
+{
+	"id":"tp4_k_12",
+	"type":"kanji",
+	"romaji":"yama",
+	"moji":"やま",
+	"kanji":"山",
+	"english":"mountain",
+	"audio":"mountain.mp3"
+},
+{
+	"id":"tp4_k_13",
+	"type":"kanji",
+	"romaji":"kawa",
+	"moji":"かわ",
+	"kanji":"川",
+	"english":"river",
+	"audio":"river.mp3"
+},
+{
+	"id":"tp4_k_14",
+	"type":"kanji",
+	"romaji":"hana",
+	"moji":"はな",
+	"kanji":"花",
+	"english":"flower",
+	"audio":"flower.mp3"
+},
+/////// 4
+{
+	"id":"tp4_k_15",
+	"type":"kanji",
+	"romaji":"ka, ie",
+	"moji":"か、いえ",
+	"kanji":"家",
+	"english":"house",
+	"audio":"house.mp3"
+},
+{
+	"id":"tp5_k_1",
+	"type":"kanji",
+	"romaji":"eki",
+	"moji":"えき",
+	"kanji":"駅",
+	"english":"station",
+	"audio":"station.mp3"
+},
+{
+	"id":"tp5_k_2",
+	"type":"kanji",
+	"romaji":"mise",
+	"moji":"みせ",
+	"kanji":"店",
+	"english":"shop",
+	"audio":"shop.mp3"
+},
+{
+	"id":"tp5_k_3",
+	"type":"kanji",
+	"romaji":"ue",
+	"moji":"うえ",
+	"kanji":"上",
+	"english":"above",
+	"audio":"above.mp3"
+},
+{
+	"id":"tp5_k_4",
+	"type":"kanji",
+	"romaji":"shita",
+	"moji":"した",
+	"kanji":"下",
+	"english":"under",
+	"audio":"under.mp3"
+},
+{
+	"id":"tp5_k_5",
+	"type":"kanji",
+	"romaji":"migi",
+	"moji":"みぎ",
+	"kanji":"右",
+	"english":"right",
+	"audio":"right.mp3"
+},
+{
+	"id":"tp5_k_6",
+	"type":"kanji",
+	"romaji":"hidari",
+	"moji":"ひだり",
+	"kanji":"左",
+	"english":"left",
+	"audio":"left.mp3"
+},
+{
+	"id":"tp5_k_7",
+	"type":"kanji",
+	"romaji":"zen/ mae",
+	"moji":"ぜん/まえ",
+	"kanji":"前",
+	"english":"front",
+	"audio":"front.mp3"
+},
+{
+	"id":"tp5_k_8",
+	"type":"kanji",
+	"romaji":"go/ ushiro, ato",
+	"moji":"ご/うしろ、あと",
+	"kanji":"後",
+	"english":"back",
+	"audio":"back.mp3"
+},
+{
+	"id":"tp5_k_9",
+	"type":"kanji",
+	"romaji":"chū/ Naka",
+	"moji":"ちゅう/なか",
+	"kanji":"中",
+	"english":"inside",
+	"audio":"inside.mp3"
+},
+{
+	"id":"tp5_k_10",
+	"type":"kanji",
+	"romaji":"gai/ soto",
+	"moji":"がい/そと",
+	"kanji":"外",
+	"english":"outside",
+	"audio":"outside.mp3"
+},
+{
+	"id":"tp5_k_11",
+	"type":"kanji",
+	"romaji":"kita",
+	"moji":"きた",
+	"kanji":"北",
+	"english":"north",
+	"audio":"north.mp3"
+},
+{
+	"id":"tp5_k_12",
+	"type":"kanji",
+	"romaji":"minami",
+	"moji":"みなみ",
+	"kanji":"南",
+	"english":"south",
+	"audio":"south.mp3"
+},
+{
+	"id":"tp5_k_13",
+	"type":"kanji",
+	"romaji":"higashi",
+	"moji":"ひがし",
+	"kanji":"東",
+	"english":"east",
+	"audio":"east.mp3"
+},
+{
+	"id":"tp5_k_14",
+	"type":"kanji",
+	"romaji":"ni shi",
+	"moji":"にし",
+	"kanji":"西",
+	"english":"west",
+	"audio":"west.mp3"
+},
+/////// 5
+{
+	"id":"tp5_k_15",
+	"type":"kanji",
+	"romaji":"hon",
+	"moji":"ほん",
+	"kanji":"本",
+	"english":"book",
+	"audio":"book.mp3"
+},
+{
+	"id":"tp6_k_1",
+	"type":"kanji",
+	"romaji":"tō/ chichi",
+	"moji":"とう/ちち",
+	"kanji":"父",
+	"english":"father",
+	"audio":"father.mp3"
+},
+{
+	"id":"tp6_k_2",
+	"type":"kanji",
+	"romaji":"kā/ haha",
+	"moji":"かあ/はは",
+	"kanji":"母",
+	"english":"mother",
+	"audio":"mother.mp3"
+},
+{
+	"id":"tp6_k_3",
+	"type":"kanji",
+	"romaji":"ta",
+	"moji":"た",
+	"kanji":"食",
+	"english":"to eat",
+	"audio":"to eat.mp3"
+},
+{
+	"id":"tp6_k_4",
+	"type":"kanji",
+	"romaji":"no",
+	"moji":"の",
+	"kanji":"飲",
+	"english":"to drink",
+	"audio":"to drink.mp3"
+},
+{
+	"id":"tp6_k_5",
+	"type":"kanji",
+	"romaji":"ka",
+	"moji":"か",
+	"kanji":"書",
+	"english":"to write",
+	"audio":"to write.mp3"
+},
+{
+	"id":"tp6_k_6",
+	"type":"kanji",
+	"romaji":"mi",
+	"moji":"み",
+	"kanji":"見",
+	"english":"to watch / look",
+	"audio":"to watch / look.mp3"
+},
+{
+	"id":"tp6_k_7",
+	"type":"kanji",
+	"romaji":"i",
+	"moji":"い",
+	"kanji":"言",
+	"english":"to say",
+	"audio":"to say.mp3"
+},
+{
+	"id":"tp6_k_8",
+	"type":"kanji",
+	"romaji":"wa/ Hana",
+	"moji":"わ/はな",
+	"kanji":"話",
+	"english":"to talk",
+	"audio":"to talk.mp3"
+},
+{
+	"id":"tp6_k_9",
+	"type":"kanji",
+	"romaji":"yo",
+	"moji":"よ",
+	"kanji":"読",
+	"english":"to read",
+	"audio":"to read.mp3"
+},
+{
+	"id":"tp6_k_10",
+	"type":"kanji",
+	"romaji":"ka",
+	"moji":"か",
+	"kanji":"買",
+	"english":"to buy",
+	"audio":"to buy.mp3"
+},
+{
+	"id":"tp6_k_11",
+	"type":"kanji",
+	"romaji":"bun/ kiku",
+	"moji":"ぶん/きく",
+	"kanji":"聞",
+	"english":"to listen",
+	"audio":"to listen.mp3"
+},
+{
+	"id":"tp6_k_12",
+	"type":"kanji",
+	"romaji":"yasumu",
+	"moji":"やすむ",
+	"kanji":"休",
+	"english":"to rest",
+	"audio":"to rest.mp3"
+},
+{
+	"id":"tp6_k_13",
+	"type":"kanji",
+	"romaji":"deru",
+	"moji":"でる",
+	"kanji":"出",
+	"english":"to go out",
+	"audio":"to go out.mp3"
+},
+{
+	"id":"tp6_k_14",
+	"type":"kanji",
+	"romaji":"hairu",
+	"moji":"はいる",
+	"kanji":"入",
+	"english":"to enter",
+	"audio":"to enter.mp3"
+},
+/////// 6
+{
+	"id":"tp6_k_15",
+	"type":"kanji",
+	"romaji":"tatsu",
+	"moji":"たつ",
+	"kanji":"立",
+	"english":"to stand",
+	"audio":"to stand.mp3"
+},
+{
+	"id":"tp7_k_1",
+	"type":"kanji",
+	"romaji":"karada",
+	"moji":"からだ",
+	"kanji":"体",
+	"english":"body",
+	"audio":"body.mp3"
+},
+{
+	"id":"tp7_k_2",
+	"type":"kanji",
+	"romaji":"me",
+	"moji":"め",
+	"kanji":"目",
+	"english":"eye",
+	"audio":"eye.mp3"
+},
+{
+	"id":"tp7_k_3",
+	"type":"kanji",
+	"romaji":"kuchi",
+	"moji":"くち",
+	"kanji":"口",
+	"english":"mouth",
+	"audio":"mouth.mp3"
+},
+{
+	"id":"tp7_k_4",
+	"type":"kanji",
+	"romaji":"mimi",
+	"moji":"みみ",
+	"kanji":"耳",
+	"english":"ear",
+	"audio":"ear.mp3"
+},
+{
+	"id":"tp7_k_5",
+	"type":"kanji",
+	"romaji":"te",
+	"moji":"て",
+	"kanji":"手",
+	"english":"hand",
+	"audio":"hand.mp3"
+},
+{
+	"id":"tp7_k_6",
+	"type":"kanji",
+	"romaji":"ashi",
+	"moji":"あし",
+	"kanji":"足",
+	"english":"foot",
+	"audio":"foot.mp3"
+},
+{
+	"id":"tp7_k_7",
+	"type":"kanji",
+	"romaji":"chikara",
+	"moji":"ちから",
+	"kanji":"力",
+	"english":"power",
+	"audio":"power.mp3"
+},
+{
+	"id":"tp7_k_8",
+	"type":"kanji",
+	"romaji":"ushi",
+	"moji":"うし",
+	"kanji":"牛",
+	"english":"cow",
+	"audio":"cow.mp3"
+},
+{
+	"id":"tp7_k_9",
+	"type":"kanji",
+	"romaji":"uma",
+	"moji":"うま",
+	"kanji":"馬",
+	"english":"horse",
+	"audio":"horse.mp3"
+},
+{
+	"id":"tp7_k_10",
+	"type":"kanji",
+	"romaji":"sakana",
+	"moji":"さかな",
+	"kanji":"魚",
+	"english":"fish",
+	"audio":"fish.mp3"
+},
+{
+	"id":"tp7_k_11",
+	"type":"kanji",
+	"romaji":"kai",
+	"moji":"かい",
+	"kanji":"貝",
+	"english":"shell",
+	"audio":"shell.mp3"
+},
+{
+	"id":"tp7_k_12",
+	"type":"kanji",
+	"romaji":"niku",
+	"moji":"にく",
+	"kanji":"肉",
+	"english":"meat",
+	"audio":"meat.mp3"
+},
+{
+	"id":"tp7_k_13",
+	"type":"kanji",
+	"romaji":"Shiro",
+	"moji":"しろ",
+	"kanji":"白",
+	"english":"white",
+	"audio":"white.mp3"
+},
+{
+	"id":"tp7_k_14",
+	"type":"kanji",
+	"romaji":"kuro",
+	"moji":"くろ",
+	"kanji":"黒",
+	"english":"black",
+	"audio":"black.mp3"
+},
+/////// 7
+{
+	"id":"tp7_k_15",
+	"type":"kanji",
+	"romaji":"koku/ kuni",
+	"moji":"こく/くに",
+	"kanji":"国",
+	"english":"country",
+	"audio":"country.mp3"
+},
+{
+	"id":"tp8_k_1",
+	"type":"kanji",
+	"romaji":"ei",
+	"moji":"えい",
+	"kanji":"英",
+	"english":"English",
+	"audio":"English.mp3"
+},
+{
+	"id":"tp8_k_2",
+	"type":"kanji",
+	"romaji":"go",
+	"moji":"ご",
+	"kanji":"語",
+	"english":"word, language",
+	"audio":"word, language.mp3"
+},
+{
+	"id":"tp8_k_3",
+	"type":"kanji",
+	"romaji":"ten",
+	"moji":"てん",
+	"kanji":"天",
+	"english":"heaven",
+	"audio":"heaven.mp3"
+},
+{
+	"id":"tp8_k_4",
+	"type":"kanji",
+	"romaji":"ki",
+	"moji":"き",
+	"kanji":"気",
+	"english":"spirit",
+	"audio":"spirit.mp3"
+},
+{
+	"id":"tp8_k_5",
+	"type":"kanji",
+	"romaji":"ame",
+	"moji":"あめ",
+	"kanji":"雨",
+	"english":"rain",
+	"audio":"rain.mp3"
+},
+{
+	"id":"tp8_k_6",
+	"type":"kanji",
+	"romaji":"o na",
+	"moji":"おな",
+	"kanji":"同",
+	"english":"same",
+	"audio":"same.mp3"
+},
+{
+	"id":"tp8_k_7",
+	"type":"kanji",
+	"romaji":"tsuku",
+	"moji":"つく",
+	"kanji":"作",
+	"english":"to make",
+	"audio":"to make.mp3"
+},
+{
+	"id":"tp8_k_8",
+	"type":"kanji",
+	"romaji":"mo",
+	"moji":"も",
+	"kanji":"持",
+	"english":"to hold",
+	"audio":"to hold.mp3"
+},
+{
+	"id":"tp8_k_9",
+	"type":"kanji",
+	"romaji":"ma",
+	"moji":"ま",
+	"kanji":"待",
+	"english":"to wait",
+	"audio":"to wait.mp3"
+},
+{
+	"id":"tp8_k_10",
+	"type":"kanji",
+	"romaji":"no",
+	"moji":"の",
+	"kanji":"乗",
+	"english":"to get on",
+	"audio":"to get on.mp3"
+},
+{
+	"id":"tp8_k_11",
+	"type":"kanji",
+	"romaji":"michi",
+	"moji":"みち",
+	"kanji":"道",
+	"english":"road",
+	"audio":"road.mp3"
+},
+{
+	"id":"tp8_k_12",
+	"type":"kanji",
+	"romaji":"mono",
+	"moji":"もの",
+	"kanji":"物",
+	"english":"thing",
+	"audio":"thing.mp3"
+},
+{
+	"id":"tp8_k_13",
+	"type":"kanji",
+	"romaji":"de n",
+	"moji":"でん",
+	"kanji":"電",
+	"english":"electricity",
+	"audio":"electricity.mp3"
+},
+{
+	"id":"tp8_k_14",
+	"type":"kanji",
+	"romaji":"kan/ aida",
+	"moji":"かん/あいだ",
+	"kanji":"間",
+	"english":"between",
+	"audio":"between.mp3"
+},
+/////// 8
+{
+	"id":"tp8_k_15",
+	"type":"kanji",
+	"romaji":"go",
+	"moji":"ご",
+	"kanji":"午",
+	"english":"noon",
+	"audio":"noon.mp3"
+}
+];

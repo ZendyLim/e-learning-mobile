@@ -8,6 +8,8 @@ export const quizItems = {
     "GREETING_TITLE": initial.greetings,
     "TOPIC1_TITLE_and_vocabulary": topic1.vocabulary,
     "TOPIC1_TITLE_and_kanji": topic1.kanji,
-    "TOPIC1_TITLE_and_grammar": topic1.grammar
+    "TOPIC1_TITLE_and_grammar": topic1.grammar,
+    "TOPIC1_TITLE_and_listening": topic1.listening,
+    "TOPIC1_TITLE_and_reading": topic1.reading
 };
 
