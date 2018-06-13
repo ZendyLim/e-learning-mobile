@@ -34,7 +34,14 @@ class HiraganaListScreen extends Component {
     title:"",
     img: "",
   }
-  
+  _onSetLanguageTo = (value) => {
+    if(value){
+      strings.setLanguage(value);
+    }else{
+      strings.setLanguage('en');
+    }
+  }
+
   componentDidMount() {
     const { navigation } = this.props;
     this.setState({
@@ -161,6 +168,7 @@ class HiraganaListScreen extends Component {
     ));  
   }  
   render() {
+    this._onSetLanguageTo(this.props.lang);
     var scoreQuiz = this.getquizScore();
     var scoreTest = this.gettestScore();
     
@@ -238,7 +246,8 @@ const study = require('../../styles/study');
 function mapStateToProps(state, props) {
   return {
       test: state.summary.testData,
-      quiz: state.summary.quizData
+      quiz: state.summary.quizData,
+      lang: state.user.lang
   }
 }
 

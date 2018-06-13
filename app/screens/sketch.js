@@ -11,8 +11,10 @@ import {
   Text,
   View,
   Alert,
+  ScrollView,
   TouchableOpacity,
-  TouchableHighlight
+  TouchableHighlight,
+  Modal
 } from 'react-native';
 
 import RNSketchCanvas from '@terrylinla/react-native-sketch-canvas';
@@ -20,6 +22,7 @@ import { SketchCanvas } from '@terrylinla/react-native-sketch-canvas';
 import { Icon } from 'react-native-elements';
 import { hiraganaList , katakanaList } from '../config/data';
 import { sketchList } from '../config/sketchData';
+import  { strings }   from '../config/localization';
 
   var HLlist = hiraganaList.concat(katakanaList) ;
 
@@ -100,12 +103,12 @@ export default class HL4 extends Component {
 
       }
 
-      ListHiragana = () => {
-        
+      ListHiraganaOpen = () => {
+        this.setState({hiraganaModal: true});                
       }
 
-      listKatakana = () => {
-        
+      ListKatakanaOpen = () => {
+        this.setState({katakanaModal: true});                
       }
 
     
@@ -205,9 +208,105 @@ export default class HL4 extends Component {
         }
       }
 
+      selectHiraganaList = (indexVal) => {
+        if(HLlist[indexVal]['id'] !== ''){
+          this.canvasBg.clear();
+          this.canvasCorrect.clear();
+          this.canvas2.clear();  
+          var nextData = HLlist[indexVal]['id'];
+          this.setState({ 
+            currentData : HLlist[indexVal]['id'],
+            index : indexVal,
+            progress : 0
+          });
+          this.addNewData(nextData);  
+          this.setModalHiraClose();
+        }
+      }
+
+      setModalHiraClose = () => {
+        this.setState({hiraganaModal: false});        
+      }
+
+      selectKatakanaList = (indexVal) => {
+        indexVal += 130;
+        if(HLlist[indexVal]['id'] !== ''){
+          this.canvasBg.clear();
+          this.canvasCorrect.clear();
+          this.canvas2.clear();  
+          var nextData = HLlist[indexVal]['id'];
+          this.setState({ 
+            currentData : HLlist[indexVal]['id'],
+            index : indexVal,
+            progress : 0
+          });
+          this.addNewData(nextData);  
+          this.setModalKanaClose();
+        }
+      }
+
+      setModalKanaClose = () => {
+        this.setState({katakanaModal: false});        
+      }
       render() {
         return (
           <View style={styles.container}>
+            <Modal
+              animationType="slide"
+              transparent={true}
+              visible={this.state.hiraganaModal}
+              onRequestClose={() => {
+                alert('Modal has been closed.');
+              }}>
+              <View style={styles.modalContainer}>
+                <ScrollView style={styles.wordContainer}>
+                  <View style={stylesRow.row}>
+                    { hiraganaList.map((item, key)=>( 
+                      <View key={key} style={[stylesRow.col20, styles.btnWord]}>
+                        <TouchableHighlight style={styles.wordMain}  
+                        onPress={() => {
+                          this.selectHiraganaList(key);
+                        }}><Text>{item.moji}</Text></TouchableHighlight>
+                      </View>
+                    )) } 
+                  </View>
+                </ScrollView>
+                <TouchableHighlight style={styles.container}
+                    onPress={() => {
+                      this.setModalHiraClose();
+                    }}>
+                  <Text style={styles.modalCloseText}>{ strings['PROFILE_MODAL_CLOSE'] }</Text>
+                </TouchableHighlight>
+              </View>
+            </Modal>
+            <Modal
+              animationType="slide"
+              transparent={true}
+              visible={this.state.katakanaModal}
+              onRequestClose={() => {
+                alert('Modal has been closed.');
+              }}>
+              <View style={styles.modalContainer}>
+                <ScrollView style={styles.wordContainer}>
+                  <View style={stylesRow.row}>
+                    { katakanaList.map((item, key)=>( 
+                      <View key={key} style={[stylesRow.col20, styles.btnWord]}>
+                        <TouchableHighlight style={styles.wordMain}  
+                        onPress={() => {
+                          this.selectKatakanaList(key);
+                        }}><Text>{item.moji}</Text></TouchableHighlight>
+                      </View>
+                    )) } 
+                  </View>
+                </ScrollView>
+                <TouchableHighlight style={styles.container}
+                    onPress={() => {
+                      this.setModalKataClose();
+                    }}>
+                  <Text style={styles.modalCloseText}>{ strings['PROFILE_MODAL_CLOSE'] }</Text>
+                </TouchableHighlight>
+              </View>
+            </Modal>            
               <View style={{ flex: 4, justifyContent:'center', alignItems:'center'}}>
                   <View style={{ flex: 1 ,  justifyContent:'center', alignItems:'center'}}>
                     <View  style={{ width: 280, height:280, position: 'relative' }}>
@@ -254,21 +353,22 @@ export default class HL4 extends Component {
               </View>
               <View style={{ flex: 3, justifyContent:'center', alignItems:'center'}}>
                 <View style={ styles.containerText }>
-                  <View  style={ styles.containerTextInside }><TouchableHighlight style={ styles.containerTextButton }><Text style={ styles.containerTextMain }>あ</Text></TouchableHighlight></View>
-                  <View  style={ styles.containerTextInside }><TouchableHighlight style={ styles.containerTextButton }><Text style={ styles.containerTextMain }>ア</Text></TouchableHighlight></View>
+                  <View  style={ styles.containerTextInside }><TouchableHighlight style={ styles.containerTextButton } onPress={() => this.ListHiraganaOpen() }><Text style={ styles.containerTextMain }>あ</Text></TouchableHighlight></View>
+                  <View  style={ styles.containerTextInside }><TouchableHighlight style={ styles.containerTextButton } onPress={() => this.ListKatakanaOpen() }><Text style={ styles.containerTextMain }>ア</Text></TouchableHighlight></View>
                   <View  style={ styles.containerTextInside }><TouchableHighlight style={ styles.containerTextButton } onPress={() => this.resetData() }><Icon name="undo" size={25} color={"white"} /></TouchableHighlight></View>
                 </View>
                 <View style={ styles.containerText }>
                   <View  style={ styles.containerTextInside }><TouchableHighlight style={ styles.containerTextButton } onPress={() => this.updateNext() }><Icon name="arrow-right"  type='font-awesome'  size={25} color={"white"} /></TouchableHighlight></View>
                   <View  style={ styles.containerTextInside }><TouchableHighlight style={ styles.containerTextButton } onPress={() => this.getRandom() }><Icon name="random"  type='font-awesome'  size={25} color={"white"} /></TouchableHighlight></View>
-                  <View  style={ styles.containerTextInside }><TouchableHighlight style={ styles.containerTextButton }><Icon name="home"  type='font-awesome'  size={25} color={"white"} /></TouchableHighlight></View>
+                  <View  style={ styles.containerTextInside }><TouchableHighlight style={ styles.containerTextButton } onPress={() => this.props.goBack.props.navigation.goBack()}><Icon name="home"  type='font-awesome'  size={25} color={"white"} /></TouchableHighlight></View>
                 </View>
               </View>
           </View>
         );
       }
     }
-    
+    const stylesRow = require('../styles/style');
+
     const styles = StyleSheet.create({
       container: {
         flex: 1,
@@ -323,6 +423,40 @@ export default class HL4 extends Component {
       containerTextMain : {
         color: '#ffffff',
         fontSize: 20,
+      },
+      modalContainer : {
+        backgroundColor: '#ffffff',
+        height: '100%',
+        width: '100%',
+      },
+      wordContainer : {
+        height: '80%',
+        width: '100%',
+      },
+      ButtonClose : {
+        backgroundColor : '#dddddd',
+        color : '#ffffff'
+      },
+      width20: {
+        width : '20%',
+        height : 30,
+      },
+      btnWord : {
+        height : 50,
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding : 5
+      },
+      wordMain : {
+        borderRadius: 2,
+        borderWidth: 2,
+        borderColor : '#d2f9fc',
+        backgroundColor: '#ffffff',
+        height :'100%',
+        width : '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+
       }
       
     });
