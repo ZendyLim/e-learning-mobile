@@ -56,6 +56,7 @@ import  { strings }   from '../../config/localization';
       this.setState({modalVisible: false});
     }
     componentWillMount(){
+      console.log(this.props.image);
       if(this.props.user){
         this.setState({
           userName: this.props.user.username,
@@ -68,7 +69,7 @@ import  { strings }   from '../../config/localization';
           japaneseSchoolName: this.props.user.japaneseSchoolName,
           dateFrom: this.props.user.dateFrom,
           dateTo: this.props.user.dateTo,
-          image: "data:image/jpg;base64,"+this.props.user.image,
+          image: this.props.user.image,
         });
       }
 
@@ -139,7 +140,7 @@ import  { strings }   from '../../config/localization';
   };
 
   saveUserDataImage = (image) => {
-    var userData = this.state;
+    //var userData = this.state;
     // userData.graduationDate =this.unixTimeStamps(this.state.graduationDate) ;
     // userData.dateFrom = this.unixTimeStamps(this.state.dateFrom);
     // userData['dateTo'] = this.unixTimeStamps(this.state.dateTo); 
@@ -179,7 +180,6 @@ import  { strings }   from '../../config/localization';
 
 
   render() {
-      console.log(this.state.image, "image");
       return (
         <ScrollView>
         <Modal
@@ -232,7 +232,7 @@ import  { strings }   from '../../config/localization';
                 onPhotoSelect={avatar => {
                   if (avatar) {
                     console.log('Image base64 string: ', avatar)
-                    this.saveUserDataImage(avatar);
+                    this.saveUserDataImage("data:image/jpg;base64,"+ avatar);
                   }
                 }}
               >
@@ -378,6 +378,7 @@ import  { strings }   from '../../config/localization';
   const styles = require('../../styles/profileStyle');
   
   function mapStateToProps(state, props) {
+    console.log(state.user.user);
     return {
         user: state.user.user,
         lang: state.user.lang

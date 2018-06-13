@@ -9,17 +9,21 @@ const initialState = {
     err: '',
     isErr: false,
     fukushu: true,
+    quizSize: 0
 };
  
 export default function userReducer (state = initialState, action) {
     switch (action.type) {
+        
         case START_TIME_LEARN:
+        console.log(action);
             state = Object.assign({}, state, { 
                 studyType: action.studyType,
                 startTime : action.startLearn,
                 studyID : action.studyID,
                 endTime: '',
-                studyRecord: [] ,
+                studyRecord: [],
+                quizSize : action.quizSize,
                 isErr: false,
         });   
 

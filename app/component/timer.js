@@ -113,20 +113,28 @@ class TimerBar extends Component {
     }
 
     timerEnd(){
-        if(this.props.timerRun){
-          this.props.onTimesUp(true);
+      if(this.props.timerRun){
+        if(!this.props.isTopicTest){           
+            this.props.onTimesUp(true);
+            this.props.timeStops(this.seconds - this.state.progress);
+        }
+        else{
+          this.props.onTestEnd(true);
           this.props.timeStops(this.seconds - this.state.progress);
         }
+      }
     }
 
-    timerStop(){      
-      if(!this.props.timerRun){
-        Animated.timing(
-          this.progress
-        ).stop();
+    timerStop(){    
+      //if(!this.props.isTopicTest){  
+        if(!this.props.timerRun){
+          Animated.timing(
+            this.progress
+          ).stop();
 
-        this.props.timeStops(this.state.progress);
-      }      
+          this.props.timeStops(this.state.progress);
+        }    
+      //}  
     }
 
     timerResume(){      
@@ -135,11 +143,20 @@ class TimerBar extends Component {
       }
     }
 
-    timerRestart(){      
+    timerRestart(){
+      // if(this.props.timerRestart && !this.props.isTopicTest){   
+      //       this.progress.setValue(0);
+      //       this.timerStart();      
+      // }   
+      
       if(this.props.timerRestart){
-        this.progress.setValue(0);
+        if(!this.props.isTopicTest){
+          this.progress.setValue(0);        
+        } 
+        
         this.timerStart();
-      }
+              
+      }  
     }
 }
 module.exports = TimerBar;
