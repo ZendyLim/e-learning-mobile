@@ -39,7 +39,7 @@ class App extends Component {
   render() {
       return (
         // <HL4 />
-        <Provider store={store}>
+          <Provider store={store}>
             <PersistGate loading={null} persistor={persistor}>
               <Root />
             </PersistGate>
