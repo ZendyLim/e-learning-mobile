@@ -26,6 +26,7 @@ import FBLoginView from '../../component/fblogin';
 import { FBLogin, FBLoginManager } from 'react-native-facebook-login';
 import DatePicker from 'react-native-datepicker'; 
 import  { strings }   from '../../config/localization';
+import { studyDays, studyReasonOption, major } from '../../config/data';  
   
   class ProfileScreen extends Component {
     static navigationOptions = {
@@ -35,15 +36,21 @@ import  { strings }   from '../../config/localization';
     unknownImage = "data:image/gif;base64,R0lGODlhGAEYAZEAAP///+Xl5ZmZmQAAACwAAAAAGAEYAQAC/4yPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLVgrG4bJxjE6r1+y1+b1ry+dzuD1Gz+vV975pDxjo5kfIIXiIKFC4OJHo+KjIKBkAWVk5SWip6Yh5t/mZ2PkGSnooGlaaCnjKpeoayGr1OgsbO0WLq2crldtbtwvlKzwI3DR8jFZsjMysLMYM7fwDTc0m7VOdnXbNo+0dyW3zPQ4eLkP+bQ6Dzq7Owg5f7k4SXz//Vx9/P5Jvvx/Sz9+/DgHzDTRUUOBBDAkVLrTQUN9DhhHhTbxQ0eJFCv8ZNW6U0NHjxwch242EUBLdSZQpx61s0NLkywQxVc5EUNPmTQM5dd7sSW4nT6AudxItOvNo0J9KvRlt6jQpVG1Mp0Z7arVZ1azIsHLtKvUr2JViqb0sa3Yk2rQb17Kd6LZa27hX4dLVavfusbl6h13sO3Yh4L15B/cqbDgX4sS0/jJWvPixKseSZ/GtPJky5lSXN5Pq7PnTx9CfR5MWffK0JrKqL6VuDYk1bE6vZ4eSbVvQ2dy6w/LO4/X3L9/C5QQvbm0rcmLEl2877pyM0OjMmzsXOpS69Onat3PXjj179PDir5PvTp4S9fTqx6cHfx4+dPPK5Vt3X3/9fPy7uyf/y68fgPTdtxx2/nlHIHIG+hfegQ0yuCB6EdonYHEPSvhdgBMOmCGH+/32HoUf8haihh0WWKKHI9rGnogngsheewrGKKNwNNZI4o04sqjjjD3CqOOOrQV5AJBE5khkkbMlucCQTCqg2pNQkiZlk55VaWVlWDKA2ZZcaunllI+FmSVjZJZp2JlipqkmTWa26SabcCo52JxxAmYnTnXmqWdffPap15903iXooHQVWp5biCa61qJCiuUoo5BGemikj2Zl6aVWZVoppXFx+qmlnTo66qKlInpqoakKuuqfrfL5ap6x2jnrnLXCeWubuaq565m9kvlrmMF6GaqoioLaKLJo6WWqKVTMFutpsqQSqqqctI5pa5e8hiZslFjyyCSSP9p4o4orLhmfi7ipq9aB8tTmYH/uvhuZu6DN+9w/+K7izr63SeOvJbsEDMopBGdWyMGN+aHwYaM0LAwqEAemxcRvyWJxNlVk7NMyHHeMxMf9hCxyQkSU3NDJKBek8sojD+FyQC3HLJEQNBsE8801B6HzzkD0LNLPQIOMzdBL2Ww0UjwnnU7OTFPl9NNyRS11XUtXffE0WGdd9NZ4Xe01YUiHLTbYZPsy89kOj6322ma3vTDbcMf99tyupG333VTnjXDdfJcm99+lkFAAADs=";
     state = {
       userName: "",
+      birthdate: "",
+      gender:"",
       latestEducation : "",
       latestEducationName: "",
-      major: "",
+      educationMajor: "",
       graduationYear: "",
       englishLevel: "",
       japaneseType: "",
-      japaneseSchoolName : "",
       dateFrom:"",
       dateTo :"",
+      studyDay:"",
+      studyHours:"",
+      studyReason:"",
+      finishDate:"",
+
       modalVisible: false,
       image : "data:image/gif;base64,R0lGODlhGAEYAZEAAP///+Xl5ZmZmQAAACwAAAAAGAEYAQAC/4yPqcvtD6OctNqLs968+w+G4kiW5omm6sq27gvH8kzX9o3n+s73/g8MCofEovGITCqXzKbzCY1Kp9Sq9YrNarfcrvcLVgrG4bJxjE6r1+y1+b1ry+dzuD1Gz+vV975pDxjo5kfIIXiIKFC4OJHo+KjIKBkAWVk5SWip6Yh5t/mZ2PkGSnooGlaaCnjKpeoayGr1OgsbO0WLq2crldtbtwvlKzwI3DR8jFZsjMysLMYM7fwDTc0m7VOdnXbNo+0dyW3zPQ4eLkP+bQ6Dzq7Owg5f7k4SXz//Vx9/P5Jvvx/Sz9+/DgHzDTRUUOBBDAkVLrTQUN9DhhHhTbxQ0eJFCv8ZNW6U0NHjxwch242EUBLdSZQpx61s0NLkywQxVc5EUNPmTQM5dd7sSW4nT6AudxItOvNo0J9KvRlt6jQpVG1Mp0Z7arVZ1azIsHLtKvUr2JViqb0sa3Yk2rQb17Kd6LZa27hX4dLVavfusbl6h13sO3Yh4L15B/cqbDgX4sS0/jJWvPixKseSZ/GtPJky5lSXN5Pq7PnTx9CfR5MWffK0JrKqL6VuDYk1bE6vZ4eSbVvQ2dy6w/LO4/X3L9/C5QQvbm0rcmLEl2877pyM0OjMmzsXOpS69Onat3PXjj179PDir5PvTp4S9fTqx6cHfx4+dPPK5Vt3X3/9fPy7uyf/y68fgPTdtxx2/nlHIHIG+hfegQ0yuCB6EdonYHEPSvhdgBMOmCGH+/32HoUf8haihh0WWKKHI9rGnogngsheewrGKKNwNNZI4o04sqjjjD3CqOOOrQV5AJBE5khkkbMlucCQTCqg2pNQkiZlk55VaWVlWDKA2ZZcaunllI+FmSVjZJZp2JlipqkmTWa26SabcCo52JxxAmYnTnXmqWdffPap15903iXooHQVWp5biCa61qJCiuUoo5BGemikj2Zl6aVWZVoppXFx+qmlnTo66qKlInpqoakKuuqfrfL5ap6x2jnrnLXCeWubuaq565m9kvlrmMF6GaqoioLaKLJo6WWqKVTMFutpsqQSqqqctI5pa5e8hiZslFjyyCSSP9p4o4orLhmfi7ipq9aB8tTmYH/uvhuZu6DN+9w/+K7izr63SeOvJbsEDMopBGdWyMGN+aHwYaM0LAwqEAemxcRvyWJxNlVk7NMyHHeMxMf9hCxyQkSU3NDJKBek8sojD+FyQC3HLJEQNBsE8801B6HzzkD0LNLPQIOMzdBL2Ww0UjwnnU7OTFPl9NNyRS11XUtXffE0WGdd9NZ4Xe01YUiHLTbYZPsy89kOj6322ma3vTDbcMf99tyupG333VTnjXDdfJcm99+lkFAAADs=",
     }
@@ -59,15 +66,20 @@ import  { strings }   from '../../config/localization';
       if(this.props.user){
         this.setState({
           userName: this.props.user.username,
+          birthdate: this.props.user.birthdate,
+          gender:this.props.user.gender,
           latestEducation: this.props.user.latestEducation,
           latestEducationName: this.props.user.latestEducationName,
-          major: this.props.user.major,
+          educationMajor: this.props.user.educationMajor,
           graduationYear: this.props.user.graduationYear,
           englishLevel: this.props.user.englishLevel,
           japaneseType: this.props.user.japaneseType,
-          japaneseSchoolName: this.props.user.japaneseSchoolName,
           dateFrom: this.props.user.dateFrom,
           dateTo: this.props.user.dateTo,
+          studyDay: this.props.user.studyDay,
+          studyHours: this.props.user.studyHours,
+          studyReason: this.props.user.studyReason,
+          finishDate: this.props.user.finishDate,
           image: "data:image/jpg;base64,"+this.props.user.image,
         });
       }
@@ -177,8 +189,6 @@ import  { strings }   from '../../config/localization';
     }
   }
 
-
-
   render() {
       console.log(this.state.image, "image");
       return (
@@ -252,59 +262,44 @@ import  { strings }   from '../../config/localization';
               
             </View>
             <View style={styles.profileContent}>
-              <Text style={styles.userProfileLabelParent}>Latest Education</Text>
-              <Text style={styles.userProfileLabelChild}>School / University</Text>
-              <TextInput style={styles.inputStyle}
-              onChangeText={(latestEducation) => this.setState({latestEducation})}
-              value={this.state.latestEducation}
-              />
-              <Text style={styles.userProfileLabelChild}>Major</Text>
-              <TextInput style={styles.inputStyle}
-              onChangeText={(major) => this.setState({major})}
-              value={this.state.major}
-              />
-              <Text style={styles.userProfileLabelChild}>Graduation Year</Text>
-              <DatePicker
-                style={{width: 100}}
-                date={this.state.graduationYear}
-                mode="date"
-                placeholder="select date"
-                format="YYYY-MM"
-                // minDate={new Date()}
-                confirmBtnText="Confirm"
-                cancelBtnText="Cancel"
-                customStyles={{
-                  dateIcon: {
-                    position: 'absolute',
-                    left: 0,
-                    top: 4,
-                    marginLeft: 0
-                  },
-                  dateInput: {
-                    marginLeft: 36
-                  }
-                }}
-                onDateChange={this.onDateChange}
-              />
-              <Text style={styles.userProfileLabelChild}>English Level</Text>
-              <TextInput style={styles.inputStyle}
-              onChangeText={(englishLevel) => this.setState({englishLevel})}
-              value={this.state.englishLevel}
-              />
+              <Text style={styles.userProfileLabelParent}>{ strings['PROFILE_PERSONAL_DATA']}</Text>
+              <Text style={styles.userProfileLabelChild}>{ strings['PROFILE_GENDER']}</Text>
+              <Text style={styles.inputStyle}>{this.state.gender}</Text>
+              <Text style={styles.userProfileLabelChild}>{ strings['PROFILE_BIRTHDATE']}</Text>
+              <Text style={styles.inputStyle}>{ this.unixTimeStampsRevert(this.state.birthdate)}</Text>
 
-              <Text style={styles.userProfileLabelParent}>Japanese Study History</Text>
+              <Text style={styles.userProfileLabelParent}>{ strings['PROFILE_EDUCATION_HISTORY']}</Text>
+              <Text style={styles.userProfileLabelChild}>{ strings['PROFILE_LATEST_EDUCATION']}</Text>
+              <Text style={styles.inputStyle}>{this.state.latestEducation}</Text>
+              <Text style={styles.userProfileLabelChild}>{ strings['PROFILE_SCHOOL_OR_UNIVERSITY']}</Text>
+              <Text style={styles.inputStyle}>{this.state.latestEducationName}</Text>
+
+              <Text style={styles.userProfileLabelChild}>{ strings['PROFILE_MAJOR']}</Text>
+              <Text style={styles.inputStyle}>{ this.getMajor()}</Text>
+
+              <Text style={styles.userProfileLabelChild}>{ strings['PROFILE_GRADUATION_YEAR']}</Text>
+              <Text style={styles.inputStyle}>{this.state.graduationYear}</Text>
+
+              <Text style={styles.userProfileLabelChild}>{ strings['PROFILE_ENGLISH_LEVEL']}</Text>
+              <Text style={styles.inputStyle}>{this.state.englishLevel}</Text>
+
+              <Text style={styles.userProfileLabelParent}>{ strings['PROFILE_JAPANESE_STUDY_HISTORY']}</Text>
               <Text style={styles.userProfileLabelChild}>{this.state.japaneseType}</Text>
+              <Text style={styles.inputStyle}>{ this.unixTimeStampsRevert(this.state.dateFrom)}  ~  { this.unixTimeStampsRevert(this.state.dateTo)}</Text>
 
-              <TextInput style={styles.inputStyle}
-              onChangeText={(japaneseSchoolName) => this.setState({japaneseSchoolName})}
-              value={this.state.japaneseSchoolName}
-              />
-             
+              <Text style={styles.userProfileLabelParent}>{strings['PROFILE_STUDY_PLAN']}</Text>
+              <Text style={styles.userProfileLabelChild}>{strings['PROFILE_STUDY_REASON']}</Text>
+              <Text style={styles.inputStyle}>{ this.getStudyReasons()}</Text>
+              <Text style={styles.userProfileLabelChild}>{strings['PROFILE_STUDY_DAYS']}</Text>
+              <Text style={styles.inputStyle}>{ this.getdays()}</Text>
+              <Text style={styles.userProfileLabelChild}>{strings['PROFILE_STUDY_HOURS']}</Text>
+              <Text style={styles.inputStyle}>{this.state.studyHours}</Text>
+              <Text style={styles.userProfileLabelChild}>{strings['PROFILE_DESIRED_FINISH_DATE']}</Text>
+              <Text style={styles.inputStyle}>{ this.unixTimeStampsRevert(this.state.finishDate)}</Text>
 
-              <Text style={styles.inputStyle}>{this.state.dateFrom}  ~  {this.state.dateTo}</Text>
 
-              <Text style={styles.userProfileLabelParent}>Account</Text>
-              <Text style={styles.userProfileLabelChild}>Sign In : </Text>
+              <Text style={styles.userProfileLabelParent}>{strings['PROFILE_ACCOUNT']}</Text>
+              <Text style={styles.userProfileLabelChild}>{strings['PROFILE_FB_SIGN_IN']}</Text>
               <View style={styles.socialContainer}>
                 <FBLogin 
                 buttonView={<FBLoginView />}
@@ -345,26 +340,26 @@ import  { strings }   from '../../config/localization';
                   }}
                 />
               </View>  
-              <TouchableHighlight style={styles.btnupdate}
+              {/* <TouchableHighlight style={styles.btnupdate}
                 onPress={this.saveUserData.bind(this)}
               >
                 <Text style={styles.txtupdateButton}>Update</Text>
-              </TouchableHighlight>
+              </TouchableHighlight> */}
 
               <TouchableOpacity  onPress={() => {
                 this.setModalVisible(true);
               }}>
-                <Text style={styles.menuOption}>{ strings['SETTING_LANGUAGES_PROFILE']}</Text>
+                <Text style={styles.menuOption}>{strings['SETTING_LANGUAGES_PROFILE']}</Text>
                 <View style={styles.vline}></View>
               </TouchableOpacity>
 
               <TouchableOpacity onPress={this._gotoSetting}>
-                <Text style={styles.menuOption}>Setting</Text>
+                <Text style={styles.menuOption}>{strings['PROFILE_SETTING']}</Text>
                 <View style={styles.vline}></View>
               </TouchableOpacity>
 
               <TouchableOpacity onPress={this._showMoreApp}>
-                <Text style={styles.menuOption}>Logout</Text>
+                <Text style={styles.menuOption}>{strings['PROFILE_LOGOUT']}</Text>
                 <View style={styles.vline}></View>
               </TouchableOpacity>
 
@@ -373,7 +368,70 @@ import  { strings }   from '../../config/localization';
         </ScrollView>
       );
     }
-  
+    getdays(){
+      if(this.state.studyDay !=""){
+        const dayString = this.state.studyDay;
+        let splitDay= dayString.split('');
+        let dayResult ="";
+        for(x=0;x<studyDays.length;x++){
+          if(splitDay[x] == 1){
+            if(dayResult==""){
+              dayResult = dayResult + studyDays[x].text;
+            }else{
+              dayResult = dayResult + ", " + studyDays[x].text;
+            }
+          }
+        }
+        return dayResult
+      }    
+    }
+
+    getStudyReasons(){
+      if(this.state.studyReason != ""){
+        const reasonString = this.state.studyReason;
+        let splitReason = reasonString.split('');
+        let reasonResult="";
+        for(x=0;x<studyReasonOption.length;x++){
+          if(reasonString[x] == 1){
+            if(reasonResult==""){
+              reasonResult = reasonResult + studyReasonOption[x].text;
+            }else{
+              reasonResult = reasonResult + ", " + studyReasonOption[x].text;
+            }
+          }
+        }
+        return reasonResult
+      }
+     
+    }
+
+    getMajor(){
+      if(this.state.educationMajor != ""){
+        const majorString = this.state.educationMajor;
+        let splitMajor = majorString.split('');
+        let majorResult ="";
+        for(x=0;x<major.length;x++){
+          if(splitMajor[x] == 1){
+            if(majorResult==""){
+              majorResult = majorResult + major[x].text;
+            }else{
+              majorResult = majorResult + ", " + major[x].text;
+            }
+          }
+        }
+        return majorResult
+      }
+        
+    }
+
+    unixTimeStampsRevert = (unixDate) =>{
+      let toUnixTimestamps = unixDate;
+      toUnixTimestamps = toUnixTimestamps + " 00:00:00";
+      dateVal = (new Date(toUnixTimestamps).getTime()*1000);
+      return dateVal;
+    }
+      
+    
   }
 
   const styles = require('../../styles/profileStyle');

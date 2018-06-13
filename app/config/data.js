@@ -3155,10 +3155,6 @@ export const studyDays =[
 
 export const major =[
   {
-    "id" : 0,
-    "text" : "Choose your major"
-  },
-  {
     "id" : 1,
     "text" : "Foreign language"
   },
@@ -3177,5 +3173,20 @@ export const major =[
   {
     "id" : 5,
     "text" : "Other Science"
+  }
+]
+
+export const gender =[
+  {
+    "id" : 0,
+    "text" : "Choose your gender"
+  },
+  {
+    "id" : 1,
+    "text" : "Male"
+  },
+  {
+    "id" : 2,
+    "text" : "Female"
   }
 ]

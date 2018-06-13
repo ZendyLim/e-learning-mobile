@@ -30,19 +30,19 @@ import {
     state = {
       userId : "",
       userName : "",
-      userPass: "",
+      gender:"",
+      birthdate:"",
       latestEducation : "",
       latestEducationName : "",
-      major : "",
+      educationMajor : "",
       graduationYear : "",
       englishLevel : "",
       japaneseType : "",
-      japaneseSchoolName : "",
       dateFrom : "",
       dateTo : "",
       studyDay: "",
       studyHours:0.5,
-      studyReason: "Choose your Reason",
+      studyReason: "",
       finishDate: "",
       statusDays:false,
       statusReasons:false,
@@ -61,17 +61,17 @@ import {
         userId : navigation.getParam('userId', null),
         userName : navigation.getParam('userName', null),
         userPass : navigation.getParam('userPass',null),
+        gender  :navigation.getParam('gender',null),
+        birthdate  :navigation.getParam('birthdate',null),
         latestEducation : navigation.getParam('latestEducation', null),
         latestEducationName : navigation.getParam('latestEducationName', null),
-        major : navigation.getParam('major', null),
+        educationMajor : navigation.getParam('educationMajor', null),
         graduationYear : navigation.getParam('graduationYear', null),
         englishLevel : navigation.getParam('englishLevel', null),
         japaneseType : navigation.getParam('japaneseType', null),
-        japaneseSchoolName : navigation.getParam('japaneseSchoolName', null),
         dateFrom : navigation.getParam('dateFrom', null),
         dateTo : navigation.getParam('dateTo', null),
         startDate : navigation.getParam('startDate', null),
-
       });
     }
 
@@ -88,19 +88,32 @@ import {
     saveStudyTime = async () =>{
       var userData = this.state;
       userData['studyDay'] = this.combineDays();
-      // this.combineDays()
+      userData['studyReason'] = this.combineReasons();
+      
       if(!this.validation()){
         this.props.navigation.navigate('Confirmation',(this.state));
       }
     };
 
     validation = () => {
-      const { studyReason, statusDays, finishDate} = this.state;
-      let error = '';
-      // if (studyReason == "Choose your Reason") error = "Study reason is required";
-       if (!statusDays[0] && !statusDays[1] && !statusDays[2] && !statusDays[3]
-        && !statusDays[4] && !statusDays[5] && !statusDays[6]) error = "You need to choose at least 1 day";
-      else if (!finishDate) error = "Desired finish date is required";
+      const { studyReason, finishDate, statusReasons, statusDays} = this.state;
+      let error = ''
+      let stsReason = false;
+      let stsDay = false;
+      for(x=0;x<studyReasonOption.length;x++){
+          if(statusReasons[x]){
+            stsReason=true;
+          }
+      }
+      
+      for(x=0;x<studyDays.length;x++){
+        if(statusDays[x]){
+          stsDay=true;
+        }
+    }
+    if(stsReason==false)error = "Study Reason is required";
+    else if(stsDay==false)error = "You need to choose at least 1 day";
+    else if (!finishDate) error = "Desired finish date is required";
       if (error) {
         Alert.alert('Warning', error);
         return true; 
@@ -120,19 +133,19 @@ import {
               <Text style={styles.textBlue}>Study Plan</Text>
               <Text style={styles.textBlack}>Why you want to study Japanese?</Text>
               {studyReasonOption.map((item, key)=>(
-                <CheckBox
+                <CheckBox key={key}
                   title={item.text}
                   checked={this.state.statusReasons[key]}
-                  onPress={(checked) => this.checkReason(key)}
+                  onPress={(checked) => this.setCheckReason(key)}
                 />
               ))}
 
               <Text style={styles.textBlack}>How many times per week?</Text>
               {studyDays.map((item, key)=>(
-                <CheckBox
+                <CheckBox key={key}
                   title={item.text}
                   checked={this.state.statusDays[key]}
-                  onPress={(checked) => this.checkDay(key)}
+                  onPress={(checked) => this.setCheckDay(key)}
                 />
               ))}
               <Text style={styles.textBlack}>How many hours per day?</Text>
@@ -152,6 +165,7 @@ import {
               <DatePicker
                 style={{width: 200}}
                 date={this.state.finishDate}
+                androidMode="spinner"
                 mode="date"
                 placeholder="select date"
                 format="YYYY-MM-DD"
@@ -193,8 +207,9 @@ import {
       );
     }
 
+    
 
-    checkDay(key) {
+    setCheckDay(key) {
       if(this.checkDays[key]==true){
           this.checkDays[key] = false;
           this.setState({ statusDays: this.checkDays });
@@ -206,30 +221,39 @@ import {
       this.setFinishDate()
     };
 
-    checkReason(key) {
-      console.log("reason")
-      if(this.checkReason[key]==true){
-          this.checkReason[key] = false;
-          this.setState({ statusReasons: this.checkReason });
+    setCheckReason(key) {
+      if(this.checkReasons[key]==true){
+          this.checkReasons[key] = false;
+          this.setState({ statusReasons: this.checkReasons });
       }
       else{
-          this.checkReason[key] = true;
-          this.setState({ statusReasons: this.checkReason });
+          this.checkReasons[key] = true;
+          this.setState({ statusReasons: this.checkReasons });
       }
     };
 
     combineDays = () =>{
-      var test="";
+      var dayStatus="";
       for(x=0;x<7;x++){
         if(this.checkDays[x] == true){
-          // test=test + studyDays[x].id+1
-          test=test+1
+          dayStatus=dayStatus+1
         }else{
-          test=test+0
-          // test=test + studyDays[x].id+0
+          dayStatus=dayStatus+0
         }
       } 
-      return test;
+      return dayStatus;
+    }
+
+    combineReasons = () =>{
+      var reasonStatus="";
+      for(x=0;x<studyReasonOption.length;x++){
+        if(this.checkReasons[x] == true){
+          reasonStatus=reasonStatus+1
+        }else{
+          reasonStatus=reasonStatus+0
+        }
+      } 
+      return reasonStatus;
     }
 
     setFinishDate(){

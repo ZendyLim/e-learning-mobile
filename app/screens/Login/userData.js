@@ -15,8 +15,8 @@ import {
     Alert,
     Image
   } from 'react-native';
-  import { List, ListItem } from 'react-native-elements';
-  import { latestEducation, englishLevel, japaneseStudyHistory, major } from '../../config/data';
+  import { List, ListItem, CheckBox } from 'react-native-elements';
+  import { latestEducation, englishLevel, japaneseStudyHistory, major, gender } from '../../config/data';
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import * as Actions from '../../actions/user'; //Import your actions
@@ -31,26 +31,33 @@ import {
       userId : "",
       userName: "",
       userPass: "",
+      gender: "Choose your gender",
+      birthdate:"",
       latestEducation : "Choose latest education",
       latestEducationName: "",
-      major: "",
+      educationMajor: "",
       graduationYear: "",
       englishLevel: "Choose english level",
       japaneseType: "None",
-      japaneseSchoolName : "",
       dateFrom:"",
       dateTo:"",
-      startDate : ""
+      startDate : "",
+      statusMajor:false,
     }
+    constructor(props){
+        super(props);
+        this.checkMajor = [];
+      }
     
     validation () {
-        const { latestEducation, latestEducationName, major, graduationYear, englishLevel, 
-            japaneseType, japaneseSchoolName, dateFrom, dateTo} = this.state;
+        const { latestEducation, latestEducationName, graduationYear, englishLevel, 
+            japaneseType, japaneseSchoolName, dateFrom, dateTo, gender, birthdate, statusMajor} = this.state;
         let error = '';
         console.log(latestEducation,"latest")
-        if (latestEducation == "Choose latest education") error = "Latest Education is required";
+        if (!birthdate) error = "Birthdate is required";
+        else if (gender == "Choose your gender") error = "Gender is required";
+        else if (latestEducation == "Choose latest education") error = "Latest Education is required";
         else if (!latestEducationName) error = "School / University name is required";
-        else if (latestEducation == "University" && !major) error = "Major is required";
         else if (!graduationYear) error = "Graduation year is required";
         else if (englishLevel == "Choose english level") error = "English level is required";
         if(japaneseType !="None"){
@@ -58,6 +65,16 @@ import {
             else if(!dateTo) error = "Date to is required";
             else if(dateTo <= dateFrom) error = "Date From Cannot < than date to";
         }
+        if (latestEducation == "University"){
+            let stsmajor = false
+            for(x=0;x<major.length;x++){
+                if(statusMajor[x]){
+                    stsmajor=true;
+                }
+            }
+            if(stsmajor==false)error = "Major is required";
+        } 
+
         if (error) {
           Alert.alert('Warning', error);
           return true; 
@@ -69,7 +86,6 @@ import {
       }
 
     componentDidMount() {
-        
       const { navigation } = this.props;
       this.setState({
         userId: navigation.getParam('userId', null),
@@ -79,13 +95,17 @@ import {
       });
     }
 
-    // updateName = (name) => {
-    //   this.setState({ userName: name })
-    // }
+    
 
     onDateChange = (date) => {
         this.setState({
             graduationYear: date,
+        });
+    };
+
+    birthDateChange = (date) => {
+        this.setState({
+            birthdate: date,
         });
     };
 
@@ -100,6 +120,9 @@ import {
         });
     };
 
+    updateGender = (genderUpdate) => {
+        this.setState({ gender: genderUpdate })
+    }
     updateEnglishLevel = (englishlvl) => {
         this.setState({ englishLevel: englishlvl })
     }
@@ -109,16 +132,49 @@ import {
     updateJapaneseType = (japaneseTypeUpdate) => {
         this.setState({ japaneseType: japaneseTypeUpdate })
     }
-    updateMajor = (majorUpdate) => {
-        this.setState({ major: majorUpdate })
-    }
-    
+    // updateMajor = (majorUpdate) => {
+    //     this.setState({ educationMajor: majorUpdate })
+    // }
+
     render() {
+    const { navigation } = this.props;
       return (
         <View>
             <ScrollView>
                 <View style={styles.containerWhiteTop }>
                 <View style={ styles.contentLoginData }>
+                    <Text style={styles.textBlue}>Birthdate</Text>
+                    <DatePicker
+                    style={{width: 130}}
+                    date={this.state.birthdate}
+                    androidMode="spinner"
+                    mode="date"
+                    placeholder="select date"
+                    format="YYYY-MM-DD"
+                    confirmBtnText="Confirm"
+                    cancelBtnText="Cancel"
+                    customStyles={{
+                        dateIcon: {
+                        position: 'absolute',
+                        left: 0,
+                        top: 4,
+                        marginLeft: 0
+                        },
+                        dateInput: {
+                        marginLeft: 36
+                        }
+                    }}
+                    onDateChange={this.birthDateChange}
+                    />
+                    <Text style={styles.textBlue}>Gender</Text>
+                    <Picker style={[styles.picker]}
+                        style={{ height: 50, width: 200 }}
+                        selectedValue = {this.state.gender} onValueChange = {this.updateGender}
+                    >
+                        {gender.map((item, key) => (
+                        <Picker.Item label={item.text} value={item.text} key={key} />
+                        ))}
+                    </Picker>
                     <Text style={styles.textBlue}>Latest Education</Text>
                     <Picker style={[styles.picker]}
                         style={{ height: 50, width: 200 }}
@@ -136,14 +192,13 @@ import {
                     />
 
                     <Text style={styles.textBlue}>Major</Text>
-                    <Picker style={[styles.picker]}
-                        style={{ height: 50, width: 200 }}
-                        selectedValue = {this.state.major} onValueChange = {this.updateMajor}
-                    >
-                        {major.map((item, key) => (
-                        <Picker.Item label={item.text} value={item.text} key={key} />
-                        ))}
-                    </Picker>
+                    {major.map((item, key)=>(
+                        <CheckBox key={key}
+                            title={item.text}
+                            checked={this.state.statusMajor[key]}
+                            onPress={(checked) => this.setCheckMajor(key)}
+                        />
+                    ))}
 
                     <Text style={styles.textBlue}>Graduation Year</Text>
                     <DatePicker
@@ -263,14 +318,41 @@ import {
     }
   
     timeIn = () => {
+        var userData = this.state;
+        userData['educationMajor'] = this.combineMajors();
         if(!this.validation()){
             this.props.navigation.navigate('TimeIn',(this.state));
         }
     };
 
-   
+    setCheckMajor(key) {
+        if(this.checkMajor[key]==true){
+            this.checkMajor[key] = false;
+            this.setState({ statusMajor: this.checkMajor });
+        }
+        else{
+            this.checkMajor[key] = true;
+            this.setState({ statusMajor: this.checkMajor });
+        }
+    };
+
+    combineMajors = () =>{
+        var majorStatus="";
+        for(x=0;x<major.length;x++){
+          if(this.checkMajor[x] == true){
+            majorStatus=majorStatus+1
+          }else{
+            majorStatus=majorStatus+0
+          }
+        } 
+        return majorStatus;
+    }
 
   }
+
+  
+
+  
 
   const styles = require('../../styles/style');
   function mapStateToProps(state, props) {
