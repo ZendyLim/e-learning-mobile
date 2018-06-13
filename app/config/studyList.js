@@ -251,6 +251,10 @@ export const StudyList = [{
     study : '4',
   },{
     title : 'FLASH_CARD',
+    type : 'GL2',
+    study : '4'
+  },{
+    title : 'EXPLAINATION',
     type : 'GL3',
     study : '4'
   },],
@@ -260,6 +264,10 @@ export const StudyList = [{
     study : '5',
   },{
     title : 'FLASH_CARD',
+    type : 'GL2',
+    study : '5'
+  },{
+    title : 'EXPLAINATION',
     type : 'GL3',
     study : '5'
   },],
@@ -269,6 +277,10 @@ export const StudyList = [{
     study : '6',
   },{
     title : 'FLASH_CARD',
+    type : 'GL2',
+    study : '6'
+  },{
+    title : 'EXPLAINATION',
     type : 'GL3',
     study : '6'
   },],
@@ -278,6 +290,10 @@ export const StudyList = [{
     study : '7',
   },{
     title : 'FLASH_CARD',
+    type : 'GL2',
+    study : '7'
+  },{
+    title : 'EXPLAINATION',
     type : 'GL3',
     study : '7'
   },],
@@ -287,6 +303,10 @@ export const StudyList = [{
     study : '8',
   },{
     title : 'FLASH_CARD',
+    type : 'GL2',
+    study : '8'
+  },{
+    title : 'EXPLAINATION',
     type : 'GL3',
     study : '8'
   },],
@@ -296,6 +316,10 @@ export const StudyList = [{
     study : '9',
   },{
     title : 'FLASH_CARD',
+    type : 'GL2',
+    study : '9'
+  },{
+    title : 'EXPLAINATION',
     type : 'GL3',
     study : '9'
   },],
@@ -305,6 +329,10 @@ export const StudyList = [{
     study : '10',
   },{
     title : 'FLASH_CARD',
+    type : 'GL2',
+    study : '10'
+  },{
+    title : 'EXPLAINATION',
     type : 'GL3',
     study : '10'
   },],
@@ -314,6 +342,10 @@ export const StudyList = [{
     study : '11',
   },{
     title : 'FLASH_CARD',
+    type : 'GL2',
+    study : '11'
+  },{
+    title : 'EXPLAINATION',
     type : 'GL3',
     study : '11'
   },],
@@ -323,6 +355,10 @@ export const StudyList = [{
     study : '4',
   },{
     title : 'FLASH_CARD',
+    type : 'BL2',
+    study : '4'
+  },{
+    title : 'EXPLAINATION',
     type : 'BL3',
     study : '4'
   },],
@@ -332,6 +368,10 @@ export const StudyList = [{
     study : '5',
   },{
     title : 'FLASH_CARD',
+    type : 'BL2',
+    study : '5'
+  },{
+    title : 'EXPLAINATION',
     type : 'BL3',
     study : '5'
   },],
@@ -341,6 +381,10 @@ export const StudyList = [{
     study : '6',
   },{
     title : 'FLASH_CARD',
+    type : 'BL2',
+    study : '6'
+  },{
+    title : 'EXPLAINATION',
     type : 'BL3',
     study : '6'
   },],
@@ -350,6 +394,10 @@ export const StudyList = [{
     study : '7',
   },{
     title : 'FLASH_CARD',
+    type : 'BL2',
+    study : '7'
+  },{
+    title : 'EXPLAINATION',
     type : 'BL3',
     study : '7'
   },],
@@ -359,6 +407,10 @@ export const StudyList = [{
     study : '8',
   },{
     title : 'FLASH_CARD',
+    type : 'BL2',
+    study : '8'
+  },{
+    title : 'EXPLAINATION',
     type : 'BL3',
     study : '8'
   },],
@@ -368,6 +420,10 @@ export const StudyList = [{
     study : '9',
   },{
     title : 'FLASH_CARD',
+    type : 'BL2',
+    study : '9'
+  },{
+    title : 'EXPLAINATION',
     type : 'BL3',
     study : '9'
   },],
@@ -378,6 +434,11 @@ export const StudyList = [{
   },{
     title : 'FLASH_CARD',
     type : 'BL3',
+    study : '12'
+  },
+  {
+    title : 'EXPLAINATION',
+    type : 'BL3',
     study : '10'
   },],
   TOPIC8_TITLE_and_grammar : [{
@@ -386,6 +447,10 @@ export const StudyList = [{
     study : '11',
   },{
     title : 'FLASH_CARD',
+    type : 'BL2',
+    study : '11'
+  },{
+    title : 'EXPLAINATION',
     type : 'BL3',
     study : '11'
   },],
@@ -395,6 +460,10 @@ export const StudyList = [{
     study : '4',
   },{
     title : 'FLASH_CARD',
+    type : 'KL2',
+    study : '4'
+  },{
+    title : 'EXPLAINATION',
     type : 'KL3',
     study : '4'
   },],     
@@ -404,6 +473,10 @@ export const StudyList = [{
     study : '5',
   },{
     title : 'FLASH_CARD',
+    type : 'KL2',
+    study : '5'
+  },{
+    title : 'EXPLAINATION',
     type : 'KL3',
     study : '5'
   },],
@@ -413,6 +486,10 @@ export const StudyList = [{
     study : '6',
   },{
     title : 'FLASH_CARD',
+    type : 'KL2',
+    study : '6'
+  },{
+    title : 'EXPLAINATION',
     type : 'KL3',
     study : '6'
   },],
@@ -422,6 +499,10 @@ export const StudyList = [{
     study : '7',
   },{
     title : 'FLASH_CARD',
+    type : 'KL2',
+    study : '7'
+  },{
+    title : 'EXPLAINATION',
     type : 'KL3',
     study : '7'
   },],
@@ -431,6 +512,10 @@ export const StudyList = [{
     study : '8',
   },{
     title : 'FLASH_CARD',
+    type : 'KL2',
+    study : '8'
+  },{
+    title : 'EXPLAINATION',
     type : 'KL3',
     study : '8'
   },],
@@ -440,6 +525,10 @@ export const StudyList = [{
     study : '9',
   },{
     title : 'FLASH_CARD',
+    type : 'KL2',
+    study : '9'
+  },{
+    title : 'EXPLAINATION',
     type : 'KL3',
     study : '9'
   },],
@@ -449,6 +538,10 @@ export const StudyList = [{
     study : '10',
   },{
     title : 'FLASH_CARD',
+    type : 'KL2',
+    study : '10'
+  },{
+    title : 'EXPLAINATION',
     type : 'KL3',
     study : '10'
   },],
@@ -458,6 +551,10 @@ export const StudyList = [{
     study : '11',
   },{
     title : 'FLASH_CARD',
+    type : 'KL2',
+    study : '11'
+  },{
+    title : 'EXPLAINATION',
     type : 'KL3',
     study : '11'
   },],

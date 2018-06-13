@@ -1043,3 +1043,11 @@ export const vocabulary = [
         "audio":""
     },
   ];
+
+  export const listening = [
+
+  ];
+
+  export const reading = [
+
+];

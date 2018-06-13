@@ -89,6 +89,10 @@ module.exports = StyleSheet.create({
 		col2Tbl : {
 			width: '16%'
 		},
+		col20 : {
+			width: '20%'
+		},
+
 		col1 : {
 			width: '8.333%'
 		}, 
@@ -602,9 +606,9 @@ module.exports = StyleSheet.create({
 			paddingTop:13,
 			paddingBottom:20
 		},
-		quizAnswerWrapper:{
+		quizAnswerWrapper:{			
 			position:'relative',
-			height: window.height - 100
+			height: window.height - 210,			
 		},
 		blocker:{
 			position:'absolute',

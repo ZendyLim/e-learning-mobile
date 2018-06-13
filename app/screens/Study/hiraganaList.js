@@ -34,7 +34,14 @@ class HiraganaListScreen extends Component {
     title:"",
     img: "",
   }
-  
+  _onSetLanguageTo = (value) => {
+    if(value){
+      strings.setLanguage(value);
+    }else{
+      strings.setLanguage('en');
+    }
+  }
+
   componentDidMount() {
     const { navigation } = this.props;
     this.setState({
@@ -121,7 +128,6 @@ class HiraganaListScreen extends Component {
     
     if(this.props.quiz){
       var quiz = this.props.quiz;
-
       return Helper.countScore(quiz) + '/100';
     }else{
       return '0/100';
@@ -161,6 +167,7 @@ class HiraganaListScreen extends Component {
     ));  
   }  
   render() {
+    this._onSetLanguageTo(this.props.lang);
     var scoreQuiz = this.getquizScore();
     var scoreTest = this.gettestScore();
     
@@ -201,6 +208,7 @@ class HiraganaListScreen extends Component {
             </View>
           </View>
 
+          {this.state.type == 'INITIAL' && (
           <View style={[study.cardBox, study.borderBox, study.p3]}>
             <Text style={[study.textLg, study.textBlack]}>{ strings['STUDY_TEST'] }</Text>
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>{ scoreTest }</Text>
@@ -215,6 +223,7 @@ class HiraganaListScreen extends Component {
               </TouchableOpacity>
             </View>
           </View>
+          ) }
 
         </View>
       </ScrollView>
@@ -238,7 +247,8 @@ const study = require('../../styles/study');
 function mapStateToProps(state, props) {
   return {
       test: state.summary.testData,
-      quiz: state.summary.quizData
+      quiz: state.summary.quizData,
+      lang: state.user.lang
   }
 }
 
