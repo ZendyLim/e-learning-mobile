@@ -21,6 +21,7 @@ import {
   import { connect } from 'react-redux';
   import { HiraganaLearnStack }  from '../../config/router';
   import { katakanaList } from '../../config/data'
+  import  { strings }   from '../../config/localization';
   import * as Actions from '../../actions/user'; //Import your actions
 
   var Sound = require('react-native-sound');
@@ -80,10 +81,12 @@ function playSound(testInfo, component) {
 
   export class KatakanaLearnScreen extends Component {
 
-    static navigationOptions = {
-        // header: null,
-        // title: 'LearnHL1',
-        tabBarLabel: 'Hiragana',
+    static navigationOptions = ({ navigation }) => {
+      const {state} = navigation;
+        return {
+          title: `${strings['KATAKANA_LIST_TITLE']}`,
+        };
+      swipeEnabled: false
       };
 
     constructor(props) {

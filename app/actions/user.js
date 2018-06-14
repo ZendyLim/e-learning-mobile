@@ -98,8 +98,6 @@ export function updateProfile(userVal){
   return (dispatch) => {
     console.log('run');
     getJWT().then( JWT => {
-      console.log(JWT);
-      console.log(JSON.stringify(userVal));
       fetch('https://e-learning-backend.herokuapp.com/api/v1/updateProfile',{
         method: 'POST',
         headers: {

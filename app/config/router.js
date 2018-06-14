@@ -180,13 +180,13 @@ export const HiraganaLearnStack = TabNavigator({
     Hiragana: {
         screen: HiraganaLearnScreen,
         navigationOptions: { 
-            tabBarLabel: 'Hiragana',
+            // tabBarLabel: 'Hiragana',
         }
         }, 
     Katakana: {
         screen: KatakanaLearnScreen, 
         navigationOptions: { 
-            tabBarLabel: 'Katakana',
+            // tabBarLabel: 'Katakana',
         }
         }, 
 },

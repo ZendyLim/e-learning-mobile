@@ -14,6 +14,8 @@ export let strings = new LocalizedStrings({
    next_topic : "Next Topic",
    TOPIC_LIST : "Topic List",
    HIRAGANA_TITLE: "Hiragana & Katakana",
+   HIRAGANA_LIST_TITLE: 'Hiragana',
+   KATAKANA_LIST_TITLE: 'Katakana',
    NUMBER_TITLE : "Number",
    GREETING_TITLE : "Greeting",
    TOPIC1_TITLE : "Myself",
@@ -85,10 +87,40 @@ export let strings = new LocalizedStrings({
    PROFILE_MODAL_CLOSE : "CANCEL",
    TITLE_LEARN : 'LEARN',
    EXPLAINATION_LEARN : 'Explanation card',
+
+  //login part
+  SIGN_IN : "Sign In",
+  SIGN_IN_USERNAME : "Username",
+  SIGN_IN_PASSWORD : "Password",
+  SIGN_IN_MESSAGE : "Input your username and password",
+  SIGN_IN_VALIDATION_USERNAME : "User name is required",
+  SIGN_IN_VALIDATION_PASSWORD : "Password is required",
+  SIGN_IN_VALIDATION_FAILED : "Username and password is wrong",
+
+  //profile part
+  PROFILE_PERSONAL_DATA : "Personal Data",
+  PROFILE_GENDER : "Gender",
+  PROFILE_BIRTHDATE : "Birthdate",
+  PROFILE_EDUCATION_HISTORY : "Education History",
+  PROFILE_LATEST_EDUCATION : "Latest Education",
+  PROFILE_SCHOOL_OR_UNIVERSITY : "School or University",
+  PROFILE_MAJOR : "Major",
+  PROFILE_GRADUATION_YEAR : "Graduation Year",
+  PROFILE_ENGLISH_LEVEL : "English Level",
+  PROFILE_JAPANESE_STUDY_HISTORY : "Japanese Study History",
+  PROFILE_STUDY_PLAN : "Study Plan",
+  PROFILE_STUDY_REASON : "Why You want to study Japanese",
+  PROFILE_STUDY_DAYS : "Study Days / Week",
+  PROFILE_STUDY_HOURS : "Study Hours / Day",
+  PROFILE_DESIRED_FINISH_DATE : "Desired Finish Date",
+  PROFILE_ACCOUNT : "Account",
+  PROFILE_FB_SIGN_IN : "Sign In :",
+  PROFILE_SETTING : "Setting",
+  PROFILE_LOGOUT : "Logout",
    
   },
  ja: {
-   loginGuest: "japan",
+   loginGuest: "ログイン",
    vocabulary : "語彙",
    grammar : "文法",
    kanji : "漢字",
@@ -96,6 +128,8 @@ export let strings = new LocalizedStrings({
    next_topic : "次のトピック",
    TOPIC_LIST : "トピック一覧",   
    HIRAGANA_TITLE: "ひらがなとカタカナ",
+   HIRAGANA_LIST_TITLE: 'ひらがな',
+   KATAKANA_LIST_TITLE: 'カタカナ',
    NUMBER_TITLE : "数字",
    GREETING_TITLE : "あいさつ",
    TOPIC1_TITLE : "自分",
@@ -167,5 +201,37 @@ export let strings = new LocalizedStrings({
    PROFILE_MODAL_CLOSE : "キャンセル",
    TITLE_LEARN : '学ぶ',
    EXPLAINATION_LEARN : '説明カード',   
+   
+    //login part
+  SIGN_IN : "サインイン",
+  SIGN_IN_USERNAME : "ユーザー名",
+  SIGN_IN_PASSWORD : "パスワード",
+  SIGN_IN_MESSAGE : "ユーザー名とパスワードを入力してください",
+  SIGN_IN_VALIDATION_USERNAME : "ユーザー名が必須です",
+  SIGN_IN_VALIDATION_PASSWORD : "パスワードが必須です",
+  SIGN_IN_VALIDATION_FAILED : "ユーザー名とパスワードが間違った",
+  
+
+  //profile part
+  PROFILE_PERSONAL_DATA : "個人データ",
+  PROFILE_GENDER : "性別",
+  PROFILE_BIRTHDATE : "誕生日",
+  PROFILE_EDUCATION_HISTORY : "教育の歴史",
+  PROFILE_LATEST_EDUCATION : "最新の教育",
+  PROFILE_SCHOOL_OR_UNIVERSITY : "学校または大学",
+  PROFILE_MAJOR : "専門",
+  PROFILE_GRADUATION_YEAR : "卒業年",
+  PROFILE_ENGLISH_LEVEL : "英語のレベル",
+  PROFILE_JAPANESE_STUDY_HISTORY : "日本語教育の歴史",
+  PROFILE_STUDY_PLAN : "勉強計画",
+  PROFILE_STUDY_REASON : "なぜ日本語を勉強したいですか？",
+  PROFILE_STUDY_DAYS : "勉強日/週",
+  PROFILE_STUDY_HOURS : "勉強時間/日",
+  PROFILE_DESIRED_FINISH_DATE : "勉強の終了日",
+  PROFILE_ACCOUNT : "アカウント",
+  PROFILE_FB_SIGN_IN : "サインイン :",
+  PROFILE_SETTING : "設定",
+  PROFILE_LOGOUT : "ログアウト"
+
   }
 });
