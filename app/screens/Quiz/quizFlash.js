@@ -110,14 +110,11 @@ import {
       }
 
       this.testItemCount = {
-        // vocabulary: 10,
-        // kanji: 10,
-        // grammar: 15,
-        //vocabulary: 4,
-        //kanji: 4,
-        //grammar: 4,
+        vocabulary: 10,
+        kanji: 10,
+        grammar: 15,
         reading: 3,
-        //listening: 3
+        listening: 3
       }
 
       this.state = this.initialState;

@@ -622,6 +622,13 @@ module.exports = StyleSheet.create({
 			position:'relative',
 			height: window.height - 210,			
 		},
+		additionalInfo:{
+			fontSize:25,
+			textAlign: 'center',
+			padding:10,
+			paddingBottom:5,
+			color:textSecondary
+		},
 		blocker:{
 			position:'absolute',
 			width:'100%',

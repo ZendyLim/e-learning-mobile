@@ -94,6 +94,9 @@ class Quiz extends Component {
         
         return (
             <View>
+                { this.props.question.questionOption && 
+                (<Text style={ styles.additionalInfo }>{this.props.question.questionOption[this.props.displayFormat]}</Text>) 
+                }
                 { this._renderAnswerButtons() }
             </View>
         );
