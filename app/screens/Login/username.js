@@ -88,9 +88,9 @@ import {
     signIn = async () => {
       if(!this.validation()){
         this.props.login(this.state, data => {
-          var startDate =  new Date() / 1000 ;
-          this.setState({ userId: data.user._id , startDate : startDate });
           if(!this.checkUserValid(data)){
+            var startDate =  new Date() / 1000 ;
+            this.setState({ userId: data.user._id , startDate : startDate }); 
             this.props.navigation.navigate('UserData',(this.state));
           }
         });
