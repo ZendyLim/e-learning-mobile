@@ -26,6 +26,7 @@ import {
       headerTitleStyle: {
         fontSize: 20,
       },
+      title: 'Test',
     };
 
  
