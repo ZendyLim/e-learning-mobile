@@ -266,7 +266,7 @@ import { studyDays, studyReasonOption, major } from '../../config/data';
               <Text style={styles.userProfileLabelChild}>{ strings['PROFILE_GENDER']}</Text>
               <Text style={styles.inputStyle}>{this.state.gender}</Text>
               <Text style={styles.userProfileLabelChild}>{ strings['PROFILE_BIRTHDATE']}</Text>
-              <Text style={styles.inputStyle}>{ this.unixTimeStampsRevert(this.state.birthdate)}</Text>
+              <Text style={styles.inputStyle}>{ this.getDateFormat(this.state.birthdate)}</Text>
 
               <Text style={styles.userProfileLabelParent}>{ strings['PROFILE_EDUCATION_HISTORY']}</Text>
               <Text style={styles.userProfileLabelChild}>{ strings['PROFILE_LATEST_EDUCATION']}</Text>
@@ -278,14 +278,14 @@ import { studyDays, studyReasonOption, major } from '../../config/data';
               <Text style={styles.inputStyle}>{ this.getMajor()}</Text>
 
               <Text style={styles.userProfileLabelChild}>{ strings['PROFILE_GRADUATION_YEAR']}</Text>
-              <Text style={styles.inputStyle}>{this.state.graduationYear}</Text>
+              <Text style={styles.inputStyle}>{this.getMonthFormat(this.state.graduationYear)}</Text>
 
               <Text style={styles.userProfileLabelChild}>{ strings['PROFILE_ENGLISH_LEVEL']}</Text>
               <Text style={styles.inputStyle}>{this.state.englishLevel}</Text>
 
               <Text style={styles.userProfileLabelParent}>{ strings['PROFILE_JAPANESE_STUDY_HISTORY']}</Text>
               <Text style={styles.userProfileLabelChild}>{this.state.japaneseType}</Text>
-              <Text style={styles.inputStyle}>{ this.unixTimeStampsRevert(this.state.dateFrom)}  ~  { this.unixTimeStampsRevert(this.state.dateTo)}</Text>
+              <Text style={styles.inputStyle}>{ this.getMonthFormat(this.state.dateFrom)}  ~  { this.getMonthFormat(this.state.dateTo)}</Text>
 
               <Text style={styles.userProfileLabelParent}>{strings['PROFILE_STUDY_PLAN']}</Text>
               <Text style={styles.userProfileLabelChild}>{strings['PROFILE_STUDY_REASON']}</Text>
@@ -295,7 +295,7 @@ import { studyDays, studyReasonOption, major } from '../../config/data';
               <Text style={styles.userProfileLabelChild}>{strings['PROFILE_STUDY_HOURS']}</Text>
               <Text style={styles.inputStyle}>{this.state.studyHours}</Text>
               <Text style={styles.userProfileLabelChild}>{strings['PROFILE_DESIRED_FINISH_DATE']}</Text>
-              <Text style={styles.inputStyle}>{ this.unixTimeStampsRevert(this.state.finishDate)}</Text>
+              <Text style={styles.inputStyle}>{ this.getDateFormat(this.state.finishDate)}</Text>
 
 
               <Text style={styles.userProfileLabelParent}>{strings['PROFILE_ACCOUNT']}</Text>
@@ -352,12 +352,6 @@ import { studyDays, studyReasonOption, major } from '../../config/data';
                 <Text style={styles.menuOption}>{strings['SETTING_LANGUAGES_PROFILE']}</Text>
                 <View style={styles.vline}></View>
               </TouchableOpacity>
-
-              <TouchableOpacity onPress={this._gotoSetting}>
-                <Text style={styles.menuOption}>{strings['PROFILE_SETTING']}</Text>
-                <View style={styles.vline}></View>
-              </TouchableOpacity>
-
               <TouchableOpacity onPress={this._showMoreApp}>
                 <Text style={styles.menuOption}>{strings['PROFILE_LOGOUT']}</Text>
                 <View style={styles.vline}></View>
@@ -424,14 +418,23 @@ import { studyDays, studyReasonOption, major } from '../../config/data';
         
     }
 
-    unixTimeStampsRevert = (unixDate) =>{
-      let toUnixTimestamps = unixDate;
-      toUnixTimestamps = toUnixTimestamps + " 00:00:00";
-      dateVal = (new Date(toUnixTimestamps).getTime()*1000);
-      return dateVal;
+    getDateFormat = (dateTo) =>{
+      var datefinish = new Date(dateTo * 1000);
+
+      const monthNames = ["01", "02", "03", "04", "05", "06",
+      "07", "08", "09", "10", "11", "12"
+    ];
+      return datefinish.getFullYear() + "-" + monthNames[datefinish.getMonth()] + "-" + datefinish.getDate() ;
     }
-      
-    
+
+    getMonthFormat = (date) =>{
+      var dateFormat = new Date(date * 1000);
+
+      const monthNames = ["01", "02", "03", "04", "05", "06",
+      "07", "08", "09", "10", "11", "12"
+    ];
+      return  dateFormat.getFullYear()+ "-" + monthNames[dateFormat.getMonth()] ;
+    }
   }
 
   const styles = require('../../styles/profileStyle');
