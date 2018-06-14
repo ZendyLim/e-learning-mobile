@@ -87,6 +87,7 @@ export let strings = new LocalizedStrings({
    PROFILE_MODAL_CLOSE : "CANCEL",
    TITLE_LEARN : 'LEARN',
    EXPLAINATION_LEARN : 'Explanation card',
+   SUMMARY_LEFT : 'Days Left',
 
   //login part
   SIGN_IN : "Sign In",
@@ -181,6 +182,7 @@ export let strings = new LocalizedStrings({
    KANJI_LIST_LEARN : "漢字一覧",
    FLASH_CARD_HIRAGANA_LEARN: "フラッシュカードひらがな",
    FLASH_CARD_KATAKANA_LEARN: "フラッシュカードカタカナ",
+   SUMMARY_LEFT : '残り日',
    FUKUSHU1_TITLE : "復習テスト",
    FUKUSHU2_TITLE : "復習テスト",
    FUKUSHU3_TITLE : "復習テスト",

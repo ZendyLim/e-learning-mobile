@@ -14,9 +14,12 @@ import {
   import { List, ListItem , Icon} from 'react-native-elements';
   import * as Actions from '../../actions/user'; //Import your actions
   import { ProgressCircle , LineChart, Grid, YAxis, XAxis }  from 'react-native-svg-charts'
+  import  { strings }   from '../../config/localization';
 
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
+  import { ImageData } from '../../config/image_list';
+
   
   class StudySummaryScreen extends Component {
   
@@ -32,48 +35,92 @@ import {
         categoryId : categoryId
       });
     };
-    
+    _onSetLanguageTo = (value) => {
+      if(value){
+        strings.setLanguage(value);
+      }else{
+        strings.setLanguage('en');
+      }
+    }    
+    updateDate = (dateTo) => {
+      if(dateTo == ''){
+        return 0;
+      }else{
+        var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+
+        var firstDate = new Date();
+        var secondDate = new Date(dateTo * 1000);
+  
+        var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+        return diffDays;
+  
+      }
+    }
+
+    getDateFormat = (dateTo) =>{
+      var datefinish = new Date(dateTo * 1000);
+
+      const monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
+
+      return  monthNames[datefinish.getMonth()] + " " + datefinish.getDate() + ", " + datefinish.getFullYear();
+    }
+
+    persen = (dateTo, dateFrom) => {
+      if(dateTo == ''){
+        return 0;
+      }else{
+        var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+
+        var firstDate = new Date();
+        var secondDate = new Date(dateTo * 1000);
+        var startDate = new Date(dateFrom  * 1000);
+  
+        var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+        var total = Math.round(Math.abs((startDate.getTime() - secondDate.getTime())/(oneDay)));
+  
+        var totalPersen = 1 - (diffDays/total) ;
+   
+        return totalPersen;
+  
+      }
+    }  
+      
     render() {
-      const data = [ 50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80 ]
-      const contentInsetY = { top: 20, bottom: 20 }
-      const contentInsetX = { top: 20, bottom: 20 }
+      this._onSetLanguageTo(this.props.lang);
+      if(this.props.data.finishDate && this.props.data.startDate){
+       var diffDays = this.updateDate(this.props.data.finishDate);
+       var targetDate = this.getDateFormat(this.props.data.finishDate);
+       var persenTotal = this.persen(this.props.data.finishDate, this.props.data.startDate);
+      }else{
+       var diffDays = 0;
+       var targetDate = '';
+       var persenTotal = 0;        
+      }       
       return (
         <View style={scoreStyle.scoreContainer}>
           <View style={summary.summaryMainTop}>
             <View style={summary.flexTop1}>
-              <View style={ summary.absoluteTextHome }>
-                <View style={ summary.containerScoreHome }>
-                  <Text style={ summary.persentTitle }>100%</Text>
+                <View style={ summary.absoluteTextHome }>
+                  <View style={ summary.containerScoreHome }>
+                    <Text style={ summary.persentTitle }>{ persenTotal !== 0 ? ( persenTotal * 100 ) : ( 0 ) }%</Text>
+                  </View>
                 </View>
-              </View>
-              <ProgressCircle
-                  style={ { height: 150 } }
-                  progress={ (70/100) }
-                  progressColor={'#43b5e7'}
-              />
+                <ProgressCircle
+                    style={ { height: 140 } }
+                    progress={ persenTotal }
+                    progressColor={'#43b5e7'}
+                />
             </View>         
             <View style={summary.flexTop2}>
-              <Text style={ summary.toptitle }>Days Left</Text>
-              <Text style={ summary.topsub }>40 days</Text>
-              <Text style={ summary.toptitle }>Target Date</Text>
-              <Text style={ summary.topsub }>September 18, 2018</Text>
+              <Text style={ summary.toptitle }> { strings['SUMMARY_LEFT'] }</Text>
+              <Text style={ summary.topsub }>{ diffDays ? ( diffDays ) : ( 0 ) } { strings['HOME_LEFT'] }</Text>
+              <Text style={ summary.toptitle }> { strings['HOME_TARGET'] }</Text>
+              <Text style={ summary.topsub }>{ targetDate }</Text>
             </View>         
-          </View>     
-          <View style={summary.summaryMainTop}>
-            <View style={summary.flexMid1}>
-              <View style={summary.midContainer}>
-                <LineChart
-                  style={{ height: 200 }}
-                  data={ data }
-                  svg={{ stroke: 'rgb(134, 65, 244)' }}
-                  contentInset={{ top: 20, bottom: 20 }}
-                >
-                <Grid/>
-                </LineChart>
-              </View>
-            </View>
-          </View>    
-          <View style={summary.summaryMainTop}>
+          </View>       
+          <View style={summary.summaryMainTop2}>
             <View style={summary.flexRow}>
               <View style={summary.flexBot1}>
                 <View   style={summary.conGraph}>
@@ -84,7 +131,7 @@ import {
                       </View>
                       <Text style={ summary.TextGr }>Vocabulary</Text>
                       <ProgressCircle
-                        style={ { height: 80 } }
+                        style={ { height: 75 } }
                         progress={ (70/100) }
                         progressColor={'#b3ee68'}
                       />  
@@ -96,7 +143,7 @@ import {
                 <View   style={summary.conGraph}>
                 <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C002')}>
                   <View style={summary.graphButton}>
-                    <View style={ summary.absoluteGr }>
+                      <View style={ summary.absoluteGr }>
                         <Text style={ summary.btnText }>200/200{"\n"}Words{"\n"}learned</Text>
                       </View>
                       <Text style={ summary.TextGr }>Grammar</Text>
@@ -128,6 +175,16 @@ import {
               </View>              
             </View>
           </View>    
+          <View style={ scoreStyle.menuBottom }>
+              <Text>{ strings['HOME_MESSAGE']}
+              </Text>
+            </View>
+            <View style={ scoreStyle.imageHomeCon}>
+              <Image
+                style={scoreStyle.imageHome}
+                source={ ImageData['HomeImg'] }
+              />
+            </View>
         </View>
       );
     }
@@ -148,6 +205,7 @@ function mapStateToProps(state, props) {
       data: state.user.user,
       dateFrom: state.summary.dateFrom,
       dateTo: state.summary.dateTo,
+      lang: state.user.lang
   }
 }
 
