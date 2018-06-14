@@ -113,11 +113,11 @@ import {
         // vocabulary: 10,
         // kanji: 10,
         // grammar: 15,
-        vocabulary: 4,
-        kanji: 4,
-        grammar: 4,
-        //reading: 3,
-        listening: 3
+        //vocabulary: 4,
+        //kanji: 4,
+        //grammar: 4,
+        reading: 3,
+        //listening: 3
       }
 
       this.state = this.initialState;
@@ -234,7 +234,7 @@ import {
       this.setListQuestion();
 
       this.setDefinedQuestion(idList);
-
+      console.log(this.quizItems,this.testItemCount);
       if(!this.quizItems){
         const resetAction = NavigationActions.reset({
           index: 0,
@@ -307,7 +307,7 @@ import {
 
     setListQuestion(){
       if(this.initialParams.isTopicTest){
-        topics = ['vocabulary', 'grammar', 'kanji', 'listening'];
+        topics = ['vocabulary', 'grammar', 'kanji', 'listening','reading'];
         currentItems = [];
 
         for(i = 0; i < topics.length; i++){
@@ -576,6 +576,17 @@ import {
           paramFormat = {
             answerFormat: 'moji',
             questionFormat: 'arrange',
+            
+          };
+          
+          time = time * 2;
+
+          break;          
+
+        case 'moji':
+          paramFormat = {
+            answerFormat: 'moji',
+            questionFormat: 'moji',
             
           };
           

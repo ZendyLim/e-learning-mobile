@@ -1142,30 +1142,34 @@ export const vocabulary = [
   export const reading = [
     {
         "id":"tp1_r_1",
-        "type":"listening",
+        "type":"reading",
         "romaji":"watashi ha pan desu. betonamujin desu. betonamugo to eigo ga dekimasu. chuugokugo mo de kimasu. watashi ha kaishain jaarimasen. daigakusei desu. ima, 21sai desu. douzoyoroshikuonegaishimasu.",
-        "moji":"わたしはハンです。ベトナム人です。ベトナムごとえいごができます。ちゅうごくごもできます。わたしはかいしゃいんじゃありません。だいがくせいです。いま、21さいです。どうぞよろしくおねがいします。\n\nQ：ハンさんはなにができますか。",
-        "kanji":"わたしはハンです。ベトナム人です。ベトナム語と英語ができます。中国語もできます。わたしは会社員じゃありません。大学生です。今、21さいです。どうぞよろしくお願いします。\n\nQ：ハンさんは何ができますか。",
-        "english":"America's ",    
+        "moji":"わたしはハンです。ベトナム人です。ベトナムごとえいごができます。ちゅうごくごもできます。わたしはかいしゃいんじゃありません。だいがくせいです。いま、21さいです。どうぞよろしくおねがいします。",
+        "kanji":"わたしはハンです。ベトナム人です。ベトナム語と英語ができます。中国語もできます。わたしは会社員じゃありません。大学生です。今、21さいです。どうぞよろしくお願いします。",
+        "english":"America's ",  
+        "questionOption":{
+            "moji":"Q：ハンさんはなにができますか。",
+            "kanji":"Q：ハンさんは何ができますか。"
+        },   
         "answerOption":[
             {
                 "id":"tp1_r_4",
-                "type":"listening",
+                "type":"reading",
                 "moji":"ベトナム語"
             },
             {
                 "id":"tp1_r_3",
-                "type":"listening",
+                "type":"reading",
                 "moji":"ベトナム語と英語"
             },
             {
                 "id":"tp1_r_2",
-                "type":"listening",
+                "type":"reading",
                 "moji":"ベトナム語と英語と中国語"
             },
             {
                 "id":"tp1_r_1",
-                "type":"listening",
+                "type":"reading",
                 "moji":"ベトナム語と英語と中国語と日本語"
             }
         ],
@@ -1173,30 +1177,34 @@ export const vocabulary = [
     },
     {
         "id":"tp1_r_2",
-        "type":"listening",
+        "type":"reading",
         "romaji":"jon-san ha amerika desu. 25sai desu. nihongo gakkou no gakusei desu. hiragana to katakana ga wakarimasu. kanji ga wakarimasen. eigo ga dekimasu.",
-        "moji":"ジョンさんはアメリカ人です。25さいです。にほんごがっこうのがくせいです。ひらがなとカタカナがわかります。かんじがわかりません。えいごができます。\n\nQ：ジョンさんはなにがわかりますか。",
-        "kanji":"ジョンさんはアメリカ人です。25さいです。日本語学校の学生です。ひらがなとカタカナがわかります。漢字がわかりません。英語ができます。\n\nQ：ジョンさんは何がわかりますか。",        
-        "english":"America's ",        
+        "moji":"ジョンさんはアメリカ人です。25さいです。にほんごがっこうのがくせいです。ひらがなとカタカナがわかります。かんじがわかりません。えいごができます。",
+        "kanji":"ジョンさんはアメリカ人です。25さいです。日本語学校の学生です。ひらがなとカタカナがわかります。漢字がわかりません。英語ができます。",        
+        "english":"America's ",
+        "questionOption":{
+            "moji":"Q：ジョンさんはなにがわかりますか。",
+            "kanji":"Q：ジョンさんは何がわかりますか。"
+        },     
         "answerOption":[
             {
                 "id":"tp1_r_4",
-                "type":"listening",
+                "type":"reading",
                 "moji":"英語"
             },
             {
                 "id":"tp1_r_3",
-                "type":"listening",
+                "type":"reading",
                 "moji":"英語とひらがなとカタカナ"
             },
             {
                 "id":"tp1_r_2",
-                "type":"listening",
+                "type":"reading",
                 "moji":"ひらがなとカタカナと漢字"
             },
             {
                 "id":"tp1_r_1",
-                "type":"listening",
+                "type":"reading",
                 "moji":"日本語と中国語"
             }
         ],
@@ -1204,30 +1212,34 @@ export const vocabulary = [
     },
     {
         "id":"tp1_r_3",
-        "type":"listening",
+        "type":"reading",
         "romaji":"watashi ha pan desu. betonamujin desu. betonamugo to eigo ga dekimasu. chuugokugo mo de kimasu. watashi ha kaishain jaarimasen. daigakusei desu. ima, 21sai desu. douzoyoroshikuonegaishimasu.",
-        "moji":"これは料理の本です。ベトナム語の本です。グエンさんの本です。グエンさんは料理ができます。あれもグエンさんの本です。日本語の本です。グエンさんは漢字もわかります。それはキムさんの本です。韓国語の本です。\n\nQ：グエンさんのほんは、なにのほんですか。",
-        "kanji":"これは料理の本です。ベトナム語の本です。グエンさんの本です。グエンさんは料理ができます。あれもグエンさんの本です。日本語の本です。グエンさんは漢字もわかります。それはキムさんの本です。韓国語の本です。\n\nQ：グエンさんの本は、何の本ですか。",
+        "moji":"これは料理の本です。ベトナム語の本です。グエンさんの本です。グエンさんは料理ができます。あれもグエンさんの本です。日本語の本です。グエンさんは漢字もわかります。それはキムさんの本です。韓国語の本です。",
+        "kanji":"これは料理の本です。ベトナム語の本です。グエンさんの本です。グエンさんは料理ができます。あれもグエンさんの本です。日本語の本です。グエンさんは漢字もわかります。それはキムさんの本です。韓国語の本です。",
         "english":"America's ",
+        "questionOption":{
+            "moji":"Q：グエンさんのほんは、なにのほんですか。",
+            "kanji":"Q：グエンさんの本は、何の本ですか。"
+        },
         "answerOption":[
             {
                 "id":"tp1_r_3",
-                "type":"listening",
+                "type":"reading",
                 "moji":"ベトナム語の料理の本"
             },
             {
                 "id":"tp1_r_4",
-                "type":"listening",
+                "type":"reading",
                 "moji":"日本語の料理の本"
             },
             {
                 "id":"tp1_r_2",
-                "type":"listening",
+                "type":"reading",
                 "moji":"韓国語の料理の本"
             },
             {
                 "id":"tp1_r_1",
-                "type":"listening",
+                "type":"reading",
                 "moji":"中国語の料理の本"
             }
         ],
