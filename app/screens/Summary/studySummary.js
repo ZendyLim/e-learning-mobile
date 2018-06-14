@@ -127,9 +127,9 @@ import {
                   <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C001')}>
                     <View style={summary.graphButton}>
                     <View style={ summary.absoluteGr }>
-                        <Text style={ summary.btnText }>200/200{"\n"}Words{"\n"}learned</Text>
+                        <Text style={ summary.btnText }>200/200{strings['SUMMARY_WORD_LEARN']}</Text>
                       </View>
-                      <Text style={ summary.TextGr }>Vocabulary</Text>
+                      <Text style={ summary.TextGr }>{strings['SUMMARY_VOCABULARY'] }</Text>
                       <ProgressCircle
                         style={ { height: 75 } }
                         progress={ (70/100) }
@@ -144,9 +144,9 @@ import {
                 <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C002')}>
                   <View style={summary.graphButton}>
                       <View style={ summary.absoluteGr }>
-                        <Text style={ summary.btnText }>200/200{"\n"}Words{"\n"}learned</Text>
+                        <Text style={ summary.btnText }>200/200{strings['SUMMARY_WORD_LEARN']}</Text>
                       </View>
-                      <Text style={ summary.TextGr }>Grammar</Text>
+                      <Text style={ summary.TextGr }>{strings['SUMMARY_GRAMMAR'] }</Text>
                       <ProgressCircle
                         style={ { height: 80 } }
                         progress={ (70/100) }
@@ -161,9 +161,9 @@ import {
                 <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C003')}>
                     <View style={summary.graphButton}>
                     <View style={ summary.absoluteGr }>
-                        <Text style={ summary.btnText }>200/200{"\n"}Words{"\n"}learned</Text>
+                        <Text style={ summary.btnText }>200/200{strings['SUMMARY_WORD_LEARN']}</Text>
                       </View>
-                      <Text style={ summary.TextGr }>Kanji</Text>
+                      <Text style={ summary.TextGr }>{strings['SUMMARY_KANJI'] }</Text>
                       <ProgressCircle
                         style={ { height: 80 } }
                         progress={ (70/100) }
@@ -176,7 +176,7 @@ import {
             </View>
           </View>    
           <View style={ scoreStyle.menuBottom }>
-              <Text>{ strings['HOME_MESSAGE']}
+              <Text>{ strings['SUMMARY_SUMMARY_MESSAGE']}
               </Text>
             </View>
             <View style={ scoreStyle.imageHomeCon}>

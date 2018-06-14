@@ -118,7 +118,13 @@ export let strings = new LocalizedStrings({
   PROFILE_FB_SIGN_IN : "Sign In :",
   PROFILE_SETTING : "Setting",
   PROFILE_LOGOUT : "Logout",
-   
+  //summary part
+  SUMMARY_VOCABULARY : "Vocabulary",
+  SUMMARY_GRAMMAR: "Grammar",
+  SUMMARY_KANJI : "Kanji",
+  SUMMARY_WORD_LEARN : "\nWord\nLearned",
+  SUMMARY_SUMMARY_MESSAGE : "Let's Review\n What have you learn?",
+ 
   },
  ja: {
    loginGuest: "ログイン",
@@ -233,7 +239,14 @@ export let strings = new LocalizedStrings({
   PROFILE_ACCOUNT : "アカウント",
   PROFILE_FB_SIGN_IN : "サインイン :",
   PROFILE_SETTING : "設定",
-  PROFILE_LOGOUT : "ログアウト"
+  PROFILE_LOGOUT : "ログアウト",
 
+  //summary part
+    SUMMARY_VOCABULARY : "語彙",
+    SUMMARY_GRAMMAR: "文法",
+    SUMMARY_KANJI : "漢字",
+    SUMMARY_WORD_LEARN : "\n学ぶ\n言葉",
+    SUMMARY_SUMMARY_MESSAGE : "復習しましょう\n何が学びました？",
+    
   }
 });

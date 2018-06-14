@@ -138,7 +138,7 @@ module.exports = StyleSheet.create({
     },
     conGraph :{
         backgroundColor: '#fff',
-        width : '100%',
+        width : 90,
         height: 120,
         borderRadius: 8,
         borderWidth: 1,
