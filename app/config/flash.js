@@ -2211,1151 +2211,1452 @@ export const flashData = [
     ], 
     TOPIC1_TITLE_and_vocabulary : [
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_1",
+        "type": "vocab",
+        "moji": "あなた",
         "romaji": "you",
-        "moji"  : "あなた",
-        "url"   : ""
-      }, 
+        "url": "t1_anata.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_2",
+        "type": "vocab",
+        "moji": "アメリカ",
         "romaji": "America/U.S.A.",
-        "moji"  : "アメリカ",
-        "url"   : ""
-      }, 
+        "url": "t1_amerika.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "No./Don't mention it./No problem",
-        "moji"  : "いいえ",
-        "url"   : ""
-      }, 
+        "id": "t1v_3",
+        "type": "vocab",
+        "moji": "いいえ",
+        "romaji": "No/Don't mention it/No problem",
+        "url": "t1_iie.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_4",
+        "type": "vocab",
+        "moji": "いくつ",
         "romaji": "how many",
-        "moji"  : "いくつ",
-        "url"   : ""
-      }, 
+        "url": "t1_ikutsu.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_5",
+        "type": "vocab",
+        "moji": "いくら",
         "romaji": "how much",
-        "moji"  : "いくら",
-        "url"   : ""
-      }, 
+        "url": "t1_ikura.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_6",
+        "type": "vocab",
+        "moji": "インドネシア",
         "romaji": "Indonesia",
-        "moji"  : "インドネシア",
-        "url"   : ""
-      }, 
+        "url": "t1_indoneshia.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_7",
+        "type": "vocab",
+        "moji": "えいご",
         "romaji": "English language",
-        "moji"  : "えいご",
-        "url"   : ""
-      }, 
+        "url": "t1_eigo.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_8",
+        "type": "vocab",
+        "moji": "エンジニア",
         "romaji": "engineer",
-        "moji"  : "エンジニア",
-        "url"   : ""
-      }, 
+        "url": "t1_enjinia.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_9",
+        "type": "vocab",
+        "moji": "おちゃ",
         "romaji": "green tea",
-        "moji"  : "おちゃ",
-        "url"   : ""
-      }, 
+        "url": "t1_ocha.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_10",
+        "type": "vocab",
+        "moji": "おとこ",
         "romaji": "Man",
-        "moji"  : "おとこ",
-        "url"   : ""
-      }, 
+        "url": "t1_otoko.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_11",
+        "type": "vocab",
+        "moji": "おんな",
         "romaji": "Woman",
-        "moji"  : "おんな",
-        "url"   : ""
-      }, 
+        "url": "t1_onna.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_12",
+        "type": "vocab",
+        "moji": "がいこく",
         "romaji": "foreign country",
-        "moji"  : "がいこく",
-        "url"   : ""
-      }, 
+        "url": "t1_gaikoku.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_13",
+        "type": "vocab",
+        "moji": "かいしゃ",
         "romaji": "Company",
-        "moji"  : "かいしゃ",
-        "url"   : ""
-      }, 
+        "url": "t1_kaisha.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_14",
+        "type": "vocab",
+        "moji": "かいしゃいん",
         "romaji": "business person",
-        "moji"  : "かいしゃいん",
-        "url"   : ""
-      }, 
+        "url": "t1_kaishain.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_15",
+        "type": "vocab",
+        "moji": "がくせい",
         "romaji": "Student",
-        "moji"  : "がくせい",
-        "url"   : ""
-      }, 
+        "url": "t1_gakusei.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_16",
+        "type": "vocab",
+        "moji": "かぞく",
         "romaji": "Family",
-        "moji"  : "かぞく",
-        "url"   : ""
-      }, 
+        "url": "t1_kazoku.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_17",
+        "type": "vocab",
+        "moji": "がっこう",
         "romaji": "School",
-        "moji"  : "がっこう",
-        "url"   : ""
-      }, 
+        "url": "t1_gakkou.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_18",
+        "type": "vocab",
+        "moji": "かばん",
         "romaji": "bag, basket",
-        "moji"  : "かばん",
-        "url"   : ""
-      }, 
+        "url": "t1_kaban.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_19",
+        "type": "vocab",
+        "moji": "かようび",
         "romaji": "Tuesday",
-        "moji"  : "かようび",
-        "url"   : ""
-      }, 
+        "url": "t1_kayoubi.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_20",
+        "type": "vocab",
+        "moji": "きょうし",
         "romaji": "teacher",
-        "moji"  : "きょうし",
-        "url"   : ""
-      }, 
+        "url": "t1_kyoushi.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_21",
+        "type": "vocab",
+        "moji": "きんようび",
         "romaji": "Friday",
-        "moji"  : "きんようび",
-        "url"   : ""
-      }, 
+        "url": "t1_kinyoubi.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_22",
+        "type": "vocab",
+        "moji": "くに",
         "romaji": "Country",
-        "moji"  : "くに",
-        "url"   : ""
-      }, 
+        "url": "t1_kuni.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_23",
+        "type": "vocab",
+        "moji": "くるま",
         "romaji": "car, vehicle",
-        "moji"  : "くるま",
-        "url"   : ""
-      }, 
+        "url": "t1_kuruma.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_24",
+        "type": "vocab",
+        "moji": "げつようび",
         "romaji": "Monday",
-        "moji"  : "げつようび",
-        "url"   : ""
-      }, 
+        "url": "t1_getsuyoubi.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_25",
+        "type": "vocab",
+        "moji": "～ご",
         "romaji": "language identifier",
-        "moji"  : "～ご",
-        "url"   : ""
-      }, 
+        "url": "t1_go.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_26",
+        "type": "vocab",
+        "moji": "しごと",
         "romaji": "Job",
-        "moji"  : "しごと",
-        "url"   : ""
-      }, 
+        "url": "t1_shigoto.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_27",
+        "type": "vocab",
+        "moji": "じしょ",
         "romaji": "Dictionary",
-        "moji"  : "じしょ",
-        "url"   : ""
-      }, 
+        "url": "t1_jisho.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_28",
+        "type": "vocab",
+        "moji": "しゃいん",
         "romaji": "company employee",
-        "moji"  : "しゃいん",
-        "url"   : ""
-      }, 
+        "url": "t1_shain.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_29",
+        "type": "vocab",
+        "moji": "～じん",
         "romaji": "nationality, race",
-        "moji"  : "～じん",
-        "url"   : ""
-      }, 
+        "url": "t1_jin.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_30",
+        "type": "vocab",
+        "moji": "すいようび",
         "romaji": "Wednesday",
-        "moji"  : "すいようび",
-        "url"   : ""
-      }, 
+        "url": "t1_suiyoubi.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_31",
+        "type": "vocab",
+        "moji": "せんせい",
         "romaji": "teacher, doctor",
-        "moji"  : "せんせい",
-        "url"   : ""
-      }, 
+        "url": "t1_sensei.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_32",
+        "type": "vocab",
+        "moji": "だいがく",
         "romaji": "university",
-        "moji"  : "だいがく",
-        "url"   : ""
-      }, 
+        "url": "t1_daigaku.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_33",
+        "type": "vocab",
+        "moji": "だれ",
         "romaji": "who",
-        "moji"  : "だれ",
-        "url"   : ""
-      }, 
+        "url": "t1_dare.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_34",
+        "type": "vocab",
+        "moji": "たんじょうび",
         "romaji": "birthday",
-        "moji"  : "たんじょうび",
-        "url"   : ""
-      }, 
+        "url": "t1_tanjoubi.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_35",
+        "type": "vocab",
+        "moji": "ちゅうごく",
         "romaji": "China",
-        "moji"  : "ちゅうごく",
-        "url"   : ""
-      }, 
+        "url": "t1_chuugoku.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_36",
+        "type": "vocab",
+        "moji": "できます",
         "romaji": "to be able to",
-        "moji"  : "できます",
-        "url"   : ""
-      }, 
+        "url": "t1_dekimasu.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_37",
+        "type": "vocab",
+        "moji": "どこ／どちら",
         "romaji": "where",
-        "moji"  : "どこ／どちら",
-        "url"   : ""
-      }, 
+        "url": "t1_doko_dochira.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_38",
+        "type": "vocab",
+        "moji": "どようび",
         "romaji": "Saturday",
-        "moji"  : "どようび",
-        "url"   : ""
-      }, 
+        "url": "t1_doyoubi.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_39",
+        "type": "vocab",
+        "moji": "なに／なん",
         "romaji": "what",
-        "moji"  : "なに／なん",
-        "url"   : ""
-      }, 
+        "url": "t1_nani_nan.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_40",
+        "type": "vocab",
+        "moji": "なまえ",
         "romaji": "name",
-        "moji"  : "なまえ",
-        "url"   : ""
-      }, 
+        "url": "t1_namae.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_41",
+        "type": "vocab",
+        "moji": "にちようび",
         "romaji": "Sunday",
-        "moji"  : "にちようび",
-        "url"   : ""
-      }, 
+        "url": "t1_nichiyoubi.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_42",
+        "type": "vocab",
+        "moji": "はい",
         "romaji": "Yes",
-        "moji"  : "はい",
-        "url"   : ""
-      }, 
+        "url": "t1_hai.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_43",
+        "type": "vocab",
+        "moji": "パソコン",
         "romaji": "personal computer",
-        "moji"  : "パソコン",
-        "url"   : ""
-      }, 
+        "url": "t1_pasokon.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_44",
+        "type": "vocab",
+        "moji": "フィリピン",
         "romaji": "Philippines",
-        "moji"  : "フィリピン",
-        "url"   : ""
-      }, 
+        "url": "t1_firipin.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_45",
+        "type": "vocab",
+        "moji": "ベトナム",
         "romaji": "Vietnam",
-        "moji"  : "ベトナム",
-        "url"   : ""
-      }, 
+        "url": "t1_betonamu.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_46",
+        "type": "vocab",
+        "moji": "ほん",
         "romaji": "book",
-        "moji"  : "ほん",
-        "url"   : ""
-      }, 
+        "url": "t1_hon.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_47",
+        "type": "vocab",
+        "moji": "みなさん",
         "romaji": "everyone",
-        "moji"  : "みなさん",
-        "url"   : ""
-      }, 
+        "url": "t1_minasan.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_48",
+        "type": "vocab",
+        "moji": "もくようび",
         "romaji": "Thursday",
-        "moji"  : "もくようび",
-        "url"   : ""
-      }, 
+        "url": "t1_mokuyoubi.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "Pleased to meet you./regards",
-        "moji"  : "よろしく",
-        "url"   : ""
-      }, 
+        "id": "t1v_49",
+        "type": "vocab",
+        "moji": "よろしく",
+        "romaji": "Pleased to meet you/regards",
+        "url": "t1_yoroshiku.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_50",
+        "type": "vocab",
+        "moji": "りょうり",
         "romaji": "cuisine",
-        "moji"  : "りょうり",
-        "url"   : ""
-      }, 
+        "url": "t1_ryouri.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_51",
+        "type": "vocab",
+        "moji": "わかります",
         "romaji": "to be understood",
-        "moji"  : "わかります",
-        "url"   : ""
-      }, 
+        "url": "t1_wakarimasu.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t1v_52",
+        "type": "vocab",
+        "moji": "わたし",
         "romaji": "I, myself",
-        "moji"  : "わたし",
-        "url"   : ""
-      }, 
+        "url": "t1_watashi.mp3"
+      }
     ], 
     TOPIC1_TITLE_and_grammar : [
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": '「です」 is the Japanese copula that links the subject and predicate. \n In English, it is usually translated as "to be" or "it is" \n 「は」is the particle that marks the topic of the sentence.',
-        "moji"  : "N1　は　N2　です",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "「N+じゃありません」 is the negative form of 「です」.\n「じゃ」 is the shorten form 「では」which is often used in semi-casual conversations.\n「は」is the particle that marks the topic of the sentence.",
-        "moji"  : "N1　は　N2　じゃ/では　ありません",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": '「です+か」 the addition of 「か」transforms a sentence into the interrogative or question form.\n「は」is the particle that marks the topic of the sentence.',
-        "moji"  : "N1　は　N2　ですか",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": '「わかります」 is affirmative form of "understand".\n「が」is the particle that marks the subject of the sentence.',
-        "moji"  : "N1　は　N2　がわかります",
-        "url"   : ""
-      },  
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": '「わかりません」is negative form of "understand".\n「が」is the particle that marks the subject of the sentence.',
-        "moji"  : "N1　は　N2　がわかりません",
-        "url"   : ""
-      },  
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": '「わかりますか」 is interrogative form of "understand".\n「が」is the particle that marks the subject of the sentence.',
-        "moji"  : "N1　は　N2　がわかりますか",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": 'も is used to mark another noun instead of は when the established or declared statement is also true for it.',
-        "moji"  : "N　も",
-        "url"   : ""
+        "id": "t1g_1",
+        "type": "grammar",
+        "moji": "わたしはジョンです",
+        "romaji": "I’m John",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": '①N1 is part of (a subset) N2. \n②N1 explains or defines what N2 is about.\n③「の」as a particle denoting possession would mean N1 owns N2.\n④「の」as a modifier (functions as an adjective)would mean N2 is made in N1(Place).',
-        "moji"  : "N1　の　N2",
-        "url"   : ""
+        "id": "t1g_2",
+        "type": "grammar",
+        "moji": "わたしはアメリカ人です",
+        "romaji": "I’m American",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": '「できます is the verb which expresses capability to do something.\n「できません」is the negative form of「できます」.',
-        "moji"  : "N　が　できます",
-        "url"   : ""
+        "id": "t1g_3",
+        "type": "grammar",
+        "moji": "キムさんは中国人じゃありません",
+        "romaji": "Mr./Ms. Kim is not Chinese",
+        "url": ""
       },
+      {
+        "id": "t1g_4",
+        "type": "grammar",
+        "moji": "わたしは学生ではありません",
+        "romaji": "I’m not a student",
+        "url": ""
+      },
+      {
+        "id": "t1g_5",
+        "type": "grammar",
+        "moji": "グエンさんは会社員ですか",
+        "romaji": "Is Mr./Ms. Nguyen an office worker?",
+        "url": ""
+      },
+      {
+        "id": "t1g_6",
+        "type": "grammar",
+        "moji": "わたしはひらがながわかります",
+        "romaji": "I understand Hiragana",
+        "url": ""
+      },
+      {
+        "id": "t1g_7",
+        "type": "grammar",
+        "moji": "リンさんは漢字がわかります",
+        "romaji": "Mr./Ms. Lin understands Kanji",
+        "url": ""
+      },
+      {
+        "id": "t1g_8",
+        "type": "grammar",
+        "moji": "ジョンさんは漢字がわかりません",
+        "romaji": "Mr. John doesn’t understand Kanji",
+        "url": ""
+      },
+      {
+        "id": "t1g_9",
+        "type": "grammar",
+        "moji": "わたしは英語がわかりません",
+        "romaji": "I don't understand English",
+        "url": ""
+      },
+      {
+        "id": "t1g_10",
+        "type": "grammar",
+        "moji": "グエンさんはカタカナがわかりますか",
+        "romaji": "Does Mr./Ms. Nguyen understand Katakana?",
+        "url": ""
+      },
+      {
+        "id": "t1g_11",
+        "type": "grammar",
+        "moji": "ジョンさんはアメリカ人です。マリアさんもアメリカ人です",
+        "romaji": "Mr. John is an American. Mrs. Maria is also an American",
+        "url": ""
+      },
+      {
+        "id": "t1g_12",
+        "type": "grammar",
+        "moji": "すずきさんは中国語がわかりません。グエンさんも中国語がわかりません",
+        "romaji": "Mr./Ms. Suzuki doesn’t understand Chinese. Mr./Ms. Nguyen doesn’t understand Chinese, too",
+        "url": ""
+      },
+      {
+        "id": "t1g_13",
+        "type": "grammar",
+        "moji": "マリアさんは会社員です。アンさんも会社員ですか。\n→いいえ、アンさんは学生です",
+        "romaji": "Mrs. Maria is an office worker. Is Mr./Ms. Lin also an office worker, too?\n→No, he/she is a student.",
+        "url": ""
+      },
+      {
+        "id": "t1g_14",
+        "type": "grammar",
+        "moji": "わたしはABC社の社員です",
+        "romaji": "I'm an employee of ABC Company",
+        "url": ""
+      },
+      {
+        "id": "t1g_15",
+        "type": "grammar",
+        "moji": "ジョンさんは日本語学校の学生です",
+        "romaji": "John is a student of a Japanese language school",
+        "url": ""
+      },
+      {
+        "id": "t1g_16",
+        "type": "grammar",
+        "moji": "これは料理の本です",
+        "romaji": "This is a book for cooking",
+        "url": ""
+      },
+      {
+        "id": "t1g_17",
+        "type": "grammar",
+        "moji": "これは日本語の辞書です",
+        "romaji": "This is a dictionary of Japanese Language",
+        "url": ""
+      },
+      {
+        "id": "t1g_18",
+        "type": "grammar",
+        "moji": "これはわたしのかばんです",
+        "romaji": "This is my bag",
+        "url": ""
+      },
+      {
+        "id": "t1g_19",
+        "type": "grammar",
+        "moji": "これはキムさんの本です",
+        "romaji": "This is Mr./Ms. Kim's book",
+        "url": ""
+      },
+      {
+        "id": "t1g_20",
+        "type": "grammar",
+        "moji": "これはフランスのワインです",
+        "romaji": "This is a French wine",
+        "url": ""
+      },
+      {
+        "id": "t1g_21",
+        "type": "grammar",
+        "moji": "これは日本の車です",
+        "romaji": "This is a Japanese car",
+        "url": ""
+      },
+      {
+        "id": "t1g_22",
+        "type": "grammar",
+        "moji": "リンさんは英語ができます",
+        "romaji": "Mr./Ms. Lin can (speak) English",
+        "url": ""
+      },
+      {
+        "id": "t1g_23",
+        "type": "grammar",
+        "moji": "キムさんは中国語ができます",
+        "romaji": "Mr./Ms. Kim can (speak) Chinese",
+        "url": ""
+      },
+      {
+        "id": "t1g_24",
+        "type": "grammar",
+        "moji": "ワンさんは英語ができません",
+        "romaji": "Mr./Ms. Wan can't (speak) English",
+        "url": ""
+      },
+      {
+        "id": "t1g_25",
+        "type": "grammar",
+        "moji": "わたしは料理ができます",
+        "romaji": "I can cook",
+        "url": ""
+      }
     ], 
     TOPIC1_TITLE_and_kanji : [
       {
-        "id": "1v_a",
+        "id": "t1k_1",
         "type": "kanji",
         "moji": "一",
         "romaji": "いち",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_2",
         "type": "kanji",
         "moji": "二",
         "romaji": "に",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_3",
         "type": "kanji",
         "moji": "三",
         "romaji": "さん",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_4",
         "type": "kanji",
         "moji": "四",
         "romaji": "し/よん",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_5",
         "type": "kanji",
         "moji": "五",
         "romaji": "ご",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_6",
         "type": "kanji",
         "moji": "六",
         "romaji": "ろく",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_7",
         "type": "kanji",
         "moji": "七",
         "romaji": "なな / しち",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_8",
         "type": "kanji",
         "moji": "八",
         "romaji": "はち",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_9",
         "type": "kanji",
         "moji": "九",
         "romaji": "きゅう / く",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_10",
         "type": "kanji",
         "moji": "十",
         "romaji": "じゅう",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_11",
         "type": "kanji",
         "moji": "百",
         "romaji": "ひゃく",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_12",
         "type": "kanji",
         "moji": "千",
         "romaji": "せん",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_13",
         "type": "kanji",
         "moji": "万",
         "romaji": "まん",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_14",
         "type": "kanji",
         "moji": "円",
         "romaji": "えん",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t1k_15",
         "type": "kanji",
         "moji": "何",
         "romaji": "なに、なん",
         "url": ""
       }
-	  ], 
+    ], 
     TOPIC2_TITLE_and_vocabulary : [
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_1",
+        "type": "vocab",
+        "moji": "あさ",
         "romaji": "morning",
-        "moji"  : "あさ",
-        "url"   : ""
-      }, 
+        "url": "あさ.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_2",
+        "type": "vocab",
+        "moji": "あさごはん",
         "romaji": "breakfast",
-        "moji"  : "あさごはん",
-        "url"   : ""
-      }, 
+        "url": "あさごはん.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_3",
+        "type": "vocab",
+        "moji": "あした",
         "romaji": "tomorrow",
-        "moji"  : "あした",
-        "url"   : ""
-      }, 
+        "url": "あした.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_4",
+        "type": "vocab",
+        "moji": "いきます",
         "romaji": "to go",
-        "moji"  : "いきます",
-        "url"   : ""
-      }, 
+        "url": "いきます.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_5",
+        "type": "vocab",
+        "moji": "いつ",
         "romaji": "when",
-        "moji"  : "いつ",
-        "url"   : ""
-      }, 
+        "url": "いつ.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_6",
+        "type": "vocab",
+        "moji": "うち",
         "romaji": "house",
-        "moji"  : "うち",
-        "url"   : ""
-      }, 
+        "url": "うち.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_7",
+        "type": "vocab",
+        "moji": "え",
         "romaji": "picture",
-        "moji"  : "え",
-        "url"   : ""
-      }, 
+        "url": "え.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_8",
+        "type": "vocab",
+        "moji": "えいが",
         "romaji": "movie",
-        "moji"  : "えいが",
-        "url"   : ""
-      }, 
+        "url": "えいが.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_9",
+        "type": "vocab",
+        "moji": "おきます",
         "romaji": "to get up",
-        "moji"  : "おきます",
-        "url"   : ""
-      }, 
+        "url": "おきます.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_10",
+        "type": "vocab",
+        "moji": "おさけ",
         "romaji": "alcohol, rice wine",
-        "moji"  : "おさけ",
-        "url"   : ""
-      }, 
+        "url": "おさけ.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_11",
+        "type": "vocab",
+        "moji": "おんがく",
         "romaji": "Music",
-        "moji"  : "おんがく",
-        "url"   : ""
-      }, 
+        "url": "おんがく.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_12",
+        "type": "vocab",
+        "moji": "かいます",
         "romaji": "to buy",
-        "moji"  : "かいます",
-        "url"   : ""
-      }, 
+        "url": "かいます.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_13",
+        "type": "vocab",
+        "moji": "かえります",
         "romaji": "to go back",
-        "moji"  : "かえります",
-        "url"   : ""
-      }, 
+        "url": "かえります.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_14",
+        "type": "vocab",
+        "moji": "かきます",
         "romaji": "to write",
-        "moji"  : "かきます",
-        "url"   : ""
-      }, 
+        "url": "かきます.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_15",
+        "type": "vocab",
+        "moji": "カメラ",
         "romaji": "camera",
-        "moji"  : "カメラ",
-        "url"   : ""
-      }, 
+        "url": "カメラ.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_16",
+        "type": "vocab",
+        "moji": "ききます",
         "romaji": "to hear, to listen to, to ask",
-        "moji"  : "ききます",
-        "url"   : ""
-      }, 
+        "url": "ききます.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_17",
+        "type": "vocab",
+        "moji": "きょう",
         "romaji": "Today",
-        "moji"  : "きょう",
-        "url"   : ""
-      }, 
+        "url": "きょう.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_18",
+        "type": "vocab",
+        "moji": "ぎんこう",
         "romaji": "Bank",
-        "moji"  : "ぎんこう",
-        "url"   : ""
-      }, 
+        "url": "ぎんこう.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_19",
+        "type": "vocab",
+        "moji": "きます",
         "romaji": "to come",
-        "moji"  : "きます",
-        "url"   : ""
-      }, 
+        "url": "きます.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_20",
+        "type": "vocab",
+        "moji": "こうえん",
         "romaji": "Park",
-        "moji"  : "こうえん",
-        "url"   : ""
-      }, 
+        "url": "こうえん.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_21",
+        "type": "vocab",
+        "moji": "こうちゃ",
         "romaji": "black tea",
-        "moji"  : "こうちゃ",
-        "url"   : ""
-      }, 
+        "url": "こうちゃ.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_22",
+        "type": "vocab",
+        "moji": "コーヒー",
         "romaji": "Coffee",
-        "moji"  : "コーヒー",
-        "url"   : ""
-      }, 
+        "url": "コーヒー.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_23",
+        "type": "vocab",
+        "moji": "ごご",
         "romaji": "afternoon",
-        "moji"  : "ごご",
-        "url"   : ""
-      }, 
+        "url": "ごご.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_24",
+        "type": "vocab",
+        "moji": "ごぜん",
         "romaji": "morning",
-        "moji"  : "ごぜん",
-        "url"   : ""
-      }, 
+        "url": "ごぜん.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_25",
+        "type": "vocab",
+        "moji": "ごはん",
         "romaji": "cooked rice, meal",
-        "moji"  : "ごはん",
-        "url"   : ""
-      }, 
+        "url": "ごはん.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_26",
+        "type": "vocab",
+        "moji": "サッカー",
         "romaji": "soccer",
-        "moji"  : "サッカー",
-        "url"   : ""
-      }, 
+        "url": "サッカー.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_27",
+        "type": "vocab",
+        "moji": "じてんしゃ",
         "romaji": "Bicycle",
-        "moji"  : "じてんしゃ",
-        "url"   : ""
-      }, 
+        "url": "じてんしゃ.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_28",
+        "type": "vocab",
+        "moji": "します",
         "romaji": "do",
-        "moji"  : "します",
-        "url"   : ""
-      }, 
+        "url": "します.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_29",
+        "type": "vocab",
+        "moji": "しゃしん",
         "romaji": "photograph",
-        "moji"  : "しゃしん",
-        "url"   : ""
+        "url": "しゃしん.mp3"
       },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_30",
+        "type": "vocab",
+        "moji": "ジュース",
         "romaji": "juice",
-        "moji"  : "ジュース",
-        "url"   : ""
+        "url": "ジュース.mp3"
       },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_31",
+        "type": "vocab",
+        "moji": "しんぶん",
         "romaji": "newspaper",
-        "moji"  : "しんぶん",
-        "url"   : ""
-      }, 
+        "url": "しんぶん.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_32",
+        "type": "vocab",
+        "moji": "すいます",
         "romaji": "to smoke, to suck",
-        "moji"  : "すいます",
-        "url"   : ""
-      }, 
+        "url": "すいます.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_33",
+        "type": "vocab",
+        "moji": "スーパー",
         "romaji": "supermarket",
-        "moji"  : "スーパー",
-        "url"   : ""
-      }, 
+        "url": "スーパー.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_34",
+        "type": "vocab",
+        "moji": "します",
         "romaji": "to do",
-        "moji"  : "します",
-        "url"   : ""
+        "url": "します.mp3"
       },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t2v_35",
+        "type": "vocab",
+        "moji": "たばこ",
         "romaji": "tobacco, cigarettes",
-        "moji"  : "たばこ",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "to eat",
-        "moji"  : "たべます",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "my father",
-        "moji"  : "ちち",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "to make",
-        "moji"  : "つくります",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "letter",
-        "moji"  : "てがみ",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "department store",
-        "moji"  : "デパート",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "television",
-        "moji"  : "テレビ",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "electric train",
-        "moji"  : "でんしゃ",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "friend",
-        "moji"  : "ともだち",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "to take a photo or record a film",
-        "moji"  : "とります",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "to go to bed, to sleep",
-        "moji"  : "ねます",
-        "url"   : ""
-      },  
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "to drink",
-        "moji"  : "のみます",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "chopsticks",
-        "moji"  : "はし",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "bus",
-        "moji"  : "バス",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "my mother",
-        "moji"  : "はは",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "evening",
-        "moji"  : "ばん",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "bread",
-        "moji"  : "パン",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "evening meal",
-        "moji"  : "ばんごはん",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "noon, daytime",
-        "moji"  : "ひる",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "midday meal",
-        "moji"  : "ひるごはん",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "pen",
-        "moji"  : "ペン",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "to study",
-        "moji"  : "べんきょうします",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "every day",
-        "moji"  : "まいにち",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "water",
-        "moji"  : "みず",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "to see, to watch",
-        "moji"  : "みます",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "rest, holiday",
-        "moji"  : "やすみ",
-        "url"   : ""
-      },  
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "to read",
-        "moji"  : "よみます",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1v_a",
-        "type"  : "vocab",
-        "romaji": "restaurant",
-        "moji"  : "レストラン",
-        "url"   : ""
+        "url": "たばこ.mp3"
       },
+      {
+        "id": "t2v_36",
+        "type": "vocab",
+        "moji": "たべます",
+        "romaji": "to eat",
+        "url": "たべます.mp3"
+      },
+      {
+        "id": "t2v_37",
+        "type": "vocab",
+        "moji": "ちち",
+        "romaji": "my father",
+        "url": "ちち.mp3"
+      },
+      {
+        "id": "t2v_38",
+        "type": "vocab",
+        "moji": "つくります",
+        "romaji": "to make",
+        "url": "つくります.mp3"
+      },
+      {
+        "id": "t2v_39",
+        "type": "vocab",
+        "moji": "てがみ",
+        "romaji": "letter",
+        "url": "てがみ.mp3"
+      },
+      {
+        "id": "t2v_40",
+        "type": "vocab",
+        "moji": "デパート",
+        "romaji": "department store",
+        "url": "デパート.mp3"
+      },
+      {
+        "id": "t2v_41",
+        "type": "vocab",
+        "moji": "テレビ",
+        "romaji": "television",
+        "url": "テレビ.mp3"
+      },
+      {
+        "id": "t2v_42",
+        "type": "vocab",
+        "moji": "でんしゃ",
+        "romaji": "electric train",
+        "url": "でんしゃ.mp3"
+      },
+      {
+        "id": "t2v_43",
+        "type": "vocab",
+        "moji": "ともだち",
+        "romaji": "friend",
+        "url": "ともだち.mp3"
+      },
+      {
+        "id": "t2v_44",
+        "type": "vocab",
+        "moji": "とります",
+        "romaji": "to take a photo or record a film",
+        "url": "とります.mp3"
+      },
+      {
+        "id": "t2v_45",
+        "type": "vocab",
+        "moji": "ねます",
+        "romaji": "to go to bed, to sleep",
+        "url": "ねます.mp3"
+      },
+      {
+        "id": "t2v_46",
+        "type": "vocab",
+        "moji": "のみます",
+        "romaji": "to drink",
+        "url": "のみます.mp3"
+      },
+      {
+        "id": "t2v_47",
+        "type": "vocab",
+        "moji": "はし",
+        "romaji": "chopsticks",
+        "url": "はし.mp3"
+      },
+      {
+        "id": "t2v_48",
+        "type": "vocab",
+        "moji": "バス",
+        "romaji": "bus",
+        "url": "バス.mp3"
+      },
+      {
+        "id": "t2v_49",
+        "type": "vocab",
+        "moji": "はは",
+        "romaji": "my mother",
+        "url": "はは.mp3"
+      },
+      {
+        "id": "t2v_50",
+        "type": "vocab",
+        "moji": "ばん",
+        "romaji": "evening",
+        "url": "ばん.mp3"
+      },
+      {
+        "id": "t2v_51",
+        "type": "vocab",
+        "moji": "パン",
+        "romaji": "bread",
+        "url": "パン.mp3"
+      },
+      {
+        "id": "t2v_52",
+        "type": "vocab",
+        "moji": "ばんごはん",
+        "romaji": "evening meal",
+        "url": "ばんごはん.mp3"
+      },
+      {
+        "id": "t2v_53",
+        "type": "vocab",
+        "moji": "ひる",
+        "romaji": "noon, daytime",
+        "url": "ひる.mp3"
+      },
+      {
+        "id": "t2v_54",
+        "type": "vocab",
+        "moji": "ひるごはん",
+        "romaji": "midday meal",
+        "url": "ひるごはん.mp3"
+      },
+      {
+        "id": "t2v_55",
+        "type": "vocab",
+        "moji": "ペン",
+        "romaji": "pen",
+        "url": "ペン.mp3"
+      },
+      {
+        "id": "t2v_56",
+        "type": "vocab",
+        "moji": "べんきょうします",
+        "romaji": "to study",
+        "url": "べんきょうします.mp3"
+      },
+      {
+        "id": "t2v_57",
+        "type": "vocab",
+        "moji": "まいにち",
+        "romaji": "every day",
+        "url": "まいにち.mp3"
+      },
+      {
+        "id": "t2v_58",
+        "type": "vocab",
+        "moji": "みず",
+        "romaji": "water",
+        "url": "みず.mp3"
+      },
+      {
+        "id": "t2v_59",
+        "type": "vocab",
+        "moji": "みます",
+        "romaji": "to see, to watch",
+        "url": "みます.mp3"
+      },
+      {
+        "id": "t2v_60",
+        "type": "vocab",
+        "moji": "やすみ",
+        "romaji": "rest, holiday",
+        "url": "やすみ.mp3"
+      },
+      {
+        "id": "t2v_61",
+        "type": "vocab",
+        "moji": "よみます",
+        "romaji": "to read",
+        "url": "よみます.mp3"
+      },
+      {
+        "id": "t2v_62",
+        "type": "vocab",
+        "moji": "レストラン",
+        "romaji": "restaurant",
+        "url": "レストラン.mp3"
+      }
     ], 
     TOPIC2_TITLE_and_grammar : [
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "A verb with ます works as a predicate.\nます is used when a sentence expresses a habitual thing or a truth. It is also when a sentence expresses a thing that will occur in the future. The negative form is ません.\n「を」 is a particle that marks the direct object of a transitive verb.",
-        "moji"  : "N　を　V　ます",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "「へ」is a particle that denotes movement to a destination, it immediately follows a place or direction and a verb that indicates movement (ex.いきます、きます、かえります) is placed after it.",
-        "moji"  : "N（place）へ",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "「で」marks the place where an action occurs.",
-        "moji"  : "N（place）で",
-        "url"   : ""
+        "id": "t2g_1",
+        "type": "grammar",
+        "moji": "朝ご飯を食べます",
+        "romaji": "I'll eat breakfast",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "When a verb denotes a momentary action or movement, in a certain period of time, it is marked with the particle 「に」.",
-        "moji"  : "N（time）に",
-        "url"   : ""
+        "id": "t2g_2",
+        "type": "grammar",
+        "moji": "ジュースを飲みます",
+        "romaji": "I'll drink juice",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "「から」marks the starting point of time or distance, 「まで」marks the endpoint of time or distance.",
-        "moji"  : "Nから　Nまで",
-        "url"   : ""
+        "id": "t2g_3",
+        "type": "grammar",
+        "moji": "映画を見ます",
+        "romaji": "I'll watch a movie",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "The particle「で」denotes a method or a mean to preform an action.",
-        "moji"  : "N（tool）で",
-        "url"   : ""
+        "id": "t2g_4",
+        "type": "grammar",
+        "moji": "本を読みます",
+        "romaji": "I'll read a book",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "①The particle「と」is used to connects two nouns.\n②「と」is also used when an action is done together with another person.",
-        "moji"  : "Nと",
-        "url"   : ""
+        "id": "t2g_5",
+        "type": "grammar",
+        "moji": "かばんを買いません",
+        "romaji": "I won't buy a bag",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "This grammatical patern is used to list and connect nouns that are related by inserting the particle「や」in between nouns. Sometimes「など」is placed after the last noun to explicitly express that there are also some other things related to that noun. While「と」enumerates all specific items, 「や」is a loose enumeration of items.",
-        "moji"  : "NやNなど",
-        "url"   : ""
+        "id": "t2g_6",
+        "type": "grammar",
+        "moji": "手紙を書きません",
+        "romaji": "I won't write a letter",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": '「どこか」denotes the question "where" (somewhere), 「何か」denotes the question "what" (something), 「だれか」denotes the question "who/whom" (someone/somebody).',
-        "moji"  : "＜疑問詞＞＋か",
-        "url"   : ""
+        "id": "t2g_7",
+        "type": "grammar",
+        "moji": "(わたしは）京都へ行きます",
+        "romaji": "(I) will go to Kyoto",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "When an interrogative word if followed by the particle「も」and the verb following it is in negative form, it denotes abstinence in doing the verb.",
-        "moji"  : "＜疑問詞＞＋も＋否定",
-        "url"   : ""
+        "id": "t2g_8",
+        "type": "grammar",
+        "moji": "(わたしは）家へ帰ります",
+        "romaji": "(I) will go home",
+        "url": ""
       },
+      {
+        "id": "t2g_9",
+        "type": "grammar",
+        "moji": "(わたしは）学校へ来ます",
+        "romaji": "(I) will come to school",
+        "url": ""
+      },
+      {
+        "id": "t2g_10",
+        "type": "grammar",
+        "moji": "レストランで昼ごはんを食べます",
+        "romaji": "(I) will eat lunch at a restaurant",
+        "url": ""
+      },
+      {
+        "id": "t2g_11",
+        "type": "grammar",
+        "moji": "デパートでかばんを買います",
+        "romaji": "I'll buy a bag at a department store",
+        "url": ""
+      },
+      {
+        "id": "t2g_12",
+        "type": "grammar",
+        "moji": "学校で勉強します",
+        "romaji": "I will study at school",
+        "url": ""
+      },
+      {
+        "id": "t2g_13",
+        "type": "grammar",
+        "moji": "7時に起きます",
+        "romaji": "I'll wake up at seven o'clock",
+        "url": ""
+      },
+      {
+        "id": "t2g_14",
+        "type": "grammar",
+        "moji": "11時に寝ます",
+        "romaji": "I'll go to sleep at eleven o'clock",
+        "url": ""
+      },
+      {
+        "id": "t2g_15",
+        "type": "grammar",
+        "moji": "4月1日に日本へ来ました",
+        "romaji": "I came to Japan on April 1st",
+        "url": ""
+      },
+      {
+        "id": "t2g_16",
+        "type": "grammar",
+        "moji": "月曜日に学校へ行きます",
+        "romaji": "I'll go to school on Monday",
+        "url": ""
+      },
+      {
+        "id": "t2g_17",
+        "type": "grammar",
+        "moji": "9時から5時まで働きます",
+        "romaji": "I'll work from nine to five",
+        "url": ""
+      },
+      {
+        "id": "t2g_18",
+        "type": "grammar",
+        "moji": "14日から20日まで京都にいます",
+        "romaji": "I'll be in Kyoto from the 14th to 20th",
+        "url": ""
+      },
+      {
+        "id": "t2g_19",
+        "type": "grammar",
+        "moji": "東京から大阪まで2時間半です",
+        "romaji": "It takes two and a half hours from Tokyo to Osaka",
+        "url": ""
+      },
+      {
+        "id": "t2g_20",
+        "type": "grammar",
+        "moji": "月曜日から水曜日まで大阪へ行きます",
+        "romaji": "I'll go to Osaka from Monday to Wednesday",
+        "url": ""
+      },
+      {
+        "id": "t2g_21",
+        "type": "grammar",
+        "moji": "はしでごはんを食べます",
+        "romaji": "I eat rice with chopsticks",
+        "url": ""
+      },
+      {
+        "id": "t2g_22",
+        "type": "grammar",
+        "moji": "日本語で手紙を書きます",
+        "romaji": "I'll write a letter in Japanese",
+        "url": ""
+      },
+      {
+        "id": "t2g_23",
+        "type": "grammar",
+        "moji": "バスで京都へ行きます",
+        "romaji": "I'll go to Kyoto by bus",
+        "url": ""
+      },
+      {
+        "id": "t2g_24",
+        "type": "grammar",
+        "moji": "テレビで映画を見ます",
+        "romaji": "I'll watch a movie on TV",
+        "url": ""
+      },
+      {
+        "id": "t2g_25",
+        "type": "grammar",
+        "moji": "かばんと本を買います",
+        "romaji": "I'll buy a bag and a book",
+        "url": ""
+      },
+      {
+        "id": "t2g_26",
+        "type": "grammar",
+        "moji": "大阪と京都へ行きます",
+        "romaji": "I'll go to Osaka and Kyoto",
+        "url": ""
+      },
+      {
+        "id": "t2g_27",
+        "type": "grammar",
+        "moji": "家族と東京へ行きます",
+        "romaji": "I'll go to Tokyo with (my) family",
+        "url": ""
+      },
+      {
+        "id": "t2g_28",
+        "type": "grammar",
+        "moji": "友達と映画を見ます",
+        "romaji": "I'll watch a movie with friends",
+        "url": ""
+      },
+      {
+        "id": "t2g_29",
+        "type": "grammar",
+        "moji": "かばんや本などを買います",
+        "romaji": "I'll buy a bag, book, and etc",
+        "url": ""
+      },
+      {
+        "id": "t2g_30",
+        "type": "grammar",
+        "moji": "コーヒーや紅茶などを飲みます",
+        "romaji": "I drink coffee, tea, and such",
+        "url": ""
+      },
+      {
+        "id": "t2g_31",
+        "type": "grammar",
+        "moji": "銀行や公園などへ行きます",
+        "romaji": "I'll go to a bank, park, and so on",
+        "url": ""
+      },
+      {
+        "id": "t2g_32",
+        "type": "grammar",
+        "moji": "明日どこか行きますか",
+        "romaji": "Will you go somewhere tomorrow?",
+        "url": ""
+      },
+      {
+        "id": "t2g_33",
+        "type": "grammar",
+        "moji": "何か飲みますか",
+        "romaji": "Will you drink something?",
+        "url": ""
+      },
+      {
+        "id": "t2g_34",
+        "type": "grammar",
+        "moji": "だれかいきますか",
+        "romaji": "Will somebody go?",
+        "url": ""
+      },
+      {
+        "id": "t2g_35",
+        "type": "grammar",
+        "moji": "どこも行きません",
+        "romaji": "I won't go anywhere",
+        "url": ""
+      },
+      {
+        "id": "t2g_36",
+        "type": "grammar",
+        "moji": "何も食べません",
+        "romaji": "I won't eat anything",
+        "url": ""
+      },
+      {
+        "id": "t2g_37",
+        "type": "grammar",
+        "moji": "だれもいきません",
+        "romaji": "Nobody goes there",
+        "url": ""
+      }
     ], 
     TOPIC2_TITLE_and_kanji : [
       {
-        "id": "1v_a",
+        "id": "t2k_1",
         "type": "kanji",
         "moji": "車",
         "romaji": "しゃ/くるま",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_2",
         "type": "kanji",
         "moji": "行",
         "romaji": "い",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_3",
         "type": "kanji",
         "moji": "来",
         "romaji": "らい/き、く",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_4",
         "type": "kanji",
         "moji": "帰",
         "romaji": "き/かえ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_5",
         "type": "kanji",
         "moji": "日",
         "romaji": "ひ、び、か/にち",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_6",
         "type": "kanji",
         "moji": "月",
         "romaji": "がつ、げつ/つき",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_7",
         "type": "kanji",
         "moji": "火",
         "romaji": "か",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_8",
         "type": "kanji",
         "moji": "水",
         "romaji": "すい/みず",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_9",
         "type": "kanji",
         "moji": "木",
         "romaji": "もく/き",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_10",
         "type": "kanji",
         "moji": "金",
         "romaji": "きん/かね",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_11",
         "type": "kanji",
         "moji": "土",
         "romaji": "ど",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_12",
         "type": "kanji",
         "moji": "時",
         "romaji": "じ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_13",
         "type": "kanji",
         "moji": "分",
         "romaji": "ふん、ぷん、ぶん",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_14",
         "type": "kanji",
         "moji": "半",
         "romaji": "はん",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t2k_15",
         "type": "kanji",
         "moji": "今",
         "romaji": "こん/いま",
@@ -3364,613 +3665,830 @@ export const flashData = [
     ],
     TOPIC3_TITLE_and_vocabulary : [
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_1",
+        "type": "vocab",
+        "moji": "あたらしい",
         "romaji": "new",
-        "moji"  : "あたらしい",
-        "url"   : ""
-      }, 
+        "url": "あたらしい.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_2",
+        "type": "vocab",
+        "moji": "あつい",
         "romaji": "hot",
-        "moji"  : "あつい",
-        "url"   : ""
-      }, 
+        "url": "あつい.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_3",
+        "type": "vocab",
+        "moji": "あつい",
         "romaji": "hot to the touch",
-        "moji"  : "あつい",
-        "url"   : ""
-      }, 
+        "url": "あつい.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_4",
+        "type": "vocab",
+        "moji": "アパート",
         "romaji": "apartment",
-        "moji"  : "アパート",
-        "url"   : ""
-      }, 
+        "url": "アパート.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_5",
+        "type": "vocab",
+        "moji": "あまり",
         "romaji": "not very",
-        "moji"  : "あまり",
-        "url"   : ""
-      }, 
+        "url": "あまり.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_6",
+        "type": "vocab",
+        "moji": "あります",
         "romaji": "to be,to have (used for inanimate objects)",
-        "moji"  : "あります",
-        "url"   : ""
-      }, 
+        "url": "あります.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_7",
+        "type": "vocab",
+        "moji": "いい",
         "romaji": "good",
-        "moji"  : "いい",
-        "url"   : ""
-      }, 
+        "url": "いい.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_8",
+        "type": "vocab",
+        "moji": "いちばん",
         "romaji": "best, first",
-        "moji"  : "いちばん",
-        "url"   : ""
-      }, 
+        "url": "いちばん.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_9",
+        "type": "vocab",
+        "moji": "いぬ",
         "romaji": "dog",
-        "moji"  : "いぬ",
-        "url"   : ""
-      }, 
+        "url": "いぬ.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_10",
+        "type": "vocab",
+        "moji": "います",
         "romaji": "to be, to have (used for people and animals)",
-        "moji"  : "います",
-        "url"   : ""
-      }, 
+        "url": "います.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_11",
+        "type": "vocab",
+        "moji": "うえ",
         "romaji": "on top of",
-        "moji"  : "うえ",
-        "url"   : ""
-      }, 
+        "url": "うえ.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_12",
+        "type": "vocab",
+        "moji": "うしろ",
         "romaji": "behind",
-        "moji"  : "うしろ",
-        "url"   : ""
-      }, 
+        "url": "うしろ.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_13",
+        "type": "vocab",
+        "moji": "えき",
         "romaji": "station",
-        "moji"  : "えき",
-        "url"   : ""
-      }, 
+        "url": "えき.mp3"
+      },
       {
-        "id"    : "1v_a",
-        "type"  : "vocab",
+        "id": "t3v_14",
+        "type": "vocab",
+        "moji": "おいしい",
         "romaji": "delicious",
-        "moji"  : "おいしい",
-        "url"   : ""
-      }, 
+        "url": "おいしい.mp3"
+      },
       {
-        "id": "1v_a",
+        "id": "t3v_15",
         "type": "vocab",
         "moji": "おおきい",
         "romaji": "big",
-        "url": ""
+        "url": "おおきい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_16",
         "type": "vocab",
         "moji": "おそい",
         "romaji": "late, slow",
-        "url": ""
+        "url": "おそい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_17",
         "type": "vocab",
         "moji": "きのう",
         "romaji": "Yesterday",
-        "url": ""
+        "url": "きのう.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_18",
         "type": "vocab",
         "moji": "きょねん",
         "romaji": "last year",
-        "url": ""
+        "url": "きょねん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_19",
         "type": "vocab",
         "moji": "きれい",
         "romaji": "pretty, clean",
-        "url": ""
+        "url": "きれい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_20",
         "type": "vocab",
         "moji": "さむい",
         "romaji": "Cold",
-        "url": ""
+        "url": "さむい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_21",
         "type": "vocab",
         "moji": "しずか",
         "romaji": "Quiet",
-        "url": ""
+        "url": "しずか.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_22",
         "type": "vocab",
         "moji": "した",
         "romaji": "Below",
-        "url": ""
+        "url": "した.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_23",
         "type": "vocab",
         "moji": "すこし",
         "romaji": "Few",
-        "url": ""
+        "url": "すこし.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_24",
         "type": "vocab",
         "moji": "スポーツ",
         "romaji": "Sport",
-        "url": ""
+        "url": "スポーツ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_25",
         "type": "vocab",
         "moji": "そして",
         "romaji": "And",
-        "url": ""
+        "url": "そして.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_26",
         "type": "vocab",
         "moji": "そと",
         "romaji": "Outside",
-        "url": ""
+        "url": "そと.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_27",
         "type": "vocab",
         "moji": "たかい",
         "romaji": "tall, expensive",
-        "url": ""
+        "url": "たかい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_28",
         "type": "vocab",
         "moji": "たくさん",
         "romaji": "many",
-        "url": ""
+        "url": "たくさん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_29",
         "type": "vocab",
         "moji": "たべもの",
         "romaji": "food",
-        "url": ""
+        "url": "たべもの.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_30",
         "type": "vocab",
         "moji": "ちいさい",
         "romaji": "little",
-        "url": ""
+        "url": "ちいさい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_31",
         "type": "vocab",
         "moji": "ちかく",
         "romaji": "near",
-        "url": ""
+        "url": "ちかく.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_32",
         "type": "vocab",
         "moji": "つめたい",
         "romaji": "cold to the touch",
-        "url": ""
+        "url": "つめたい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_33",
         "type": "vocab",
         "moji": "テーブル",
         "romaji": "table",
-        "url": ""
+        "url": "テーブル.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_34",
         "type": "vocab",
         "moji": "ドア",
         "romaji": "Western style door",
-        "url": ""
+        "url": "ドア.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_35",
         "type": "vocab",
         "moji": "トイレ",
         "romaji": "toilet",
-        "url": ""
+        "url": "トイレ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_36",
         "type": "vocab",
         "moji": "どう",
         "romaji": "how",
-        "url": ""
+        "url": "どう.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_37",
         "type": "vocab",
         "moji": "とけい",
         "romaji": "watch, clock",
-        "url": ""
+        "url": "とけい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_38",
         "type": "vocab",
         "moji": "ところ",
         "romaji": "place",
-        "url": ""
+        "url": "ところ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_39",
         "type": "vocab",
         "moji": "としょかん",
         "romaji": "library",
-        "url": ""
+        "url": "としょかん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_40",
         "type": "vocab",
         "moji": "とても",
         "romaji": "very",
-        "url": ""
+        "url": "とても.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_41",
         "type": "vocab",
         "moji": "となり",
         "romaji": "next door to",
-        "url": ""
+        "url": "となり.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_42",
         "type": "vocab",
         "moji": "どんな",
         "romaji": "What kind of ～",
-        "url": ""
+        "url": "どんな.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_43",
         "type": "vocab",
         "moji": "なか",
         "romaji": "middle",
-        "url": ""
+        "url": "なか.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_44",
         "type": "vocab",
         "moji": "にぎやか",
         "romaji": "bustling, busy",
-        "url": ""
+        "url": "にぎやか.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_45",
         "type": "vocab",
         "moji": "にわ",
         "romaji": "garden",
-        "url": ""
+        "url": "にわ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_46",
         "type": "vocab",
         "moji": "ねこ",
         "romaji": "cat",
-        "url": ""
+        "url": "ねこ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_47",
         "type": "vocab",
         "moji": "のみもの",
         "romaji": "a drink",
-        "url": ""
+        "url": "のみもの.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_48",
         "type": "vocab",
         "moji": "はやい",
         "romaji": "early",
-        "url": ""
+        "url": "はやい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_49",
         "type": "vocab",
         "moji": "ひくい",
         "romaji": "short, low",
-        "url": ""
+        "url": "ひくい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_50",
         "type": "vocab",
         "moji": "ひだり",
         "romaji": "left hand side",
-        "url": ""
+        "url": "ひだり.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_51",
         "type": "vocab",
         "moji": "ふるい",
         "romaji": "old (not used for people)",
-        "url": ""
+        "url": "ふるい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_52",
         "type": "vocab",
         "moji": "ベッド",
         "romaji": "bed",
-        "url": ""
+        "url": "ベッド.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_53",
         "type": "vocab",
         "moji": "へや",
         "romaji": "room",
-        "url": ""
+        "url": "へや.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_54",
         "type": "vocab",
         "moji": "べんり",
         "romaji": "useful, convenient",
-        "url": ""
+        "url": "べんり.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_55",
         "type": "vocab",
         "moji": "まえ",
         "romaji": "before, front",
-        "url": ""
+        "url": "まえ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_56",
         "type": "vocab",
         "moji": "まち",
         "romaji": "town, city",
-        "url": ""
+        "url": "まち.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_57",
         "type": "vocab",
         "moji": "まど",
         "romaji": "window",
-        "url": ""
+        "url": "まど.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_58",
         "type": "vocab",
         "moji": "みぎ",
         "romaji": "right side",
-        "url": ""
+        "url": "みぎ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_59",
         "type": "vocab",
         "moji": "みせ",
         "romaji": "shop",
-        "url": ""
+        "url": "みせ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_60",
         "type": "vocab",
         "moji": "むずかしい",
         "romaji": "difficult",
-        "url": ""
+        "url": "むずかしい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_61",
         "type": "vocab",
         "moji": "やすい",
         "romaji": "cheap",
-        "url": ""
+        "url": "やすい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_62",
         "type": "vocab",
         "moji": "ゆうびんきょく",
         "romaji": "post office",
-        "url": ""
+        "url": "ゆうびんきょく.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_63",
         "type": "vocab",
         "moji": "ゆうめい",
         "romaji": "famous",
-        "url": ""
+        "url": "ゆうめい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_64",
         "type": "vocab",
         "moji": "れいぞうこ",
         "romaji": "refrigerator",
-        "url": ""
+        "url": "れいぞうこ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t3v_65",
         "type": "vocab",
         "moji": "わるい",
         "romaji": "bad",
-        "url": ""
+        "url": "わるい.mp3"
       }
     ], 
     TOPIC3_TITLE_and_grammar : [
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": 'In Japanese, adjectives are used as 1)predicates and 2)noun modifiers. According to the inflection, adjectives are devide into two groups, い-adjectives and な-adjectives.\n①NはAです\nAn い-adj usually ends with い then です, while a な-adj doesn\'t have to end with an い and な is added before です.\n②Nはい-adj（～い）くないです\nThe negative form of い-adj is formed by replacing the last い with くand adding ない at the end, making it ~くないです。\n③Nはな-adjじゃありません\nThe negative form of な-adj です is formed by adding ~じゃありません at the end.\n④い-adj（～い）＋N、な-adjな＋N\nAn adjective is placed before a noun to modify it. For な-adj, an additional な must be placed before the noun it modifies.',
-        "moji"  : "形容詞",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "This grammartical pattern is used to compare N1 against N2. N1 being lesser in degree or N2 being geater in degree in terms of adjective A",
-        "moji"  : "N1　は　N2　より　A　です",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "どちら denotes a question of comparison between N1 and N2 in terms of adjective A.",
-        "moji"  : "N1と　N2と、どちらが　A　ですか",
-        "url"   : ""
+        "id": "t3g_1",
+        "type": "grammar",
+        "moji": "富士山は高いです",
+        "romaji": "Mt.Fuji is high",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "In this sentence pattern, N2 is part of set N1 and is declared as the most favorable choice in terms of ajective A.",
-        "moji"  : "N1（のなか）で　N2が　一番　A　です",
-        "url"   : ""
-      }, 
+        "id": "t3g_2",
+        "type": "grammar",
+        "moji": "今日は寒いです",
+        "romaji": "It is cold today",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "To indicate the existence or presence of a thing or person this sentence pattern is used. The particle が is used to mark the thing(s) or person(s) in the sentence which are treated as the subject.\n・あります is used for inanimate or things that do not move by itself. Things, plants and places belong to this category.\n・For animate and things that move by itself, います is used. People and animals belong to this category. \n・When it is a place then it is indicated by the particle に.\n・N1(thing, person, place) の N2(position)",
-        "moji"  : "います/あります",
-        "url"   : ""
-      }, 
+        "id": "t3g_3",
+        "type": "grammar",
+        "moji": "マリアさんはきれいです",
+        "romaji": "Mrs.Maria is pretty",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "The past tense form of a verb is formed by changing the end of the verb into ました, and the negative form of it is ませんでした.A",
-        "moji"  : "動詞過去形",
-        "url"   : ""
-      },  
+        "id": "t3g_4",
+        "type": "grammar",
+        "moji": "この町は便利です",
+        "romaji": "This town is convenient.",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": 'There are two Japanese verbs forgiving. Deciding which one to use depends on the direction of the transaction. Imagine that you are in a set of concentric spheres of relative psychological distances, with X at the center, you next to X, and all the others are on the edge. When an item moves away from the center, the verb あげます is used to describe the transaction. When a thing moves toward the center, the verb we use is くれます.\nIn the case of あげます and くれます, the giver is the subject of the sentence, and the particle は or が is placed next to the subject while the recipient is accompanied by the particle に.\nIf thetransaction is described with the verb くれます, it can also be described in terms of "receiving" or もらいます. For もらいます, the recipient is the subject of the sentence, marked with は or が, and the giver is accompanied by the particle に or から.',
-        "moji"  : "あげもらい",
-        "url"   : ""
-      }, 
+        "id": "t3g_5",
+        "type": "grammar",
+        "moji": "このかばんは新しくないです",
+        "romaji": "Thie bag is not new",
+        "url": ""
+      },
+      {
+        "id": "t3g_6",
+        "type": "grammar",
+        "moji": "この水は冷たくないです",
+        "romaji": "This water is not cold",
+        "url": ""
+      },
+      {
+        "id": "t3g_7",
+        "type": "grammar",
+        "moji": "この映画は有名じゃありません",
+        "romaji": "This movie is not famous",
+        "url": ""
+      },
+      {
+        "id": "t3g_8",
+        "type": "grammar",
+        "moji": "ここは静かじゃありません",
+        "romaji": "It is not quiet here",
+        "url": ""
+      },
+      {
+        "id": "t3g_9",
+        "type": "grammar",
+        "moji": "富士山は高い山です",
+        "romaji": "Mt.Fuji is a high mountain",
+        "url": ""
+      },
+      {
+        "id": "t3g_10",
+        "type": "grammar",
+        "moji": "これは安いカメラです",
+        "romaji": "This is a cheap camera",
+        "url": ""
+      },
+      {
+        "id": "t3g_11",
+        "type": "grammar",
+        "moji": "ここはにぎやかな町です",
+        "romaji": "It is a busy town",
+        "url": ""
+      },
+      {
+        "id": "t3g_12",
+        "type": "grammar",
+        "moji": "ここはきれいなアパートです",
+        "romaji": "It is a clean apartment here",
+        "url": ""
+      },
+      {
+        "id": "t3g_13",
+        "type": "grammar",
+        "moji": "北海道は東京より寒いです",
+        "romaji": "Hokkaido is colder than Tokyo",
+        "url": ""
+      },
+      {
+        "id": "t3g_14",
+        "type": "grammar",
+        "moji": "東京タワーは東京スカイツリーより低いです",
+        "romaji": "Tokyo Tower is shorter than Tokyo Sky Tree",
+        "url": ""
+      },
+      {
+        "id": "t3g_15",
+        "type": "grammar",
+        "moji": "このかばんはあのかばんより新しいです",
+        "romaji": "This bag is newer than that bag",
+        "url": ""
+      },
+      {
+        "id": "t3g_16",
+        "type": "grammar",
+        "moji": "コーヒーと紅茶とどちらがおいしいですか",
+        "romaji": "Which is delicious, coffee or tea?",
+        "url": ""
+      },
+      {
+        "id": "t3g_17",
+        "type": "grammar",
+        "moji": "東京と大阪とどちらが大きいですか",
+        "romaji": "Which is larger, Tokyo or Osaka?",
+        "url": ""
+      },
+      {
+        "id": "t3g_18",
+        "type": "grammar",
+        "moji": "ひらがなとカタカナと、どちらが難しいですか",
+        "romaji": "Which is more difficult, Hiragana or Katakana?",
+        "url": ""
+      },
+      {
+        "id": "t3g_19",
+        "type": "grammar",
+        "moji": "日本料理ですしが一番おいしいです",
+        "romaji": "Among Japanese dishes, sushi is the most delicious",
+        "url": ""
+      },
+      {
+        "id": "t3g_20",
+        "type": "grammar",
+        "moji": "家族で父が一番静かです",
+        "romaji": "My father is the most quiet of my family",
+        "url": ""
+      },
+      {
+        "id": "t3g_21",
+        "type": "grammar",
+        "moji": "一年で二月が一番寒いです",
+        "romaji": "In February is the coldest time of a year",
+        "url": ""
+      },
+      {
+        "id": "t3g_22",
+        "type": "grammar",
+        "moji": "部屋にテーブルがあります",
+        "romaji": "There is a table in the room",
+        "url": ""
+      },
+      {
+        "id": "t3g_23",
+        "type": "grammar",
+        "moji": "テーブルの上に写真があります",
+        "romaji": "There is a picture on the table",
+        "url": ""
+      },
+      {
+        "id": "t3g_24",
+        "type": "grammar",
+        "moji": "公園に花があります",
+        "romaji": "There are flowers in the park",
+        "url": ""
+      },
+      {
+        "id": "t3g_25",
+        "type": "grammar",
+        "moji": "学校にさとうさんがいます",
+        "romaji": "Mr.Sato is in the school",
+        "url": ""
+      },
+      {
+        "id": "t3g_26",
+        "type": "grammar",
+        "moji": "庭に犬がいます",
+        "romaji": "There is a dog in the garden",
+        "url": ""
+      },
+      {
+        "id": "t3g_27",
+        "type": "grammar",
+        "moji": "ジョンさんは銀行の前にいます",
+        "romaji": "Mr.John is in front of bank",
+        "url": ""
+      },
+      {
+        "id": "t3g_28",
+        "type": "grammar",
+        "moji": "窓の下にベッドがあります",
+        "romaji": "There is a bed under the window",
+        "url": ""
+      },
+      {
+        "id": "t3g_29",
+        "type": "grammar",
+        "moji": "わたしは9時にうちに帰りました",
+        "romaji": "I returned home at nine",
+        "url": ""
+      },
+      {
+        "id": "t3g_30",
+        "type": "grammar",
+        "moji": "マリアさんは友達と昼ご飯を食べました",
+        "romaji": "Mrs.Maria ate lunch with her friend",
+        "url": ""
+      },
+      {
+        "id": "t3g_31",
+        "type": "grammar",
+        "moji": "わたしはきのう勉強しませんでした",
+        "romaji": "I didn't study yesterday",
+        "url": ""
+      },
+      {
+        "id": "t3g_32",
+        "type": "grammar",
+        "moji": "マークさんは学校へ行きませんでした",
+        "romaji": "Mr.Mark didn't go to school",
+        "url": ""
+      },
+      {
+        "id": "t3g_33",
+        "type": "grammar",
+        "moji": "ジョンさんはマリアさんに花をあげました",
+        "romaji": "Mr.John gave Mrs.Maria flowers",
+        "url": ""
+      },
+      {
+        "id": "t3g_34",
+        "type": "grammar",
+        "moji": "さとうさんはグエンさんに時計をあげました",
+        "romaji": "Mr.Sato gave Mrs.Nguyen a watch",
+        "url": ""
+      },
+      {
+        "id": "t3g_35",
+        "type": "grammar",
+        "moji": "父は私に車をくれました",
+        "romaji": "My father gave me a new car",
+        "url": ""
+      },
+      {
+        "id": "t3g_36",
+        "type": "grammar",
+        "moji": "キムさんは私にカメラをくれました",
+        "romaji": "Mrs.Kim gave me a camera",
+        "url": ""
+      },
+      {
+        "id": "t3g_37",
+        "type": "grammar",
+        "moji": "わたしは母に辞書をもらいました",
+        "romaji": "I received a dictionary from my mother",
+        "url": ""
+      },
+      {
+        "id": "t3g_38",
+        "type": "grammar",
+        "moji": "リンさんはジョンさんに日本語の本をもらいました",
+        "romaji": "Mrs.Lin received a Japanese book from Mr.John",
+        "url": ""
+      }
     ], 
     TOPIC3_TITLE_and_kanji : [
       {
-        "id": "1v_a",
+        "id": "t3k_1",
         "type": "kanji",
         "moji": "週",
         "romaji": "しゅう",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_2",
         "type": "kanji",
         "moji": "年",
         "romaji": "ねん/とし",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_3",
         "type": "kanji",
         "moji": "毎",
         "romaji": "まい",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_4",
         "type": "kanji",
         "moji": "大",
         "romaji": "だい/おお",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_5",
         "type": "kanji",
         "moji": "小",
         "romaji": "しょう/ちい",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_6",
         "type": "kanji",
         "moji": "新",
         "romaji": "しん/あたら",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_7",
         "type": "kanji",
         "moji": "古",
         "romaji": "ふる",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_8",
         "type": "kanji",
         "moji": "高",
         "romaji": "こう/たか",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_9",
         "type": "kanji",
         "moji": "安",
         "romaji": "やす",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_10",
         "type": "kanji",
         "moji": "多",
         "romaji": "おお",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_11",
         "type": "kanji",
         "moji": "少",
         "romaji": "すく、すこ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_12",
         "type": "kanji",
         "moji": "長",
         "romaji": "なが",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_13",
         "type": "kanji",
         "moji": "早",
         "romaji": "はや",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_14",
         "type": "kanji",
         "moji": "好",
         "romaji": "す",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t3k_15",
         "type": "kanji",
         "moji": "町",
         "romaji": "まち",
@@ -3979,571 +4497,690 @@ export const flashData = [
     ],
     TOPIC4_TITLE_and_vocabulary : [
       {
-	    "id": "1v_a",
-	    "type": "vocab",
-	    "moji": "あいます",
-	    "romaji": "to meet",
-	    "url": ""
-	    },
+        "id": "t4v_1",
+        "type": "vocab",
+        "moji": "あいます",
+        "romaji": "to meet",
+        "url": "あいます.mp3"
+      },
       {
-        "id": "1v_a",
+        "id": "t4v_2",
         "type": "vocab",
         "moji": "あそびます",
         "romaji": "play",
-        "url": ""
+        "url": "あそびます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_3",
         "type": "vocab",
         "moji": "あたたかい",
         "romaji": "warm",
-        "url": ""
+        "url": "あたたかい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_4",
         "type": "vocab",
         "moji": "いたい",
         "romaji": "painful",
-        "url": ""
+        "url": "いたい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_5",
         "type": "vocab",
         "moji": "いっしょ",
         "romaji": "together",
-        "url": ""
+        "url": "いっしょ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_6",
         "type": "vocab",
         "moji": "いつも",
         "romaji": "always",
-        "url": ""
+        "url": "いつも.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_7",
         "type": "vocab",
         "moji": "うみ",
         "romaji": "sea",
-        "url": ""
+        "url": "うみ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_8",
         "type": "vocab",
         "moji": "おかね",
         "romaji": "money",
-        "url": ""
+        "url": "おかね.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_9",
         "type": "vocab",
         "moji": "おなか",
         "romaji": "stomach",
-        "url": ""
+        "url": "おなか.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_10",
         "type": "vocab",
         "moji": "かいもの",
         "romaji": "Shopping",
-        "url": ""
+        "url": "かいもの.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_11",
         "type": "vocab",
         "moji": "かかります",
         "romaji": "to take time or money",
-        "url": ""
+        "url": "かかります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_12",
         "type": "vocab",
         "moji": "～かげつ",
         "romaji": "~month(s)",
-        "url": ""
+        "url": "～かげつ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_13",
         "type": "vocab",
         "moji": "かけます",
         "romaji": "to call by phone",
-        "url": ""
+        "url": "かけます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_14",
         "type": "vocab",
         "moji": "かります",
         "romaji": "to borrow",
-        "url": ""
+        "url": "かります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_15",
         "type": "vocab",
         "moji": "きっさてん",
         "romaji": "coffee lounge",
-        "url": ""
+        "url": "きっさてん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_16",
         "type": "vocab",
         "moji": "きっぷ",
         "romaji": "Ticket",
-        "url": ""
+        "url": "きっぷ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_17",
         "type": "vocab",
         "moji": "きます",
         "romaji": "to put on from the shoulders down",
-        "url": ""
+        "url": "きます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_18",
         "type": "vocab",
         "moji": "くもり",
         "romaji": "cloudy weather",
-        "url": ""
+        "url": "くもり.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_19",
         "type": "vocab",
         "moji": "げんき",
         "romaji": "health, vitality",
-        "url": ""
+        "url": "げんき.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_20",
         "type": "vocab",
         "moji": "ことし",
         "romaji": "this year",
-        "url": ""
+        "url": "ことし.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_21",
         "type": "vocab",
         "moji": "こんげつ",
         "romaji": "this month",
-        "url": ""
+        "url": "こんげつ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_22",
         "type": "vocab",
         "moji": "こんしゅう",
         "romaji": "this week",
-        "url": ""
+        "url": "こんしゅう.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_23",
         "type": "vocab",
         "moji": "こんばん",
         "romaji": "this evening",
-        "url": ""
+        "url": "こんばん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_24",
         "type": "vocab",
         "moji": "さんぽします",
         "romaji": "to stroll",
-        "url": ""
+        "url": "さんぽします.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_25",
         "type": "vocab",
         "moji": "～しゅうかん",
         "romaji": "~week(s)",
-        "url": ""
+        "url": "～しゅうかん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_26",
         "type": "vocab",
         "moji": "すずしい",
         "romaji": "Refreshing",
-        "url": ""
+        "url": "すずしい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_27",
         "type": "vocab",
         "moji": "せんげつ",
         "romaji": "last month",
-        "url": ""
+        "url": "せんげつ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_28",
         "type": "vocab",
         "moji": "せんしゅう",
         "romaji": "last week",
-        "url": ""
+        "url": "せんしゅう.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_29",
         "type": "vocab",
         "moji": "たいへん",
         "romaji": "hard",
-        "url": ""
+        "url": "たいへん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_30",
         "type": "vocab",
         "moji": "たのしい",
         "romaji": "enjoyable",
-        "url": ""
+        "url": "たのしい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_31",
         "type": "vocab",
         "moji": "ちず",
         "romaji": "map",
-        "url": ""
+        "url": "ちず.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_32",
         "type": "vocab",
         "moji": "つかいます",
         "romaji": "to use",
-        "url": ""
+        "url": "つかいます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_33",
         "type": "vocab",
         "moji": "てんき",
         "romaji": "weather",
-        "url": ""
+        "url": "てんき.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_34",
         "type": "vocab",
         "moji": "どうやって",
         "romaji": "in what way",
-        "url": ""
+        "url": "どうやって.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_35",
         "type": "vocab",
         "moji": "どうして",
         "romaji": "why",
-        "url": ""
+        "url": "どうして.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_36",
         "type": "vocab",
         "moji": "ときどき",
         "romaji": "sometimes",
-        "url": ""
+        "url": "ときどき.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_37",
         "type": "vocab",
         "moji": "どのぐらい",
         "romaji": "how long",
-        "url": ""
+        "url": "どのぐらい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_38",
         "type": "vocab",
         "moji": "パーティー",
         "romaji": "party",
-        "url": ""
+        "url": "パーティー.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_39",
         "type": "vocab",
         "moji": "はたらきます",
         "romaji": "to work",
-        "url": ""
+        "url": "はたらきます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_40",
         "type": "vocab",
         "moji": "はなします",
         "romaji": "to speak",
-        "url": ""
+        "url": "はなします.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_41",
         "type": "vocab",
         "moji": "ビール",
         "romaji": "beer",
-        "url": ""
+        "url": "ビール.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_42",
         "type": "vocab",
         "moji": "ひこうき",
         "romaji": "airplane",
-        "url": ""
+        "url": "ひこうき.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_43",
         "type": "vocab",
         "moji": "ひま",
         "romaji": "free time",
-        "url": ""
+        "url": "ひま.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_44",
         "type": "vocab",
         "moji": "プール",
         "romaji": "swimming pool",
-        "url": ""
+        "url": "プール.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_45",
         "type": "vocab",
         "moji": "ふゆ",
         "romaji": "winter",
-        "url": ""
+        "url": "ふゆ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_46",
         "type": "vocab",
         "moji": "ホテル",
         "romaji": "hotel",
-        "url": ""
+        "url": "ホテル.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_47",
         "type": "vocab",
         "moji": "まいあさ",
         "romaji": "every morning",
-        "url": ""
+        "url": "まいあさ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_48",
         "type": "vocab",
         "moji": "まいしゅう",
         "romaji": "every week",
-        "url": ""
+        "url": "まいしゅう.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_49",
         "type": "vocab",
         "moji": "まいつき",
         "romaji": "every month",
-        "url": ""
+        "url": "まいつき.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_50",
         "type": "vocab",
         "moji": "まいとし",
         "romaji": "every year",
-        "url": ""
+        "url": "まいとし.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_51",
         "type": "vocab",
         "moji": "まいばん",
         "romaji": "every night",
-        "url": ""
+        "url": "まいばん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_52",
         "type": "vocab",
         "moji": "みんな",
         "romaji": "everyone",
-        "url": ""
+        "url": "みんな.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_53",
         "type": "vocab",
         "moji": "やさい",
         "romaji": "vegetable",
-        "url": ""
+        "url": "やさい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_54",
         "type": "vocab",
         "moji": "ゆき",
         "romaji": "snow",
-        "url": ""
+        "url": "ゆき.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_55",
         "type": "vocab",
         "moji": "よく",
         "romaji": "often, well",
-        "url": ""
+        "url": "よく.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_56",
         "type": "vocab",
         "moji": "らいげつ",
         "romaji": "next month",
-        "url": ""
+        "url": "らいげつ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_57",
         "type": "vocab",
         "moji": "らいしゅう",
         "romaji": "next week",
-        "url": ""
+        "url": "らいしゅう.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_58",
         "type": "vocab",
         "moji": "らいねん",
         "romaji": "next year",
-        "url": ""
+        "url": "らいねん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t4v_59",
         "type": "vocab",
         "moji": "りょこう",
         "romaji": "travel",
-        "url": ""
+        "url": "りょこう.mp3"
       }
     ], 
     TOPIC4_TITLE_and_grammar : [
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "In this sentence partern, いきます、きます、かえります are used to expresse purpose. The purpose is marked with the particle に. The noun before に is denotes an action.",
-        "moji"  : "Ｎ(place)　へ　Ｖます形／Ｎ　＋　に行きます／来ます／帰ります",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "ませんか is used when you want to invite someone to do something.",
-        "moji"  : "Ｖます＋ませんか",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "ましょうか is used when a speaker is positively inviting the listener to do something together. It is also used as a positive response to an invitation.",
-        "moji"  : "Vます＋ましょう",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "This expression is used to express frequency in doing something.",
-        "moji"  : "期間に～回～ます",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "This sentence partern expresses the speaker's desire to do something. It can also be used to ask what the listener wants to do. In this expression, the particle が can be used to replace the particle を. Other particles cannot be replaced by が. In addition, ～たいです inflects as an い-adjective.",
-        "moji"  : "Ｖます＋たいです",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "・Past tense form of い-adjectives\nAffirmative　～いです→～かったです\nNegative 　～くないです→～くなかったです\n・Past tense form of nouns and な-adjectives\nAffirmative　～です→～でした\nNegative 　～じゃありません→～じゃありませんでした",
-        "moji"  : "形容詞・名詞　過去形",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "から can be used to express reason or causality between two sentences or phrases. S1 is the reason or cause for S2. The interrogative どうして is used to ask for a reason or cause.",
-        "moji"  : "S1　から　S2",
-        "url"   : ""
+        "id": "t4g_1",
+        "type": "grammar",
+        "moji": "レストランへ晩ごはんを食べに行きます",
+        "romaji": "I will go to restaurant to eat dinner",
+        "url": ""
       },
+      {
+        "id": "t4g_2",
+        "type": "grammar",
+        "moji": "デパートへ時計を買いに行きます",
+        "romaji": "I will go to department store to buy a watch",
+        "url": ""
+      },
+      {
+        "id": "t4g_3",
+        "type": "grammar",
+        "moji": "日本へ日本語の勉強に来ました",
+        "romaji": "I came to Japan in order to study Japanese",
+        "url": ""
+      },
+      {
+        "id": "t4g_4",
+        "type": "grammar",
+        "moji": "国へ家族に会いに帰ります",
+        "romaji": "I will return to my country to meet my family",
+        "url": ""
+      },
+      {
+        "id": "t4g_5",
+        "type": "grammar",
+        "moji": "ちょっと休みましょう",
+        "romaji": "Let's have a break",
+        "url": ""
+      },
+      {
+        "id": "t4g_6",
+        "type": "grammar",
+        "moji": "サッカーをしましょう",
+        "romaji": "Let's play football",
+        "url": ""
+      },
+      {
+        "id": "t4g_7",
+        "type": "grammar",
+        "moji": "いっしょに京都へ行きませんか→はい、行きましょう",
+        "romaji": "Won't you go to Kyoto with me?→Yes, let's go there",
+        "url": ""
+      },
+      {
+        "id": "t4g_8",
+        "type": "grammar",
+        "moji": "いっしょに昼ご飯を食べませんか→はい、食べましょう",
+        "romaji": "Won't you have lunch with me?→Yet,let's eat",
+        "url": ""
+      },
+      {
+        "id": "t4g_9",
+        "type": "grammar",
+        "moji": "一か月に2回、映画を見ます",
+        "romaji": "I go to see movies twice a month",
+        "url": ""
+      },
+      {
+        "id": "t4g_10",
+        "type": "grammar",
+        "moji": "一週間に3回、家族に電話をかけます",
+        "romaji": "I call my family three times a week",
+        "url": ""
+      },
+      {
+        "id": "t4g_11",
+        "type": "grammar",
+        "moji": "一年に1回、旅行に行きます",
+        "romaji": "I go on a trip once a year",
+        "url": ""
+      },
+      {
+        "id": "t4g_12",
+        "type": "grammar",
+        "moji": "アメリカへ行きたいです",
+        "romaji": "I want to go to America",
+        "url": ""
+      },
+      {
+        "id": "t4g_13",
+        "type": "grammar",
+        "moji": "寿司を食べたいです",
+        "romaji": "I want to eat sushi",
+        "url": ""
+      },
+      {
+        "id": "t4g_14",
+        "type": "grammar",
+        "moji": "かばんを買いたいです",
+        "romaji": "I want to buy a bag",
+        "url": ""
+      },
+      {
+        "id": "t4g_15",
+        "type": "grammar",
+        "moji": "何も食べたくないです",
+        "romaji": "I don't want to eat anything",
+        "url": ""
+      },
+      {
+        "id": "t4g_16",
+        "type": "grammar",
+        "moji": "きのうは暑かったです",
+        "romaji": "It was hot yesterday",
+        "url": ""
+      },
+      {
+        "id": "t4g_17",
+        "type": "grammar",
+        "moji": "きのうは暑くなかったです",
+        "romaji": "It was not hot yesterday",
+        "url": ""
+      },
+      {
+        "id": "t4g_18",
+        "type": "grammar",
+        "moji": "きのうは雨でした",
+        "romaji": "It was rainy yesterday",
+        "url": ""
+      },
+      {
+        "id": "t4g_19",
+        "type": "grammar",
+        "moji": "きのうは雨じゃありませんでした",
+        "romaji": "It was not rainy yesterday",
+        "url": ""
+      },
+      {
+        "id": "t4g_20",
+        "type": "grammar",
+        "moji": "きのうは暇でした",
+        "romaji": "It was free yesterday",
+        "url": ""
+      },
+      {
+        "id": "t4g_21",
+        "type": "grammar",
+        "moji": "きのうは暇じゃありませんでした",
+        "romaji": "It was not free yesterday",
+        "url": ""
+      },
+      {
+        "id": "t4g_22",
+        "type": "grammar",
+        "moji": "時間がありませんから、どこも行きません",
+        "romaji": "Because I don't have time, I don't go anywhere",
+        "url": ""
+      },
+      {
+        "id": "t4g_23",
+        "type": "grammar",
+        "moji": "きのう忙しかったですから、昼ご飯を食べませんでした",
+        "romaji": "Because I was busy, I didn't eat lunch",
+        "url": ""
+      },
+      {
+        "id": "t4g_24",
+        "type": "grammar",
+        "moji": "おなかが痛いですから、何も食べたくないです",
+        "romaji": "Because I have a stomachache, I don't want to eat anything",
+        "url": ""
+      }
     ], 
     TOPIC4_TITLE_and_kanji : [
       {
-        "id": "1v_a",
+        "id": "t4k_1",
         "type": "kanji",
         "moji": "人",
         "romaji": "じん、にん/ひと",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_2",
         "type": "kanji",
         "moji": "男",
         "romaji": "おとこ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_3",
         "type": "kanji",
         "moji": "女",
         "romaji": "おんな",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_4",
         "type": "kanji",
         "moji": "子",
         "romaji": "こ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_5",
         "type": "kanji",
         "moji": "先",
         "romaji": "せん/さき",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_6",
         "type": "kanji",
         "moji": "生",
         "romaji": "せい",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_7",
         "type": "kanji",
         "moji": "友",
         "romaji": "とも",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_8",
         "type": "kanji",
         "moji": "学",
         "romaji": "がく/がっ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_9",
         "type": "kanji",
         "moji": "校",
         "romaji": "こう",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_10",
         "type": "kanji",
         "moji": "会",
         "romaji": "かい/あ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_11",
         "type": "kanji",
         "moji": "社",
         "romaji": "しゃ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_12",
         "type": "kanji",
         "moji": "山",
         "romaji": "やま",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_13",
         "type": "kanji",
         "moji": "川",
         "romaji": "かわ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_14",
         "type": "kanji",
         "moji": "花",
         "romaji": "はな",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t4k_15",
         "type": "kanji",
         "moji": "家",
         "romaji": "か、いえ",
@@ -4552,635 +5189,732 @@ export const flashData = [
     ],
     TOPIC5_TITLE_and_vocabulary : [
       {
-        "id": "1v_a",
+        "id": "t5v_1",
         "type": "vocab",
         "moji": "あめ",
         "romaji": "rain",
-        "url": ""
+        "url": "あめ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_2",
         "type": "vocab",
         "moji": "あらいます",
         "romaji": "to wash",
-        "url": ""
+        "url": "あらいます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_3",
         "type": "vocab",
         "moji": "いす",
         "romaji": "chair",
-        "url": ""
+        "url": "いす.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_4",
         "type": "vocab",
         "moji": "いま",
         "romaji": "now",
-        "url": ""
+        "url": "いま.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_5",
         "type": "vocab",
         "moji": "いれます",
         "romaji": "to put in",
-        "url": ""
+        "url": "いれます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_6",
         "type": "vocab",
         "moji": "いろいろ",
         "romaji": "various",
-        "url": ""
+        "url": "いろいろ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_7",
         "type": "vocab",
         "moji": "おきます",
         "romaji": "to put",
-        "url": ""
+        "url": "おきます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_8",
         "type": "vocab",
         "moji": "おさら",
         "romaji": "plate, dish",
-        "url": ""
+        "url": "おさら.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_9",
         "type": "vocab",
         "moji": "おしえます",
         "romaji": "to teach, to tell",
-        "url": ""
+        "url": "おしえます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_10",
         "type": "vocab",
         "moji": "おります",
         "romaji": "to get off, to descend",
-        "url": ""
+        "url": "おります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_11",
         "type": "vocab",
         "moji": "かさ",
         "romaji": "Umbrella",
-        "url": ""
+        "url": "かさ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_12",
         "type": "vocab",
         "moji": "カップ",
         "romaji": "Cup",
-        "url": ""
+        "url": "カップ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_13",
         "type": "vocab",
         "moji": "かみ",
         "romaji": "paper",
-        "url": ""
+        "url": "かみ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_14",
         "type": "vocab",
         "moji": "カレンダー",
         "romaji": "calendar",
-        "url": ""
+        "url": "カレンダー.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_15",
         "type": "vocab",
         "moji": "ぎゅうにく",
         "romaji": "Beef",
-        "url": ""
+        "url": "ぎゅうにく.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_16",
         "type": "vocab",
         "moji": "きらい",
         "romaji": "Hate",
-        "url": ""
+        "url": "きらい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_17",
         "type": "vocab",
         "moji": "きります",
         "romaji": "to cut",
-        "url": ""
+        "url": "きります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_18",
         "type": "vocab",
         "moji": "くだもの",
         "romaji": "Fruit",
-        "url": ""
+        "url": "くだもの.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_19",
         "type": "vocab",
         "moji": "くつ",
         "romaji": "Shoes",
-        "url": ""
+        "url": "くつ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_20",
         "type": "vocab",
         "moji": "くつした",
         "romaji": "Socks",
-        "url": ""
+        "url": "くつした.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_21",
         "type": "vocab",
         "moji": "けさ",
         "romaji": "this morning",
-        "url": ""
+        "url": "けさ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_22",
         "type": "vocab",
         "moji": "コート",
         "romaji": "coat, tennis court",
-        "url": ""
+        "url": "コート.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_23",
         "type": "vocab",
         "moji": "コップ",
         "romaji": "a glass",
-        "url": ""
+        "url": "コップ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_24",
         "type": "vocab",
         "moji": "コピーします",
         "romaji": "to copy",
-        "url": ""
+        "url": "コピーします.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_25",
         "type": "vocab",
         "moji": "さかな",
         "romaji": "Fish",
-        "url": ""
+        "url": "さかな.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_26",
         "type": "vocab",
         "moji": "さします",
         "romaji": "to stretch out hands, to raise an umbrella",
-        "url": ""
+        "url": "さします.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_27",
         "type": "vocab",
         "moji": "さとう",
         "romaji": "Sugar",
-        "url": ""
+        "url": "さとう.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_28",
         "type": "vocab",
         "moji": "しお",
         "romaji": "Salt",
-        "url": ""
+        "url": "しお.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_29",
         "type": "vocab",
         "moji": "しめます",
         "romaji": "to close something",
-        "url": ""
+        "url": "しめます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_30",
         "type": "vocab",
         "moji": "シャツ",
         "romaji": "Shirt",
-        "url": ""
+        "url": "シャツ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_31",
         "type": "vocab",
         "moji": "しょうゆ",
         "romaji": "soy sauce",
-        "url": ""
+        "url": "しょうゆ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_32",
         "type": "vocab",
         "moji": "スカート",
         "romaji": "Skirt",
-        "url": ""
+        "url": "スカート.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_33",
         "type": "vocab",
         "moji": "すき",
         "romaji": "Likeable",
-        "url": ""
+        "url": "すき.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_34",
         "type": "vocab",
         "moji": "ズボン",
         "romaji": "Trousers",
-        "url": ""
+        "url": "ズボン.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_35",
         "type": "vocab",
         "moji": "すわります",
         "romaji": "to sit",
-        "url": ""
+        "url": "すわります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_36",
         "type": "vocab",
         "moji": "セーター",
         "romaji": "sweater, jumper",
-        "url": ""
+        "url": "セーター.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_37",
         "type": "vocab",
         "moji": "ぜんぶ",
         "romaji": "All",
-        "url": ""
+        "url": "ぜんぶ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_38",
         "type": "vocab",
         "moji": "たちます",
         "romaji": "to stand",
-        "url": ""
+        "url": "たちます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_39",
         "type": "vocab",
         "moji": "ちょっと",
         "romaji": "somewhat",
-        "url": ""
+        "url": "ちょっと.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_40",
         "type": "vocab",
         "moji": "つけます",
         "romaji": "to turn on",
-        "url": ""
+        "url": "つけます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_41",
         "type": "vocab",
         "moji": "でんき",
         "romaji": "electricity, electric light",
-        "url": ""
+        "url": "でんき.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_42",
         "type": "vocab",
         "moji": "でんわ",
         "romaji": "telephone",
-        "url": ""
+        "url": "でんわ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_43",
         "type": "vocab",
         "moji": "とまります",
         "romaji": "to come to a halt",
-        "url": ""
+        "url": "とまります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_44",
         "type": "vocab",
         "moji": "とり",
         "romaji": "bird",
-        "url": ""
+        "url": "とり.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_45",
         "type": "vocab",
         "moji": "とりにく",
         "romaji": "chicken meat",
-        "url": ""
+        "url": "とりにく.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_46",
         "type": "vocab",
         "moji": "とります",
         "romaji": "to take something",
-        "url": ""
+        "url": "とります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_47",
         "type": "vocab",
         "moji": "にく",
         "romaji": "meat",
-        "url": ""
+        "url": "にく.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_48",
         "type": "vocab",
         "moji": "ネクタイ",
         "romaji": "tie, necktie",
-        "url": ""
+        "url": "ネクタイ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_49",
         "type": "vocab",
         "moji": "ノート",
         "romaji": "notebook, exercise book",
-        "url": ""
+        "url": "ノート.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_50",
         "type": "vocab",
         "moji": "のります",
         "romaji": "to get on, to ride",
-        "url": ""
+        "url": "のります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_51",
         "type": "vocab",
         "moji": "はな",
         "romaji": "flower",
-        "url": ""
+        "url": "はな.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_52",
         "type": "vocab",
         "moji": "ひきます",
         "romaji": "to play an instrument with strings",
-        "url": ""
+        "url": "ひきます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_53",
         "type": "vocab",
         "moji": "ふく",
         "romaji": "clothes",
-        "url": ""
+        "url": "ふく.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_54",
         "type": "vocab",
         "moji": "ぶたにく",
         "romaji": "pork",
-        "url": ""
+        "url": "ぶたにく.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_55",
         "type": "vocab",
         "moji": "ふります",
         "romaji": "to fall, e.g. rain or snow",
-        "url": ""
+        "url": "ふります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_56",
         "type": "vocab",
         "moji": "ペット",
         "romaji": "pet",
-        "url": ""
+        "url": "ペット.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_57",
         "type": "vocab",
         "moji": "ぼうし",
         "romaji": "hat",
-        "url": ""
+        "url": "ぼうし.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_58",
         "type": "vocab",
         "moji": "ほしい",
         "romaji": "want",
-        "url": ""
+        "url": "ほしい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_59",
         "type": "vocab",
         "moji": "まがります",
         "romaji": "to turn, to bend",
-        "url": ""
+        "url": "まがります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_60",
         "type": "vocab",
         "moji": "また",
         "romaji": "again, and",
-        "url": ""
+        "url": "また.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_61",
         "type": "vocab",
         "moji": "まちます",
         "romaji": "to wait",
-        "url": ""
+        "url": "まちます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_62",
         "type": "vocab",
         "moji": "まっすぐ",
         "romaji": "straight ahead, direct",
-        "url": ""
+        "url": "まっすぐ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_63",
         "type": "vocab",
         "moji": "みせます",
         "romaji": "to show",
-        "url": ""
+        "url": "みせます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_64",
         "type": "vocab",
         "moji": "めがね",
         "romaji": "glasses",
-        "url": ""
+        "url": "めがね.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_65",
         "type": "vocab",
         "moji": "もっと",
         "romaji": "more",
-        "url": ""
+        "url": "もっと.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_66",
         "type": "vocab",
         "moji": "やすみます",
         "romaji": "to rest",
-        "url": ""
+        "url": "やすみます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_67",
         "type": "vocab",
         "moji": "やります",
         "romaji": "to do",
-        "url": ""
+        "url": "やります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_68",
         "type": "vocab",
         "moji": "ゆっくり",
         "romaji": "slowly",
-        "url": ""
+        "url": "ゆっくり.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t5v_69",
         "type": "vocab",
         "moji": "よびます",
         "romaji": "to call out, to invite",
-        "url": ""
+        "url": "よびます.mp3"
       }
     ], 
     TOPIC5_TITLE_and_grammar : [
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "The verb and adjectives whose objects are marked with が are those kinds that describe preference, ability, possession, the like, desire.",
-        "moji"  : "Nが　好きです／ほしいです",
-        "url"   : ""
-      }, 
+        "id": "t5g_1",
+        "type": "grammar",
+        "moji": "ペンで名前を書いてください",
+        "romaji": "Please write your name with a pen",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": '①Verb conjugation\nVerb in Japanese change their forms,i.e., they conjugate, and they are divided into three groups according to the type of conjugation. Depending on the following phrases, you can make sentences with various meanings.\n②Verb groups\n1) Group Ⅰ verbs\nIn the verbs of this group, the last sound of the ます-form is that of the い-line. (ex:かきます、のみます)\n2) Group Ⅱ verbs\n\nIn most of the verbs of this group, the last sound of the ます-form is that of the え-line, but in some verbs the last sound of the ます-form is that of the い-line.（ex:たべます、みます、かります）\n\n3) Group Ⅲ verbs\n\nVerbs of this group include します and "noun denoting an action + します" as well as きます.(ex:勉強します、買い物します)\n\n③Verb て-form\n\nThe verb form which ends with て or で is called the て-form. How to make the て-form of a verb depends on which group the verb belongs to.\n\n1) Group Ⅰ verbs：Depending on the last sound of the ます-form, the て-form of the verbs of this group is made as shown in the form table. Note that the て-form of the verb いきます, いって, is an exception.\n\n2) Group Ⅱ verbs：Attach て to the ます-form.\n\n3) Group Ⅲ verbs：Attach て to the ます-form.\n\n④Vて-form ＋　ください\n\nThis sentence pattern is used to ask, instruct or encourage the listener to do sometihng. Nationally, if the listener is one\'s superior, this expression cannot be used for giving instructions to him/her.',
-        "moji"  : "Vて形　＋　ください",
-        "url"   : ""
-      }, 
+        "id": "t5g_2",
+        "type": "grammar",
+        "moji": "たくさん食べてください",
+        "romaji": "Please eat as much as you want",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "This sentence pattern indicates that a certain action or motion is in progress.",
-        "moji"  : "Vて形　＋　います（進行）",
-        "url"   : ""
-      }, 
+        "id": "t5g_3",
+        "type": "grammar",
+        "moji": "その服を見せてください",
+        "romaji": "Please look at this dress",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "To connect verb sentences, the て-form is used. When two or more actions take place in succession, the actions are mentioned in the order of occurresnce by using the て-form. The tense of the sentence is determined by the tense form of the last verb in the sentence.",
-        "moji"  : "Vて形",
-        "url"   : ""
-      }, 
+        "id": "t5g_4",
+        "type": "grammar",
+        "moji": "まっすぐ行ってください",
+        "romaji": "Please go straight",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "This sentence pattern indicates that upon completion of the action denoted by V1, the action of V2 is to be conducted. The tense of the sentence is determined by the tense form of the last verb in the sentence.",
-        "moji"  : "V1て形　＋　から、V2",
-        "url"   : ""
-      }, 
+        "id": "t5g_5",
+        "type": "grammar",
+        "moji": "写真をとってください",
+        "romaji": "Please take a picture",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "This expression is used to grant permission.\nTo ask for permission, the question form of this sentence is used.",
-        "moji"  : "Vて形　＋　もいいです",
-        "url"   : ""
-      }, 
-      
+        "id": "t5g_6",
+        "type": "grammar",
+        "moji": "友達と話しています",
+        "romaji": "Talking to a friend",
+        "url": ""
+      },
+      {
+        "id": "t5g_7",
+        "type": "grammar",
+        "moji": "電話をかけています",
+        "romaji": "Currently on the phone",
+        "url": ""
+      },
+      {
+        "id": "t5g_8",
+        "type": "grammar",
+        "moji": "たばこを吸っています",
+        "romaji": "(I/He/She) Smoking",
+        "url": ""
+      },
+      {
+        "id": "t5g_9",
+        "type": "grammar",
+        "moji": "今、何をしていますか",
+        "romaji": "Right now, what are you doing?",
+        "url": ""
+      },
+      {
+        "id": "t5g_10",
+        "type": "grammar",
+        "moji": "6時に起きて、勉強しました",
+        "romaji": "I got up at six and studied",
+        "url": ""
+      },
+      {
+        "id": "t5g_11",
+        "type": "grammar",
+        "moji": "朝ご飯を食べて、テレビを見て、学校へ行きます",
+        "romaji": "I'll eat breakfast, watch TV, and go to school",
+        "url": ""
+      },
+      {
+        "id": "t5g_12",
+        "type": "grammar",
+        "moji": "東京へ行って、映画を見て、お茶を飲みました",
+        "romaji": "I went to Tokyo, saw a movie, and drank tea",
+        "url": ""
+      },
+      {
+        "id": "t5g_13",
+        "type": "grammar",
+        "moji": "銀行へ行ってから、買い物します",
+        "romaji": "After I go to the bank, I'll go shopping",
+        "url": ""
+      },
+      {
+        "id": "t5g_14",
+        "type": "grammar",
+        "moji": "喫茶店でコーヒーを飲んでから、映画を見ます",
+        "romaji": "After I drink coffee at a coffee shop, I'll go watch a movie",
+        "url": ""
+      },
+      {
+        "id": "t5g_15",
+        "type": "grammar",
+        "moji": "晩ご飯を食べてから、勉強します",
+        "romaji": "After I eat dinner, I'll study",
+        "url": ""
+      },
+      {
+        "id": "t5g_16",
+        "type": "grammar",
+        "moji": "きのう、買い物してから、レストランでごはんを食べました",
+        "romaji": "Yesterday, after shopping, I ate at a restaurant",
+        "url": ""
+      },
+      {
+        "id": "t5g_17",
+        "type": "grammar",
+        "moji": "ここに座ってもいいですか",
+        "romaji": "Can I seat here?",
+        "url": ""
+      },
+      {
+        "id": "t5g_18",
+        "type": "grammar",
+        "moji": "ここで写真を撮ってもいいですか",
+        "romaji": "Can I take a picture here?",
+        "url": ""
+      },
+      {
+        "id": "t5g_19",
+        "type": "grammar",
+        "moji": "窓を開けてもいいですか",
+        "romaji": "Can I open the window?",
+        "url": ""
+      },
+      {
+        "id": "t5g_20",
+        "type": "grammar",
+        "moji": "ここでお弁当を食べてもいいですか",
+        "romaji": "Can I eat my lunch box here?",
+        "url": ""
+      }
     ], 
     TOPIC5_TITLE_and_kanji : [
       {
-        "id": "1v_a",
+        "id": "t5k_1",
         "type": "kanji",
         "moji": "駅",
         "romaji": "えき",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_2",
         "type": "kanji",
         "moji": "店",
         "romaji": "みせ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_3",
         "type": "kanji",
         "moji": "上",
         "romaji": "うえ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_4",
         "type": "kanji",
         "moji": "下",
         "romaji": "した",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_5",
         "type": "kanji",
         "moji": "右",
         "romaji": "みぎ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_6",
         "type": "kanji",
         "moji": "左",
         "romaji": "ひだり",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_7",
         "type": "kanji",
         "moji": "前",
         "romaji": "ぜん/まえ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_8",
         "type": "kanji",
         "moji": "後",
         "romaji": "ご/うしろ、あと",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_9",
         "type": "kanji",
         "moji": "中",
         "romaji": "ちゅう/なか",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_10",
         "type": "kanji",
         "moji": "外",
         "romaji": "がい/そと",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_11",
         "type": "kanji",
         "moji": "北",
         "romaji": "きた",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_12",
         "type": "kanji",
         "moji": "南",
         "romaji": "みなみ",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_13",
         "type": "kanji",
         "moji": "東",
         "romaji": "ひがし",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_14",
         "type": "kanji",
         "moji": "西",
         "romaji": "にし",
         "url": ""
       },
       {
-        "id": "1v_a",
+        "id": "t5k_15",
         "type": "kanji",
         "moji": "本",
         "romaji": "ほん",
@@ -5189,540 +5923,665 @@ export const flashData = [
     ],
     TOPIC6_TITLE_and_vocabulary : [
       {
-	    "id": "1v_a",
-	    "type": "vocab",
-	    "moji": "あおい",
-	    "romaji": "blue",
-	    "url": ""
+        "id": "t6v_1",
+        "type": "vocab",
+        "moji": "あおい",
+        "romaji": "blue",
+        "url": "あおい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_2",
         "type": "vocab",
         "moji": "あかい",
         "romaji": "red",
-        "url": ""
+        "url": "あかい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_3",
         "type": "vocab",
         "moji": "あかるい",
         "romaji": "bright",
-        "url": ""
+        "url": "あかるい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_4",
         "type": "vocab",
         "moji": "あけます",
         "romaji": "to open",
-        "url": ""
+        "url": "あけます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_5",
         "type": "vocab",
         "moji": "あし",
         "romaji": "foot, leg",
-        "url": ""
+        "url": "あし.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_6",
         "type": "vocab",
         "moji": "あたま",
         "romaji": "head",
-        "url": ""
+        "url": "あたま.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_7",
         "type": "vocab",
         "moji": "あに",
         "romaji": "(humble) older brother",
-        "url": ""
+        "url": "あに.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_8",
         "type": "vocab",
         "moji": "あね",
         "romaji": "(humble) older sister",
-        "url": ""
+        "url": "あね.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_9",
         "type": "vocab",
         "moji": "あぶない",
         "romaji": "dangerous",
-        "url": ""
+        "url": "あぶない.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_10",
         "type": "vocab",
         "moji": "あまい",
         "romaji": "sweet",
-        "url": ""
+        "url": "あまい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_11",
         "type": "vocab",
         "moji": "いもうと",
         "romaji": "(humble) younger sister",
-        "url": ""
+        "url": "いもうと.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_12",
         "type": "vocab",
         "moji": "いろ",
         "romaji": "color",
-        "url": ""
+        "url": "いろ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_13",
         "type": "vocab",
         "moji": "うるさい",
         "romaji": "noisy, annoying",
-        "url": ""
+        "url": "うるさい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_14",
         "type": "vocab",
         "moji": "おおい",
         "romaji": "many",
-        "url": ""
+        "url": "おおい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_15",
         "type": "vocab",
         "moji": "おかあさん",
         "romaji": "(honorable) mother",
-        "url": ""
+        "url": "おかあさん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_16",
         "type": "vocab",
         "moji": "おくさん",
         "romaji": "(honorable) wife",
-        "url": ""
+        "url": "おくさん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_17",
         "type": "vocab",
         "moji": "おじいさん",
         "romaji": "grandfather, male senior citizen",
-        "url": ""
+        "url": "おじいさん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_18",
         "type": "vocab",
         "moji": "おじいさん",
         "romaji": "uncle, middle aged gentleman",
-        "url": ""
+        "url": "おじいさん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_19",
         "type": "vocab",
         "moji": "おとうさん",
         "romaji": "(honorable) father",
-        "url": ""
+        "url": "おとうさん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_20",
         "type": "vocab",
         "moji": "おとうと",
         "romaji": "younger brother",
-        "url": ""
+        "url": "おとうと.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_21",
         "type": "vocab",
         "moji": "おとな",
         "romaji": "Adult",
-        "url": ""
+        "url": "おとな.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_22",
         "type": "vocab",
         "moji": "おにいさん",
         "romaji": "(honorable) older brother",
-        "url": ""
+        "url": "おにいさん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_23",
         "type": "vocab",
         "moji": "おねえさん",
         "romaji": "(honorable) older sister",
-        "url": ""
+        "url": "おねえさん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_24",
         "type": "vocab",
         "moji": "おば",
         "romaji": "Aunt",
-        "url": ""
+        "url": "おば.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_25",
         "type": "vocab",
         "moji": "おばあさん",
         "romaji": "grandmother, female senior-citizen",
-        "url": ""
+        "url": "おばあさん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_26",
         "type": "vocab",
         "moji": "おもい",
         "romaji": "Heavy",
-        "url": ""
+        "url": "おもい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_27",
         "type": "vocab",
         "moji": "おもしろい",
         "romaji": "Interesting",
-        "url": ""
+        "url": "おもしろい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_28",
         "type": "vocab",
         "moji": "かお",
         "romaji": "",
-        "url": ""
+        "url": "かお.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_29",
         "type": "vocab",
         "moji": "かぶります",
         "romaji": "to put on/ wear (hats, caps, hoods)",
-        "url": ""
+        "url": "かぶります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_30",
         "type": "vocab",
         "moji": "からい",
         "romaji": "Spicy",
-        "url": ""
+        "url": "からい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_31",
         "type": "vocab",
         "moji": "からだ",
         "romaji": "Body",
-        "url": ""
+        "url": "からだ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_32",
         "type": "vocab",
         "moji": "かるい",
         "romaji": "Light",
-        "url": ""
+        "url": "かるい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_33",
         "type": "vocab",
         "moji": "かわいい",
         "romaji": "Cute",
-        "url": ""
+        "url": "かわいい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_34",
         "type": "vocab",
         "moji": "きえます",
         "romaji": "to disappear",
-        "url": ""
+        "url": "きえます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_35",
         "type": "vocab",
         "moji": "きって",
         "romaji": "postage stamp",
-        "url": ""
+        "url": "きって.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_36",
         "type": "vocab",
         "moji": "きょうだい",
         "romaji": "(humble) siblings",
-        "url": ""
+        "url": "きょうだい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_37",
         "type": "vocab",
         "moji": "くち",
         "romaji": "mouth, opening",
-        "url": ""
+        "url": "くち.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_38",
         "type": "vocab",
         "moji": "くらい",
         "romaji": "Gloomy",
-        "url": ""
+        "url": "くらい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_39",
         "type": "vocab",
         "moji": "くろい",
         "romaji": "black",
-        "url": ""
+        "url": "くろい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_40",
         "type": "vocab",
         "moji": "けします",
         "romaji": "to erase, to turn off power",
-        "url": ""
+        "url": "けします.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_41",
         "type": "vocab",
         "moji": "けっこんします",
         "romaji": "to marry",
-        "url": ""
+        "url": "けっこんします.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_42",
         "type": "vocab",
         "moji": "こども",
         "romaji": "Child",
-        "url": ""
+        "url": "こども.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_43",
         "type": "vocab",
         "moji": "しにます",
         "romaji": "to die",
-        "url": ""
+        "url": "しにます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_44",
         "type": "vocab",
         "moji": "じょうず",
         "romaji": "Skillful",
-        "url": ""
+        "url": "じょうず.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_45",
         "type": "vocab",
         "moji": "じょうぶ",
         "romaji": "strong, durable",
-        "url": ""
+        "url": "じょうぶ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_46",
         "type": "vocab",
         "moji": "しります",
         "romaji": "to know",
-        "url": ""
+        "url": "しります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_47",
         "type": "vocab",
         "moji": "しろい",
         "romaji": "White",
-        "url": ""
+        "url": "しろい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_48",
         "type": "vocab",
         "moji": "すくない",
         "romaji": "a few",
-        "url": ""
+        "url": "すくない.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_49",
         "type": "vocab",
         "moji": "すみます",
         "romaji": "to live in",
-        "url": ""
+        "url": "すみます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_50",
         "type": "vocab",
         "moji": "せ",
         "romaji": "height, stature",
-        "url": ""
+        "url": "せ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_51",
         "type": "vocab",
         "moji": "たいせつ",
         "romaji": "important",
-        "url": ""
+        "url": "たいせつ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_52",
         "type": "vocab",
         "moji": "ちかい",
         "romaji": "near",
-        "url": ""
+        "url": "ちかい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_53",
         "type": "vocab",
         "moji": "つよい",
         "romaji": "powerful",
-        "url": ""
+        "url": "つよい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_54",
         "type": "vocab",
         "moji": "て",
         "romaji": "hand",
-        "url": ""
+        "url": "て.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_55",
         "type": "vocab",
         "moji": "とおい",
         "romaji": "far",
-        "url": ""
+        "url": "とおい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_56",
         "type": "vocab",
         "moji": "ながい",
         "romaji": "long",
-        "url": ""
+        "url": "ながい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_57",
         "type": "vocab",
         "moji": "ならびます",
         "romaji": "to line up, to stand in a line",
-        "url": ""
+        "url": "ならびます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_58",
         "type": "vocab",
         "moji": "なります",
         "romaji": "to become",
-        "url": ""
+        "url": "なります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_59",
         "type": "vocab",
         "moji": "はな",
         "romaji": "nose",
-        "url": ""
+        "url": "はな.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_60",
         "type": "vocab",
         "moji": "ひと",
         "romaji": "person",
-        "url": ""
+        "url": "ひと.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_61",
         "type": "vocab",
         "moji": "ひろい",
         "romaji": "spacious, wide",
-        "url": ""
+        "url": "ひろい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_62",
         "type": "vocab",
         "moji": "へた",
         "romaji": "unskillful",
-        "url": ""
+        "url": "へた.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_63",
         "type": "vocab",
         "moji": "まるい",
         "romaji": "round, circular",
-        "url": ""
+        "url": "まるい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_64",
         "type": "vocab",
         "moji": "みじかい",
         "romaji": "short",
-        "url": ""
+        "url": "みじかい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_65",
         "type": "vocab",
         "moji": "みどり",
         "romaji": "green",
-        "url": ""
+        "url": "みどり.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_66",
         "type": "vocab",
         "moji": "みみ",
         "romaji": "ear",
-        "url": ""
+        "url": "みみ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_67",
         "type": "vocab",
         "moji": "め",
         "romaji": "eye",
-        "url": ""
+        "url": "め.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_68",
         "type": "vocab",
         "moji": "もちます",
         "romaji": "to hold",
-        "url": ""
+        "url": "もちます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_69",
         "type": "vocab",
         "moji": "よわい",
         "romaji": "weak",
-        "url": ""
+        "url": "よわい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_70",
         "type": "vocab",
         "moji": "りょうしん",
         "romaji": "both parents",
-        "url": ""
+        "url": "りょうしん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t6v_71",
         "type": "vocab",
         "moji": "わかい",
         "romaji": "young",
-        "url": ""
+        "url": "わかい.mp3"
       }
     ], 
     TOPIC6_TITLE_and_grammar : [
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "・As well as indicating what someone is doing now,this sentence pattern can also be used to indicate a habitual behaviour. Such a behaviour taking place in the past is indicated by Vて-form　いまいた。\n・To show that the state resulting from the action indicated by the verb is still continuing.",
-        "moji"  : "Ｖて形＋います（習慣・結果の状態）",
-        "url"   : ""
-      }, 
+        "id": "t6g_1",
+        "type": "grammar",
+        "moji": "毎朝、ジョギングをしています",
+        "romaji": "Every morning, I go jogging",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "This sentence pattern indicates that the topic (N1) has the characteristic N2 が adj",
-        "moji"  : "はが文",
-        "url"   : ""
-      }, 
+        "id": "t6g_2",
+        "type": "grammar",
+        "moji": "毎週日曜日、公園を散歩しています",
+        "romaji": "Every Sunday, I walk in the park",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "two or more sentences can be joined together using～て（で.\n～て（で）cannot be used to connect two adjective sentences having the same subject if they present two contrasting descriptions. In such a case, が is used.\n× この部屋は狭くて、きれいです。\n〇この部屋は狭いですが、きれいです。This room is small but clean.",
-        "moji"  : "いA／なA／N　て形、～（並列）",
-        "url"   : ""
-      }, 
+        "id": "t6g_3",
+        "type": "grammar",
+        "moji": "毎晩、テレビを見ています",
+        "romaji": "I watch TV every evening",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "なります indocates a change of state.",
-        "moji"  : "いA／なA／N＋なります",
-        "url"   : ""
-      }, 
+        "id": "t6g_4",
+        "type": "grammar",
+        "moji": "ドアが開いています",
+        "romaji": "The door is (left) open",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "Using the V-dictionary form こと enables the interest to be described more specifically than just using a noun.",
-        "moji"  : "なります indocates a change of state.",
-        "url"   : ""
-      }, 
-      
+        "id": "t6g_5",
+        "type": "grammar",
+        "moji": "店が閉まっています",
+        "romaji": "The shop got closed",
+        "url": ""
+      },
+      {
+        "id": "t6g_6",
+        "type": "grammar",
+        "moji": "私の姉は目が大きいです",
+        "romaji": "My older sister's eyes are big",
+        "url": ""
+      },
+      {
+        "id": "t6g_7",
+        "type": "grammar",
+        "moji": "私の兄は背が高いです",
+        "romaji": "My brother is tall",
+        "url": ""
+      },
+      {
+        "id": "t6g_8",
+        "type": "grammar",
+        "moji": "私の妹はテニスがあまり上手じゃありません",
+        "romaji": "My sister is not that good in tennis",
+        "url": ""
+      },
+      {
+        "id": "t6g_9",
+        "type": "grammar",
+        "moji": "私は料理が下手です",
+        "romaji": "I am not good at cooking",
+        "url": ""
+      },
+      {
+        "id": "t6g_10",
+        "type": "grammar",
+        "moji": "この店はケーキがおいしいです",
+        "romaji": "The cake in this shop is delicious",
+        "url": ""
+      },
+      {
+        "id": "t6g_11",
+        "type": "grammar",
+        "moji": "私の姉は目が大きくて、顔が小さいです",
+        "romaji": "My older sister's eyes are big and her head is small. Note: Both are considered positive traits in Japan",
+        "url": ""
+      },
+      {
+        "id": "t6g_12",
+        "type": "grammar",
+        "moji": "私の弟は学生で、英語を勉強しています",
+        "romaji": "My younger brother is a student and studies English",
+        "url": ""
+      },
+      {
+        "id": "t6g_13",
+        "type": "grammar",
+        "moji": "私は21さいで、学生です",
+        "romaji": "I'm 21 and a student",
+        "url": ""
+      },
+      {
+        "id": "t6g_14",
+        "type": "grammar",
+        "moji": "日本は静かで、きれいな国です",
+        "romaji": "Japan is a quite and beautiful country",
+        "url": ""
+      },
+      {
+        "id": "t6g_15",
+        "type": "grammar",
+        "moji": "きのうは天気がよくて、暑かったです",
+        "romaji": "Yesterday, the weather was nice and hot",
+        "url": ""
+      },
+      {
+        "id": "t6g_16",
+        "type": "grammar",
+        "moji": "寒くなりました",
+        "romaji": "It became cold",
+        "url": ""
+      },
+      {
+        "id": "t6g_17",
+        "type": "grammar",
+        "moji": "天気がよくなりました",
+        "romaji": "The weather became better",
+        "url": ""
+      },
+      {
+        "id": "t6g_18",
+        "type": "grammar",
+        "moji": "へやがきれいになりました",
+        "romaji": "The room became clean/beautiful",
+        "url": ""
+      },
+      {
+        "id": "t6g_19",
+        "type": "grammar",
+        "moji": "12時になりました",
+        "romaji": "It has now become 12 o'clock",
+        "url": ""
+      },
+      {
+        "id": "t6g_20",
+        "type": "grammar",
+        "moji": "わたしのしゅみは音楽を聞くことです",
+        "romaji": "My hobby is listening to music",
+        "url": ""
+      },
+      {
+        "id": "t6g_21",
+        "type": "grammar",
+        "moji": "父のしゅみは本を読むことです",
+        "romaji": "Father's hobby is reading books",
+        "url": ""
+      },
+      {
+        "id": "t6g_22",
+        "type": "grammar",
+        "moji": "母のしゅみは料理をつく津ことです",
+        "romaji": "Mother's hobby is cooking food",
+        "url": ""
+      },
+      {
+        "id": "t6g_23",
+        "type": "grammar",
+        "moji": "わたしのしゅみは旅行をすることと買い物することです",
+        "romaji": "My hobby is traveling and shopping",
+        "url": ""
+      }
     ], 
     TOPIC6_TITLE_and_kanji : [
       {
@@ -5833,372 +6692,448 @@ export const flashData = [
     ],
     TOPIC7_TITLE_and_vocabulary : [
       {
-        "id": "1v_a",
+        "id": "t7v_1",
         "type": "vocab",
         "moji": "あびます",
         "romaji": "to bathe, to shower",
-        "url": ""
+        "url": "あびます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_2",
         "type": "vocab",
         "moji": "あるきます",
         "romaji": "to walk",
-        "url": ""
+        "url": "あるきます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_3",
         "type": "vocab",
         "moji": "いいます",
         "romaji": "to say",
-        "url": ""
+        "url": "いいます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_4",
         "type": "vocab",
         "moji": "いそがしい",
         "romaji": "busy, irritated",
-        "url": ""
+        "url": "いそがしい.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_5",
         "type": "vocab",
         "moji": "うた",
         "romaji": "song",
-        "url": ""
+        "url": "うた.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_6",
         "type": "vocab",
         "moji": "うたいます",
         "romaji": "to sing",
-        "url": ""
+        "url": "うたいます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_7",
         "type": "vocab",
         "moji": "うまれます",
         "romaji": "to be born",
-        "url": ""
+        "url": "うまれます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_8",
         "type": "vocab",
         "moji": "おなじ",
         "romaji": "same",
-        "url": ""
+        "url": "おなじ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_9",
         "type": "vocab",
         "moji": "おふろ",
         "romaji": "Bath",
-        "url": ""
+        "url": "おふろ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_10",
         "type": "vocab",
         "moji": "おべんとう",
         "romaji": "boxed lunch",
-        "url": ""
+        "url": "おべんとう.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_11",
         "type": "vocab",
         "moji": "かします",
         "romaji": "to lend",
-        "url": ""
+        "url": "かします.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_12",
         "type": "vocab",
         "moji": "かぜ",
         "romaji": "Wind",
-        "url": ""
+        "url": "かぜ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_13",
         "type": "vocab",
         "moji": "かぜ",
         "romaji": "a cold",
-        "url": ""
+        "url": "かぜ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_14",
         "type": "vocab",
         "moji": "かど",
         "romaji": "a corner",
-        "url": ""
+        "url": "かど.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_15",
         "type": "vocab",
         "moji": "かわ",
         "romaji": "River",
-        "url": ""
+        "url": "かわ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_16",
         "type": "vocab",
         "moji": "ギター",
         "romaji": "Guitar",
-        "url": ""
+        "url": "ギター.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_17",
         "type": "vocab",
         "moji": "くすり",
         "romaji": "medicine",
-        "url": ""
+        "url": "くすり.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_18",
         "type": "vocab",
         "moji": "こうさてん",
         "romaji": "intersection",
-        "url": ""
+        "url": "こうさてん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_19",
         "type": "vocab",
         "moji": "さいふ",
         "romaji": "Wallet",
-        "url": ""
+        "url": "さいふ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_20",
         "type": "vocab",
         "moji": "じかん",
         "romaji": "Time",
-        "url": ""
+        "url": "じかん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_21",
         "type": "vocab",
         "moji": "シャワー",
         "romaji": "Shower",
-        "url": ""
+        "url": "シャワー.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_22",
         "type": "vocab",
         "moji": "せんたくします",
         "romaji": "to launder/to do washing",
-        "url": ""
+        "url": "せんたくします.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_23",
         "type": "vocab",
         "moji": "そうじします",
         "romaji": "to clean, to sweep",
-        "url": ""
+        "url": "そうじします.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_24",
         "type": "vocab",
         "moji": "だいじょうぶ",
         "romaji": "all right",
-        "url": ""
+        "url": "だいじょうぶ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_25",
         "type": "vocab",
         "moji": "タクシー",
         "romaji": "taxi",
-        "url": ""
+        "url": "タクシー.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_26",
         "type": "vocab",
         "moji": "だんだん",
         "romaji": "gradually",
-        "url": ""
+        "url": "だんだん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_27",
         "type": "vocab",
         "moji": "ちかてつ",
         "romaji": "underground train",
-        "url": ""
+        "url": "ちかてつ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_28",
         "type": "vocab",
         "moji": "つぎ",
         "romaji": "next",
-        "url": ""
+        "url": "つぎ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_29",
         "type": "vocab",
         "moji": "でかけます",
         "romaji": "to go out",
-        "url": ""
+        "url": "でかけます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_30",
         "type": "vocab",
         "moji": "でます",
         "romaji": "to appear,to leave",
-        "url": ""
+        "url": "でます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_31",
         "type": "vocab",
         "moji": "ならいます",
         "romaji": "to learn",
-        "url": ""
+        "url": "ならいます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_32",
         "type": "vocab",
         "moji": "のぼります",
         "romaji": "to climb",
-        "url": ""
+        "url": "のぼります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_33",
         "type": "vocab",
         "moji": "はいります",
         "romaji": "to enter, to contain",
-        "url": ""
+        "url": "はいります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_34",
         "type": "vocab",
         "moji": "はこ",
         "romaji": "box",
-        "url": ""
+        "url": "はこ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_35",
         "type": "vocab",
         "moji": "はし",
         "romaji": "tooth",
-        "url": ""
+        "url": "はし.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_36",
         "type": "vocab",
         "moji": "はし",
         "romaji": "bridge",
-        "url": ""
+        "url": "はし.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_37",
         "type": "vocab",
         "moji": "はじめて",
         "romaji": "for the first time",
-        "url": ""
+        "url": "はじめて.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_38",
         "type": "vocab",
         "moji": "はしります",
         "romaji": "to run",
-        "url": ""
+        "url": "はしります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_39",
         "type": "vocab",
         "moji": "びょういん",
         "romaji": "hospital",
-        "url": ""
+        "url": "びょういん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_40",
         "type": "vocab",
         "moji": "びょうき",
         "romaji": "illness",
-        "url": ""
+        "url": "びょうき.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_41",
         "type": "vocab",
         "moji": "まだ",
         "romaji": "yet, still",
-        "url": ""
+        "url": "まだ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_42",
         "type": "vocab",
         "moji": "みがきます",
         "romaji": "to brush teeth, to polish",
-        "url": ""
+        "url": "みがきます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_43",
         "type": "vocab",
         "moji": "みち",
         "romaji": "street",
-        "url": ""
+        "url": "みち.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_44",
         "type": "vocab",
         "moji": "もう",
         "romaji": "already",
-        "url": ""
+        "url": "もう.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_45",
         "type": "vocab",
         "moji": "やま",
-        "romaji": "mountain",
-        "url": ""
+        "romaji": "",
+        "url": "やま.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_46",
         "type": "vocab",
         "moji": "れんしゅうします",
         "romaji": "to practice",
-        "url": ""
+        "url": "れんしゅうします.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t7v_47",
         "type": "vocab",
         "moji": "わたります",
         "romaji": "to go across",
-        "url": ""
+        "url": "わたります.mp3"
       }
     ], 
     TOPIC7_TITLE_and_grammar : [
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": 'もう means "already" and is used with Vました. In this case, Vました means that the action has been finished.\nまだ Vて-form いません means that something has not taken place or has not been done yet.',
-        "moji"  : "もう～Ｖました／まだ　Vて形＋いません",
-        "url"   : ""
-      }, 
+        "id": "t7g_1",
+        "type": "grammar",
+        "moji": "もう本を読みました",
+        "romaji": "I have already read a book",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "た-form is made by changing て and で of the て-form into た and だ respectively.\n\nThis sentence pattern means the action or occurrence denoted by V2 takes place after the action or occurrence denoted by V1 or N has taken place.\nCompared with Vて-form　から、which has a similar meaning, Vた-form  あとで emphasizes the time context in which the respective events happen.",
-        "moji"  : "Ｖ1た形／Nの＋あとで+",
-        "url"   : ""
-      }, 
+        "id": "t7g_2",
+        "type": "grammar",
+        "moji": "もう荷物を送りました",
+        "romaji": "I have already sent the parcel",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "This sentence pattern is used in referring to some actions among many other actions. The tense of this sentence pattern is shown at the end of the sentence.",
-        "moji"  : "Ｖた形＋り、Ｖた形＋り～",
-        "url"   : ""
-      }, 
+        "id": "t7g_3",
+        "type": "grammar",
+        "moji": "まだ本を読んでいません",
+        "romaji": "I have not read a book yet",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "This sentence pattern means that one person does two different actions at the same time. The action denoted by V2 is the more emphasized of the two actions.\nThis sentence pattern is also used when the two actions take place over a period of time.",
-        "moji"  : "Ｖ1ます形＋ながら＋V2",
-        "url"   : ""
-      }, 
+        "id": "t7g_4",
+        "type": "grammar",
+        "moji": "まだ荷物を送っていません",
+        "romaji": "I have not sent the parcel yet",
+        "url": ""
+      },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "・verb\nThie sentence pattern indicates that the action of V2 occurs before the action of V1 takes place. Even when the tense of V2 is in the past tense or the furture tense, V1 is always in the dictionary form.\n・noun\nWhen まえに comes after a noun, the particle の is put between the noun and まえに. Nouns before まえに are nouns  which express actions or nouns which imply actions.\nBut,when まえに comes after a quantifier(period), the particle の is not necessary.\n",
-        "moji"  : "Ｖ1辞書形/N＋まえに＋V2",
-        "url"   : ""
-      }, 
-      
+        "id": "t7g_5",
+        "type": "grammar",
+        "moji": "ごはんを食べたあとで、買い物に行きます",
+        "romaji": "I will go shopping after eating",
+        "url": ""
+      },
+      {
+        "id": "t7g_6",
+        "type": "grammar",
+        "moji": "銀行へ行ったあとで、学校へ行きます",
+        "romaji": "I will go to school after going to the bank",
+        "url": ""
+      },
+      {
+        "id": "t7g_7",
+        "type": "grammar",
+        "moji": "仕事のあとで飲みに行きます",
+        "romaji": "I'll go for a drink after work",
+        "url": ""
+      },
+      {
+        "id": "t7g_8",
+        "type": "grammar",
+        "moji": "明日、サッカーをしたり、映画を見たりします",
+        "romaji": "I will play football, watch a movie and so on tomorrow",
+        "url": ""
+      },
+      {
+        "id": "t7g_9",
+        "type": "grammar",
+        "moji": "昨日、サッカーをしたり、映画を見たりしました",
+        "romaji": "I played football, saw a movie and so on yesterday",
+        "url": ""
+      },
+      {
+        "id": "t7g_10",
+        "type": "grammar",
+        "moji": "日本で寿司を食べたり、富士山を見たりしたいです",
+        "romaji": "I want to eat sushi,  see Mt.Fuji and so on in Japan",
+        "url": ""
+      },
+      {
+        "id": "t7g_11",
+        "type": "grammar",
+        "moji": "音楽を聞きながら日本語を勉強します",
+        "romaji": "I study Japanese while listening to music",
+        "url": ""
+      },
+      {
+        "id": "t7g_12",
+        "type": "grammar",
+        "moji": "歌を歌いながら自転車に乗ります",
+        "romaji": "I ride a bicycle while singing a song",
+        "url": ""
+      },
+      {
+        "id": "t7g_13",
+        "type": "grammar",
+        "moji": "働きながら日本語を勉強します",
+        "romaji": "I study Japanese while working",
+        "url": ""
+      },
+      {
+        "id": "t7g_14",
+        "type": "grammar",
+        "moji": "寝る前に、本を読みます",
+        "romaji": "Before going to bed, I 'll read a book",
+        "url": ""
+      },
+      {
+        "id": "t7g_15",
+        "type": "grammar",
+        "moji": "食事の前に、手を洗います",
+        "romaji": "I'll wash my hands before eating",
+        "url": ""
+      },
+      {
+        "id": "t7g_16",
+        "type": "grammar",
+        "moji": "ジョンさんは、1時間前に学校へ行きました",
+        "romaji": "Mr.John went to school an hour ago.",
+        "url": ""
+      }
     ], 
     TOPIC7_TITLE_and_kanji : [
       {
@@ -6309,322 +7244,434 @@ export const flashData = [
     ],
     TOPIC8_TITLE_and_vocabulary : [
       {
-        "id": "1v_a",
+        "id": "t8v_1",
         "type": "vocab",
         "moji": "あき",
         "romaji": "autumn",
-        "url": ""
+        "url": "あき.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_2",
         "type": "vocab",
         "moji": "いみ",
         "romaji": "meaning",
-        "url": ""
+        "url": "いみ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_3",
         "type": "vocab",
         "moji": "いりぐち",
         "romaji": "entrance",
-        "url": ""
+        "url": "いりぐち.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_4",
         "type": "vocab",
         "moji": "うります",
         "romaji": "to sell",
-        "url": ""
+        "url": "うります.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_5",
         "type": "vocab",
         "moji": "おします",
         "romaji": "to push, to stamp something",
-        "url": ""
+        "url": "おします.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_6",
         "type": "vocab",
         "moji": "おぼえます",
         "romaji": "to remember",
-        "url": ""
+        "url": "おぼえます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_7",
         "type": "vocab",
         "moji": "およぎます",
         "romaji": "to swim",
-        "url": ""
+        "url": "およぎます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_8",
         "type": "vocab",
         "moji": "かぎ",
         "romaji": "Key",
-        "url": ""
+        "url": "かぎ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_9",
         "type": "vocab",
         "moji": "きた",
         "romaji": "North",
-        "url": ""
+        "url": "きた.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_10",
         "type": "vocab",
         "moji": "げんかん",
         "romaji": "entry hall",
-        "url": ""
+        "url": "げんかん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_11",
         "type": "vocab",
         "moji": "こうばん",
         "romaji": "police box",
-        "url": ""
+        "url": "こうばん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_12",
         "type": "vocab",
         "moji": "こえ",
         "romaji": "Voice",
-        "url": ""
+        "url": "こえ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_13",
         "type": "vocab",
         "moji": "じぶん",
         "romaji": "Oneself",
-        "url": ""
+        "url": "じぶん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_14",
         "type": "vocab",
         "moji": "すぐに",
         "romaji": "Instantly",
-        "url": ""
+        "url": "すぐに.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_15",
         "type": "vocab",
         "moji": "だけ",
         "romaji": "",
-        "url": ""
+        "url": "だけ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_16",
         "type": "vocab",
         "moji": "だします",
         "romaji": "to put out",
-        "url": ""
+        "url": "だします.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_17",
         "type": "vocab",
         "moji": "たぶん",
         "romaji": "probably",
-        "url": ""
+        "url": "たぶん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_18",
         "type": "vocab",
         "moji": "ちょうど",
         "romaji": "exactly",
-        "url": ""
+        "url": "ちょうど.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_19",
         "type": "vocab",
         "moji": "つかれます",
         "romaji": "to get tired",
-        "url": ""
+        "url": "つかれます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_20",
         "type": "vocab",
         "moji": "でぐち",
         "romaji": "exit",
-        "url": ""
+        "url": "でぐち.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_21",
         "type": "vocab",
         "moji": "でも",
         "romaji": "but",
-        "url": ""
+        "url": "でも.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_22",
         "type": "vocab",
         "moji": "どうぶつ",
         "romaji": "animal",
-        "url": ""
+        "url": "どうぶつ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_23",
         "type": "vocab",
         "moji": "なつ",
         "romaji": "summer",
-        "url": ""
+        "url": "なつ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_24",
         "type": "vocab",
         "moji": "にし",
         "romaji": "west",
-        "url": ""
+        "url": "にし.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_25",
         "type": "vocab",
         "moji": "にもつ",
         "romaji": "luggage",
-        "url": ""
+        "url": "にもつ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_26",
         "type": "vocab",
         "moji": "ぬぎます",
         "romaji": "to take off clothes",
-        "url": ""
+        "url": "ぬぎます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_27",
         "type": "vocab",
         "moji": "はきます",
         "romaji": "to wear, to put on trousers",
-        "url": ""
+        "url": "はきます.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_28",
         "type": "vocab",
         "moji": "はじめ",
         "romaji": "beginning",
-        "url": ""
+        "url": "はじめ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_29",
         "type": "vocab",
         "moji": "はなし",
         "romaji": "talk, story",
-        "url": ""
+        "url": "はなし.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_30",
         "type": "vocab",
         "moji": "はる",
         "romaji": "spring",
-        "url": ""
+        "url": "はる.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_31",
         "type": "vocab",
         "moji": "はんぶん",
         "romaji": "half minute",
-        "url": ""
+        "url": "はんぶん.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_32",
         "type": "vocab",
         "moji": "ひがし",
         "romaji": "east",
-        "url": ""
+        "url": "ひがし.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_33",
         "type": "vocab",
         "moji": "ほか",
         "romaji": "other, the rest",
-        "url": ""
+        "url": "ほか.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_34",
         "type": "vocab",
         "moji": "ポケット",
         "romaji": "pocket",
-        "url": ""
+        "url": "ポケット.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_35",
         "type": "vocab",
         "moji": "ボタン",
         "romaji": "button",
-        "url": ""
+        "url": "ボタン.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_36",
         "type": "vocab",
         "moji": "ほんとう",
         "romaji": "truth",
-        "url": ""
+        "url": "ほんとう.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_37",
         "type": "vocab",
         "moji": "みなみ",
         "romaji": "south",
-        "url": ""	
+        "url": "みなみ.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_38",
         "type": "vocab",
         "moji": "もの",
         "romaji": "thing",
-        "url": ""
+        "url": "もの.mp3"
       },
       {
-        "id": "1v_a",
+        "id": "t8v_39",
         "type": "vocab",
         "moji": "わすれます",
         "romaji": "to forget",
-        "url": ""
+        "url": "わすれます.mp3"
       }
     ], 
     TOPIC8_TITLE_and_grammar : [
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "Thie sentence pattern is used to express prohibition.",
-        "moji"  : "Ｖて形＋はいけません",
-        "url"   : ""
-      }, 
-      {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "・Vない-form\nThe verb form used with ない is called the ない-form. How to make the ない-form is given below.\n1)GroupⅠ\nIn the verbs of this group the last sound of the ます-form is always the sound in the い-line. So, replace it with the sound of the あ-line to make a ない-form. わ is the last sound of the ない-form in these verbs instead of あ.\nかきます→かかない、かえります→かえらない、あいます→あわない\n2)GroupⅡ\nThe ない-form of verbs of this group is just the same as the ます-form.\nたべます→たべない、みます→みない\n3)GroupⅢ\nします→しない、きます→こない\n\nないでください is used to ask or instruct someone not to do something.",
-        "moji"  : "Ｖない形＋ないでください",
-        "url"   : ""
+        "id": "t8g_1",
+        "type": "grammar",
+        "moji": "ここでたばこを吸ってはいけません",
+        "romaji": "You must not smoke here",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "This expression mesns something has to be done regardless of the will of the actor. Note that this doesn't have a negative meaning.",
-        "moji"  : "Ｖない形＋なければなりません",
-        "url"   : ""
+        "id": "t8g_2",
+        "type": "grammar",
+        "moji": "ここでお酒を飲んではいけません",
+        "romaji": "You must not drink alcohol",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "とき is used to connects two sentences while expressing a time or occasion when the state or action described in the main sentence exists or occurs. The form of the word preceding とき is the same as the form that modifies a noun.\nThe tense if the clause modifying とき is not affected by the tense of the main clause.\nWhen the verb in front of とき is in the dictionary form, whatever is described in the main clause happened before whatever is described in the ～とき clause. When the verb in front of とき is in the た-form, whatever is described in the main clause happened after whatever in the ～とき clause.",
-        "moji"  : "とき",
-        "url"   : ""
+        "id": "t8g_3",
+        "type": "grammar",
+        "moji": "入ってはいけません",
+        "romaji": "You must not enter",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "You learned how to modify nouns.\nわたしの うち　　my house\nあたらしい うち  a new house\nきれいな うち      a beautiful house\nIn Japanese, whatever modifies a word, whether it’s a word or a sentence, it always comes before the words to be modified. Here you learn another way to modify nouns.\nThis predicate of the sentence which modifies a noun is in the plain form. In the case of ナ-adjective sentence, ～だ become ～な. In the case of noun sentences ～だ becomes ～の.",
-        "moji"  : "名詞修飾",
-        "url"   : ""
+        "id": "t8g_4",
+        "type": "grammar",
+        "moji": "ここで写真を撮らないでください",
+        "romaji": "Please don't take pictures here",
+        "url": ""
       },
       {
-        "id"    : "1g_a",
-        "type"  : "grammar",
-        "romaji": "Japanese language has two styles of speech: polite style and plain style.The predicates which are used in polite style sentences and accompanied by either です or ます are called the polite form, while the predicates used in plain style sentences are called the plain form.\nQuestions in the plain style generally omit the particle か, which denotes a question, and end with a rinsing intonation.\nIn noun and なA questions, だ, which is the plain form of です, is omitted. In an answer in the affirmative, ending the sentence with だ could sound too rough. You can either omit だ or add some sentence final particle to soften the tone of the sentence. Women seldom use だ.",
-        "moji"  : "友達言葉",
-        "url"   : ""
+        "id": "t8g_5",
+        "type": "grammar",
+        "moji": "ここに入らないでください",
+        "romaji": "Please don't enter here",
+        "url": ""
       },
+      {
+        "id": "t8g_6",
+        "type": "grammar",
+        "moji": "ここで食べないでください",
+        "romaji": "Please don't eat here",
+        "url": ""
+      },
+      {
+        "id": "t8g_7",
+        "type": "grammar",
+        "moji": "薬を飲まなければなりません",
+        "romaji": "I must take medicine",
+        "url": ""
+      },
+      {
+        "id": "t8g_8",
+        "type": "grammar",
+        "moji": "靴を脱がなければなりません",
+        "romaji": "I must take off my shoes",
+        "url": ""
+      },
+      {
+        "id": "t8g_9",
+        "type": "grammar",
+        "moji": "勉強しなければなりません",
+        "romaji": "I must study",
+        "url": ""
+      },
+      {
+        "id": "t8g_10",
+        "type": "grammar",
+        "moji": "ごはんを食べるとき、はしを使います",
+        "romaji": "When I eat, I use chopsticks",
+        "url": ""
+      },
+      {
+        "id": "t8g_11",
+        "type": "grammar",
+        "moji": "お金がないとき、友達に借ります",
+        "romaji": "When I have no money, I borrow money to my friend",
+        "url": ""
+      },
+      {
+        "id": "t8g_12",
+        "type": "grammar",
+        "moji": "暑いとき、冷たいジュースを飲みます",
+        "romaji": "When it's hot, I drink a cold juice",
+        "url": ""
+      },
+      {
+        "id": "t8g_13",
+        "type": "grammar",
+        "moji": "暇なとき、テレビを見ます",
+        "romaji": "When I'm free, I watch TV",
+        "url": ""
+      },
+      {
+        "id": "t8g_14",
+        "type": "grammar",
+        "moji": "子どものとき、海で泳ぎました",
+        "romaji": "When I was a child, I swam in the sea",
+        "url": ""
+      },
+      {
+        "id": "t8g_15",
+        "type": "grammar",
+        "moji": "これは私が住んでいた家です",
+        "romaji": "This is the house where I lived",
+        "url": ""
+      },
+      {
+        "id": "t8g_16",
+        "type": "grammar",
+        "moji": "これは私が撮った写真です",
+        "romaji": "This is a picture I took",
+        "url": ""
+      },
+      {
+        "id": "t8g_17",
+        "type": "grammar",
+        "moji": "先週見た映画はおもしろかったです",
+        "romaji": "The movie I saw last week is interesting",
+        "url": ""
+      },
+      {
+        "id": "t8g_18",
+        "type": "grammar",
+        "moji": "来週アメリカへ行く",
+        "romaji": "I will go to America next week",
+        "url": ""
+      },
+      {
+        "id": "t8g_19",
+        "type": "grammar",
+        "moji": "毎日忙しい",
+        "romaji": "I am busy everyday",
+        "url": ""
+      },
+      {
+        "id": "t8g_20",
+        "type": "grammar",
+        "moji": "ビールが好きだ",
+        "romaji": "I like beer",
+        "url": ""
+      },
+      {
+        "id": "t8g_21",
+        "type": "grammar",
+        "moji": "コーヒーを飲む？",
+        "romaji": "Do you want coffee?",
+        "url": ""
+      },
+      {
+        "id": "t8g_22",
+        "type": "grammar",
+        "moji": "今晩暇？",
+        "romaji": "Are you free tonight?",
+        "url": ""
+      }
     ], 
     TOPIC8_TITLE_and_kanji : [
       {
