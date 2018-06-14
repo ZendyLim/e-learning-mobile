@@ -41,6 +41,7 @@ class QuestionPanel extends Component {
 
   componentDidUpdate(){
     if(this.currentQuestion != this.props.question.id){
+      
       this.currentQuestion = this.props.question.id;
       if(this.props.format == 'audio'){
         this.loadAudio();
@@ -52,6 +53,11 @@ class QuestionPanel extends Component {
       else{
         this.props.questionReady(true);
       }
+      
+      if(this.quizAudio){
+        this.quizAudio.stop();
+      }
+      
     }
     
 
@@ -152,13 +158,16 @@ class QuestionPanel extends Component {
             
         this.currentAudio = this.props.question.id;
 
-        this.quizAudio.play((success) => {
-          if (!success) {
-            this.quizAudio.reset();
-          } 
+        this.quizAudio.stop(() => {
+          this.quizAudio.play((success) => {
+            if (!success) {
+              this.quizAudio.reset();
+            } 
+          });
         });
+        
+        
       }
-
       
 
     }

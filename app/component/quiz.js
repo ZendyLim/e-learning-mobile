@@ -33,7 +33,7 @@ class Quiz extends Component {
   _renderAnswerButtons(){
     fill = ['audio_fill','english_fill','kanji_fill','arrange'];
     this.isFill = fill.indexOf(this.props.format) > -1;
-    
+    console.log(this.props);
     if(this.props.format == 'fill'){
         textDisplay = this.props.question[this.props.displayFormat].split(' ');  
 

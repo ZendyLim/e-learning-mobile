@@ -110,11 +110,14 @@ import {
       }
 
       this.testItemCount = {
-        vocabulary: 10,
-        kanji: 10,
-        grammar: 15,
-        reading: 10,
-        listening: 10
+        // vocabulary: 10,
+        // kanji: 10,
+        // grammar: 15,
+        vocabulary: 4,
+        kanji: 4,
+        grammar: 4,
+        //reading: 3,
+        listening: 3
       }
 
       this.state = this.initialState;
@@ -244,10 +247,11 @@ import {
       }
       else{                
         shuffledQuiz = this.shuffleItems(this.quizItems);        
-        this.allQuestion = shuffledQuiz.map((question) => 
-          this.shuffleAnswers(question, shuffledQuiz)
+        console.log(shuffledQuiz);
+        this.allQuestion = shuffledQuiz.map((question) =>          
+            this.shuffleAnswers(question, shuffledQuiz)    
         );
-        
+        console.log(this.allQuestion);
         this.currentQuestion = this.allQuestion[0];
         
         this.setState({
@@ -303,12 +307,13 @@ import {
 
     setListQuestion(){
       if(this.initialParams.isTopicTest){
-        topics = ['vocabulary', 'grammar', 'kanji'];
+        topics = ['vocabulary', 'grammar', 'kanji', 'listening'];
         currentItems = [];
 
         for(i = 0; i < topics.length; i++){
           
           tempQuiz = quizItems[this.initialParams.studyType + '_and_' + topics[i]];
+          console.log(tempQuiz, this.initialParams.studyType + '_and_' + topics[i]);
           this.byCategory[topics[i]] = tempQuiz;
                   
           for(c = 0; c < this.testItemCount[topics[i]]; c++){
@@ -351,6 +356,9 @@ import {
 
     // randomized answer options
     shuffleAnswers(array, allArray) {
+      if(array.answerOption){
+        return array;
+      }
       var allArrayLength = allArray.length, temporaryValue, randomIndex;
 
       var randomIndex = Math.floor(Math.random() * this.optionsNumber);
@@ -415,13 +423,14 @@ import {
         questionType = this.currentQuestion.type;        
         this.quizOptions = this.study[questionType];        
       }
-
+      
       quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
       quizFormatLength = quizFormat.length;
       randomIndex = Math.floor(Math.random() * quizFormatLength);      
       time = this.time;
       
       paramFormat = this.setQuizFormat(quizFormat[randomIndex],time);      
+      
       this.setState(paramFormat);
     }
 
@@ -601,7 +610,7 @@ import {
       
       if(this.mounted){
         this.setTakeQuiz();
-
+        console.log(this.allQuestion);
         if(counter < this.allQuestion.length && !forceEnd){
           this.showCorrect = false;
           this.timeStops = 0;
@@ -675,11 +684,11 @@ import {
       let quizSizes = 0;
 
       this.reduxParam = this.setSentParamStart(navigation.getParam('index', null), navigation.getParam('categoryId', null), navigation.getParam('type', null));
-
-      if(this.isTopicTest){
+      
+      if(this.initialParams.isTopicTest){
         quizSizes = this.allQuestion.length;
       }
-      
+      console.log(quizSizes, this.allQuestion.length, this.initialParams.isTopicTest);
       this.props.startLearn(this.state.studyType, this.startTime,this.title, quizSizes); //call our action
     }
 
