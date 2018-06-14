@@ -38,7 +38,6 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
     componentDidMount(){
         this.setStatusfalse();
     }
-    
     render() {
         let idLength = 0;
       return ( 
