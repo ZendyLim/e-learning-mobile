@@ -26,7 +26,7 @@ export function endLearn(postValue){
   return (dispatch) => {
     getJWT().then( JWT => {
       console.log(JWT);
-      fetch('https://e-learning-backend.herokuapp.com/api/v1/finishStudy',{
+      fetch('https://e-learning-backend.herokuapp.com/api/v1/activities',{
         method: 'POST',
         headers: {
           'Authorization' : JWT,

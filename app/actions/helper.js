@@ -6,9 +6,18 @@ export function countScore(studyRecord,quizItems = 0) {
     var correct = 0;
     for(var i = 0; i < studyRecord.length; ++i) {
         if(studyRecord[i].correct == '1'){      
-            correct += pointsList[studyRecord[i].type];
+            if(studyRecord[i].type){
+                correct += pointsList[studyRecord[i].type];
+            }else{
+                console.log('run this');
+                correct += pointsList['initial'];
+            }
         }        
-        countQuest += pointsList[studyRecord[i].type];
+        if(studyRecord[i].type ){
+            countQuest += pointsList[studyRecord[i].type];
+        }else{
+            countQuest += pointsList['initial'];            
+        }
     }
     
     if(quizItems){

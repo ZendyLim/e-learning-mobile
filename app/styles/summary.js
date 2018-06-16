@@ -11,27 +11,35 @@ module.exports = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
     },
+    summaryMainTop2: {
+        flex: 2,
+        flexDirection: 'row',
+    },
+
     flexTop1:{
         position: 'relative',
-        flex: 4.7,
+        flex: 5,
         paddingTop: 10,
     },
+    mainConTop : {
+        height: 150,
+    },
     flexTop2:{
-        flex: 5.3,
+        flex: 5,
         paddingTop: 32,
         paddingLeft: 20,
     },
       absoluteTextHome: {
         position : 'absolute',
         width : '100%',
-        height : 150,
+        height : 140,
         top: 10,
         justifyContent: 'center',
         alignItems: 'center',  
       },
       containerScoreHome : {
-        height : 150,
-        width : 150,
+        height : 140,
+        width : 140,
         backgroundColor: '#fff',
         borderRadius: 80,
         justifyContent: 'center',
@@ -65,7 +73,7 @@ module.exports = StyleSheet.create({
     },
     flexBot1 : {
         flex: 1,
-        padding:10,
+        padding:8,
         
     },
     flexRow: {
@@ -114,12 +122,12 @@ module.exports = StyleSheet.create({
     },
     graphButton :{
         height: 120,
-        width: 100,
+        width: 90,
 
     },
     graphButtonCon:{
-        height: 80,
-        width: 80,
+        height: 75,
+        width: 75,
         position: 'relative',
         
     },
@@ -130,7 +138,7 @@ module.exports = StyleSheet.create({
     },
     conGraph :{
         backgroundColor: '#fff',
-        width : '100%',
+        width : 90,
         height: 120,
         borderRadius: 8,
         borderWidth: 1,
@@ -145,8 +153,8 @@ module.exports = StyleSheet.create({
         borderRadius: 40,
         justifyContent: 'center',
         alignItems: 'center',
-        top: 24,
-        marginLeft: 10,
+        top: 23,
+        marginLeft: 5,
     },
     btnText : {
         textAlign: 'center',
