@@ -152,6 +152,7 @@ export default class HL4 extends Component {
       }
 
       validationStrokeEnd = (path) =>{
+        console.log(path);
         if(this.state.progress < hiragana[this.state.currentData].length){
           if(this.checkValidation(hiragana[this.state.currentData][this.state.progress], path.path)){
             var next = this.state.progress + 1;
@@ -175,7 +176,7 @@ export default class HL4 extends Component {
       }
 
       checkValidation = (path1, path2) => {
-        var blurWidth = 10;
+        var blurWidth = 20;
         var count =  path1.data.length;
         var countStoke =  path2.data.length;
         var check = 0;
