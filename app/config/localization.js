@@ -38,6 +38,7 @@ export let strings = new LocalizedStrings({
    QUESTION_SELECT : "Select",
    QUESTION_FILL : "Fill in the blanks",
    QUESTION_ARRANGE : "Arrange the sentence",
+   QUESTION_READ_ANSWER:"Read the paragraph below",
    // Quiz
    TIMES_UP: "Time's up",
    WORD_LIST: "WORD LIST",
@@ -152,6 +153,7 @@ export let strings = new LocalizedStrings({
    QUESTION_SELECT : "選ぶ",
    QUESTION_FILL : "Fill in the blanks",
    QUESTION_ARRANGE : "Arrange the sentence",
+   QUESTION_READ_ANSWER:"Read the paragraph below",
    // Quiz
    TIMES_UP: "時間です",
    WORD_LIST: "言葉一覧",
