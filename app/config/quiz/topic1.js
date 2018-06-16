@@ -478,7 +478,7 @@ export const vocabulary = [
         "moji":"いち",
         "kanji":"一",
         "english":"one",
-        "audio":"one.mp3"
+        "audio":"n_ichi.mp3"
     },
     {
         "id":"tp1_k_2",
@@ -487,7 +487,7 @@ export const vocabulary = [
         "moji":"に",
         "kanji":"二",
         "english":"two",
-        "audio":"two.mp3"
+        "audio":"n_ni.mp3"
     },
     {
         "id":"tp1_k_3",
@@ -496,7 +496,7 @@ export const vocabulary = [
         "moji":"さん",
         "kanji":"三",
         "english":"three",
-        "audio":"three.mp3"
+        "audio":"n_san.mp3"
     },
     {
         "id":"tp1_k_4",
@@ -505,7 +505,7 @@ export const vocabulary = [
         "moji":"し/よん",
         "kanji":"四",
         "english":"four",
-        "audio":"four.mp3"
+        "audio":"n_yon.mp3"
     },
     {
         "id":"tp1_k_5",
@@ -514,7 +514,7 @@ export const vocabulary = [
         "moji":"ご",
         "kanji":"五",
         "english":"five",
-        "audio":"five.mp3"
+        "audio":"n_go.mp3"
     },
     {
         "id":"tp1_k_6",
@@ -523,7 +523,7 @@ export const vocabulary = [
         "moji":"ろく",
         "kanji":"六",
         "english":"six",
-        "audio":"six.mp3"
+        "audio":"n_roku.mp3"
     },
     {
         "id":"tp1_k_7",
@@ -532,7 +532,7 @@ export const vocabulary = [
         "moji":"なな/しち",
         "kanji":"七",
         "english":"seven",
-        "audio":"seven.mp3"
+        "audio":"n_nana.mp3"
     },
     {
         "id":"tp1_k_8",
@@ -541,7 +541,7 @@ export const vocabulary = [
         "moji":"はち",
         "kanji":"八",
         "english":"eight",
-        "audio":"eight.mp3"
+        "audio":"n_hachi.mp3"
     },
     {
         "id":"tp1_k_9",
@@ -550,7 +550,7 @@ export const vocabulary = [
         "moji":"きゅう/く",
         "kanji":"九",
         "english":"nine",
-        "audio":"nine.mp3"
+        "audio":"n_kyuu.mp3"
     },
     {
         "id":"tp1_k_10",
@@ -559,7 +559,7 @@ export const vocabulary = [
         "moji":"じゅう",
         "kanji":"十",
         "english":"ten",
-        "audio":"ten.mp3"
+        "audio":"n_juu.mp3"
     },
     {
         "id":"tp1_k_11",
@@ -568,7 +568,7 @@ export const vocabulary = [
         "moji":"ひゃく",
         "kanji":"百",
         "english":"hundred",
-        "audio":"hundred.mp3"
+        "audio":"n_hyaku.mp3"
     },
     {
         "id":"tp1_k_12",
@@ -577,7 +577,7 @@ export const vocabulary = [
         "moji":"せん",
         "kanji":"千",
         "english":"thousand",
-        "audio":"thousand.mp3"
+        "audio":"n_sen.mp3"
     },
     {
         "id":"tp1_k_13",
@@ -595,8 +595,17 @@ export const vocabulary = [
         "moji":"えん",
         "kanji":"円",
         "english":"yen",
-        "audio":"yen.mp3"
+        "audio":"t1_en.mp3"
     },
+    {
+        "id":"tp1_k_15",
+        "type":"kanji",
+        "romaji":"nani, nan",
+        "moji":"なに、なん",
+        "kanji":"何",
+        "english":"what",
+        "audio":"t1_nani_nan.mp3"
+    }
   ];
   
   export const grammar= [

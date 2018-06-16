@@ -18,7 +18,7 @@ export const StudyList = [{
     topic_id: 'T002',
     quizOptions: {
       random: true,
-      types:['moji_english', 'english_moji'],
+      types:['audio_english', 'audio_moji'],
       //types:['moji_english', 'english_moji','audio_english','audio_moji'],
       withCorrection:true,
       style:'quizLong'
@@ -32,7 +32,7 @@ export const StudyList = [{
     topic_id: 'T003',
     quizOptions: {
       random: true,
-      types:['moji_english', 'english_moji'],
+      types:['audio_english', 'audio_moji'],
       //types:['moji_english', 'english_moji','audio_english','audio_moji'],
       withCorrection:true,
       style:'quizVocab'
