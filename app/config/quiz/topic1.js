@@ -1,4 +1,3 @@
-
 export const vocabulary = [
     {   
         "id":"tp1_v_1",
@@ -641,7 +640,7 @@ export const vocabulary = [
         "id":"tp1_g_5",
         "type":"grammar",
         "romaji":"kimusan ha gakusei jaarimasen",
-        "moji":"キムさん は gakusei じゃありません。",
+        "moji":"キムさん は がくせい じゃありません。",
         "kanji":"キムさん は 学生 じゃありません。",
         "english":"Mr./Ms. Kim is not a student.",
         "audio":""
@@ -1044,10 +1043,205 @@ export const vocabulary = [
     },
   ];
 
-  export const listening = [
-
+  export const listening = [{
+        "id":"tp1_l_1",
+        "type":"listening",
+        "romaji":"hidasan",
+        "moji":"ひださん",
+        "kanji":"飛田さん",
+        "english":"Mr. Hida",
+        "answerOption":[
+            {
+                "id":"tp1_l_4",
+                "type":"listening",
+                "moji":"キムさん"
+            },
+            {
+                "id":"tp1_l_3",
+                "type":"listening",
+                "moji":"ジョンさん"
+            },
+            {
+                "id":"tp1_l_2",
+                "type":"listening",
+                "moji":"鈴木先生"
+            },
+            {
+                "id":"tp1_l_1",
+                "type":"listening",
+                "moji":"ひださん"
+            }
+        ],
+        "audio":"t1_listening_1.mp3"
+    },
+    {
+        "id":"tp1_l_2",
+        "type":"listening",
+        "romaji":"igirisu",
+        "moji":"イギリス",
+        "kanji":"イギリス",
+        "english":"United Kingdom",
+        "answerOption":[
+            {
+                "id":"tp1_l_4",
+                "type":"listening",
+                "moji":"日本"
+            },
+            {
+                "id":"tp1_l_3",
+                "type":"listening",
+                "moji":"アメリカ"
+            },
+            {
+                "id":"tp1_l_2",
+                "type":"listening",
+                "moji":"イギリス"
+            },
+            {
+                "id":"tp1_l_1",
+                "type":"listening",
+                "moji":"中国"
+            }
+        ],            
+        "audio":"t1_listening_2.mp3"
+    },
+    {
+        "id":"tp1_l_3",
+        "type":"listening",
+        "romaji":"amerika no 18,000en no kamera",
+        "moji":"アメリカの18,000円のカメラ",
+        "kanji":"America's 18,000 yen camera",
+        "english":"America's ",
+        "answerOption":[
+            {
+                "id":"tp1_l_4",
+                "type":"listening",
+                "moji":"日本の23,000円のカメラ"
+            },
+            {
+                "id":"tp1_l_3",
+                "type":"listening",
+                "moji":"アメリカの18,000円のカメラ"
+            },
+            {
+                "id":"tp1_l_2",
+                "type":"listening",
+                "moji":"中国の12800円のカメラ"
+            },
+            {
+                "id":"tp1_l_1",
+                "type":"listening",
+                "moji":"日本の18000円のカメラ"
+            }
+        ],
+        "audio":"t1_listening_3.mp3"
+    }
   ];
 
   export const reading = [
-
+    {
+        "id":"tp1_r_1",
+        "type":"reading",
+        "romaji":"watashi ha pan desu. betonamujin desu. betonamugo to eigo ga dekimasu. chuugokugo mo de kimasu. watashi ha kaishain jaarimasen. daigakusei desu. ima, 21sai desu. douzoyoroshikuonegaishimasu.",
+        "moji":"わたしはハンです。ベトナム人です。ベトナムごとえいごができます。ちゅうごくごもできます。わたしはかいしゃいんじゃありません。だいがくせいです。いま、21さいです。どうぞよろしくおねがいします。",
+        "kanji":"わたしはハンです。ベトナム人です。ベトナム語と英語ができます。中国語もできます。わたしは会社員じゃありません。大学生です。今、21さいです。どうぞよろしくお願いします。",
+        "english":"America's ",  
+        "questionOption":{
+            "moji":"Q：ハンさんはなにができますか。",
+            "kanji":"Q：ハンさんは何ができますか。"
+        },   
+        "answerOption":[
+            {
+                "id":"tp1_r_4",
+                "type":"reading",
+                "moji":"ベトナム語"
+            },
+            {
+                "id":"tp1_r_3",
+                "type":"reading",
+                "moji":"ベトナム語と英語"
+            },
+            {
+                "id":"tp1_r_2",
+                "type":"reading",
+                "moji":"ベトナム語と英語と中国語"
+            },
+            {
+                "id":"tp1_r_1",
+                "type":"reading",
+                "moji":"ベトナム語と英語と中国語と日本語"
+            }
+        ],
+        "audio":""
+    },
+    {
+        "id":"tp1_r_2",
+        "type":"reading",
+        "romaji":"jon-san ha amerika desu. 25sai desu. nihongo gakkou no gakusei desu. hiragana to katakana ga wakarimasu. kanji ga wakarimasen. eigo ga dekimasu.",
+        "moji":"ジョンさんはアメリカ人です。25さいです。にほんごがっこうのがくせいです。ひらがなとカタカナがわかります。かんじがわかりません。えいごができます。",
+        "kanji":"ジョンさんはアメリカ人です。25さいです。日本語学校の学生です。ひらがなとカタカナがわかります。漢字がわかりません。英語ができます。",        
+        "english":"America's ",
+        "questionOption":{
+            "moji":"Q：ジョンさんはなにがわかりますか。",
+            "kanji":"Q：ジョンさんは何がわかりますか。"
+        },     
+        "answerOption":[
+            {
+                "id":"tp1_r_4",
+                "type":"reading",
+                "moji":"英語"
+            },
+            {
+                "id":"tp1_r_3",
+                "type":"reading",
+                "moji":"英語とひらがなとカタカナ"
+            },
+            {
+                "id":"tp1_r_2",
+                "type":"reading",
+                "moji":"ひらがなとカタカナと漢字"
+            },
+            {
+                "id":"tp1_r_1",
+                "type":"reading",
+                "moji":"日本語と中国語"
+            }
+        ],
+        "audio":""
+    },
+    {
+        "id":"tp1_r_3",
+        "type":"reading",
+        "romaji":"watashi ha pan desu. betonamujin desu. betonamugo to eigo ga dekimasu. chuugokugo mo de kimasu. watashi ha kaishain jaarimasen. daigakusei desu. ima, 21sai desu. douzoyoroshikuonegaishimasu.",
+        "moji":"これは料理の本です。ベトナム語の本です。グエンさんの本です。グエンさんは料理ができます。あれもグエンさんの本です。日本語の本です。グエンさんは漢字もわかります。それはキムさんの本です。韓国語の本です。",
+        "kanji":"これは料理の本です。ベトナム語の本です。グエンさんの本です。グエンさんは料理ができます。あれもグエンさんの本です。日本語の本です。グエンさんは漢字もわかります。それはキムさんの本です。韓国語の本です。",
+        "english":"America's ",
+        "questionOption":{
+            "moji":"Q：グエンさんのほんは、なにのほんですか。",
+            "kanji":"Q：グエンさんの本は、何の本ですか。"
+        },
+        "answerOption":[
+            {
+                "id":"tp1_r_3",
+                "type":"reading",
+                "moji":"ベトナム語の料理の本"
+            },
+            {
+                "id":"tp1_r_4",
+                "type":"reading",
+                "moji":"日本語の料理の本"
+            },
+            {
+                "id":"tp1_r_2",
+                "type":"reading",
+                "moji":"韓国語の料理の本"
+            },
+            {
+                "id":"tp1_r_1",
+                "type":"reading",
+                "moji":"中国語の料理の本"
+            }
+        ],
+        "audio":""
+    }
 ];
