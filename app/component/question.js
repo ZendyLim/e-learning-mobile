@@ -45,21 +45,17 @@ class QuestionPanel extends Component {
       this.currentQuestion = this.props.question.id;
       if(this.props.format == 'audio'){
         this.loadAudio();
-        setTimeout(() => {
-          this.playAudio()
-          this.props.questionReady(true);
-        }, 500);
+        this.props.questionReady(true);
       }
       else{
         this.props.questionReady(true);
-      }
-
-      if(this.quizAudio){
-        this.quizAudio.stop();        
-      }
+      }      
       
     }
     
+    if(this.quizAudio){
+      this.quizAudio.stop();        
+    }
 
   }
 
@@ -171,6 +167,9 @@ class QuestionPanel extends Component {
           console.log('failed to load the sound', error);
           return;
         }
+
+        this.playAudio()
+        
 
       });
     }

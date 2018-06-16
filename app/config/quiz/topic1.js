@@ -586,7 +586,7 @@ export const vocabulary = [
         "moji":"まん",
         "kanji":"万",
         "english":"ten thousand",
-        "audio":"ten thousand.mp3"
+        "audio":"t1_man.mp3"
     },
     {
         "id":"tp1_k_14",

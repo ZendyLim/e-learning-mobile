@@ -1,6 +1,7 @@
 import { hiragana_katakana } from './hiragana_katakana';
 import * as initial from './initials.js';
 import * as topic1 from './topic1.js';
+import * as topic2 from './topic2.js';
 
 export const quizItems = {
     "HIRAGANA_TITLE": hiragana_katakana,
@@ -10,6 +11,11 @@ export const quizItems = {
     "TOPIC1_TITLE_and_kanji": topic1.kanji,
     "TOPIC1_TITLE_and_grammar": topic1.grammar,
     "TOPIC1_TITLE_and_listening": topic1.listening,
-    "TOPIC1_TITLE_and_reading": topic1.reading
+    "TOPIC1_TITLE_and_reading": topic1.reading,
+    "TOPIC2_TITLE_and_vocabulary": topic2.vocabulary,
+    "TOPIC2_TITLE_and_kanji": topic2.kanji,
+    "TOPIC2_TITLE_and_grammar": topic2.grammar,
+    "TOPIC2_TITLE_and_listening": topic2.listening,
+    "TOPIC2_TITLE_and_reading": topic2.reading
 };
 

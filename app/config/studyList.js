@@ -18,8 +18,8 @@ export const StudyList = [{
     topic_id: 'T002',
     quizOptions: {
       random: true,
-      types:['audio_english', 'audio_moji'],
-      //types:['moji_english', 'english_moji','audio_english','audio_moji'],
+      //types:['audio_english', 'audio_moji'],
+      types:['moji_english', 'english_moji','audio_english','audio_moji'],
       withCorrection:true,
       style:'quizLong'
     }
@@ -32,8 +32,8 @@ export const StudyList = [{
     topic_id: 'T003',
     quizOptions: {
       random: true,
-      types:['audio_english', 'audio_moji'],
-      //types:['moji_english', 'english_moji','audio_english','audio_moji'],
+      //types:['audio_english', 'audio_moji'],
+      types:['moji_english', 'english_moji','audio_english','audio_moji'],
       withCorrection:true,
       style:'quizVocab'
     }
@@ -47,7 +47,7 @@ export const StudyList = [{
     vocabulary:{     
       random:true, 
       types:['english_moji','english_fill','audio_english','audio_fill'],      
-      //types:['english_fill','audio_fill'],
+      //types:['audio_english','audio_fill'],
       withCorrection:true,
       style:'quizVocab'
     },
@@ -60,9 +60,9 @@ export const StudyList = [{
     },
     kanji:{     
       random:true, 
-      types:['kanji_moji','kanji_fill','kanji_english','moji_kanji'],
-      //types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],
-      //types:['kanji_fill'],
+      //types:['kanji_moji','kanji_fill','kanji_english','moji_kanji'],
+      types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],
+      //types:['audio_kanji'],
       withCorrection:true,
       style:'quizKanji'
     },
