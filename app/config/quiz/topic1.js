@@ -1,4 +1,3 @@
-
 export const vocabulary = [
     {   
         "id":"tp1_v_1",
