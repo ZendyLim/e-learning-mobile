@@ -7,14 +7,14 @@ export function countScore(studyRecord,quizItems = 0) {
     for(var i = 0; i < studyRecord.length; ++i) {
         if(studyRecord[i].correct == '1'){      
             if(studyRecord[i].type){
-                correct += pointsList[studyRecord[i].type];
+                correct += pointsList[studyRecord[i].type.toLowerCase()];
             }else{
                 console.log('run this');
                 correct += pointsList['initial'];
             }
         }        
         if(studyRecord[i].type ){
-            countQuest += pointsList[studyRecord[i].type];
+            countQuest += pointsList[studyRecord[i].type.toLowerCase()];
         }else{
             countQuest += pointsList['initial'];            
         }

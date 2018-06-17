@@ -19,6 +19,7 @@ import {
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import { ImageData } from '../../config/image_list';
+  import * as SummaryHelper from '../../actions/summaryHelper';  
 
   
   class StudySummaryScreen extends Component {
@@ -27,7 +28,18 @@ import {
       header: null,
       title: 'Summary',
     };
-
+    
+    constructor(props){
+      super(props);
+      this.totalVocab = 0;
+      this.totalGrammar = 0;
+      this.totalKanji = 0;
+    }
+    componentWillMount() {
+      this.totalVocab = SummaryHelper.countInitialData('INITIAL') + SummaryHelper.countInitialData('vocabulary');
+      this.totalGrammar = SummaryHelper.countInitialData('grammar');
+      this.totalKanji = SummaryHelper.countInitialData('kanji');
+    }
 
     gotoSelectTopic = (categoryId) => {
       //await AsyncStorage.setItem('userToken', 'abc');
@@ -104,7 +116,7 @@ import {
             <View style={summary.flexTop1}>
                 <View style={ summary.absoluteTextHome }>
                   <View style={ summary.containerScoreHome }>
-                    <Text style={ summary.persentTitle }>{ persenTotal !== 0 ? ( persenTotal * 100 ) : ( 0 ) }%</Text>
+                    <Text style={ summary.persentTitle }>{ persenTotal !== 0 ? ( Math.floor(persenTotal * 100 )) : ( 0 ) }%</Text>
                   </View>
                 </View>
                 <ProgressCircle
@@ -127,12 +139,12 @@ import {
                   <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C001')}>
                     <View style={summary.graphButton}>
                     <View style={ summary.absoluteGr }>
-                        <Text style={ summary.btnText }>200/200{strings['SUMMARY_WORD_LEARN']}</Text>
+                        <Text style={ summary.btnText }>{ this.props.countSummary.VOCABULARY ? ( this.props.countSummary.VOCABULARY ) : ( 0 ) }/{ this.totalVocab }{strings['SUMMARY_WORD_LEARN']}</Text>
                       </View>
                       <Text style={ summary.TextGr }>{strings['SUMMARY_VOCABULARY'] }</Text>
                       <ProgressCircle
                         style={ { height: 75 } }
-                        progress={ (70/100) }
+                        progress={ this.props.countSummary.VOCABULARY ? ( this.props.countSummary.VOCABULARY / this.totalVocab) : ( 0 ) }
                         progressColor={'#b3ee68'}
                       />  
                     </View>
@@ -144,12 +156,12 @@ import {
                 <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C002')}>
                   <View style={summary.graphButton}>
                       <View style={ summary.absoluteGr }>
-                        <Text style={ summary.btnText }>200/200{strings['SUMMARY_WORD_LEARN']}</Text>
+                        <Text style={ summary.btnText }>{ this.props.countSummary.GRAMMAR ? ( this.props.countSummary.GRAMMAR ) : ( 0 ) }/{ this.totalGrammar }{strings['SUMMARY_WORD_LEARN']}</Text>
                       </View>
                       <Text style={ summary.TextGr }>{strings['SUMMARY_GRAMMAR'] }</Text>
                       <ProgressCircle
                         style={ { height: 80 } }
-                        progress={ (70/100) }
+                        progress={ this.props.countSummary.GRAMMAR ? ( this.props.countSummary.GRAMMAR / this.totalGrammar ) : ( 0 )  }
                         progressColor={'#43b5e7'}
                       />  
                     </View>
@@ -161,13 +173,12 @@ import {
                 <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C003')}>
                     <View style={summary.graphButton}>
                     <View style={ summary.absoluteGr }>
-                        <Text style={ summary.btnText }>200/200{strings['SUMMARY_WORD_LEARN']}</Text>
+                        <Text style={ summary.btnText }>{ this.props.countSummary.KANJI ? ( this.props.countSummary.KANJI ) : ( 0 ) }/{ this.totalKanji }{strings['SUMMARY_WORD_LEARN']}</Text>
                       </View>
                       <Text style={ summary.TextGr }>{strings['SUMMARY_KANJI'] }</Text>
                       <ProgressCircle
                         style={ { height: 80 } }
-                        progress={ (70/100) }
-                        progressColor={'#ea7085'}
+                        progress={ this.props.countSummary.KANJI ? ( this.props.countSummary.KANJI / this.totalKanji ) : ( 0 ) }                        progressColor={'#ea7085'}
                       />  
                     </View>
                   </TouchableHighlight >                  
@@ -205,7 +216,8 @@ function mapStateToProps(state, props) {
       data: state.user.user,
       dateFrom: state.summary.dateFrom,
       dateTo: state.summary.dateTo,
-      lang: state.user.lang
+      lang: state.user.lang,
+      countSummary: state.summary.countSummary
   }
 }
 

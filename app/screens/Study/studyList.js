@@ -74,6 +74,7 @@ class StudyListScreen extends Component {
     }
   }
   render() {
+    console.log(this.props.lock['T001'].lock,'data lock');
     var image = '';
     this._onSetLanguageTo(this.props.lang);
     return (
@@ -88,13 +89,13 @@ class StudyListScreen extends Component {
               />
               <Text style={study.title}> { strings[item.title] } </Text>
             </TouchableOpacity>
-              {/* { item.lock ? (              
+              { this.props.lock[item.topic_id].lock ? (              
                 <TouchableOpacity style={study.lockButton} onPress={this.lockedMessage.bind(this, item, key)}>  
                   <Icon name='lock'  color='#fff' size={40}/>
                 </TouchableOpacity>
                 ) : (
                   <Text style={study.NotlockButton}>not lock</Text>
-              )}            */}
+              )}           
           </View>
         )
       )}
@@ -126,7 +127,8 @@ const study = require('../../styles/study');
 function mapStateToProps(state, props) {
   return {
       fukushu: state.study.fukushu,
-      lang : state.user.lang
+      lang : state.user.lang,
+      lock : state.summary.lock
   }
 }
 

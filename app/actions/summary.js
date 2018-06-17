@@ -1,6 +1,6 @@
-import { SUMMARY_HOME , SUMMARY_TEST , SUMMARY_QUIZ  }  from '../lib/constants';
+import { SUMMARY_HOME , SUMMARY_TEST , SUMMARY_QUIZ , SUMMARY_ALL, SUMMARY_LEARN , SUMMARY_LOCK }  from '../lib/constants';
 import { AsyncStorage } from 'react-native';
-
+import * as SummaryHelper from '../actions/summaryHelper';  
 
 async function saveJWT(token){ 
   try {
@@ -15,6 +15,52 @@ async function getJWT(){
     return  await AsyncStorage.getItem('@MySuperStore:jwtToken');
 }
 //================================   API FETCH ===================================
+
+export function getAllRecord(){
+    return (dispatch) => {
+        getJWT().then( JWT => {
+            fetch('https://e-learning-backend.herokuapp.com/api/v1/activities',{
+              method: 'GET',
+              headers: {
+                'Authorization' : JWT,
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+              },
+            }).then(data => data.json())
+            .then(json => {
+                SummaryHelper.setSummaryCount(json.activities.quiz, dataVal =>{
+                    dispatch(summaryCountAllDispatch(dataVal))            
+                }); 
+            })
+            .catch(err => dispatch(failedSummary(err)))
+        })
+    };    
+    
+     
+}
+
+
+export function getLockRecord(){
+    return (dispatch) => {
+        getJWT().then( JWT => {
+            fetch('https://e-learning-backend.herokuapp.com/api/v1/lock',{
+              method: 'GET',
+              headers: {
+                'Authorization' : JWT,
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+              },
+            }).then(data => data.json())
+            .then(json => {
+                dispatch(getLockDispatch(json))            
+            })
+            .catch(err => dispatch(failedSummary(err)))
+        })
+    };    
+    
+     
+}
+
 
 export function getSummaryRecord(type, topicId, categoryId, studyId){
     return (dispatch) => {
@@ -40,6 +86,28 @@ export function getSummaryRecord(type, topicId, categoryId, studyId){
     
      
 }
+
+export function getSummaryV2(topicId, categoryId, studyId){
+    return (dispatch) => {
+        getJWT().then( JWT => {
+            fetch('https://e-learning-backend.herokuapp.com/api/v1/summaries?topicId=' + topicId + '&categoryId='+ categoryId,{
+              method: 'GET',
+              headers: {
+                'Authorization' : JWT,
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+              },
+            }).then(data => data.json())
+            .then(json => {
+                SummaryHelper.setSumary(json.activities, topicId, categoryId, data => {
+                    dispatch(summaryShowLearn(data))
+                });
+            })
+            .catch(err => dispatch(failedSummary(err)))
+        })
+    };         
+}
+
 
 export function getHomeSummary(studentID){
     return (dispatch) => {
@@ -71,9 +139,37 @@ export function summaryRecordQuizDispatch(data, type){
     return {
         type: SUMMARY_QUIZ,
         data : data.data,
-    }
-    
-    
+    }  
 }
+
+export function summaryRecordV2(data){
+    // return {
+    //     type: SUMMARY_QUIZ,
+    //     data : data.data,
+    // }  
+}
+export function summaryCountAllDispatch(data){
+        return {
+            type: SUMMARY_ALL,
+            data : data,
+        }
+
+}
+
+export function summaryShowLearn(data){
+    return {
+        type: SUMMARY_LEARN,
+        data : data,
+    }
+
+}
+
+export function getLockDispatch(data){
+    return {
+        type: SUMMARY_LOCK,
+        data : data.topics,
+    }
+}
+
 export function failedSummary(err){
 }

@@ -31,6 +31,9 @@ import {
     }
     componentWillMount(){
       this.props.getHomeSummary(12);
+      this.props.getAllRecord();
+      this.props.getLockRecord();
+
     }  
     navigatePage=(route)=>{
         this.props.navigation.navigate(route);

@@ -21,11 +21,16 @@ import {
 
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
-  import * as Actions from '../../actions/study'; //Import your actions
+  import * as Actions from '../../actions/summary'; //Import your actions
   import { StudyList } from '../../config/studyList';
   import * as Helper from '../../actions/helper';  
   import Header   from '../../component/header';
   class ScoreScreen extends Component {
+    static navigationOptions = {
+      header: null,
+      title: 'Summary',
+    };
+    
     constructor(props) {
       super(props);
       
@@ -65,6 +70,10 @@ import {
     }else{
       this.retry();
     }
+  }
+  componentWillUnmount(){
+    this.props.getAllRecord();
+    this.props.getLockRecord();
   }
   
   retry = () =>  {
@@ -147,7 +156,7 @@ import {
     return (
         <View style={scoreStyle.scoreContainer}>
           <View style={ scoreStyle.containerTitle }>
-            <Text style={ scoreStyle.textTitle }> { this.props.scoreTotal > 50 ? ( 'You Pass' ) : ('You Failed') }</Text>
+            <Text style={ scoreStyle.textTitle }> { this.props.scoreTotal > 80 ? ( 'You Pass' ) : ('You Failed') }</Text>
           </View>
           <View style={ scoreStyle.containerGraph }>
             <View style={ scoreStyle.absoluteText }>
@@ -178,7 +187,7 @@ import {
                 ) :<Text>No study data</Text> }
             </ScrollView >
           </View>
-          { this.props.scoreTotal > 50 ? ( 
+          { this.props.scoreTotal > 80 ? ( 
           <View style={ scoreStyle.containerMistake }>
             <View style={ scoreStyle.RecordRowButton }>
               <View style={ scoreStyle.RecordRowButtonContainer }>

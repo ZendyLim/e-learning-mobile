@@ -21,5 +21,8 @@ export const LOCALIZATION = "LOCALIZATION";
 export const SUMMARY_HOME = 'SUMMARY_HOME'; //import the action for start time
 export const SUMMARY_TEST = 'SUMMARY_TEST'; //import the action for Summary Test
 export const SUMMARY_QUIZ = 'SUMMARY_QUIZ'; //import the action for Summary Quix
+export const SUMMARY_ALL = 'SUMMARY_ALL'; //import the action for Summary Quix
+export const SUMMARY_LEARN = 'SUMMARY_LEARN'; //import the action for Summary Quix
+export const SUMMARY_LOCK = 'SUMMARY_LOCK'; //import the action for Summary Quix
 
 

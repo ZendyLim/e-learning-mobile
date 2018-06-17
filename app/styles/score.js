@@ -49,7 +49,7 @@ module.exports = StyleSheet.create({
     },
     containerMistake : {
         padding : 15,
-        height : 240,
+        height : 200,
     },
     containerMainMistake : {
         padding : 15,

@@ -58,14 +58,16 @@ export function updateUser(userValue){
 
 export function login(userValue,callback){
   return (dispatch) => {
+      console.log(userValue,'Running');
       fetch('https://e-learning-backend.herokuapp.com/api/v1/login',{
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(userValue)
         }).then(data  => {
+          console.log(data,'Jalan');
+
           if(data.headers.map.authorization){
             saveJWT(data.headers.map.authorization[0])
           }
