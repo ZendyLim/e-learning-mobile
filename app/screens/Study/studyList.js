@@ -36,7 +36,7 @@ class StudyListScreen extends Component {
     this.setState({modalVisible: visible});
   }
   lockedMessage=(item, index)=>{
-    alert('locked ' + strings[item.title]);     
+    alert(strings[item.topic_id + '_MSG'] );     
   }
   
   navigateToLearn=(item, index)=>{
@@ -74,7 +74,6 @@ class StudyListScreen extends Component {
     }
   }
   render() {
-    console.log(this.props.lock['T001'].lock,'data lock');
     var image = '';
     this._onSetLanguageTo(this.props.lang);
     return (

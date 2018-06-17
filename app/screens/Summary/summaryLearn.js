@@ -57,14 +57,12 @@ class SummaryLearnDetail extends Component {
                     <Text style={[study.summaryTitle, study.fontBold]}>TITLE</Text>
                     <Text style={[study.summaryDetail, study.fontBold]}>CORRECT</Text>
                     <Text style={[study.summaryDetail, study.fontBold]}>MISTAKE</Text>
-                    <Text style={[study.summaryDetail, study.fontBold]}>TOTAL</Text>
                 </View>
             { this.props.showLearn.map((item, key)=>(
                 <View key={key} style={study.summaryLearn} >
                     <Text style={study.summaryTitle}>{ item.title }</Text>
                     <Text style={study.summaryDetail}>{ item.correct }</Text>
                     <Text style={study.summaryDetail}>{ item.total - item.correct }</Text>
-                    <Text style={study.summaryDetail}>{ item.total }</Text>
                 </View>
             ))}
         </ScrollView>
