@@ -13,12 +13,19 @@ import {
   } from 'react-native';
 import { hiraganaList } from '../../config/data';
 import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox'; 
+import  { strings }   from '../../config/localization';
 
   class QuizHiraganaListScreen extends Component {
   
-    static navigationOptions = {
-      title: 'Hiragana',
-    };
+
+    static navigationOptions = ({ navigation }) =>{
+        //header: null,
+        const {state} = navigation;
+        return {
+            title: `${strings['HIRAGANA_LIST_TITLE']}`,
+        };
+      };
+
     state = {
         checkAllText: "Check All",
         statusCheckAll: false,
@@ -36,6 +43,7 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
     }
 
     componentDidMount(){
+        const { navigation } = this.props;
         this.setStatusfalse();
     }
     render() {
@@ -47,12 +55,12 @@ import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox';
                     <TouchableOpacity style={quizStyles.menuButton}  
                         onPress={()=> { this.checkAll() }}
                     >
-                        <Text style={quizStyles.buttonText}>{this.state.checkAllText}</Text>
+                        <Text style={quizStyles.buttonText}>{ strings['CHECK_ALL']}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={quizStyles.menuButton}
                         onPress={this.proceed}
                     >
-                        <Text style={quizStyles.buttonText}>Proceed ></Text>
+                        <Text style={quizStyles.buttonText}>{ strings['PROCEED']}</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.row}>

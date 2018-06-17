@@ -11,9 +11,12 @@ import { QuizListData } from '../../config/studyList';
 
 class QuizMainScreen extends Component {
 
-  static navigationOptions = {
-    // header: null,
-    title: 'QuizList',
+  static navigationOptions = ({ navigation }) =>{
+    //header: null,
+    const {state} = navigation;
+    return {
+        title: `${strings['QUIZLIST']}`,
+    };
   };
   
   constructor(props){
@@ -26,6 +29,7 @@ class QuizMainScreen extends Component {
     return (
         <ScrollView style={study.StudyContainer}>
             {this.list.map((item, key)=>(
+                
                 <TouchableOpacity key={key} style={study.btnLearn}  onPress={this.quiz.bind(this, item.type)}>
                     <Text> {strings[item.title]} </Text>
                 </TouchableOpacity>
