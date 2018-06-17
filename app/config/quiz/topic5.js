@@ -155,9 +155,9 @@ export const vocabulary = [
         "id":"tp5_v_20",
         "type":"vocabulary",
         "moji":"くつした",
-        "romaji":"kutsu shita",
+        "romaji":"kutsushita",
         "english":"Socks",
-        "audio":"t5_kutsu shita.mp3"
+        "audio":"t5_kutsushita.mp3"
     },
     {
         "id":"tp5_v_21",
@@ -355,9 +355,9 @@ export const vocabulary = [
         "id":"tp5_v_45",
         "type":"vocabulary",
         "moji":"とりにく",
-        "romaji":"tori niku",
+        "romaji":"toriniku",
         "english":"chicken meat",
-        "audio":"t5_tori niku.mp3"
+        "audio":"t5_toriniku.mp3"
     },
     {
         "id":"tp5_v_46",
