@@ -692,6 +692,357 @@ export const kanji = [
 ]
 
 export const grammar = [
+    {
+        "id":"tp5_g_1",
+        "type":"grammar",
+        "romaji":"watashi wa ryokō ga suki desu.",
+        "moji":"わたしは旅行が好きです。",
+        "kanji":"わたしは旅行が好きです。",
+        "english":"I like travle.",
+        "audio":"tp5_g_1.mp3"
+    },
+    {
+        "id":"tp5_g_2",
+        "type":"grammar",
+        "romaji":"watashi wa sakana ga suki ja arimasen.",
+        "moji":"わたしは魚が好きじゃありません。",
+        "kanji":"わたしは魚が好きじゃありません。",
+        "english":"　I don't like fish.",
+        "audio":"tp5_g_2.mp3"
+    },
+    {
+        "id":"tp5_g_3",
+        "type":"grammar",
+        "romaji":"watashi wa eiga ga suki desu.",
+        "moji":"わたしは映画が好きです。",
+        "kanji":"わたしは映画が好きです。",
+        "english":"I like movie.",
+        "audio":"tp5_g_3.mp3"
+    },
+    {
+        "id":"tp5_g_4",
+        "type":"grammar",
+        "romaji":"watashi wa Nippon ryōri ga suki desu.",
+        "moji":"わたしは日本料理が好きです。",
+        "kanji":"わたしは日本料理が好きです。",
+        "english":"　I like Japanese food.",
+        "audio":"tp5_g_4.mp3"
+    },
+    {
+        "id":"tp5_g_5",
+        "type":"grammar",
+        "romaji":"watashi wa o sake ga suki ja arimasen.",
+        "moji":"わたしはお酒が好きじゃありません。",
+        "kanji":"わたしはお酒が好きじゃありません。",
+        "english":"I don't like alcohol.",
+        "audio":"tp5_g_5.mp3"
+    },
+    {
+        "id":"tp5_g_6",
+        "type":"grammar",
+        "romaji":"watashi wa jiten-sha ga hoshī desu.",
+        "moji":"わたしは自転車がほしいです。",
+        "kanji":"わたしは自転車がほしいです。",
+        "english":"I want a bicycle.",
+        "audio":"tp5_g_6.mp3"
+    },
+    {
+        "id":"tp5_g_7",
+        "type":"grammar",
+        "romaji":"watashi wa kamera ga hoshī desu.",
+        "moji":"わたしはカメラがほしいです。",
+        "kanji":"わたしはカメラがほしいです。",
+        "english":"I want camera.",
+        "audio":"tp5_g_7.mp3"
+    },
+    {
+        "id":"tp5_g_8",
+        "type":"grammar",
+        "romaji":"watashi wa yasumi ga hoshī desu.",
+        "moji":"わたしは休みがほしいです。",
+        "kanji":"わたしは休みがほしいです。",
+        "english":"I want holiday.",
+        "audio":"tp5_g_8.mp3"
+    },
+    {
+        "id":"tp5_g_9",
+        "type":"grammar",
+        "romaji":"watashi wa Nippon no tokei ga hoshī desu.",
+        "moji":"わたしは日本の時計がほしいです。",
+        "kanji":"わたしは日本の時計がほしいです。",
+        "english":"I want Japanese watch.",
+        "audio":"tp5_g_9.mp3"
+    },
+    {
+        "id":"tp5_g_10",
+        "type":"grammar",
+        "romaji":"watashi wa yasumi ga hoshiku nai desu.",
+        "moji":"わたしは休みがほしくないです。",
+        "kanji":"わたしは休みがほしくないです。",
+        "english":"I don't want holiday.",
+        "audio":"tp5_g_10.mp3"
+    },
+    {
+        "id":"tp5_g_11",
+        "type":"grammar",
+        "romaji":"yukkuri hanashite kudasai.",
+        "moji":"ゆっくり話してください。",
+        "kanji":"ゆっくり話してください。",
+        "english":"Please speak slowly.",
+        "audio":"tp5_g_11.mp3"
+    },
+    {
+        "id":"tp5_g_12",
+        "type":"grammar",
+        "romaji":"Nippon go de hanashite kudasai.",
+        "moji":"日本語で話してください。",
+        "kanji":"日本語で話してください。",
+        "english":"Please speak in Japanese.",
+        "audio":"tp5_g_12.mp3"
+    },
+    {
+        "id":"tp5_g_13",
+        "type":"grammar",
+        "romaji":"o sara o arattete kudasai.",
+        "moji":"お皿を洗っててください。",
+        "kanji":"お皿を洗っててください。",
+        "english":"Please wash the dishes.",
+        "audio":"tp5_g_13.mp3"
+    },
+    {
+        "id":"tp5_g_14",
+        "type":"grammar",
+        "romaji":"sono akai kaban o totte kudasai.",
+        "moji":"その赤いかばんをとってください。",
+        "kanji":"その赤いかばんをとってください。",
+        "english":"Please get that child.",
+        "audio":"tp5_g_14.mp3"
+    },
+    {
+        "id":"tp5_g_15",
+        "type":"grammar",
+        "romaji":"kirei ja arimasen kara, sōji shite kudasai.",
+        "moji":"きれいじゃありませんから、掃除してください。",
+        "kanji":"きれいじゃありませんから、掃除してください。",
+        "english":"It's not clean, so please clean it.",
+        "audio":"tp5_g_15.mp3"
+    },
+    {
+        "id":"tp5_g_16",
+        "type":"grammar",
+        "romaji":"shio o totte kudasai.",
+        "moji":"塩をとってください。",
+        "kanji":"塩をとってください。",
+        "english":"Please get the salt.",
+        "audio":"tp5_g_16.mp3"
+    },
+    {
+        "id":"tp5_g_17",
+        "type":"grammar",
+        "romaji":"namae o oshiete kudasai.",
+        "moji":"名前を教えてください。",
+        "kanji":"名前を教えてください。",
+        "english":"Please tell me your name.",
+        "audio":"tp5_g_17.mp3"
+    },
+    {
+        "id":"tp5_g_18",
+        "type":"grammar",
+        "romaji":"kono kami ni namae o kaite kudasai.",
+        "moji":"この紙に名前を書いてください。",
+        "kanji":"この紙に名前を書いてください。",
+        "english":"Please write your name on this paper.",
+        "audio":"tp5_g_18.mp3"
+    },
+    {
+        "id":"tp5_g_19",
+        "type":"grammar",
+        "romaji":"doa o shimete kudasai.",
+        "moji":"ドアをしめてください。",
+        "kanji":"ドアをしめてください。",
+        "english":"Please close the door.",
+        "audio":"tp5_g_19.mp3"
+    },
+    {
+        "id":"tp5_g_20",
+        "type":"grammar",
+        "romaji":"sono kutsu o misete kudasai.",
+        "moji":"そのくつを見せてください。",
+        "kanji":"そのくつを見せてください。",
+        "english":"Please show me those shoes.",
+        "audio":"tp5_g_20.mp3"
+    },
+    {
+        "id":"tp5_g_21",
+        "type":"grammar",
+        "romaji":"Māku-san wa tosho-kan de Nippon go o benkyō shite imasu.",
+        "moji":"マークさんは図書館で日本語を勉強しています。",
+        "kanji":"マークさんは図書館で日本語を勉強しています。",
+        "english":"Mr. Mark is studying Japanese at the library.",
+        "audio":"tp5_g_21.mp3"
+    },
+    {
+        "id":"tp5_g_22",
+        "type":"grammar",
+        "romaji":"kissa-ten de hon o yonde imasu.",
+        "moji":"喫茶店で本を読んでいます。",
+        "kanji":"喫茶店で本を読んでいます。",
+        "english":"(I/He/She) Reading a book at the coffee shop.",
+        "audio":"tp5_g_22.mp3"
+    },
+    {
+        "id":"tp5_g_23",
+        "type":"grammar",
+        "romaji":"ima, ame ga futte imasu ka. iie, futteimasen",
+        "moji":"今、雨が降っていますか。いいえ、降っていません。",
+        "kanji":"今、雨が降っていますか。いいえ、降っていません。",
+        "english":"Is it raining right now? -> No, it's not raining.",
+        "audio":"tp5_g_23.mp3"
+    },
+    {
+        "id":"tp5_g_24",
+        "type":"grammar",
+        "romaji":"Rin-san wa asoko de piano o hīte imasu.",
+        "moji":"リンさんはあそこでピアノをひいています。",
+        "kanji":"リンさんはあそこでピアノをひいています。",
+        "english":"Mr./Ms. Rin is playing the piano over there.",
+        "audio":"tp5_g_24.mp3"
+    },
+    {
+        "id":"tp5_g_25",
+        "type":"grammar",
+        "romaji":"ima nan o shite imasu ka.",
+        "moji":"今何をしていますか。音楽を聞いています。",
+        "kanji":"今何をしていますか。音楽を聞いています。",
+        "english":"What are you doing right now? -> Listening to music.",
+        "audio":"tp5_g_25.mp3"
+    },
+    {
+        "id":"tp5_g_26",
+        "type":"grammar",
+        "romaji":"tomodachi to gohan o tabete, eiga o mimasu.",
+        "moji":"友達とごはんを食べて、映画を見ます。",
+        "kanji":"友達とごはんを食べて、映画を見ます。",
+        "english":"Eat food with a friend and then watch a movie.",
+        "audio":"tp5_g_26.mp3"
+    },
+    {
+        "id":"tp5_g_27",
+        "type":"grammar",
+        "romaji":"yoru, terebi o mite, Nippon go o benkyō shimasu.",
+        "moji":"夜、テレビを見て、日本語を勉強します。",
+        "kanji":"夜、テレビを見て、日本語を勉強します。",
+        "english":"At night, I'll watch TV and study Japanese.",
+        "audio":"tp5_g_27.mp3"
+    },
+    {
+        "id":"tp5_g_28",
+        "type":"grammar",
+        "romaji":"kinō, eiga o mite, kaimono shimashita.",
+        "moji":"きのう、映画を見て、買い物しました。",
+        "kanji":"きのう、映画を見て、買い物しました。",
+        "english":"Yesterday, I watched a movie and went shopping.",
+        "audio":"tp5_g_28.mp3"
+    },
+    {
+        "id":"tp5_g_29",
+        "type":"grammar",
+        "romaji":"kinō, okite, gohan o tabete, tosho-kan e ikimashita.",
+        "moji":"きのう、起きて、ご飯を食べて、図書館へ行きました。",
+        "kanji":"きのう、起きて、ご飯を食べて、図書館へ行きました。",
+        "english":"Yesterday, I woke up, ate my food, and went to the library.",
+        "audio":"tp5_g_29.mp3"
+    },
+    {
+        "id":"tp5_g_30",
+        "type":"grammar",
+        "romaji":"kinō, tomodachi ni atte, kōen o sanpo shimashita.",
+        "moji":"きのう、友達に会って、公園を散歩しました。",
+        "kanji":"きのう、友達に会って、公園を散歩しました。",
+        "english":"Yesterday, I met with a friend and walked at the park.",
+        "audio":"tp5_g_30.mp3"
+    },
+    {
+        "id":"tp5_g_31",
+        "type":"grammar",
+        "romaji":"ie e kaettete kara, benkyō shimasu.",
+        "moji":"家へ帰っててから、勉強します。",
+        "kanji":"家へ帰っててから、勉強します。",
+        "english":"I'll study once I get home.",
+        "audio":"tp5_g_31.mp3"
+    },
+    {
+        "id":"tp5_g_32",
+        "type":"grammar",
+        "romaji":"densha o orite kara, tomodachi ni denwa o kakemasu.",
+        "moji":"電車を降りてから、友達に電話をかけます。",
+        "kanji":"電車を降りてから、友達に電話をかけます。",
+        "english":"Once I get on the train, I'll call my friends.",
+        "audio":"tp5_g_32.mp3"
+    },
+    {
+        "id":"tp5_g_33",
+        "type":"grammar",
+        "romaji":"o sara o aratte kara, terebi o mimasu.",
+        "moji":"お皿を洗ってから、テレビを見ます。",
+        "kanji":"お皿を洗ってから、テレビを見ます。",
+        "english":"After I wash the dishes, I'll watch TV.",
+        "audio":"tp5_g_33.mp3"
+    },
+    {
+        "id":"tp5_g_34",
+        "type":"grammar",
+        "romaji":"sūpā de yasai o katte kara, ryōri o tsukurimasu.",
+        "moji":"スーパーで野菜を買ってから、料理を作ります。",
+        "kanji":"スーパーで野菜を買ってから、料理を作ります。",
+        "english":"After I buy vegetables at the supermarket, I'll cook.",
+        "audio":"tp5_g_34.mp3"
+    },
+    {
+        "id":"tp5_g_35",
+        "type":"grammar",
+        "romaji":"kinō, hirugohan o tabete kara, tosho-kan e ikimashita.",
+        "moji":"きのう、昼ごはんを食べてから、図書館へ行きました。",
+        "kanji":"きのう、昼ごはんを食べてから、図書館へ行きました。",
+        "english":"Yesterday, after eating lunch, I went to the library.",
+        "audio":"tp5_g_35.mp3"
+    },
+    {
+        "id":"tp5_g_36",
+        "type":"grammar",
+        "romaji":"koko de tabako o sutte mo ī desu ka.",
+        "moji":"ここでたばこを吸ってもいいですか。",
+        "kanji":"ここでたばこを吸ってもいいですか。",
+        "english":"Can I smoke cigarettes here?",
+        "audio":"tp5_g_36.mp3"
+    },
+    {
+        "id":"tp5_g_37",
+        "type":"grammar",
+        "romaji":"koko ni gomi o sutete mo ī desu ka.",
+        "moji":"ここにごみを捨ててもいいですか。",
+        "kanji":"ここにごみを捨ててもいいですか。",
+        "english":"Can I throw trash here?",
+        "audio":"tp5_g_37.mp3"
+    },
+    {
+        "id":"tp5_g_38",
+        "type":"grammar",
+        "romaji":"samui desu kara, mado o shimete mo ī desu ka.",
+        "moji":"寒いですから、窓を閉めてもいいですか。",
+        "kanji":"寒いですから、窓を閉めてもいいですか。",
+        "english":"Because it's cold, can I close the window?",
+        "audio":"tp5_g_38.mp3"
+    },
+    {
+        "id":"tp5_g_39",
+        "type":"grammar",
+        "romaji":"onaka ga itai desu kara, toire e itte mo ī desu ka.",
+        "moji":"おなかが痛いですから、トイレへ行ってもいいですか。",
+        "kanji":"おなかが痛いですから、トイレへ行ってもいいですか。",
+        "english":"Because my stomach aches, can I go the toilet?",
+        "audio":"tp5_g_39.mp3"
+    },
 ]
 
 export const listening = [

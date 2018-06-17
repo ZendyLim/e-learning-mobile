@@ -716,6 +716,240 @@ export const kanji = [
 ]
 
 export const grammar = [
+    {
+        "id":"tp6_g_1",
+        "type":"grammar",
+        "romaji":"maishū doyō hi, tenisu o shite imasu.",
+        "moji":"毎週土曜日、テニスをしています。",
+        "kanji":"毎週土曜日、テニスをしています。",
+        "english":"I play tennis every Saturday.　　",
+        "audio":"tp6_g_1.mp3"
+    },
+    {
+        "id":"tp6_g_2",
+        "type":"grammar",
+        "romaji":"maiasa, kōhī o nonde imasu.",
+        "moji":"毎朝、コーヒーを飲んでいます。",
+        "kanji":"毎朝、コーヒーを飲んでいます。",
+        "english":"Every morning, I drink coffee.　",
+        "audio":"tp6_g_2.mp3"
+    },
+    {
+        "id":"tp6_g_3",
+        "type":"grammar",
+        "romaji":"maiban, sanpo shite imasu.",
+        "moji":"毎晩、散歩しています。",
+        "kanji":"毎晩、散歩しています。",
+        "english":"I take a walk every evening.",
+        "audio":"tp6_g_3.mp3"
+    },
+    {
+        "id":"tp6_g_4",
+        "type":"grammar",
+        "romaji":"mise no mae ni hito ga narande imasu.",
+        "moji":"店の前に人が並んでいます。",
+        "kanji":"店の前に人が並んでいます。",
+        "english":"People are lining up in front of the shop.",
+        "audio":"tp6_g_4.mp3"
+    },
+    {
+        "id":"tp6_g_5",
+        "type":"grammar",
+        "romaji":"koppu ga warete imasu.",
+        "moji":"コップがわれています。",
+        "kanji":"コップがわれています。",
+        "english":"The cup got broken.",
+        "audio":"tp6_g_5.mp3"
+    },
+    {
+        "id":"tp6_g_6",
+        "type":"grammar",
+        "romaji":"watakushi no chichi wa ashi ga nagai desu.",
+        "moji":"私の父は足が長いです。",
+        "kanji":"私の父は足が長いです。",
+        "english":"My father's legs are long.",
+        "audio":"tp6_g_6.mp3"
+    },
+    {
+        "id":"tp6_g_7",
+        "type":"grammar",
+        "romaji":"fuyu wa yuki ga kirei desu.",
+        "moji":"冬は雪がきれいです。",
+        "kanji":"冬は雪がきれいです。",
+        "english":"In winter, snow is beautiful.",
+        "audio":"tp6_g_7.mp3"
+    },
+    {
+        "id":"tp6_g_8",
+        "type":"grammar",
+        "romaji":"watakushi wa eigo ga amari jōzu ja arimasen.",
+        "moji":"私は英語があまり上手じゃありません。",
+        "kanji":"私は英語があまり上手じゃありません。",
+        "english":"My English is not good.",
+        "audio":"tp6_g_8.mp3"
+    },
+    {
+        "id":"tp6_g_9",
+        "type":"grammar",
+        "romaji":"kono inu wa karada ga shiroi desu.",
+        "moji":"この犬は体が白いです。",
+        "kanji":"この犬は体が白いです。",
+        "english":"This dog's body (color) is white.",
+        "audio":"tp6_g_9.mp3"
+    },
+    {
+        "id":"tp6_g_10",
+        "type":"grammar",
+        "romaji":"watakushi no otōto wa kao ga chīsai desu.",
+        "moji":"私の弟は顔が小さいです。",
+        "kanji":"私の弟は顔が小さいです。",
+        "english":"My little brother's head is small.",
+        "audio":"tp6_g_10.mp3"
+    },
+    {
+        "id":"tp6_g_11",
+        "type":"grammar",
+        "romaji":"watakushi no imōto wa atama ga yoku te, e ga jōzu desu.",
+        "moji":"私の妹は頭がよくて、絵が上手です。",
+        "kanji":"私の妹は頭がよくて、絵が上手です。",
+        "english":"My younger sister is intelligent and good at drawing.",
+        "audio":"tp6_g_11.mp3"
+    },
+    {
+        "id":"tp6_g_12",
+        "type":"grammar",
+        "romaji":"kono inu wa karada ga shiroku te, me ga ōkī desu.",
+        "moji":"この犬は体が白くて、目が大きいです。",
+        "kanji":"この犬は体が白くて、目が大きいです。",
+        "english":"This dog's body (color) is white and its eyes are big.",
+        "audio":"tp6_g_12.mp3"
+    },
+    {
+        "id":"tp6_g_13",
+        "type":"grammar",
+        "romaji":"watakushi no chichi wa50-sai de, kaisha-in desu.",
+        "moji":"私の父は50歳で、会社員です。",
+        "kanji":"私の父は50歳で、会社員です。",
+        "english":"My father is 50 years old and an office worker.",
+        "audio":"tp6_g_13.mp3"
+    },
+    {
+        "id":"tp6_g_14",
+        "type":"grammar",
+        "romaji":"Jon-san wa Nippon go ga jōzu de, atama ga ī desu.",
+        "moji":"ジョンさんは日本語が上手で、頭がいいです。",
+        "kanji":"ジョンさんは日本語が上手で、頭がいいです。",
+        "english":"Mr. John is good in Japanese and intelligent.",
+        "audio":"tp6_g_14.mp3"
+    },
+    {
+        "id":"tp6_g_15",
+        "type":"grammar",
+        "romaji":"Amerika wa ōkiku te, hito ga ōi desu.",
+        "moji":"アメリカは大きくて、人が多いです。",
+        "kanji":"アメリカは大きくて、人が多いです。",
+        "english":"America is big and has a lot of people.",
+        "audio":"tp6_g_15.mp3"
+    },
+    {
+        "id":"tp6_g_16",
+        "type":"grammar",
+        "romaji":"ototoi wa ame de, samukatta desu.",
+        "moji":"おとといは雨で、寒かったです。",
+        "kanji":"おとといは雨で、寒かったです。",
+        "english":"The day before yesterday, it was raining  and it was cold.",
+        "audio":"tp6_g_16.mp3"
+    },
+    {
+        "id":"tp6_g_17",
+        "type":"grammar",
+        "romaji":"kuraku narimashita.",
+        "moji":"暗くなりました。",
+        "kanji":"暗くなりました。",
+        "english":"It got dark.",
+        "audio":"tp6_g_17.mp3"
+    },
+    {
+        "id":"tp6_g_18",
+        "type":"grammar",
+        "romaji":"onaka ga itaku narimashita.",
+        "moji":"おなかが痛くなりました。",
+        "kanji":"おなかが痛くなりました。",
+        "english":"My stomach hurts.",
+        "audio":"tp6_g_18.mp3"
+    },
+    {
+        "id":"tp6_g_19",
+        "type":"grammar",
+        "romaji":"nigiyaka ni narimashita.",
+        "moji":"にぎやかになりました。",
+        "kanji":"にぎやかになりました。",
+        "english":"It became lively.",
+        "audio":"tp6_g_19.mp3"
+    },
+    {
+        "id":"tp6_g_20",
+        "type":"grammar",
+        "romaji":"genki ni narimashita.",
+        "moji":"元気になりました。",
+        "kanji":"元気になりました。",
+        "english":"I/He/She became energetic. (recovered)",
+        "audio":"tp6_g_20.mp3"
+    },
+    {
+        "id":"tp6_g_21",
+        "type":"grammar",
+        "romaji":"otona ni narimashita.",
+        "moji":"大人になりました。",
+        "kanji":"大人になりました。",
+        "english":"I/He/She bacame an adult.",
+        "audio":"tp6_g_21.mp3"
+    },
+    {
+        "id":"tp6_g_22",
+        "type":"grammar",
+        "romaji":"watashi no shumi wa supōtsu o suru koto desu.",
+        "moji":"わたしのしゅみはスポーツをすることです。",
+        "kanji":"わたしのしゅみはスポーツをすることです。",
+        "english":"My hobby is to do sports. ",
+        "audio":"tp6_g_22.mp3"
+    },
+    {
+        "id":"tp6_g_23",
+        "type":"grammar",
+        "romaji":"watashi no shumi wa sakkā o suru koto desu.",
+        "moji":"わたしのしゅみはサッカーをすることです。",
+        "kanji":"わたしのしゅみはサッカーをすることです。",
+        "english":"My hobby is playing soccer.",
+        "audio":"tp6_g_23.mp3"
+    },
+    {
+        "id":"tp6_g_24",
+        "type":"grammar",
+        "romaji":"ani no shumi wa shashin o toru koto desu.",
+        "moji":"兄のしゅみは写真をとることです。",
+        "kanji":"兄のしゅみは写真をとることです。",
+        "english":"My older brother's hobby is taking pictures.",
+        "audio":"tp6_g_24.mp3"
+    },
+    {
+        "id":"tp6_g_25",
+        "type":"grammar",
+        "romaji":"ane no shumi wa eiga o miru koto to kaimono suru koto desu.",
+        "moji":"姉のしゅみは映画を見ることと買い物することです。",
+        "kanji":"姉のしゅみは映画を見ることと買い物することです。",
+        "english":"My older sister's hobby is watching movies and shopping.",
+        "audio":"tp6_g_25.mp3"
+    },
+    {
+        "id":"tp6_g_26",
+        "type":"grammar",
+        "romaji":"watashi no shumi wa terebi o miru koto to sanpo o suru koto desu.",
+        "moji":"わたしのしゅみはテレビを見ることと散歩をすることです。",
+        "kanji":"わたしのしゅみはテレビを見ることと散歩をすることです。",
+        "english":"My hobby is watching TV and taking walks.",
+        "audio":"tp6_g_26.mp3"
+    },
 ]
 
 export const listening = [

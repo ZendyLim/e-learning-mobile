@@ -452,6 +452,276 @@ export const kanji = [
 ]
 
 export const grammar = [
+    {
+        "id":"tp8_g_1",
+        "type":"grammar",
+        "romaji":"koko de tabako o sutte wa ikemasen.",
+        "moji":"ここでたばこを吸ってはいけません。",
+        "kanji":"ここでたばこを吸ってはいけません。",
+        "english":"You must not smoke here.",
+        "audio":"tp8_g_1.mp3"
+    },
+    {
+        "id":"tp8_g_2",
+        "type":"grammar",
+        "romaji":"koko de asonde wa ikemasen.",
+        "moji":"ここで遊んではいけません。",
+        "kanji":"ここで遊んではいけません。",
+        "english":"You must not play here.",
+        "audio":"tp8_g_2.mp3"
+    },
+    {
+        "id":"tp8_g_3",
+        "type":"grammar",
+        "romaji":"koko ni haitte wa ikemasen.",
+        "moji":"ここに入ってはいけません。",
+        "kanji":"ここに入ってはいけません。",
+        "english":"You must not enter here.",
+        "audio":"tp8_g_3.mp3"
+    },
+    {
+        "id":"tp8_g_4",
+        "type":"grammar",
+        "romaji":"koko de oyoide wa ikemasen.",
+        "moji":"ここで泳いではいけません。",
+        "kanji":"ここで泳いではいけません。",
+        "english":"You must not swim here.",
+        "audio":"tp8_g_4.mp3"
+    },
+    {
+        "id":"tp8_g_5",
+        "type":"grammar",
+        "romaji":"koko ni suwatte wa ikemasen.",
+        "moji":"ここに座ってはいけません。",
+        "kanji":"ここに座ってはいけません。",
+        "english":"You must not sit down here.",
+        "audio":"tp8_g_5.mp3"
+    },
+    {
+        "id":"tp8_g_6",
+        "type":"grammar",
+        "romaji":"o sake o nomanaide kudasai.",
+        "moji":"お酒を飲まないでください。",
+        "kanji":"お酒を飲まないでください。",
+        "english":"Please don't drink alcohol.",
+        "audio":"tp8_g_6.mp3"
+    },
+    {
+        "id":"tp8_g_7",
+        "type":"grammar",
+        "romaji":"o furo ni hairanaide kudasai.",
+        "moji":"お風呂に入らないでください。",
+        "kanji":"お風呂に入らないでください。",
+        "english":"Please don't get into the bathtub.",
+        "audio":"tp8_g_7.mp3"
+    },
+    {
+        "id":"tp8_g_8",
+        "type":"grammar",
+        "romaji":"tsurai tabemono o tabenaide kudasai.",
+        "moji":"辛い食べ物を食べないでください。",
+        "kanji":"辛い食べ物を食べないでください。",
+        "english":"Please don't eat spicy food.",
+        "audio":"tp8_g_8.mp3"
+    },
+    {
+        "id":"tp8_g_9",
+        "type":"grammar",
+        "romaji":"shawā o abinaide kudasai.",
+        "moji":"シャワーを浴びないでください。",
+        "kanji":"シャワーを浴びないでください。",
+        "english":"Please don't take a shower.",
+        "audio":"tp8_g_9.mp3"
+    },
+    {
+        "id":"tp8_g_10",
+        "type":"grammar",
+        "romaji":"koko de pasokon o tsukawanaide kudasai.",
+        "moji":"ここでパソコンを使わないでください。",
+        "kanji":"ここでパソコンを使わないでください。",
+        "english":"Please don't use the computer.",
+        "audio":"tp8_g_10.mp3"
+    },
+    {
+        "id":"tp8_g_11",
+        "type":"grammar",
+        "romaji":"7 ji ni okinakere ba narimasen.",
+        "moji":"7時に起きなければなりません。",
+        "kanji":"7時に起きなければなりません。",
+        "english":"I must wake up at seven.",
+        "audio":"tp8_g_11.mp3"
+    },
+    {
+        "id":"tp8_g_12",
+        "type":"grammar",
+        "romaji":"heya o sōji shinakere ba narimasen.",
+        "moji":"部屋を掃除しなければなりません。",
+        "kanji":"部屋を掃除しなければなりません。",
+        "english":"I must clean my room.",
+        "audio":"tp8_g_12.mp3"
+    },
+    {
+        "id":"tp8_g_13",
+        "type":"grammar",
+        "romaji":"shukudai o shinakere ba narimasen.",
+        "moji":"宿題をしなければなりません。",
+        "kanji":"宿題をしなければなりません。",
+        "english":"I must do my homework.",
+        "audio":"tp8_g_13.mp3"
+    },
+    {
+        "id":"tp8_g_14",
+        "type":"grammar",
+        "romaji":"te o arawanakere ba narimasen.",
+        "moji":"手を洗わなければなりません。",
+        "kanji":"手を洗わなければなりません。",
+        "english":"I must wash my hands.",
+        "audio":"tp8_g_14.mp3"
+    },
+    {
+        "id":"tp8_g_15",
+        "type":"grammar",
+        "romaji":"pasupōto o misenakere ba narimasen.",
+        "moji":"パスポートを見せなければなりません。",
+        "kanji":"パスポートを見せなければなりません。",
+        "english":"I must show my passport.",
+        "audio":"tp8_g_15.mp3"
+    },
+    {
+        "id":"tp8_g_16",
+        "type":"grammar",
+        "romaji":"byōki no toki, kaisha o yasumimasu.",
+        "moji":"病気のとき、会社を休みます。",
+        "kanji":"病気のとき、会社を休みます。",
+        "english":"When I'm sick, I take a day off from work.",
+        "audio":"tp8_g_16.mp3"
+    },
+    {
+        "id":"tp8_g_17",
+        "type":"grammar",
+        "romaji":"ryōri o tsukuru toki, hon o mimasu.",
+        "moji":"料理を作るとき、本を見ます。",
+        "kanji":"料理を作るとき、本を見ます。",
+        "english":"When I cook, I look at a book.",
+        "audio":"tp8_g_17.mp3"
+    },
+    {
+        "id":"tp8_g_18",
+        "type":"grammar",
+        "romaji":"Nippon e kuru toki, haha ni kaban o moraimashita.",
+        "moji":"日本へ来るとき、母にかばんをもらいました。",
+        "kanji":"日本へ来るとき、母にかばんをもらいました。",
+        "english":"When I came to Japan, I received a bag from my mother.",
+        "audio":"tp8_g_18.mp3"
+    },
+    {
+        "id":"tp8_g_19",
+        "type":"grammar",
+        "romaji":"Nippon go ga wakaranai toki, tomodachi ni kikimasu.",
+        "moji":"日本語がわからないとき、友達に聞きます。",
+        "kanji":"日本語がわからないとき、友達に聞きます。",
+        "english":"When I don't understand Japanese, I ask to Japanese friend.",
+        "audio":"tp8_g_19.mp3"
+    },
+    {
+        "id":"tp8_g_20",
+        "type":"grammar",
+        "romaji":"wakai toki, amari benkyō shimasendeshita.",
+        "moji":"若いとき、あまり勉強しませんでした。",
+        "kanji":"若いとき、あまり勉強しませんでした。",
+        "english":"When I was young, I didn't study much.",
+        "audio":"tp8_g_20.mp3"
+    },
+    {
+        "id":"tp8_g_21",
+        "type":"grammar",
+        "romaji":"watakushi wa Maria-san ga kaita e ga suki desu.",
+        "moji":"私はマリアさんがかいた絵が好きです。",
+        "kanji":"私はマリアさんがかいた絵が好きです。",
+        "english":"I like the picture Mrs.Maria drew.",
+        "audio":"tp8_g_21.mp3"
+    },
+    {
+        "id":"tp8_g_22",
+        "type":"grammar",
+        "romaji":"watakushi wa asagohan o taberu jikan ga arimasen.",
+        "moji":"私は朝ご飯を食べる時間がありません。",
+        "kanji":"私は朝ご飯を食べる時間がありません。",
+        "english":"I have no time to eat breakfast.",
+        "audio":"tp8_g_22.mp3"
+    },
+    {
+        "id":"tp8_g_23",
+        "type":"grammar",
+        "romaji":"kore wa watakushi ga senshū yonda hon desu.",
+        "moji":"これは私が先週読んだ本です。",
+        "kanji":"これは私が先週読んだ本です。",
+        "english":"This is the book I read last week.",
+        "audio":"tp8_g_23.mp3"
+    },
+    {
+        "id":"tp8_g_24",
+        "type":"grammar",
+        "romaji":"koko wa senshū watakushi ga okonatta resutoran desu.",
+        "moji":"ここは先週私が行ったレストランです。",
+        "kanji":"ここは先週私が行ったレストランです。",
+        "english":"This is the restaurant I went to last week.",
+        "audio":"tp8_g_24.mp3"
+    },
+    {
+        "id":"tp8_g_25",
+        "type":"grammar",
+        "romaji":"Jon-san ga kite iru shatsu wa, ī desu ne.",
+        "moji":"ジョンさんが着ているシャツは、いいですね。",
+        "kanji":"ジョンさんが着ているシャツは、いいですね。",
+        "english":"The shirt Mr.John wears is nice.",
+        "audio":"tp8_g_25.mp3"
+    },
+    {
+        "id":"tp8_g_26",
+        "type":"grammar",
+        "romaji":"ie e kaeru.",
+        "moji":"家へ帰る。",
+        "kanji":"家へ帰る。",
+        "english":"I will go home.",
+        "audio":"tp8_g_26.mp3"
+    },
+    {
+        "id":"tp8_g_27",
+        "type":"grammar",
+        "romaji":"kinō no pāti",
+        "moji":"昨日のパーティーは楽しかった。",
+        "kanji":"昨日のパーティーは楽しかった。",
+        "english":"I enjoyed yesterday's party.",
+        "audio":"tp8_g_27.mp3"
+    },
+    {
+        "id":"tp8_g_28",
+        "type":"grammar",
+        "romaji":"watashi ha ryouri ga suki da",
+        "moji":"私は料理が上手だ。",
+        "kanji":"私は料理が上手だ。",
+        "english":"I am good at cooking.",
+        "audio":"tp8_g_28.mp3"
+    },
+    {
+        "id":"tp8_g_29",
+        "type":"grammar",
+        "romaji":"kono pen o kau?",
+        "moji":"このペンを買う？",
+        "kanji":"このペンを買う？",
+        "english":"Would you buy this pen?",
+        "audio":"tp8_g_29.mp3"
+    },
+    {
+        "id":"tp8_g_30",
+        "type":"grammar",
+        "romaji":"docchi ga suki?",
+        "moji":"どっちが好き？",
+        "kanji":"どっちが好き？",
+        "english":"Which one do you like?",
+        "audio":"tp8_g_30.mp3"
+    },
 ]
 
 export const listening = [

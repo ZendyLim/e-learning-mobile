@@ -516,6 +516,276 @@ export const kanji = [
 ]
 
 export const grammar = [
+    {
+        "id":"tp7_g_1",
+        "type":"grammar",
+        "romaji":"mō shukudai o shimashita.",
+        "moji":"もう宿題をしました。",
+        "kanji":"もう宿題をしました。",
+        "english":"I have  already done my homework.",
+        "audio":"tp7_g_1.mp3"
+    },
+    {
+        "id":"tp7_g_2",
+        "type":"grammar",
+        "romaji":"mō Hokkaidō e ikimashita.",
+        "moji":"もう北海道へ行きました。",
+        "kanji":"もう北海道へ行きました。",
+        "english":"I have  already gone to Hokkaido.",
+        "audio":"tp7_g_2.mp3"
+    },
+    {
+        "id":"tp7_g_3",
+        "type":"grammar",
+        "romaji":"mō hirugohan o tabemashita.",
+        "moji":"もう昼ご飯を食べました。",
+        "kanji":"もう昼ご飯を食べました。",
+        "english":"I have  already  eaten lunch.",
+        "audio":"tp7_g_3.mp3"
+    },
+    {
+        "id":"tp7_g_4",
+        "type":"grammar",
+        "romaji":"mō hiragana o oboemashita.",
+        "moji":"もうひらがなを覚えました。",
+        "kanji":"もうひらがなを覚えました。",
+        "english":"I have  already memorized to Hiragana.",
+        "audio":"tp7_g_4.mp3"
+    },
+    {
+        "id":"tp7_g_5",
+        "type":"grammar",
+        "romaji":"mō chiketto o kaimashita.",
+        "moji":"もうチケットを買いました。",
+        "kanji":"もうチケットを買いました。",
+        "english":"I have already  bought the tickets.",
+        "audio":"tp7_g_5.mp3"
+    },
+    {
+        "id":"tp7_g_6",
+        "type":"grammar",
+        "romaji":"mada shukudai o shite imasen.",
+        "moji":"まだ宿題をしていません。",
+        "kanji":"まだ宿題をしていません。",
+        "english":"I have not done my homework.",
+        "audio":"tp7_g_6.mp3"
+    },
+    {
+        "id":"tp7_g_7",
+        "type":"grammar",
+        "romaji":"mada Hokkaidō e itte imasen.",
+        "moji":"まだ北海道へ行っていません。",
+        "kanji":"まだ北海道へ行っていません。",
+        "english":"I have not gone to Hokkaido.",
+        "audio":"tp7_g_7.mp3"
+    },
+    {
+        "id":"tp7_g_8",
+        "type":"grammar",
+        "romaji":"mada hirugohan o tabete imasen.",
+        "moji":"まだ昼ご飯を食べていません。",
+        "kanji":"まだ昼ご飯を食べていません。",
+        "english":"I have not eaten lunch yet.",
+        "audio":"tp7_g_8.mp3"
+    },
+    {
+        "id":"tp7_g_9",
+        "type":"grammar",
+        "romaji":"mada hiragana o oboete imasen.",
+        "moji":"まだひらがなを覚えていません。",
+        "kanji":"まだひらがなを覚えていません。",
+        "english":"I have not memorized to Hiragana.",
+        "audio":"tp7_g_9.mp3"
+    },
+    {
+        "id":"tp7_g_10",
+        "type":"grammar",
+        "romaji":"mada chiketto o katte imasen.",
+        "moji":"まだチケットを買っていません。",
+        "kanji":"まだチケットを買っていません。",
+        "english":"I have not bought the tickets.",
+        "audio":"tp7_g_10.mp3"
+    },
+    {
+        "id":"tp7_g_11",
+        "type":"grammar",
+        "romaji":"shawā o abita ato de, asagohan o tabemasu.",
+        "moji":"シャワーを浴びたあとで、朝ご飯を食べます。",
+        "kanji":"シャワーを浴びたあとで、朝ご飯を食べます。",
+        "english":"I'll eat breakfast after taking a shower.",
+        "audio":"tp7_g_11.mp3"
+    },
+    {
+        "id":"tp7_g_12",
+        "type":"grammar",
+        "romaji":"oyoida ato de, bīru o nomimasu.",
+        "moji":"泳いだあとで、ビールを飲みます。",
+        "kanji":"泳いだあとで、ビールを飲みます。",
+        "english":"I'll drink a beer after swinmming.",
+        "audio":"tp7_g_12.mp3"
+    },
+    {
+        "id":"tp7_g_13",
+        "type":"grammar",
+        "romaji":"kaetta ato de, te o araimasu.",
+        "moji":"帰ったあとで、手を洗います。",
+        "kanji":"帰ったあとで、手を洗います。",
+        "english":"I'll wash my hands after going home.",
+        "audio":"tp7_g_13.mp3"
+    },
+    {
+        "id":"tp7_g_14",
+        "type":"grammar",
+        "romaji":"sōji shita ato de, de kakemasu.",
+        "moji":"掃除したあとで、でかけます。",
+        "kanji":"掃除したあとで、でかけます。",
+        "english":"I'll go out after cleaning.",
+        "audio":"tp7_g_14.mp3"
+    },
+    {
+        "id":"tp7_g_15",
+        "type":"grammar",
+        "romaji":"shokuji no ato de, kōhī o nomimasu.",
+        "moji":"食事のあとで、コーヒーを飲みます。",
+        "kanji":"食事のあとで、コーヒーを飲みます。",
+        "english":"I'll drink a coffee after eating.",
+        "audio":"tp7_g_15.mp3"
+    },
+    {
+        "id":"tp7_g_16",
+        "type":"grammar",
+        "romaji":"Tōkyō de, tomodachi ni attari, kaimono shi tari shimashita.",
+        "moji":"東京で、友達に会ったり、買い物したりしました。",
+        "kanji":"東京で、友達に会ったり、買い物したりしました。",
+        "english":"In Tokyo, I meet my friend, go shopping and so on.",
+        "audio":"tp7_g_16.mp3"
+    },
+    {
+        "id":"tp7_g_17",
+        "type":"grammar",
+        "romaji":"nichiyō hi wa ie de hon o yon dari ongaku o kī tari shimasu.",
+        "moji":"日曜日は家で本を読んだり音楽を聞いたりします。",
+        "kanji":"日曜日は家で本を読んだり音楽を聞いたりします。",
+        "english":"On Sunday, I read a book, listen music and so on at home.",
+        "audio":"tp7_g_17.mp3"
+    },
+    {
+        "id":"tp7_g_18",
+        "type":"grammar",
+        "romaji":"yasumi no hi, terebi o mi tari bīru o non dari shimasu.",
+        "moji":"休みの日、テレビを見たりビールを飲んだりします。",
+        "kanji":"休みの日、テレビを見たりビールを飲んだりします。",
+        "english":"On days off, I watch TV, drink beer and so on.",
+        "audio":"tp7_g_18.mp3"
+    },
+    {
+        "id":"tp7_g_19",
+        "type":"grammar",
+        "romaji":"kinō, sōji shi tari sentaku shi tari shimashita.",
+        "moji":"きのう、掃除したり洗濯したりしました。",
+        "kanji":"きのう、掃除したり洗濯したりしました。",
+        "english":"Yesterday, I cleaned my room, do my washing and so on.",
+        "audio":"tp7_g_19.mp3"
+    },
+    {
+        "id":"tp7_g_20",
+        "type":"grammar",
+        "romaji":"kuni de kazoku to hanashi tari, tomodachi to ason dari shitaidesu.",
+        "moji":"国で家族と話したり、友達と遊んだりしたいです。",
+        "kanji":"国で家族と話したり、友達と遊んだりしたいです。",
+        "english":"In my country, I want to talk with my family, play with my friends and so on.",
+        "audio":"tp7_g_20.mp3"
+    },
+    {
+        "id":"tp7_g_21",
+        "type":"grammar",
+        "romaji":"aruki nagara jūsu o nomimasu.",
+        "moji":"歩きながらジュースを飲みます。",
+        "kanji":"歩きながらジュースを飲みます。",
+        "english":"I'll drink juice while walking.",
+        "audio":"tp7_g_21.mp3"
+    },
+    {
+        "id":"tp7_g_22",
+        "type":"grammar",
+        "romaji":"ongaku o kiki nagara sanpo shimasu.",
+        "moji":"音楽を聞きながら散歩します。",
+        "kanji":"音楽を聞きながら散歩します。",
+        "english":"I'll take a walk while listening to music.",
+        "audio":"tp7_g_22.mp3"
+    },
+    {
+        "id":"tp7_g_23",
+        "type":"grammar",
+        "romaji":"shinbun o yomi nagara, asagohan o tabemasu.",
+        "moji":"新聞を読みながら、朝ご飯を食べます。",
+        "kanji":"新聞を読みながら、朝ご飯を食べます。",
+        "english":"I'll eat breakfast while reading the newspaper.",
+        "audio":"tp7_g_23.mp3"
+    },
+    {
+        "id":"tp7_g_24",
+        "type":"grammar",
+        "romaji":"hon o mi nagara, ryōri o tsukurimasu.",
+        "moji":"本を見ながら、料理を作ります。",
+        "kanji":"本を見ながら、料理を作ります。",
+        "english":"I'll cook while looking at a book.",
+        "audio":"tp7_g_24.mp3"
+    },
+    {
+        "id":"tp7_g_25",
+        "type":"grammar",
+        "romaji":"gitā o hiki nagara, utaimasu.",
+        "moji":"ギターを弾きながら、歌います。",
+        "kanji":"ギターを弾きながら、歌います。",
+        "english":"I'll sing a song while playing guitar.",
+        "audio":"tp7_g_25.mp3"
+    },
+    {
+        "id":"tp7_g_26",
+        "type":"grammar",
+        "romaji":"Nippon e kuru mae ni, san kagetsu Nippon go o benkyō shimashita.",
+        "moji":"日本へ来る前に、三か月日本語を勉強しました。",
+        "kanji":"日本へ来る前に、三か月日本語を勉強しました。",
+        "english":"I studied Japanese for three months before I came to Japan.",
+        "audio":"tp7_g_26.mp3"
+    },
+    {
+        "id":"tp7_g_27",
+        "type":"grammar",
+        "romaji":"kuni e kaeru mae ni, mō ichi do tomodachi ni aimasu.",
+        "moji":"国へ帰る前に、もう一度友達に会います。",
+        "kanji":"国へ帰る前に、もう一度友達に会います。",
+        "english":"I'll meet my friend before I go back home.",
+        "audio":"tp7_g_27.mp3"
+    },
+    {
+        "id":"tp7_g_28",
+        "type":"grammar",
+        "romaji":"gohan o taberu mae ni, kusuri o nomimasu.",
+        "moji":"ごはんを食べる前に、薬を飲みます。",
+        "kanji":"ごはんを食べる前に、薬を飲みます。",
+        "english":"I'll take medicine before eating.",
+        "audio":"tp7_g_28.mp3"
+    },
+    {
+        "id":"tp7_g_29",
+        "type":"grammar",
+        "romaji":"benkyō no mae ni, bangohan o tabemasu.",
+        "moji":"勉強の前に、晩ご飯を食べます。",
+        "kanji":"勉強の前に、晩ご飯を食べます。",
+        "english":"I'll eat dinner before studying.",
+        "audio":"tp7_g_29.mp3"
+    },
+    {
+        "id":"tp7_g_30",
+        "type":"grammar",
+        "romaji":"ichi kagetsu mae ni, Nippon e kimashita.",
+        "moji":"一か月前に、日本へ来ました。",
+        "kanji":"一か月前に、日本へ来ました。",
+        "english":"I came to Japan a month ago.",
+        "audio":"tp7_g_30.mp3"
+    },
 ]
 
 export const listening = [

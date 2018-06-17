@@ -612,6 +612,375 @@ export const kanji = [
 ]
 
 export const grammar = [
+    {
+        "id":"tp4_g_1",
+        "type":"grammar",
+        "romaji":"kissa-ten e kōhī o nomi ni ikimasu.",
+        "moji":"喫茶店へコーヒーを飲みに行きます。",
+        "kanji":"喫茶店へコーヒーを飲みに行きます。",
+        "english":"I will go to coffee shop to drink a coffee.",
+        "audio":"tp4_g_1.mp3"
+    },
+    {
+        "id":"tp4_g_2",
+        "type":"grammar",
+        "romaji":"sūpā e yasai o kai ni ikimasu.",
+        "moji":"スーパーへ野菜を買いに行きます。",
+        "kanji":"スーパーへ野菜を買いに行きます。",
+        "english":"I will go to supermarket to buy vegetable.",
+        "audio":"tp4_g_2.mp3"
+    },
+    {
+        "id":"tp4_g_3",
+        "type":"grammar",
+        "romaji":"tosho-kan e hon o kari ni ikimasu.",
+        "moji":"図書館へ本を借りに行きます。",
+        "kanji":"図書館へ本を借りに行きます。",
+        "english":"I will go to library to borrow books.",
+        "audio":"tp4_g_3.mp3"
+    },
+    {
+        "id":"tp4_g_4",
+        "type":"grammar",
+        "romaji":"Amerika e eigo no benkyō ni ikimasu.",
+        "moji":"アメリカへ英語の勉強に行きます。",
+        "kanji":"アメリカへ英語の勉強に行きます。",
+        "english":"I will go to America to study English.",
+        "audio":"tp4_g_4.mp3"
+    },
+    {
+        "id":"tp4_g_5",
+        "type":"grammar",
+        "romaji":"Tōkyō e kaimono ni ikimasu.",
+        "moji":"東京へ買い物に行きます。",
+        "kanji":"東京へ買い物に行きます。",
+        "english":"I will go to Tokyo for shopping." ,
+        "audio":"tp4_g_5.mp3"
+     },
+    {
+        "id":"tp4_g_6",
+        "type":"grammar",
+        "romaji":"depāto e kaimono ni ikimasen ka.",
+        "moji":"デパートへ買い物に行きませんか。",
+        "kanji":"デパートへ買い物に行きませんか。",
+        "english":"Won't you go to department store to shopping with me?",
+        "audio":"tp4_g_6.mp3"
+    },
+    {
+        "id":"tp4_g_7",
+        "type":"grammar",
+        "romaji":"o sake o nomi ni ikimasen ka.",
+        "moji":"お酒を飲みに行きませんか。",
+        "kanji":"お酒を飲みに行きませんか。",
+        "english":"Won't you drink alcohol with me?",
+        "audio":"tp4_g_7.mp3"
+    },
+    {
+        "id":"tp4_g_8",
+        "type":"grammar",
+        "romaji":"issho ni benkyō shimasen ka.",
+        "moji":"いっしょに勉強しませんか。",
+        "kanji":"いっしょに勉強しませんか。",
+        "english":"Won't you study with me?",
+        "audio":"tp4_g_8.mp3"
+    },
+    {
+        "id":"tp4_g_9",
+        "type":"grammar",
+        "romaji":"kono eiga o mimasen ka.",
+        "moji":"この映画を見ませんか。",
+        "kanji":"この映画を見ませんか。",
+        "english":"Won't you watch this movie with me?",
+        "audio":"tp4_g_9.mp3"
+    },
+    {
+        "id":"tp4_g_10",
+        "type":"grammar",
+        "romaji":"issho ni kaerimasen ka.",
+        "moji":"いっしょに帰りませんか。",
+        "kanji":"いっしょに帰りませんか。",
+        "english":"Won't you go home with me?",
+        "audio":"tp4_g_10.mp3"
+    },
+    {
+        "id":"tp4_g_11",
+        "type":"grammar",
+        "romaji":"tosho-kan de benkyō shimashō.",
+        "moji":"図書館で勉強しましょう。",
+        "kanji":"図書館で勉強しましょう。",
+        "english":"Let's study at the library.",
+        "audio":"tp4_g_11.mp3"
+    },
+    {
+        "id":"tp4_g_12",
+        "type":"grammar",
+        "romaji":"kissa-ten de kōhī o nomimashō.",
+        "moji":"喫茶店でコーヒーを飲みましょう。",
+        "kanji":"喫茶店でコーヒーを飲みましょう。",
+        "english":"Let's drink coffee at a coffee shop.",
+        "audio":"tp4_g_12.mp3"
+    },
+    {
+        "id":"tp4_g_13",
+        "type":"grammar",
+        "romaji":"basu de gakkō e ikimashō.",
+        "moji":"バスで学校へ行きましょう。",
+        "kanji":"バスで学校へ行きましょう。",
+        "english":"Let's go to school by bus.",
+        "audio":"tp4_g_13.mp3"
+    },
+    {
+        "id":"tp4_g_14",
+        "type":"grammar",
+        "romaji":"uchi de bangohan o tsukurimashō.",
+        "moji":"うちで晩ご飯を作りましょう。",
+        "kanji":"うちで晩ご飯を作りましょう。",
+        "english":"Let's make dinner at house.",
+        "audio":"tp4_g_14.mp3"
+    },
+    {
+        "id":"tp4_g_15",
+        "type":"grammar",
+        "romaji":"kaerimashō.",
+        "moji":"帰りましょう。",
+        "kanji":"帰りましょう。",
+        "english":"Let's go home.",
+        "audio":"tp4_g_15.mp3"
+    },
+    {
+        "id":"tp4_g_16",
+        "type":"grammar",
+        "romaji":"ichi shūkan ni1 kai, sakkā o shimasu.",
+        "moji":"一週間に1回、サッカーをします。",
+        "kanji":"一週間に1回、サッカーをします。",
+        "english":"I play football once a week.",
+        "audio":"tp4_g_16.mp3"
+    },
+    {
+        "id":"tp4_g_17",
+        "type":"grammar",
+        "romaji":"ichi shūkan ni3 kai, tomodachi to o sake o nomimasu.",
+        "moji":"一週間に3回、友達とお酒を飲みます。",
+        "kanji":"一週間に3回、友達とお酒を飲みます。",
+        "english":"I drink alcohol with friend three times a week.",
+        "audio":"tp4_g_17.mp3"
+    },
+    {
+        "id":"tp4_g_18",
+        "type":"grammar",
+        "romaji":"ichi nen ni2 kai, kuni e kaerimasu.",
+        "moji":"一年に2回、国へ帰ります。",
+        "kanji":"一年に2回、国へ帰ります。",
+        "english":"I return to my country twice a year.",
+        "audio":"tp4_g_18.mp3"
+    },
+    {
+        "id":"tp4_g_19",
+        "type":"grammar",
+        "romaji":"ichi nen ni3 kai, kazoku ni aimasu.",
+        "moji":"一年に3回、家族に会います。",
+        "kanji":"一年に3回、家族に会います。",
+        "english":"I meet my family three times a year.",
+        "audio":"tp4_g_19.mp3"
+    },
+    {
+        "id":"tp4_g_20",
+        "type":"grammar",
+        "romaji":"ichi kagetsu ni3 kai, depāto e ikimasu.",
+        "moji":"一か月に3回、デパートへ行きます。",
+        "kanji":"一か月に3回、デパートへ行きます。",
+        "english":"I go to department store three times a month.",
+        "audio":"tp4_g_20.mp3"
+    },
+    {
+        "id":"tp4_g_21",
+        "type":"grammar",
+        "romaji":"ichi kagetsu ni2 kai, Tōkyō e kaimono ni ikimasu.",
+        "moji":"一か月に2回、東京へ買い物に行きます。",
+        "kanji":"一か月に2回、東京へ買い物に行きます。",
+        "english":"I go to Tokyo to shopping twice a month.",
+        "audio":"tp4_g_21.mp3"
+    },
+    {
+        "id":"tp4_g_22",
+        "type":"grammar",
+        "romaji":"kazoku ni aitaidesu.",
+        "moji":"家族に会いたいです。",
+        "kanji":"家族に会いたいです。",
+        "english":"I want to meet my family.",
+        "audio":"tp4_g_22.mp3"
+    },
+    {
+        "id":"tp4_g_23",
+        "type":"grammar",
+        "romaji":"eiga o mitaidesu.",
+        "moji":"映画を見たいです。",
+        "kanji":"映画を見たいです。",
+        "english":"I want to watch a movie.",
+        "audio":"tp4_g_23.mp3"
+    },
+    {
+        "id":"tp4_g_24",
+        "type":"grammar",
+        "romaji":"Nippon e ikitaidesu.",
+        "moji":"日本へ行きたいです。",
+        "kanji":"日本へ行きたいです。",
+        "english":"I want to go to Japan.",
+        "audio":"tp4_g_24.mp3"
+    },
+    {
+        "id":"tp4_g_25",
+        "type":"grammar",
+        "romaji":"ie e kaeritaidesu.",
+        "moji":"家へ帰りたいです。",
+        "kanji":"家へ帰りたいです。",
+        "english":"I want to go home.",
+        "audio":"tp4_g_25.mp3"
+    },
+    {
+        "id":"tp4_g_26",
+        "type":"grammar",
+        "romaji":"o sake o nomitaidesu.",
+        "moji":"お酒を飲みたいです。",
+        "kanji":"お酒を飲みたいです。",
+        "english":"I want to drink alcohol.",
+        "audio":"tp4_g_26.mp3"
+    },
+    {
+        "id":"tp4_g_27",
+        "type":"grammar",
+        "romaji":"kinō no pātī wa tanoshikatta desu.",
+        "moji":"きのうのパーティーは楽しかったです。",
+        "kanji":"きのうのパーティーは楽しかったです。",
+        "english":"The party was fun yesterday.",
+        "audio":"tp4_g_27.mp3"
+    },
+    {
+        "id":"tp4_g_28",
+        "type":"grammar",
+        "romaji":"senshū wa tenki ga yokatta desu.",
+        "moji":"先週は天気がよかったです。",
+        "kanji":"先週は天気がよかったです。",
+        "english":"It was nice weather last week.",
+        "audio":"tp4_g_28.mp3"
+    },
+    {
+        "id":"tp4_g_29",
+        "type":"grammar",
+        "romaji":"kinō wa samuku nakatta desu.",
+        "moji":"きのうは寒くなかったです。",
+        "kanji":"きのうは寒くなかったです。",
+        "english":"It was not cold yesterday.",
+        "audio":"tp4_g_29.mp3"
+    },
+    {
+        "id":"tp4_g_30",
+        "type":"grammar",
+        "romaji":"kinō wa isogashiku nakatta desu.",
+        "moji":"きのうは忙しくなかったです。",
+        "kanji":"きのうは忙しくなかったです。",
+        "english":"It was not busy yesterday.",
+        "audio":"tp4_g_30.mp3"
+    },
+    {
+        "id":"tp4_g_31",
+        "type":"grammar",
+        "romaji":"Okinawa no umi wa kirei deshi ta.",
+        "moji":"沖縄の海はきれいでした。",
+        "kanji":"沖縄の海はきれいでした。",
+        "english":"The sea was beautiful in Okinawa.",
+        "audio":"tp4_g_31.mp3"
+    },
+    {
+        "id":"tp4_g_32",
+        "type":"grammar",
+        "romaji":"kinō no shigoto wa taihen deshi ta.",
+        "moji":"きのうの仕事は大変でした。",
+        "kanji":"きのうの仕事は大変でした。",
+        "english":"It was hard work yesterday.",
+        "audio":"tp4_g_32.mp3"
+    },
+    {
+        "id":"tp4_g_33",
+        "type":"grammar",
+        "romaji":"chichi wa genki ja arimasendeshita.",
+        "moji":"父は元気じゃありませんでした。",
+        "kanji":"父は元気じゃありませんでした。",
+        "english":"My father was not healthy.",
+        "audio":"tp4_g_33.mp3"
+    },
+    {
+        "id":"tp4_g_34",
+        "type":"grammar",
+        "romaji":"kinō wa nichiyō hi deshi ta.",
+        "moji":"きのうは日曜日でした。",
+        "kanji":"きのうは日曜日でした。",
+        "english":"Yesterday was Sunday.",
+        "audio":"tp4_g_34.mp3"
+    },
+    {
+        "id":"tp4_g_35",
+        "type":"grammar",
+        "romaji":"kinō wa ame deshi ta.",
+        "moji":"きのうは雨でした。",
+        "kanji":"きのうは雨でした。",
+        "english":"It was rainy yesterday.",
+        "audio":"tp4_g_35.mp3"
+    },
+    {
+        "id":"tp4_g_36",
+        "type":"grammar",
+        "romaji":"kinō wa yuki ja arimasendeshita.",
+        "moji":"きのうは雪じゃありませんでした。",
+        "kanji":"きのうは雪じゃありませんでした。",
+        "english":"It was not snow yesterday.",
+        "audio":"tp4_g_36.mp3"
+    },
+    {
+        "id":"tp4_g_37",
+        "type":"grammar",
+        "romaji":"takusan kaimono shimashita kara, o kane ga arimasen.",
+        "moji":"たくさん買い物しましたから、お金がありません。",
+        "kanji":"たくさん買い物しましたから、お金がありません。",
+        "english":"Because I bought many things, I have no money.",
+        "audio":"tp4_g_37.mp3"
+    },
+    {
+        "id":"tp4_g_38",
+        "type":"grammar",
+        "romaji":"kinō wa samukatta desu kara, doko mo ikimasendeshita.",
+        "moji":"きのうは寒かったですから、どこも行きませんでした。",
+        "kanji":"きのうは寒かったですから、どこも行きませんでした。",
+        "english":"Because it was cold yesterday, I didn't go anywhere.",
+        "audio":"tp4_g_38.mp3"
+    },
+    {
+        "id":"tp4_g_39",
+        "type":"grammar",
+        "romaji":"eigo o benkyō shitaidesu kara, Amerika e ikitaidesu.",
+        "moji":"英語を勉強したいですから、アメリカへ行きたいです。",
+        "kanji":"英語を勉強したいですから、アメリカへ行きたいです。",
+        "english":"Because I want to study English, I want to go to America,",
+        "audio":"tp4_g_39.mp3"
+    },
+    {
+        "id":"tp4_g_40",
+        "type":"grammar",
+        "romaji":"raigetsu ryokō ni ikimasu kara, ōkī kaban o kaimasu.",
+        "moji":"来月旅行に行きますから、大きいかばんを買います。",
+        "kanji":"来月旅行に行きますから、大きいかばんを買います。",
+        "english":"Because I travel next month,I will buy a big bag.",
+        "audio":"tp4_g_40.mp3"
+    },
+    {
+        "id":"tp4_g_41",
+        "type":"grammar",
+        "romaji":"ī tenki desu kara, asobi ni ikimasu.",
+        "moji":"いい天気ですから、遊びに行きます。",
+        "kanji":"いい天気ですから、遊びに行きます。",
+        "english":"Because it is nice weather, I will go somewhere.",
+        "audio":"tp4_g_41.mp3"
+    },
 ]
 
 export const listening = [
