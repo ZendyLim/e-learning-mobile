@@ -1,13 +1,15 @@
 export const vocabulary = [
     {
         "id":"tp3_v_1",
+        "type":"vocabulary",
         "moji":"あたらしい",
         "romaji":"atarashī",
         "english":"new",
-        "audio":"t3_atarashī.mp3",
+        "audio":"t3_atarashii.mp3",
     },
     {
         "id":"tp3_v_2",
+        "type":"vocabulary",
         "moji":"あつい",
         "romaji":"atsui",
         "english":"hot",
@@ -15,6 +17,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_3",
+        "type":"vocabulary",
         "moji":"あつい",
         "romaji":"atsui",
         "english":"hot to the touch",
@@ -22,13 +25,15 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_4",
+        "type":"vocabulary",
         "moji":"アパート",
         "romaji":"apāto",
         "english":"apartment",
-        "audio":"t3_apāto.mp3",
+        "audio":"t3_apato.mp3",
     },
     {
         "id":"tp3_v_5",
+        "type":"vocabulary",
         "moji":"あまり",
         "romaji":"amari",
         "english":"not very",
@@ -36,20 +41,23 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_6",
+        "type":"vocabulary",
         "moji":"あります",
         "romaji":"arimasu",
         "english":"to be,to have (used for inanimate objects)",
-        "audio":"t3_arimasu.mp3",
+        "audio":"",
     },
     {
         "id":"tp3_v_7",
+        "type":"vocabulary",
         "moji":"いい",
         "romaji":"ī",
         "english":"good",
-        "audio":"t3_ī.mp3",
+        "audio":"t3_ii.mp3",
     },
     {
         "id":"tp3_v_8",
+        "type":"vocabulary",
         "moji":"いちばん",
         "romaji":"ichiban",
         "english":"best, first",
@@ -57,6 +65,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_9",
+        "type":"vocabulary",
         "moji":"いぬ",
         "romaji":"inu",
         "english":"dog",
@@ -64,6 +73,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_10",
+        "type":"vocabulary",
         "moji":"います",
         "romaji":"imasu",
         "english":"to be, to have (used for people and animals)",
@@ -71,6 +81,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_11",
+        "type":"vocabulary",
         "moji":"うえ",
         "romaji":"ue",
         "english":"on top of",
@@ -78,6 +89,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_12",
+        "type":"vocabulary",
         "moji":"うしろ",
         "romaji":"ushiro",
         "english":"behind",
@@ -85,6 +97,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_13",
+        "type":"vocabulary",
         "moji":"えき",
         "romaji":"eki",
         "english":"station",
@@ -92,20 +105,23 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_14",
+        "type":"vocabulary",
         "moji":"おいしい",
         "romaji":"oishī",
         "english":"delicious",
-        "audio":"t3_oishī.mp3",
+        "audio":"t3_oishii.mp3",
     },
     {
         "id":"tp3_v_15",
+        "type":"vocabulary",
         "moji":"おおきい",
         "romaji":"ōkī",
         "english":"big",
-        "audio":"t3_ōkī.mp3",
+        "audio":"t3_ookii.mp3",
     },
     {
         "id":"tp3_v_16",
+        "type":"vocabulary",
         "moji":"おそい",
         "romaji":"osoi",
         "english":"late, slow",
@@ -113,13 +129,15 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_17",
+        "type":"vocabulary",
         "moji":"きのう",
         "romaji":"kinō",
         "english":"Yesterday",
-        "audio":"t3_kinō.mp3",
+        "audio":"t3_kinou.mp3",
     },
     {
         "id":"tp3_v_18",
+        "type":"vocabulary",
         "moji":"きょねん",
         "romaji":"kyonen",
         "english":"last year",
@@ -127,6 +145,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_19",
+        "type":"vocabulary",
         "moji":"きれい",
         "romaji":"kirei",
         "english":"pretty, clean",
@@ -134,6 +153,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_20",
+        "type":"vocabulary",
         "moji":"さむい",
         "romaji":"samui",
         "english":"Cold",
@@ -141,6 +161,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_21",
+        "type":"vocabulary",
         "moji":"しずか",
         "romaji":"shizuka",
         "english":"Quiet",
@@ -148,6 +169,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_22",
+        "type":"vocabulary",
         "moji":"した",
         "romaji":"shita",
         "english":"Below",
@@ -155,6 +177,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_23",
+        "type":"vocabulary",
         "moji":"すこし",
         "romaji":"sukoshi",
         "english":"Few",
@@ -162,13 +185,15 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_24",
+        "type":"vocabulary",
         "moji":"スポーツ",
         "romaji":"supōtsu",
         "english":"Sport",
-        "audio":"t3_supōtsu.mp3",
+        "audio":"t3_supotsu.mp3",
     },
     {
         "id":"tp3_v_25",
+        "type":"vocabulary",
         "moji":"そして",
         "romaji":"soshite",
         "english":"And",
@@ -176,6 +201,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_26",
+        "type":"vocabulary",
         "moji":"そと",
         "romaji":"soto",
         "english":"Outside",
@@ -183,6 +209,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_27",
+        "type":"vocabulary",
         "moji":"たかい",
         "romaji":"takai",
         "english":"tall, expensive",
@@ -190,6 +217,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_28",
+        "type":"vocabulary",
         "moji":"たくさん",
         "romaji":"takusan",
         "english":"many",
@@ -197,6 +225,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_29",
+        "type":"vocabulary",
         "moji":"たべもの",
         "romaji":"tabemono",
         "english":"food",
@@ -204,13 +233,15 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_30",
+        "type":"vocabulary",
         "moji":"ちいさい",
         "romaji":"chīsai",
         "english":"little",
-        "audio":"t3_chīsai.mp3",
+        "audio":"t3_chiisai.mp3",
     },
     {
         "id":"tp3_v_31",
+        "type":"vocabulary",
         "moji":"ちかく",
         "romaji":"chikaku",
         "english":"near",
@@ -218,6 +249,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_32",
+        "type":"vocabulary",
         "moji":"つめたい",
         "romaji":"tsumetai",
         "english":"cold to the touch",
@@ -225,6 +257,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_33",
+        "type":"vocabulary",
         "moji":"テーブル",
         "romaji":"teiburu",
         "english":"table",
@@ -232,6 +265,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_34",
+        "type":"vocabulary",
         "moji":"ドア",
         "romaji":"doa",
         "english":"Western style door",
@@ -239,6 +273,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_35",
+        "type":"vocabulary",
         "moji":"トイレ",
         "romaji":"toire",
         "english":"toilet",
@@ -246,13 +281,15 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_36",
+        "type":"vocabulary",
         "moji":"どう",
         "romaji":"dō",
         "english":"how",
-        "audio":"t3_dō.mp3",
+        "audio":"t3_dou.mp3",
     },
     {
         "id":"tp3_v_37",
+        "type":"vocabulary",
         "moji":"とけい",
         "romaji":"tokei",
         "english":"watch, clock",
@@ -260,6 +297,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_38",
+        "type":"vocabulary",
         "moji":"ところ",
         "romaji":"tokoro",
         "english":"place",
@@ -267,13 +305,15 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_39",
+        "type":"vocabulary",
         "moji":"としょかん",
         "romaji":"to sho kan",
         "english":"library",
-        "audio":"t3_to sho kan.mp3",
+        "audio":"t3_toshokan.mp3",
     },
     {
         "id":"tp3_v_40",
+        "type":"vocabulary",
         "moji":"とても",
         "romaji":"totemo",
         "english":"very",
@@ -281,6 +321,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_41",
+        "type":"vocabulary",
         "moji":"となり",
         "romaji":"tonari",
         "english":"next door to",
@@ -288,6 +329,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_42",
+        "type":"vocabulary",
         "moji":"どんな",
         "romaji":"donna",
         "english":"What kind of ～",
@@ -295,6 +337,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_43",
+        "type":"vocabulary",
         "moji":"なか",
         "romaji":"naka",
         "english":"middle",
@@ -302,6 +345,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_44",
+        "type":"vocabulary",
         "moji":"にぎやか",
         "romaji":"nigiyaka",
         "english":"bustling, busy",
@@ -309,6 +353,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_45",
+        "type":"vocabulary",
         "moji":"にわ",
         "romaji":"niwa",
         "english":"garden",
@@ -316,6 +361,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_46",
+        "type":"vocabulary",
         "moji":"ねこ",
         "romaji":"neko",
         "english":"cat",
@@ -323,13 +369,15 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_47",
+        "type":"vocabulary",
         "moji":"のみもの",
         "romaji":"nomi mono",
         "english":"a drink",
-        "audio":"t3_nomi mono.mp3",
+        "audio":"t3_nomimono.mp3",
     },
     {
         "id":"tp3_v_48",
+        "type":"vocabulary",
         "moji":"はやい",
         "romaji":"hayai",
         "english":"early",
@@ -337,6 +385,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_49",
+        "type":"vocabulary",
         "moji":"ひくい",
         "romaji":"hikui",
         "english":"short, low",
@@ -344,6 +393,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_50",
+        "type":"vocabulary",
         "moji":"ひだり",
         "romaji":"hidari",
         "english":"left hand side",
@@ -351,6 +401,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_51",
+        "type":"vocabulary",
         "moji":"ふるい",
         "romaji":"furui",
         "english":"old (not used for people)",
@@ -358,6 +409,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_52",
+        "type":"vocabulary",
         "moji":"ベッド",
         "romaji":"beddo",
         "english":"bed",
@@ -365,6 +417,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_53",
+        "type":"vocabulary",
         "moji":"へや",
         "romaji":"heya",
         "english":"room",
@@ -372,6 +425,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_54",
+        "type":"vocabulary",
         "moji":"べんり",
         "romaji":"benri",
         "english":"useful, convenient",
@@ -379,13 +433,15 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_55",
+        "type":"vocabulary",
         "moji":"まえ",
         "romaji":"ma e",
         "english":"before, front",
-        "audio":"t3_ma e.mp3",
+        "audio":"t3_mae.mp3",
     },
     {
         "id":"tp3_v_56",
+        "type":"vocabulary",
         "moji":"まち",
         "romaji":"machi",
         "english":"town, city",
@@ -393,13 +449,15 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_57",
+        "type":"vocabulary",
         "moji":"まど",
         "romaji":"mado",
         "english":"window",
-        "audio":"t3_mado.mp3",
+        "audio":"",
     },
     {
         "id":"tp3_v_58",
+        "type":"vocabulary",
         "moji":"みぎ",
         "romaji":"migi",
         "english":"right side",
@@ -407,6 +465,7 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_59",
+        "type":"vocabulary",
         "moji":"みせ",
         "romaji":"mise",
         "english":"shop",
@@ -414,44 +473,389 @@ export const vocabulary = [
     },
     {
         "id":"tp3_v_60",
+        "type":"vocabulary",
         "moji":"むずかしい",
         "romaji":"muzukashī",
         "english":"difficult",
-        "audio":"t3_muzukashī.mp3",
+        "audio":"t3_muzukashii.mp3",
     },
     {
         "id":"tp3_v_61",
+        "type":"vocabulary",
         "moji":"やすい",
-        "romaji":"-yasui",
+        "romaji":"yasui",
         "english":"cheap",
-        "audio":"t3_-yasui.mp3",
+        "audio":"t3_yasui.mp3",
     },
     {
         "id":"tp3_v_62",
+        "type":"vocabulary",
         "moji":"ゆうびんきょく",
         "romaji":"yūbin kyoku",
         "english":"post office",
-        "audio":"t3_yūbin kyoku.mp3",
+        "audio":"t3_yuubinkyoku.mp3",
     },
     {
         "id":"tp3_v_63",
+        "type":"vocabulary",
         "moji":"ゆうめい",
         "romaji":"yūmei",
         "english":"famous",
-        "audio":"t3_yūmei.mp3",
+        "audio":"t3_yuumei.mp3",
     },
     {
         "id":"tp3_v_64",
+        "type":"vocabulary",
         "moji":"れいぞうこ",
         "romaji":"reizō-ko",
         "english":"refrigerator",
-        "audio":"t3_reizō-ko.mp3",
+        "audio":"t3_reizouko.mp3",
     },
     {
         "id":"tp3_v_65",
+        "type":"vocabulary",
         "moji":"わるい",
         "romaji":"warui",
         "english":"bad",
         "audio":"t3_warui.mp3",
     },
+]
+
+export const kanji = [
+    {
+        "id":"tp3_k_1",
+        "type":"kanji",
+        "romaji":"Shū",
+        "moji":"しゅう",
+        "kanji":"週",
+        "english":"week",
+        "audio":"t3_shuu.mp3"
+    },
+    {
+        "id":"tp3_k_2",
+        "type":"kanji",
+        "romaji":"nen/ Toshi",
+        "moji":"ねん/とし",
+        "kanji":"年",
+        "english":"year",
+        "audio":"t3_nen.mp3"
+    },
+    {
+        "id":"tp3_k_3",
+        "type":"kanji",
+        "romaji":"Mai",
+        "moji":"まい",
+        "kanji":"毎",
+        "english":"every",
+        "audio":"t3_mai.mp3"
+    },
+    {
+        "id":"tp3_k_4",
+        "type":"kanji",
+        "romaji":"dai/ ō",
+        "moji":"だい/おお",
+        "kanji":"大",
+        "english":"big",
+        "audio":"t3_dai.mp3"
+    },
+    {
+        "id":"tp3_k_5",
+        "type":"kanji",
+        "romaji":"shō/ Chī",
+        "moji":"しょう/ちい",
+        "kanji":"小",
+        "english":"small",
+        "audio":"t3_shou.mp3"
+    },
+    {
+        "id":"tp3_k_6",
+        "type":"kanji",
+        "romaji":"Shin/ atara",
+        "moji":"しん/あたら",
+        "kanji":"新",
+        "english":"new",
+        "audio":"t3_shin.mp3"
+    },
+    {
+        "id":"tp3_k_7",
+        "type":"kanji",
+        "romaji":"furu",
+        "moji":"ふる",
+        "kanji":"古",
+        "english":"old",
+        "audio":"t3_furu.mp3"
+    },
+    {
+        "id":"tp3_k_8",
+        "type":"kanji",
+        "romaji":"kō/ Taka",
+        "moji":"こう/たか",
+        "kanji":"高",
+        "english":"expensive / tall",
+        "audio":"t3_kou.mp3"
+    },
+    {
+        "id":"tp3_k_9",
+        "type":"kanji",
+        "romaji":"Yasu",
+        "moji":"やす",
+        "kanji":"安",
+        "english":"cheap",
+        "audio":"t3_yasu.mp3"
+    },
+    {
+        "id":"tp3_k_10",
+        "type":"kanji",
+        "romaji":"ō",
+        "moji":"おお",
+        "kanji":"多",
+        "english":"many",
+        "audio":"t3_oo.mp3"
+    },
+    {
+        "id":"tp3_k_11",
+        "type":"kanji",
+        "romaji":"suku, suko",
+        "moji":"すく、すこ",
+        "kanji":"少",
+        "english":"few",
+        "audio":"t3_suku.mp3"
+    },
+    {
+        "id":"tp3_k_12",
+        "type":"kanji",
+        "romaji":"na ga",
+        "moji":"なが",
+        "kanji":"長",
+        "english":"long",
+        "audio":"t3_naga.mp3"
+    },
+    {
+        "id":"tp3_k_13",
+        "type":"kanji",
+        "romaji":"haya",
+        "moji":"はや",
+        "kanji":"早",
+        "english":"early",
+        "audio":"t3_haya.mp3"
+    },
+    {
+        "id":"tp3_k_14",
+        "type":"kanji",
+        "romaji":"su",
+        "moji":"す",
+        "kanji":"好",
+        "english":"to like",
+        "audio":"t3_suki.mp3"
+    },
+    {
+        "id":"tp3_k_15",
+        "type":"kanji",
+        "romaji":"machi",
+        "moji":"まち",
+        "kanji":"町",
+        "english":"town",
+        "audio":"t3_machi.mp3"
+    },
+]
+
+export const grammar = [
+]
+
+export const listening = [
+    {
+        "id":"tp3_l_1",
+        "type":"listening",
+        "romaji":"firipin",
+        "moji":"フィリピン",
+        "kanji":"フィリピン",
+        "english":"Philippines",
+        "answerOption":[
+            {
+                "id":"tp3_l_2",
+                "type":"listening",
+                "moji":"日本"
+            },
+            {
+                "id":"tp3_l_1",
+                "type":"listening",
+                "moji":"フィリピン"
+            },
+            {
+                "id":"tp3_l_3",
+                "type":"listening",
+                "moji":"ベトナム"
+            },
+            {
+                "id":"tp3_l_4",
+                "type":"listening",
+                "moji":"タイ"
+            }
+        ],
+        "audio":"t3_listening_1.mp3"
+        
+    },	
+    {
+        "id":"tp3_l_2",
+        "type":"listening",
+        "romaji":"pasokon",
+        "moji":"パソコン",
+        "kanji":"パソコン",
+        "english":"Personal Computer",
+        "answerOption":[
+            {
+                "id":"tp3_l_1",
+                "type":"listening",
+                "moji":"かばん"
+            },
+            {
+                "id":"tp3_l_3",
+                "type":"listening",
+                "moji":"花"
+            },
+            {
+                "id":"tp3_l_2",
+                "type":"listening",
+                "moji":"パソコン"
+            },
+            {
+                "id":"tp3_l_4",
+                "type":"listening",
+                "moji":"時計"
+            }
+        ],
+        "audio":"t3_listening_2.mp3"
+        
+    },	
+    {
+        "id":"tp3_l_3",
+        "type":"listening",
+        "romaji":"kabannonaka",
+        "moji":"かばんの中",
+        "kanji":"かばんの中",
+        "english":"Inside the bug",
+        "answerOption":[
+            {
+                "id":"tp3_l_3",
+                "type":"listening",
+                "moji":"かばんの中"
+            },
+            {
+                "id":"tp3_l_2",
+                "type":"listening",
+                "moji":"テーブルの下"
+            },
+            {
+                "id":"tp3_l_1",
+                "type":"listening",
+                "moji":"窓の左"
+            },
+            {
+                "id":"tp3_l_4",
+                "type":"listening",
+                "moji":"いすのとなり"
+            }
+        ],
+        "audio":"t3_listening_3.mp3"
+        
+    },	
+]
+
+export const reading = [
+    {
+		"id":"tp2_r_1",
+		"type":"reading",
+		"moji":"わたしはフランスのパリから来ました。私の家族もパリにいます。パリは古いたてものやおいしいレストランなどが、たくさんあります。にぎやかな町です。パリは東京より暑くないです。雨も少ないです。",
+		"questionOption":{
+			"moji":"Q：パリはどんなところですか。",
+			"kanji":"Q：パリはどんなところですか。"
+		},
+		"answerOption":[
+			{
+				"id":"tp2_r_3",
+				"type":"reading",
+				"moji":"古いところ　"
+			},
+			{
+				"id":"tp2_r_2",
+				"type":"reading",
+				"moji":"おいしいところ　"
+			},
+			{
+				"id":"tp2_r_1",
+				"type":"reading",
+				"moji":" にぎやかなところ。　"
+			},
+			{
+				"id":"tp2_r_4",
+				"type":"reading",
+				"moji":"暑いところ "
+			}
+		],
+		"audio":""
+	},
+	{
+		"id":"tp2_r_2",
+		"type":"reading",
+		"moji":"わたしは映画の中でアメリカ映画が一番好きです。アメリカの映画は有名です。わたしはしずかな映画よりにぎやかな映画のほうが好きです。友だちはしずかな映画が好きじゃありません。映画は高くないです。母に映画の※チケットをもらいました。明日、友だちといっしょに映画を見ます。※チケット=ticket",
+		"questionOption":{
+			"moji":"Q：どんな映画が好きですか。",
+			"kanji":"Q：どんな映画が好きですか。"
+		},
+		"answerOption":[
+			{
+				"id":"tp2_r_1",
+				"type":"reading",
+				"moji":"有名な映画　"
+			},
+			{
+				"id":"tp2_r_2",
+				"type":"reading",
+				"moji":"にぎやかな映画"
+			},
+			{
+				"id":"tp2_r_3",
+				"type":"reading",
+				"moji":"しずかな映画"
+			},
+			{
+				"id":"tp2_r_4",
+				"type":"reading",
+				"moji":"高い映画"
+			}
+		],
+		"audio":""
+	},
+	{
+		"id":"tp2_r_3",
+		"type":"reading",
+		"moji":"わたしは昨日、友だちと電車でデパートへ行きました。デパートで本を買いました。喫茶店でカレーを食べました。駅から電車で家へ帰りました。ごはんを作りませんでした。明日、学校へ行きません。ひとりで図書館へ行きます。本を読みます。",
+		"questionOption":{
+			"moji":"Q：明日、何をしますか。",
+			"kanji":"Q：明日、何をしますか。"
+		},
+		"answerOption":[
+			{
+				"id":"tp2_r_1",
+				"type":"reading",
+				"moji":"デパートへ行きます　"
+			},
+			{
+				"id":"tp2_r_2",
+				"type":"reading",
+				"moji":"喫茶店でごはんを食べます　"
+			},
+			{
+				"id":"tp2_r_3",
+				"type":"reading",
+				"moji":"学校へ行きます　"
+			},
+			{
+				"id":"tp2_r_4",
+				"type":"reading",
+				"moji":"本を読みます"
+			}
+		],
+		"audio":""
+	},
 ]
