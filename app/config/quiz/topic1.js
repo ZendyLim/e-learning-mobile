@@ -823,7 +823,7 @@ export const vocabulary = [
         "moji":"キムさん は えいご が わかります か",
         "kanji":"キムさん は 英語 が わかります か。",
         "english":"Does Mr./Ms. Kim understand English?",
-        "audio":"tp1_g_24.mp3"
+        "audio":""
     },
     {	
         "id":"tp1_g_25",
@@ -841,7 +841,7 @@ export const vocabulary = [
         "moji":"マリアさん は カタカナ が わかります か",
         "kanji":"マリアさん は カタカナ が わかります か。",
         "english":"Does Ms. Maria understand Katakana?",
-        "audio":"tp1_g_26.mp3"
+        "audio":""
     },
     {	
         "id":"tp1_g_27",
@@ -850,7 +850,7 @@ export const vocabulary = [
         "moji":"マークさん は かんじ が わかります か",
         "kanji":"マークさん は 漢字 が わかります か。",
         "english":"Does Mr. mark understand Kanji?",
-        "audio":"tp1_g_27.mp3"
+        "audio":""
     },
     {	
         "id":"tp1_g_28",
@@ -859,7 +859,7 @@ export const vocabulary = [
         "moji":"すずきさん は えいご が わかります か",
         "kanji":"すずきさん は 英語 が わかります か。",
         "english":"Does Mr./Ms. Suzuki understand English?",
-        "audio":"tp1_g_28.mp3"
+        "audio":""
     },
     {	
         "id":"tp1_g_29",
