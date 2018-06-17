@@ -1206,22 +1206,22 @@ export const listening = [
         "english":"4 hours",
         "answerOption":[
             {
-                "id":"tp1_l_4",
+                "id":"tp2_l_4",
                 "type":"listening",
                 "moji":"１時間"
             },
             {
-                "id":"tp1_l_3",
+                "id":"tp2_l_3",
                 "type":"listening",
                 "moji":"２時間"
             },
             {
-                "id":"tp1_l_2",
+                "id":"tp2_l_2",
                 "type":"listening",
                 "moji":"３時間"
             },
             {
-                "id":"tp1_l_1",
+                "id":"tp2_l_1",
                 "type":"listening",
                 "moji":"４時間 "
             }
@@ -1237,22 +1237,22 @@ export const listening = [
         "english":"here",
         "answerOption":[
             {
-                "id":"tp1_l_4",
+                "id":"tp2_l_4",
                 "type":"listening",
                 "moji":"会社"
             },
             {
-                "id":"tp1_l_3",
+                "id":"tp2_l_3",
                 "type":"listening",
                 "moji":"レストラン"
             },
             {
-                "id":"tp1_l_1",
+                "id":"tp2_l_1",
                 "type":"listening",
                 "moji":"駅"
             },
             {
-                "id":"tp1_l_2",
+                "id":"tp2_l_2",
                 "type":"listening",
                 "moji":"ここに"
             }
@@ -1268,22 +1268,22 @@ export const listening = [
         "english":"vietnam",
         "answerOption":[
             {
-                "id":"tp1_l_4",
+                "id":"tp2_l_4",
                 "type":"listening",
                 "moji":"日本"
             },
             {
-                "id":"tp1_l_2",
+                "id":"tp2_l_2",
                 "type":"listening",
                 "moji":"フィリピン"
             },
             {
-                "id":"tp1_l_3",
+                "id":"tp2_l_3",
                 "type":"listening",
                 "moji":"ベトナム"
             },
             {
-                "id":"tp1_l_1",
+                "id":"tp2_l_1",
                 "type":"listening",
                 "moji":"タイ"
             }
