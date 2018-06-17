@@ -23,20 +23,19 @@ export function startLearn(studyType, startLearn, studyID, quizSize){
 }
 
 export function endLearn(postValue){  
+  console.log( JSON.stringify(postValue),'sending study');
   return (dispatch) => {
     getJWT().then( JWT => {
-      console.log(JWT);
-      fetch('https://e-learning-backend.herokuapp.com/api/v1/finishStudy',{
+      fetch('https://e-learning-backend.herokuapp.com/api/v1/activities',{
         method: 'POST',
         headers: {
           'Authorization' : JWT,
-          'Accept': 'application/json',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(postValue)
       }).then(data => data.json())
       .then(json => {
-        dispatch(endLearnDispatch(postValue))
+        dispatch(endLearnDispatch(postValue, json))
       })
       .catch(err => dispatch(endLearnFailedDispatch(err)))
     });
@@ -60,7 +59,8 @@ export function startLearnDispatch(studyType, startLearn, studyID, quizSize) {
   }
 }
 
-export function endLearnDispatch(studyType) {
+export function endLearnDispatch(studyType, json) {
+  console.log(studyType,'dadasd');
   return {
      type: END_TIME_LEARN,
      endTime: studyType.endTime

@@ -710,7 +710,7 @@ import {
             correct : this.state.correct,
             questionTime: (this.timeStops * 1000),            
             questionTotalTime : this.state.time,
-            type: this.state.question.type,
+            type: this.state.question.type.toUpperCase(),
             correctTitle: this.stripSpace(correctTitle)
       }
       
@@ -725,7 +725,7 @@ import {
       var parseValue = this.reduxParam;
             
       parseValue['finishTime'] = endTime;
-      parseValue['quizData'] = this.studyRecord;            
+      parseValue['questions'] = this.studyRecord;            
       this.props.endLearn(parseValue); //call our action
   };
 
