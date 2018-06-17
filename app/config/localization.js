@@ -38,6 +38,7 @@ export let strings = new LocalizedStrings({
    QUESTION_SELECT : "Select",
    QUESTION_FILL : "Fill in the blanks",
    QUESTION_ARRANGE : "Arrange the sentence",
+   QUESTION_READ_ANSWER:"Read the paragraph below",
    // Quiz
    TIMES_UP: "Time's up",
    WORD_LIST: "WORD LIST",
@@ -87,6 +88,7 @@ export let strings = new LocalizedStrings({
    PROFILE_MODAL_CLOSE : "CANCEL",
    TITLE_LEARN : 'LEARN',
    EXPLAINATION_LEARN : 'Explanation card',
+   SUMMARY_LEFT : 'Days Left',
    CHECK_ALL : "Check All",
    PROCEED : "Proceed >",
    QUIZLIST : "Quizlist",
@@ -120,7 +122,13 @@ export let strings = new LocalizedStrings({
   PROFILE_FB_SIGN_IN : "Sign In :",
   PROFILE_SETTING : "Setting",
   PROFILE_LOGOUT : "Logout",
-   
+  //summary part
+  SUMMARY_VOCABULARY : "Vocabulary",
+  SUMMARY_GRAMMAR: "Grammar",
+  SUMMARY_KANJI : "Kanji",
+  SUMMARY_WORD_LEARN : "\nWord\nLearned",
+  SUMMARY_SUMMARY_MESSAGE : "Let's Review\n What have you learn?",
+ 
   },
  ja: {
    loginGuest: "ログイン",
@@ -155,6 +163,7 @@ export let strings = new LocalizedStrings({
    QUESTION_SELECT : "選ぶ",
    QUESTION_FILL : "Fill in the blanks",
    QUESTION_ARRANGE : "Arrange the sentence",
+   QUESTION_READ_ANSWER:"Read the paragraph below",
    // Quiz
    TIMES_UP: "時間です",
    WORD_LIST: "言葉一覧",
@@ -184,6 +193,7 @@ export let strings = new LocalizedStrings({
    KANJI_LIST_LEARN : "漢字一覧",
    FLASH_CARD_HIRAGANA_LEARN: "フラッシュカードひらがな",
    FLASH_CARD_KATAKANA_LEARN: "フラッシュカードカタカナ",
+   SUMMARY_LEFT : '残り日',
    FUKUSHU1_TITLE : "復習テスト",
    FUKUSHU2_TITLE : "復習テスト",
    FUKUSHU3_TITLE : "復習テスト",
@@ -238,7 +248,14 @@ export let strings = new LocalizedStrings({
   PROFILE_ACCOUNT : "アカウント",
   PROFILE_FB_SIGN_IN : "サインイン :",
   PROFILE_SETTING : "設定",
-  PROFILE_LOGOUT : "ログアウト"
+  PROFILE_LOGOUT : "ログアウト",
 
+  //summary part
+    SUMMARY_VOCABULARY : "語彙",
+    SUMMARY_GRAMMAR: "文法",
+    SUMMARY_KANJI : "漢字",
+    SUMMARY_WORD_LEARN : "\n学ぶ\n言葉",
+    SUMMARY_SUMMARY_MESSAGE : "復習しましょう\n何が学びました？",
+    
   }
 });

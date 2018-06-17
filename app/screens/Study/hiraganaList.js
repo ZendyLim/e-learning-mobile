@@ -144,19 +144,18 @@ class HiraganaListScreen extends Component {
   }
 
   navigateReview = (type) => {
-    if(type == "QUIZ"){
-      if(this.props.quiz !== undefined){
-        this.goToReview(type);
-      }else{
-        alert("No Data");
+    this.props.getSummaryV2(this.state.topicId, this.state.topicId + this.state.categoryId, this.state.topicId + this.state.categoryId );
+    this.props.navigation.navigate('summaryLearn',(
+      {
+        index : this.state.index,
+        type : type,
+        title : this.state.title,
+        categoryId : this.state.categoryId,
+        studyType: this.state.studyType,
+        img: this.state.img,
       }
-    }else{
-      if(this.props.quiz !== undefined){
-        this.goToReview(type);          
-      }else{
-        alert("No Data");
-      }
-    }
+    ));
+
   }
 
   goToReview = (type) => {
@@ -216,10 +215,6 @@ class HiraganaListScreen extends Component {
               <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Test')}>
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_START'] }</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={study.button} onPress={this.navigateReview.bind(this, 'TEST')}>
-                <Icon name='search'   color='#fff'/>
-                <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_REVIEW'] }</Text>
               </TouchableOpacity>
             </View>
           </View>

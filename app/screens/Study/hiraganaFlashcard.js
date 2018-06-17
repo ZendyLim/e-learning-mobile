@@ -108,6 +108,8 @@ import {
         return 0.5 - Math.random()
       })
 
+      const { navigation } = this.props;
+
       this.state = {
         front: this.data[0].moji,
         back: this.data[0].romaji,
@@ -115,12 +117,14 @@ import {
         fakeFront: null,
         fakeBack: null, 
         flipped: false,
-        img : ImageData.number_chara,
+        img : ImageData[navigation.getParam('img', null)],
         isPause: false,
         loopingSound: undefined,
         tests: {},
         btnDisable: true,
-        isFinish: false
+        isFinish: false,
+        mojiLength: this.data[0].moji.length,
+        romajiLength: this.data[0].romaji.length,
       };
 
       this.progressCounter = 0;
@@ -214,7 +218,9 @@ import {
       this.pause();
       this.progressCounter++;
       this.setState({
-        url: this.data[this.progressCounter].url
+        url: this.data[this.progressCounter].url, 
+        mojiLength: this.data[this.progressCounter].moji.length,
+        romajiLength: this.data[this.progressCounter].romaji.length,
       });
       playSound(this.data[this.progressCounter], this);
       this.setState((previousState) => {
@@ -246,7 +252,9 @@ import {
       this.progressCounter--;
       this.setState({
         isFinish: false, 
-        url: this.data[this.progressCounter].url
+        url: this.data[this.progressCounter].url, 
+        mojiLength: this.data[this.progressCounter].moji.length,
+        romajiLength: this.data[this.progressCounter].romaji.length,
       });
       playSound(this.data[this.progressCounter] , this);
       this.setState((previousState) => {
@@ -347,12 +355,18 @@ import {
                 <View style={studyStyles.cardContainer}>
                   <Animated.View style={[frontAnimatedStyle]}>
                     <View style={[studyStyles.cardText]}>
-                      <ResponsiveText content={this.state.front} title={this.props.title} />
+                      <ResponsiveText 
+                        content={this.state.front} 
+                        title={this.props.title} 
+                        textLength={this.state.mojiLength} />
                     </View>
                   </Animated.View>
                   <Animated.View  style={[backAnimatedStyle]}>
                     <View style={[studyStyles.cardText]}>
-                    <ResponsiveText content={this.state.back} title={this.props.title} />
+                    <ResponsiveText 
+                      content={this.state.back} 
+                      title={this.props.title} 
+                      textLength={this.state.romajiLength} />
                     </View>
                   </Animated.View>
                 </View>

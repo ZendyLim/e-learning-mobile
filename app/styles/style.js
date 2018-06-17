@@ -384,7 +384,7 @@ module.exports = StyleSheet.create({
 			fontSize: 18,
 			position: 'absolute',
 			alignSelf: 'flex-end',
-		  right:5,
+		  	right:5,
 			zIndex: 2
 		},
 		timerWrapper: {
@@ -410,12 +410,16 @@ module.exports = StyleSheet.create({
 			justifyContent: 'center',
 		},
 		questionContainer:{
-			backgroundColor:'rgba(255,255,255,0.8)',
-			minHeight:100,
+			backgroundColor:'rgba(255,255,255,0.8)',			
 			padding:10,
 			flexWrap: 'wrap', 
 			alignItems: 'center',
 			flexDirection:'row',
+		},
+		questionReadingContainer:{
+			backgroundColor:'rgba(255,255,255,0.8)',			
+			padding:10,
+			height:180			
 		},
 		questionBigText:{
 			fontSize:60,
@@ -423,6 +427,10 @@ module.exports = StyleSheet.create({
 		},
 		questionInsText:{
 			color:textColor
+		},
+		questionNormalText:{
+			fontSize:25,
+			lineHeight:30
 		},
 		questionMediumText:{
 			fontSize:36
@@ -495,6 +503,10 @@ module.exports = StyleSheet.create({
 			flex:1,
 			zIndex:1,
 			paddingRight:80
+		},
+		quizBannerWidth:{
+			flex:1,
+			zIndex:1
 		},
 		timesUp:{
 			position:'absolute',
@@ -609,6 +621,13 @@ module.exports = StyleSheet.create({
 		quizAnswerWrapper:{			
 			position:'relative',
 			height: window.height - 210,			
+		},
+		additionalInfo:{
+			fontSize:25,
+			textAlign: 'center',
+			padding:10,
+			paddingBottom:5,
+			color:textSecondary
 		},
 		blocker:{
 			position:'absolute',

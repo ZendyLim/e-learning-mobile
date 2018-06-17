@@ -17,7 +17,7 @@ import {
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import { HiraganaLearnStack }  from '../../config/router';
-  import { greeting } from '../../config/greetinglearn'
+  import { flashData } from '../../config/flash';
   import { ImageData } from '../../config/image_list';
   import  { strings }   from '../../config/localization';
   import * as Actions from '../../actions/user'; //Import your actions
@@ -67,12 +67,11 @@ function playSound(testInfo, component) {
 
     render(){
       return(
-        <TouchableOpacity style={learnsl1.GridViewBlockStyle} onPress={() => {
+        <TouchableOpacity style={learnsl1.GridViewBlockStyle2} onPress={() => {
           return playSound(this.props.item , this.props.component);
         }}>
-          <Text style={learnsl1.NumberItem2}>{this.props.item.number}</Text>
-          <Text style={learnsl1.HiraganaItem2} >{this.props.item.hiragana}</Text>
-          <Text style={learnsl1.RomajiItem2} >{this.props.item.romaji}</Text>
+          <Text style={learnsl1.NumberItem2}>{this.props.item.moji}</Text>
+          <Text style={learnsl1.HiraganaItem2} >{this.props.item.romaji}</Text>
         </TouchableOpacity>
       );
     }
@@ -118,8 +117,9 @@ function playSound(testInfo, component) {
       console.log(this.state.img);
       console.log(this.state.studyType);
       return (
-      <ScrollView>
-        <View style={learnsl1.MainContainer}>
+      
+      <View style={learnsl1.MainContainer}>
+        <ScrollView>
           <View style={[study.titleContainer , study.bgWhite]}>
             <Image 
               style={ study.cardImg }
@@ -130,7 +130,7 @@ function playSound(testInfo, component) {
           </View>
           {/* <Text style={learnsl1.TextTitle}>{this.props.title}</Text> */}
           <FlatList 
-          data={greeting}
+          data={ flashData[0]['GREETING_TITLE'] }
           renderItem={({item}) => {
             return(
               <FlatListItem item={item} component={this}/>
@@ -138,8 +138,8 @@ function playSound(testInfo, component) {
             }}
           numColumns={1}
           />
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </View>
       );
     }
   }
