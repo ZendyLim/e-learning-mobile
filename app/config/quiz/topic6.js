@@ -117,7 +117,7 @@ export const vocabulary = [
         "moji":"おかあさん",
         "romaji":"o kā-san",
         "english":"(honorable) mother",
-        "audio":"t6_oka-san.mp3"
+        "audio":"t6_oka_san.mp3"
     },
     {
         "id":"tp6_v_16",
@@ -125,7 +125,7 @@ export const vocabulary = [
         "moji":"おくさん",
         "romaji":"oku-san",
         "english":"(honorable) wife",
-        "audio":"t6_oku-san.mp3"
+        "audio":"t6_oku_san.mp3"
     },
     {
         "id":"tp6_v_17",
@@ -133,7 +133,7 @@ export const vocabulary = [
         "moji":"おじいさん",
         "romaji":"o jī-san",
         "english":"grandfather, male senior citizen",
-        "audio":"t6_ojii-san.mp3"
+        "audio":"t6_ojii_san.mp3"
     },
     {
         "id":"tp6_v_18",
@@ -141,7 +141,7 @@ export const vocabulary = [
         "moji":"おじさん",
         "romaji":"o jisan",
         "english":"uncle, middle aged gentleman",
-        "audio":"t6_oji-san.mp3"
+        "audio":"t6_oji_san.mp3"
     },
     {
         "id":"tp6_v_19",
@@ -149,7 +149,7 @@ export const vocabulary = [
         "moji":"おとうさん",
         "romaji":"o tō-san",
         "english":"(honorable) father",
-        "audio":"t6_otou-san.mp3"
+        "audio":"t6_otou_san.mp3"
     },
     {
         "id":"tp6_v_20",
@@ -173,7 +173,7 @@ export const vocabulary = [
         "moji":"おにいさん",
         "romaji":"o nī-san",
         "english":"(honorable) older brother",
-        "audio":"t6_onii-san.mp3"
+        "audio":"t6_onii_san.mp3"
     },
     {
         "id":"tp6_v_23",
@@ -181,7 +181,7 @@ export const vocabulary = [
         "moji":"おねえさん",
         "romaji":"o nei-san",
         "english":"(honorable) older sister",
-        "audio":"t6_onei-san.mp3"
+        "audio":"t6_onei_san.mp3"
     },
     {
         "id":"tp6_v_24",
@@ -197,7 +197,7 @@ export const vocabulary = [
         "moji":"おばあさん",
         "romaji":"o bā-san",
         "english":"grandmother, female senior-citizen",
-        "audio":"t6_oba-san.mp3"
+        "audio":"t6_oba_san.mp3"
     },
     {
         "id":"tp6_v_26",
