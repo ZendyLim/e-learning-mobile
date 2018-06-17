@@ -12,65 +12,24 @@ import {
   
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { goi, bunpo, kanji } from '../../config/MeFamilyLearn'
 import { ImageData } from '../../config/image_list';
 import  { strings }   from '../../config/localization';
+import  { vocabulary, kanji, grammar } from '../../config/quiz/topic1';
 import * as Actions from '../../actions/user'; //Import your actions
-
-  var Sound = require('react-native-sound');
-
-  function setTestState(testInfo, component, status) {
-    component.setState({tests: {...component.state.tests, [testInfo.title]: status}});
-  } 
-
-  /**
- * Generic play function for majority of tests
- */
-function playSound(testInfo, component) {
-  setTestState(testInfo, component, 'pending');
-
-  const callback = (error, sound) => {
-    if (error) {
-      Alert.alert('error', error.message);
-      setTestState(testInfo, component, 'fail');
-      return;
-    }
-    setTestState(testInfo, component, 'playing');
-    // Run optional pre-play callback
-    testInfo.onPrepared && testInfo.onPrepared(sound, component);
-    sound.play(() => {
-      // Success counts as getting to the end
-      setTestState(testInfo, component, 'win');
-      // Release when it's done so we're not using up resources
-      sound.release();
-    });
-  };
-
-  // If the audio is a 'require' then the second parameter must be the callback.
-  if (testInfo.isRequire) {
-    const sound = new Sound(testInfo.url, error => callback(error, sound));
-  } else {
-    const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
-  }
-}
+import { flashData } from '../../config/flash';
 
   class FlatListItem extends Component {
-
     render(){
       return(
       <View style={{padding: 5,}}>
         <View style={learn1.FlatListItem}>
           <View style={learn1.GoiGroup}>
-            <Text style={learn1.GoiItem}>{this.props.item.title}</Text>
-            <Text style={learn1.MeaningItem} >{this.props.item.meaning}</Text>
+            <Text style={learn1.GoiItem}>{this.props.item.moji}</Text>
+            {/* <Text style={learn1.MeaningItem} >{this.props.item.romaji}</Text> */}
           </View>
           <View style={learn1.ButtonGroup}>
             <Icon reverseColor={'black'} name="info-circle"  type='font-awesome' size={45} color={"#45B5E7"} containerStyle={{flex: 1}}
             onPress={this.props.onPressButtonItem}
-            // onPress={this._setModalVisible.bin(this, true, this.props.item.title, this.props.item.meaning)}
-            />
-            <Icon name="play-circle"  type='font-awesome' size={45} color={"#45B5E7"} containerStyle={{flex: 1}}
-            onPress={() => {return playSound(this.props.item , this.props.component);}}
             />
           </View>
         </View>
@@ -80,50 +39,25 @@ function playSound(testInfo, component) {
     }
   }
 
-  export class LearnGBK01Screen extends Component {
+  export class LearnB01Screen extends Component {
 
     constructor(props) {
       super(props);
-      Sound.setCategory('Playback', true); // true = mixWithOthers
-
-      // Special case for stopping
-      this.stopSoundLooped = () => {
-        if (!this.state.loopingSound) {
-          return;
-        }
-  
-        this.state.loopingSound.stop().release();
-        this.setState({loopingSound: null, tests: {...this.state.tests, ['mp3 in bundle (looped)']: 'win'}});
-      };
+      
       this.state = {
-        loopingSound: undefined,
-        tests: {},
         modalVisible: false,
-        title: '',
-        detail: '',
         studyType: this.props.studyType,
         img: this.props.img,
         listType: this.props.listType,
-        // config: this.props.config,
+        kanji: '',
+        moji: '',
+        romaji: '',
+        english: '',
       };    
     }
 
-    _getFlatListData = () => {
-      var data;
-      if(this.state.listType == 'GL1') {
-        data = goi;
-      } else if(this.state.listType == 'BL1') {
-        data = bunpo;
-      } else if(this.state.listType == 'KL1') {
-        data = kanji;
-      }else{
-        data = kanji;
-      }
-      return data;
-    }
-    
     render() {
-      var dataDisplay = this._getFlatListData();
+      var dataDisplay = flashData[0][this.state.studyType];
       console.log('dataDisplay');
       console.log(dataDisplay);
       return (
@@ -143,8 +77,7 @@ function playSound(testInfo, component) {
           renderItem={({item}) => {
             return(
               <FlatListItem id={item.key} item={item} component={this} 
-              onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.title, item.detail)}}
-              // onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.title, item.detail)}}
+              onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.kanji, item.moji, item.romaji, item.english)}}
               />);
             }}
           numColumns={1}
@@ -159,9 +92,7 @@ function playSound(testInfo, component) {
             animationOutTiming={500}
             onRequestClose={() => {
               this._setModalVisible(!this.state.modalVisible);
-            }}
-            // style={{}}
-            >
+            }}>
            { this._renderModalContent() }
           </Modal>
       </ScrollView>
@@ -170,8 +101,8 @@ function playSound(testInfo, component) {
 
     _keyExtractor = (item) => item.key;
   
-    _setModalVisible = (visible, title, detail) => {
-      this.setState({modalVisible: visible , title: title, detail: detail});
+    _setModalVisible = (visible, kanji, moji, romaji, english) => {
+      this.setState({modalVisible: visible , kanji: kanji, moji: moji, romaji: romaji, english: english});
     }
 
     _setModalInvisible = () => {
@@ -186,11 +117,11 @@ function playSound(testInfo, component) {
             <Icon name="times"  type='font-awesome' size={30} color={"white"} underlayColor = '#45B5E7'
             onPress={this._setModalInvisible}
             />
-            <Text style={learn1.ModalTextTitle}>{ this.state.title }</Text>
+            {/* <Text style={learn1.ModalTextTitle}>{ this.state.moji }</Text> */}
         </View>
         <View style={learn1.ModalContent}>
-          <Text style={learn1.ModalContentTitle}>{ this.state.title }</Text>
-          <Text>{ this.state.detail }</Text>
+          <Text style={learn1.ModalContentTitle}>{ this.state.moji }</Text>
+          <Text>{ this.state.romaji }</Text>
         </View>
     </View>
     )
@@ -211,5 +142,5 @@ function playSound(testInfo, component) {
   }
   
   //Connect everything
-  export default connect(mapStateToProps, mapDispatchToProps)(LearnGBK01Screen);
-  // export default LearnGBK01Screen;
+  export default connect(mapStateToProps, mapDispatchToProps)(LearnB01Screen);
+  // export default LearnB01Screen;

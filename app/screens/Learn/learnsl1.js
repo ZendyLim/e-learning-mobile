@@ -18,7 +18,7 @@ import {
   import { connect } from 'react-redux';
   import { HiraganaLearnStack }  from '../../config/router';
   // import { number } from '../../config/numberlearn';
-  import { numberList } from '../../config/data';
+  import { flashData } from '../../config/flash';
   import { ImageData } from '../../config/image_list';
   import  { strings }   from '../../config/localization';
   import * as Actions from '../../actions/user'; //Import your actions
@@ -54,9 +54,9 @@ function playSound(testInfo, component) {
 
   // If the audio is a 'require' then the second parameter must be the callback.
   if (testInfo.isRequire) {
-    const sound = new Sound(testInfo.audio, error => callback(error, sound));
+    const sound = new Sound(testInfo.url, error => callback(error, sound));
   } else {
-    const sound = new Sound(testInfo.audio, testInfo.basePath, error => callback(error, sound));
+    const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
   }
 }
 
@@ -67,9 +67,8 @@ function playSound(testInfo, component) {
         <TouchableOpacity style={learnsl1.GridViewBlockStyle} onPress={() => {
           return playSound(this.props.item , this.props.component);
         }}>
-          <Text style={learnsl1.NumberItem}>{this.props.item.kanji}</Text>
-          <Text style={learnsl1.HiraganaItem} >{this.props.item.moji}</Text>
-          <Text style={learnsl1.RomajiItem} >{this.props.item.romaji}</Text>
+          <Text style={learnsl1.NumberItem}>{this.props.item.moji}</Text>
+          <Text style={learnsl1.HiraganaItem} >{this.props.item.romaji}</Text>
         </TouchableOpacity>
       );
     }
@@ -104,11 +103,12 @@ function playSound(testInfo, component) {
       }
 
     render() {
-      console.log(this.state.img);
-      console.log(this.state.studyType);
+      console.log(flashData.NUMBER_TITLE);
+      console.log(flashData);
       return (
-      <ScrollView>
-        <View style={learnsl1.MainContainer}>
+      // <ScrollView>
+      <View style={learnsl1.MainContainer}>
+        <ScrollView>
           <View style={[study.titleContainer , study.bgWhite]}>
             <Image 
               style={ study.cardImg }
@@ -117,7 +117,7 @@ function playSound(testInfo, component) {
             <Text style={study.title}> { strings[this.props.studyType] } </Text>
           </View>
           <FlatList 
-          data={numberList}
+          data={ flashData[0]['NUMBER_TITLE'] }
           renderItem={({item}) => {
             return(
               <FlatListItem item={item} component={this}/>
@@ -125,8 +125,9 @@ function playSound(testInfo, component) {
             }}
           numColumns={1}
           />
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </View>
+      // </ScrollView>
       );
     }
   }
