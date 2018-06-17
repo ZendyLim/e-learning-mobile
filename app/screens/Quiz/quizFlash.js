@@ -129,7 +129,7 @@ import {
       let timerRun = this.state.timerRun;
       let timerRestart = this.state.timerRestart;
       let question = this.state.question;
-      
+      ///console.log(this.state);
       return (
         <View style={styles.container}>
           { this.state.question && this.state.question.id ? (
@@ -231,7 +231,7 @@ import {
       this.setListQuestion();
 
       this.setDefinedQuestion(idList);
-      console.log(this.quizItems,this.testItemCount);
+      //console.log(this.quizItems,this.testItemCount);
       if(!this.quizItems){
         const resetAction = NavigationActions.reset({
           index: 0,
@@ -244,11 +244,11 @@ import {
       }
       else{                
         shuffledQuiz = this.shuffleItems(this.quizItems);        
-        console.log(shuffledQuiz);
+        //console.log(shuffledQuiz);
         this.allQuestion = shuffledQuiz.map((question) =>          
             this.shuffleAnswers(question, shuffledQuiz)    
         );
-        console.log(this.allQuestion);
+        //console.log(this.allQuestion);
         this.currentQuestion = this.allQuestion[0];
         
         this.setState({
@@ -310,7 +310,7 @@ import {
         for(i = 0; i < topics.length; i++){
           
           tempQuiz = quizItems[this.initialParams.studyType + '_and_' + topics[i]];
-          console.log(tempQuiz, this.initialParams.studyType + '_and_' + topics[i]);
+          //console.log(tempQuiz, this.initialParams.studyType + '_and_' + topics[i]);
           this.byCategory[topics[i]] = tempQuiz;
                   
           for(c = 0; c < this.testItemCount[topics[i]]; c++){
@@ -618,13 +618,14 @@ import {
       
       if(this.mounted){
         this.setTakeQuiz();
-        console.log(this.allQuestion);
+        //console.log(this.allQuestion);
         if(counter < this.allQuestion.length && !forceEnd){
           this.showCorrect = false;
           this.timeStops = 0;
           this.currentQuestion = this.allQuestion[counter];
           
-          this.randomQuizFormat();          
+          this.randomQuizFormat();
+          console.log(this.state);
           reset = {
             counter: counter,
             //questionId: questionId,
@@ -696,7 +697,7 @@ import {
       if(this.initialParams.isTopicTest){
         quizSizes = this.allQuestion.length;
       }
-      console.log(quizSizes, this.allQuestion.length, this.initialParams.isTopicTest);
+      //console.log(quizSizes, this.allQuestion.length, this.initialParams.isTopicTest);
       this.props.startLearn(this.state.studyType, this.startTime,this.title, quizSizes); //call our action
     }
 
@@ -736,18 +737,20 @@ import {
 
     onTimesUp = (val) => {
       
-      if(this.study.type == 'TOPIC' && this.state.type == 'Quiz'){        
+      if(this.state.type == 'Quiz'){        
         this.setState({
-          showCorrect:true
-        });     
+          showCorrect:true,          
+        });             
+
       }
       else{
         this.setState({
           timesUp: true,
           expression:'sad'
         });
-
+        
         setTimeout(() => {
+          
           this.setNextQuestion();
         }, this.state.pause); 
       }
@@ -776,8 +779,8 @@ import {
       }   
       
       this.addScore(isCorrect);
-
-      if(this.study.type == 'TOPIC' && this.state.type == 'Quiz' && this.showCorrect){
+      
+      if(this.state.type == 'Quiz' && this.showCorrect){
         setTimeout(() => {
 
           this.setState({
@@ -788,8 +791,10 @@ import {
         
       }
       else{
+        console.log('stopTimer',1);
         setTimeout(() => {
           this.showCorrect = false;
+          console.log('stopTime',1);
           this.setNextQuestion();
         
         }, this.state.pause);  

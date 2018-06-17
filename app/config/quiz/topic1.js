@@ -478,7 +478,7 @@ export const vocabulary = [
         "moji":"いち",
         "kanji":"一",
         "english":"one",
-        "audio":"one.mp3"
+        "audio":"n_ichi.mp3"
     },
     {
         "id":"tp1_k_2",
@@ -487,7 +487,7 @@ export const vocabulary = [
         "moji":"に",
         "kanji":"二",
         "english":"two",
-        "audio":"two.mp3"
+        "audio":"n_ni.mp3"
     },
     {
         "id":"tp1_k_3",
@@ -496,7 +496,7 @@ export const vocabulary = [
         "moji":"さん",
         "kanji":"三",
         "english":"three",
-        "audio":"three.mp3"
+        "audio":"n_san.mp3"
     },
     {
         "id":"tp1_k_4",
@@ -505,7 +505,7 @@ export const vocabulary = [
         "moji":"し/よん",
         "kanji":"四",
         "english":"four",
-        "audio":"four.mp3"
+        "audio":"n_yon.mp3"
     },
     {
         "id":"tp1_k_5",
@@ -514,7 +514,7 @@ export const vocabulary = [
         "moji":"ご",
         "kanji":"五",
         "english":"five",
-        "audio":"five.mp3"
+        "audio":"n_go.mp3"
     },
     {
         "id":"tp1_k_6",
@@ -523,7 +523,7 @@ export const vocabulary = [
         "moji":"ろく",
         "kanji":"六",
         "english":"six",
-        "audio":"six.mp3"
+        "audio":"n_roku.mp3"
     },
     {
         "id":"tp1_k_7",
@@ -532,7 +532,7 @@ export const vocabulary = [
         "moji":"なな/しち",
         "kanji":"七",
         "english":"seven",
-        "audio":"seven.mp3"
+        "audio":"n_nana.mp3"
     },
     {
         "id":"tp1_k_8",
@@ -541,7 +541,7 @@ export const vocabulary = [
         "moji":"はち",
         "kanji":"八",
         "english":"eight",
-        "audio":"eight.mp3"
+        "audio":"n_hachi.mp3"
     },
     {
         "id":"tp1_k_9",
@@ -550,7 +550,7 @@ export const vocabulary = [
         "moji":"きゅう/く",
         "kanji":"九",
         "english":"nine",
-        "audio":"nine.mp3"
+        "audio":"n_kyuu.mp3"
     },
     {
         "id":"tp1_k_10",
@@ -559,7 +559,7 @@ export const vocabulary = [
         "moji":"じゅう",
         "kanji":"十",
         "english":"ten",
-        "audio":"ten.mp3"
+        "audio":"n_juu.mp3"
     },
     {
         "id":"tp1_k_11",
@@ -568,7 +568,7 @@ export const vocabulary = [
         "moji":"ひゃく",
         "kanji":"百",
         "english":"hundred",
-        "audio":"hundred.mp3"
+        "audio":"n_hyaku.mp3"
     },
     {
         "id":"tp1_k_12",
@@ -577,7 +577,7 @@ export const vocabulary = [
         "moji":"せん",
         "kanji":"千",
         "english":"thousand",
-        "audio":"thousand.mp3"
+        "audio":"n_sen.mp3"
     },
     {
         "id":"tp1_k_13",
@@ -586,7 +586,7 @@ export const vocabulary = [
         "moji":"まん",
         "kanji":"万",
         "english":"ten thousand",
-        "audio":"ten thousand.mp3"
+        "audio":"t1_man.mp3"
     },
     {
         "id":"tp1_k_14",
@@ -595,8 +595,17 @@ export const vocabulary = [
         "moji":"えん",
         "kanji":"円",
         "english":"yen",
-        "audio":"yen.mp3"
+        "audio":"t1_en.mp3"
     },
+    {
+        "id":"tp1_k_15",
+        "type":"kanji",
+        "romaji":"nani, nan",
+        "moji":"なに、なん",
+        "kanji":"何",
+        "english":"what",
+        "audio":"t1_nani_nan.mp3"
+    }
   ];
   
   export const grammar= [
@@ -607,7 +616,7 @@ export const vocabulary = [
         "moji":"わたし は かいしゃいん です。",
         "kanji":"わたし は 会社員 です",
         "english":"I'm an office worker",
-        "audio":"ka.mp3"
+        "audio":"tp1_g_1.mp3"
     },
     {   
         "id":"tp1_g_2",
@@ -616,16 +625,16 @@ export const vocabulary = [
         "moji":"リンさん は ちゅうごじん です。",
         "kanji":"リンさん は 中国人 です。",
         "english":"Mr./Ms. Lin is Chinese.",
-        "audio":"t1_kanako-san ha jaarimasen..mp3"
+        "audio":"tp1_g_2.mp3"
     },
     {	
         "id":"tp1_g_3",
         "type":"grammar",
         "romaji":"guensan ha gakusei desu",
         "moji":"グエンさん は がくせい です。",
-        "kanji":"グエンさんは学生です。",
+        "kanji":"グエンさん は 学生 です。",
         "english":"Mr./Ms. Nguyen is a student.",
-        "audio":""
+        "audio":"tp1_g_3.mp3"
     },
     {	
         "id":"tp1_g_4",
@@ -634,7 +643,7 @@ export const vocabulary = [
         "moji":"わたし は がくせい じゃありません。",
         "kanji":"わたし は 学生 じゃありません。",
         "english":"I'm not a student.",
-        "audio":""
+        "audio":"tp1_g_4.mp3"
     },
     {	
         "id":"tp1_g_5",
@@ -643,7 +652,7 @@ export const vocabulary = [
         "moji":"キムさん は がくせい じゃありません。",
         "kanji":"キムさん は 学生 じゃありません。",
         "english":"Mr./Ms. Kim is not a student.",
-        "audio":""
+        "audio":"tp1_g_5.mp3"
     },
     {	
         "id":"tp1_g_6",
@@ -652,7 +661,7 @@ export const vocabulary = [
         "moji":"リンさん は アメリカじん じゃありません。",
         "kanji":"リンさん は アメリカ人 じゃありません。",
         "english":"Mr./Ms. Lin is not American.",
-        "audio":""
+        "audio":"tp1_g_6.mp3"
     },
     {	
         "id":"tp1_g_7",
@@ -661,7 +670,7 @@ export const vocabulary = [
         "moji":"グエンさん は せんせい じゃありません。",
         "kanji":"グエンさん は 先生 じゃありません。",
         "english":"Mr./Ms. Nguyen is not a teacher.",
-        "audio":""
+        "audio":"tp1_g_7.mp3"
     },
     {	
         "id":"tp1_g_8",
@@ -670,7 +679,7 @@ export const vocabulary = [
         "moji":"マークさん は にほんじん じゃありません。",
         "kanji":"マークさん は 日本人 じゃありません。",
         "english":"Mr. Mark is not Japanese.",
-        "audio":""
+        "audio":"tp1_g_8.mp3"
     },
     {	
         "id":"tp1_g_9",
@@ -679,7 +688,7 @@ export const vocabulary = [
         "moji":"キムさん は がくせい です か。",
         "kanji":"キムさん は 学生 です か。",
         "english":"Is Mr./Ms. Kim a student?",
-        "audio":""
+        "audio":"tp1_g_9.mp3"
     },
     {	
         "id":"tp1_g_10",
@@ -688,7 +697,7 @@ export const vocabulary = [
         "moji":"リンさん は ちゅうごくじん です か。",
         "kanji":"リンさん は 中国人 です か。",
         "english":"Is Mr./Ms. Lin Chinese?",
-        "audio":""
+        "audio":"tp1_g_10.mp3"
     },
     {	
         "id":"tp1_g_11",
@@ -697,7 +706,7 @@ export const vocabulary = [
         "moji":"マリアさん は かいしゃいん です か。",
         "kanji":"マリアさん は 会社員 です か。",
         "english":"Is Ms. Maria an office worker?",
-        "audio":""
+        "audio":"tp1_g_11.mp3"
     },
     {	
         "id":"tp1_g_12",
@@ -706,7 +715,7 @@ export const vocabulary = [
         "moji":"すずきさん は アメリカじん ですか。",
         "kanji":"すずきさん は アメリカ人 です か。",
         "english":"Is Mr./Ms. Suzuki an American?",
-        "audio":""
+        "audio":"tp1_g_12.mp3"
     },
     {	
         "id":"tp1_g_13",
@@ -715,7 +724,7 @@ export const vocabulary = [
         "moji":"マークさん は せんせい です か。",
         "kanji":"マークさん は 先生 です か。",
         "english":"Is Mr. Mark a teacher?",
-        "audio":""
+        "audio":"tp1_g_13.mp3"
     },
     {	
         "id":"tp1_g_14",
@@ -724,7 +733,7 @@ export const vocabulary = [
         "moji":"わたし は かんじ が わかります",
         "kanji":"わたし は 漢字 が わかります。",
         "english":"I understand Kanji.",
-        "audio":""
+        "audio":"tp1_g_14.mp3"
     },
     {	
         "id":"tp1_g_15",
@@ -733,7 +742,7 @@ export const vocabulary = [
         "moji":"キムさん は えいご が わかります",
         "kanji":"キムさん は 英語 が わかります。",
         "english":"Mr./Ms. Kim understands English.",
-        "audio":""
+        "audio":"tp1_g_15.mp3"
     },
     {	
         "id":"tp1_g_16",
@@ -742,7 +751,7 @@ export const vocabulary = [
         "moji":"リンさん は ちゅうごくご が わかります",
         "kanji":"リンさん は 中国語 が わかります。",
         "english":"Mr./Ms. Lin understands Chinese.",
-        "audio":""
+        "audio":"tp1_g_16.mp3"
     },
     {	
         "id":"tp1_g_17",
@@ -751,7 +760,7 @@ export const vocabulary = [
         "moji":"グエンさん は カタカナ が わかります",
         "kanji":"グエンさん は カタカナ が わかります。",
         "english":"Mr./Ms. Nguyen understands Katakana.",
-        "audio":""
+        "audio":"tp1_g_17.mp3"
     },
     {	
         "id":"tp1_g_18",
@@ -760,7 +769,7 @@ export const vocabulary = [
         "moji":"マークさん は ひらがな が わかります",
         "kanji":"マークさん は ひらがな が わかります。",
         "english":"Mr. Mark understands Hiragana.",
-        "audio":""
+        "audio":"tp1_g_18.mp3"
     },
     {	
         "id":"tp1_g_19",
@@ -769,7 +778,7 @@ export const vocabulary = [
         "moji":"わたし は えいご が わかりません",
         "kanji":"わたし は 英語 が わかりません。",
         "english":"I don't understand English.",
-        "audio":""
+        "audio":"tp1_g_19.mp3"
     },
     {	
         "id":"tp1_g_20",
@@ -778,7 +787,7 @@ export const vocabulary = [
         "moji":"キムさん は ちゅうごくご が わかりません",
         "kanji":"キムさん は 中国語 が わかりません。",
         "english":"Mr./Ms. Kim doesn't understand Chinese.",
-        "audio":""
+        "audio":"tp1_g_20.mp3"
     },
     {	
         "id":"tp1_g_21",
@@ -787,7 +796,7 @@ export const vocabulary = [
         "moji":"リンさん は にほんご が わかりません",
         "kanji":"リンさん は 日本語 が わかりません。",
         "english":"Mr./Ms. Lin doesn't understand Japanese.",
-        "audio":""
+        "audio":"tp1_g_21.mp3"
     },
     {	
         "id":"tp1_g_22",
@@ -796,7 +805,7 @@ export const vocabulary = [
         "moji":"グエンさん は かんじ が わかりません",
         "kanji":"グエンさん は 漢字 が わかりません。",
         "english":"Mr./Ms. Nguyen doesn't understand Kanji.",
-        "audio":""
+        "audio":"tp1_g_22.mp3"
     },
     {	
         "id":"tp1_g_23",
@@ -805,7 +814,7 @@ export const vocabulary = [
         "moji":"マークさん は カタカナ が わかりません",
         "kanji":"マークさん は カタカナ が わかりません。",
         "english":"Mr. Mark doesn't understand Katakana.",
-        "audio":""
+        "audio":"tp1_g_23.mp3"
     },
     {	
         "id":"tp1_g_24",
@@ -823,7 +832,7 @@ export const vocabulary = [
         "moji":"リンさん は にほんご が わかります か",
         "kanji":"リンさん は 日本語 が わかります か。",
         "english":"Does Mr./Ms. Lin understand Japanese?",
-        "audio":""
+        "audio":"tp1_g_25.mp3"
     },
     {	
         "id":"tp1_g_26",
@@ -859,7 +868,7 @@ export const vocabulary = [
         "moji":"わたし は かいしゃいん です。ジョンさん も かいしゃいん です。",
         "kanji":"わたし は 会社員 です。ジョンさん も 会社員 です。",
         "english":"I am an office worker. Mr. John is an office worker, too.",
-        "audio":""
+        "audio":"tp1_g_29.mp3"
     },
     {	
         "id":"tp1_g_30",
@@ -868,7 +877,7 @@ export const vocabulary = [
         "moji":"キムさん は えいご が わかります。マークさん も えいご が わかります。",
         "kanji":"キムさん は 英語 が わかります。マークさん も 英語 が わかります。",
         "english":"Mr./Ms. Kim understands English. Mr. Mark also understands English.",
-        "audio":""
+        "audio":"tp1_g_30.mp3"
     },
     {	
         "id":"tp1_g_31",
@@ -877,7 +886,7 @@ export const vocabulary = [
         "moji":"グエンさん は がくせい です。マークさん も がくせい です。",
         "kanji":"グエンさん は 学生 です。マークさん も 学生 です。",
         "english":"Mr./Ms. Nguyen is a student. Mr. Mark is also a student.",
-        "audio":""
+        "audio":"tp1_g_31.mp3"
     },
     {	
         "id":"tp1_g_32",
@@ -886,7 +895,7 @@ export const vocabulary = [
         "moji":"わたし は アメリカじん です。マークさん も アメリカじん です。",
         "kanji":"わたし は アメリカ人 です。マークさん も アメリカ人 です。",
         "english":"I am American. Mr. Mark is also American.",
-        "audio":""
+        "audio":"tp1_g_32.mp3"
     },
     {	
         "id":"tp1_g_33",
@@ -895,7 +904,7 @@ export const vocabulary = [
         "moji":"わたし は ちゅうごく ご が わかりません。さとうさん も ちゅうごく ご が わかりません。",
         "kanji":"わたし は 中国語 が わかりません。さとうさん も 中国語 が わかりません。",
         "english":"I don't understand Chinese. Mr./Ms. Sato also doesn't understand Chinese.",
-        "audio":""
+        "audio":"tp1_g_33.mp3"
     },
     {	
         "id":"tp1_g_34",
@@ -904,7 +913,7 @@ export const vocabulary = [
         "moji":"リンさん は さくら だいがく の がくせい です。",
         "kanji":"リンさん は さくら 大学 の 学生 です。",
         "english":"Mr./Ms. Lin is a student of Sakura University.",
-        "audio":""
+        "audio":"tp1_g_34.mp3"
     },
     {	
         "id":"tp1_g_35",
@@ -913,7 +922,7 @@ export const vocabulary = [
         "moji":"アンナさん は AAAカンパニー の しゃいん です。",
         "kanji":"アンナさん は AAAカンパニー の 社員 です。",
         "english":"Mrs. Anna is an employeed of AAA Company.",
-        "audio":""
+        "audio":"tp1_g_35.mp3"
     },
     {	
         "id":"tp1_g_36",
@@ -922,7 +931,7 @@ export const vocabulary = [
         "moji":"わたし は のぞみ にほんご がっこう の がくせい です。",
         "kanji":"わたし は のぞみ 日本語 学校 の 学生 です。",
         "english":"I am a student of Nozomi Japanese language school.",
-        "audio":""
+        "audio":"tp1_g_36.mp3"
     },
     {	
         "id":"tp1_g_37",
@@ -931,7 +940,7 @@ export const vocabulary = [
         "moji":"すずきさん は さくら だいがく の せんせい です。",
         "kanji":"すずきさん は さくら 大学 の 先生 です。",
         "english":"Mr./Ms. Suzuki is a teacher of Sakura University.",
-        "audio":""
+        "audio":"tp1_g_37.mp3"
     },
     {	
         "id":"tp1_g_38",
@@ -940,7 +949,7 @@ export const vocabulary = [
         "moji":"これ は くるま の ほん です。",
         "kanji":"これ は 車 の 本 です。",
         "english":"This is a book about cars.",
-        "audio":""
+        "audio":"tp1_g_38.mp3"
     },
     {	
         "id":"tp1_g_39",
@@ -949,7 +958,7 @@ export const vocabulary = [
         "moji":"これ は にほんご の テスト です。",
         "kanji":"これ は 日本語 の テスト です。",
         "english":"This is a Japanese language test.",
-        "audio":""
+        "audio":"tp1_g_39.mp3"
     },
     {	
         "id":"tp1_g_40",
@@ -958,7 +967,7 @@ export const vocabulary = [
         "moji":"これ は わたし の くるま です。",
         "kanji":"これ は 私 の 車 です。",
         "english":"This is my car.",
-        "audio":""
+        "audio":"tp1_g_40.mp3"
     },
     {	
         "id":"tp1_g_41",
@@ -967,7 +976,7 @@ export const vocabulary = [
         "moji":"これ は グエンさん の ほん です。",
         "kanji":"これ は グエンさん の 本 です。",
         "english":"This is Mr./Ms. Nguyen's book.",
-        "audio":""
+        "audio":"tp1_g_41.mp3"
     },
     {	
         "id":"tp1_g_42",
@@ -976,7 +985,7 @@ export const vocabulary = [
         "moji":"これ は わたし の iPhone です。",
         "kanji":"これ は 私 の iPhone です。",
         "english":"This is my iPhone.",
-        "audio":""
+        "audio":"tp1_g_42.mp3"
     },
     {	
         "id":"tp1_g_43",
@@ -985,7 +994,7 @@ export const vocabulary = [
         "moji":"これ は にほん の おちゃ です。",
         "kanji":"これ は 日本 の お茶 です。",
         "english":"This is a Japanese tea.",
-        "audio":""
+        "audio":"tp1_g_43.mp3"
     },
     {	
         "id":"tp1_g_44",
@@ -994,7 +1003,7 @@ export const vocabulary = [
         "moji":"これ は ちゅうごく の くるま です。",
         "kanji":"これ は 中国 の 車 です。",
         "english":"This is a Chinese car.",
-        "audio":""
+        "audio":"tp1_g_44.mp3"
     },
     {	
         "id":"tp1_g_45",
@@ -1003,7 +1012,7 @@ export const vocabulary = [
         "moji":"これ は アメリカ の パソコン です。",
         "kanji":"これ は アメリカ の パソコン です。",
         "english":"This is an American personal computer.",
-        "audio":""
+        "audio":"tp1_g_45.mp3"
     },
     {	
         "id":"tp1_g_46",
@@ -1012,7 +1021,7 @@ export const vocabulary = [
         "moji":"わたし は ちゅうごく ご が できます。",
         "kanji":"わたし は 中国語 が できます。",
         "english":"I can (speak) Chinese.",
-        "audio":""
+        "audio":"tp1_g_46.mp3"
     },
     {	
         "id":"tp1_g_47",
@@ -1021,7 +1030,7 @@ export const vocabulary = [
         "moji":"アンナさん は にほんご が できます。",
         "kanji":"アンナさん は 日本語 が できます。",
         "english":"Ms. Anna can (speak) Japanese.",
-        "audio":""
+        "audio":"tp1_g_47.mp3"
     },
     {	
         "id":"tp1_g_48",
@@ -1030,7 +1039,7 @@ export const vocabulary = [
         "moji":"ワンさん は えいご が できません。",
         "kanji":"ワンさん は 英語 が できません。",
         "english":"Mr./Ms. Wan can't (speak) English.",
-        "audio":""
+        "audio":"tp1_g_48.mp3"
     },
     {	
         "id":"tp1_g_49",
@@ -1039,7 +1048,7 @@ export const vocabulary = [
         "moji":"ダニエルさん は りょうり が できません。",
         "kanji":"ダニエルさん は 料理 が できません。",
         "english":"Mr. Daniel can't cook.",
-        "audio":""
+        "audio":"tp1_g_49.mp3"
     },
   ];
 
