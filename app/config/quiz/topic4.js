@@ -517,7 +517,7 @@ export const kanji = [
         "moji":"せん/さき",
         "kanji":"先",
         "english":"ahead",
-        "audio":"t4_sen.mp3"
+        "audio":"t4_saki.mp3"
     },
     {
         "id":"tp4_k_6",
@@ -615,6 +615,99 @@ export const grammar = [
 ]
 
 export const listening = [
+        {
+        "id":"tp4_l_1",
+        "type":"listening",
+        "romaji":"喫茶店でコーヒーを飲みました",
+        "moji":"喫茶店でコーヒーを飲みました",
+        "kanji":"喫茶店でコーヒーを飲みました",
+        "english":"喫茶店でコーヒーを飲みました",
+        "answerOption":[
+            {
+                "id":"tp4_l_2",
+                "type":"listening",
+                "moji":"図書館で本を借りました"
+            },
+            {
+                "id":"tp4_l_3",
+                "type":"listening",
+                "moji":"レストランで本を読みました"
+            },
+            {
+                "id":"tp4_l_1",
+                "type":"listening",
+                "moji":"喫茶店でコーヒーを飲みました"
+            },
+            {
+                "id":"tp4_l_4",
+                "type":"listening",
+                "moji":"デパートで本を買いました"
+            }
+        ],
+        "audio":"t4_listening_1.mp3"
+    },
+    {
+        "id":"tp4_l_2",
+        "type":"listening",
+        "romaji":"kouen",
+        "moji":"公園",
+        "kanji":"公園",
+        "english":"park",
+        "answerOption":[
+            {
+                "id":"tp4_l_4",
+                "type":"listening",
+                "moji":"会社"
+            },
+            {
+                "id":"tp4_l_3",
+                "type":"listening",
+                "moji":"会社の近くのお店"
+            },
+            {
+                "id":"tp4_l_1",
+                "type":"listening",
+                "moji":"スーパー"
+            },
+            {
+                "id":"tp4_l_2",
+                "type":"listening",
+                "moji":"公園"
+            }
+        ],
+        "audio":"t4_listening_2.mp3"
+    },
+    {
+        "id":"tp4_l_3",
+        "type":"listening",
+        "romaji":"densha de ikimasu",
+        "moji":"電車で行きます",
+        "kanji":"電車で行きます",
+        "english":"I'll go by train",
+        "answerOption":[
+            {
+                "id":"tp4_l_4",
+                "type":"listening",
+                "moji":"タクシーで行きます"
+            },
+            {
+                "id":"tp4_l_2",
+                "type":"listening",
+                "moji":"バスで行きます"
+            },
+            {
+                "id":"tp4_l_3",
+                "type":"listening",
+                "moji":"電車で行きます"
+            },
+            {
+                "id":"tp4_l_1",
+                "type":"listening",
+                "moji":"歩いていきます"
+            }
+        ],
+        "audio":"t4_listening_3.mp3"
+    }
 ]
 
 export const reading = [

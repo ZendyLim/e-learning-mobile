@@ -385,7 +385,7 @@ export const kanji = [
         "moji":"からだ",
         "kanji":"体",
         "english":"body",
-        "audio":"body.mp3"
+        "audio":"t7_karada.mp3"
     },
     {
         "id":"tp7_k_2",
@@ -394,7 +394,7 @@ export const kanji = [
         "moji":"め",
         "kanji":"目",
         "english":"eye",
-        "audio":"eye.mp3"
+        "audio":"t7_me.mp3"
     },
     {
         "id":"tp7_k_3",
@@ -403,7 +403,7 @@ export const kanji = [
         "moji":"くち",
         "kanji":"口",
         "english":"mouth",
-        "audio":"mouth.mp3"
+        "audio":"t7_kuchi.mp3"
     },
     {
         "id":"tp7_k_4",
@@ -412,7 +412,7 @@ export const kanji = [
         "moji":"みみ",
         "kanji":"耳",
         "english":"ear",
-        "audio":"ear.mp3"
+        "audio":"t7_mimi.mp3"
     },
     {
         "id":"tp7_k_5",
@@ -421,7 +421,7 @@ export const kanji = [
         "moji":"て",
         "kanji":"手",
         "english":"hand",
-        "audio":"hand.mp3"
+        "audio":"t7_te.mp3"
     },
     {
         "id":"tp7_k_6",
@@ -430,7 +430,7 @@ export const kanji = [
         "moji":"あし",
         "kanji":"足",
         "english":"foot",
-        "audio":"foot.mp3"
+        "audio":"t7_ashi.mp3"
     },
     {
         "id":"tp7_k_7",
@@ -439,7 +439,7 @@ export const kanji = [
         "moji":"ちから",
         "kanji":"力",
         "english":"power",
-        "audio":"power.mp3"
+        "audio":"t7_chikara.mp3"
     },
     {
         "id":"tp7_k_8",
@@ -448,7 +448,7 @@ export const kanji = [
         "moji":"うし",
         "kanji":"牛",
         "english":"cow",
-        "audio":"cow.mp3"
+        "audio":"t7_ushi.mp3"
     },
     {
         "id":"tp7_k_9",
@@ -457,7 +457,7 @@ export const kanji = [
         "moji":"うま",
         "kanji":"馬",
         "english":"horse",
-        "audio":"horse.mp3"
+        "audio":"t7_uma.mp3"
     },
     {
         "id":"tp7_k_10",
@@ -466,7 +466,7 @@ export const kanji = [
         "moji":"さかな",
         "kanji":"魚",
         "english":"fish",
-        "audio":"fish.mp3"
+        "audio":"t7_sakana.mp3"
     },
     {
         "id":"tp7_k_11",
@@ -475,7 +475,7 @@ export const kanji = [
         "moji":"かい",
         "kanji":"貝",
         "english":"shell",
-        "audio":"shell.mp3"
+        "audio":"t7_kai.mp3"
     },
     {
         "id":"tp7_k_12",
@@ -484,7 +484,7 @@ export const kanji = [
         "moji":"にく",
         "kanji":"肉",
         "english":"meat",
-        "audio":"meat.mp3"
+        "audio":"t7_niku.mp3"
     },
     {
         "id":"tp7_k_13",
@@ -493,7 +493,7 @@ export const kanji = [
         "moji":"しろ",
         "kanji":"白",
         "english":"white",
-        "audio":"white.mp3"
+        "audio":"t7_shiro.mp3"
     },
     {
         "id":"tp7_k_14",
@@ -502,9 +502,8 @@ export const kanji = [
         "moji":"くろ",
         "kanji":"黒",
         "english":"black",
-        "audio":"black.mp3"
+        "audio":"t7_kuro.mp3"
     },
-    /////// 7
     {
         "id":"tp7_k_15",
         "type":"kanji",
@@ -512,7 +511,7 @@ export const kanji = [
         "moji":"こく/くに",
         "kanji":"国",
         "english":"country",
-        "audio":"country.mp3"
+        "audio":"t7_koku_kuni.mp3"
     },
 ]
 
@@ -520,6 +519,99 @@ export const grammar = [
 ]
 
 export const listening = [
+    {
+        "id":"tp7_l_1",
+        "type":"listening",
+        "romaji":"駅の前の喫茶店",
+        "moji":"駅の前の喫茶店",
+        "kanji":"駅の前の喫茶店",
+        "english":"駅の前の喫茶店",
+        "answerOption":[
+            {
+                "id":"tp7_l_2",
+                "type":"listening",
+                "moji":"駅の出口"
+            },
+            {
+                "id":"tp7_l_1",
+                "type":"listening",
+                "moji":"駅の前の喫茶店"
+            },
+            {
+                "id":"tp7_l_3",
+                "type":"listening",
+                "moji":"駅の近くのスーパー"
+            },
+            {
+                "id":"tp7_l_4",
+                "type":"listening",
+                "moji":"山"
+            }
+        ],
+        "audio":"t7_listening_1.mp3"
+    },
+    {
+        "id":"tp7_l_2",
+        "type":"listening",
+        "romaji":"映画を見ました",
+        "moji":"映画を見ました",
+        "kanji":"映画を見ました",
+        "english":"映画を見ました",
+        "answerOption":[
+            {
+                "id":"tp7_l_1",
+                "type":"listening",
+                "moji":"家を掃除しました"
+            },
+            {
+                "id":"tp7_l_3",
+                "type":"listening",
+                "moji":"料理を作りました"
+            },
+            {
+                "id":"tp7_l_2",
+                "type":"listening",
+                "moji":"映画を見ました"
+            },
+            {
+                "id":"tp7_l_4",
+                "type":"listening",
+                "moji":"友達にメールを書きました"
+            }
+        ],
+        "audio":"t7_listening_2.mp3"
+    },
+    {
+        "id":"tp7_l_1",
+        "type":"listening",
+        "romaji":"かばんを部屋に持って行きます",
+        "moji":"かばんを部屋に持って行きます",
+        "kanji":"かばんを部屋に持って行きます",
+        "english":"かばんを部屋に持って行きます",
+        "answerOption":[
+            {
+                "id":"tp7_l_1",
+                "type":"listening",
+                "moji":"昼ご飯を食べます。"
+            },
+            {
+                "id":"tp7_l_3",
+                "type":"listening",
+                "moji":"かばんを部屋に持って行きます"
+            },
+            {
+                "id":"tp7_l_2",
+                "type":"listening",
+                "moji":"海へ遊びに行きます"
+            },
+            {
+                "id":"tp7_l_4",
+                "type":"listening",
+                "moji":"旅行会社の人に聞きます。"
+            }
+        ],
+        "audio":"t7_listening_3.mp3"
+    }
 ]
 
 export const reading = [

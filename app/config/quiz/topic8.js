@@ -321,7 +321,7 @@ export const kanji = [
         "moji":"えい",
         "kanji":"英",
         "english":"English",
-        "audio":"English.mp3"
+        "audio":"t8_ei.mp3"
     },
     {
         "id":"tp8_k_2",
@@ -330,7 +330,7 @@ export const kanji = [
         "moji":"ご",
         "kanji":"語",
         "english":"word, language",
-        "audio":"word, language.mp3"
+        "audio":"t8_go.mp3"
     },
     {
         "id":"tp8_k_3",
@@ -339,7 +339,7 @@ export const kanji = [
         "moji":"てん",
         "kanji":"天",
         "english":"heaven",
-        "audio":"heaven.mp3"
+        "audio":"t8_ten.mp3"
     },
     {
         "id":"tp8_k_4",
@@ -348,7 +348,7 @@ export const kanji = [
         "moji":"き",
         "kanji":"気",
         "english":"spirit",
-        "audio":"spirit.mp3"
+        "audio":"t8_ki.mp3"
     },
     {
         "id":"tp8_k_5",
@@ -357,7 +357,7 @@ export const kanji = [
         "moji":"あめ",
         "kanji":"雨",
         "english":"rain",
-        "audio":"rain.mp3"
+        "audio":"t8_ame.mp3"
     },
     {
         "id":"tp8_k_6",
@@ -366,7 +366,7 @@ export const kanji = [
         "moji":"おな",
         "kanji":"同",
         "english":"same",
-        "audio":"same.mp3"
+        "audio":"t8_ona.mp3"
     },
     {
         "id":"tp8_k_7",
@@ -375,7 +375,7 @@ export const kanji = [
         "moji":"つく",
         "kanji":"作",
         "english":"to make",
-        "audio":"to make.mp3"
+        "audio":"t8_tsuku.mp3"
     },
     {
         "id":"tp8_k_8",
@@ -384,7 +384,7 @@ export const kanji = [
         "moji":"も",
         "kanji":"持",
         "english":"to hold",
-        "audio":"to hold.mp3"
+        "audio":"t8_mo.mp3"
     },
     {
         "id":"tp8_k_9",
@@ -393,7 +393,7 @@ export const kanji = [
         "moji":"ま",
         "kanji":"待",
         "english":"to wait",
-        "audio":"to wait.mp3"
+        "audio":"t8_ma.mp3"
     },
     {
         "id":"tp8_k_10",
@@ -402,7 +402,7 @@ export const kanji = [
         "moji":"の",
         "kanji":"乗",
         "english":"to get on",
-        "audio":"to get on.mp3"
+        "audio":""
     },
     {
         "id":"tp8_k_11",
@@ -411,7 +411,7 @@ export const kanji = [
         "moji":"みち",
         "kanji":"道",
         "english":"road",
-        "audio":"road.mp3"
+        "audio":"t8_michi.mp3"
     },
     {
         "id":"tp8_k_12",
@@ -420,16 +420,16 @@ export const kanji = [
         "moji":"もの",
         "kanji":"物",
         "english":"thing",
-        "audio":"thing.mp3"
+        "audio":"t8_mono_k.mp3"
     },
     {
         "id":"tp8_k_13",
         "type":"kanji",
-        "romaji":"de n",
+        "romaji":"den",
         "moji":"でん",
         "kanji":"電",
         "english":"electricity",
-        "audio":"electricity.mp3"
+        "audio":"t8_den.mp3"
     },
     {
         "id":"tp8_k_14",
@@ -438,9 +438,8 @@ export const kanji = [
         "moji":"かん/あいだ",
         "kanji":"間",
         "english":"between",
-        "audio":"between.mp3"
+        "audio":"t8_kan_aida.mp3"
     },
-    /////// 8
     {
         "id":"tp8_k_15",
         "type":"kanji",
@@ -448,7 +447,7 @@ export const kanji = [
         "moji":"ご",
         "kanji":"午",
         "english":"noon",
-        "audio":"noon.mp3"
+        "audio":"t8_go_noon.mp3"
     }
 ]
 
@@ -456,6 +455,99 @@ export const grammar = [
 ]
 
 export const listening = [
+    {
+        "id":"tp8_l_1",
+        "type":"listening",
+        "romaji":"晩ご飯のあと",
+        "moji":"晩ご飯のあと",
+        "kanji":"晩ご飯のあと",
+        "english":"晩ご飯のあと",
+        "answerOption":[
+            {
+                "id":"tp8_l_2",
+                "type":"listening",
+                "moji":"朝ご飯の前"
+            },
+            {
+                "id":"tp8_l_1",
+                "type":"listening",
+                "moji":"晩ご飯のあと"
+            },
+            {
+                "id":"tp8_l_3",
+                "type":"listening",
+                "moji":"昼ごはんのあと"
+            },
+            {
+                "id":"tp8_l_4",
+                "type":"listening",
+                "moji":"寝る前"
+            }
+        ],
+        "audio":"t8_listening_1.mp3"
+    },
+    {
+        "id":"tp8_l_2",
+        "type":"listening",
+        "romaji":"お酒を飲みます",
+        "moji":"お酒を飲みます",
+        "kanji":"お酒を飲みます",
+        "english":"お酒を飲みます",
+        "answerOption":[
+            {
+                "id":"tp8_l_1",
+                "type":"listening",
+                "moji":"テストをします"
+            },
+            {
+                "id":"tp8_l_3",
+                "type":"listening",
+                "moji":"勉強します"
+            },
+            {
+                "id":"tp8_l_2",
+                "type":"listening",
+                "moji":"お酒を飲みます"
+            },
+            {
+                "id":"tp8_l_4",
+                "type":"listening",
+                "moji":"お店に電話します"
+            }
+        ],
+        "audio":"t8_listening_2.mp3"
+    },
+    {
+        "id":"tp8_l_3",
+        "type":"listening",
+        "romaji":"イギリス",
+        "moji":"イギリス",
+        "kanji":"イギリス",
+        "english":"イギリス",
+        "answerOption":[
+            {
+                "id":"tp8_l_1",
+                "type":"listening",
+                "moji":"日本"
+            },
+            {
+                "id":"tp8_l_3",
+                "type":"listening",
+                "moji":"イギリス"
+            },
+            {
+                "id":"tp8_l_2",
+                "type":"listening",
+                "moji":"アメリカ"
+            },
+            {
+                "id":"tp8_l_4",
+                "type":"listening",
+                "moji":"中国"
+            }
+        ],
+        "audio":"t8_listening_3.mp3"
+    }
 ]
 
 export const reading = [
