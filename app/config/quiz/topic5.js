@@ -791,4 +791,100 @@ export const listening = [
 ]
 
 export const reading = [
+    {
+		"id":"tp5_r_1",
+		"type":"reading",
+		"moji":"父は朝7時半に起きます。朝ご飯を食べて、コーヒーを飲みます。9時に会社へ行って仕事をします。12時半から1時間休みます。午後6時に仕事が終わって、スーパーで買い物をして、家へ帰ります。晩ご飯を食べて、午後11時に寝ます。",
+		"questionOption":{
+			"moji":"Q：仕事は何時から何時までですか。",
+			"kanji":"Q：仕事は何時から何時までですか。"
+		},
+		"answerOption":[
+			{
+				"id":"ans_r_2",
+				"type":"reading",
+				"moji":"7時半から9時まで"
+			},
+			{
+				"id":"ans_r_1",
+				"type":"reading",
+				"moji":"9時から6時まで　"
+			},
+			{
+				"id":"ans_r_3",
+				"type":"reading",
+				"moji":"6時から11時まで"
+			},
+			{
+				"id":"ans_r_4",
+				"type":"reading",
+				"moji":"12時半から13時半まで"
+			}
+		],
+		"audio":""
+	},
+	{
+		"id":"tp5_r_2",
+		"type":"reading",
+		"moji":"わたしは昨日、会社で6時まで働いて帰りました。店でDVDを借りて、家で弟と映画を見ました。映画を見て、わたしが料理を作って二人で食べました。私は映画も料理も好きです。",
+		"questionOption":{
+			"moji":"Q： わたしは昨日、家へ帰って何をしましたか。",
+			"kanji":"Q： わたしは昨日、家へ帰って何をしましたか。"
+		},
+		"answerOption":[
+			{
+				"id":"ans_r_1",
+				"type":"reading",
+				"moji":"仕事をしました"
+			},
+			{
+				"id":"ans_r_3",
+				"type":"reading",
+				"moji":"DVDを借りました　"
+			},
+			{
+				"id":"ans_r_4",
+				"type":"reading",
+				"moji":"料理を教えました"
+			},
+			{
+				"id":"ans_r_2",
+				"type":"reading",
+				"moji":" 映画を見ました"
+			}
+		],
+		"audio":""
+	},
+	{
+		"id":"tp5_r_3",
+		"type":"reading",
+		"moji":"私は今、家でテレビを見ています。父は、会社で仕事をしています。母は家の庭で花を見ています。妹は部屋で音楽を聞いています。弟は今、家にいません。公園で犬と遊んでいます。1時間後に弟に電話をしてください。",
+		"questionOption":{
+			"moji":"Q：今、家に何人いますか。",
+			"kanji":"Q：今、家に何人いますか。"
+		},
+		"answerOption":[
+			{
+				"id":"ans_r_4",
+				"type":"reading",
+				"moji":"6人"
+			},
+			{
+				"id":"ans_r_1",
+				"type":"reading",
+				"moji":"5人　"
+			},
+			{
+				"id":"ans_r_2",
+				"type":"reading",
+				"moji":"4人　"
+			},
+			{
+				"id":"ans_r_3",
+				"type":"reading",
+				"moji":"3人　"
+			}
+		],
+		"audio":""
+	},
 ]

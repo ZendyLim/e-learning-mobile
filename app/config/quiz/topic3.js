@@ -774,17 +774,17 @@ export const reading = [
 			{
 				"id":"tp2_r_3",
 				"type":"reading",
-				"moji":"古いところ　"
+				"moji":"古いところ"
 			},
 			{
 				"id":"tp2_r_2",
 				"type":"reading",
-				"moji":"おいしいところ　"
+				"moji":"おいしいところ"
 			},
 			{
 				"id":"tp2_r_1",
 				"type":"reading",
-				"moji":" にぎやかなところ。　"
+				"moji":" にぎやかなところ。"
 			},
 			{
 				"id":"tp2_r_4",
@@ -806,7 +806,7 @@ export const reading = [
 			{
 				"id":"tp2_r_1",
 				"type":"reading",
-				"moji":"有名な映画　"
+				"moji":"有名な映画"
 			},
 			{
 				"id":"tp2_r_2",
@@ -838,17 +838,17 @@ export const reading = [
 			{
 				"id":"tp2_r_1",
 				"type":"reading",
-				"moji":"デパートへ行きます　"
+				"moji":"デパートへ行きます"
 			},
 			{
 				"id":"tp2_r_2",
 				"type":"reading",
-				"moji":"喫茶店でごはんを食べます　"
+				"moji":"喫茶店でごはんを食べます"
 			},
 			{
 				"id":"tp2_r_3",
 				"type":"reading",
-				"moji":"学校へ行きます　"
+				"moji":"学校へ行きます"
 			},
 			{
 				"id":"tp2_r_4",
