@@ -181,7 +181,7 @@ export const vocabulary = [
         "romaji":"Natsu",
         "moji":"なつ",	
         "english":"summer",
-        "audio":"t8_Natsu.mp3"
+        "audio":"t8_natsu.mp3"
     },
     {
         "id":"tp8_v_24",
