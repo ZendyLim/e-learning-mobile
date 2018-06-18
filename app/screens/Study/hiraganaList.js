@@ -194,9 +194,7 @@ class HiraganaListScreen extends Component {
             <Text style={[study.textLg, study.textBlack]}>{ strings['STUDY_QUIZ'] }</Text>
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>{ scoreQuiz }</Text>
             <View style={study.buttonContainer}>
-
-              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Quiz', this.state.topicId)}>
-              
+              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Quiz', this.state.topicId)}>              
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_START'] }</Text>
               </TouchableOpacity>
