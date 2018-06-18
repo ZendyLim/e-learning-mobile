@@ -93,7 +93,7 @@ export let strings = new LocalizedStrings({
    UNCHECK_ALL : "Uncheck All",
    PROCEED : "Proceed >",
    QUIZLIST : "Quizlist",
-   HIRAGANA_KATAKANA_LIST_VALIDATION : "You need to choose at least 1 row",
+   HIRAGANA_KATAKANA_LIST_VALIDATION : "You need to choose at least 5 data",
 
   //login part
   SIGN_IN : "Sign In",
@@ -254,7 +254,7 @@ export let strings = new LocalizedStrings({
    UNCHECK_ALL : "全解除",
    PROCEED : "持続する >",
    QUIZLIST : "クイズリスト",
-   HIRAGANA_KATAKANA_LIST_VALIDATION : "少なくとも1行を選択する必要です",
+   HIRAGANA_KATAKANA_LIST_VALIDATION : "少なくとも5つのデータを選択する必要があります",
    
     //login part
   SIGN_IN : "サインイン",

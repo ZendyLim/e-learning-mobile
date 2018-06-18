@@ -31,7 +31,7 @@ class QuizMainScreen extends Component {
             {this.list.map((item, key)=>(
                 
                 <TouchableOpacity key={key} style={study.btnLearn}  onPress={this.quiz.bind(this, item.type)}>
-                    <Text> {strings[item.title]} </Text>
+                    <Text style={study.btnLearnText} > {strings[item.title]} </Text>
                 </TouchableOpacity>
             ))}
        </ScrollView>

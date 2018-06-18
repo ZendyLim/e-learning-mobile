@@ -15,7 +15,6 @@ import { connect } from 'react-redux';
 import { ImageData } from '../../config/image_list';
 import  { strings }   from '../../config/localization';
 import * as Actions from '../../actions/user'; //Import your actions
-import { flashData } from '../../config/flash';
 import { learnData } from '../../config/learnTopic';
 
   class FlatListItem extends Component {

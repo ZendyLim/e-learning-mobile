@@ -16,6 +16,7 @@ import  { strings }   from '../../config/localization';
 import { LearnListData , StudyList} from '../../config/studyList';
 import style from 'react-native-datepicker/style';
 import LearningModule from '../Study/hiraganaFlashcard';
+import LearningSlideModule from '../Study/hiraganaSlidecard';
 import HL2Screen from '../Learn/HL2';
 import SL2Screen from '../Learn/SL2';
 import { HiraganaLearnStack } from '../../config/router';
@@ -27,8 +28,9 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as Actions from '../../actions/study'; //Import your actions
 import { studyList } from '../Study/studyList';
-import LearnGK01Screen from '../Learn/LearnGK01';
+import LearnG01Screen from '../Learn/LearnG01';
 import LearnB01Screen from '../Learn/LearnB01';
+import LearnK01Screen from '../Learn/LearnK01';
 
 class LearnHiraganaModule extends Component {
   constructor(props) {
@@ -127,8 +129,7 @@ class LearnHiraganaModule extends Component {
             }
         }if( this.state.type == 'GL3'  || this.state.type == 'KL3' || this.state.type == 'BL3' ){
                 return (
-                   // <LearningModule navigation={this.props.navigation} title={ this.state.studyType }  goBack={this}/>     
-                   <Text>New</Text>
+                   <LearningSlideModule navigation={this.props.navigation} title={ this.state.studyType }  goBack={this}/>
                 );            
         }   
         else if(this.state.type == 'HL4'){
@@ -138,7 +139,7 @@ class LearnHiraganaModule extends Component {
         }else 
         if(this.state.type == 'GL1'){
                 return (
-                    <LearnGK01Screen 
+                    <LearnG01Screen 
                     studyType={this.state.studyType} img={this.state.img} listType={this.state.type} 
                     />
                 );
@@ -152,7 +153,7 @@ class LearnHiraganaModule extends Component {
         } else 
         if(this.state.type == 'KL1') {
                 return (
-                    <LearnGK01Screen 
+                    <LearnK01Screen 
                     studyType={this.state.studyType} img={this.state.img} listType={this.state.type} 
                     />
                 );
