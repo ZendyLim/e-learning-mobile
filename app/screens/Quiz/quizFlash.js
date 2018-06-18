@@ -83,7 +83,7 @@ import {
       this.showCorrect = false;
       this.isPause = null;
       this.timerResume = false;
-      this.time = 6000;
+      this.time = 7000;
 
       this.initialState = {
         timesUp: false,
@@ -437,7 +437,9 @@ import {
     setQuizFormat(quizFormat, time){
       let paramFormat;
       
-      
+      if(this.currentQuestion.type == 'grammar'){
+        time = 10000;
+      }
       if (this.currentQuestion.moji.indexOf('/') > -1 && quizFormat.indexOf('fill') > -1)
       {
         switch(this.currentQuestion.type){
@@ -627,8 +629,8 @@ import {
           this.timeStops = 0;
           this.currentQuestion = this.allQuestion[counter];
           
-          this.randomQuizFormat();
-          console.log(this.state);
+          this.randomQuizFormat();                    
+          
           reset = {
             counter: counter,
             //questionId: questionId,
