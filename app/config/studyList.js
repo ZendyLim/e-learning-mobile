@@ -415,347 +415,347 @@ export const StudyList = [{
       style:'quizGrammar'
     }
   },
-  {
-    title : 'TOPIC9_TITLE',
-    img : 'T014',
-    lock : true,
-    type : 'TOPIC',
-    topic_id: 'T014',
-    vocabulary:{     
-      random:true, 
-      types:['english_moji','english_fill','audio_english','audio_fill'],      
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    grammar:{     
-      random:true, 
-      types:['english_moji','audio_english','fill','arrange'],
-      withCorrection:true,
-      style:'quizGrammar'
-    },
-    kanji:{     
-      random:true, 
-      types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
-      withCorrection:true,
-      style:'quizKanji'
-    },
-    listening:{     
-      random:true, 
-      types:['audio_moji'],
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    reading:{     
-      random:true, 
-      types:['moji'],
-      withCorrection:true,
-      style:'quizGrammar'
-    }
-  },
-  {
-    title : 'TOPIC10_TITLE',
-    img : 'loading',
-    lock : true,
-    type : 'TOPIC',
-    topic_id: 'T015'
-  },
-  {
-    title : 'TOPIC11_TITLE',
-    img : 'T016',
-    lock : true,
-    type : 'TOPIC',
-    topic_id: 'T016',
-    vocabulary:{     
-      random:true, 
-      types:['english_moji','english_fill','audio_english','audio_fill'],      
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    grammar:{     
-      random:true, 
-      types:['english_moji','audio_english','fill','arrange'],
-      withCorrection:true,
-      style:'quizGrammar'
-    },
-    kanji:{     
-      random:true, 
-      types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
-      withCorrection:true,
-      style:'quizKanji'
-    },
-    listening:{     
-      random:true, 
-      types:['audio_moji'],
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    reading:{     
-      random:true, 
-      types:['moji'],
-      withCorrection:true,
-      style:'quizGrammar'
-    }
-  },
-  {
-    title : 'TOPIC12_TITLE',
-    img : 'T017',
-    lock : true,
-    type : 'TOPIC',
-    topic_id: 'T017',
-    vocabulary:{     
-      random:true, 
-      types:['english_moji','english_fill','audio_english','audio_fill'],      
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    grammar:{     
-      random:true, 
-      types:['english_moji','audio_english','fill','arrange'],
-      withCorrection:true,
-      style:'quizGrammar'
-    },
-    kanji:{     
-      random:true, 
-      types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
-      withCorrection:true,
-      style:'quizKanji'
-    },
-    listening:{     
-      random:true, 
-      types:['audio_moji'],
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    reading:{     
-      random:true, 
-      types:['moji'],
-      withCorrection:true,
-      style:'quizGrammar'
-    }
-  },
-  {
-    title : 'FUKUSHU3_TITLE',
-    img : 'loading',
-    lock : true,
-    type : 'FUKUSHU',
-    topic_id: 'T018',
-    vocabulary:{     
-      random:true, 
-      types:['english_moji','english_fill','audio_english','audio_fill'],      
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    grammar:{     
-      random:true, 
-      types:['english_moji','audio_english','fill','arrange'],
-      withCorrection:true,
-      style:'quizGrammar'
-    },
-    kanji:{     
-      random:true, 
-      types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
-      withCorrection:true,
-      style:'quizKanji'
-    },
-    listening:{     
-      random:true, 
-      types:['audio_moji'],
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    reading:{     
-      random:true, 
-      types:['moji'],
-      withCorrection:true,
-      style:'quizGrammar'
-    }
-  },
-  {
-    title : 'TOPIC13_TITLE',
-    img : 'loading',
-    lock : true,
-    type : 'TOPIC',
-    topic_id: 'T019',
-    vocabulary:{     
-      random:true, 
-      types:['english_moji','english_fill','audio_english','audio_fill'],      
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    grammar:{     
-      random:true, 
-      types:['english_moji','audio_english','fill','arrange'],
-      withCorrection:true,
-      style:'quizGrammar'
-    },
-    kanji:{     
-      random:true, 
-      types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
-      withCorrection:true,
-      style:'quizKanji'
-    },
-    listening:{     
-      random:true, 
-      types:['audio_moji'],
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    reading:{     
-      random:true, 
-      types:['moji'],
-      withCorrection:true,
-      style:'quizGrammar'
-    }
-  },
-  {
-    title : 'TOPIC14_TITLE',
-    img :'loading',
-    lock : true,
-    type : 'TOPIC',
-    topic_id: 'T020',
-    vocabulary:{     
-      random:true, 
-      types:['english_moji','english_fill','audio_english','audio_fill'],      
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    grammar:{     
-      random:true, 
-      types:['english_moji','audio_english','fill','arrange'],
-      withCorrection:true,
-      style:'quizGrammar'
-    },
-    kanji:{     
-      random:true, 
-      types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
-      withCorrection:true,
-      style:'quizKanji'
-    },
-    listening:{     
-      random:true, 
-      types:['audio_moji'],
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    reading:{     
-      random:true, 
-      types:['moji'],
-      withCorrection:true,
-      style:'quizGrammar'
-    }
-  },
-  {
-    title : 'TOPIC15_TITLE',
-    img : 'loading',
-    lock : true,
-    type : 'TOPIC',
-    topic_id: 'T021',
-    vocabulary:{     
-      random:true, 
-      types:['english_moji','english_fill','audio_english','audio_fill'],      
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    grammar:{     
-      random:true, 
-      types:['english_moji','audio_english','fill','arrange'],
-      withCorrection:true,
-      style:'quizGrammar'
-    },
-    kanji:{     
-      random:true, 
-      types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
-      withCorrection:true,
-      style:'quizKanji'
-    },
-    listening:{     
-      random:true, 
-      types:['audio_moji'],
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    reading:{     
-      random:true, 
-      types:['moji'],
-      withCorrection:true,
-      style:'quizGrammar'
-    }
-  },
-  {
-    title : 'TOPIC16_TITLE',
-    img : 'loading',
-    lock : true,
-    type : 'TOPIC',
-    topic_id: 'T022',
-    vocabulary:{     
-      random:true, 
-      types:['english_moji','english_fill','audio_english','audio_fill'],      
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    grammar:{     
-      random:true, 
-      types:['english_moji','audio_english','fill','arrange'],
-      withCorrection:true,
-      style:'quizGrammar'
-    },
-    kanji:{     
-      random:true, 
-      types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
-      withCorrection:true,
-      style:'quizKanji'
-    },
-    listening:{     
-      random:true, 
-      types:['audio_moji'],
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    reading:{     
-      random:true, 
-      types:['moji'],
-      withCorrection:true,
-      style:'quizGrammar'
-    }
-  },  
-  {
-    title : 'FUKUSHU4_TITLE',
-    img : 'loading',
-    lock : true,
-    type : 'FUKUSHU',
-    topic_id: 'T023',
-    vocabulary:{     
-      random:true, 
-      types:['english_moji','english_fill','audio_english','audio_fill'],      
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    grammar:{     
-      random:true, 
-      types:['english_moji','audio_english','fill','arrange'],
-      withCorrection:true,
-      style:'quizGrammar'
-    },
-    kanji:{     
-      random:true, 
-      types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
-      withCorrection:true,
-      style:'quizKanji'
-    },
-    listening:{     
-      random:true, 
-      types:['audio_moji'],
-      withCorrection:true,
-      style:'quizVocab'
-    },
-    reading:{     
-      random:true, 
-      types:['moji'],
-      withCorrection:true,
-      style:'quizGrammar'
-    }
-  },
-  ];
+  // {
+  //   title : 'TOPIC9_TITLE',
+  //   img : 'T014',
+  //   lock : true,
+  //   type : 'TOPIC',
+  //   topic_id: 'T014',
+  //   vocabulary:{     
+  //     random:true, 
+  //     types:['english_moji','english_fill','audio_english','audio_fill'],      
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   grammar:{     
+  //     random:true, 
+  //     types:['english_moji','audio_english','fill','arrange'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   },
+  //   kanji:{     
+  //     random:true, 
+  //     types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
+  //     withCorrection:true,
+  //     style:'quizKanji'
+  //   },
+  //   listening:{     
+  //     random:true, 
+  //     types:['audio_moji'],
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   reading:{     
+  //     random:true, 
+  //     types:['moji'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   }
+  // },
+  // {
+  //   title : 'TOPIC10_TITLE',
+  //   img : 'loading',
+  //   lock : true,
+  //   type : 'TOPIC',
+  //   topic_id: 'T015'
+  // },
+  // {
+  //   title : 'TOPIC11_TITLE',
+  //   img : 'T016',
+  //   lock : true,
+  //   type : 'TOPIC',
+  //   topic_id: 'T016',
+  //   vocabulary:{     
+  //     random:true, 
+  //     types:['english_moji','english_fill','audio_english','audio_fill'],      
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   grammar:{     
+  //     random:true, 
+  //     types:['english_moji','audio_english','fill','arrange'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   },
+  //   kanji:{     
+  //     random:true, 
+  //     types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
+  //     withCorrection:true,
+  //     style:'quizKanji'
+  //   },
+  //   listening:{     
+  //     random:true, 
+  //     types:['audio_moji'],
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   reading:{     
+  //     random:true, 
+  //     types:['moji'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   }
+  // },
+  // {
+  //   title : 'TOPIC12_TITLE',
+  //   img : 'T017',
+  //   lock : true,
+  //   type : 'TOPIC',
+  //   topic_id: 'T017',
+  //   vocabulary:{     
+  //     random:true, 
+  //     types:['english_moji','english_fill','audio_english','audio_fill'],      
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   grammar:{     
+  //     random:true, 
+  //     types:['english_moji','audio_english','fill','arrange'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   },
+  //   kanji:{     
+  //     random:true, 
+  //     types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
+  //     withCorrection:true,
+  //     style:'quizKanji'
+  //   },
+  //   listening:{     
+  //     random:true, 
+  //     types:['audio_moji'],
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   reading:{     
+  //     random:true, 
+  //     types:['moji'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   }
+  // },
+  // {
+  //   title : 'FUKUSHU3_TITLE',
+  //   img : 'loading',
+  //   lock : true,
+  //   type : 'FUKUSHU',
+  //   topic_id: 'T018',
+  //   vocabulary:{     
+  //     random:true, 
+  //     types:['english_moji','english_fill','audio_english','audio_fill'],      
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   grammar:{     
+  //     random:true, 
+  //     types:['english_moji','audio_english','fill','arrange'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   },
+  //   kanji:{     
+  //     random:true, 
+  //     types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
+  //     withCorrection:true,
+  //     style:'quizKanji'
+  //   },
+  //   listening:{     
+  //     random:true, 
+  //     types:['audio_moji'],
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   reading:{     
+  //     random:true, 
+  //     types:['moji'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   }
+  // },
+  // {
+  //   title : 'TOPIC13_TITLE',
+  //   img : 'loading',
+  //   lock : true,
+  //   type : 'TOPIC',
+  //   topic_id: 'T019',
+  //   vocabulary:{     
+  //     random:true, 
+  //     types:['english_moji','english_fill','audio_english','audio_fill'],      
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   grammar:{     
+  //     random:true, 
+  //     types:['english_moji','audio_english','fill','arrange'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   },
+  //   kanji:{     
+  //     random:true, 
+  //     types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
+  //     withCorrection:true,
+  //     style:'quizKanji'
+  //   },
+  //   listening:{     
+  //     random:true, 
+  //     types:['audio_moji'],
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   reading:{     
+  //     random:true, 
+  //     types:['moji'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   }
+  // },
+  // {
+  //   title : 'TOPIC14_TITLE',
+  //   img :'loading',
+  //   lock : true,
+  //   type : 'TOPIC',
+  //   topic_id: 'T020',
+  //   vocabulary:{     
+  //     random:true, 
+  //     types:['english_moji','english_fill','audio_english','audio_fill'],      
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   grammar:{     
+  //     random:true, 
+  //     types:['english_moji','audio_english','fill','arrange'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   },
+  //   kanji:{     
+  //     random:true, 
+  //     types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
+  //     withCorrection:true,
+  //     style:'quizKanji'
+  //   },
+  //   listening:{     
+  //     random:true, 
+  //     types:['audio_moji'],
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   reading:{     
+  //     random:true, 
+  //     types:['moji'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   }
+  // },
+  // {
+  //   title : 'TOPIC15_TITLE',
+  //   img : 'loading',
+  //   lock : true,
+  //   type : 'TOPIC',
+  //   topic_id: 'T021',
+  //   vocabulary:{     
+  //     random:true, 
+  //     types:['english_moji','english_fill','audio_english','audio_fill'],      
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   grammar:{     
+  //     random:true, 
+  //     types:['english_moji','audio_english','fill','arrange'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   },
+  //   kanji:{     
+  //     random:true, 
+  //     types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
+  //     withCorrection:true,
+  //     style:'quizKanji'
+  //   },
+  //   listening:{     
+  //     random:true, 
+  //     types:['audio_moji'],
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   reading:{     
+  //     random:true, 
+  //     types:['moji'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   }
+  // },
+  // {
+  //   title : 'TOPIC16_TITLE',
+  //   img : 'loading',
+  //   lock : true,
+  //   type : 'TOPIC',
+  //   topic_id: 'T022',
+  //   vocabulary:{     
+  //     random:true, 
+  //     types:['english_moji','english_fill','audio_english','audio_fill'],      
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   grammar:{     
+  //     random:true, 
+  //     types:['english_moji','audio_english','fill','arrange'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   },
+  //   kanji:{     
+  //     random:true, 
+  //     types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
+  //     withCorrection:true,
+  //     style:'quizKanji'
+  //   },
+  //   listening:{     
+  //     random:true, 
+  //     types:['audio_moji'],
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   reading:{     
+  //     random:true, 
+  //     types:['moji'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   }
+  // },  
+  // {
+  //   title : 'FUKUSHU4_TITLE',
+  //   img : 'loading',
+  //   lock : true,
+  //   type : 'FUKUSHU',
+  //   topic_id: 'T023',
+  //   vocabulary:{     
+  //     random:true, 
+  //     types:['english_moji','english_fill','audio_english','audio_fill'],      
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   grammar:{     
+  //     random:true, 
+  //     types:['english_moji','audio_english','fill','arrange'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   },
+  //   kanji:{     
+  //     random:true, 
+  //     types:['kanji_moji','kanji_fill','kanji_english','audio_kanji','moji_kanji'],      
+  //     withCorrection:true,
+  //     style:'quizKanji'
+  //   },
+  //   listening:{     
+  //     random:true, 
+  //     types:['audio_moji'],
+  //     withCorrection:true,
+  //     style:'quizVocab'
+  //   },
+  //   reading:{     
+  //     random:true, 
+  //     types:['moji'],
+  //     withCorrection:true,
+  //     style:'quizGrammar'
+  //   }
+  // },
+];
 
 
   export const LearnListData = {

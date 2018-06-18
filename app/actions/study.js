@@ -48,6 +48,32 @@ export function takeQuiz(studyData){
   };        
 }
 
+// export function getMistakes(topicId){
+//   return (dispatch) => {
+//       getJWT().then( JWT => {
+//           fetch('https://e-learning-backend.herokuapp.com/api/v1/mistakes?' + topicId
+//           ,{
+//             method: 'GET',
+//             headers: {
+//               'Authorization' : JWT,
+//               'Accept': 'application/json',
+//               'Content-Type': 'application/json',
+//             },
+//           }).then(data => data.json())
+//           .then(json => {
+//               if(type == 'QUIZ'){
+//                   dispatch(summaryRecordQuizDispatch(json, type))
+//               }else{
+//                   dispatch(summaryRecordTestDispatch(json, type))            
+//               }
+//           })
+//           .catch(err => dispatch(failedSummary(err)))
+//       })
+//   };    
+  
+   
+// }
+
 
 // ===================================== ACTION SENDING DATA TO REDUCER =================================================
 export function startLearnDispatch(studyType, startLearn, studyID, quizSize) {
