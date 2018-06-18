@@ -73,6 +73,18 @@ class StudyListScreen extends Component {
       strings.setLanguage('en');
     }
   }
+
+  checkLock = (topic_id) =>{
+    if(this.props.lock[item.topic_id]){
+      if(this.props.lock[item.topic_id].lock){
+        return this.props.lock[item.topic_id].lock;
+      }else{
+        return false;
+      }
+    }else{
+      return false;
+    }
+  }
   render() {
     var image = '';
     this._onSetLanguageTo(this.props.lang);
@@ -88,7 +100,8 @@ class StudyListScreen extends Component {
               />
               <Text style={study.title}> { strings[item.title] } </Text>
             </TouchableOpacity>
-              { this.props.lock[item.topic_id].lock ? (              
+            
+              { this.checkLock(item.topic_id) ? (              
                 <TouchableOpacity style={study.lockButton} onPress={this.lockedMessage.bind(this, item, key)}>  
                   <Icon name='lock'  color='#fff' size={40}/>
                 </TouchableOpacity>
