@@ -24,10 +24,18 @@ import {
   
   class StudySummaryScreen extends Component {
   
-    static navigationOptions = {
-      header: null,
-      title: 'Summary',
+    static navigationOptions = ({ navigation }) =>{
+      header: null;
+      const {state} = navigation;
+      return {
+          title: strings['SUMMARY_HEADER'],
+      };
     };
+
+    // static navigationOptions = {
+    //   header: null,
+    //   title: 'Summary',
+    // };
     
     constructor(props){
       super(props);

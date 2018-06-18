@@ -26,8 +26,11 @@ class SummaryLearnDetail extends Component {
   constructor() {
     super();
   }
-  static navigationOptions = {
-    title: 'Learn',
+  static navigationOptions = ({ navigation }) =>{
+    const {state} = navigation;
+    return {
+        title: strings['SUMMARY_HEADER'],
+    };
   };
   state = {
     type: "",
@@ -54,10 +57,10 @@ class SummaryLearnDetail extends Component {
               resizeMode="cover"  
             />
                 <View style={study.summaryLearn} >
-                    <Text style={[study.summaryTitle, study.fontBold]}>TITLE</Text>
-                    <Text style={[study.summaryDetail, study.fontBold]}>CORRECT</Text>
-                    <Text style={[study.summaryDetail, study.fontBold]}>MISTAKE</Text>
-                    <Text style={[study.summaryDetail, study.fontBold]}>TOTAL</Text>
+                    <Text style={[study.summaryTitle, study.fontBold]}>{strings['SUMMARY_TITLE']}</Text>
+                    <Text style={[study.summaryDetail, study.fontBold]}>{strings['SUMMARY_CORRECT']}</Text>
+                    <Text style={[study.summaryDetail, study.fontBold]}>{strings['SUMMARY_MISTAKE']}</Text>
+                    <Text style={[study.summaryDetail, study.fontBold]}>{strings['SUMMARY_TOTAL']}</Text>
                 </View>
             { this.props.showLearn.map((item, key)=>(
                 <View key={key} style={study.summaryLearn} >

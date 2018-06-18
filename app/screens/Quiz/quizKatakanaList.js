@@ -26,7 +26,7 @@ import  { strings }   from '../../config/localization';
       };
 
     state = {
-        checkAllText: "Check All",
+        checkAllText: strings['CHECK_ALL'],
         statusCheckAll: false,
         stsList : false,
         statusPerRow: false,
@@ -62,7 +62,7 @@ import  { strings }   from '../../config/localization';
                     <TouchableOpacity style={quizStyles.menuButton}
                     onPress={this.proceed}
                     >
-                        <Text style={quizStyles.buttonText}>Proceed ></Text>
+                        <Text style={quizStyles.buttonText}>{strings['PROCEED']}</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.row}>
@@ -104,16 +104,17 @@ import  { strings }   from '../../config/localization';
     // const { studyReason, statusDays, finishDate} = this.state;
         let error = '';
         let status = false;
-        for(i=0;i<katakanaList.length;i++){
-            if(this.checkRows[i] == true){
-                this.setState({statusCheckAll: !this.state.statusCheckAll})
-                this.setState({ checkAllText: "Check All" }) 
-                status=true;
-            }
-        }
-        if (status == false) error = "You need to choose at least 1 row";
+        // for(i=0;i<katakanaList.length;i++){
+        //     if(this.checkRows[i] == true){
+        //         this.setState({statusCheckAll: !this.state.statusCheckAll})
+        //         this.setState({ checkAllText: strings['CHECK_ALL'] }) 
+        //         status=true;
+        //     }
+        // }
+        // if (status == false) error = strings['HIRAGANA_KATAKANA_LIST_VALIDATION'];
+        if(this.state.idList.length<5)error = strings['HIRAGANA_KATAKANA_LIST_VALIDATION'];
         if (error) {
-            Alert.alert('Warning', error);
+            Alert.alert(strings['WARNING'], error);
             return true; 
         }
         else{
@@ -175,7 +176,7 @@ import  { strings }   from '../../config/localization';
                 this.checkRows[key] = false,
                 this.setState({ statusPerRow: this.checkRows })
             ))};  
-            this.setState({ checkAllText: "Check All" })     
+            this.setState({ checkAllText: strings['CHECK_ALL'] })     
         }else{
             {katakanaList.map((item, key)=>(
                 this.checkItems[key] = true,
@@ -185,7 +186,7 @@ import  { strings }   from '../../config/localization';
                 this.checkRows[key] = true,
                 this.setState({ statusPerRow: this.checkRows })
             ))};  
-            this.setState({ checkAllText: "Uncheck All" })    
+            this.setState({ checkAllText: strings['UNCHECK_ALL'] })    
         }
     };
     checkRow(key){
@@ -217,10 +218,10 @@ import  { strings }   from '../../config/localization';
     checkAllStatus = () => {   
         if(this.checkRows.every(this.checkRowStatus)){
             this.setState({statusCheckAll: true})
-            this.setState({ checkAllText: "Uncheck All" }) 
+            this.setState({ checkAllText: strings['UNCHECK_ALL'] }) 
         }else{
             this.setState({statusCheckAll: false})
-            this.setState({ checkAllText: "Check All" }) 
+            this.setState({ checkAllText: strings['CHECK_ALL'] }) 
         }
     }
 

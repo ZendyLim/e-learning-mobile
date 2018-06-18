@@ -1,27 +1,17 @@
 import React, { Component } from 'react';
 import {
-    ActivityIndicator,
-    AsyncStorage,
-    Button,
-    StatusBar,
-    StyleSheet,
     View,
     Animated, 
     TouchableOpacity, 
-    Text, 
-    Image, 
     ImageBackground, 
     TouchableWithoutFeedback
   } from 'react-native';
-  import { List, ListItem, Icon } from 'react-native-elements';
-  import {Dimensions} from 'react-native';
-  import {NavigationActions} from 'react-navigation';
+  import { Icon } from 'react-native-elements';
+
   // Config
   import { ImageData } from '../../config/image_list';
   import { flashData } from '../../config/flash';
-  import LearnListScreen from '../Learn/LearnList';
   import ResponsiveText from '../../component/responsiveText';
-  import FlashButton from '../../component/flashButton';
 
   var Sound = require('react-native-sound');
 
@@ -30,8 +20,8 @@ import {
   } 
 
   /**
- * Generic play function for majority of tests
- */
+   * Generic play function for majority of tests
+   */
   function playSound(testInfo, component) {
     setTestState(testInfo, component, 'pending');
 
@@ -61,6 +51,7 @@ import {
   }
 
   class HiraganaFlashcardScreen extends Component {
+
     static navigationOptions = {
       header: null,
       title: 'Summary',
@@ -69,14 +60,13 @@ import {
     constructor(props) {
       super(props);
 
-      Sound.setCategory('Playback', true); // true = mixWithOthers
+      Sound.setCategory('Playback', true);
 
       // Special case for stopping
       this.stopSoundLooped = () => {
         if (!this.state.loopingSound) {
           return;
         }
-  
         this.state.loopingSound.stop().release();
         this.setState({loopingSound: null, tests: {...this.state.tests, ['mp3 in bundle (looped)']: 'win'}});
       };
@@ -86,6 +76,7 @@ import {
       this.animatedValue.addListener(({ value }) => {
         this.value = value;
       });
+
       this.frontInterpolate = this.animatedValue.interpolate({
         inputRange: [0, 180],
         outputRange: ['0deg', '180deg'],
@@ -118,11 +109,8 @@ import {
         fakeBack: null, 
         flipped: false,
         img : ImageData[navigation.getParam('img', null)],
-        isPause: false,
         loopingSound: undefined,
         tests: {},
-        btnDisable: true,
-        isFinish: false,
         mojiLength: this.data[0].moji.length,
         romajiLength: this.data[0].romaji.length,
       };
@@ -169,51 +157,9 @@ import {
       }
     }
 
-    setToNSpeed(){
-      switch(this.flipSpeed){
-        case 1: 
-          this.flipSpeed = 2;
-          break;
-        case 2:
-          this.flipSpeed = 4;
-          break;
-        case 4: 
-          this.flipSpeed = 1;
-          break;
-      }
-      this.pause();
-      this.resume();
-    }
-
-    setAutoOrManual(){
-      if(this.auto){
-        this.pause();
-        this.auto = false;
-        this.setState((previousState) => {
-          let state = previousState;
-          state.isPause = true;
-          return state;
-        })
-      } else {
-        this.flipperFunction(this.tickInterval / this.flipSpeed);
-        this.auto = true;
-        this.setState((previousState) => {
-          let state = previousState;
-          state.isPause = false;
-          return state;
-        })
-      }
-    }
-
     updateNext(){
-      this.setState({
-        btnDisable: false
-      });
       if(this.progressCounter + 1 === this.data.length) {
-        this.setState({
-          isFinish: true
-        });
-        return;
+        this.props.navigation.goBack();
       }
       this.pause();
       this.progressCounter++;
@@ -236,39 +182,6 @@ import {
         }
         
         state.flipped = true;
-
-        return state;
-      }, this.flipCard)
-    }
-
-    updatePrevious(){
-      if(this.progressCounter < 1){
-        this.setState({
-          btnDisable: true
-        });
-        return;
-      }
-      this.pause();
-      this.progressCounter--;
-      this.setState({
-        isFinish: false, 
-        url: this.data[this.progressCounter].url, 
-        mojiLength: this.data[this.progressCounter].moji.length,
-        romajiLength: this.data[this.progressCounter].romaji.length,
-      });
-      playSound(this.data[this.progressCounter] , this);
-      this.setState((previousState) => {
-        let state = previousState;
-        this.value = 180;
-        if(this.value >= 90){
-          state.front = this.data[this.progressCounter].moji;
-          state.fakeBack = this.data[this.progressCounter].romaji;
-        } else {
-          state.fakeFront = this.data[this.progressCounter].romaji;
-          state.back = this.data[this.progressCounter].moji;
-        }
-        
-        state.flipped = true;
         return state;
       }, this.flipCard)
     }
@@ -278,7 +191,6 @@ import {
         if(finished){
           this.pause();
           this.resume();
-    
           this.setState((previousState) => {
             let state = previousState;
             
@@ -333,17 +245,10 @@ import {
         height: '100%'
       }
 
-      const help = {
-        opacity: this.helpMe
-      }
-      
-      const autoHeight = {
-        height: (Dimensions.get('window').width) * 0.2
-      }
       return (
         <ImageBackground source={this.state.img} style={studyStyles.backgroundImg} >
           <View style={[studyStyles.containerBetween, studyStyles.p3]}>
-            <View style={[studyStyles.containerTopRel]}>
+            <View style={[studyStyles.cardBox]}>
               <TouchableOpacity onPress={() => {
                   return playSound(this.state , this);
                 }} style={studyStyles.iconContainer}>
@@ -372,31 +277,6 @@ import {
                 </View>
               </TouchableWithoutFeedback>
             </View>
-
-            <View style={[studyStyles.containerBottom, autoHeight]}>
-              <FlashButton btnType={'icon'}
-                iconName={'arrow-back'}
-                disabled={this.state.btnDisable}
-                onPress={() => this.updatePrevious()} />
-
-              <FlashButton btnType={'icon'} 
-                iconName={ this.state.isPause ? 'play-arrow' : 'pause' }
-                onPress={() => this.setAutoOrManual()} />
-          
-              <FlashButton btnType={'text'} 
-                textName={ this.flipSpeed }
-                onPress={() => this.setToNSpeed()} />
-
-              {this.state.isFinish ? (
-                <FlashButton btnType={'icon'} 
-                  iconName={ 'home'}
-                  onPress={() => this.props.navigation.goBack()} />
-              ): (
-                <FlashButton btnType={'icon'} 
-                  iconName={'arrow-forward'}
-                  onPress={() => this.updateNext()} />
-              )}
-            </View>
           </View>
         </ImageBackground>
       );
@@ -407,9 +287,7 @@ import {
       //await AsyncStorage.setItem('userToken', 'abc');
       this.props.navigation.navigate('NameIn');
     };
-
   }
 
-  const styles = require('../../styles/style');
   const studyStyles = require('../../styles/study');
-export default HiraganaFlashcardScreen;
+  export default HiraganaFlashcardScreen;

@@ -14,9 +14,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { ImageData } from '../../config/image_list';
 import  { strings }   from '../../config/localization';
-import  { vocabulary, kanji, grammar } from '../../config/quiz/topic1';
 import * as Actions from '../../actions/user'; //Import your actions
-import { flashData } from '../../config/flash';
+import { learnData } from '../../config/learnTopic';
 
   class FlatListItem extends Component {
     render(){
@@ -24,7 +23,7 @@ import { flashData } from '../../config/flash';
       <View style={{padding: 5,}}>
         <View style={learn1.FlatListItem}>
           <View style={learn1.GoiGroup}>
-            <Text style={learn1.GoiItem}>{this.props.item.moji}</Text>
+            <Text style={learn1.GoiItem}>{this.props.item.pattern}</Text>
             {/* <Text style={learn1.MeaningItem} >{this.props.item.romaji}</Text> */}
           </View>
           <View style={learn1.ButtonGroup}>
@@ -53,11 +52,15 @@ import { flashData } from '../../config/flash';
         moji: '',
         romaji: '',
         english: '',
+
+        pattern: '',
+        explanation: '',
+        example: '',
       };    
     }
 
     render() {
-      var dataDisplay = flashData[0][this.state.studyType];
+      var dataDisplay = learnData[this.state.studyType];
       console.log('dataDisplay');
       console.log(dataDisplay);
       return (
@@ -77,7 +80,7 @@ import { flashData } from '../../config/flash';
           renderItem={({item}) => {
             return(
               <FlatListItem id={item.key} item={item} component={this} 
-              onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.kanji, item.moji, item.romaji, item.english)}}
+              onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.pattern, item.explanation, item.example, item.english)}}
               />);
             }}
           numColumns={1}
@@ -101,8 +104,8 @@ import { flashData } from '../../config/flash';
 
     _keyExtractor = (item) => item.key;
   
-    _setModalVisible = (visible, kanji, moji, romaji, english) => {
-      this.setState({modalVisible: visible , kanji: kanji, moji: moji, romaji: romaji, english: english});
+    _setModalVisible = (visible, pattern, explanation, example, english) => {
+      this.setState({modalVisible: visible , pattern: pattern, explanation: explanation, example: example, english: english});
     }
 
     _setModalInvisible = () => {
@@ -117,12 +120,16 @@ import { flashData } from '../../config/flash';
             <Icon name="times"  type='font-awesome' size={30} color={"white"} underlayColor = '#45B5E7'
             onPress={this._setModalInvisible}
             />
-            {/* <Text style={learn1.ModalTextTitle}>{ this.state.moji }</Text> */}
+            <Text style={learn1.ModalTextTitle}>{ this.state.pattern }</Text>
         </View>
-        <View style={learn1.ModalContent}>
-          <Text style={learn1.ModalContentTitle}>{ this.state.moji }</Text>
-          <Text>{ this.state.romaji }</Text>
-        </View>
+        {/* <View style={learn1.ModalContent}> */}
+          <ScrollView style={learn1.ModalContent}>
+          <Text style={learn1.ModalContentTitle}>Explanation: </Text>
+          <Text style={learn1.ModalContentTitle}>{ this.state.explanation }</Text>
+          <Text style={learn1.ModalContentTitle}>Example: </Text>
+          <Text style={learn1.ModalContentTitle}>{ this.state.example }</Text>
+          </ScrollView>
+        {/* </View> */}
     </View>
     )
   }

@@ -38,12 +38,12 @@ class MainScreen extends Component {
           );
         }else{
           return (
-            <AuthStack />
+            <MainStack />
           );          
         }
       }else{
         return (
-            <AuthStack />
+            <MainStack />
           );
       }
 
