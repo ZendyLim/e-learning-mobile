@@ -2213,7 +2213,9 @@ export const learnData =
         {
           "id": "t1v_1",
           "type": "vocab",
+          "moji": "あなた",
           "word": "あなた",
+          "romaji": "you",
           "english": "you",
           "part": "",
           "url": "t1_anata.mp3"

@@ -14,8 +14,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { ImageData } from '../../config/image_list';
 import  { strings }   from '../../config/localization';
-// import  { vocabulary, kanji, grammar } from '../../config/quiz/topic1';
-import  { flashData } from '../../config/flash';
+import  { learnData } from '../../config/learnTopic';
 import * as Actions from '../../actions/user'; //Import your actions
 
   var Sound = require('react-native-sound');
@@ -62,7 +61,7 @@ function playSound(testInfo, component) {
       <View style={{padding: 5,}}>
         <View style={learn1.FlatListItem}>
           <View style={learn1.GoiGroup}>
-            <Text style={learn1.GoiItem}>{this.props.item.moji}</Text>
+            <Text style={learn1.GoiItem}>{this.props.item.kanji}</Text>
             {/* <Text style={learn1.MeaningItem} >{this.props.item.romaji}</Text> */}
           </View>
           <View style={learn1.ButtonGroup}>
@@ -103,14 +102,14 @@ function playSound(testInfo, component) {
         img: this.props.img,
         listType: this.props.listType,
         kanji: '',
-        moji: '',
-        romaji: '',
+        read: '',
         english: '',
+        word: '',
       };    
     }
     
     render() {
-      var dataDisplay = flashData[0][this.state.studyType];
+      var dataDisplay = learnData[this.state.studyType];
       console.log(this.state.studyType);
       console.log(dataDisplay);
       return (
@@ -130,7 +129,7 @@ function playSound(testInfo, component) {
           renderItem={({item}) => {
             return(
               <FlatListItem id={item.key} item={item} component={this} 
-              onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.kanji, item.moji, item.romaji, item.english)}}
+              onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.kanji, item.read, item.english, item.word)}}
               />);
             }}
           numColumns={1}
@@ -154,8 +153,8 @@ function playSound(testInfo, component) {
 
     _keyExtractor = (item) => item.key;
   
-    _setModalVisible = (visible, kanji, moji, romaji, english) => {
-      this.setState({modalVisible: visible , kanji: kanji, moji: moji, romaji: romaji, english: english});
+    _setModalVisible = (visible, kanji, read, english, word) => {
+      this.setState({modalVisible: visible , kanji: kanji, read: read, english: english, word: word});
     }
 
     _setModalInvisible = () => {
@@ -170,11 +169,15 @@ function playSound(testInfo, component) {
             <Icon name="times"  type='font-awesome' size={30} color={"white"} underlayColor = '#45B5E7'
             onPress={this._setModalInvisible}
             />
-            <Text style={learn1.ModalTextTitle}>{ this.state.moji }</Text>
+            <Text style={learn1.ModalTextTitle}>{ this.state.kanji }</Text>
         </View>
         <View style={learn1.ModalContent}>
-          <Text style={learn1.ModalContentTitle}>{ this.state.moji }</Text>
-          <Text>{ this.state.romaji }</Text>
+          <Text style={learn1.ModalContentTitle}>How to read: </Text>
+          <Text style={learn1.ModalContentTitle}>{ this.state.read }</Text>
+          <Text style={learn1.ModalContentTitle}>Meaning: </Text>
+          <Text style={learn1.ModalContentTitle}>{ this.state.english }</Text>
+          <Text style={learn1.ModalContentTitle}>Word: </Text>
+          <Text style={learn1.ModalContentTitle}>{ this.state.word }</Text>
         </View>
     </View>
     )
