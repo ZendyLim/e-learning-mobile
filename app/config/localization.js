@@ -90,8 +90,10 @@ export let strings = new LocalizedStrings({
    EXPLAINATION_LEARN : 'Explanation card',
    SUMMARY_LEFT : 'Days Left',
    CHECK_ALL : "Check All",
+   UNCHECK_ALL : "Uncheck All",
    PROCEED : "Proceed >",
    QUIZLIST : "Quizlist",
+   HIRAGANA_KATAKANA_LIST_VALIDATION : "You need to choose at least 1 row",
 
   //login part
   SIGN_IN : "Sign In",
@@ -156,6 +158,13 @@ export let strings = new LocalizedStrings({
      T023_MSG : 'Please take test of languages culture!',   
      T024_MSG : 'Please take test of languages culture!',   
      
+  SUMMARY_HEADER : "Summary",
+  SUMMARY_TITLE : "TITLE",
+  SUMMARY_CORRECT : "CORRECT",
+  SUMMARY_MISTAKE : "MISTAKE",
+  SUMMARY_TOTAL :"TOTAL",
+  
+  WARNING : "Warning",
   },
  ja: {
    loginGuest: "ログイン",
@@ -241,10 +250,11 @@ export let strings = new LocalizedStrings({
    PROFILE_MODAL_CLOSE : "キャンセル",
    TITLE_LEARN : '学ぶ',
    EXPLAINATION_LEARN : '説明カード',  
-   CHECK_ALL : "すべてチェック",
+   CHECK_ALL : "全選択",
+   UNCHECK_ALL : "全解除",
    PROCEED : "持続する >",
    QUIZLIST : "クイズリスト",
- 
+   HIRAGANA_KATAKANA_LIST_VALIDATION : "少なくとも1行を選択する必要です",
    
     //login part
   SIGN_IN : "サインイン",
@@ -279,6 +289,14 @@ export let strings = new LocalizedStrings({
 
   
   //summary part
+  SUMMARY_HEADER : "概要",
+  SUMMARY_TITLE : "タイトル",
+  SUMMARY_CORRECT : "正しい",
+  SUMMARY_MISTAKE : "間違い",
+  SUMMARY_TOTAL :"合計",
+
+  WARNING : "警告",
+
     SUMMARY_VOCABULARY : "語彙",
     SUMMARY_GRAMMAR: "文法",
     SUMMARY_KANJI : "漢字",

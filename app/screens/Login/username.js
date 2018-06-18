@@ -102,7 +102,7 @@ import {
       let error = '';
       if(data.success==false) error = strings['SIGN_IN_VALIDATION_FAILED'];
       if (error) {
-        Alert.alert('Warning', error);
+        Alert.alert(strings['WARNING'], error);
         return true; 
       }
       else{
@@ -116,7 +116,7 @@ import {
       if (!username) error = strings['SIGN_IN_VALIDATION_USERNAME'];
       else if (!password) error = strings['SIGN_IN_VALIDATION_PASSWORD'];
       if (error) {
-        Alert.alert('Warning', error);
+        Alert.alert(strings['WARNING'], error);
         return true; 
       }
       else{

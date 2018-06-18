@@ -83,7 +83,7 @@ import {
       this.showCorrect = false;
       this.isPause = null;
       this.timerResume = false;
-      this.time = 6000;
+      this.time = 7000;
 
       this.initialState = {
         timesUp: false,
@@ -204,9 +204,9 @@ import {
       );
     }
 
-    componentDidMount() {      
+    componentDidMount() {           
       const { navigation } = this.props;
-
+      
       BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
       
       this.oneType = navigation.getParam('oneType',null);
@@ -223,13 +223,13 @@ import {
         index: navigation.getParam('index', null),
         isTopicTest: navigation.getParam('isTopicTest', null)
       }
-      
+      //console.log(this.initialParams); 
       this.setState(this.initialParams);
 
       this.setInitial();
       
       this.setListQuestion();
-
+      //console.log(this.quizItems); 
       this.setDefinedQuestion(idList);
       //console.log(this.quizItems,this.testItemCount);
       if(!this.quizItems){
@@ -248,7 +248,7 @@ import {
         this.allQuestion = shuffledQuiz.map((question) =>          
             this.shuffleAnswers(question, shuffledQuiz)    
         );
-        //console.log(this.allQuestion);
+        console.log(this.allQuestion);
         this.currentQuestion = this.allQuestion[0];
         
         this.setState({
@@ -277,7 +277,7 @@ import {
       }
       
     }
-
+    
     componentWillUnmount(){
       this.mounted = false;   
       BackHandler.removeEventListener('hardwareBackPress', this.handleBackButton);              
@@ -292,12 +292,14 @@ import {
       this.study = StudyList.find(function (obj) { 
         return obj.title == this.title; 
       })
-
+      console.log(this.study);
       if(this.study.type == 'INITIAL'){
         this.quizOptions = this.study.quizOptions;
       }
       else{
+        console.log(this.study,this.initialParams.headerTitle);
         this.quizOptions = this.study[this.initialParams.headerTitle];
+        console.log(this.quizOptions);
       }
       
     }
@@ -308,8 +310,9 @@ import {
         currentItems = [];
 
         for(i = 0; i < topics.length; i++){
-          
+          //console.log(topics[i]);
           tempQuiz = quizItems[this.initialParams.studyType + '_and_' + topics[i]];
+          //console.log(tempQuiz);
           //console.log(tempQuiz, this.initialParams.studyType + '_and_' + topics[i]);
           this.byCategory[topics[i]] = tempQuiz;
                   
@@ -325,9 +328,9 @@ import {
                 this.quizItems.push(randomItem);
             }
           }
-          
 
-          
+          //console.log('--end---');
+                    
         }
       }
       else{
@@ -434,7 +437,9 @@ import {
     setQuizFormat(quizFormat, time){
       let paramFormat;
       
-      
+      if(this.currentQuestion.type == 'grammar'){
+        time = 10000;
+      }
       if (this.currentQuestion.moji.indexOf('/') > -1 && quizFormat.indexOf('fill') > -1)
       {
         switch(this.currentQuestion.type){
@@ -624,8 +629,8 @@ import {
           this.timeStops = 0;
           this.currentQuestion = this.allQuestion[counter];
           
-          this.randomQuizFormat();
-          console.log(this.state);
+          this.randomQuizFormat();                    
+          
           reset = {
             counter: counter,
             //questionId: questionId,

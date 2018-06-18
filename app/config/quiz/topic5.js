@@ -1152,22 +1152,22 @@ export const reading = [
 		},
 		"answerOption":[
 			{
-				"id":"ans_r_2",
+				"id":"tp5_r_2",
 				"type":"reading",
 				"moji":"7時半から9時まで"
 			},
 			{
-				"id":"ans_r_1",
+				"id":"tp5_r_1",
 				"type":"reading",
 				"moji":"9時から6時まで　"
 			},
 			{
-				"id":"ans_r_3",
+				"id":"tp5_r_3",
 				"type":"reading",
 				"moji":"6時から11時まで"
 			},
 			{
-				"id":"ans_r_4",
+				"id":"tp5_r_4",
 				"type":"reading",
 				"moji":"12時半から13時半まで"
 			}
@@ -1184,22 +1184,22 @@ export const reading = [
 		},
 		"answerOption":[
 			{
-				"id":"ans_r_1",
+				"id":"tp5_r_1",
 				"type":"reading",
 				"moji":"仕事をしました"
 			},
 			{
-				"id":"ans_r_3",
+				"id":"tp5_r_3",
 				"type":"reading",
 				"moji":"DVDを借りました　"
 			},
 			{
-				"id":"ans_r_4",
+				"id":"tp5_r_4",
 				"type":"reading",
 				"moji":"料理を教えました"
 			},
 			{
-				"id":"ans_r_2",
+				"id":"tp5_r_2",
 				"type":"reading",
 				"moji":" 映画を見ました"
 			}
@@ -1216,22 +1216,22 @@ export const reading = [
 		},
 		"answerOption":[
 			{
-				"id":"ans_r_4",
+				"id":"tp5_r_4",
 				"type":"reading",
 				"moji":"6人"
 			},
 			{
-				"id":"ans_r_1",
+				"id":"tp5_r_1",
 				"type":"reading",
 				"moji":"5人　"
 			},
 			{
-				"id":"ans_r_2",
+				"id":"tp5_r_2",
 				"type":"reading",
 				"moji":"4人　"
 			},
 			{
-				"id":"ans_r_3",
+				"id":"tp5_r_3",
 				"type":"reading",
 				"moji":"3人　"
 			}

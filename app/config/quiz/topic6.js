@@ -1016,12 +1016,12 @@ export const listening = [
         "audio":"t6_listening_2.mp3"
     },
     {
-        "id":"tp6_l_1",
+        "id":"tp6_l_3",
         "type":"listening",
-        "romaji":"",
-        "moji":"",
-        "kanji":"",
-        "english":"",
+        "romaji":"サッカーをすることです",
+        "moji":"サッカーをすることです",
+        "kanji":"サッカーをすることです",
+        "english":"サッカーをすることです",
         "answerOption":[
             {
                 "id":"tp6_l_1",
@@ -1029,17 +1029,17 @@ export const listening = [
                 "moji":"本を読むことです"
             },
             {
-                "id":"tp6_l_1",
+                "id":"tp6_l_4",
                 "type":"listening",
                 "moji":"旅行に行くことです"
             },
             {
-                "id":"tp6_l_1",
+                "id":"tp6_l_2",
                 "type":"listening",
                 "moji":"サッカーを見ることです"
             },
             {
-                "id":"tp6_l_1",
+                "id":"tp6_l_3",
                 "type":"listening",
                 "moji":"サッカーをすることです"
             }
@@ -1059,22 +1059,22 @@ export const reading = [
         },
         "answerOption":[
             {
-                "id":"ans_r_5",
+                "id":"tp6_r_5",
                 "type":"reading",
                 "moji":"ケーキを食べたいですから"
             },
             {
-                "id":"ans_r_1",
+                "id":"tp6_r_1",
                 "type":"reading",
                 "moji":"料理の勉強をしたいですから"
             },
             {
-                "id":"ans_r_7",
+                "id":"tp6_r_7",
                 "type":"reading",
                 "moji":"仕事を休みたいですから"
             },
             {
-                "id":"ans_r_8",
+                "id":"tp6_r_8",
                 "type":"reading",
                 "moji":"フランス語の本が好きですから"
             },
@@ -1091,22 +1091,22 @@ export const reading = [
         },
         "answerOption":[
             {
-                "id":"ans_r_5",
+                "id":"tp6_r_5",
                 "type":"reading",
                 "moji":"会社員	"
             },
             {
-                "id":"ans_r_6",
+                "id":"tp6_r_6",
                 "type":"reading",
                 "moji":"エンジニア		"
             },
             {
-                "id":"ans_r_2",
+                "id":"tp6_r_2",
                 "type":"reading",
                 "moji":"教師	"
             },
             {
-                "id":"ans_r_8",
+                "id":"tp6_r_8",
                 "type":"reading",
                 "moji":"料理を作る人"
             },
@@ -1123,22 +1123,22 @@ export const reading = [
         },
         "answerOption":[
             {
-                "id":"ans_r_5",
+                "id":"tp6_r_5",
                 "type":"reading",
                 "moji":"暑いです"
             },
             {
-                "id":"ans_r_3",
+                "id":"tp6_r_3",
                 "type":"reading",
                 "moji":"よく雪が降ります"
             },
             {
-                "id":"ans_r_7",
+                "id":"tp6_r_7",
                 "type":"reading",
                 "moji":"暖かいです"
             },
             {
-                "id":"ans_r_8",
+                "id":"tp6_r_8",
                 "type":"reading",
                 "moji":"公園がきれいです"
             },

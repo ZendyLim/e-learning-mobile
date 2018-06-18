@@ -26,8 +26,11 @@ class SummaryLearnDetail extends Component {
   constructor() {
     super();
   }
-  static navigationOptions = {
-    title: 'Learn',
+  static navigationOptions = ({ navigation }) =>{
+    const {state} = navigation;
+    return {
+        title: strings['SUMMARY_HEADER'],
+    };
   };
   state = {
     type: "",
