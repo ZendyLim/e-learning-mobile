@@ -831,22 +831,22 @@ export const reading = [
         },
         "answerOption":[
             {
-                "id":"ans_r_5",
+                "id":"tp8_r_5",
                 "type":"reading",
                 "moji":"日本のことを知りたかったからです"
             },
             {
-                "id":"ans_r_6",
+                "id":"tp8_r_6",
                 "type":"reading",
                 "moji":"わたしの国ではごはんをもって食べなければならないからです"
             },
             {
-                "id":"ans_r_1",
+                "id":"tp8_r_1",
                 "type":"reading",
                 "moji":"スプーンがなかったからです "
             },
             {
-                "id":"ans_r_8",
+                "id":"tp8_r_8",
                 "type":"reading",
                 "moji":"日本人の友だちと話したかったからです"
             },
@@ -863,22 +863,22 @@ export const reading = [
         },
         "answerOption":[
             {
-                "id":"ans_r_5",
+                "id":"tp8_r_5",
                 "type":"reading",
                 "moji":""
             },
             {
-                "id":"ans_r_2",
+                "id":"tp8_r_2",
                 "type":"reading",
                 "moji":"車の運転が上手になること　2．仕事で大変だったことを忘れること　"
             },
             {
-                "id":"ans_r_7",
+                "id":"tp8_r_7",
                 "type":"reading",
                 "moji":"寝る前に友だちといろいろな話ができること "
             },
             {
-                "id":"ans_r_8",
+                "id":"tp8_r_8",
                 "type":"reading",
                 "moji":"子どももいっしょに飲むこと "
             },
@@ -895,22 +895,22 @@ export const reading = [
         },
         "answerOption":[
             {
-                "id":"ans_r_5",
+                "id":"tp8_r_5",
                 "type":"reading",
-                "moji":""
+                "moji":"姉の左"
             },
             {
-                "id":"ans_r_6",
+                "id":"tp8_r_6",
                 "type":"reading",
-                "moji":"姉の左　2．父と夫の前　"
+                "moji":"父と夫の前　"
             },
             {
-                "id":"ans_r_7",
+                "id":"tp8_r_7",
                 "type":"reading",
                 "moji":"子どもと姉の後ろ "
             },
             {
-                "id":"ans_r_3",
+                "id":"tp8_r_3",
                 "type":"reading",
                 "moji":"姉と母の間"
             },

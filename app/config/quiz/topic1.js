@@ -832,7 +832,7 @@ export const vocabulary = [
         "moji":"リンさん は にほんご が わかります か",
         "kanji":"リンさん は 日本語 が わかります か。",
         "english":"Does Mr./Ms. Lin understand Japanese?",
-        "audio":"tp1_g_25.mp3"
+        "audio":""
     },
     {	
         "id":"tp1_g_26",

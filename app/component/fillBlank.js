@@ -8,7 +8,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 **/
 class FillBlank extends Component {
   static propTypes = {
-    textDisplay: PropTypes.string.isRequired,
+    textDisplay: PropTypes.string,
     textData: PropTypes.object,
     id: PropTypes.string,
     isCorrect: PropTypes.number,
