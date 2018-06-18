@@ -165,6 +165,7 @@ export let strings = new LocalizedStrings({
   SUMMARY_TOTAL :"TOTAL",
   
   WARNING : "Warning",
+  HISTORY : 'History',
   },
  ja: {
    loginGuest: "ログイン",
@@ -328,6 +329,7 @@ export let strings = new LocalizedStrings({
      T022_MSG : 'トラブル・マナーのテスト取ってお願いします。',   
      T023_MSG : '言語と文化のテスト取ってお願いします。',   
      T024_MSG : '言語と文化のテスト取ってお願いします。',   
+     HISTORY : '履歴',
     
   }
 });
