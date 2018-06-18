@@ -25,6 +25,7 @@ import QuizBeforeScreen from '../screens/Quiz/quizBeforeList';
 import QuizHiraganaListScreen from '../screens/Quiz/quizHiraganaList';
 import QuizKatakanaListScreen from '../screens/Quiz/quizKatakanaList';
 import HiraganaFlashcardScreen from '../screens/Study/hiraganaFlashcard';
+import HiraganaSlidecardScreen from '../screens/Study/hiraganaSlidecard';
 import ScoreScreen from '../screens/Study/score';
 //import MainView from '../screens/sound';
 import example from '../screens/sketch';
