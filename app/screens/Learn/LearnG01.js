@@ -14,21 +14,63 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { ImageData } from '../../config/image_list';
 import  { strings }   from '../../config/localization';
+// import  { vocabulary, kanji, grammar } from '../../config/quiz/topic1';
+import  { learnData } from '../../config/learnTopic';
 import * as Actions from '../../actions/user'; //Import your actions
-import { learnData } from '../../config/learnTopic';
+
+  var Sound = require('react-native-sound');
+
+  function setTestState(testInfo, component, status) {
+    component.setState({tests: {...component.state.tests, [testInfo.title]: status}});
+  } 
+
+  /**
+ * Generic play function for majority of tests
+ */
+function playSound(testInfo, component) {
+  setTestState(testInfo, component, 'pending');
+
+  const callback = (error, sound) => {
+    if (error) {
+      Alert.alert('error', error.message);
+      setTestState(testInfo, component, 'fail');
+      return;
+    }
+    setTestState(testInfo, component, 'playing');
+    // Run optional pre-play callback
+    testInfo.onPrepared && testInfo.onPrepared(sound, component);
+    sound.play(() => {
+      // Success counts as getting to the end
+      setTestState(testInfo, component, 'win');
+      // Release when it's done so we're not using up resources
+      sound.release();
+    });
+  };
+
+  // If the audio is a 'require' then the second parameter must be the callback.
+  if (testInfo.isRequire) {
+    const sound = new Sound(testInfo.url, error => callback(error, sound));
+  } else {
+    const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
+  }
+}
 
   class FlatListItem extends Component {
+
     render(){
       return(
       <View style={{padding: 5,}}>
         <View style={learn1.FlatListItem}>
           <View style={learn1.GoiGroup}>
-            <Text style={learn1.GoiItem}>{this.props.item.pattern}</Text>
+            <Text style={learn1.GoiItem}>{this.props.item.moji}</Text>
             {/* <Text style={learn1.MeaningItem} >{this.props.item.romaji}</Text> */}
           </View>
           <View style={learn1.ButtonGroup}>
             <Icon reverseColor={'black'} name="info-circle"  type='font-awesome' size={45} color={"#45B5E7"} containerStyle={{flex: 1}}
             onPress={this.props.onPressButtonItem}
+            />
+            <Icon name="play-circle"  type='font-awesome' size={45} color={"#45B5E7"} containerStyle={{flex: 1}}
+            onPress={() => {return playSound(this.props.item , this.props.component);}}
             />
           </View>
         </View>
@@ -38,12 +80,24 @@ import { learnData } from '../../config/learnTopic';
     }
   }
 
-  export class LearnB01Screen extends Component {
+  export class LearnG01Screen extends Component {
 
     constructor(props) {
       super(props);
-      
+      Sound.setCategory('Playback', true); // true = mixWithOthers
+
+      // Special case for stopping
+      this.stopSoundLooped = () => {
+        if (!this.state.loopingSound) {
+          return;
+        }
+  
+        this.state.loopingSound.stop().release();
+        this.setState({loopingSound: null, tests: {...this.state.tests, ['mp3 in bundle (looped)']: 'win'}});
+      };
       this.state = {
+        loopingSound: undefined,
+        tests: {},
         modalVisible: false,
         studyType: this.props.studyType,
         img: this.props.img,
@@ -52,16 +106,12 @@ import { learnData } from '../../config/learnTopic';
         moji: '',
         romaji: '',
         english: '',
-
-        pattern: '',
-        explanation: '',
-        example: '',
       };    
     }
-
+    
     render() {
       var dataDisplay = learnData[this.state.studyType];
-      console.log('dataDisplay');
+      console.log(this.state.studyType);
       console.log(dataDisplay);
       return (
       <ScrollView>
@@ -80,7 +130,7 @@ import { learnData } from '../../config/learnTopic';
           renderItem={({item}) => {
             return(
               <FlatListItem id={item.key} item={item} component={this} 
-              onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.pattern, item.explanation, item.example, item.english)}}
+              onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.kanji, item.moji, item.romaji, item.english)}}
               />);
             }}
           numColumns={1}
@@ -104,8 +154,8 @@ import { learnData } from '../../config/learnTopic';
 
     _keyExtractor = (item) => item.key;
   
-    _setModalVisible = (visible, pattern, explanation, example, english) => {
-      this.setState({modalVisible: visible , pattern: pattern, explanation: explanation, example: example, english: english});
+    _setModalVisible = (visible, kanji, moji, romaji, english) => {
+      this.setState({modalVisible: visible , kanji: kanji, moji: moji, romaji: romaji, english: english});
     }
 
     _setModalInvisible = () => {
@@ -120,16 +170,12 @@ import { learnData } from '../../config/learnTopic';
             <Icon name="times"  type='font-awesome' size={30} color={"white"} underlayColor = '#45B5E7'
             onPress={this._setModalInvisible}
             />
-            <Text style={learn1.ModalTextTitle}>{ this.state.pattern }</Text>
+            <Text style={learn1.ModalTextTitle}>{ this.state.moji }</Text>
         </View>
-        {/* <View style={learn1.ModalContent}> */}
-          <ScrollView style={learn1.ModalContent}>
-          <Text style={learn1.ModalContentTitle}>Explanation: </Text>
-          <Text style={learn1.ModalContentTitle}>{ this.state.explanation }</Text>
-          <Text style={learn1.ModalContentTitle}>Example: </Text>
-          <Text style={learn1.ModalContentTitle}>{ this.state.example }</Text>
-          </ScrollView>
-        {/* </View> */}
+        <View style={learn1.ModalContent}>
+          <Text style={learn1.ModalContentTitle}>Meaning: </Text>
+          <Text>{ this.state.romaji }</Text>
+        </View>
     </View>
     )
   }
@@ -149,5 +195,5 @@ import { learnData } from '../../config/learnTopic';
   }
   
   //Connect everything
-  export default connect(mapStateToProps, mapDispatchToProps)(LearnB01Screen);
-  // export default LearnB01Screen;
+  export default connect(mapStateToProps, mapDispatchToProps)(LearnG01Screen);
+  // export default LearnG01Screen;
