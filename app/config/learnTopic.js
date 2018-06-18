@@ -2638,7 +2638,7 @@ export const learnData =
           "read": "いち",
           "english": "one",
           "word": "一",
-          "url": ""
+          "url": "n_ichi.mp3"
         },
         {
           "id": "t1k_2",
@@ -2647,7 +2647,7 @@ export const learnData =
           "read": "に",
           "english": "two",
           "word": "二",
-          "url": ""
+          "url": "n_ni.mp3"
         },
         {
           "id": "t1k_3",
@@ -2656,7 +2656,7 @@ export const learnData =
           "read": "さん",
           "english": "three",
           "word": "三",
-          "url": ""
+          "url": "n_san.mp3"
         },
         {
           "id": "t1k_4",
@@ -2665,7 +2665,7 @@ export const learnData =
           "read": "し/よん",
           "english": "four",
           "word": "四",
-          "url": ""
+          "url": "n_yon.mp3"
         },
         {
           "id": "t1k_5",
@@ -2674,7 +2674,7 @@ export const learnData =
           "read": "ご",
           "english": "five",
           "word": "五",
-          "url": ""
+          "url": "n_go.mp3"
         },
         {
           "id": "t1k_6",
@@ -2683,7 +2683,7 @@ export const learnData =
           "read": "ろく",
           "english": "six",
           "word": "六",
-          "url": ""
+          "url": "n_roku.mp3"
         },
         {
           "id": "t1k_7",
@@ -2692,7 +2692,7 @@ export const learnData =
           "read": "なな / しち",
           "english": "seven",
           "word": "七",
-          "url": ""
+          "url": "n_nana.mp3"
         },
         {
           "id": "t1k_8",
@@ -2701,7 +2701,7 @@ export const learnData =
           "read": "はち",
           "english": "eight",
           "word": "八",
-          "url": ""
+          "url": "n_hachi.mp3"
         },
         {
           "id": "t1k_9",
@@ -2710,7 +2710,7 @@ export const learnData =
           "read": "きゅう / く",
           "english": "nine",
           "word": "九、九時",
-          "url": ""
+          "url": "n_kyuu.mp3"
         },
         {
           "id": "t1k_10",
@@ -2719,7 +2719,7 @@ export const learnData =
           "read": "じゅう",
           "english": "ten",
           "word": "十",
-          "url": ""
+          "url": "n_juu.mp3"
         },
         {
           "id": "t1k_11",
@@ -2728,7 +2728,7 @@ export const learnData =
           "read": "ひゃく",
           "english": "hundred",
           "word": "百",
-          "url": ""
+          "url": "n_hyaku.mp3"
         },
         {
           "id": "t1k_12",
@@ -2737,7 +2737,7 @@ export const learnData =
           "read": "せん",
           "english": "thousand",
           "word": "千",
-          "url": ""
+          "url": "n_sen.mp3"
         },
         {
           "id": "t1k_13",
@@ -2746,7 +2746,7 @@ export const learnData =
           "read": "まん",
           "english": "ten thousand",
           "word": "十万",
-          "url": ""
+          "url": "t1_man.mp3"
         },
         {
           "id": "t1k_14",
@@ -2755,7 +2755,7 @@ export const learnData =
           "read": "えん",
           "english": "yen",
           "word": "百円",
-          "url": ""
+          "url": "t1_en.mp3"
         },
         {
           "id": "t1k_15",
@@ -2764,7 +2764,7 @@ export const learnData =
           "read": "なに、なん",
           "english": "what",
           "word": "何",
-          "url": ""
+          "url": "t1_nani_nan.mp3"
         }
       ], 
       TOPIC2_TITLE_and_vocabulary : [
@@ -3293,7 +3293,7 @@ export const learnData =
           "read": "しゃ/くるま",
           "english": "car",
           "word": "車",
-          "url": ""
+          "url": "t2_kuruma.mp3"
         },
         {
           "id": "t2k_2",
@@ -3302,7 +3302,7 @@ export const learnData =
           "read": "い",
           "english": "to go",
           "word": "行きます、行く",
-          "url": ""
+          "url": "t2_iku.mp3"
         },
         {
           "id": "t2k_3",
@@ -3311,7 +3311,7 @@ export const learnData =
           "read": "らい/き、く",
           "english": "to come",
           "word": "来週、来ます、来る",
-          "url": ""
+          "url": "t2_kuru.mp3"
         },
         {
           "id": "t2k_4",
@@ -3320,7 +3320,7 @@ export const learnData =
           "read": "き/かえ",
           "english": "to return",
           "word": "帰国、帰ります、帰る",
-          "url": ""
+          "url": "t2_kaeru.mp3"
         },
         {
           "id": "t2k_5",
@@ -3329,7 +3329,7 @@ export const learnData =
           "read": "ひ、び、か/にち",
           "english": "day, sun",
           "word": "三日、日よう日、毎日",
-          "url": ""
+          "url": "t2_nichi.mp3"
         },
         {
           "id": "t2k_6",
@@ -3338,7 +3338,7 @@ export const learnData =
           "read": "がつ、げつ/つき",
           "english": "month, moon",
           "word": "一月、月よう日、毎月",
-          "url": ""
+          "url": "t2_gatsu.mp3"
         },
         {
           "id": "t2k_7",
@@ -3347,7 +3347,7 @@ export const learnData =
           "read": "か",
           "english": "fire",
           "word": "火よう日",
-          "url": ""
+          "url": "t2_ka.mp3"
         },
         {
           "id": "t2k_8",
@@ -3356,7 +3356,7 @@ export const learnData =
           "read": "すい/みず",
           "english": "water",
           "word": "水よう日",
-          "url": ""
+          "url": "t2_sui.mp3"
         },
         {
           "id": "t2k_9",
@@ -3365,7 +3365,7 @@ export const learnData =
           "read": "もく/き",
           "english": "tree",
           "word": "木よう日",
-          "url": ""
+          "url": "t2_moku.mp3"
         },
         {
           "id": "t2k_10",
@@ -3374,7 +3374,7 @@ export const learnData =
           "read": "きん/かね",
           "english": "gold",
           "word": "金よう日",
-          "url": ""
+          "url": "t2_kin.mp3"
         },
         {
           "id": "t2k_11",
@@ -3383,7 +3383,7 @@ export const learnData =
           "read": "ど",
           "english": "soil",
           "word": "土よう日",
-          "url": ""
+          "url": "t2_do.mp3"
         },
         {
           "id": "t2k_12",
@@ -3392,7 +3392,7 @@ export const learnData =
           "read": "じ",
           "english": "time",
           "word": "三時",
-          "url": ""
+          "url": "t2_ji.mp3"
         },
         {
           "id": "t2k_13",
@@ -3401,7 +3401,7 @@ export const learnData =
           "read": "ふん、ぷん、ぶん",
           "english": "minute",
           "word": "二分、三分、半分",
-          "url": ""
+          "url": "t2_fun.mp3"
         },
         {
           "id": "t2k_14",
@@ -3410,7 +3410,7 @@ export const learnData =
           "read": "はん",
           "english": "half",
           "word": "半分",
-          "url": ""
+          "url": "t2_han.mp3"
         },
         {
           "id": "t2k_15",
@@ -3419,7 +3419,7 @@ export const learnData =
           "read": "こん/いま",
           "english": "now",
           "word": "今月、今",
-          "url": ""
+          "url": "t2_ima.mp3"
         }
       ],
       TOPIC3_TITLE_and_vocabulary : [
@@ -3945,7 +3945,7 @@ export const learnData =
           "read": "しゅう",
           "english": "week",
           "word": "先週、一週間",
-          "url": ""
+          "url": "t3_shuu.mp3"
         },
         {
           "id": "t3k_2",
@@ -3954,7 +3954,7 @@ export const learnData =
           "read": "ねん/とし",
           "english": "year",
           "word": "一年、今年",
-          "url": ""
+          "url": "t3_nen.mp3"
         },
         {
           "id": "t3k_3",
@@ -3963,7 +3963,7 @@ export const learnData =
           "read": "まい",
           "english": "every",
           "word": "毎日",
-          "url": ""
+          "url": "t3_mai.mp3"
         },
         {
           "id": "t3k_4",
@@ -3972,7 +3972,7 @@ export const learnData =
           "read": "だい/おお",
           "english": "big",
           "word": "大学、大きい",
-          "url": ""
+          "url": "t3_dai.mp3"
         },
         {
           "id": "t3k_5",
@@ -3981,7 +3981,7 @@ export const learnData =
           "read": "しょう/ちい",
           "english": "small",
           "word": "小学生、小さい",
-          "url": ""
+          "url": "t3_shou.mp3"
         },
         {
           "id": "t3k_6",
@@ -3990,7 +3990,7 @@ export const learnData =
           "read": "しん/あたら",
           "english": "new",
           "word": "新聞、新しい",
-          "url": ""
+          "url": "t3_shin.mp3"
         },
         {
           "id": "t3k_7",
@@ -3999,7 +3999,7 @@ export const learnData =
           "read": "ふる",
           "english": "old",
           "word": "古い",
-          "url": ""
+          "url": "t3_furu.mp3"
         },
         {
           "id": "t3k_8",
@@ -4008,7 +4008,7 @@ export const learnData =
           "read": "こう/たか",
           "english": "expensive / tall",
           "word": "高校、高い",
-          "url": ""
+          "url": "t3_kou.mp3"
         },
         {
           "id": "t3k_9",
@@ -4017,7 +4017,7 @@ export const learnData =
           "read": "やす",
           "english": "cheap",
           "word": "安い",
-          "url": ""
+          "url": "t3_yasu.mp3"
         },
         {
           "id": "t3k_10",
@@ -4026,7 +4026,7 @@ export const learnData =
           "read": "おお",
           "english": "many",
           "word": "多い",
-          "url": ""
+          "url": "t3_oo.mp3"
         },
         {
           "id": "t3k_11",
@@ -4035,7 +4035,7 @@ export const learnData =
           "read": "すく、すこ",
           "english": "few",
           "word": "少ない、少し",
-          "url": ""
+          "url": "t3_suku.mp3"
         },
         {
           "id": "t3k_12",
@@ -4044,7 +4044,7 @@ export const learnData =
           "read": "なが",
           "english": "long",
           "word": "長い",
-          "url": ""
+          "url": "t3_naga.mp3"
         },
         {
           "id": "t3k_13",
@@ -4053,7 +4053,7 @@ export const learnData =
           "read": "はや",
           "english": "early",
           "word": "早い",
-          "url": ""
+          "url": "t3_haya.mp3"
         },
         {
           "id": "t3k_14",
@@ -4062,7 +4062,7 @@ export const learnData =
           "read": "す",
           "english": "to like",
           "word": "好き",
-          "url": ""
+          "url": "t3_suki.mp3"
         },
         {
           "id": "t3k_15",
@@ -4071,7 +4071,7 @@ export const learnData =
           "read": "まち",
           "english": "town",
           "word": "町",
-          "url": ""
+          "url": "t3_machi.mp3"
         }
       ],
       TOPIC4_TITLE_and_vocabulary : [
@@ -4547,7 +4547,7 @@ export const learnData =
           "read": "じん、にん/ひと",
           "english": "person",
           "word": "日本人、三人、女の人",
-          "url": ""
+          "url": "t4_jin.mp3"
         },
         {
           "id": "t4k_2",
@@ -4556,7 +4556,7 @@ export const learnData =
           "read": "おとこ",
           "english": "man",
           "word": "男の子",
-          "url": ""
+          "url": "t4_otoko.mp3"
         },
         {
           "id": "t4k_3",
@@ -4565,7 +4565,7 @@ export const learnData =
           "read": "おんな",
           "english": "woman",
           "word": "女の子",
-          "url": ""
+          "url": "t4_onna.mp3"
         },
         {
           "id": "t4k_4",
@@ -4574,7 +4574,7 @@ export const learnData =
           "read": "こ",
           "english": "child",
           "word": "子ども",
-          "url": ""
+          "url": "t4_ko.mp3"
         },
         {
           "id": "t4k_5",
@@ -4583,7 +4583,7 @@ export const learnData =
           "read": "せん/さき",
           "english": "ahead",
           "word": "先生",
-          "url": ""
+          "url": "t4_saki.mp3"
         },
         {
           "id": "t4k_6",
@@ -4592,7 +4592,7 @@ export const learnData =
           "read": "せい",
           "english": "birth",
           "word": "学生",
-          "url": ""
+          "url": "t4_sei.mp3"
         },
         {
           "id": "t4k_7",
@@ -4601,7 +4601,7 @@ export const learnData =
           "read": "とも",
           "english": "friend",
           "word": "友だち",
-          "url": ""
+          "url": "t4_tomo.mp3"
         },
         {
           "id": "t4k_8",
@@ -4610,7 +4610,7 @@ export const learnData =
           "read": "がく/がっ",
           "english": "learning",
           "word": "学生、学校",
-          "url": ""
+          "url": "t4_gaku.mp3"
         },
         {
           "id": "t4k_9",
@@ -4619,7 +4619,7 @@ export const learnData =
           "read": "こう",
           "english": "school",
           "word": "学校、高校",
-          "url": ""
+          "url": "t4_kou.mp3"
         },
         {
           "id": "t4k_10",
@@ -4628,7 +4628,7 @@ export const learnData =
           "read": "かい/あ",
           "english": "to meet",
           "word": "会社、会います",
-          "url": ""
+          "url": "t4_kai.mp3"
         },
         {
           "id": "t4k_11",
@@ -4637,7 +4637,7 @@ export const learnData =
           "read": "しゃ",
           "english": "company",
           "word": "会社、会社いん",
-          "url": ""
+          "url": "t4_sha.mp3"
         },
         {
           "id": "t4k_12",
@@ -4646,7 +4646,7 @@ export const learnData =
           "read": "やま",
           "english": "mountain",
           "word": "山",
-          "url": ""
+          "url": "t4_yama.mp3"
         },
         {
           "id": "t4k_13",
@@ -4655,7 +4655,7 @@ export const learnData =
           "read": "かわ",
           "english": "river",
           "word": "川",
-          "url": ""
+          "url": "t4_kawa.mp3"
         },
         {
           "id": "t4k_14",
@@ -4664,7 +4664,7 @@ export const learnData =
           "read": "はな",
           "english": "flower",
           "word": "花",
-          "url": ""
+          "url": "t4_hana.mp3"
         },
         {
           "id": "t4k_15",
@@ -4673,7 +4673,7 @@ export const learnData =
           "read": "か、いえ",
           "english": "house",
           "word": "家ぞく、家",
-          "url": ""
+          "url": "t4_ka.mp3"
         }
       ],
       TOPIC5_TITLE_and_vocabulary : [
@@ -5219,7 +5219,7 @@ export const learnData =
           "read": "えき",
           "english": "station",
           "word": "駅",
-          "url": ""
+          "url": "t5_eki.mp3"
         },
         {
           "id": "t5k_2",
@@ -5228,7 +5228,7 @@ export const learnData =
           "read": "みせ",
           "english": "shop",
           "word": "店",
-          "url": ""
+          "url": "t5_mise.mp3"
         },
         {
           "id": "t5k_3",
@@ -5237,7 +5237,7 @@ export const learnData =
           "read": "うえ",
           "english": "above",
           "word": "上",
-          "url": ""
+          "url": "t5_ue.mp3"
         },
         {
           "id": "t5k_4",
@@ -5246,7 +5246,7 @@ export const learnData =
           "read": "した",
           "english": "under",
           "word": "下",
-          "url": ""
+          "url": "t5_shita.mp3"
         },
         {
           "id": "t5k_5",
@@ -5255,7 +5255,7 @@ export const learnData =
           "read": "みぎ",
           "english": "right",
           "word": "右",
-          "url": ""
+          "url": "t5_migi.mp3"
         },
         {
           "id": "t5k_6",
@@ -5264,7 +5264,7 @@ export const learnData =
           "read": "ひだり",
           "english": "left",
           "word": "左",
-          "url": ""
+          "url": "t5_hidari.mp3"
         },
         {
           "id": "t5k_7",
@@ -5273,7 +5273,7 @@ export const learnData =
           "read": "ぜん/まえ",
           "english": "front",
           "word": "午前、前",
-          "url": ""
+          "url": "t5_zen_mae.mp3"
         },
         {
           "id": "t5k_8",
@@ -5282,7 +5282,7 @@ export const learnData =
           "read": "ご/うしろ、あと",
           "english": "back",
           "word": "午後、後ろ、後",
-          "url": ""
+          "url": "t5_go_ushiro, ato.mp3"
         },
         {
           "id": "t5k_9",
@@ -5291,7 +5291,7 @@ export const learnData =
           "read": "ちゅう/なか",
           "english": "inside",
           "word": "中国、中",
-          "url": ""
+          "url": "t5_chuu_naka.mp3"
         },
         {
           "id": "t5k_10",
@@ -5300,7 +5300,7 @@ export const learnData =
           "read": "がい/そと",
           "english": "outside",
           "word": "外国、外",
-          "url": ""
+          "url": "t5_gai_soto.mp3"
         },
         {
           "id": "t5k_11",
@@ -5309,7 +5309,7 @@ export const learnData =
           "read": "きた",
           "english": "north",
           "word": "北",
-          "url": ""
+          "url": "t5_kita.mp3"
         },
         {
           "id": "t5k_12",
@@ -5318,7 +5318,7 @@ export const learnData =
           "read": "みなみ",
           "english": "south",
           "word": "南",
-          "url": ""
+          "url": "t5_minami.mp3"
         },
         {
           "id": "t5k_13",
@@ -5327,7 +5327,7 @@ export const learnData =
           "read": "ひがし",
           "english": "east",
           "word": "東",
-          "url": ""
+          "url": "t5_higashi.mp3"
         },
         {
           "id": "t5k_14",
@@ -5336,7 +5336,7 @@ export const learnData =
           "read": "にし",
           "english": "west",
           "word": "西",
-          "url": ""
+          "url": "t5_ni_shi.mp3"
         },
         {
           "id": "t5k_15",
@@ -5345,7 +5345,7 @@ export const learnData =
           "read": "ほん",
           "english": "book",
           "word": "本",
-          "url": ""
+          "url": "t5_hon.mp3"
         }
       ],
       TOPIC6_TITLE_and_vocabulary : [
@@ -5897,7 +5897,7 @@ export const learnData =
           "read": "とう/ちち",
           "english": "father",
           "word": "お父さん、父",
-          "url": ""
+          "url": "t6_tou_chichi.mp3"
         },
         {
           "id": "t6k_2",
@@ -5906,7 +5906,7 @@ export const learnData =
           "read": "かあ/はは",
           "english": "mother",
           "word": "お母さん、母",
-          "url": ""
+          "url": "t6_kaa_haha.mp3"
         },
         {
           "id": "t6k_3",
@@ -5915,7 +5915,7 @@ export const learnData =
           "read": "た",
           "english": "to eat",
           "word": "食べます、食べる",
-          "url": ""
+          "url": "t6_ta.mp3"
         },
         {
           "id": "t6k_4",
@@ -5924,7 +5924,7 @@ export const learnData =
           "read": "の",
           "english": "to drink",
           "word": "飲みます、飲む",
-          "url": ""
+          "url": "t6_no.mp3"
         },
         {
           "id": "t6k_5",
@@ -5933,7 +5933,7 @@ export const learnData =
           "read": "か",
           "english": "to write",
           "word": "書きます、書く",
-          "url": ""
+          "url": "t6_ka.mp3"
         },
         {
           "id": "t6k_6",
@@ -5942,7 +5942,7 @@ export const learnData =
           "read": "み",
           "english": "to watch / look",
           "word": "見ます、見る",
-          "url": ""
+          "url": "t6_mi.mp3"
         },
         {
           "id": "t6k_7",
@@ -5951,7 +5951,7 @@ export const learnData =
           "read": "い",
           "english": "to say",
           "word": "言います、言う",
-          "url": ""
+          "url": "t6_i.mp3"
         },
         {
           "id": "t6k_8",
@@ -5960,7 +5960,7 @@ export const learnData =
           "read": "わ/はな",
           "english": "to talk",
           "word": "電話、話します、話す、",
-          "url": ""
+          "url": "t6_wa_hana.mp3"
         },
         {
           "id": "t6k_9",
@@ -5969,7 +5969,7 @@ export const learnData =
           "read": "よ",
           "english": "to read",
           "word": "読みます、読む",
-          "url": ""
+          "url": "t6_yo.mp3"
         },
         {
           "id": "t6k_10",
@@ -5978,7 +5978,7 @@ export const learnData =
           "read": "か",
           "english": "to buy",
           "word": "買います、買う",
-          "url": ""
+          "url": "t6_kau.mp3"
         },
         {
           "id": "t6k_11",
@@ -5987,7 +5987,7 @@ export const learnData =
           "read": "ぶん/きく",
           "english": "to listen",
           "word": "新聞、聞きます、聞く",
-          "url": ""
+          "url": "t6_bun_kiku.mp3"
         },
         {
           "id": "t6k_12",
@@ -5996,7 +5996,7 @@ export const learnData =
           "read": "やすむ",
           "english": "to rest",
           "word": "休みます、休む、休み",
-          "url": ""
+          "url": "t6_yasumu.mp3"
         },
         {
           "id": "t6k_13",
@@ -6005,7 +6005,7 @@ export const learnData =
           "read": "でる",
           "english": "to go out",
           "word": "出ます、出る",
-          "url": ""
+          "url": ".mp3"
         },
         {
           "id": "t6k_14",
@@ -6014,7 +6014,7 @@ export const learnData =
           "read": "はいる",
           "english": "to enter",
           "word": "入ります、入る",
-          "url": ""
+          "url": "t6_hairu.mp3"
         },
         {
           "id": "t6k_15",
@@ -6023,7 +6023,7 @@ export const learnData =
           "read": "たつ",
           "english": "to stand",
           "word": "立ちます、立つ",
-          "url": ""
+          "url": "t6_tatsu.mp3"
         }
       ],
       TOPIC7_TITLE_and_vocabulary : [
@@ -6407,7 +6407,7 @@ export const learnData =
           "read": "からだ",
           "english": "body",
           "word": "体",
-          "url": ""
+          "url": "t7_karada.mp3"
         },
         {
           "id": "t7k_2",
@@ -6416,7 +6416,7 @@ export const learnData =
           "read": "め",
           "english": "eye",
           "word": "目",
-          "url": ""
+          "url": "t7_me.mp3"
         },
         {
           "id": "t7k_3",
@@ -6425,7 +6425,7 @@ export const learnData =
           "read": "くち",
           "english": "mouth",
           "word": "口",
-          "url": ""
+          "url": "t7_kuchi.mp3"
         },
         {
           "id": "t7k_4",
@@ -6434,7 +6434,7 @@ export const learnData =
           "read": "みみ",
           "english": "ear",
           "word": "耳",
-          "url": ""
+          "url": "t7_mimi.mp3"
         },
         {
           "id": "t7k_5",
@@ -6443,7 +6443,7 @@ export const learnData =
           "read": "て",
           "english": "hand",
           "word": "手",
-          "url": ""
+          "url": "t7_te.mp3"
         },
         {
           "id": "t7k_6",
@@ -6452,7 +6452,7 @@ export const learnData =
           "read": "あし",
           "english": "foot",
           "word": "足",
-          "url": ""
+          "url": "t7_ashi.mp3"
         },
         {
           "id": "t7k_7",
@@ -6461,7 +6461,7 @@ export const learnData =
           "read": "ちから",
           "english": "power",
           "word": "力",
-          "url": ""
+          "url": "t7_chikara.mp3"
         },
         {
           "id": "t7k_8",
@@ -6470,7 +6470,7 @@ export const learnData =
           "read": "うし",
           "english": "cow",
           "word": "牛",
-          "url": ""
+          "url": "t7_ushi.mp3"
         },
         {
           "id": "t7k_9",
@@ -6479,7 +6479,7 @@ export const learnData =
           "read": "うま",
           "english": "horse",
           "word": "馬",
-          "url": ""
+          "url": "t7_uma.mp3"
         },
         {
           "id": "t7k_10",
@@ -6488,7 +6488,7 @@ export const learnData =
           "read": "さかな",
           "english": "fish",
           "word": "魚",
-          "url": ""
+          "url": "t7_sakana.mp3"
         },
         {
           "id": "t7k_11",
@@ -6497,7 +6497,7 @@ export const learnData =
           "read": "かい",
           "english": "shell",
           "word": "貝",
-          "url": ""
+          "url": "t7_kai.mp3"
         },
         {
           "id": "t7k_12",
@@ -6506,7 +6506,7 @@ export const learnData =
           "read": "にく",
           "english": "meat",
           "word": "肉",
-          "url": ""
+          "url": "t7_niku.mp3"
         },
         {
           "id": "t7k_13",
@@ -6515,7 +6515,7 @@ export const learnData =
           "read": "しろ",
           "english": "white",
           "word": "白",
-          "url": ""
+          "url": "t7_shiro.mp3"
         },
         {
           "id": "t7k_14",
@@ -6524,7 +6524,7 @@ export const learnData =
           "read": "くろ",
           "english": "black",
           "word": "黒",
-          "url": ""
+          "url": "t7_kuro.mp3"
         },
         {
           "id": "t7k_15",
@@ -6533,7 +6533,7 @@ export const learnData =
           "read": "こく/くに",
           "english": "country",
           "word": "外国、国",
-          "url": ""
+          "url": "t7_koku_kuni.mp3"
         }
       ],
       TOPIC8_TITLE_and_vocabulary : [
@@ -6869,7 +6869,7 @@ export const learnData =
           "read": "えい",
           "english": "English",
           "word": "英語",
-          "url": ""
+          "url": "t8_ei.mp3"
         },
         {
           "id": "t8k_2",
@@ -6878,7 +6878,7 @@ export const learnData =
           "read": "ご",
           "english": "word, language",
           "word": "日本語",
-          "url": ""
+          "url": "t8_go.mp3"
         },
         {
           "id": "t8k_3",
@@ -6887,7 +6887,7 @@ export const learnData =
           "read": "てん",
           "english": "heaven",
           "word": "天気",
-          "url": ""
+          "url": "t8_ten.mp3"
         },
         {
           "id": "t8k_4",
@@ -6896,7 +6896,7 @@ export const learnData =
           "read": "き",
           "english": "spirit",
           "word": "電気",
-          "url": ""
+          "url": "t8_ki.mp3"
         },
         {
           "id": "t8k_5",
@@ -6905,7 +6905,7 @@ export const learnData =
           "read": "あめ",
           "english": "rain",
           "word": "雨",
-          "url": ""
+          "url": "t8_ame.mp3"
         },
         {
           "id": "t8k_6",
@@ -6914,7 +6914,7 @@ export const learnData =
           "read": "おな",
           "english": "same",
           "word": "同じ",
-          "url": ""
+          "url": "t8_ona.mp3"
         },
         {
           "id": "t8k_7",
@@ -6923,7 +6923,7 @@ export const learnData =
           "read": "つく",
           "english": "to make",
           "word": "作ります、作る",
-          "url": ""
+          "url": "t8_tsuku.mp3"
         },
         {
           "id": "t8k_8",
@@ -6932,7 +6932,7 @@ export const learnData =
           "read": "も",
           "english": "to hold",
           "word": "持ちます、持つ",
-          "url": ""
+          "url": "t8_mo.mp3"
         },
         {
           "id": "t8k_9",
@@ -6941,7 +6941,7 @@ export const learnData =
           "read": "ま",
           "english": "to wait",
           "word": "待ちます、待つ",
-          "url": ""
+          "url": "t8_ma.mp3"
         },
         {
           "id": "t8k_10",
@@ -6950,7 +6950,7 @@ export const learnData =
           "read": "の",
           "english": "to get on",
           "word": "乗ります、乗る",
-          "url": ""
+          "url": ".mp3"
         },
         {
           "id": "t8k_11",
@@ -6959,7 +6959,7 @@ export const learnData =
           "read": "みち",
           "english": "road",
           "word": "道",
-          "url": ""
+          "url": "t8_michi.mp3"
         },
         {
           "id": "t8k_12",
@@ -6968,7 +6968,7 @@ export const learnData =
           "read": "もの",
           "english": "thing",
           "word": "食べ物",
-          "url": ""
+          "url": "t8_mono_k.mp3"
         },
         {
           "id": "t8k_13",
@@ -6977,7 +6977,7 @@ export const learnData =
           "read": "でん",
           "english": "electricity",
           "word": "電話",
-          "url": ""
+          "url": "t8_den.mp3"
         },
         {
           "id": "t8k_14",
@@ -6986,7 +6986,7 @@ export const learnData =
           "read": "かん/あいだ",
           "english": "between",
           "word": "時間",
-          "url": ""
+          "url": "t8_kan_aida.mp3"
         },
         {
           "id": "t8k_15",
@@ -6995,7 +6995,7 @@ export const learnData =
           "read": "ご",
           "english": "noon",
           "word": "午前、午後",
-          "url": ""
+          "url": "t8_go_noon.mp3"
         }
       ]
     }
