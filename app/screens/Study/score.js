@@ -156,7 +156,7 @@ import {
     return (
         <View style={scoreStyle.scoreContainer}>
           <View style={ scoreStyle.containerTitle }>
-            <Text style={ scoreStyle.textTitle }> { this.props.scoreTotal > 80 ? ( 'You Pass' ) : ('You Failed') }</Text>
+            <Text style={ scoreStyle.textTitle }> { this.props.scoreTotal >= 80 ? ( 'You Pass' ) : ('You Failed') }</Text>
           </View>
           <View style={ scoreStyle.containerGraph }>
             <View style={ scoreStyle.absoluteText }>
@@ -187,7 +187,7 @@ import {
                 ) :<Text>No study data</Text> }
             </ScrollView >
           </View>
-          { this.props.scoreTotal > 80 ? ( 
+          { this.props.scoreTotal >= 80 ? ( 
           <View style={ scoreStyle.containerMistake }>
             <View style={ scoreStyle.RecordRowButton }>
               <View style={ scoreStyle.RecordRowButtonContainer }>

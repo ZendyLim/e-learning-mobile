@@ -88,7 +88,7 @@ module.exports = StyleSheet.create({
       },
 
     ModalTextTitle: {color: 'white',
-    fontSize: 30,
+    fontSize: 20,
     marginStart: 10,
       },
 
@@ -98,8 +98,8 @@ module.exports = StyleSheet.create({
       },
 
     ModalContentTitle: {
-      fontSize: 30, 
-      alignSelf: 'center',
+      fontSize: 15, 
+      // alignSelf: 'center',
     },
 
     
