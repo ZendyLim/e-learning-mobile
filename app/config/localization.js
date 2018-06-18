@@ -89,6 +89,9 @@ export let strings = new LocalizedStrings({
    TITLE_LEARN : 'LEARN',
    EXPLAINATION_LEARN : 'Explanation card',
    SUMMARY_LEFT : 'Days Left',
+   CHECK_ALL : "Check All",
+   PROCEED : "Proceed >",
+   QUIZLIST : "Quizlist",
 
   //login part
   SIGN_IN : "Sign In",
@@ -199,9 +202,9 @@ export let strings = new LocalizedStrings({
    KANJI_LIST : "漢字一覧",   
    FLASH_CARD_HIRAGANA: "フラッシュカードひらがな",
    FLASH_CARD_KATAKANA: "フラッシュカードカタカナ",
-   HIKA_ROMA: "Hiragana/Katakana to Romaji",
-   ROMA_HIKA: "Romaji to Hiragana/Katakana",
-   LISTEN: "Listening",
+   HIKA_ROMA: "ひらがな/カタカナからロマジ",
+   ROMA_HIKA: "ロマジからひらがな/カタカナ",
+   LISTEN: "聴取",
    TRANSLATE_SENTENCE: "Translate the sentence",
    FLASH_CARD: "Listening\n(Translate)",
    FILL_THE_BLANKS: "Fill in the blanks",
@@ -237,9 +240,12 @@ export let strings = new LocalizedStrings({
    STUDY_REVIEW : "レビュー",
    PROFILE_MODAL_CLOSE : "キャンセル",
    TITLE_LEARN : '学ぶ',
-   EXPLAINATION_LEARN : '説明カード',   
-
-
+   EXPLAINATION_LEARN : '説明カード',  
+   CHECK_ALL : "すべてチェック",
+   PROCEED : "持続する >",
+   QUIZLIST : "クイズリスト",
+ 
+   
     //login part
   SIGN_IN : "サインイン",
   SIGN_IN_USERNAME : "ユーザー名",

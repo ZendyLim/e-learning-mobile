@@ -67,6 +67,8 @@ import {
         userData['dateFrom'] = this.unixTimeStamps(this.state.dateFrom);
         userData['dateTo'] = this.unixTimeStamps(this.state.dateTo);
         userData['birthdate'] = this.unixTimeStamps(this.state.birthdate); 
+        userData['graduationYear'] = this.unixTimeStamps(this.state.graduationYear); 
+
         var sentParse = {
           data : userData
         }
@@ -78,7 +80,7 @@ import {
     unixTimeStamps = (date) =>{
       let toUnixTimestamps = date;
       toUnixTimestamps = toUnixTimestamps + " 00:00:00";
-      dateVal = (new Date(toUnixTimestamps).getTime()/1000);
+      dateVal = ((new Date(toUnixTimestamps)).getTime()/1000);
       return dateVal;
     }
 
@@ -105,7 +107,7 @@ import {
             <Text style={styles.textBlack}>{this.state.englishLevel}</Text>
             <Text style={styles.textBlue}>Japanese study history</Text>
             <Text style={styles.textBlack}>{this.state.japaneseType}</Text>
-            <Text style={styles.textBlue}>{this.state.dateFrom} - {this.state.dateTo}</Text>   
+            <Text style={styles.textBlack}>{this.state.dateFrom} - {this.state.dateTo}</Text>   
             <Text style={styles.textBlue}>Study Reason</Text>        
             <Text style={styles.textBlack}>{ this.getStudyReasons()}</Text>
             <Text style={styles.textBlue}>Study Day / Week</Text> 
