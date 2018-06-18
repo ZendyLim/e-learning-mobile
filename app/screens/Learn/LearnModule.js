@@ -16,6 +16,7 @@ import  { strings }   from '../../config/localization';
 import { LearnListData , StudyList} from '../../config/studyList';
 import style from 'react-native-datepicker/style';
 import LearningModule from '../Study/hiraganaFlashcard';
+import LearningSlideModule from '../Study/hiraganaSlidecard';
 import HL2Screen from '../Learn/HL2';
 import SL2Screen from '../Learn/SL2';
 import { HiraganaLearnStack } from '../../config/router';
@@ -128,8 +129,7 @@ class LearnHiraganaModule extends Component {
             }
         }if( this.state.type == 'GL3'  || this.state.type == 'KL3' || this.state.type == 'BL3' ){
                 return (
-                   // <LearningModule navigation={this.props.navigation} title={ this.state.studyType }  goBack={this}/>     
-                   <Text>New</Text>
+                   <LearningSlideModule navigation={this.props.navigation} title={ this.state.studyType }  goBack={this}/>
                 );            
         }   
         else if(this.state.type == 'HL4'){
