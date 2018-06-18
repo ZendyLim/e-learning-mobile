@@ -1375,7 +1375,7 @@ export const listening = [
 
 export const reading = [
     {
-		"id":"tp2_r_1",
+		"id":"tp3_r_1",
 		"type":"reading",
 		"moji":"わたしはフランスのパリから来ました。私の家族もパリにいます。パリは古いたてものやおいしいレストランなどが、たくさんあります。にぎやかな町です。パリは東京より暑くないです。雨も少ないです。",
 		"questionOption":{
@@ -1384,22 +1384,22 @@ export const reading = [
 		},
 		"answerOption":[
 			{
-				"id":"tp2_r_3",
+				"id":"tp3_r_3",
 				"type":"reading",
 				"moji":"古いところ"
 			},
 			{
-				"id":"tp2_r_2",
+				"id":"tp3_r_2",
 				"type":"reading",
 				"moji":"おいしいところ"
 			},
 			{
-				"id":"tp2_r_1",
+				"id":"tp3_r_1",
 				"type":"reading",
 				"moji":" にぎやかなところ。"
 			},
 			{
-				"id":"tp2_r_4",
+				"id":"tp3_r_4",
 				"type":"reading",
 				"moji":"暑いところ "
 			}
@@ -1407,7 +1407,7 @@ export const reading = [
 		"audio":""
 	},
 	{
-		"id":"tp2_r_2",
+		"id":"tp3_r_2",
 		"type":"reading",
 		"moji":"わたしは映画の中でアメリカ映画が一番好きです。アメリカの映画は有名です。わたしはしずかな映画よりにぎやかな映画のほうが好きです。友だちはしずかな映画が好きじゃありません。映画は高くないです。母に映画の※チケットをもらいました。明日、友だちといっしょに映画を見ます。※チケット=ticket",
 		"questionOption":{
@@ -1416,22 +1416,22 @@ export const reading = [
 		},
 		"answerOption":[
 			{
-				"id":"tp2_r_1",
+				"id":"tp3_r_1",
 				"type":"reading",
 				"moji":"有名な映画"
 			},
 			{
-				"id":"tp2_r_2",
+				"id":"tp3_r_2",
 				"type":"reading",
 				"moji":"にぎやかな映画"
 			},
 			{
-				"id":"tp2_r_3",
+				"id":"tp3_r_3",
 				"type":"reading",
 				"moji":"しずかな映画"
 			},
 			{
-				"id":"tp2_r_4",
+				"id":"tp3_r_4",
 				"type":"reading",
 				"moji":"高い映画"
 			}
@@ -1439,7 +1439,7 @@ export const reading = [
 		"audio":""
 	},
 	{
-		"id":"tp2_r_3",
+		"id":"tp3_r_3",
 		"type":"reading",
 		"moji":"わたしは昨日、友だちと電車でデパートへ行きました。デパートで本を買いました。喫茶店でカレーを食べました。駅から電車で家へ帰りました。ごはんを作りませんでした。明日、学校へ行きません。ひとりで図書館へ行きます。本を読みます。",
 		"questionOption":{
@@ -1448,22 +1448,22 @@ export const reading = [
 		},
 		"answerOption":[
 			{
-				"id":"tp2_r_1",
+				"id":"tp3_r_1",
 				"type":"reading",
 				"moji":"デパートへ行きます"
 			},
 			{
-				"id":"tp2_r_2",
+				"id":"tp3_r_2",
 				"type":"reading",
 				"moji":"喫茶店でごはんを食べます"
 			},
 			{
-				"id":"tp2_r_3",
+				"id":"tp3_r_3",
 				"type":"reading",
 				"moji":"学校へ行きます"
 			},
 			{
-				"id":"tp2_r_4",
+				"id":"tp3_r_4",
 				"type":"reading",
 				"moji":"本を読みます"
 			}

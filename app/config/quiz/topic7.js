@@ -895,22 +895,22 @@ export const reading = [
         },
         "answerOption":[
             {
-                "id":"ans_r_5",
+                "id":"tp7_r_5",
                 "type":"reading",
                 "moji":"学校で勉強したいです"
             },
             {
-                "id":"ans_r_6",
+                "id":"tp7_r_6",
                 "type":"reading",
                 "moji":"日本語で話したいです"
             },
             {
-                "id":"ans_r_7",
+                "id":"tp7_r_7",
                 "type":"reading",
                 "moji":"漢字を習いたいです"
             },
             {
-                "id":"ans_r_1",
+                "id":"tp7_r_1",
                 "type":"reading",
                 "moji":"日本人の友だちがほしいです"
             },
@@ -927,22 +927,22 @@ export const reading = [
         },
         "answerOption":[
             {
-                "id":"ans_r_2",
+                "id":"tp7_r_2",
                 "type":"reading",
                 "moji":"おなかがいたいからです"
             },
             {
-                "id":"ans_r_6",
+                "id":"tp7_r_6",
                 "type":"reading",
                 "moji":"病院へ行くからです"
             },
             {
-                "id":"ans_r_7",
+                "id":"tp7_r_7",
                 "type":"reading",
                 "moji":"暑いからです"
             },
             {
-                "id":"ans_r_8",
+                "id":"tp7_r_8",
                 "type":"reading",
                 "moji":"薬を飲んだからです"
             },
@@ -959,22 +959,22 @@ export const reading = [
         },
         "answerOption":[
             {
-                "id":"ans_r_5",
+                "id":"tp7_r_5",
                 "type":"reading",
                 "moji":"会社"
             },
             {
-                "id":"ans_r_6",
+                "id":"tp7_r_6",
                 "type":"reading",
                 "moji":"友だちの家"
             },
             {
-                "id":"ans_r_7",
+                "id":"tp7_r_7",
                 "type":"reading",
                 "moji":"プール"
             },
             {
-                "id":"ans_r_3",
+                "id":"tp7_r_3",
                 "type":"reading",
                 "moji":"スーパー"
             },
