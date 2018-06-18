@@ -75,14 +75,18 @@ class StudyListScreen extends Component {
   }
 
   checkLock = (topic_id) =>{
-    if(this.props.lock[item.topic_id]){
-      if(this.props.lock[item.topic_id].lock){
-        return this.props.lock[item.topic_id].lock;
+    if(this.props.lock){
+      if(this.props.lock[topic_id]){
+        if(this.props.lock[topic_id].lock){
+          return this.props.lock[topic_id].lock;
+        }else{
+          return false;
+        }
       }else{
         return false;
-      }
+      }  
     }else{
-      return false;
+      return true;
     }
   }
   render() {
