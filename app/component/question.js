@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ImageBackground, TouchableHighlight } from 'react-native';
+import { View, Text, Image, ImageBackground, TouchableHighlight,ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 import Icon from 'react-native-vector-icons/FontAwesome';
 // Config
@@ -33,28 +33,49 @@ class QuestionPanel extends Component {
   componentWillMount() {
     this.currentQuestion = this.props.question.id;
     if(this.props.format == 'audio'){
+      //console.log('-mount-',this.props.format);
       this.loadAudio();
       setTimeout(() => {
-        this.playAudio(true)}, 500);
+        this.playAudio(true)
+      }, 500);
     }
   }
 
   componentDidUpdate(){
     if(this.currentQuestion != this.props.question.id){
+      
+      this.stopAudio();
+      
       this.currentQuestion = this.props.question.id;
       if(this.props.format == 'audio'){
+        //console.log('-update-',this.props.format);
         this.loadAudio();
-        setTimeout(() => {
-          this.playAudio()
-          this.props.questionReady(true);
-        }, 500);
+        this.props.questionReady(true);
+        
       }
       else{
+        //console.log('-update-2',this.props.format);
         this.props.questionReady(true);
-      }
+      }      
+      
     }
     
+    if(this.quizAudio){
+      this.quizAudio.stop();        
+    }
 
+  }
+
+  componentWillUnmount(){
+      this.stopAudio();
+  }
+
+  stopAudio(){
+    if(this.quizAudio){
+      this.quizAudio.stop();
+      this.quizAudio.release();
+      //console.log('--unmount--');
+    }
   }
 
   _renderTimesup(){
@@ -92,9 +113,25 @@ class QuestionPanel extends Component {
     else if(this.props.format == 'arrange'){
       return(
         <View style={[ styles.questionContainer, styles.col12 ]}>
-          <Text style={ [styles.questionInsText, styles.questionMediumText ]}>
-              {strings.QUESTION_ARRANGE}
+          
+            <Text style={ [styles.questionInsText, styles.questionMediumText ]}>
+                {strings.QUESTION_ARRANGE}
+            </Text>
+                  
+        </View>
+      );
+    }
+    else if(this.props.question.type == 'reading'){
+      return(
+        <View style={[ styles.questionReadingContainer, styles.col12 ]}>
+          <ScrollView>
+          <Text style={ [styles.questionInsText, styles.questionNormalText]}>
+                {strings.QUESTION_READ_ANSWER}
           </Text>
+          <Text style={ [styles.questionNormalText]}>
+              { this.props.question[this.props.format] }
+          </Text>
+          </ScrollView>
         </View>
       );
     }
@@ -116,18 +153,21 @@ class QuestionPanel extends Component {
   }
 
     render(){
+      bannerStyle = this.props.question.type == 'reading' ? 'quizBannerWidth' : 'quizBanner' ;
+
       return (
         <View style={ this.props.style }>
           <ImageBackground
-            style={ styles.quizBanner }
+            style={ styles[bannerStyle] }
             source={ this.imageSource }
           >
 
             <View style={ [styles.questionWrapper] }>
                   { this._renderQuestion() }          
             </View>
-              
-            <CharacterImage expression={ this.props.expression } style={ styles.quizChar }/>
+            { this.props.question.type != 'reading' && 
+              (<CharacterImage expression={ this.props.expression } style={ styles.quizChar }/>)  
+            }
           </ImageBackground>
           { this._renderTimesup() }
         </View>
@@ -137,9 +177,12 @@ class QuestionPanel extends Component {
     loadAudio(){
       this.quizAudio = new Sound(this.props.question.audio, Sound.MAIN_BUNDLE, (error) => {
         if (error) {
-          console.log('failed to load the sound', error);
+          //console.log('failed to load the sound', error);
           return;
         }
+        //console.log('--load--');
+        this.playAudio()
+        
 
       });
     }
@@ -151,14 +194,18 @@ class QuestionPanel extends Component {
       if(playDifferentAudio || forcePlay){    
             
         this.currentAudio = this.props.question.id;
-
-        this.quizAudio.play((success) => {
-          if (!success) {
-            this.quizAudio.reset();
-          } 
+        //console.log(this.currentAudio, this.props.question);
+        this.quizAudio.stop(() => {
+          this.quizAudio.play((success) => {
+            if (!success) {
+              //console.log('--test--');
+              //this.quizAudio.reset();
+            } 
+          });
         });
+        
+        
       }
-
       
 
     }

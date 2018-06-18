@@ -16,7 +16,7 @@ module.exports = StyleSheet.create({
      
     FlatListItem: {
       flex:1,
-      height: 60,
+      // height: 60,
       flexDirection: 'row',
       flexWrap: 'wrap',
     //   marginBottom: 5,
@@ -79,7 +79,8 @@ module.exports = StyleSheet.create({
      },
 
      ModalTabBar: {
-       flexDirection: 'row', 
+       flexDirection: 'row',
+       flexWrap: 'wrap',
        width: '100%',
        backgroundColor: '#45B5E7', 
        alignItems: 'center', 
@@ -88,7 +89,7 @@ module.exports = StyleSheet.create({
 
     ModalTextTitle: {color: 'white',
     fontSize: 30,
-    marginStart: 20,
+    marginStart: 10,
       },
 
     ModalContent: {
@@ -97,7 +98,7 @@ module.exports = StyleSheet.create({
       },
 
     ModalContentTitle: {
-      fontSize: 40, 
+      fontSize: 30, 
       alignSelf: 'center',
     },
 

@@ -28,7 +28,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as Actions from '../../actions/study'; //Import your actions
 import { studyList } from '../Study/studyList';
-import LearnGBK01Screen from '../Learn/LearnGBK01';
+import LearnGK01Screen from '../Learn/LearnGK01';
+import LearnB01Screen from '../Learn/LearnB01';
 
 class LearnHiraganaModule extends Component {
   constructor(props) {
@@ -137,21 +138,21 @@ class LearnHiraganaModule extends Component {
         }else 
         if(this.state.type == 'GL1'){
                 return (
-                    <LearnGBK01Screen 
+                    <LearnGK01Screen 
                     studyType={this.state.studyType} img={this.state.img} listType={this.state.type} 
                     />
                 );
         } else 
         if(this.state.type == 'BL1') {
                 return (
-                    <LearnGBK01Screen 
+                    <LearnB01Screen 
                     studyType={this.state.studyType} img={this.state.img} listType={this.state.type} 
                     />
                 );
         } else 
         if(this.state.type == 'KL1') {
                 return (
-                    <LearnGBK01Screen 
+                    <LearnGK01Screen 
                     studyType={this.state.studyType} img={this.state.img} listType={this.state.type} 
                     />
                 );

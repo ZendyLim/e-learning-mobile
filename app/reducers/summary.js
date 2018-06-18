@@ -1,10 +1,13 @@
-import { SUMMARY_HOME  , SUMMARY_TEST , SUMMARY_QUIZ }  from '../lib/constants';
+import { SUMMARY_HOME  , SUMMARY_TEST , SUMMARY_QUIZ , SUMMARY_ALL, SUMMARY_LEARN, SUMMARY_LOCK }  from '../lib/constants';
 
 const initialState = { 
     dateFrom:'', 
     dateTo: '', 
     testData: [],
-    quizData: []
+    quizData: [],
+    showLearn : [],
+    lock : [],
+    countSummary: []
 };
 
 export default function userReducer (state = initialState, action) {
@@ -26,7 +29,25 @@ export default function userReducer (state = initialState, action) {
                 quizData:  [],
                 quizData : action.data,
             });   
-            return state;            
+            return state;   
+        case SUMMARY_ALL: 
+            state = Object.assign({}, state, { 
+                countSummary: [],
+                countSummary : action.data,
+            });   
+            return state;      
+        case SUMMARY_LEARN:
+            state = Object.assign({}, state, { 
+                showLearn: [],
+                showLearn : action.data,
+            });   
+            return state;                      
+        case SUMMARY_LOCK:
+            state = Object.assign({}, state, { 
+                lock: [],
+                lock : action.data,
+            });   
+            return state;                      
         default:
             return state;
 }

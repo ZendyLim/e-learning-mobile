@@ -14,12 +14,16 @@ import {
 
 import { katakanaList } from '../../config/data';
 import CircleCheckBox, {LABEL_POSITION} from 'react-native-circle-checkbox'; 
-  
+import  { strings }   from '../../config/localization';
+
   class QuizKatakanaListScreen extends Component {
   
-    static navigationOptions = {
-      title: 'Katakana',
-    };
+    static navigationOptions = ({ navigation }) =>{
+        const {state} = navigation;
+        return {
+            title: `${strings['KATAKANA_LIST_TITLE']}`,
+        };
+      };
 
     state = {
         checkAllText: "Check All",
