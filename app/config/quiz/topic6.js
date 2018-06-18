@@ -1016,12 +1016,12 @@ export const listening = [
         "audio":"t6_listening_2.mp3"
     },
     {
-        "id":"tp6_l_1",
+        "id":"tp6_l_3",
         "type":"listening",
-        "romaji":"",
-        "moji":"",
-        "kanji":"",
-        "english":"",
+        "romaji":"サッカーをすることです",
+        "moji":"サッカーをすることです",
+        "kanji":"サッカーをすることです",
+        "english":"サッカーをすることです",
         "answerOption":[
             {
                 "id":"tp6_l_1",
@@ -1029,17 +1029,17 @@ export const listening = [
                 "moji":"本を読むことです"
             },
             {
-                "id":"tp6_l_1",
+                "id":"tp6_l_4",
                 "type":"listening",
                 "moji":"旅行に行くことです"
             },
             {
-                "id":"tp6_l_1",
+                "id":"tp6_l_2",
                 "type":"listening",
                 "moji":"サッカーを見ることです"
             },
             {
-                "id":"tp6_l_1",
+                "id":"tp6_l_3",
                 "type":"listening",
                 "moji":"サッカーをすることです"
             }

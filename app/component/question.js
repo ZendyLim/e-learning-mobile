@@ -33,21 +33,28 @@ class QuestionPanel extends Component {
   componentWillMount() {
     this.currentQuestion = this.props.question.id;
     if(this.props.format == 'audio'){
+      //console.log('-mount-',this.props.format);
       this.loadAudio();
       setTimeout(() => {
-        this.playAudio(true)}, 500);
+        this.playAudio(true)
+      }, 500);
     }
   }
 
   componentDidUpdate(){
     if(this.currentQuestion != this.props.question.id){
-            
+      
+      this.stopAudio();
+      
       this.currentQuestion = this.props.question.id;
       if(this.props.format == 'audio'){
+        //console.log('-update-',this.props.format);
         this.loadAudio();
         this.props.questionReady(true);
+        
       }
       else{
+        //console.log('-update-2',this.props.format);
         this.props.questionReady(true);
       }      
       
@@ -60,8 +67,14 @@ class QuestionPanel extends Component {
   }
 
   componentWillUnmount(){
+      this.stopAudio();
+  }
+
+  stopAudio(){
     if(this.quizAudio){
       this.quizAudio.stop();
+      this.quizAudio.release();
+      //console.log('--unmount--');
     }
   }
 
@@ -164,10 +177,10 @@ class QuestionPanel extends Component {
     loadAudio(){
       this.quizAudio = new Sound(this.props.question.audio, Sound.MAIN_BUNDLE, (error) => {
         if (error) {
-          console.log('failed to load the sound', error);
+          //console.log('failed to load the sound', error);
           return;
         }
-
+        //console.log('--load--');
         this.playAudio()
         
 
@@ -181,11 +194,12 @@ class QuestionPanel extends Component {
       if(playDifferentAudio || forcePlay){    
             
         this.currentAudio = this.props.question.id;
-
+        //console.log(this.currentAudio, this.props.question);
         this.quizAudio.stop(() => {
           this.quizAudio.play((success) => {
             if (!success) {
-              this.quizAudio.reset();
+              //console.log('--test--');
+              //this.quizAudio.reset();
             } 
           });
         });

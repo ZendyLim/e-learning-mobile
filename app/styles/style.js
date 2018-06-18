@@ -471,7 +471,7 @@ module.exports = StyleSheet.create({
 		quizKanjiQuestion:{
 			fontSize: 40,
 			width:'100%',
-			lineHeight:40
+			lineHeight:45
 		},
 		quizGrammarInstruction:{
 			fontSize: 24,

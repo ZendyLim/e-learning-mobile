@@ -852,7 +852,7 @@ export const listening = [
         "audio":"t7_listening_2.mp3"
     },
     {
-        "id":"tp7_l_1",
+        "id":"tp7_l_3",
         "type":"listening",
         "romaji":"かばんを部屋に持って行きます",
         "moji":"かばんを部屋に持って行きます",
