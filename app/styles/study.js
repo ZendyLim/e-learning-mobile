@@ -189,6 +189,8 @@ module.exports = StyleSheet.create({
   },
   summaryDetail : {
     flex: 1,
+    textAlign: 'center',
+    fontSize: 14,
   },
   buttonContainerTopic: {
     flex: 1,
