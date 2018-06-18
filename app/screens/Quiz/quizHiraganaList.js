@@ -100,16 +100,18 @@ import  { strings }   from '../../config/localization';
 
     validation = () => {
         // const { studyReason, statusDays, finishDate} = this.state;
+        const {idList} = this.state;
         let error = '';
         let status = false;
-        for(i=0;i<hiraganaList.length;i++){
-            if(this.checkRows[i] == true){
-                this.setState({statusCheckAll: !this.state.statusCheckAll})
-                this.setState({ checkAllText: strings['CHECK_ALL'] }) 
-                status=true;
-            }
-        }
-        if (status == false) error = strings['HIRAGANA_KATAKANA_LIST_VALIDATION'];
+        // for(i=0;i<hiraganaList.length;i++){
+        //     if(this.checkRows[i] == true){
+        //         this.setState({statusCheckAll: !this.state.statusCheckAll})
+        //         this.setState({ checkAllText: strings['CHECK_ALL'] }) 
+        //         status=true;
+        //     }
+        // }
+        if(this.state.idList.length<5)error = strings['HIRAGANA_KATAKANA_LIST_VALIDATION'];
+        // if (status == false) error = strings['HIRAGANA_KATAKANA_LIST_VALIDATION'];
         if (error) {
           Alert.alert(strings['WARNING'], error);
           return true; 
