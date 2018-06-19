@@ -36,7 +36,7 @@ class StudyListScreen extends Component {
     this.setState({modalVisible: visible});
   }
   lockedMessage=(item, index)=>{
-    alert('locked ' + strings[item.title]);     
+    alert(strings[item.topic_id + '_MSG'] );     
   }
   
   navigateToLearn=(item, index)=>{
@@ -75,18 +75,21 @@ class StudyListScreen extends Component {
   }
 
   checkLock = (topic_id) =>{
-    if(this.props.lock[item.topic_id]){
-      if(this.props.lock[item.topic_id].lock){
-        return this.props.lock[item.topic_id].lock;
+    if(this.props.lock){
+      if(this.props.lock[topic_id]){
+        if(this.props.lock[topic_id].lock){
+          return this.props.lock[topic_id].lock;
+        }else{
+          return false;
+        }
       }else{
         return false;
-      }
+      }  
     }else{
-      return false;
+      return true;
     }
   }
   render() {
-    console.log(this.props.lock['T001'].lock,'data lock');
     var image = '';
     this._onSetLanguageTo(this.props.lang);
     return (

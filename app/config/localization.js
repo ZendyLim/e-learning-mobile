@@ -104,6 +104,7 @@ export let strings = new LocalizedStrings({
   SIGN_IN_VALIDATION_PASSWORD : "Password is required",
   SIGN_IN_VALIDATION_FAILED : "Username and password is wrong",
 
+
   //profile part
   PROFILE_PERSONAL_DATA : "Personal Data",
   PROFILE_GENDER : "Gender",
@@ -130,6 +131,33 @@ export let strings = new LocalizedStrings({
   SUMMARY_KANJI : "Kanji",
   SUMMARY_WORD_LEARN : "\nWord\nLearned",
   SUMMARY_SUMMARY_MESSAGE : "Let's Review\n What have you learn?",
+
+     //message Lock
+     T001_MSG : 'Please take test of topic!',   
+     T002_MSG : 'Please take test of hiragana & katakana!',   
+     T003_MSG : 'Please take test of number!',   
+     T004_MSG : 'Please take test of greeting!',   
+     T005_MSG : 'Please take test of myself!',   
+     T006_MSG : 'Please take test of family!',   
+     T007_MSG : 'Please take test of house!',   
+     T008_MSG : 'Please take test of living enviroment!',   
+     T009_MSG : 'Please take test of living enviroment!',   
+     T010_MSG : 'Please take test of free time!',   
+     T011_MSG : 'Please take test of entertaiment!',   
+     T012_MSG : 'Please take test of living!',   
+     T013_MSG : 'Please take test of human life!',   
+     T014_MSG : 'Please take test of human life!',   
+     T015_MSG : 'Please take test of travel!',   
+     T016_MSG : 'Please take test of traffic!',   
+     T017_MSG : 'Please take test of health!',   
+     T018_MSG : 'Please take test of shopping!',   
+     T019_MSG : 'Please take test of shopping!',   
+     T020_MSG : 'Please take test of eating habits!',   
+     T021_MSG : 'Please take test of nature!',   
+     T022_MSG : 'Please take test of table manner!',   
+     T023_MSG : 'Please take test of languages culture!',   
+     T024_MSG : 'Please take test of languages culture!',   
+     
   SUMMARY_HEADER : "Summary",
   SUMMARY_TITLE : "TITLE",
   SUMMARY_CORRECT : "CORRECT",
@@ -137,6 +165,7 @@ export let strings = new LocalizedStrings({
   SUMMARY_TOTAL :"TOTAL",
   
   WARNING : "Warning",
+  HISTORY : 'History',
   },
  ja: {
    loginGuest: "ログイン",
@@ -259,12 +288,8 @@ export let strings = new LocalizedStrings({
   PROFILE_SETTING : "設定",
   PROFILE_LOGOUT : "ログアウト",
 
+  
   //summary part
-  SUMMARY_VOCABULARY : "語彙",
-  SUMMARY_GRAMMAR: "文法",
-  SUMMARY_KANJI : "漢字",
-  SUMMARY_WORD_LEARN : "\n学ぶ\n言葉",
-  SUMMARY_SUMMARY_MESSAGE : "復習しましょう\n何が学びました？",
   SUMMARY_HEADER : "概要",
   SUMMARY_TITLE : "タイトル",
   SUMMARY_CORRECT : "正しい",
@@ -273,6 +298,38 @@ export let strings = new LocalizedStrings({
 
   WARNING : "警告",
 
+    SUMMARY_VOCABULARY : "語彙",
+    SUMMARY_GRAMMAR: "文法",
+    SUMMARY_KANJI : "漢字",
+    SUMMARY_WORD_LEARN : "\n学ぶ\n言葉",
+    SUMMARY_SUMMARY_MESSAGE : "復習しましょう\n何が学びました？",
+
+     //message Lock
+     T001_MSG : 'トピックのテスト取ってお願いします。',   
+     T002_MSG : 'ひらがなとカタカナのテスト取ってお願いします。',   
+     T003_MSG : '数字のテスト取ってお願いします。',   
+     T004_MSG : 'あいさつのテスト取ってお願いします。',   
+     T005_MSG : '自分のテスト取ってお願いします。',   
+     T006_MSG : '家族のテスト取ってお願いします。',   
+     T007_MSG : '住まいのテスト取ってお願いします。',   
+     T008_MSG : '住環境のテスト取ってお願いします。',   
+     T009_MSG : '住環境のテスト取ってお願いします。',   
+     T010_MSG : '自由時間のテスト取ってお願いします。',   
+     T011_MSG : '娯楽のテスト取ってお願いします。',   
+     T012_MSG : '生活のテスト取ってお願いします。',   
+     T013_MSG : '人生のテスト取ってお願いします。',   
+     T014_MSG : '人生のテスト取ってお願いします。',   
+     T015_MSG : '旅行のテスト取ってお願いします。',   
+     T016_MSG : '交通のテスト取ってお願いします。',   
+     T017_MSG : '健康のテスト取ってお願いします。',   
+     T018_MSG : '買い物のテスト取ってお願いします。',   
+     T019_MSG : '買い物のテスト取ってお願いします。',   
+     T020_MSG : '食生活のテスト取ってお願いします。',   
+     T021_MSG : '自然のテスト取ってお願いします。',   
+     T022_MSG : 'トラブル・マナーのテスト取ってお願いします。',   
+     T023_MSG : '言語と文化のテスト取ってお願いします。',   
+     T024_MSG : '言語と文化のテスト取ってお願いします。',   
+     HISTORY : '履歴',
     
   }
 });

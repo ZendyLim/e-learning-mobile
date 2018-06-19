@@ -170,6 +170,9 @@ module.exports = StyleSheet.create({
     borderRadius: 5,
     marginBottom: 5
   },
+  btnLearnText : {
+    fontSize:20,
+  },
   summaryLearn : {
     width: '100%',
     height: 30,
@@ -186,6 +189,8 @@ module.exports = StyleSheet.create({
   },
   summaryDetail : {
     flex: 1,
+    textAlign: 'center',
+    fontSize: 14,
   },
   buttonContainerTopic: {
     flex: 1,
