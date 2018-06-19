@@ -44,8 +44,11 @@ import {
     state = {
     }
 
-  componentDidMount() {
-
+  componentWillMount() {
+    const { navigation } = this.props;
+    this.setState({
+      type: navigation.getParam('type', null),
+    });
   }
   countScore = (quiz) => {
     return Helper.countScore(quiz) + '/100';
@@ -70,10 +73,16 @@ import {
                 <View> 
                     { this.props.historyData.map((item, key)=>( 
                         <View key={key}>
-                            <Text>{ this.getDateFormat(item.startTime) }</Text>
-                            <Text>{ item.type }</Text>
-                            <Text>{ this.countScore(item.questions) }</Text>
-                            <TouchableHighlight onPress={ () => this.gotoHistoryDetail(item) }><Text>Detail</Text></TouchableHighlight>
+                          { this.item == this.state.type ? (  
+                            <View>
+                              <Text>{ this.getDateFormat(item.startTime) }</Text>
+                              <Text>{ item.type }</Text>
+                              <Text>{ this.countScore(item.questions) }</Text>
+                              <TouchableHighlight onPress={ () => this.gotoHistoryDetail(item) }><Text>Detail</Text></TouchableHighlight>
+                            </View>
+                          ) : (
+                            <View></View>
+                          )}
                         </View>
                     ))}
                 </View>

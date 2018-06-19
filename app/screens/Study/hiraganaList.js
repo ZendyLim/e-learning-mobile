@@ -215,7 +215,7 @@ class HiraganaListScreen extends Component {
             </View>
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>{ scoreQuiz }</Text>
             <View style={study.buttonContainer}>
-              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateHistory.bind(this, 'Quiz', this.state.topicId)}>              
+              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateHistory.bind(this, 'QUIZ')}>              
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > history</Text>
               </TouchableOpacity>
@@ -234,6 +234,10 @@ class HiraganaListScreen extends Component {
               <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Test')}>
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_START'] }</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateHistory.bind(this, 'TEST')}>              
+                <Icon name='play-arrow'   color='#fff'/>
+                <Text style={[study.textWhite, study.textMd]} > history</Text>
               </TouchableOpacity>
             </View>
           </View>
