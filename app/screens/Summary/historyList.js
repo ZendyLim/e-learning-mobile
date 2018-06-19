@@ -42,6 +42,7 @@ import {
       
     }
     state = {
+      type : ""
     }
 
   componentWillMount() {
@@ -62,18 +63,23 @@ import {
   ];
     return  datefinish.getDate() + " " + monthNames[datefinish.getMonth()] + " " + datefinish.getFullYear() + " " + datefinish.getHours() + ":" + datefinish.getMinutes();
   }
+
+  checkType = (itemType) =>{
+    
+  }
   
   gotoHistoryDetail = (item) =>{
     this.props.navigation.navigate('historyDetailScreen', (item));
   }
   render() {
+    console.log(this.state.type);
     return (
             <ScrollView style={study.StudyContainer}>
              { this.props.historyData ? (      
                 <View> 
                     { this.props.historyData.map((item, key)=>( 
                         <View key={key}>
-                          { this.item == this.state.type ? (  
+                          { item.type == this.state.type ? (  
                             <View>
                               <Text>{ this.getDateFormat(item.startTime) }</Text>
                               <Text>{ item.type }</Text>
