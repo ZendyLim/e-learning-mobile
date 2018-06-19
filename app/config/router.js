@@ -49,6 +49,8 @@ import SummaryLearnDetail from '../screens/Summary/summaryLearn';
 import reviewScreen from '../screens/Summary/reviewSummary';
 import mainSettings from '../screens/Setting/mainsetting';
 
+import historyListScreen from '../screens/Summary/historyList';
+import historyDetailScreen from '../screens/Summary/historyDetail';
 
 const styles = require('../styles/style');
 
@@ -83,6 +85,9 @@ const StudyStack = StackNavigator({
     LearnHL1: LearnHL1Screen,
     summaryLearnData : SummaryLearnDetail,
     reviewScreen : reviewScreen,
+    historyListScreen : historyListScreen,
+    historyDetailScreen : historyDetailScreen,
+
 });
 
 const SummaryStack = StackNavigator({

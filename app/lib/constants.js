@@ -24,5 +24,8 @@ export const SUMMARY_QUIZ = 'SUMMARY_QUIZ'; //import the action for Summary Quix
 export const SUMMARY_ALL = 'SUMMARY_ALL'; //import the action for Summary Quix
 export const SUMMARY_LEARN = 'SUMMARY_LEARN'; //import the action for Summary Quix
 export const SUMMARY_LOCK = 'SUMMARY_LOCK'; //import the action for Summary Quix
+export const SUMMARY_HISTORY = 'SUMMARY_HISTORY'; //import the action for Summary Quix
+
+
 
 
