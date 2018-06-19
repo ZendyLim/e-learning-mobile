@@ -86,7 +86,7 @@ class StudyListScreen extends Component {
         return false;
       }  
     }else{
-      return true;
+      return false;
     }
   }
   render() {
