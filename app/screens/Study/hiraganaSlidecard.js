@@ -63,22 +63,148 @@ import {
     constructor(props) {
       super(props);
 
-      this.state = {
-        visible: false,
-        x: new Animated.Value(0)
+      Sound.setCategory('Playback', true);
+      // Special case for stopping
+      this.stopSoundLooped = () => {
+        if (!this.state.loopingSound) {
+          return;
+        }
+        this.state.loopingSound.stop().release();
+        this.setState({loopingSound: null, tests: {...this.state.tests, ['mp3 in bundle (looped)']: 'win'}});
       };
 
-      this.leftInterpolate = -(Dimensions.get('window').width);
-      this.rightInterpolate = -(Dimensions.get('window').width);
+      this.data = flashData[0][this.props.title];
+      this.data.sort(function() {
+        return 0.5 - Math.random()
+      })
+     
+      this.index = 0;
+      this.speed = 1;
+      
+      this.LEFT_POS = -(Dimensions.get('window').width);
+      this.RIGHT_POS = Dimensions.get('window').width;
+      this.BASE_TIMER = 4000;
+      this.autoplay = true;
+
+      this.state = {
+        loopingSound: undefined,
+        tests: {},
+        visible: false,
+        indicator: new Animated.Value(0),
+        pos: new Animated.Value(0),
+        moji: this.data[0].moji,
+        romaji: this.data[0].romaji, 
+      };
+
+      this.interval;
+
+      this.slider = (duration) => {
+        this.reset();
+        const set = (finished) => {
+          if(finished){
+            this.next();
+          }
+        }
+
+        Animated.timing(this.state.indicator, { 
+          toValue: 1000, 
+          duration: duration
+        }).start(set);
+      }
     }
 
-    slide = () => {
-      Animated.spring(this.state.x, { 
-        toValue: 500, 
-      }).start();
+    reset = () =>  {
+      this.setState({
+        indicator : new Animated.Value(0)
+      })
+    
+    }
+
+    previous(){
+      const set = (finished) => {
+        if(finished){
+          this.index--;
+          this.setState({
+            pos: new Animated.Value(this.LEFT_POS),
+            moji: this.data[this.index].moji,
+            romaji: this.data[this.index].romaji,
+          })
+          if(this.index === this.data.length) {
+            return;
+          }
+          this.slideBack();
+        }
+      };
+      Animated.spring(this.state.pos, { 
+        toValue: this.RIGHT_POS, 
+      }).start(set);
       this.setState({
         visible: true,
       });
+    }
+
+    next(){
+      const set = (finished) => {
+        if(finished){
+          this.index++;
+          this.setState({
+            pos: new Animated.Value(this.LEFT_POS),
+            moji: this.data[this.index].moji,
+            romaji: this.data[this.index].romaji,
+          })
+          if(this.index === this.data.length) {
+            return;
+          }
+          this.slideBack();
+        }
+      };
+      Animated.spring(this.state.pos, { 
+        toValue: this.RIGHT_POS, 
+      }).start(set);
+      this.setState({
+        visible: true,
+      });
+    }
+
+    slideBack(){
+      const set = (finished) => {
+        if(finished) {
+          this.autoPlay();
+        }
+      }
+      Animated.spring(this.state.pos, { 
+        toValue: 0, 
+      }).start(set);
+      this.setState({
+        visible: true,
+      });
+    }
+
+    autoPlay() {
+      if(this.autoplay){
+        this.slider(this.BASE_TIMER/ this.speed);
+      } else {
+        alert();
+      }
+    }
+
+    setSpeed() {
+      switch(this.speed){
+        case 1: 
+          this.speed = 2;
+          break;
+        case 2:
+          this.speed = 4;
+          break;
+        case 4: 
+          this.speed = 1;
+          break;
+      }
+    }
+
+    componentDidMount() {
+      this.slider(this.BASE_TIMER/ this.speed);
+      playSound(this.state , this);
     }
 
     render() {
@@ -97,17 +223,18 @@ import {
                   <Icon name='volume-up' color='#45B3EB' size={40}/>
                 </View>
               </TouchableOpacity>
-              <TouchableWithoutFeedback onPress={() => this.slide()}>
+              <TouchableWithoutFeedback>
                 <View style={studyStyles.cardContainer}>
                   <Animated.View style={[styles.slideView, {
                     transform: [
                       {
-                        translateX: this.state.x
+                        translateX: this.state.pos
                       }
                     ]
                   }]}>
                     <View style={[studyStyles.cardText]}>
-                      <Text>LALALA</Text>
+                      <Text>{this.state.moji}</Text>
+                      <Text>{this.state.romaji}</Text>
                     </View>
                   </Animated.View>
                 </View>
@@ -115,7 +242,22 @@ import {
             </View>
 
             <View style={[studyStyles.containerBottom, autoHeight]}>
-             
+              <FlashButton btnType={'icon'}
+                iconName={'arrow-back'}
+                disabled={this.state.btnDisable}
+                onPress={() => this.previous()} />
+
+              <FlashButton btnType={'icon'} 
+                iconName={ this.state.autoplay ? 'play-arrow' : 'pause' }
+                onPress={() => this.autoPlay()} />
+
+              <FlashButton btnType={'text'} 
+                textName={ this.speed }
+                onPress={() => this.setSpeed()} />
+
+              <FlashButton btnType={'icon'} 
+                iconName={'arrow-forward'}
+                onPress={() => this.next()} />
             </View>
           </View>
         </ImageBackground>
