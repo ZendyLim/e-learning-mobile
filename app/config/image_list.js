@@ -23,6 +23,7 @@ export const ImageData = {
     
     T016 : require('../assets/img/topic/14.jpg'), 
     T017 : require('../assets/img/topic/15.jpg'), 
+    FUKUSHU : require('../assets/img/topic/FUKUSHU.jpg'), 
     
       
 }
