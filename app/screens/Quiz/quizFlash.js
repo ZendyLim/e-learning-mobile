@@ -26,6 +26,7 @@ import {
 
   import { quizItems } from '../../config/quiz/index';
   import { StudyList } from '../../config/studyList';
+  import { studyType } from '../../config/quizFormat';
 
   /*
     TODO:
@@ -116,6 +117,12 @@ import {
         listening: 3
       }
 
+      this.shortType = {
+        'v' : 'vocabulary',
+        'g' : 'grammar',
+        'k' : 'kanji'
+      }
+
       // this.testItemCount = {
       //   vocabulary: 1,
       //   kanji: 1,
@@ -123,6 +130,12 @@ import {
       //   reading: 1,
       //   listening: 1
       // }
+
+      this.fukushuItemCount = {
+        vocabulary: 2,
+        kanji: 2,
+        grammar: 2
+      }
 
       this.state = this.initialState;
      
@@ -234,8 +247,22 @@ import {
 
       this.setInitial();
       
-      this.setListQuestion();      
-      this.setDefinedQuestion(this.initialParams.idList);      
+         
+      if(this.initialParams.idList && this.initialParams.idList.length){
+        if(this.initialParams.formatType == 'FUKUSHU'){
+          this.setDefineFukushu(this.initialParams.idList);
+          //this.setListQuestion();
+        }
+        else{
+          this.setListQuestion();
+          this.setDefinedQuestion(this.initialParams.idList);
+        }    
+      }  
+      else{
+        this.setListQuestion();
+      }
+
+            
       if(!this.quizItems){
         const resetAction = NavigationActions.reset({
           index: 0,
@@ -335,7 +362,7 @@ import {
 
     // will change all question based on what you put in 'idList'
     setDefinedQuestion(idList){
-      if(idList && idList.length){
+      //if(idList && idList.length){
         var quizItemsTemp = [];
 
         for(i = 0; i < idList.length; i++){
@@ -344,9 +371,73 @@ import {
             return obj.id == currentId; 
           });
         }
+        
+        this.quizItems = quizItemsTemp;
+      //}
+    }
+
+    setDefineFukushu(idList){
+      //will get the first 
+
+      //(?![a-z]+\d+_)([a-z])(?=_) <-- will get the middle string of an id
+      console.log();
+
+      
+        var quizItemsTemp = [];
+        var existingId = [];
+        var existingByCat = [];
+
+        for(i = 0; i < idList.length; i++){
+          currentId = idList[i];
+          id = currentId.match(/(\d+)(?=_+[a-z])/);
+          type = currentId.match(/(?=_)*([a-z])(?=_)/);
+          if(id != null && type != null && this.shortType[type[0]]){
+            id = id[0];
+            type = type[0];
+            typeName = this.shortType[type];                        
+            tempQuiz = quizItems[ 'TOPIC' + id + '_TITLE_and_' + typeName];                                
+            if(existingByCat[typeName] == undefined) existingByCat[typeName] = [];
+            if(this.fukushuItemCount[typeName] <=  existingByCat[typeName].length) continue;
+            
+            if(tempQuiz == undefined) continue;
+
+            quizItemsTemp[quizItemsTemp.length] = tempQuiz.find(function (obj) { 
+              return obj.id == currentId; 
+            });
+
+            existingByCat[typeName][existingByCat[typeName].length] = 1;
+            
+            if(existingId.indexOf(type + id) > -1) continue; 
+
+            existingId[existingId.length] = type + id;
+
+            if(this.byCategory[typeName] == undefined){
+              this.byCategory[typeName] = tempQuiz;
+            } 
+
+          }
+                    
+        }
+        console.log(quizItemsTemp);
+        console.log(this.byCategory);
+
+        // this.byCategory[topics[i]] = tempQuiz;
+                  
+        //   for(c = 0; c < this.testItemCount[topics[i]]; c++){
+        //     randomItem = '';
+
+        //     while(!randomItem){
+        //       randomIndex = Math.floor(Math.random() * tempQuiz.length);
+        //       if(currentItems.indexOf(tempQuiz[randomIndex].id) > -1) continue;
+              
+        //         currentItems[currentItems.length] = tempQuiz[randomIndex].id;
+        //         randomItem = tempQuiz[randomIndex];     
+        //         this.quizItems.push(randomItem);
+        //     }
+        // }
 
         this.quizItems = quizItemsTemp;
-      }
+      
     }
 
     // randomized answer options
@@ -368,7 +459,7 @@ import {
         randomItem = '';
                                    
         while(!randomItem){
-          if(this.initialParams.isTopicTest){
+          if(this.initialParams.isTopicTest || this.initialParams.formatType == 'FUKUSHU'){
             byCat = this.byCategory[type];
             randomIndex = Math.floor(Math.random() * byCat.length);
             if(currentItems.indexOf(byCat[randomIndex].id) > -1) continue;
@@ -414,7 +505,7 @@ import {
     randomQuizFormat(){
       let quizFormat, quizFormatLength, paramFormat, time, randomIndex;
 
-      if(this.initialParams.isTopicTest){        
+      if(this.initialParams.isTopicTest || this.initialParams.formatType == 'FUKUSHU'){        
         questionType = this.currentQuestion.type;        
         this.quizOptions = this.study[questionType];        
       }
@@ -453,27 +544,27 @@ import {
         case 'romaji_moji':
           paramFormat = {
             answerFormat: 'moji',
-            questionFormat: 'romaji'
+            questionFormat: 'romaji',
           };
           break;
         case 'moji_romaji':
           paramFormat = {
             answerFormat: 'romaji',
-            questionFormat: 'moji'
+            questionFormat: 'moji',          
           };
           break;
 
         case 'moji_english':
           paramFormat = {
             answerFormat: 'english',
-            questionFormat: 'moji'
+            questionFormat: 'moji',            
           };
           break;
         
         case 'english_moji':
           paramFormat = {
             answerFormat: 'moji',
-            questionFormat: 'english'
+            questionFormat: 'english',
           };
           break;
 
@@ -598,18 +689,32 @@ import {
           };
           break;          
       }
-
+      
+      paramFormat.studyType = this.setStudyType(quizFormat);
       paramFormat.format = quizFormat;
-    
+      console.log(paramFormat,'ss');
       if(this.initialParams.isTopicTest){
         paramFormat.time = 900000; //15mins
-        //paramFormat.time = 5000; //15mins
+        //paramFormat.time = 5000; //5seconds
       }
       else{
         paramFormat.time = time;
       }
 
       return paramFormat;
+    }
+
+    setStudyType(quizFormat){
+
+      if(this.study.topic_id == 'T001'){
+        return studyType.hiragana[quizFormat];
+      }
+      else if(this.study.type == 'INITIAL'){
+        return studyType.initial[quizFormat];    
+      }
+      else{        
+          return studyType[this.currentQuestion.type][quizFormat];    
+      }
     }
 
     setNextQuestion(forceEnd = 0) {
@@ -708,9 +813,10 @@ import {
             questionTime: (this.timeStops * 1000),            
             questionTotalTime : this.state.time,
             type: this.state.question.type.toUpperCase(),
+            studyType: this.state.studyType, // TODO
             correctTitle: this.stripSpace(correctTitle)
       }
-      
+      console.log('-wweee', parseValue);
       this.studyRecord[this.studyRecord.length] = parseValue;
       
       this.props.takeQuiz(parseValue); //call our action

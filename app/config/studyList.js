@@ -6,7 +6,8 @@ export const StudyList = [{
     topic_id: 'T001',
     quizOptions: {
       random: false,
-      types:['romaji_moji', 'moji_romaji','audio_moji','audio_romaji'],
+      //types:['romaji_moji', 'moji_romaji','audio_moji','audio_romaji'],
+      types:['romaji_moji', 'moji_romaji','audio_moji'],
       style:'quizSquared'
     }
   },
@@ -19,7 +20,8 @@ export const StudyList = [{
     quizOptions: {
       random: true,
       //types:['audio_english', 'audio_moji'],
-      types:['moji_english', 'english_moji','audio_english','audio_moji'],
+      //types:['moji_english', 'english_moji','audio_english','audio_moji'],
+      types:['english_moji','audio_english','audio_moji'],
       withCorrection:true,
       style:'quizLong'
     }
@@ -33,7 +35,8 @@ export const StudyList = [{
     quizOptions: {
       random: true,
       //types:['audio_english', 'audio_moji'],
-      types:['moji_english', 'english_moji','audio_english','audio_moji'],
+      //types:['moji_english', 'english_moji','audio_english','audio_moji'],
+      types:['english_moji','audio_english','audio_moji'],
       withCorrection:true,
       style:'quizVocab'
     }

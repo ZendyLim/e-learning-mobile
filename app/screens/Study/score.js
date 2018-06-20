@@ -61,6 +61,8 @@ import {
     this.item['formatType'] = initialParams.formatType;
     this.item['idList'] = initialParams.idList;
     this.item['oneType'] = initialParams.oneType;
+
+    this.props.getLockRecord();
     
   }
   goToTopicSelection = () =>  {    
@@ -74,7 +76,17 @@ import {
       });
       this.props.navigation.dispatch(resetAction);
       
-    }else{
+    }
+    else if(this.item.formatType == 'FUKUSHU'){
+      const resetAction = NavigationActions.reset({ 
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'StudyList' }),
+        ]
+      });
+      this.props.navigation.dispatch(resetAction);
+    }
+    else{
       var nav = this.setNavStudyList(this.state.type, 1);
                      
       const resetAction = NavigationActions.reset(nav);
