@@ -173,11 +173,11 @@ function playSound(testInfo, component) {
         </View>
         <View style={learn1.ModalContent}>
           <Text style={learn1.ModalContentTitle}>How to read: </Text>
-          <Text style={learn1.ModalContentTitle}>{ this.state.read }</Text>
+          <Text style={learn1.ModalExplainText}>{ this.state.read }</Text>
           <Text style={learn1.ModalContentTitle}>Meaning: </Text>
-          <Text style={learn1.ModalContentTitle}>{ this.state.english }</Text>
+          <Text style={learn1.ModalExplainText}>{ this.state.english }</Text>
           <Text style={learn1.ModalContentTitle}>Word: </Text>
-          <Text style={learn1.ModalContentTitle}>{ this.state.word }</Text>
+          <Text style={learn1.ModalExplainText}>{ this.state.word }</Text>
         </View>
     </View>
     )

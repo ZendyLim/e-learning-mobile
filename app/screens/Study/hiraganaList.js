@@ -80,7 +80,7 @@ class HiraganaListScreen extends Component {
       
       param = {
         index : this.state.index,
-        type : type,
+        formatType : type,
         title : this.state.title,
         studyType: this.state.studyType,
         categoryId : this.state.categoryId,
@@ -88,7 +88,7 @@ class HiraganaListScreen extends Component {
         topicId: this.state.topicId,
         headerTitle: this.state.headerTitle
       };
-        
+      
       if(topicId == 'T001'){
         this.props.navigation.navigate('QuizMain',(
           param
