@@ -134,8 +134,7 @@ import {
       let format = this.state.questionFormat;
       let timerRun = this.state.timerRun;
       let timerRestart = this.state.timerRestart;
-      let question = this.state.question;
-      ///console.log(this.state);
+      let question = this.state.question;      
       return (
         <View style={styles.container}>
           { this.state.question && this.state.question.id ? (
@@ -229,16 +228,13 @@ import {
         isTopicTest: navigation.getParam('isTopicTest', null),
         idList: navigation.getParam('idList', null),
         oneType: navigation.getParam('oneType',null)
-      }
-      console.log(this.initialParams,'weee'); 
+      }      
       this.setState(this.initialParams);
 
       this.setInitial();
       
-      this.setListQuestion();
-      //console.log(this.quizItems); 
-      this.setDefinedQuestion(this.initialParams.idList);
-      //console.log(this.quizItems,this.testItemCount);
+      this.setListQuestion();      
+      this.setDefinedQuestion(this.initialParams.idList);      
       if(!this.quizItems){
         const resetAction = NavigationActions.reset({
           index: 0,
@@ -250,12 +246,10 @@ import {
         this.props.navigation.dispatch(resetAction);
       }
       else{                
-        shuffledQuiz = this.shuffleItems(this.quizItems);        
-        //console.log(shuffledQuiz);
+        shuffledQuiz = this.shuffleItems(this.quizItems);                
         this.allQuestion = shuffledQuiz.map((question) =>          
             this.shuffleAnswers(question, shuffledQuiz)    
-        );
-        //console.log(this.allQuestion);
+        );        
         this.currentQuestion = this.allQuestion[0];
         
         this.setState({
@@ -298,15 +292,12 @@ import {
     setInitial(){
       this.study = StudyList.find(function (obj) { 
         return obj.title == this.title; 
-      })
-      //console.log(this.study);
+      })      
       if(this.study.type == 'INITIAL'){
         this.quizOptions = this.study.quizOptions;
       }
-      else{
-        //console.log(this.study,this.initialParams.headerTitle);
-        this.quizOptions = this.study[this.initialParams.headerTitle];
-        //console.log(this.quizOptions);
+      else{        
+        this.quizOptions = this.study[this.initialParams.headerTitle];        
       }
       
     }
@@ -316,11 +307,8 @@ import {
         topics = ['vocabulary', 'grammar', 'kanji', 'listening','reading'];
         currentItems = [];
 
-        for(i = 0; i < topics.length; i++){
-          //console.log(topics[i]);
-          tempQuiz = quizItems[this.initialParams.studyType + '_and_' + topics[i]];
-          //console.log(tempQuiz);
-          //console.log(tempQuiz, this.initialParams.studyType + '_and_' + topics[i]);
+        for(i = 0; i < topics.length; i++){          
+          tempQuiz = quizItems[this.initialParams.studyType + '_and_' + topics[i]];                    
           this.byCategory[topics[i]] = tempQuiz;
                   
           for(c = 0; c < this.testItemCount[topics[i]]; c++){
@@ -335,8 +323,7 @@ import {
                 this.quizItems.push(randomItem);
             }
           }
-
-          //console.log('--end---');
+          
                     
         }
       }
@@ -629,8 +616,7 @@ import {
       const counter = this.state.counter + 1;      
       
       if(this.mounted){
-        this.setTakeQuiz();
-        //console.log(this.allQuestion);
+        this.setTakeQuiz();        
         if(counter < this.allQuestion.length && !forceEnd){
           this.showCorrect = false;
           this.timeStops = 0;
@@ -695,8 +681,7 @@ import {
           startTime : startTime,
           categoryId : StudyList[index].topic_id + categoryId, 
           studyId : StudyList[index].topic_id + categoryId 
-        }
-        console.log(value);
+        }        
         return value;
     }
 
@@ -708,8 +693,7 @@ import {
       
       if(this.initialParams.isTopicTest){
         quizSizes = this.allQuestion.length;
-      }
-      //console.log(quizSizes, this.allQuestion.length, this.initialParams.isTopicTest);
+      }      
       this.props.startLearn(this.state.studyType, this.startTime,this.title, quizSizes); //call our action
     }
 
@@ -802,11 +786,9 @@ import {
         }, this.state.pause);
         
       }
-      else{
-        console.log('stopTimer',1);
+      else{        
         setTimeout(() => {
-          this.showCorrect = false;
-          console.log('stopTime',1);
+          this.showCorrect = false;          
           this.setNextQuestion();
         
         }, this.state.pause);  

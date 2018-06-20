@@ -61,7 +61,7 @@ import {
     this.item['formatType'] = initialParams.formatType;
     this.item['idList'] = initialParams.idList;
     this.item['oneType'] = initialParams.oneType;
-    console.log(this.item);
+    
   }
   goToTopicSelection = () =>  {    
 
@@ -112,7 +112,7 @@ import {
       };
     }
     else{
-      console.log(this.item);
+      
       nav = { 
         index: index,
         actions: [
@@ -138,7 +138,7 @@ import {
       };
     }
     else{
-      console.log(this.item);
+      
       nav = { 
         index: index,
         actions: [
@@ -294,8 +294,8 @@ const study = require('../../styles/study');
 // This function makes Redux know that this component needs to be passed a piece of the state
 function mapStateToProps(state, props) {
 
-  //const score = Helper.countScore(state.study.studyRecord,state.study.quizSize);
-  const score = 100;
+  const score = Helper.countScore(state.study.studyRecord,state.study.quizSize);
+  
   return {
       StudentID: state.user.user.id,
       studyRecord: state.study.studyRecord,

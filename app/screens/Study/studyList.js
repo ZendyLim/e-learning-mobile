@@ -161,15 +161,15 @@ const study = require('../../styles/study');
 function mapStateToProps(state, props) {
   console.log(state);
 
-  state.summary.lock['T004'] = {
-      lock:false,
-      matomeLeft:1
-  };
+//   state.summary.lock['T004'] = {
+//       lock:false,
+//       matomeLeft:1
+//   };
 
-  state.summary.lock['T005'] = {
-    lock:false,
-    matomeLeft:1
-};
+//   state.summary.lock['T005'] = {
+//     lock:false,
+//     matomeLeft:1
+// };
 
   return {
       fukushu: state.study.fukushu,
