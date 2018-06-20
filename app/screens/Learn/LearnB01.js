@@ -115,7 +115,7 @@ import { learnData } from '../../config/learnTopic';
     }
 
     _renderModalContent = () => (
-      <View style={learn1.ModalContainer}>
+      <View style={learn1.ModalContainerGrammar}>
         <View style={learn1.ModalTabBar}>
             <Icon name="times"  type='font-awesome' size={30} color={"white"} underlayColor = '#45B5E7'
             onPress={this._setModalInvisible}
@@ -124,10 +124,10 @@ import { learnData } from '../../config/learnTopic';
         </View>
         {/* <View style={learn1.ModalContent}> */}
           <ScrollView style={learn1.ModalContent}>
-          <Text style={learn1.ModalContentTitle}>Explanation: </Text>
-          <Text style={learn1.ModalContentTitle}>{ this.state.explanation }</Text>
-          <Text style={learn1.ModalContentTitle}>Example: </Text>
-          <Text style={learn1.ModalContentTitle}>{ this.state.example }</Text>
+            <Text style={learn1.ModalContentTitle}>Explanation: </Text>
+            <Text style={learn1.ModalExplainText}>{ this.state.explanation }</Text>
+            <Text style={learn1.ModalContentTitle}>Example: </Text>
+            <Text style={learn1.ModalExplainText}>{ this.state.example }</Text>
           </ScrollView>
         {/* </View> */}
     </View>
