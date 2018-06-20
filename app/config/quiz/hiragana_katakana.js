@@ -464,7 +464,7 @@ export const hiragana_katakana = [
         "type":"initial",      
         "romaji":"ji(di)",
         "moji":"ぢ",
-        "audio":"di.mp3",
+        "audio":"ji.mp3",
         "title":"ji(di)",
       },
       {
@@ -472,7 +472,7 @@ export const hiragana_katakana = [
         "type":"initial",      
         "romaji":"zu",
         "moji":"づ",
-        "audio":"du.mp3",
+        "audio":"zu.mp3",
         "title":"zu",
       },
       {
@@ -769,7 +769,7 @@ export const hiragana_katakana = [
         "type":"initial",      
         "romaji":"ja",
         "moji":"じゃ",
-        "audio":"ja.mp3",
+        "audio":"jya.mp3",
         "title":"ja",
       },
       {
@@ -777,7 +777,7 @@ export const hiragana_katakana = [
         "type":"initial",      
         "romaji":"ju",
         "moji":"じゅ",
-        "audio":"ju.mp3",
+        "audio":"jyu.mp3",
         "title":"ju",
       },
       {
@@ -785,7 +785,7 @@ export const hiragana_katakana = [
         "type":"initial",      
         "romaji":"jo",
         "moji":"じょ",
-        "audio":"jo.mp3",
+        "audio":"jyo.mp3",
         "title":"jo",
       },
       {
@@ -1301,7 +1301,7 @@ export const hiragana_katakana = [
         "type":"initial",      
         "romaji":"ji(di)",
         "moji":"ヂ",
-        "audio":"di.mp3",
+        "audio":"ji.mp3",
         "title":"ji(di)",
       },
       {
@@ -1309,7 +1309,7 @@ export const hiragana_katakana = [
         "type":"initial",      
         "romaji":"zu",
         "moji":"ヅ",
-        "audio":"du.mp3",
+        "audio":"zu.mp3",
         "title":"zu",
       },
       {
@@ -1606,7 +1606,7 @@ export const hiragana_katakana = [
         "type":"initial",      
         "romaji":"ja",
         "moji":"ジャ",
-        "audio":"ja.mp3",
+        "audio":"jya.mp3",
         "title":"ja",
       },
       {
@@ -1614,7 +1614,7 @@ export const hiragana_katakana = [
         "type":"initial",      
         "romaji":"ju",
         "moji":"ジュ",
-        "audio":"ju.mp3",
+        "audio":"jyu.mp3",
         "title":"ju",
       },
       {
@@ -1622,7 +1622,7 @@ export const hiragana_katakana = [
         "type":"initial",      
         "romaji":"jo",
         "moji":"ジョ",
-        "audio":"jo.mp3",
+        "audio":"jyo.mp3",
         "title":"jo",
       },
       {
