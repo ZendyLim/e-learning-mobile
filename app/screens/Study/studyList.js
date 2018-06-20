@@ -50,15 +50,23 @@ class StudyListScreen extends Component {
     item['categoryId'] = 'C001';
     //console.log(item);
     this.getMistakes(item.topic_id);
+    console.log(item);
     if(item.type == 'INITIAL'){
       item['studyType'] = item.title;
       this.props.navigation.navigate('HiraganaList',(
         item
       ));
     }else if(item.type == 'FUKUSHU'){
-      this.props.navigation.navigate('TopicList',(
-        item
+
+      item['formatType'] = 'FUKUSHU';
+      item['idList'] = this.props.lock[item.topic_id].mistakes;
+
+      this.props.navigation.navigate('QuizFlash',(
+         item
       ));
+      // this.props.navigation.navigate('TopicList',(
+      //   item
+      // ));
     }
     else{
       this.props.navigation.navigate('TopicList',(
