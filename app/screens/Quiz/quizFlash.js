@@ -35,7 +35,7 @@ import {
   class QuizFlashScreen extends Component {
   
     static navigationOptions = ({ navigation }) => {      
-      subtitle = navigation.getParam('type', null);         
+      subtitle = navigation.getParam('formatType', null);         
       title = navigation.getParam('title', null);      
       confirm = true;
 
@@ -75,8 +75,7 @@ import {
       this.quizOptions = [];
       this.byCategory = [];
       this.reduxParam = [];
-      this.title = '';
-      this.oneType = '';
+      this.title = '';      
       this.study = [];
       this.initialParams = [];      
       this.isMounted = true;
@@ -109,14 +108,21 @@ import {
         showCorrect:false 
       }
 
-      this.testItemCount = {
-        vocabulary: 10,
-        kanji: 10,
-        grammar: 15,
-        reading: 3,
-        listening: 3
-      }
+      // this.testItemCount = {
+      //   vocabulary: 10,
+      //   kanji: 10,
+      //   grammar: 15,
+      //   reading: 3,
+      //   listening: 3
+      // }
 
+      this.testItemCount = {
+        vocabulary: 1,
+        kanji: 1,
+        grammar: 1,
+        reading: 1,
+        listening: 1
+      }
       this.state = this.initialState;
      
     }
@@ -208,29 +214,30 @@ import {
       const { navigation } = this.props;
       
       BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
-      
-      this.oneType = navigation.getParam('oneType',null);
+            
       this.mounted = true;
-      idList = navigation.getParam('idList', null);
+      
       let shuffledQuiz = [];
 
       this.initialParams = {
         title: navigation.getParam('title', null),
         img: navigation.getParam('img', null),
-        type: navigation.getParam('type', null),
+        formatType: navigation.getParam('formatType', null),
         studyType: navigation.getParam('studyType',null),
         headerTitle:  navigation.getParam('headerTitle',null),
         index: navigation.getParam('index', null),
-        isTopicTest: navigation.getParam('isTopicTest', null)
+        isTopicTest: navigation.getParam('isTopicTest', null),
+        idList: navigation.getParam('idList', null),
+        oneType: navigation.getParam('oneType',null)
       }
-      //console.log(this.initialParams); 
+      console.log(this.initialParams,'weee'); 
       this.setState(this.initialParams);
 
       this.setInitial();
       
       this.setListQuestion();
       //console.log(this.quizItems); 
-      this.setDefinedQuestion(idList);
+      this.setDefinedQuestion(this.initialParams.idList);
       //console.log(this.quizItems,this.testItemCount);
       if(!this.quizItems){
         const resetAction = NavigationActions.reset({
@@ -248,7 +255,7 @@ import {
         this.allQuestion = shuffledQuiz.map((question) =>          
             this.shuffleAnswers(question, shuffledQuiz)    
         );
-        console.log(this.allQuestion);
+        //console.log(this.allQuestion);
         this.currentQuestion = this.allQuestion[0];
         
         this.setState({
@@ -292,14 +299,14 @@ import {
       this.study = StudyList.find(function (obj) { 
         return obj.title == this.title; 
       })
-      console.log(this.study);
+      //console.log(this.study);
       if(this.study.type == 'INITIAL'){
         this.quizOptions = this.study.quizOptions;
       }
       else{
-        console.log(this.study,this.initialParams.headerTitle);
+        //console.log(this.study,this.initialParams.headerTitle);
         this.quizOptions = this.study[this.initialParams.headerTitle];
-        console.log(this.quizOptions);
+        //console.log(this.quizOptions);
       }
       
     }
@@ -400,7 +407,7 @@ import {
     // randomized question
     shuffleItems(array) {      
       var currentIndex = array.length, temporaryValue, randomIndex, output = [];      
-      var limit = this.initialParams.type == 'Test' ? 50 : 25;      
+      var limit = this.initialParams.formatType == 'Test' ? 50 : 25;      
       
       while (0 !== currentIndex) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -424,7 +431,7 @@ import {
         this.quizOptions = this.study[questionType];        
       }
       
-      quizFormat = this.oneType ? [this.oneType] : this.quizOptions.types;
+      quizFormat = this.initialParams.oneType ? [this.initialParams.oneType] : this.quizOptions.types;
       quizFormatLength = quizFormat.length;
       randomIndex = Math.floor(Math.random() * quizFormatLength);      
       time = this.time;
@@ -689,7 +696,7 @@ import {
           categoryId : StudyList[index].topic_id + categoryId, 
           studyId : StudyList[index].topic_id + categoryId 
         }
-  
+        console.log(value);
         return value;
     }
 

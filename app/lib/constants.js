@@ -11,6 +11,7 @@ export const LEARN_FAILED = 'LEARN_FAILED'; //import the action for start time
 export const START_TIME_QUIZ = 'START_TIME_QUIZ'; //import the action for start time
 export const END_TIME_QUIZ = 'END_TIME_QUIZ'; //import the action for start time
 export const TAKE_QUIZ = 'TAKE_QUIZ'; //import the action for start time
+export const MISTAKES = 'MISTAKES'; //import the action for start time
 
 //action for user
 export const USER_LOGIN_SUCCESS = "USER_LOGIN_SUCCESS";
