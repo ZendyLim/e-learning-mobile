@@ -108,21 +108,22 @@ import {
         showCorrect:false 
       }
 
+      this.testItemCount = {
+        vocabulary: 10,
+        kanji: 10,
+        grammar: 15,
+        reading: 3,
+        listening: 3
+      }
+
       // this.testItemCount = {
-      //   vocabulary: 10,
-      //   kanji: 10,
-      //   grammar: 15,
-      //   reading: 3,
-      //   listening: 3
+      //   vocabulary: 1,
+      //   kanji: 1,
+      //   grammar: 1,
+      //   reading: 1,
+      //   listening: 1
       // }
 
-      this.testItemCount = {
-        vocabulary: 1,
-        kanji: 1,
-        grammar: 1,
-        reading: 1,
-        listening: 1
-      }
       this.state = this.initialState;
      
     }
