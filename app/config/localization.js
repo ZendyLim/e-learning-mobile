@@ -166,6 +166,11 @@ export let strings = new LocalizedStrings({
   
   WARNING : "Warning",
   HISTORY : 'History',
+  TIME : 'TIME',
+  SCORE : 'SCORE',
+  DETAIL : 'DETAIL',
+
+
   },
  ja: {
    loginGuest: "ログイン",
@@ -330,6 +335,9 @@ export let strings = new LocalizedStrings({
      T023_MSG : '言語と文化のテスト取ってお願いします。',   
      T024_MSG : '言語と文化のテスト取ってお願いします。',   
      HISTORY : '履歴',
+     TIME : '時間',
+     SCORE : 'スコア',
+     DETAIL : '詳細',
     
   }
 });

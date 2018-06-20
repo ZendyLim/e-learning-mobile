@@ -38,6 +38,10 @@ class StudyListScreen extends Component {
   lockedMessage=(item, index)=>{
     alert(strings[item.topic_id + '_MSG'] );     
   }
+
+  componentWillMount(){
+    this.props.getLockRecord();
+  } 
   
   navigateToLearn=(item, index)=>{
     item['index'] = index;
@@ -86,7 +90,7 @@ class StudyListScreen extends Component {
         return false;
       }  
     }else{
-      return true;
+      return false;
     }
   }
   render() {
