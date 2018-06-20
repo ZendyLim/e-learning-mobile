@@ -20,7 +20,7 @@ import { ImageData } from '../../config/image_list';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as Actions from '../../actions/study'; //Import your actions
+import * as Actions from '../../actions/summary'; //Import your actions
 
 import style from 'react-native-datepicker/style';
 
@@ -79,6 +79,7 @@ class StudyListScreen extends Component {
   }
 
   checkLock = (topic_id) =>{
+    console.log(this.props.lock);
     if(this.props.lock){
       if(this.props.lock[topic_id]){
         if(this.props.lock[topic_id].lock){
