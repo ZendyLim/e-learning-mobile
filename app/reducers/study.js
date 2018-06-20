@@ -1,4 +1,4 @@
-import {START_TIME_LEARN ,END_TIME_LEARN , LEARN_FAILED , TAKE_QUIZ}  from '../lib/constants';
+import {START_TIME_LEARN ,END_TIME_LEARN , LEARN_FAILED , TAKE_QUIZ, MISTAKES}  from '../lib/constants';
 
 const initialState = { 
     startTime:'', 
@@ -9,7 +9,8 @@ const initialState = {
     err: '',
     isErr: false,
     fukushu: true,
-    quizSize: 0
+    quizSize: 0,
+    fukushuMistakes:[]
 };
  
 export default function userReducer (state = initialState, action) {
@@ -43,6 +44,11 @@ export default function userReducer (state = initialState, action) {
         case TAKE_QUIZ:
         state = Object.assign({}, state, { 
             studyRecord: [].concat(state.studyRecord, [action.studyRecord])
+        });
+        case MISTAKES:
+        console.log(action);
+        state = Object.assign({}, state, { 
+            fukushuMistakes: [].concat(state.fukushuMistakes, [action.mistakes])
         });   
         return state;
         default:
