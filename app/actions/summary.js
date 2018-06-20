@@ -52,6 +52,7 @@ export function getLockRecord(){
               },
             }).then(data => data.json())
             .then(json => {
+                console.log('lock',json)
                 dispatch(getLockDispatch(json))            
             })
             .catch(err => dispatch(failedSummary(err)))

@@ -132,9 +132,9 @@ import {
       // }
 
       this.fukushuItemCount = {
-        vocabulary: 2,
-        kanji: 2,
-        grammar: 2
+        vocabulary: 20,
+        kanji: 20,
+        grammar: 10
       }
 
       this.state = this.initialState;
@@ -244,7 +244,7 @@ import {
         oneType: navigation.getParam('oneType',null)
       }      
       this.setState(this.initialParams);
-
+      
       this.setInitial();
       
          
@@ -379,8 +379,7 @@ import {
     setDefineFukushu(idList){
       //will get the first 
 
-      //(?![a-z]+\d+_)([a-z])(?=_) <-- will get the middle string of an id
-      console.log();
+      //(?![a-z]+\d+_)([a-z])(?=_) <-- will get the middle string of an id      
 
       
         var quizItemsTemp = [];
@@ -418,23 +417,6 @@ import {
           }
                     
         }
-        console.log(quizItemsTemp);
-        console.log(this.byCategory);
-
-        // this.byCategory[topics[i]] = tempQuiz;
-                  
-        //   for(c = 0; c < this.testItemCount[topics[i]]; c++){
-        //     randomItem = '';
-
-        //     while(!randomItem){
-        //       randomIndex = Math.floor(Math.random() * tempQuiz.length);
-        //       if(currentItems.indexOf(tempQuiz[randomIndex].id) > -1) continue;
-              
-        //         currentItems[currentItems.length] = tempQuiz[randomIndex].id;
-        //         randomItem = tempQuiz[randomIndex];     
-        //         this.quizItems.push(randomItem);
-        //     }
-        // }
 
         this.quizItems = quizItemsTemp;
       
@@ -692,7 +674,7 @@ import {
       
       paramFormat.studyType = this.setStudyType(quizFormat);
       paramFormat.format = quizFormat;
-      console.log(paramFormat,'ss');
+      
       if(this.initialParams.isTopicTest){
         paramFormat.time = 900000; //15mins
         //paramFormat.time = 5000; //5seconds
@@ -778,7 +760,11 @@ import {
       var startTime = ( new Date().getTime() / 1000);
       if(type == 'Test'){
         var reduxType = "TEST";
-      }else{
+      }
+      if(type == 'FUKUSHU'){
+        var reduxType = "FUKUSHU";
+      }
+      else{
         var reduxType = "QUIZ";        
       }
       var value = {
@@ -795,7 +781,7 @@ import {
       const { navigation } = this.props;
       let quizSizes = 0;
 
-      this.reduxParam = this.setSentParamStart(navigation.getParam('index', null), navigation.getParam('categoryId', null), navigation.getParam('type', null));
+      this.reduxParam = this.setSentParamStart(navigation.getParam('index', null), navigation.getParam('categoryId', null), navigation.getParam('formatType', null));
       
       if(this.initialParams.isTopicTest){
         quizSizes = this.allQuestion.length;
@@ -816,7 +802,7 @@ import {
             studyType: this.state.studyType, // TODO
             correctTitle: this.stripSpace(correctTitle)
       }
-      console.log('-wweee', parseValue);
+      
       this.studyRecord[this.studyRecord.length] = parseValue;
       
       this.props.takeQuiz(parseValue); //call our action
@@ -826,7 +812,7 @@ import {
       var endTime = ( new Date().getTime() / 1000);
 
       var parseValue = this.reduxParam;
-            
+      
       parseValue['finishTime'] = endTime;
       parseValue['questions'] = this.studyRecord;            
       this.props.endLearn(parseValue); //call our action
