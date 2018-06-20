@@ -208,20 +208,20 @@ class HiraganaListScreen extends Component {
           <View style={[study.cardBox, study.borderBox, study.p3]}>
             <Text style={[study.textLg, study.textBlack]}>{ strings['STUDY_QUIZ'] }</Text>
             <View style={study.buttonContainer}>
-              <TouchableOpacity style={study.button} onPress={this.navigateToLearn.bind(this, 'Quiz', this.state.topicId)}>
-                <Icon name='play-arrow'   color='#fff'/>
-                <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_START'] }</Text>
+              <TouchableOpacity style={study.button} onPress={this.navigateReview.bind(this, 'QUIZ')}>
+                <Icon name='search'   color='#fff'/>
+                <Text style={[study.textWhite, study.textMd, study.mR10]} > { strings['STUDY_REVIEW'] }</Text>
               </TouchableOpacity>
             </View>
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>{ scoreQuiz }</Text>
             <View style={study.buttonContainer}>
-              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateHistory.bind(this, 'QUIZ')}>              
+              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateToLearn.bind(this, 'Quiz')}>
                 <Icon name='play-arrow'   color='#fff'/>
-                <Text style={[study.textWhite, study.textMd]} > history</Text>
+                <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_START'] }</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={study.button} onPress={this.navigateReview.bind(this, 'QUIZ')}>
-                <Icon name='search'   color='#fff'/>
-                <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_REVIEW'] }</Text>
+              <TouchableOpacity style={[study.button]}  onPress={this.navigateHistory.bind(this, 'QUIZ')}>              
+                <Icon name='history'   color='#fff'/>
+                <Text style={[study.textWhite, study.textMd]} >{ strings['HISTORY'] }</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -235,9 +235,9 @@ class HiraganaListScreen extends Component {
                 <Icon name='play-arrow'   color='#fff'/>
                 <Text style={[study.textWhite, study.textMd]} > { strings['STUDY_START'] }</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={[study.button, study.mR10]}  onPress={this.navigateHistory.bind(this, 'TEST')}>              
-                <Icon name='play-arrow'   color='#fff'/>
-                <Text style={[study.textWhite, study.textMd]} > history</Text>
+              <TouchableOpacity style={[study.button]}  onPress={this.navigateHistory.bind(this, 'TEST')}>              
+                <Icon name='history'   color='#fff'/>
+                <Text style={[study.textWhite, study.textMd]} >{ strings['HISTORY'] }</Text>
               </TouchableOpacity>
             </View>
           </View>
