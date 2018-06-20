@@ -20,7 +20,7 @@ import { ImageData } from '../../config/image_list';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as Actions from '../../actions/study'; //Import your actions
+import * as Actions from '../../actions/summary'; //Import your actions
 
 import style from 'react-native-datepicker/style';
 
@@ -38,6 +38,10 @@ class StudyListScreen extends Component {
   lockedMessage=(item, index)=>{    
     alert(strings[item.topic_id + '_MSG'] );     
   }
+
+  componentWillMount(){
+    this.props.getLockRecord();
+  } 
   
   navigateToLearn=(item, index)=>{
     item['index'] = index;
@@ -76,7 +80,6 @@ class StudyListScreen extends Component {
   }
 
   checkLock = (topic_id) =>{
-    
 
     if(this.props.lock){
       if(this.props.lock[topic_id]){
@@ -89,7 +92,7 @@ class StudyListScreen extends Component {
         return false;
       }  
     }else{
-      return true;
+      return false;
     }
   }
 

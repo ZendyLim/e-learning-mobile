@@ -1,4 +1,4 @@
-import { SUMMARY_HOME , SUMMARY_TEST , SUMMARY_QUIZ , SUMMARY_ALL, SUMMARY_LEARN , SUMMARY_LOCK }  from '../lib/constants';
+import { SUMMARY_HOME , SUMMARY_TEST , SUMMARY_QUIZ , SUMMARY_ALL, SUMMARY_LEARN , SUMMARY_LOCK , SUMMARY_HISTORY}  from '../lib/constants';
 import { AsyncStorage } from 'react-native';
 import * as SummaryHelper from '../actions/summaryHelper';  
 
@@ -109,6 +109,28 @@ export function getSummaryV2(topicId, categoryId, studyId){
 }
 
 
+export function getHistory(topicId, categoryId, studyId){
+    console.log("running history");
+    return (dispatch) => {
+        getJWT().then( JWT => {
+            console.log(JWT);
+
+            fetch('https://e-learning-backend.herokuapp.com/api/v1/summaries?topicId=' + topicId + '&categoryId='+ categoryId,{
+              method: 'GET',
+              headers: {
+                'Authorization' : JWT,
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+              },
+            }).then(data => data.json())
+            .then(json => {
+                dispatch(getHistoryDispatch(json))
+            })
+            .catch(err => dispatch(failedSummary(err)))
+        })
+    };         
+}
+
 export function getHomeSummary(studentID){
     return (dispatch) => {
         fetch('http://www.mocky.io/v2/5b06d14d2f00002b00c61f1b')
@@ -168,6 +190,13 @@ export function getLockDispatch(data){
     return {
         type: SUMMARY_LOCK,
         data : data.topics,
+    }
+}
+
+export function getHistoryDispatch(data){
+    return {
+        type: SUMMARY_HISTORY,
+        data : data.activities,
     }
 }
 
