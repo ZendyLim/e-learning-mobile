@@ -364,5 +364,32 @@ tableHeader : {
 tableBorder: {
   borderWidth: 1,
 },
+historyFlex: {
+  flex: 1,
+  flexDirection: 'row',
+  paddingBottom:5,
+  paddingTop: 5,
+  borderBottomWidth: 1,
+  borderBottomColor: '#ddd'
+},
+historyFlexRow1: {
+  flex: 1,
+},
+historyFlexRow2: {
+  flex: 2,
+},
+historyFont: {
+  fontSize: 20
+},
+styleButon :{
+  padding:5,
+  height: 40,
+  width:40,
+  backgroundColor: '#45B3EB',
+  borderRadius: 20,
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginLeft: 20
+}
 });
 
