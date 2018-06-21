@@ -7778,6 +7778,43 @@ export const flashData = [
         "romaji": "ご",
         "url": "t8_go_noon.mp3"
       }
+    ], 
+    TEST : [
+      {
+        "id": "t8k_1",
+        "type": "kanji",
+        "moji": "英",
+        "romaji": "えい",
+        "url": "t8_ei.mp3"
+      },
+      {
+        "id": "t8k_2",
+        "type": "kanji",
+        "moji": "語",
+        "romaji": "ご",
+        "url": "t8_go.mp3"
+      },
+      {
+        "id": "t8k_3",
+        "type": "kanji",
+        "moji": "天",
+        "romaji": "てん",
+        "url": "t8_ten.mp3"
+      },
+      {
+        "id": "t8k_4",
+        "type": "kanji",
+        "moji": "気",
+        "romaji": "き",
+        "url": "t8_ki.mp3"
+      },
+      {
+        "id": "t8k_5",
+        "type": "kanji",
+        "moji": "雨",
+        "romaji": "あめ",
+        "url": "t8_ame.mp3"
+      },
     ]
   }
 ]
