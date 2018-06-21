@@ -198,7 +198,7 @@ export const StudyList = [{
   },
   {
     title : 'FUKUSHU1_TITLE',
-    img : 'loading',
+    img : 'FUKUSHU',
     lock : false,
     type : 'FUKUSHU',
     topic_id: 'T008',
@@ -383,7 +383,7 @@ export const StudyList = [{
   },
   {
     title : 'FUKUSHU2_TITLE',
-    img : 'loading',
+    img : 'FUKUSHU',
     lock : true,
     type : 'FUKUSHU',
     topic_id: 'T013',

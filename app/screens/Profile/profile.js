@@ -77,14 +77,21 @@ import { studyDays, studyReasonOption, major } from '../../config/data';
           japaneseType: this.props.user.japaneseType,
           dateFrom: this.props.user.dateFrom,
           dateTo: this.props.user.dateTo,
-          image: this.props.user.image,
           studyDay: this.props.user.studyDay,
           studyHours: this.props.user.studyHours,
           studyReason: this.props.user.studyReason,
           finishDate: this.props.user.finishDate,
         });
+        if(this.props.user.image){
+          this.setState({
+            image: this.props.user.image
+          });
+        }
+
       }
 
+
+      
     }
     
     getData = () =>{
