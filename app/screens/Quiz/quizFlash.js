@@ -184,18 +184,24 @@ import {
               
               <View style={[ styles.col12, styles.quizAnswerWrapper ]}> 
               <ScrollView>
-                <View style={ !timerRun && styles.blocker }></View>
+                
                 
                 { !this.state.showCorrect ?
-                  (<Quiz 
-                    question={ this.state.question } 
-                    answerOptions={ this.state.question.answerOption }
-                    onAnswerSelected={ this.stopTimer }
-                    displayFormat={ this.state.answerFormat }
-                    format={ this.state.format }
-                    styleFormat={ this.quizOptions.style }
-                    timesUp={ this.state.timesUp }                    
-                  />) :
+                  (
+                    <View>
+                      <View style={ !timerRun && styles.blocker }></View>
+                    
+                      <Quiz 
+                        question={ this.state.question } 
+                        answerOptions={ this.state.question.answerOption }
+                        onAnswerSelected={ this.stopTimer }
+                        displayFormat={ this.state.answerFormat }
+                        format={ this.state.format }
+                        styleFormat={ this.quizOptions.style }
+                        timesUp={ this.state.timesUp }                    
+                      />
+                  </View>
+                  ) :
                   (<View>
                     <CorrectPanel 
                       question={ this.state.question } 
@@ -762,7 +768,7 @@ import {
 
           // this.props.navigation.navigate('ScoreScreen',{
           //   index : this.state.index,
-          //   typeQuiz : this.state.type,
+          //   typeQuiz : this.initialParams.formatType,
           //   studyTitle : this.title
           // });
           
@@ -846,7 +852,7 @@ import {
 
     onTimesUp = (val) => {
       
-      if(this.state.type == 'Quiz'){        
+      if(this.initialParams.formatType == 'Quiz'){        
         this.setState({
           showCorrect:true,          
         });             
@@ -888,8 +894,8 @@ import {
       }   
       
       this.addScore(isCorrect);
-      
-      if(this.state.type == 'Quiz' && this.showCorrect){
+      console.log(this.initialParams.formatType, this.showCorrect);
+      if(this.initialParams.formatType == 'Quiz' && this.showCorrect){
         setTimeout(() => {
 
           this.setState({

@@ -544,17 +544,15 @@ module.exports = StyleSheet.create({
 			width:(window.width/2.5) - 10,
 		},
 		quizLong:{
-			padding:5,
+			padding:10,
 			width: window.width - 30
 		},
 		quizGrammar:{
-			padding:5,
-			paddingLeft:10,
-			paddingRight:10,
+			padding:10,
 			width: window.width - 30
 		},
 		quizVocab:{
-			padding:5,
+			padding:10,
 			width: window.width - 30
 		},
 		quizBtnPress:{
@@ -619,8 +617,8 @@ module.exports = StyleSheet.create({
 			paddingBottom:20
 		},
 		quizAnswerWrapper:{			
-			position:'relative',
-			height: window.height - 210,			
+			position:'relative',			
+			height: window.height - 290,						
 		},
 		additionalInfo:{
 			fontSize:25,
@@ -716,7 +714,7 @@ module.exports = StyleSheet.create({
 			position:'absolute',
 			top:10,
 			right:10,
-			zIndex:10,			
+			zIndex:20,			
 		},
 		correctVolume:{
 			color:primaryColor,
