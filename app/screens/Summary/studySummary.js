@@ -141,9 +141,9 @@ import {
             </View>         
           </View>       
           <View style={summary.summaryMainTop2}>
-            <View style={summary.flexRow}>
-              <View style={summary.flexBot1}>
-                <View   style={summary.conGraph}>
+            <View style={[summary.flexRow, styles.row]}>
+              <View style={[summary.flexBot1, styles.col4]}>
+                <View   style={[summary.conGraph, styles.shadow ]}>
                   <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C001')}>
                     <View style={summary.graphButton}>
                     <View style={ summary.absoluteGr }>
@@ -159,8 +159,8 @@ import {
                   </TouchableHighlight >                  
                 </View>
               </View>
-              <View style={summary.flexBot1}>
-                <View   style={summary.conGraph}>
+              <View style={[summary.flexBot1, styles.col4 ]}>
+                <View   style={[summary.conGraph, styles.shadow ]}>
                 <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C002')}>
                   <View style={summary.graphButton}>
                       <View style={ summary.absoluteGr }>
@@ -176,8 +176,8 @@ import {
                   </TouchableHighlight >                  
                 </View>
               </View>
-              <View style={summary.flexBot1}>
-                <View   style={summary.conGraph}>
+              <View style={[summary.flexBot1, styles.col4]}>
+                <View   style={[summary.conGraph, styles.shadow ]}>
                 <TouchableHighlight  onPress={this.gotoSelectTopic.bind(this, 'C003')}>
                     <View style={summary.graphButton}>
                     <View style={ summary.absoluteGr }>

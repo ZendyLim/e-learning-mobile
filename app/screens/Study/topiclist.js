@@ -104,23 +104,23 @@ navigateToLearn=(type, categoryId)=>{
           />
           
           <View style={[study.buttonContainerTopic]}>
-            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'vocabulary', 'C001')}>
+            <TouchableOpacity style={[study.buttonTopic, styles.shadow]} onPress={this.navigateToLearn.bind(this, 'vocabulary', 'C001')}>
               <Text style={[study.buttonTopicText]}>{ strings['vocabulary'] }</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'grammar', 'C002')}>
+            <TouchableOpacity style={[study.buttonTopic, styles.shadow]} onPress={this.navigateToLearn.bind(this, 'grammar', 'C002')}>
               <Text style={[study.buttonTopicText]}>{ strings['grammar'] }</Text>
             </TouchableOpacity>
           </View>
           <View style={[study.buttonContainerTopic]}>
-            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'kanji', 'C003')}>
+            <TouchableOpacity style={[study.buttonTopic, styles.shadow]} onPress={this.navigateToLearn.bind(this, 'kanji', 'C003')}>
               <Text style={[study.buttonTopicText]}>{ strings['kanji'] }</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={[study.buttonTopic]} onPress={this.navigateToLearn.bind(this, 'topic_test', 'T001')}>
+            <TouchableOpacity style={[study.buttonTopic, styles.shadow]} onPress={this.navigateToLearn.bind(this, 'topic_test', 'T001')}>
               <Text style={[study.buttonTopicText]}>{ strings['topic_test'] }</Text>
             </TouchableOpacity>
           </View>
           <View style={[study.buttonContainerTopicNext]}>
-            <TouchableOpacity style={[study.nextTopic]} onPress={this.navigateToNextTopic.bind(this)}>
+            <TouchableOpacity style={[study.nextTopic, styles.shadow]} onPress={this.navigateToNextTopic.bind(this)}>
               <Text style={[study.buttonTopicNextText]}>{ strings['next_topic'] }</Text>
             </TouchableOpacity>
           </View>

@@ -116,32 +116,32 @@ export const AppStack = TabNavigator({
     Home: {
         screen: HomeScreen, 
         navigationOptions: { 
-            tabBarLabel: () => {
-                return <Icon name="home"  type='font-awesome' size={25} color={"white"} />;
+            tabBarLabel: ({focused,tintColor}) => {
+                return <Icon name="home"  type='font-awesome' size={25} color={tintColor} />;
               }
         }
     }, 
     Study: {
         screen: StudyStack, 
         navigationOptions: { 
-            tabBarLabel: () => {
-                return <Icon name="book"  type='font-awesome'  size={25} color={"white"} />;
+            tabBarLabel: ({focused,tintColor}) => {
+                return <Icon name="book"  type='font-awesome'  size={25} color={tintColor} />;
               }
         }
     }, 
     Summary: { 
         screen: SummaryStack, 
         navigationOptions: { 
-            tabBarLabel: () => {
-                return <Icon name="list"  type='font-awesome'  size={25} color={"white"} />;
+            tabBarLabel: ({focused,tintColor}) => {
+                return <Icon name="list"  type='font-awesome'  size={25} color={tintColor} />;
               }
         }
     }, 
     Profile: {
         screen: ProfileStack, 
         navigationOptions: { 
-            tabBarLabel: () => {
-                return <Icon name="user" type='font-awesome'  size={25} color={"white"} />;
+            tabBarLabel: ({focused,tintColor}) => {
+                return <Icon name="user" type='font-awesome'  size={25} color={tintColor} />;
               } 
         }
     },
@@ -156,7 +156,9 @@ export const AppStack = TabNavigator({
 }, {
     tabBarPosition: 'bottom',
     tabBarOptions:{
-        style:styles.tabBar
+        style:styles.tabBar,
+        activeTintColor: '#fff',
+        inactiveTintColor: '#0072a7',
     },
     swipeEnabled: false,
 });

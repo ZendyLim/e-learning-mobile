@@ -188,14 +188,14 @@ class HiraganaListScreen extends Component {
     return (
       <ScrollView>
         <View style={study.StudyContainer}>
-          <View style={[study.titleContainer , study.bgWhite]}>
+          <View style={[study.titleListContainer , study.bgWhite, styles.shadow]}>
             <Image
                 style={study.cardImg}
                 source={ ImageData[this.img] }
               />
             <Text style={study.title}> { strings[this.state.title] } </Text>
           </View>
-          <View style={[study.cardBox, study.borderBox, study.p3]}>
+          <View style={[study.cardBox, study.borderBox, study.p3, styles.shadow]}>
             <Text style={[study.textLg, study.textBlack]}>{ strings['STUDY_LEARN'] }</Text>
             <View style={study.buttonContainer}>
               <TouchableOpacity style={[study.button, study.mR10]} onPress={this.navigateToLearn.bind(this, 'Learn')}>
@@ -205,7 +205,7 @@ class HiraganaListScreen extends Component {
             </View>
           </View>
 
-          <View style={[study.cardBox, study.borderBox, study.p3]}>
+          <View style={[study.cardBox, study.borderBox, study.p3, styles.shadow]}>
             <Text style={[study.textLg, study.textBlack]}>{ strings['STUDY_QUIZ'] }</Text>
             <View style={study.buttonContainer}>
               <TouchableOpacity style={study.button} onPress={this.navigateReview.bind(this, 'QUIZ')}>
@@ -227,7 +227,7 @@ class HiraganaListScreen extends Component {
           </View>
 
           {this.state.type == 'INITIAL' && (
-          <View style={[study.cardBox, study.borderBox, study.p3]}>
+          <View style={[study.cardBox, study.borderBox, study.p3, styles.shadow]}>
             <Text style={[study.textLg, study.textBlack]}>{ strings['STUDY_TEST'] }</Text>
             <Text style={[study.textLg, study.textCenter, study.textBold, study.textBlack]}>{ scoreTest }</Text>
             <View style={study.buttonContainer}>

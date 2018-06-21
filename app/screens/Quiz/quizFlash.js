@@ -184,8 +184,7 @@ import {
               
               <View style={[ styles.col12, styles.quizAnswerWrapper ]}> 
               <ScrollView>
-                
-                
+                                
                 { !this.state.showCorrect ?
                   (
                     <View>
