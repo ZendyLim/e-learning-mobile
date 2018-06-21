@@ -186,7 +186,7 @@ export const vocabulary = [
     {
         "id":"tp6_v_24",
         "type":"vocabulary",
-        "moji":"おば",
+        "moji":"おばさん",
         "romaji":"oba",
         "english":"Aunt",
         "audio":"t6_oba.mp3"

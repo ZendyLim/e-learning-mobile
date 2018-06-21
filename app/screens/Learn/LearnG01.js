@@ -62,8 +62,8 @@ function playSound(testInfo, component) {
       <View style={{padding: 5,}}>
         <View style={learn1.FlatListItem}>
           <View style={learn1.GoiGroup}>
-            <Text style={learn1.GoiItem}>{this.props.item.moji}</Text>
-            {/* <Text style={learn1.MeaningItem} >{this.props.item.romaji}</Text> */}
+            <Text style={learn1.GoiItem}>{this.props.item.vocabulary}</Text>
+            <Text style={learn1.MeaningItem} >{this.props.item.kanji}</Text>
           </View>
           <View style={learn1.ButtonGroup}>
             <Icon reverseColor={'black'} name="info-circle"  type='font-awesome' size={45} color={"#45B5E7"} containerStyle={{flex: 1}}
@@ -102,8 +102,9 @@ function playSound(testInfo, component) {
         studyType: this.props.studyType,
         img: this.props.img,
         listType: this.props.listType,
+        part: '',
+        vocabulary: '',
         kanji: '',
-        moji: '',
         romaji: '',
         english: '',
       };    
@@ -130,7 +131,7 @@ function playSound(testInfo, component) {
           renderItem={({item}) => {
             return(
               <FlatListItem id={item.key} item={item} component={this} 
-              onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.kanji, item.moji, item.romaji, item.english)}}
+              onPressButtonItem={() => {this._setModalVisible(!this.state.modalVisible, item.part, item.vocabulary, item.kanji, item.english)}}
               />);
             }}
           numColumns={1}
@@ -154,8 +155,8 @@ function playSound(testInfo, component) {
 
     _keyExtractor = (item) => item.key;
   
-    _setModalVisible = (visible, kanji, moji, romaji, english) => {
-      this.setState({modalVisible: visible , kanji: kanji, moji: moji, romaji: romaji, english: english});
+    _setModalVisible = (visible, part, vocabulary, kanji, english) => {
+      this.setState({modalVisible: visible, part: part, vocabulary: vocabulary, kanji: kanji, english: english});
     }
 
     _setModalInvisible = () => {
@@ -170,11 +171,15 @@ function playSound(testInfo, component) {
             <Icon name="times"  type='font-awesome' size={30} color={"white"} underlayColor = '#45B5E7'
             onPress={this._setModalInvisible}
             />
-            <Text style={learn1.ModalTextTitle}>{ this.state.moji }</Text>
+            <Text style={learn1.ModalTextTitle}>{ this.state.vocabulary }</Text>
         </View>
         <View style={learn1.ModalContent}>
+          <Text style={learn1.ModalContentTitle}>Kanji: </Text>
+          <Text style={learn1.ModalExplainText}>{ this.state.kanji }</Text>
           <Text style={learn1.ModalContentTitle}>Meaning: </Text>
-          <Text>{ this.state.romaji }</Text>
+          <Text style={learn1.ModalExplainText}>{ this.state.english }</Text>
+          <Text style={learn1.ModalContentTitle}>Part: </Text>
+          <Text style={learn1.ModalExplainText}>{ this.state.part }</Text>
         </View>
     </View>
     )

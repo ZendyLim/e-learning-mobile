@@ -78,6 +78,13 @@ module.exports = StyleSheet.create({
       backgroundColor: 'white',
      },
 
+     ModalContainerGrammar: {
+      alignSelf: 'center', 
+      width: '95%',
+      height: '95%', 
+      backgroundColor: 'white',
+     },
+
      ModalTabBar: {
        flexDirection: 'row',
        flexWrap: 'wrap',
@@ -94,26 +101,17 @@ module.exports = StyleSheet.create({
 
     ModalContent: {
       width: '100%',
-       padding: 10
+      paddingStart: 5,
+      paddingEnd: 5,
       },
 
     ModalContentTitle: {
-      fontSize: 15, 
+      fontSize: 15,
+      fontWeight: 'bold',
       // alignSelf: 'center',
     },
+    ModalExplainText: {
+      fontSize: 15,
+    },
 
-    
-
-    //  RomajiItem: {
-    //   flex: 1,
-    //   color: 'black',
-    //   fontSize: 30,
-      // textAlign: 'right',
-      // textAlign: 'center',
-    //  },
-    //  TextTitle: {
-    //   color: 'black',
-    //   fontSize: 35,
-      // textAlign: 'right',
-    //  },
 });

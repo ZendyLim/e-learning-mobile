@@ -123,9 +123,7 @@ class TimerBar extends Component {
         }
 
         this.props.timeStops(this.seconds - this.state.progress);
-        this.progress.setValue(0); 
-        console.log(this.props);
-        console.log(this.progress);
+        this.progress.setValue(0);                 
       }
 
     }
@@ -156,10 +154,8 @@ class TimerBar extends Component {
       
       if(this.props.timerRestart){
         if(!this.props.isTopicTest){
-          this.progress.setValue(0);  
-          console.log(11111);      
-        }       
-        console.log(22222);
+          this.progress.setValue(0);            
+        }               
         this.timerStart();
               
       }  
