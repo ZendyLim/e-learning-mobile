@@ -902,7 +902,7 @@ export const hiraganaList = [
     "type":"hiragana",      
     "romaji":"shi",
     "moji":"し",
-    "audio":"shi.mp3",
+    "audio":"si.mp3",
     "title":"shi",
   },
   {
@@ -1303,7 +1303,7 @@ export const hiraganaList = [
     "type":"hiragana",      
     "romaji":"ji(di)",
     "moji":"ぢ",
-    "audio":"di.mp3",
+    "audio":"ji.mp3",
     "title":"ji(di)",
   },
   {
@@ -1311,7 +1311,7 @@ export const hiraganaList = [
     "type":"hiragana",      
     "romaji":"zu(du)",
     "moji":"づ",
-    "audio":"du.mp3",
+    "audio":"zu.mp3",
     "title":"zu(du)",
   },
   {
@@ -1327,7 +1327,7 @@ export const hiraganaList = [
     "type":"hiragana",      
     "romaji":"do",
     "moji":"ど",
-    "audio":"do.mp3",
+    "audio":"hl_do.mp3",
     "title":"do",
   },
   {
@@ -1736,7 +1736,7 @@ export const hiraganaList = [
     "type":"hiragana",      
     "romaji":"ja",
     "moji":"じゃ",
-    "audio":"ja.mp3",
+    "audio":"jya.mp3",
     "title":"ja",
   }, 
   {//blank
@@ -1752,7 +1752,7 @@ export const hiraganaList = [
     "type":"hiragana",      
     "romaji":"ju",
     "moji":"じゅ",
-    "audio":"ju.mp3",
+    "audio":"jyu.mp3",
     "title":"ju",
   }, 
   {//blank
@@ -1768,7 +1768,7 @@ export const hiraganaList = [
     "type":"hiragana",      
     "romaji":"jo",
     "moji":"じょ",
-    "audio":"jo.mp3",
+    "audio":"jyo.mp3",
     "title":"jo",
   },
   {
@@ -1949,7 +1949,7 @@ export const katakanaList = [
     "type":"katakana",      
     "romaji":"shi",
     "moji":"シ",
-    "audio":"shi.mp3",
+    "audio":"si.mp3",
     "title":"shi",
   },
   {
@@ -2350,7 +2350,7 @@ export const katakanaList = [
     "type":"katakana",      
     "romaji":"ji(di)",
     "moji":"ヂ",
-    "audio":"di.mp3",
+    "audio":"ji.mp3",
     "title":"ji(di)",
   },
   {
@@ -2358,7 +2358,7 @@ export const katakanaList = [
     "type":"katakana",      
     "romaji":"zu(du)",
     "moji":"ヅ",
-    "audio":"du.mp3",
+    "audio":"zu.mp3",
     "title":"zu(du)",
   },
   {
@@ -2374,7 +2374,7 @@ export const katakanaList = [
     "type":"katakana",      
     "romaji":"do",
     "moji":"ド",
-    "audio":"do.mp3",
+    "audio":"hl_do.mp3",
     "title":"do",
   },
   {
@@ -2783,7 +2783,7 @@ export const katakanaList = [
     "type":"katakana",      
     "romaji":"ja",
     "moji":"ジャ",
-    "audio":"ja.mp3",
+    "audio":"jya.mp3",
     "title":"ja",
   }, 
   {//blank
@@ -2799,7 +2799,7 @@ export const katakanaList = [
     "type":"katakana",      
     "romaji":"ju",
     "moji":"ジュ",
-    "audio":"ju.mp3",
+    "audio":"jyu.mp3",
     "title":"ju",
   }, 
   {//blank
@@ -2815,7 +2815,7 @@ export const katakanaList = [
     "type":"katakana",      
     "romaji":"jo",
     "moji":"ジョ",
-    "audio":"jo.mp3",
+    "audio":"jyo.mp3",
     "title":"jo",
   },
   {

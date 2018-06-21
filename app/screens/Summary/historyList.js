@@ -42,6 +42,7 @@ import {
       
     }
     state = {
+      type : ""
     }
 
   componentWillMount() {
@@ -62,23 +63,46 @@ import {
   ];
     return  datefinish.getDate() + " " + monthNames[datefinish.getMonth()] + " " + datefinish.getFullYear() + " " + datefinish.getHours() + ":" + datefinish.getMinutes();
   }
+
+  checkType = (itemType) =>{
+    
+  }
   
   gotoHistoryDetail = (item) =>{
     this.props.navigation.navigate('historyDetailScreen', (item));
   }
   render() {
+    console.log(this.state.type);
     return (
             <ScrollView style={study.StudyContainer}>
+              <View style={study.historyFlex}>
+                <View style={study.historyFlexRow2}>
+                  <Text style={study.historyFont}>{ strings['TIME'] }</Text>
+                </View>                          
+                <View style={study.historyFlexRow1}>
+                  <Text style={study.historyFont}>{ strings['SCORE'] }</Text>
+                </View>                          
+                <View style={study.historyFlexRow1}>
+                  <Text style={study.historyFont}>{ strings['DETAIL'] }</Text>
+                </View>                          
+              </View>           
              { this.props.historyData ? (      
                 <View> 
                     { this.props.historyData.map((item, key)=>( 
                         <View key={key}>
-                          { this.item == this.state.type ? (  
-                            <View>
-                              <Text>{ this.getDateFormat(item.startTime) }</Text>
-                              <Text>{ item.type }</Text>
-                              <Text>{ this.countScore(item.questions) }</Text>
-                              <TouchableHighlight onPress={ () => this.gotoHistoryDetail(item) }><Text>Detail</Text></TouchableHighlight>
+                          { item.type == this.state.type ? (  
+                            <View style={study.historyFlex}>
+                              <View style={study.historyFlexRow2}>
+                                <Text style={study.historyFont}>{ this.getDateFormat(item.startTime) }</Text>
+                              </View>                          
+                              <View style={study.historyFlexRow1}>
+                                <Text style={study.historyFont}>{ this.countScore(item.questions) }</Text>
+                              </View>                          
+                              <View style={study.historyFlexRow1}>
+                                <TouchableOpacity style={study.styleButon} onPress={ () => this.gotoHistoryDetail(item) }> 
+                                  <Icon name='forward'   color='#fff'/>
+                                </TouchableOpacity>
+                              </View>                          
                             </View>
                           ) : (
                             <View></View>

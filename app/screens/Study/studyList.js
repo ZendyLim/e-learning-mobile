@@ -20,7 +20,7 @@ import { ImageData } from '../../config/image_list';
 
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as Actions from '../../actions/study'; //Import your actions
+import * as Actions from '../../actions/summary'; //Import your actions
 
 import style from 'react-native-datepicker/style';
 
@@ -35,25 +35,38 @@ class StudyListScreen extends Component {
   setModalVisible(visible) {
     this.setState({modalVisible: visible});
   }
-  lockedMessage=(item, index)=>{
+  lockedMessage=(item, index)=>{    
     alert(strings[item.topic_id + '_MSG'] );     
   }
+
+  componentWillMount(){
+    this.props.getLockRecord();
+  } 
   
   navigateToLearn=(item, index)=>{
     item['index'] = index;
     item['studyType'] = item.title;
     item['headerTitle'] = item.title;
     item['categoryId'] = 'C001';
-
+    //console.log(item);
+    this.getMistakes(item.topic_id);
+    console.log(item);
     if(item.type == 'INITIAL'){
       item['studyType'] = item.title;
       this.props.navigation.navigate('HiraganaList',(
         item
       ));
     }else if(item.type == 'FUKUSHU'){
-      this.props.navigation.navigate('TopicList',(
-        item
+
+      item['formatType'] = 'FUKUSHU';
+      item['idList'] = this.props.lock[item.topic_id].mistakes;
+
+      this.props.navigation.navigate('QuizFlash',(
+         item
       ));
+      // this.props.navigation.navigate('TopicList',(
+      //   item
+      // ));
     }
     else{
       this.props.navigation.navigate('TopicList',(
@@ -75,6 +88,7 @@ class StudyListScreen extends Component {
   }
 
   checkLock = (topic_id) =>{
+
     if(this.props.lock){
       if(this.props.lock[topic_id]){
         if(this.props.lock[topic_id].lock){
@@ -86,9 +100,24 @@ class StudyListScreen extends Component {
         return false;
       }  
     }else{
-      return true;
+      return false;
     }
   }
+
+  getMistakesData(topic_id){
+    //return Promise.all([this.props.getMistakes('T008')])
+  }
+
+  getMistakes = async() => {
+    //json = await this.props.getMistakes('T008');
+    //console.log(json);
+    // this.getMistakegetMistakessData()
+    // .then(([data]) => {
+    //   // both have loaded!
+    //   console.log(data);
+    // })
+  }
+
   render() {
     var image = '';
     this._onSetLanguageTo(this.props.lang);
@@ -141,10 +170,22 @@ const study = require('../../styles/study');
 // and insert/links it into the props of our component.
 // This function makes Redux know that this component needs to be passed a piece of the state
 function mapStateToProps(state, props) {
+  console.log(state);
+
+//   state.summary.lock['T004'] = {
+//       lock:false,
+//       matomeLeft:1
+//   };
+
+//   state.summary.lock['T005'] = {
+//     lock:false,
+//     matomeLeft:1
+// };
+
   return {
       fukushu: state.study.fukushu,
       lang : state.user.lang,
-      lock : state.summary.lock
+      lock : state.summary.lock      
   }
 }
 
