@@ -61,9 +61,7 @@ import {
     this.item['formatType'] = initialParams.formatType;
     this.item['idList'] = initialParams.idList;
     this.item['oneType'] = initialParams.oneType;
-
-    this.props.getLockRecord();
-    
+      
   }
   goToTopicSelection = () =>  {    
 
@@ -107,8 +105,7 @@ import {
                      
     const resetAction = NavigationActions.reset(nav);
     
-    this.props.navigation.dispatch(resetAction);
-  
+    this.props.navigation.dispatch(resetAction);    
   }
 
   setNav(type, index) {

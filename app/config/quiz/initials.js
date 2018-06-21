@@ -1,6 +1,7 @@
 export const numbers = [
     {
         "id":"num_1",
+        "type":"vocabulary",
         "english":"0",
         "moji":"ぜろ",
         "romaji":"zero",
@@ -8,6 +9,7 @@ export const numbers = [
     },    
     {
         "id":"num_2",
+        "type":"vocabulary",
         "english":"1",
         "moji":"いち",
         "romaji":"ichi",
@@ -15,6 +17,7 @@ export const numbers = [
     },    
     {
         "id":"num_3",
+        "type":"vocabulary",
         "english":"2",
         "moji":"に",
         "romaji":"ni",
@@ -22,6 +25,7 @@ export const numbers = [
     },    
     {
         "id":"num_4",
+        "type":"vocabulary",
         "english":"3",
         "moji":"さん",
         "romaji":"san",
@@ -29,6 +33,7 @@ export const numbers = [
     },    
     {
         "id":"num_5",
+        "type":"vocabulary",
         "english":"4",
         "moji":"よん/し",
         "romaji":"yon/shi",
@@ -36,6 +41,7 @@ export const numbers = [
     },    
     {
         "id":"num_6",
+        "type":"vocabulary",
         "english":"5",
         "moji":"ご",
         "romaji":"go",
@@ -43,6 +49,7 @@ export const numbers = [
     },    
     {
         "id":"num_7",
+        "type":"vocabulary",
         "english":"6",
         "moji":"ろく",
         "romaji":"roku",
@@ -50,6 +57,7 @@ export const numbers = [
     },    
     {
         "id":"num_8",
+        "type":"vocabulary",
         "english":"7",
         "moji":"なな/しち",
         "romaji":"nana/shichi",
@@ -57,6 +65,7 @@ export const numbers = [
     },    
     {
         "id":"num_9",
+        "type":"vocabulary",
         "english":"8",
         "moji":"はち",
         "romaji":"hachi",
@@ -64,6 +73,7 @@ export const numbers = [
     },    
     {
         "id":"num_10",
+        "type":"vocabulary",
         "english":"9",
         "moji":"きゅう/く",
         "romaji":"kyuu/ku",
@@ -71,6 +81,7 @@ export const numbers = [
     },    
     {
         "id":"num_11",
+        "type":"vocabulary",
         "english":"10",
         "moji":"じゅう",
         "romaji":"juu",
@@ -78,6 +89,7 @@ export const numbers = [
     },    
     {
         "id":"num_12",
+        "type":"vocabulary",
         "english":"11",
         "moji":"じゅういち",
         "romaji":"juuichi",
@@ -85,6 +97,7 @@ export const numbers = [
     },    
     {
         "id":"num_13",
+        "type":"vocabulary",
         "english":"12",
         "moji":"じゅうに",
         "romaji":"juuni",
@@ -92,6 +105,7 @@ export const numbers = [
     },    
     {
         "id":"num_14",
+        "type":"vocabulary",
         "english":"13",
         "moji":"じゅうさん",
         "romaji":"juusan",
@@ -99,6 +113,7 @@ export const numbers = [
     },    
     {
         "id":"num_15",
+        "type":"vocabulary",
         "english":"14",
         "moji":"じゅうよん/じゅうし",
         "romaji":"juuyon/juushi",
@@ -106,6 +121,7 @@ export const numbers = [
     },    
     {
         "id":"num_16",
+        "type":"vocabulary",
         "english":"15",
         "moji":"じゅうご",
         "romaji":"juugo",
@@ -113,6 +129,7 @@ export const numbers = [
     },    
     {
         "id":"num_17",
+        "type":"vocabulary",
         "english":"16",
         "moji":"じゅうろく",
         "romaji":"juuroku",
@@ -120,6 +137,7 @@ export const numbers = [
     },    
     {
         "id":"num_18",
+        "type":"vocabulary",
         "english":"17",
         "moji":"じゅうなな/じゅうしち",
         "romaji":"juunana/juushichi",
@@ -127,6 +145,7 @@ export const numbers = [
     },    
     {
         "id":"num_19",
+        "type":"vocabulary",
         "english":"18",
         "moji":"じゅうはち",
         "romaji":"juuhachi",
@@ -134,6 +153,7 @@ export const numbers = [
     },    
     {
         "id":"num_20",
+        "type":"vocabulary",
         "english":"19",
         "moji":"じゅうきゅう/じゅうく",
         "romaji":"juukyuu/juuku",
@@ -141,6 +161,7 @@ export const numbers = [
     },    
     {
         "id":"num_21",
+        "type":"vocabulary",
         "english":"20",
         "moji":"にじゅう",
         "romaji":"nijuu",
@@ -148,6 +169,7 @@ export const numbers = [
     },    
     {
         "id":"num_22",
+        "type":"vocabulary",
         "english":"30",
         "moji":"さんじゅう",
         "romaji":"sanjuu",
@@ -155,6 +177,7 @@ export const numbers = [
     },    
     {
         "id":"num_23",
+        "type":"vocabulary",
         "english":"40",
         "moji":"よんじゅう",
         "romaji":"yonjuu",
@@ -162,6 +185,7 @@ export const numbers = [
     },    
     {
         "id":"num_24",
+        "type":"vocabulary",
         "english":"50",
         "moji":"ごじゅう",
         "romaji":"gojuu",
@@ -169,6 +193,7 @@ export const numbers = [
     },    
     {
         "id":"num_25",
+        "type":"vocabulary",
         "english":"60",
         "moji":"ろくじゅう",
         "romaji":"rokujuu",
@@ -176,6 +201,7 @@ export const numbers = [
     },    
     {
         "id":"num_26",
+        "type":"vocabulary",
         "english":"70",
         "moji":"ななじゅう",
         "romaji":"nanajuu",
@@ -183,6 +209,7 @@ export const numbers = [
     },    
     {
         "id":"num_27",
+        "type":"vocabulary",
         "english":"80",
         "moji":"はちじゅう",
         "romaji":"hachijuu",
@@ -190,6 +217,7 @@ export const numbers = [
     },    
     {
         "id":"num_28",
+        "type":"vocabulary",
         "english":"90",
         "moji":"きゅうじゅう",
         "romaji":"kyuujuu",
@@ -197,6 +225,7 @@ export const numbers = [
     },    
     {
         "id":"num_29",
+        "type":"vocabulary",
         "english":"100",
         "moji":"ひゃく",
         "romaji":"hyaku",
@@ -204,6 +233,7 @@ export const numbers = [
     },    
     {
         "id":"num_30",
+        "type":"vocabulary",
         "english":"200",
         "moji":"にひゃく",
         "romaji":"nihyaku",
@@ -211,6 +241,7 @@ export const numbers = [
     },    
     {
         "id":"num_31",
+        "type":"vocabulary",
         "english":"300",
         "moji":"さんびゃく",
         "romaji":"sanbyaku",
@@ -218,6 +249,7 @@ export const numbers = [
     },    
     {
         "id":"num_32",
+        "type":"vocabulary",
         "english":"400",
         "moji":"よんひゃく",
         "romaji":"yonhyaku",
@@ -225,6 +257,7 @@ export const numbers = [
     },    
     {
         "id":"num_33",
+        "type":"vocabulary",
         "english":"500",
         "moji":"ごひゃく",
         "romaji":"gohyaku",
@@ -232,6 +265,7 @@ export const numbers = [
     },    
     {
         "id":"num_34",
+        "type":"vocabulary",
         "english":"600",
         "moji":"ろっぴゃく",
         "romaji":"roppyaku",
@@ -239,6 +273,7 @@ export const numbers = [
     },    
     {
         "id":"num_35",
+        "type":"vocabulary",
         "english":"700",
         "moji":"ななひゃく",
         "romaji":"nanahyaku",
@@ -246,6 +281,7 @@ export const numbers = [
     },    
     {
         "id":"num_36",
+        "type":"vocabulary",
         "english":"800",
         "moji":"はっぴゃく",
         "romaji":"happyaku",
@@ -253,6 +289,7 @@ export const numbers = [
     },    
     {
         "id":"num_37",
+        "type":"vocabulary",
         "english":"900",
         "moji":"きゅうひゃく",
         "romaji":"kyuuhyaku",
@@ -260,6 +297,7 @@ export const numbers = [
     },    
     {
         "id":"num_38",
+        "type":"vocabulary",
         "english":"1000",
         "moji":"せん",
         "romaji":"sen",
@@ -267,6 +305,7 @@ export const numbers = [
     },    
     {
         "id":"num_39",
+        "type":"vocabulary",
         "english":"2000",
         "moji":"にせん",
         "romaji":"nisen",
@@ -274,6 +313,7 @@ export const numbers = [
     },    
     {
         "id":"num_40",
+        "type":"vocabulary",
         "english":"3000",
         "moji":"さんぜん",
         "romaji":"sanzen",
@@ -281,6 +321,7 @@ export const numbers = [
     },    
     {
         "id":"num_41",
+        "type":"vocabulary",
         "english":"4000",
         "moji":"よんせん",
         "romaji":"yonsen",
@@ -288,6 +329,7 @@ export const numbers = [
     },    
     {
         "id":"num_42",
+        "type":"vocabulary",
         "english":"5000",
         "moji":"ごせん",
         "romaji":"gosen",
@@ -295,6 +337,7 @@ export const numbers = [
     },    
     {
         "id":"num_43",
+        "type":"vocabulary",
         "english":"6000",
         "moji":"ろくせん",
         "romaji":"rokusen",
@@ -302,6 +345,7 @@ export const numbers = [
     },    
     {
         "id":"num_44",
+        "type":"vocabulary",
         "english":"7000",
         "moji":"ななせん",
         "romaji":"nanasen",
@@ -309,6 +353,7 @@ export const numbers = [
     },    
     {
         "id":"num_45",
+        "type":"vocabulary",
         "english":"8000",
         "moji":"はっせん",
         "romaji":"hassen",
@@ -316,6 +361,7 @@ export const numbers = [
     },    
     {
         "id":"num_46",
+        "type":"vocabulary",
         "english":"9000",
         "moji":"きゅうせん",
         "romaji":"kyuusen",
@@ -323,6 +369,7 @@ export const numbers = [
     },    
     {
         "id":"num_47",
+        "type":"vocabulary",
         "english":"10,000",
         "moji":"いちまん",
         "romaji":"ichiman",
@@ -330,6 +377,7 @@ export const numbers = [
     },    
     {
         "id":"num_48",
+        "type":"vocabulary",
         "english":"100,000",
         "moji":"じゅうまん",
         "romaji":"juuman",
@@ -337,6 +385,7 @@ export const numbers = [
     },    
     {
         "id":"num_49",
+        "type":"vocabulary",
         "english":"1,000,000",
         "moji":"ひゃくまん",
         "romaji":"hyakuman",
@@ -344,6 +393,7 @@ export const numbers = [
     },    
     {
         "id":"num_50",
+        "type":"vocabulary",
         "english":"1",
         "moji":"ひとつ",
         "romaji":"hitotsu",
@@ -351,6 +401,7 @@ export const numbers = [
     },    
     {
         "id":"num_51",
+        "type":"vocabulary",
         "english":"2",
         "moji":"ふたつ",
         "romaji":"futatsu",
@@ -358,6 +409,7 @@ export const numbers = [
     },    
     {
         "id":"num_52",
+        "type":"vocabulary",
         "english":"3",
         "moji":"みっつ",
         "romaji":"mittsu",
@@ -365,6 +417,7 @@ export const numbers = [
     },    
     {
         "id":"num_53",
+        "type":"vocabulary",
         "english":"4",
         "moji":"よっつ",
         "romaji":"yottsu",
@@ -372,6 +425,7 @@ export const numbers = [
     },    
     {
         "id":"num_54",
+        "type":"vocabulary",
         "english":"5",
         "moji":"いつつ",
         "romaji":"itsutsu",
@@ -379,6 +433,7 @@ export const numbers = [
     },    
     {
         "id":"num_55",
+        "type":"vocabulary",
         "english":"6",
         "moji":"むっつ",
         "romaji":"muttsu",
@@ -386,6 +441,7 @@ export const numbers = [
     },    
     {
         "id":"num_56",
+        "type":"vocabulary",
         "english":"7",
         "moji":"ななつ",
         "romaji":"nanatsu",
@@ -393,6 +449,7 @@ export const numbers = [
     },    
     {
         "id":"num_57",
+        "type":"vocabulary",
         "english":"8",
         "moji":"やっつ",
         "romaji":"yattsu",
@@ -400,6 +457,7 @@ export const numbers = [
     },    
     {
         "id":"num_58",
+        "type":"vocabulary",
         "english":"9",
         "moji":"ここのつ",
         "romaji":"kokonotsu",
@@ -407,6 +465,7 @@ export const numbers = [
     },    
     {
         "id":"num_59",
+        "type":"vocabulary",
         "english":"10",
         "moji":"とお",
         "romaji":"too",
@@ -414,6 +473,7 @@ export const numbers = [
     },    
     {
         "id":"num_60",
+        "type":"vocabulary",
         "english":"1 piece",
         "moji":"いっこ",
         "romaji":"ikko",
@@ -421,6 +481,7 @@ export const numbers = [
     },    
     {
         "id":"num_61",
+        "type":"vocabulary",
         "english":"2 pieces",
         "moji":"にこ",
         "romaji":"niko",
@@ -428,6 +489,7 @@ export const numbers = [
     },    
     {
         "id":"num_62",
+        "type":"vocabulary",
         "english":"3 pieces",
         "moji":"さんこ",
         "romaji":"sanko",
@@ -435,6 +497,7 @@ export const numbers = [
     },    
     {
         "id":"num_63",
+        "type":"vocabulary",
         "english":"4 pieces",
         "moji":"よんこ",
         "romaji":"yonko",
@@ -442,6 +505,7 @@ export const numbers = [
     },    
     {
         "id":"num_64",
+        "type":"vocabulary",
         "english":"5 pieces",
         "moji":"ごこ",
         "romaji":"goko",
@@ -449,6 +513,7 @@ export const numbers = [
     },    
     {
         "id":"num_65",
+        "type":"vocabulary",
         "english":"6 pieces",
         "moji":"ろっこ",
         "romaji":"rokko",
@@ -456,6 +521,7 @@ export const numbers = [
     },    
     {
         "id":"num_66",
+        "type":"vocabulary",
         "english":"7 pieces",
         "moji":"ななこ",
         "romaji":"nanako",
@@ -463,6 +529,7 @@ export const numbers = [
     },    
     {
         "id":"num_67",
+        "type":"vocabulary",
         "english":"8 pieces",
         "moji":"はっこ",
         "romaji":"hakko",
@@ -470,6 +537,7 @@ export const numbers = [
     },    
     {
         "id":"num_68",
+        "type":"vocabulary",
         "english":"9 pieces",
         "moji":"きゅうこ",
         "romaji":"kyuuko",
@@ -477,6 +545,7 @@ export const numbers = [
     },    
     {
         "id":"num_69",
+        "type":"vocabulary",
         "english":"10 pieces",
         "moji":"じゅっこ",
         "romaji":"jukko",
@@ -484,6 +553,7 @@ export const numbers = [
     },    
     {
         "id":"num_70",
+        "type":"vocabulary",
         "english":"1 person",
         "moji":"ひとり",
         "romaji":"hitori",
@@ -491,6 +561,7 @@ export const numbers = [
     },    
     {
         "id":"num_71",
+        "type":"vocabulary",
         "english":"2 persons",
         "moji":"ふたり",
         "romaji":"futari",
@@ -498,6 +569,7 @@ export const numbers = [
     },    
     {
         "id":"num_72",
+        "type":"vocabulary",
         "english":"3 persons",
         "moji":"さんにん",
         "romaji":"sannin",
@@ -505,6 +577,7 @@ export const numbers = [
     },    
     {
         "id":"num_73",
+        "type":"vocabulary",
         "english":"4 persons",
         "moji":"よにん",
         "romaji":"yonin",
@@ -512,6 +585,7 @@ export const numbers = [
     },    
     {
         "id":"num_74",
+        "type":"vocabulary",
         "english":"5 persons",
         "moji":"ごにん",
         "romaji":"gonin",
@@ -519,6 +593,7 @@ export const numbers = [
     },    
     {
         "id":"num_75",
+        "type":"vocabulary",
         "english":"6 persons",
         "moji":"ろくにん",
         "romaji":"rokunin",
@@ -526,6 +601,7 @@ export const numbers = [
     },    
     {
         "id":"num_76",
+        "type":"vocabulary",
         "english":"7 persons",
         "moji":"ななにん",
         "romaji":"nananin",
@@ -533,6 +609,7 @@ export const numbers = [
     },    
     {
         "id":"num_77",
+        "type":"vocabulary",
         "english":"8 persons",
         "moji":"はちにん",
         "romaji":"hachinin",
@@ -540,6 +617,7 @@ export const numbers = [
     },    
     {
         "id":"num_78",
+        "type":"vocabulary",
         "english":"9 persons",
         "moji":"きゅうにん",
         "romaji":"kyuunin",
@@ -547,6 +625,7 @@ export const numbers = [
     },    
     {
         "id":"num_79",
+        "type":"vocabulary",
         "english":"10 persons",
         "moji":"じゅうにん",
         "romaji":"juunin",
@@ -554,6 +633,7 @@ export const numbers = [
     },    
     {
         "id":"num_80",
+        "type":"vocabulary",
         "english":"1",
         "moji":"いっぽん",
         "romaji":"ippon",
@@ -561,6 +641,7 @@ export const numbers = [
     },    
     {
         "id":"num_81",
+        "type":"vocabulary",
         "english":"2",
         "moji":"にほん",
         "romaji":"nihon",
@@ -568,6 +649,7 @@ export const numbers = [
     },    
     {
         "id":"num_82",
+        "type":"vocabulary",
         "english":"3",
         "moji":"さんぼん",
         "romaji":"sanbon",
@@ -575,6 +657,7 @@ export const numbers = [
     },    
     {
         "id":"num_83",
+        "type":"vocabulary",
         "english":"4",
         "moji":"よんほん",
         "romaji":"yonhon",
@@ -582,6 +665,7 @@ export const numbers = [
     },    
     {
         "id":"num_84",
+        "type":"vocabulary",
         "english":"5",
         "moji":"ごほん",
         "romaji":"gohon",
@@ -589,6 +673,7 @@ export const numbers = [
     },    
     {
         "id":"num_85",
+        "type":"vocabulary",
         "english":"6",
         "moji":"ろっぽん",
         "romaji":"roppon",
@@ -596,6 +681,7 @@ export const numbers = [
     },    
     {
         "id":"num_86",
+        "type":"vocabulary",
         "english":"7",
         "moji":"ななほん",
         "romaji":"nanahon",
@@ -603,6 +689,7 @@ export const numbers = [
     },    
     {
         "id":"num_87",
+        "type":"vocabulary",
         "english":"8",
         "moji":"はっぽん",
         "romaji":"happon",
@@ -610,6 +697,7 @@ export const numbers = [
     },    
     {
         "id":"num_88",
+        "type":"vocabulary",
         "english":"9",
         "moji":"きゅうほん",
         "romaji":"kyuuhon",
@@ -617,6 +705,7 @@ export const numbers = [
     },    
     {
         "id":"num_89",
+        "type":"vocabulary",
         "english":"10",
         "moji":"じゅっぽん",
         "romaji":"juppon",
@@ -624,6 +713,7 @@ export const numbers = [
     },    
     {
         "id":"num_90",
+        "type":"vocabulary",
         "english":"1",
         "moji":"いちまい",
         "romaji":"ichimai",
@@ -631,6 +721,7 @@ export const numbers = [
     },    
     {
         "id":"num_91",
+        "type":"vocabulary",
         "english":"2",
         "moji":"にまい",
         "romaji":"nimai",
@@ -638,6 +729,7 @@ export const numbers = [
     },    
     {
         "id":"num_92",
+        "type":"vocabulary",
         "english":"3",
         "moji":"さんまい",
         "romaji":"sanmai",
@@ -645,6 +737,7 @@ export const numbers = [
     },    
     {
         "id":"num_93",
+        "type":"vocabulary",
         "english":"4",
         "moji":"よんまい",
         "romaji":"yonmai",
@@ -652,6 +745,7 @@ export const numbers = [
     },    
     {
         "id":"num_94",
+        "type":"vocabulary",
         "english":"5",
         "moji":"ごまい",
         "romaji":"gomai",
@@ -659,6 +753,7 @@ export const numbers = [
     },    
     {
         "id":"num_95",
+        "type":"vocabulary",
         "english":"6",
         "moji":"ろくまい",
         "romaji":"rokumai",
@@ -666,6 +761,7 @@ export const numbers = [
     },    
     {
         "id":"num_96",
+        "type":"vocabulary",
         "english":"7",
         "moji":"ななまい",
         "romaji":"nanamai",
@@ -673,6 +769,7 @@ export const numbers = [
     },    
     {
         "id":"num_97",
+        "type":"vocabulary",
         "english":"8",
         "moji":"はちまい",
         "romaji":"hachimai",
@@ -680,6 +777,7 @@ export const numbers = [
     },    
     {
         "id":"num_98",
+        "type":"vocabulary",
         "english":"9",
         "moji":"きゅうまい",
         "romaji":"kyuumai",
@@ -687,6 +785,7 @@ export const numbers = [
     },    
     {
         "id":"num_99",
+        "type":"vocabulary",
         "english":"10",
         "moji":"じゅうまい",
         "romaji":"juumai",
