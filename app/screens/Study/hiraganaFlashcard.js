@@ -261,6 +261,7 @@ import {
                   <Animated.View style={[frontAnimatedStyle]}>
                     <View style={[studyStyles.cardText]}>
                       <ResponsiveText 
+                        textType={'flip'}
                         content={this.state.front} 
                         title={this.props.title} 
                         textLength={this.state.mojiLength} />
@@ -269,6 +270,7 @@ import {
                   <Animated.View  style={[backAnimatedStyle]}>
                     <View style={[studyStyles.cardText]}>
                     <ResponsiveText 
+                      textType={'flip'}
                       content={this.state.back} 
                       title={this.props.title} 
                       textLength={this.state.romajiLength} />
