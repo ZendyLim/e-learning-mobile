@@ -110,7 +110,7 @@ import {
 
       this.interval;
 
-      this.slider = (duration) => {
+      this.slider = (duration) => {        
         this.reset();
         const set = (finished) => {
           if(finished) {
@@ -233,7 +233,24 @@ import {
     }
 
     componentWillUnmount() {
-      stopSound(this.state , this);
+      this.resetValue();
+      stopSound(this.state , this);      
+      this.playNpause();
+    }
+
+    resetValue(){
+      params = {
+        loopingSound: undefined,
+        tests: {},
+
+        indicator: new Animated.Value(0),
+        pos: new Animated.Value(0),
+        moji: this.data[0].moji,
+        romaji: this.data[0].romaji, 
+        url: this.data[0].url,
+      };
+
+      this.setState(params);
     }
 
     render() {
