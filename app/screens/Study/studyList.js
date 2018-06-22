@@ -125,7 +125,7 @@ class StudyListScreen extends Component {
       <ScrollView style={study.StudyContainer}>
 
           { StudyList.map((item, key)=>(
-          <View  key={key} style={study.cardBox}>
+          <View  key={key} style={[study.cardBox, styles.shadow]}>
             <TouchableOpacity style={study.titleContainer} onPress={this.navigateToLearn.bind(this, item, key)}>
               <Image
                 style={study.cardImg}

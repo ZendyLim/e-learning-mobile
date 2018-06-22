@@ -670,7 +670,7 @@ export const vocabulary = [
         "moji":"グエンさん は せんせい じゃありません。",
         "kanji":"グエンさん は 先生 じゃありません。",
         "english":"Mr./Ms. Nguyen is not a teacher.",
-        "audio":"tp1_g_7.mp3"
+        "audio":""
     },
     {	
         "id":"tp1_g_8",
@@ -1201,12 +1201,12 @@ export const vocabulary = [
                 "moji":"英語"
             },
             {
-                "id":"tp1_r_3",
+                "id":"tp1_r_2",
                 "type":"reading",
                 "moji":"英語とひらがなとカタカナ"
             },
             {
-                "id":"tp1_r_2",
+                "id":"tp1_r_3",
                 "type":"reading",
                 "moji":"ひらがなとカタカナと漢字"
             },

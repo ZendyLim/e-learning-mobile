@@ -175,9 +175,8 @@ class QuestionPanel extends Component {
         if (error) {          
           return;
         }        
-        this.playAudio()
+        this.playAudio();
         
-
       });
     }
 
@@ -195,11 +194,8 @@ class QuestionPanel extends Component {
             } 
           });
         });
-        
-        
+              
       }
-      
-
     }
 
 }

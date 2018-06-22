@@ -6,6 +6,14 @@ var {
   StyleSheet,
 } = React;
 
+let englishFont = 'Roboto-Regular';
+let japaneseFont = 'NotoSansJP-Regular';
+let primaryColor = '#45b4e7'; // blue
+let secondaryColor = '#d2f9fc';
+let textColor = '#333';
+let textSecondary = '#566d97';
+let grayColor = '#ccc';
+
 module.exports = StyleSheet.create({
 
   container: { 
@@ -62,8 +70,8 @@ module.exports = StyleSheet.create({
   },
   
   borderBox: {
-    borderWidth: 2,
-    borderColor: '#45B5E7',
+    borderWidth: 1,
+    borderColor: primaryColor,
   },
 
   textLg: {
@@ -128,9 +136,12 @@ module.exports = StyleSheet.create({
   title :{
     textAlign: 'center',
     fontSize: 25,
-    marginTop: 5,
-    marginBottom : 5,
+    paddingTop: 5,
+    paddingBottom : 5,
     fontWeight: 'bold',
+    borderColor: primaryColor,
+    borderWidth: 1,
+    borderTopWidth : 0, 
   },
   lockButton : {
     position: 'absolute',
@@ -152,9 +163,10 @@ module.exports = StyleSheet.create({
     backgroundColor: 'white',
   },
   titleContainer : {
-    borderColor: '#2771e8',
-    borderWidth: 1,
-    borderTopWidth : 0, 
+    
+  },
+  titleListContainer : {
+    marginBottom:20
   },
   height40 : {
     height : 40,
@@ -164,11 +176,14 @@ module.exports = StyleSheet.create({
     height: 70,
     justifyContent: 'center',
     alignItems : 'center',
-    borderColor: '#2771e8',
+    borderColor: primaryColor,
     borderWidth: 1,
     backgroundColor: '#fff',
     borderRadius: 5,
-    marginBottom: 5
+    marginBottom: 10,
+    shadowColor: "#000",
+		shadowOpacity: 0.5,
+		elevation: 2
   },
   btnLearnText : {
     fontSize:20,
@@ -197,8 +212,7 @@ module.exports = StyleSheet.create({
     height : 100,
     paddingTop : 10,
     paddingBottom : 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: 'row',    
   },
   buttonTopic: {
     height: 90,
@@ -209,7 +223,7 @@ module.exports = StyleSheet.create({
     borderColor: '#96d6f7',
     borderWidth: 1,
     borderRadius: 5,
-    
+    margin:'1%'
   },buttonTopicText:{
     color : '#000000', 
     fontSize : 20,
@@ -228,7 +242,7 @@ module.exports = StyleSheet.create({
   },
   nextTopic: {
     height: 60,
-    width : '100%',
+    width : '98%',
     backgroundColor: '#cccccc',
     justifyContent: 'center',
     alignItems: 'center',
