@@ -27,7 +27,8 @@ import {
   import { quizItems } from '../../config/quiz/index';
   import { StudyList } from '../../config/studyList';
   import { studyType } from '../../config/quizFormat';
-
+  import * as Helper from '../../actions/helper'; 
+  
   /*
     TODO:
     1.0 Refine the code 
@@ -833,13 +834,18 @@ import {
 
     setEndQuiz = () =>  {
       var endTime = ( new Date().getTime() / 1000);
-
+      var quizSizes = 0;
       var parseValue = this.reduxParam;
-      
+
+      if(this.initialParams.isTopicTest){
+        quizSizes = this.allQuestion.length;
+      }  
+      score = Helper.countScore(this.studyRecord,quizSizes);
+      //console.log(this.studyRecord,this.allQuestion.length);
       parseValue['finishTime'] = endTime;
-      parseValue['questions'] = this.studyRecord;      
-      
-      console.log('--end--', parseValue);
+      parseValue['questions'] = this.studyRecord;
+      parseValue['score'] = score;
+            
       this.props.endLearn(parseValue); //call our action
   };
 
