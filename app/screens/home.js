@@ -123,8 +123,8 @@ import {
                 progress={ persenTotal }
                 progressColor={'#43b5e7'}
             />
-            <View style={ scoreStyle.containerHome2 }>
-              <View style={ scoreStyle.containerHomeinside2 }>
+            <View style={ [scoreStyle.containerHome2] }>
+              <View style={ [scoreStyle.containerHomeinside2, styles.shadow] }>
                 <TouchableOpacity  style={ scoreStyle.ButtonText } onPress={this.navigatePage.bind(this,'Study')}>
                     <View style={ scoreStyle.HomeIcon }>
                       <Icon  name="book"  type='font-awesome' color="#fff"  size={18}/>
@@ -137,7 +137,7 @@ import {
                     </View>
                     <Text style={ scoreStyle.IconText } >{ strings['HOME_SUMMARY'] }</Text>
                 </TouchableOpacity>
-                <TouchableOpacity  style={ scoreStyle.ButtonText } onPress={this.navigatePage.bind(this,'Profile')}>
+                <TouchableOpacity  style={ [scoreStyle.ButtonText, scoreStyle.NoBorder] } onPress={this.navigatePage.bind(this,'Profile')}>
                     <View style={ scoreStyle.HomeIcon }>
                       <Icon name="user" type='font-awesome'  color="#fff"  size={18}/>
                     </View>

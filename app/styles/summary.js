@@ -71,15 +71,12 @@ module.exports = StyleSheet.create({
         width: '100%',
         height: '100%',
     },
-    flexBot1 : {
-        flex: 1,
-        padding:8,
-        
+    flexBot1 : {        
+        padding:5,
+        paddingTop:10,        
     },
     flexRow: {
-        flex: 1,
-        flexDirection: 'row',
-        height: 130,
+        
     },
     botButton : {
         backgroundColor: '#fff',
@@ -138,12 +135,13 @@ module.exports = StyleSheet.create({
     },
     conGraph :{
         backgroundColor: '#fff',
-        width : 90,
+        width : '100%',
         height: 120,
-        borderRadius: 8,
+        borderRadius: 5,
         borderWidth: 1,
         borderColor: '#ddd',
-      
+        paddingTop:5,
+        alignItems: 'center',
     },
     absoluteGr: {
         position: 'absolute',
@@ -154,7 +152,7 @@ module.exports = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         top: 23,
-        marginLeft: 5,
+        marginLeft:5
     },
     btnText : {
         textAlign: 'center',

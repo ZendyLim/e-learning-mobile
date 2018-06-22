@@ -29,12 +29,12 @@ class CorrectPanel extends Component {
   }
   componentWillMount() {
     
-      this.loadAudio();        
+      //this.loadAudio();        
   }
 
   componentDidUpdate(){
     
-      this.loadAudio();
+      //this.loadAudio();
   }
 
 
@@ -51,9 +51,11 @@ class CorrectPanel extends Component {
             <Text style={ styles.correctText }>{ this.props.question.english }</Text>
           </View>
           
-          <TouchableHighlight onPress={() => this.playAudio(true) } style={ styles.correctAudio }>
-              <Icon name="volume-up" style={ styles.correctVolume }></Icon>
-          </TouchableHighlight>
+          {this.props.question.audio != '' && 
+            (<TouchableHighlight onPress={() => this.loadAudio() } style={ styles.correctAudio }>
+                <Icon name="volume-up" style={ styles.correctVolume }></Icon>
+            </TouchableHighlight>)
+          }
         </View>
       );
     
@@ -74,13 +76,13 @@ class CorrectPanel extends Component {
       );
     }
 
-    loadAudio(){
+    loadAudio(){      
       this.quizAudio = new Sound(this.props.question.audio, Sound.MAIN_BUNDLE, (error) => {
         if (error) {
           console.log('failed to load the sound', error);
           return;
         }
-
+        this.playAudio(true);
       });
     }
 
@@ -89,16 +91,17 @@ class CorrectPanel extends Component {
       playDifferentAudio = this.currentAudio != this.props.question.id && this.props.format == 'audio';
 
       if(playDifferentAudio || forcePlay){    
-        
-        this.currentAudio = this.props.question.id;
-
-        this.quizAudio.play((success) => {
-          if (!success) {
-            this.quizAudio.reset();
-          } 
+            
+        this.currentAudio = this.props.question.id;        
+        this.quizAudio.stop(() => {
+          this.quizAudio.play((success) => {
+            if (!success) {              
+              //this.quizAudio.reset();
+            } 
+          });
         });
+              
       }
-
     }
 
     stripSpace(val){        

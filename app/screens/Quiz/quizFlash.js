@@ -133,8 +133,8 @@ import {
 
       this.fukushuItemCount = {
         vocabulary: 20,
-        kanji: 20,
-        grammar: 10
+        kanji: 10,
+        grammar: 20
       }
 
       this.state = this.initialState;
@@ -184,18 +184,23 @@ import {
               
               <View style={[ styles.col12, styles.quizAnswerWrapper ]}> 
               <ScrollView>
-                <View style={ !timerRun && styles.blocker }></View>
-                
+                                
                 { !this.state.showCorrect ?
-                  (<Quiz 
-                    question={ this.state.question } 
-                    answerOptions={ this.state.question.answerOption }
-                    onAnswerSelected={ this.stopTimer }
-                    displayFormat={ this.state.answerFormat }
-                    format={ this.state.format }
-                    styleFormat={ this.quizOptions.style }
-                    timesUp={ this.state.timesUp }                    
-                  />) :
+                  (
+                    <View>
+                      <View style={ !timerRun && styles.blocker }></View>
+                    
+                      <Quiz 
+                        question={ this.state.question } 
+                        answerOptions={ this.state.question.answerOption }
+                        onAnswerSelected={ this.stopTimer }
+                        displayFormat={ this.state.answerFormat }
+                        format={ this.state.format }
+                        styleFormat={ this.quizOptions.style }
+                        timesUp={ this.state.timesUp }                    
+                      />
+                  </View>
+                  ) :
                   (<View>
                     <CorrectPanel 
                       question={ this.state.question } 
@@ -519,7 +524,21 @@ import {
             quizFormat = 'english_moji';
           break;
         }
+      }
+      else if (quizFormat.indexOf('audio') > -1 && this.currentQuestion.audio == ''){
+        switch(this.currentQuestion.type){
+          case 'kanji':
+            quizFormat = 'kanji_english';
+          break;
 
+          case 'initial':
+            quizFormat = 'moji_romaji';
+          break;
+
+          default:
+            quizFormat = 'english_moji';
+          break;
+        }
       }
       
       switch (quizFormat) {
@@ -730,6 +749,7 @@ import {
           this.setState(reset);
         }
         else{
+          console.log('---beforend');
           this.setEndQuiz();
           
           const resetAction = NavigationActions.reset({
@@ -747,7 +767,7 @@ import {
 
           // this.props.navigation.navigate('ScoreScreen',{
           //   index : this.state.index,
-          //   typeQuiz : this.state.type,
+          //   typeQuiz : this.initialParams.formatType,
           //   studyTitle : this.title
           // });
           
@@ -758,22 +778,25 @@ import {
 
     setSentParamStart = (index, categoryId, type ) =>{
       var startTime = ( new Date().getTime() / 1000);
+      var reduxType = 'QUIZ';
+      console.log(type, type == 'Test');
+
       if(type == 'Test'){
-        var reduxType = "TEST";
+        reduxType = "TEST";
       }
-      if(type == 'FUKUSHU'){
-        var reduxType = "FUKUSHU";
+      else if(type == 'FUKUSHU'){
+        reduxType = "FUKUSHU";
       }
-      else{
-        var reduxType = "QUIZ";        
-      }
+
       var value = {
           type : reduxType,
           topicId : StudyList[index].topic_id,
           startTime : startTime,
           categoryId : StudyList[index].topic_id + categoryId, 
           studyId : StudyList[index].topic_id + categoryId 
-        }        
+        }      
+        
+        console.log(value, 'yooo');
         return value;
     }
 
@@ -814,7 +837,9 @@ import {
       var parseValue = this.reduxParam;
       
       parseValue['finishTime'] = endTime;
-      parseValue['questions'] = this.studyRecord;            
+      parseValue['questions'] = this.studyRecord;      
+      
+      console.log('--end--', parseValue);
       this.props.endLearn(parseValue); //call our action
   };
 
@@ -826,7 +851,7 @@ import {
 
     onTimesUp = (val) => {
       
-      if(this.state.type == 'Quiz'){        
+      if(this.initialParams.formatType == 'Quiz'){        
         this.setState({
           showCorrect:true,          
         });             
@@ -868,8 +893,8 @@ import {
       }   
       
       this.addScore(isCorrect);
-      
-      if(this.state.type == 'Quiz' && this.showCorrect){
+      console.log(this.initialParams.formatType, this.showCorrect);
+      if(this.initialParams.formatType == 'Quiz' && this.showCorrect){
         setTimeout(() => {
 
           this.setState({
