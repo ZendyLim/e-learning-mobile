@@ -119,7 +119,7 @@ module.exports = StyleSheet.create({
 			backgroundColor: primaryColor,
 		}, 
 		highPrio: {
-			zIndex:999
+			zIndex:100
 		},
 	//Header
 	headContainer:{
