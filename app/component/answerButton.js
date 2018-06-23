@@ -8,7 +8,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 **/
 class AnswerButton extends Component {
   static propTypes = {
-    textDisplay: PropTypes.string.isRequired,
+    textDisplay: PropTypes.string,
     textData: PropTypes.object,
     selected: PropTypes.bool,
     id: PropTypes.string,

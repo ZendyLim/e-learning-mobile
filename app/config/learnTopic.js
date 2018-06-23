@@ -2213,368 +2213,469 @@ export const learnData =
         {
           "id": "t1v_1",
           "type": "vocab",
-          "moji": "あなた",
-          "word": "あなた",
-          "romaji": "you",
+          "part": "noun",
+          "vocabulary": "あなた",
+          "kanji": "",
           "english": "you",
-          "part": "",
           "url": "t1_anata.mp3"
         },
         {
           "id": "t1v_2",
           "type": "vocab",
-          "moji": "アメリカ",
-          "romaji": "America/U.S.A.",
+          "part": "noun",
+          "vocabulary": "アメリカ",
+          "kanji": "",
+          "english": "America/U.S.A.",
           "url": "t1_amerika.mp3"
         },
         {
           "id": "t1v_3",
           "type": "vocab",
-          "moji": "いいえ",
-          "romaji": "No/Don't mention it/No problem",
+          "part": "emotive verb",
+          "vocabulary": "いいえ",
+          "kanji": "",
+          "english": "No./Don't mention it./No problem.",
           "url": "t1_iie.mp3"
         },
         {
           "id": "t1v_4",
           "type": "vocab",
-          "moji": "いくつ",
-          "romaji": "how many",
+          "part": "interrogative",
+          "vocabulary": "いくつ",
+          "kanji": "",
+          "english": "hou many",
           "url": "t1_ikutsu.mp3"
         },
         {
           "id": "t1v_5",
           "type": "vocab",
-          "moji": "いくら",
-          "romaji": "how much",
+          "part": "interrogative",
+          "vocabulary": "いくら",
+          "kanji": "",
+          "english": "hou much",
           "url": "t1_ikura.mp3"
         },
         {
           "id": "t1v_6",
           "type": "vocab",
-          "moji": "インドネシア",
-          "romaji": "Indonesia",
+          "part": "noun",
+          "vocabulary": "インドネシア",
+          "kanji": "",
+          "english": "Indonesia",
           "url": "t1_indoneshia.mp3"
         },
         {
           "id": "t1v_7",
           "type": "vocab",
-          "moji": "えいご",
-          "romaji": "English language",
+          "part": "noun",
+          "vocabulary": "えいご",
+          "kanji": "英語",
+          "english": "English language",
           "url": "t1_eigo.mp3"
         },
         {
           "id": "t1v_8",
           "type": "vocab",
-          "moji": "エンジニア",
-          "romaji": "engineer",
+          "part": "noun",
+          "vocabulary": "エンジニア",
+          "kanji": "",
+          "english": "engineer",
           "url": "t1_enjinia.mp3"
         },
         {
           "id": "t1v_9",
           "type": "vocab",
-          "moji": "おちゃ",
-          "romaji": "green tea",
+          "part": "noun",
+          "vocabulary": "おちゃ",
+          "kanji": "お茶",
+          "english": "green tea",
           "url": "t1_ocha.mp3"
         },
         {
           "id": "t1v_10",
           "type": "vocab",
-          "moji": "おとこ",
-          "romaji": "Man",
+          "part": "noun",
+          "vocabulary": "おとこ",
+          "kanji": "男",
+          "english": "Man",
           "url": "t1_otoko.mp3"
         },
         {
           "id": "t1v_11",
           "type": "vocab",
-          "moji": "おんな",
-          "romaji": "Woman",
+          "part": "noun",
+          "vocabulary": "おんな",
+          "kanji": "女",
+          "english": "Woman",
           "url": "t1_onna.mp3"
         },
         {
           "id": "t1v_12",
           "type": "vocab",
-          "moji": "がいこく",
-          "romaji": "foreign country",
+          "part": "noun",
+          "vocabulary": "がいこく",
+          "kanji": "外国",
+          "english": "foreign country",
           "url": "t1_gaikoku.mp3"
         },
         {
           "id": "t1v_13",
           "type": "vocab",
-          "moji": "かいしゃ",
-          "romaji": "Company",
+          "part": "noun",
+          "vocabulary": "かいしゃ",
+          "kanji": "会社",
+          "english": "Company",
           "url": "t1_kaisha.mp3"
         },
         {
           "id": "t1v_14",
           "type": "vocab",
-          "moji": "かいしゃいん",
-          "romaji": "business person",
+          "part": "noun",
+          "vocabulary": "かいしゃいん",
+          "kanji": "会社員",
+          "english": "business person",
           "url": "t1_kaishain.mp3"
         },
         {
           "id": "t1v_15",
           "type": "vocab",
-          "moji": "がくせい",
-          "romaji": "Student",
+          "part": "noun",
+          "vocabulary": "がくせい",
+          "kanji": "学生",
+          "english": "Student",
           "url": "t1_gakusei.mp3"
         },
         {
           "id": "t1v_16",
           "type": "vocab",
-          "moji": "かぞく",
-          "romaji": "Family",
+          "part": "noun",
+          "vocabulary": "かぞく",
+          "kanji": "家族",
+          "english": "Family",
           "url": "t1_kazoku.mp3"
         },
         {
           "id": "t1v_17",
           "type": "vocab",
-          "moji": "がっこう",
-          "romaji": "School",
+          "part": "noun",
+          "vocabulary": "がっこう",
+          "kanji": "学校",
+          "english": "School",
           "url": "t1_gakkou.mp3"
         },
         {
           "id": "t1v_18",
           "type": "vocab",
-          "moji": "かばん",
-          "romaji": "bag, basket",
+          "part": "noun",
+          "vocabulary": "かばん",
+          "kanji": "",
+          "english": "bag, basket",
           "url": "t1_kaban.mp3"
         },
         {
           "id": "t1v_19",
           "type": "vocab",
-          "moji": "かようび",
-          "romaji": "Tuesday",
+          "part": "noun",
+          "vocabulary": "かようび",
+          "kanji": "火曜日",
+          "english": "Tuesday",
           "url": "t1_kayoubi.mp3"
         },
         {
           "id": "t1v_20",
           "type": "vocab",
-          "moji": "きょうし",
-          "romaji": "teacher",
+          "part": "noun",
+          "vocabulary": "きょうし",
+          "kanji": "教師",
+          "english": "teacher",
           "url": "t1_kyoushi.mp3"
         },
         {
           "id": "t1v_21",
           "type": "vocab",
-          "moji": "きんようび",
-          "romaji": "Friday",
+          "part": "noun",
+          "vocabulary": "きんようび",
+          "kanji": "金曜日",
+          "english": "Friday",
           "url": "t1_kinyoubi.mp3"
         },
         {
           "id": "t1v_22",
           "type": "vocab",
-          "moji": "くに",
-          "romaji": "Country",
+          "part": "noun",
+          "vocabulary": "くに",
+          "kanji": "国",
+          "english": "Country",
           "url": "t1_kuni.mp3"
         },
         {
           "id": "t1v_23",
           "type": "vocab",
-          "moji": "くるま",
-          "romaji": "car, vehicle",
+          "part": "noun",
+          "vocabulary": "くるま",
+          "kanji": "車",
+          "english": "car, vehicle",
           "url": "t1_kuruma.mp3"
         },
         {
           "id": "t1v_24",
           "type": "vocab",
-          "moji": "げつようび",
-          "romaji": "Monday",
+          "part": "noun",
+          "vocabulary": "げつようび",
+          "kanji": "月曜日",
+          "english": "Monday",
           "url": "t1_getsuyoubi.mp3"
         },
         {
           "id": "t1v_25",
           "type": "vocab",
-          "moji": "～ご",
-          "romaji": "language identifier",
+          "part": "noun",
+          "vocabulary": "～ご",
+          "kanji": "語",
+          "english": "language identifier",
           "url": "t1_go.mp3"
         },
         {
           "id": "t1v_26",
           "type": "vocab",
-          "moji": "しごと",
-          "romaji": "Job",
+          "part": "noun",
+          "vocabulary": "しごと",
+          "kanji": "仕事",
+          "english": "Job",
           "url": "t1_shigoto.mp3"
         },
         {
           "id": "t1v_27",
           "type": "vocab",
-          "moji": "じしょ",
-          "romaji": "Dictionary",
+          "part": "noun",
+          "vocabulary": "じしょ",
+          "kanji": "辞書",
+          "english": "Dictionary",
           "url": "t1_jisho.mp3"
         },
         {
           "id": "t1v_28",
           "type": "vocab",
-          "moji": "しゃいん",
-          "romaji": "company employee",
+          "part": "noun",
+          "vocabulary": "しゃいん",
+          "kanji": "社員",
+          "english": "company employee",
           "url": "t1_shain.mp3"
         },
         {
           "id": "t1v_29",
           "type": "vocab",
-          "moji": "～じん",
-          "romaji": "nationality, race",
+          "part": "noun",
+          "vocabulary": "～じん",
+          "kanji": "人",
+          "english": "nationality, race",
           "url": "t1_jin.mp3"
         },
         {
           "id": "t1v_30",
           "type": "vocab",
-          "moji": "すいようび",
-          "romaji": "Wednesday",
+          "part": "noun",
+          "vocabulary": "すいようび",
+          "kanji": "水曜日",
+          "english": "Wednesday",
           "url": "t1_suiyoubi.mp3"
         },
         {
           "id": "t1v_31",
           "type": "vocab",
-          "moji": "せんせい",
-          "romaji": "teacher, doctor",
+          "part": "noun",
+          "vocabulary": "せんせい",
+          "kanji": "先生",
+          "english": "teacher, doctor",
           "url": "t1_sensei.mp3"
         },
         {
           "id": "t1v_32",
           "type": "vocab",
-          "moji": "だいがく",
-          "romaji": "university",
+          "part": "noun",
+          "vocabulary": "だいがく",
+          "kanji": "大学",
+          "english": "university",
           "url": "t1_daigaku.mp3"
         },
         {
           "id": "t1v_33",
           "type": "vocab",
-          "moji": "だれ",
-          "romaji": "who",
+          "part": "interrogative",
+          "vocabulary": "だれ",
+          "kanji": "誰",
+          "english": "who",
           "url": "t1_dare.mp3"
         },
         {
           "id": "t1v_34",
           "type": "vocab",
-          "moji": "たんじょうび",
-          "romaji": "birthday",
+          "part": "noun",
+          "vocabulary": "たんじょうび",
+          "kanji": "誕生日",
+          "english": "birthday",
           "url": "t1_tanjoubi.mp3"
         },
         {
           "id": "t1v_35",
           "type": "vocab",
-          "moji": "ちゅうごく",
-          "romaji": "China",
+          "part": "noun",
+          "vocabulary": "ちゅうごく",
+          "kanji": "中国",
+          "english": "China",
           "url": "t1_chuugoku.mp3"
         },
         {
           "id": "t1v_36",
           "type": "vocab",
-          "moji": "できます",
-          "romaji": "to be able to",
+          "part": "verb",
+          "vocabulary": "できます",
+          "kanji": "",
+          "english": "to be able to",
           "url": "t1_dekimasu.mp3"
         },
         {
           "id": "t1v_37",
           "type": "vocab",
-          "moji": "どこ／どちら",
-          "romaji": "where",
+          "part": "interrogative",
+          "vocabulary": "どこ／どちら",
+          "kanji": "",
+          "english": "where",
           "url": "t1_doko_dochira.mp3"
         },
         {
           "id": "t1v_38",
           "type": "vocab",
-          "moji": "どようび",
-          "romaji": "Saturday",
+          "part": "noun",
+          "vocabulary": "どようび",
+          "kanji": "土曜日",
+          "english": "Saturday",
           "url": "t1_doyoubi.mp3"
         },
         {
           "id": "t1v_39",
           "type": "vocab",
-          "moji": "なに／なん",
-          "romaji": "what",
+          "part": "interrogative",
+          "vocabulary": "なに／なん",
+          "kanji": "何",
+          "english": "what",
           "url": "t1_nani_nan.mp3"
         },
         {
           "id": "t1v_40",
           "type": "vocab",
-          "moji": "なまえ",
-          "romaji": "name",
+          "part": "noun",
+          "vocabulary": "なまえ",
+          "kanji": "名前",
+          "english": "name",
           "url": "t1_namae.mp3"
         },
         {
           "id": "t1v_41",
           "type": "vocab",
-          "moji": "にちようび",
-          "romaji": "Sunday",
+          "part": "noun",
+          "vocabulary": "にちようび",
+          "kanji": "日曜日",
+          "english": "Sunday",
           "url": "t1_nichiyoubi.mp3"
         },
         {
           "id": "t1v_42",
           "type": "vocab",
-          "moji": "はい",
-          "romaji": "Yes",
+          "part": "emotive verb",
+          "vocabulary": "はい",
+          "kanji": "",
+          "english": "Yes",
           "url": "t1_hai.mp3"
         },
         {
           "id": "t1v_43",
           "type": "vocab",
-          "moji": "パソコン",
-          "romaji": "personal computer",
+          "part": "noun",
+          "vocabulary": "パソコン",
+          "kanji": "",
+          "english": "personal computer",
           "url": "t1_pasokon.mp3"
         },
         {
           "id": "t1v_44",
           "type": "vocab",
-          "moji": "フィリピン",
-          "romaji": "Philippines",
+          "part": "noun",
+          "vocabulary": "フィリピン",
+          "kanji": "",
+          "english": "Philippines",
           "url": "t1_firipin.mp3"
         },
         {
           "id": "t1v_45",
           "type": "vocab",
-          "moji": "ベトナム",
-          "romaji": "Vietnam",
+          "part": "noun",
+          "vocabulary": "ベトナム",
+          "kanji": "",
+          "english": "Vietnam",
           "url": "t1_betonamu.mp3"
         },
         {
           "id": "t1v_46",
           "type": "vocab",
-          "moji": "ほん",
-          "romaji": "book",
+          "part": "noun",
+          "vocabulary": "ほん",
+          "kanji": "本",
+          "english": "book",
           "url": "t1_hon.mp3"
         },
         {
           "id": "t1v_47",
           "type": "vocab",
-          "moji": "みなさん",
-          "romaji": "everyone",
+          "part": "noun",
+          "vocabulary": "みなさん",
+          "kanji": "",
+          "english": "everyone",
           "url": "t1_minasan.mp3"
         },
         {
           "id": "t1v_48",
           "type": "vocab",
-          "moji": "もくようび",
-          "romaji": "Thursday",
+          "part": "noun",
+          "vocabulary": "もくようび",
+          "kanji": "木曜日",
+          "english": "Thursday",
           "url": "t1_mokuyoubi.mp3"
         },
         {
           "id": "t1v_49",
           "type": "vocab",
-          "moji": "よろしく",
-          "romaji": "Pleased to meet you/regards",
+          "part": "emotive verb",
+          "vocabulary": "よろしく",
+          "kanji": "",
+          "english": "Pleased to meet you./regards",
           "url": "t1_yoroshiku.mp3"
         },
         {
           "id": "t1v_50",
           "type": "vocab",
-          "moji": "りょうり",
-          "romaji": "cuisine",
+          "part": "noun",
+          "vocabulary": "りょうり",
+          "kanji": "料理",
+          "english": "cuisine",
           "url": "t1_ryouri.mp3"
         },
         {
           "id": "t1v_51",
           "type": "vocab",
-          "moji": "わかります",
-          "romaji": "to be understood",
+          "part": "verb",
+          "vocabulary": "わかります",
+          "kanji": "",
+          "english": "to be understood",
           "url": "t1_wakarimasu.mp3"
         },
         {
           "id": "t1v_52",
           "type": "vocab",
-          "moji": "わたし",
-          "romaji": "I, myself",
+          "part": "noun",
+          "vocabulary": "わたし",
+          "kanji": "私",
+          "english": "I, myself",
           "url": "t1_watashi.mp3"
         }
       ], 
@@ -2771,436 +2872,560 @@ export const learnData =
         {
           "id": "t2v_1",
           "type": "vocab",
-          "moji": "あさ",
-          "romaji": "morning",
-          "url": "あさ.mp3"
+          "part": "noun",
+          "vocabulary": "あさ",
+          "kanji": "朝",
+          "english": "morning",
+          "url": "t2_asa.mp3"
         },
         {
           "id": "t2v_2",
           "type": "vocab",
-          "moji": "あさごはん",
-          "romaji": "breakfast",
-          "url": "あさごはん.mp3"
+          "part": "noun",
+          "vocabulary": "あさごはん",
+          "kanji": "朝ご飯",
+          "english": "breakfast",
+          "url": "t2_asagohan.mp3"
         },
         {
           "id": "t2v_3",
           "type": "vocab",
-          "moji": "あした",
-          "romaji": "tomorrow",
-          "url": "あした.mp3"
+          "part": "noun",
+          "vocabulary": "あした",
+          "kanji": "明日",
+          "english": "tomorrow",
+          "url": "t2_ashita.mp3"
         },
         {
           "id": "t2v_4",
           "type": "vocab",
-          "moji": "いきます",
-          "romaji": "to go",
-          "url": "いきます.mp3"
+          "part": "verb",
+          "vocabulary": "いきます",
+          "kanji": "行きます",
+          "english": "to go",
+          "url": "t2_ikimasu.mp3"
         },
         {
           "id": "t2v_5",
           "type": "vocab",
-          "moji": "いつ",
-          "romaji": "when",
-          "url": "いつ.mp3"
+          "part": "interrogative",
+          "vocabulary": "いつ",
+          "kanji": "",
+          "english": "when",
+          "url": "t2_itsu.mp3"
         },
         {
           "id": "t2v_6",
           "type": "vocab",
-          "moji": "うち",
-          "romaji": "house",
-          "url": "うち.mp3"
+          "part": "noun",
+          "vocabulary": "うち",
+          "kanji": "家",
+          "english": "house",
+          "url": "t2_uchi.mp3"
         },
         {
           "id": "t2v_7",
           "type": "vocab",
-          "moji": "え",
-          "romaji": "picture",
-          "url": "え.mp3"
+          "part": "noun",
+          "vocabulary": "え",
+          "kanji": "絵",
+          "english": "picture",
+          "url": "t2_e.mp3"
         },
         {
           "id": "t2v_8",
           "type": "vocab",
-          "moji": "えいが",
-          "romaji": "movie",
-          "url": "えいが.mp3"
+          "part": "noun",
+          "vocabulary": "えいが",
+          "kanji": "映画",
+          "english": "movie",
+          "url": "t2_eiga.mp3"
         },
         {
           "id": "t2v_9",
           "type": "vocab",
-          "moji": "おきます",
-          "romaji": "to get up",
-          "url": "おきます.mp3"
+          "part": "verb",
+          "vocabulary": "おきます",
+          "kanji": "起きます",
+          "english": "to get up",
+          "url": "t2_okimasu.mp3"
         },
         {
           "id": "t2v_10",
           "type": "vocab",
-          "moji": "おさけ",
-          "romaji": "alcohol, rice wine",
-          "url": "おさけ.mp3"
+          "part": "noun",
+          "vocabulary": "おさけ",
+          "kanji": "お酒",
+          "english": "alcohol, rice wine",
+          "url": "t2_osake.mp3"
         },
         {
           "id": "t2v_11",
           "type": "vocab",
-          "moji": "おんがく",
-          "romaji": "Music",
-          "url": "おんがく.mp3"
+          "part": "noun",
+          "vocabulary": "おんがく",
+          "kanji": "音楽",
+          "english": "Music",
+          "url": "t2_ongaku.mp3"
         },
         {
           "id": "t2v_12",
           "type": "vocab",
-          "moji": "かいます",
-          "romaji": "to buy",
-          "url": "かいます.mp3"
+          "part": "verb",
+          "vocabulary": "かいます",
+          "kanji": "買います",
+          "english": "to buy",
+          "url": "t2_kaimasu.mp3"
         },
         {
           "id": "t2v_13",
           "type": "vocab",
-          "moji": "かえります",
-          "romaji": "to go back",
-          "url": "かえります.mp3"
+          "part": "verb",
+          "vocabulary": "かえります",
+          "kanji": "帰ります",
+          "english": "to go back",
+          "url": "t2_kaerimasu.mp3"
         },
         {
           "id": "t2v_14",
           "type": "vocab",
-          "moji": "かきます",
-          "romaji": "to write",
-          "url": "かきます.mp3"
+          "part": "verb",
+          "vocabulary": "かきます",
+          "kanji": "書きます",
+          "english": "to write",
+          "url": "t2_kakimasu.mp3"
         },
         {
           "id": "t2v_15",
           "type": "vocab",
-          "moji": "カメラ",
-          "romaji": "camera",
-          "url": "カメラ.mp3"
+          "part": "noun",
+          "vocabulary": "カメラ",
+          "kanji": "",
+          "english": "camera",
+          "url": "t2_kamera.mp3"
         },
         {
           "id": "t2v_16",
           "type": "vocab",
-          "moji": "ききます",
-          "romaji": "to hear, to listen to, to ask",
-          "url": "ききます.mp3"
+          "part": "verb",
+          "vocabulary": "ききます",
+          "kanji": "聞きます",
+          "english": "to hear, to listen to, to ask",
+          "url": "t2_kikimasu.mp3"
         },
         {
           "id": "t2v_17",
           "type": "vocab",
-          "moji": "きょう",
-          "romaji": "Today",
-          "url": "きょう.mp3"
+          "part": "noun",
+          "vocabulary": "きょう",
+          "kanji": "今日",
+          "english": "Today",
+          "url": "t2_kyou.mp3"
         },
         {
           "id": "t2v_18",
           "type": "vocab",
-          "moji": "ぎんこう",
-          "romaji": "Bank",
-          "url": "ぎんこう.mp3"
+          "part": "noun",
+          "vocabulary": "ぎんこう",
+          "kanji": "銀行",
+          "english": "Bank",
+          "url": "t2_ginkou.mp3"
         },
         {
           "id": "t2v_19",
           "type": "vocab",
-          "moji": "きます",
-          "romaji": "to come",
-          "url": "きます.mp3"
+          "part": "verb",
+          "vocabulary": "きます",
+          "kanji": "来ます",
+          "english": "to come",
+          "url": "t2_kimasu.mp3"
         },
         {
           "id": "t2v_20",
           "type": "vocab",
-          "moji": "こうえん",
-          "romaji": "Park",
-          "url": "こうえん.mp3"
+          "part": "noun",
+          "vocabulary": "こうえん",
+          "kanji": "公園",
+          "english": "Park",
+          "url": "t2_kouen.mp3"
         },
         {
           "id": "t2v_21",
           "type": "vocab",
-          "moji": "こうちゃ",
-          "romaji": "black tea",
-          "url": "こうちゃ.mp3"
+          "part": "noun",
+          "vocabulary": "こうちゃ",
+          "kanji": "紅茶",
+          "english": "black tea",
+          "url": "t2_koucha.mp3"
         },
         {
           "id": "t2v_22",
           "type": "vocab",
-          "moji": "コーヒー",
-          "romaji": "Coffee",
-          "url": "コーヒー.mp3"
+          "part": "noun",
+          "vocabulary": "コーヒー",
+          "kanji": "",
+          "english": "Coffee",
+          "url": "t2_kohi.mp3"
         },
         {
           "id": "t2v_23",
           "type": "vocab",
-          "moji": "ごご",
-          "romaji": "afternoon",
-          "url": "ごご.mp3"
+          "part": "noun",
+          "vocabulary": "ごご",
+          "kanji": "午後",
+          "english": "afternoon",
+          "url": "t2_gogo.mp3"
         },
         {
           "id": "t2v_24",
           "type": "vocab",
-          "moji": "ごぜん",
-          "romaji": "morning",
-          "url": "ごぜん.mp3"
+          "part": "noun",
+          "vocabulary": "ごぜん",
+          "kanji": "午前",
+          "english": "morning",
+          "url": "t2_gozen.mp3"
         },
         {
           "id": "t2v_25",
           "type": "vocab",
-          "moji": "ごはん",
-          "romaji": "cooked rice, meal",
-          "url": "ごはん.mp3"
+          "part": "noun",
+          "vocabulary": "ごはん",
+          "kanji": "",
+          "english": "cooked rice, meal",
+          "url": "t2_gohan.mp3"
         },
         {
           "id": "t2v_26",
           "type": "vocab",
-          "moji": "サッカー",
-          "romaji": "soccer",
-          "url": "サッカー.mp3"
+          "part": "noun",
+          "vocabulary": "サッカー",
+          "kanji": "",
+          "english": "soccer",
+          "url": "t2_sakka.mp3"
         },
         {
           "id": "t2v_27",
           "type": "vocab",
-          "moji": "じてんしゃ",
-          "romaji": "Bicycle",
-          "url": "じてんしゃ.mp3"
+          "part": "noun",
+          "vocabulary": "じてんしゃ",
+          "kanji": "自転車",
+          "english": "Bicycle",
+          "url": "t2_jitensha.mp3"
         },
         {
           "id": "t2v_28",
           "type": "vocab",
-          "moji": "します",
-          "romaji": "do",
-          "url": "します.mp3"
+          "part": "verb",
+          "vocabulary": "します",
+          "kanji": "",
+          "english": "do",
+          "url": "t2_shimasu.mp3"
         },
         {
           "id": "t2v_29",
           "type": "vocab",
-          "moji": "しゃしん",
-          "romaji": "photograph",
-          "url": "しゃしん.mp3"
+          "part": "noun",
+          "vocabulary": "しゃしん",
+          "kanji": "写真",
+          "english": "photograph",
+          "url": "t2_shashin.mp3"
         },
         {
           "id": "t2v_30",
           "type": "vocab",
-          "moji": "ジュース",
-          "romaji": "juice",
-          "url": "ジュース.mp3"
+          "part": "noun",
+          "vocabulary": "ジュース",
+          "kanji": "",
+          "english": "juice",
+          "url": "t2_jyusu.mp3"
         },
         {
           "id": "t2v_31",
           "type": "vocab",
-          "moji": "しんぶん",
-          "romaji": "newspaper",
-          "url": "しんぶん.mp3"
+          "part": "noun",
+          "vocabulary": "しんぶん",
+          "kanji": "新聞",
+          "english": "newspaper",
+          "url": "t2_shinbun.mp3"
         },
         {
           "id": "t2v_32",
           "type": "vocab",
-          "moji": "すいます",
-          "romaji": "to smoke, to suck",
-          "url": "すいます.mp3"
+          "part": "verb",
+          "vocabulary": "すいます",
+          "kanji": "吸います",
+          "english": "to smoke, to suck",
+          "url": "t2_suimasu.mp3"
         },
         {
           "id": "t2v_33",
           "type": "vocab",
-          "moji": "スーパー",
-          "romaji": "supermarket",
-          "url": "スーパー.mp3"
+          "part": "noun",
+          "vocabulary": "スーパー",
+          "kanji": "",
+          "english": "supermarket",
+          "url": "t2_supa.mp3"
         },
         {
           "id": "t2v_34",
           "type": "vocab",
-          "moji": "します",
-          "romaji": "to do",
-          "url": "します.mp3"
+          "part": "verb",
+          "vocabulary": "します",
+          "kanji": "",
+          "english": "to do",
+          "url": "t2_shimasu.mp3"
         },
         {
           "id": "t2v_35",
           "type": "vocab",
-          "moji": "たばこ",
-          "romaji": "tobacco, cigarettes",
-          "url": "たばこ.mp3"
+          "part": "noun",
+          "vocabulary": "たばこ",
+          "kanji": "",
+          "english": "tobacco, cigarettes",
+          "url": "t2_tabako.mp3"
         },
         {
           "id": "t2v_36",
           "type": "vocab",
-          "moji": "たべます",
-          "romaji": "to eat",
-          "url": "たべます.mp3"
+          "part": "verb",
+          "vocabulary": "たべます",
+          "kanji": "食べます",
+          "english": "to eat",
+          "url": "t2_tabemasu.mp3"
         },
         {
           "id": "t2v_37",
           "type": "vocab",
-          "moji": "ちち",
-          "romaji": "my father",
-          "url": "ちち.mp3"
+          "part": "noun",
+          "vocabulary": "ちち",
+          "kanji": "父",
+          "english": "my father",
+          "url": "t2_chichi.mp3"
         },
         {
           "id": "t2v_38",
           "type": "vocab",
-          "moji": "つくります",
-          "romaji": "to make",
-          "url": "つくります.mp3"
+          "part": "verb",
+          "vocabulary": "つくります",
+          "kanji": "作ります",
+          "english": "to make",
+          "url": "t2_tsukurimasu.mp3"
         },
         {
           "id": "t2v_39",
           "type": "vocab",
-          "moji": "てがみ",
-          "romaji": "letter",
-          "url": "てがみ.mp3"
+          "part": "noun",
+          "vocabulary": "てがみ",
+          "kanji": "手紙",
+          "english": "letter",
+          "url": "t2_tegami.mp3"
         },
         {
           "id": "t2v_40",
           "type": "vocab",
-          "moji": "デパート",
-          "romaji": "department store",
-          "url": "デパート.mp3"
+          "part": "noun",
+          "vocabulary": "デパート",
+          "kanji": "",
+          "english": "department store",
+          "url": "t2_depato.mp3"
         },
         {
           "id": "t2v_41",
           "type": "vocab",
-          "moji": "テレビ",
-          "romaji": "television",
-          "url": "テレビ.mp3"
+          "part": "noun",
+          "vocabulary": "テレビ",
+          "kanji": "",
+          "english": "television",
+          "url": "t2_terebi.mp3"
         },
         {
           "id": "t2v_42",
           "type": "vocab",
-          "moji": "でんしゃ",
-          "romaji": "electric train",
-          "url": "でんしゃ.mp3"
+          "part": "noun",
+          "vocabulary": "でんしゃ",
+          "kanji": "電車",
+          "english": "electric train",
+          "url": "t2_densha.mp3"
         },
         {
           "id": "t2v_43",
           "type": "vocab",
-          "moji": "ともだち",
-          "romaji": "friend",
-          "url": "ともだち.mp3"
+          "part": "noun",
+          "vocabulary": "ともだち",
+          "kanji": "友達",
+          "english": "friend",
+          "url": "t2_tomodachi.mp3"
         },
         {
           "id": "t2v_44",
           "type": "vocab",
-          "moji": "とります",
-          "romaji": "to take a photo or record a film",
-          "url": "とります.mp3"
+          "part": "verb",
+          "vocabulary": "とります",
+          "kanji": "撮ります",
+          "english": "to take a photo or record a film",
+          "url": "t2_torimasu.mp3"
         },
         {
           "id": "t2v_45",
           "type": "vocab",
-          "moji": "ねます",
-          "romaji": "to go to bed, to sleep",
-          "url": "ねます.mp3"
+          "part": "verb",
+          "vocabulary": "ねます",
+          "kanji": "寝ます",
+          "english": "to go to bed, to sleep",
+          "url": "t2_nemasu.mp3"
         },
         {
           "id": "t2v_46",
           "type": "vocab",
-          "moji": "のみます",
-          "romaji": "to drink",
-          "url": "のみます.mp3"
+          "part": "verb",
+          "vocabulary": "のみます",
+          "kanji": "飲みます",
+          "english": "to drink",
+          "url": "t2_nomimasu.mp3"
         },
         {
           "id": "t2v_47",
           "type": "vocab",
-          "moji": "はし",
-          "romaji": "chopsticks",
-          "url": "はし.mp3"
+          "part": "noun",
+          "vocabulary": "はし",
+          "kanji": "箸",
+          "english": "chopsticks",
+          "url": "t2_hashi.mp3"
         },
         {
           "id": "t2v_48",
           "type": "vocab",
-          "moji": "バス",
-          "romaji": "bus",
-          "url": "バス.mp3"
+          "part": "noun",
+          "vocabulary": "バス",
+          "kanji": "",
+          "english": "bus",
+          "url": "t2_basu.mp3"
         },
         {
           "id": "t2v_49",
           "type": "vocab",
-          "moji": "はは",
-          "romaji": "my mother",
-          "url": "はは.mp3"
+          "part": "noun",
+          "vocabulary": "はは",
+          "kanji": "母",
+          "english": "my mother",
+          "url": "t2_haha.mp3"
         },
         {
           "id": "t2v_50",
           "type": "vocab",
-          "moji": "ばん",
-          "romaji": "evening",
-          "url": "ばん.mp3"
+          "part": "noun",
+          "vocabulary": "ばん",
+          "kanji": "晩",
+          "english": "evening",
+          "url": "t2_ban.mp3"
         },
         {
           "id": "t2v_51",
           "type": "vocab",
-          "moji": "パン",
-          "romaji": "bread",
-          "url": "パン.mp3"
+          "part": "noun",
+          "vocabulary": "パン",
+          "kanji": "",
+          "english": "bread",
+          "url": "t2_pan.mp3"
         },
         {
           "id": "t2v_52",
           "type": "vocab",
-          "moji": "ばんごはん",
-          "romaji": "evening meal",
-          "url": "ばんごはん.mp3"
+          "part": "noun",
+          "vocabulary": "ばんごはん",
+          "kanji": "晩ご飯",
+          "english": "evening meal",
+          "url": "t2_bangohan.mp3"
         },
         {
           "id": "t2v_53",
           "type": "vocab",
-          "moji": "ひる",
-          "romaji": "noon, daytime",
-          "url": "ひる.mp3"
+          "part": "noun",
+          "vocabulary": "ひる",
+          "kanji": "昼",
+          "english": "noon, daytime",
+          "url": "t2_hiru.mp3"
         },
         {
           "id": "t2v_54",
           "type": "vocab",
-          "moji": "ひるごはん",
-          "romaji": "midday meal",
-          "url": "ひるごはん.mp3"
+          "part": "noun",
+          "vocabulary": "ひるごはん",
+          "kanji": "昼ご飯",
+          "english": "midday meal",
+          "url": "t2_hirugohan.mp3"
         },
         {
           "id": "t2v_55",
           "type": "vocab",
-          "moji": "ペン",
-          "romaji": "pen",
-          "url": "ペン.mp3"
+          "part": "noun",
+          "vocabulary": "ペン",
+          "kanji": "",
+          "english": "pen",
+          "url": "t2_pen.mp3"
         },
         {
           "id": "t2v_56",
           "type": "vocab",
-          "moji": "べんきょうします",
-          "romaji": "to study",
-          "url": "べんきょうします.mp3"
+          "part": "verb",
+          "vocabulary": "べんきょうします",
+          "kanji": "勉強します",
+          "english": "to study",
+          "url": "t2_benkyoushimasu.mp3"
         },
         {
           "id": "t2v_57",
           "type": "vocab",
-          "moji": "まいにち",
-          "romaji": "every day",
-          "url": "まいにち.mp3"
+          "part": "noun",
+          "vocabulary": "まいにち",
+          "kanji": "毎日",
+          "english": "every day",
+          "url": "t2_mainichi.mp3"
         },
         {
           "id": "t2v_58",
           "type": "vocab",
-          "moji": "みず",
-          "romaji": "water",
-          "url": "みず.mp3"
+          "part": "noun",
+          "vocabulary": "みず",
+          "kanji": "水",
+          "english": "water",
+          "url": "t2_mizu.mp3"
         },
         {
           "id": "t2v_59",
           "type": "vocab",
-          "moji": "みます",
-          "romaji": "to see, to watch",
-          "url": "みます.mp3"
+          "part": "verb",
+          "vocabulary": "みます",
+          "kanji": "見ます",
+          "english": "to see, to watch",
+          "url": "t2_mimasu.mp3"
         },
         {
           "id": "t2v_60",
           "type": "vocab",
-          "moji": "やすみ",
-          "romaji": "rest, holiday",
-          "url": "やすみ.mp3"
+          "part": "noun",
+          "vocabulary": "やすみ",
+          "kanji": "休み",
+          "english": "rest, holiday",
+          "url": "t2_yasumi.mp3"
         },
         {
           "id": "t2v_61",
           "type": "vocab",
-          "moji": "よみます",
-          "romaji": "to read",
-          "url": "よみます.mp3"
+          "part": "verb",
+          "vocabulary": "よみます",
+          "kanji": "読みます",
+          "english": "to read",
+          "url": "t2_yomimasu.mp3"
         },
         {
           "id": "t2v_62",
           "type": "vocab",
-          "moji": "レストラン",
-          "romaji": "restaurant",
-          "url": "レストラン.mp3"
+          "part": "noun",
+          "vocabulary": "レストラン",
+          "kanji": "",
+          "english": "restaurant",
+          "url": "t2_resutoran.mp3"
         }
       ], 
       TOPIC2_TITLE_and_grammar : [
@@ -3426,457 +3651,587 @@ export const learnData =
         {
           "id": "t3v_1",
           "type": "vocab",
-          "moji": "あたらしい",
-          "romaji": "new",
-          "url": "あたらしい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "あたらしい",
+          "kanji": "新しい",
+          "english": "new",
+          "url": "t3_atarashii.mp3"
         },
         {
           "id": "t3v_2",
           "type": "vocab",
-          "moji": "あつい",
-          "romaji": "hot",
-          "url": "あつい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "あつい",
+          "kanji": "暑い",
+          "english": "hot",
+          "url": "t3_atsui.mp3"
         },
         {
           "id": "t3v_3",
           "type": "vocab",
-          "moji": "あつい",
-          "romaji": "hot to the touch",
-          "url": "あつい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "あつい",
+          "kanji": "熱い",
+          "english": "hot to the touch",
+          "url": "t3_atsui.mp3"
         },
         {
           "id": "t3v_4",
           "type": "vocab",
-          "moji": "アパート",
-          "romaji": "apartment",
-          "url": "アパート.mp3"
+          "part": "noun",
+          "vocabulary": "アパート",
+          "kanji": "",
+          "english": "apartment",
+          "url": "t3_apato.mp3"
         },
         {
           "id": "t3v_5",
           "type": "vocab",
-          "moji": "あまり",
-          "romaji": "not very",
-          "url": "あまり.mp3"
+          "part": "adverb",
+          "vocabulary": "あまり",
+          "kanji": "",
+          "english": "not very",
+          "url": "t3_amari.mp3"
         },
         {
           "id": "t3v_6",
           "type": "vocab",
-          "moji": "あります",
-          "romaji": "to be,to have (used for inanimate objects)",
-          "url": "あります.mp3"
+          "part": "verb",
+          "vocabulary": "あります",
+          "kanji": "",
+          "english": "to be,to have (used for inanimate objects)",
+          "url": "t3_arimasu.mp3"
         },
         {
           "id": "t3v_7",
           "type": "vocab",
-          "moji": "いい",
-          "romaji": "good",
-          "url": "いい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "いい",
+          "kanji": "",
+          "english": "good",
+          "url": "t3_ii.mp3"
         },
         {
           "id": "t3v_8",
           "type": "vocab",
-          "moji": "いちばん",
-          "romaji": "best, first",
-          "url": "いちばん.mp3"
+          "part": "adverb",
+          "vocabulary": "いちばん",
+          "kanji": "一番",
+          "english": "best, first",
+          "url": "t3_ichiban.mp3"
         },
         {
           "id": "t3v_9",
           "type": "vocab",
-          "moji": "いぬ",
-          "romaji": "dog",
-          "url": "いぬ.mp3"
+          "part": "noun",
+          "vocabulary": "いぬ",
+          "kanji": "犬",
+          "english": "dog",
+          "url": "t3_inu.mp3"
         },
         {
           "id": "t3v_10",
           "type": "vocab",
-          "moji": "います",
-          "romaji": "to be, to have (used for people and animals)",
-          "url": "います.mp3"
+          "part": "verb",
+          "vocabulary": "います",
+          "kanji": "",
+          "english": "to be, to have (used for people and animals)",
+          "url": "t3_imasu.mp3"
         },
         {
           "id": "t3v_11",
           "type": "vocab",
-          "moji": "うえ",
-          "romaji": "on top of",
-          "url": "うえ.mp3"
+          "part": "noun",
+          "vocabulary": "うえ",
+          "kanji": "上",
+          "english": "on top of",
+          "url": "t3_ue.mp3"
         },
         {
           "id": "t3v_12",
           "type": "vocab",
-          "moji": "うしろ",
-          "romaji": "behind",
-          "url": "うしろ.mp3"
+          "part": "noun",
+          "vocabulary": "うしろ",
+          "kanji": "後ろ",
+          "english": "behind",
+          "url": "t3_ushiro.mp3"
         },
         {
           "id": "t3v_13",
           "type": "vocab",
-          "moji": "えき",
-          "romaji": "station",
-          "url": "えき.mp3"
+          "part": "noun",
+          "vocabulary": "えき",
+          "kanji": "駅",
+          "english": "station",
+          "url": "t3_eki.mp3"
         },
         {
           "id": "t3v_14",
           "type": "vocab",
-          "moji": "おいしい",
-          "romaji": "delicious",
-          "url": "おいしい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "おいしい",
+          "kanji": "",
+          "english": "delicious",
+          "url": "t3_oishii.mp3"
         },
         {
           "id": "t3v_15",
           "type": "vocab",
-          "moji": "おおきい",
-          "romaji": "big",
-          "url": "おおきい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "おおきい",
+          "kanji": "大きい",
+          "english": "big",
+          "url": "t3_ooki.mp3"
         },
         {
           "id": "t3v_16",
           "type": "vocab",
-          "moji": "おそい",
-          "romaji": "late, slow",
-          "url": "おそい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "おそい",
+          "kanji": "遅い",
+          "english": "late, slow",
+          "url": "t3_osoi.mp3"
         },
         {
           "id": "t3v_17",
           "type": "vocab",
-          "moji": "きのう",
-          "romaji": "Yesterday",
-          "url": "きのう.mp3"
+          "part": "noun",
+          "vocabulary": "きのう",
+          "kanji": "昨日",
+          "english": "Yesterday",
+          "url": "t3_kinou.mp3"
         },
         {
           "id": "t3v_18",
           "type": "vocab",
-          "moji": "きょねん",
-          "romaji": "last year",
-          "url": "きょねん.mp3"
+          "part": "noun",
+          "vocabulary": "きょねん",
+          "kanji": "去年",
+          "english": "last year",
+          "url": "t3_kyonen.mp3"
         },
         {
           "id": "t3v_19",
           "type": "vocab",
-          "moji": "きれい",
-          "romaji": "pretty, clean",
-          "url": "きれい.mp3"
+          "part": "na-adjective",
+          "vocabulary": "きれい",
+          "kanji": "",
+          "english": "pretty, clean",
+          "url": "t3_kirei.mp3"
         },
         {
           "id": "t3v_20",
           "type": "vocab",
-          "moji": "さむい",
-          "romaji": "Cold",
-          "url": "さむい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "さむい",
+          "kanji": "寒い",
+          "english": "Cold",
+          "url": "t3_samui.mp3"
         },
         {
           "id": "t3v_21",
           "type": "vocab",
-          "moji": "しずか",
-          "romaji": "Quiet",
-          "url": "しずか.mp3"
+          "part": "na-adjective",
+          "vocabulary": "しずか",
+          "kanji": "静か",
+          "english": "Quiet",
+          "url": "t3_shizuka.mp3"
         },
         {
           "id": "t3v_22",
           "type": "vocab",
-          "moji": "した",
-          "romaji": "Below",
-          "url": "した.mp3"
+          "part": "noun",
+          "vocabulary": "した",
+          "kanji": "下",
+          "english": "Below",
+          "url": "t3_shita.mp3"
         },
         {
           "id": "t3v_23",
           "type": "vocab",
-          "moji": "すこし",
-          "romaji": "Few",
-          "url": "すこし.mp3"
+          "part": "adverb",
+          "vocabulary": "すこし",
+          "kanji": "少し",
+          "english": "Few",
+          "url": "t3_sukoshi.mp3"
         },
         {
           "id": "t3v_24",
           "type": "vocab",
-          "moji": "スポーツ",
-          "romaji": "Sport",
-          "url": "スポーツ.mp3"
+          "part": "noun",
+          "vocabulary": "スポーツ",
+          "kanji": "",
+          "english": "Sport",
+          "url": "t3_supotsu.mp3"
         },
         {
           "id": "t3v_25",
           "type": "vocab",
-          "moji": "そして",
-          "romaji": "And",
-          "url": "そして.mp3"
+          "part": "接続詞",
+          "vocabulary": "そして",
+          "kanji": "",
+          "english": "And",
+          "url": "t3_soshite.mp3"
         },
         {
           "id": "t3v_26",
           "type": "vocab",
-          "moji": "そと",
-          "romaji": "Outside",
-          "url": "そと.mp3"
+          "part": "noun",
+          "vocabulary": "そと",
+          "kanji": "外",
+          "english": "Outside",
+          "url": "t3_soto.mp3"
         },
         {
           "id": "t3v_27",
           "type": "vocab",
-          "moji": "たかい",
-          "romaji": "tall, expensive",
-          "url": "たかい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "たかい",
+          "kanji": "高い",
+          "english": "tall, expensive",
+          "url": "t3_takai.mp3"
         },
         {
           "id": "t3v_28",
           "type": "vocab",
-          "moji": "たくさん",
-          "romaji": "many",
-          "url": "たくさん.mp3"
+          "part": "adverb",
+          "vocabulary": "たくさん",
+          "kanji": "",
+          "english": "many",
+          "url": "t3_takusan.mp3"
         },
         {
           "id": "t3v_29",
           "type": "vocab",
-          "moji": "たべもの",
-          "romaji": "food",
-          "url": "たべもの.mp3"
+          "part": "noun",
+          "vocabulary": "たべもの",
+          "kanji": "食べ物",
+          "english": "food",
+          "url": "t3_tabemono.mp3"
         },
         {
           "id": "t3v_30",
           "type": "vocab",
-          "moji": "ちいさい",
-          "romaji": "little",
-          "url": "ちいさい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "ちいさい",
+          "kanji": "小さい",
+          "english": "little",
+          "url": "t3_chiisai.mp3"
         },
         {
           "id": "t3v_31",
           "type": "vocab",
-          "moji": "ちかく",
-          "romaji": "near",
-          "url": "ちかく.mp3"
+          "part": "noun",
+          "vocabulary": "ちかく",
+          "kanji": "近く",
+          "english": "near",
+          "url": "t3_chikaku.mp3"
         },
         {
           "id": "t3v_32",
           "type": "vocab",
-          "moji": "つめたい",
-          "romaji": "cold to the touch",
-          "url": "つめたい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "つめたい",
+          "kanji": "冷たい",
+          "english": "cold to the touch",
+          "url": "t3_tsumetai.mp3"
         },
         {
           "id": "t3v_33",
           "type": "vocab",
-          "moji": "テーブル",
-          "romaji": "table",
-          "url": "テーブル.mp3"
+          "part": "noun",
+          "vocabulary": "テーブル",
+          "kanji": "",
+          "english": "table",
+          "url": "t3_teiburu.mp3"
         },
         {
           "id": "t3v_34",
           "type": "vocab",
-          "moji": "ドア",
-          "romaji": "Western style door",
-          "url": "ドア.mp3"
+          "part": "noun",
+          "vocabulary": "ドア",
+          "kanji": "",
+          "english": "Western style door",
+          "url": "t3_doa.mp3"
         },
         {
           "id": "t3v_35",
           "type": "vocab",
-          "moji": "トイレ",
-          "romaji": "toilet",
-          "url": "トイレ.mp3"
+          "part": "noun",
+          "vocabulary": "トイレ",
+          "kanji": "",
+          "english": "toilet",
+          "url": "t3_toire.mp3"
         },
         {
           "id": "t3v_36",
           "type": "vocab",
-          "moji": "どう",
-          "romaji": "how",
-          "url": "どう.mp3"
+          "part": "interrogative",
+          "vocabulary": "どう",
+          "kanji": "",
+          "english": "how",
+          "url": "t3_dou.mp3"
         },
         {
           "id": "t3v_37",
           "type": "vocab",
-          "moji": "とけい",
-          "romaji": "watch, clock",
-          "url": "とけい.mp3"
+          "part": "noun",
+          "vocabulary": "とけい",
+          "kanji": "時計",
+          "english": "watch, clock",
+          "url": "t3_tokei.mp3"
         },
         {
           "id": "t3v_38",
           "type": "vocab",
-          "moji": "ところ",
-          "romaji": "place",
-          "url": "ところ.mp3"
+          "part": "noun",
+          "vocabulary": "ところ",
+          "kanji": "所",
+          "english": "place",
+          "url": "t3_tokoro.mp3"
         },
         {
           "id": "t3v_39",
           "type": "vocab",
-          "moji": "としょかん",
-          "romaji": "library",
-          "url": "としょかん.mp3"
+          "part": "noun",
+          "vocabulary": "としょかん",
+          "kanji": "図書館",
+          "english": "library",
+          "url": "t3_toshokan.mp3"
         },
         {
           "id": "t3v_40",
           "type": "vocab",
-          "moji": "とても",
-          "romaji": "very",
-          "url": "とても.mp3"
+          "part": "adverb",
+          "vocabulary": "とても",
+          "kanji": "",
+          "english": "very",
+          "url": "t3_totemo.mp3"
         },
         {
           "id": "t3v_41",
           "type": "vocab",
-          "moji": "となり",
-          "romaji": "next door to",
-          "url": "となり.mp3"
+          "part": "noun",
+          "vocabulary": "となり",
+          "kanji": "隣",
+          "english": "next door to",
+          "url": "t3_tonari.mp3"
         },
         {
           "id": "t3v_42",
           "type": "vocab",
-          "moji": "どんな",
-          "romaji": "What kind of ～",
-          "url": "どんな.mp3"
+          "part": "interrogative",
+          "vocabulary": "どんな",
+          "kanji": "",
+          "english": "What kind of ～",
+          "url": "t3_donna.mp3"
         },
         {
           "id": "t3v_43",
           "type": "vocab",
-          "moji": "なか",
-          "romaji": "middle",
-          "url": "なか.mp3"
+          "part": "noun",
+          "vocabulary": "なか",
+          "kanji": "中",
+          "english": "middle",
+          "url": "t3_naka.mp3"
         },
         {
           "id": "t3v_44",
           "type": "vocab",
-          "moji": "にぎやか",
-          "romaji": "bustling, busy",
-          "url": "にぎやか.mp3"
+          "part": "na-adjective",
+          "vocabulary": "にぎやか",
+          "kanji": "",
+          "english": "bustling, busy",
+          "url": "t3_nigiyaka.mp3"
         },
         {
           "id": "t3v_45",
           "type": "vocab",
-          "moji": "にわ",
-          "romaji": "garden",
-          "url": "にわ.mp3"
+          "part": "noun",
+          "vocabulary": "にわ",
+          "kanji": "庭",
+          "english": "garden",
+          "url": "t3_niwa.mp3"
         },
         {
           "id": "t3v_46",
           "type": "vocab",
-          "moji": "ねこ",
-          "romaji": "cat",
-          "url": "ねこ.mp3"
+          "part": "noun",
+          "vocabulary": "ねこ",
+          "kanji": "猫",
+          "english": "cat",
+          "url": "t3_neko.mp3"
         },
         {
           "id": "t3v_47",
           "type": "vocab",
-          "moji": "のみもの",
-          "romaji": "a drink",
-          "url": "のみもの.mp3"
+          "part": "noun",
+          "vocabulary": "のみもの",
+          "kanji": "飲み物",
+          "english": "a drink",
+          "url": "t3_nomimono.mp3"
         },
         {
           "id": "t3v_48",
           "type": "vocab",
-          "moji": "はやい",
-          "romaji": "early",
-          "url": "はやい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "はやい",
+          "kanji": "早い",
+          "english": "early",
+          "url": "t3_hayai.mp3"
         },
         {
           "id": "t3v_49",
           "type": "vocab",
-          "moji": "ひくい",
-          "romaji": "short, low",
-          "url": "ひくい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "ひくい",
+          "kanji": "低い",
+          "english": "short, low",
+          "url": "t3_hikui.mp3"
         },
         {
           "id": "t3v_50",
           "type": "vocab",
-          "moji": "ひだり",
-          "romaji": "left hand side",
-          "url": "ひだり.mp3"
+          "part": "noun",
+          "vocabulary": "ひだり",
+          "kanji": "左",
+          "english": "left hand side",
+          "url": "t3_hidari.mp3"
         },
         {
           "id": "t3v_51",
           "type": "vocab",
-          "moji": "ふるい",
-          "romaji": "old (not used for people)",
-          "url": "ふるい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "ふるい",
+          "kanji": "古い",
+          "english": "old (not used for people)",
+          "url": "t3_furui.mp3"
         },
         {
           "id": "t3v_52",
           "type": "vocab",
-          "moji": "ベッド",
-          "romaji": "bed",
-          "url": "ベッド.mp3"
+          "part": "noun",
+          "vocabulary": "ベッド",
+          "kanji": "",
+          "english": "bed",
+          "url": "t3_beddo.mp3"
         },
         {
           "id": "t3v_53",
           "type": "vocab",
-          "moji": "へや",
-          "romaji": "room",
-          "url": "へや.mp3"
+          "part": "noun",
+          "vocabulary": "へや",
+          "kanji": "部屋",
+          "english": "room",
+          "url": "t3_heya.mp3"
         },
         {
           "id": "t3v_54",
           "type": "vocab",
-          "moji": "べんり",
-          "romaji": "useful, convenient",
-          "url": "べんり.mp3"
+          "part": "na-adjective",
+          "vocabulary": "べんり",
+          "kanji": "便利",
+          "english": "useful, convenient",
+          "url": "t3_benri.mp3"
         },
         {
           "id": "t3v_55",
           "type": "vocab",
-          "moji": "まえ",
-          "romaji": "before, front",
-          "url": "まえ.mp3"
+          "part": "noun",
+          "vocabulary": "まえ",
+          "kanji": "前",
+          "english": "before, front",
+          "url": "t3_mae.mp3"
         },
         {
           "id": "t3v_56",
           "type": "vocab",
-          "moji": "まち",
-          "romaji": "town, city",
-          "url": "まち.mp3"
+          "part": "noun",
+          "vocabulary": "まち",
+          "kanji": "町",
+          "english": "town, city",
+          "url": "t3_machi.mp3"
         },
         {
           "id": "t3v_57",
           "type": "vocab",
-          "moji": "まど",
-          "romaji": "window",
-          "url": "まど.mp3"
+          "part": "noun",
+          "vocabulary": "まど",
+          "kanji": "窓",
+          "english": "window",
+          "url": "t3_mado.mp3"
         },
         {
           "id": "t3v_58",
           "type": "vocab",
-          "moji": "みぎ",
-          "romaji": "right side",
-          "url": "みぎ.mp3"
+          "part": "noun",
+          "vocabulary": "みぎ",
+          "kanji": "右",
+          "english": "right side",
+          "url": "t3_migi.mp3"
         },
         {
           "id": "t3v_59",
           "type": "vocab",
-          "moji": "みせ",
-          "romaji": "shop",
-          "url": "みせ.mp3"
+          "part": "noun",
+          "vocabulary": "みせ",
+          "kanji": "店",
+          "english": "shop",
+          "url": "t3_mise.mp3"
         },
         {
           "id": "t3v_60",
           "type": "vocab",
-          "moji": "むずかしい",
-          "romaji": "difficult",
-          "url": "むずかしい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "むずかしい",
+          "kanji": "難しい",
+          "english": "difficult",
+          "url": "t3_muzukashii.mp3"
         },
         {
           "id": "t3v_61",
           "type": "vocab",
-          "moji": "やすい",
-          "romaji": "cheap",
-          "url": "やすい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "やすい",
+          "kanji": "安い",
+          "english": "cheap",
+          "url": "t3_yasui.mp3"
         },
         {
           "id": "t3v_62",
           "type": "vocab",
-          "moji": "ゆうびんきょく",
-          "romaji": "post office",
-          "url": "ゆうびんきょく.mp3"
+          "part": "noun",
+          "vocabulary": "ゆうびんきょく",
+          "kanji": "郵便局",
+          "english": "post office",
+          "url": "t3_yuubinkyoku.mp3"
         },
         {
           "id": "t3v_63",
           "type": "vocab",
-          "moji": "ゆうめい",
-          "romaji": "famous",
-          "url": "ゆうめい.mp3"
+          "part": "na-adjective",
+          "vocabulary": "ゆうめい",
+          "kanji": "有名",
+          "english": "famous",
+          "url": "t3_yuumei.mp3"
         },
         {
           "id": "t3v_64",
           "type": "vocab",
-          "moji": "れいぞうこ",
-          "romaji": "refrigerator",
-          "url": "れいぞうこ.mp3"
+          "part": "noun",
+          "vocabulary": "れいぞうこ",
+          "kanji": "冷蔵庫",
+          "english": "refrigerator",
+          "url": "t3_reizouko.mp3"
         },
         {
           "id": "t3v_65",
           "type": "vocab",
-          "moji": "わるい",
-          "romaji": "bad",
-          "url": "わるい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "わるい",
+          "kanji": "悪い",
+          "english": "bad",
+          "url": "t3_warui.mp3"
         }
       ], 
       TOPIC3_TITLE_and_grammar : [
@@ -4078,415 +4433,533 @@ export const learnData =
         {
           "id": "t4v_1",
           "type": "vocab",
-          "moji": "あいます",
-          "romaji": "to meet",
-          "url": "あいます.mp3"
+          "part": "verb",
+          "vocabulary": "あいます",
+          "kanji": "会います",
+          "english": "to meet",
+          "url": "t4_aimasu.mp3"
         },
         {
           "id": "t4v_2",
           "type": "vocab",
-          "moji": "あそびます",
-          "romaji": "play",
-          "url": "あそびます.mp3"
+          "part": "noun",
+          "vocabulary": "あそびます",
+          "kanji": "遊びます",
+          "english": "play",
+          "url": "t4_asobimasu.mp3"
         },
         {
           "id": "t4v_3",
           "type": "vocab",
-          "moji": "あたたかい",
-          "romaji": "warm",
-          "url": "あたたかい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "あたたかい",
+          "kanji": "",
+          "english": "warm",
+          "url": "t4_atatakai.mp3"
         },
         {
           "id": "t4v_4",
           "type": "vocab",
-          "moji": "いたい",
-          "romaji": "painful",
-          "url": "いたい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "いたい",
+          "kanji": "痛い",
+          "english": "painful",
+          "url": "t4_itai.mp3"
         },
         {
           "id": "t4v_5",
           "type": "vocab",
-          "moji": "いっしょ",
-          "romaji": "together",
-          "url": "いっしょ.mp3"
+          "part": "adverb",
+          "vocabulary": "いっしょ",
+          "kanji": "一緒",
+          "english": "together",
+          "url": "t4_issho.mp3"
         },
         {
           "id": "t4v_6",
           "type": "vocab",
-          "moji": "いつも",
-          "romaji": "always",
-          "url": "いつも.mp3"
+          "part": "adverb",
+          "vocabulary": "いつも",
+          "kanji": "",
+          "english": "always",
+          "url": "t4_itsumo.mp3"
         },
         {
           "id": "t4v_7",
           "type": "vocab",
-          "moji": "うみ",
-          "romaji": "sea",
-          "url": "うみ.mp3"
+          "part": "noun",
+          "vocabulary": "うみ",
+          "kanji": "海",
+          "english": "sea",
+          "url": "t4_umi.mp3"
         },
         {
           "id": "t4v_8",
           "type": "vocab",
-          "moji": "おかね",
-          "romaji": "money",
-          "url": "おかね.mp3"
+          "part": "noun",
+          "vocabulary": "おかね",
+          "kanji": "お金",
+          "english": "money",
+          "url": "t4_okane.mp3"
         },
         {
           "id": "t4v_9",
           "type": "vocab",
-          "moji": "おなか",
-          "romaji": "stomach",
-          "url": "おなか.mp3"
+          "part": "noun",
+          "vocabulary": "おなか",
+          "kanji": "",
+          "english": "stomach",
+          "url": "t4_onaka.mp3"
         },
         {
           "id": "t4v_10",
           "type": "vocab",
-          "moji": "かいもの",
-          "romaji": "Shopping",
-          "url": "かいもの.mp3"
+          "part": "noun",
+          "vocabulary": "かいもの",
+          "kanji": "買い物",
+          "english": "Shopping",
+          "url": "t4_kaimono.mp3"
         },
         {
           "id": "t4v_11",
           "type": "vocab",
-          "moji": "かかります",
-          "romaji": "to take time or money",
-          "url": "かかります.mp3"
+          "part": "verb",
+          "vocabulary": "かかります",
+          "kanji": "",
+          "english": "to take time or money",
+          "url": "t4_kakarimasu.mp3"
         },
         {
           "id": "t4v_12",
           "type": "vocab",
-          "moji": "～かげつ",
-          "romaji": "~month(s)",
-          "url": "～かげつ.mp3"
+          "part": "noun",
+          "vocabulary": "～かげつ",
+          "kanji": "～か月",
+          "english": "~month(s)",
+          "url": "t4_kagetsu.mp3"
         },
         {
           "id": "t4v_13",
           "type": "vocab",
-          "moji": "かけます",
-          "romaji": "to call by phone",
-          "url": "かけます.mp3"
+          "part": "verb",
+          "vocabulary": "かけます",
+          "kanji": "",
+          "english": "to call by phone",
+          "url": "t4_kakemasu.mp3"
         },
         {
           "id": "t4v_14",
           "type": "vocab",
-          "moji": "かります",
-          "romaji": "to borrow",
-          "url": "かります.mp3"
+          "part": "verb",
+          "vocabulary": "かります",
+          "kanji": "借ります",
+          "english": "to borrow",
+          "url": "t4_karimasu.mp3"
         },
         {
           "id": "t4v_15",
           "type": "vocab",
-          "moji": "きっさてん",
-          "romaji": "coffee lounge",
-          "url": "きっさてん.mp3"
+          "part": "noun",
+          "vocabulary": "きっさてん",
+          "kanji": "喫茶店",
+          "english": "coffee lounge",
+          "url": "t4_kissaten.mp3"
         },
         {
           "id": "t4v_16",
           "type": "vocab",
-          "moji": "きっぷ",
-          "romaji": "Ticket",
-          "url": "きっぷ.mp3"
+          "part": "noun",
+          "vocabulary": "きっぷ",
+          "kanji": "切符",
+          "english": "Ticket",
+          "url": "t4_kippu.mp3"
         },
         {
           "id": "t4v_17",
           "type": "vocab",
-          "moji": "きます",
-          "romaji": "to put on from the shoulders down",
-          "url": "きます.mp3"
+          "part": "verb",
+          "vocabulary": "きます",
+          "kanji": "着ます",
+          "english": "to put on from the shoulders down",
+          "url": "t4_kimasu.mp3"
         },
         {
           "id": "t4v_18",
           "type": "vocab",
-          "moji": "くもり",
-          "romaji": "cloudy weather",
-          "url": "くもり.mp3"
+          "part": "noun",
+          "vocabulary": "くもり",
+          "kanji": "曇り",
+          "english": "cloudy weather",
+          "url": "t4_kumori.mp3"
         },
         {
           "id": "t4v_19",
           "type": "vocab",
-          "moji": "げんき",
-          "romaji": "health, vitality",
-          "url": "げんき.mp3"
+          "part": "na-adjective",
+          "vocabulary": "げんき",
+          "kanji": "元気",
+          "english": "health, vitality",
+          "url": "t4_genki.mp3"
         },
         {
           "id": "t4v_20",
           "type": "vocab",
-          "moji": "ことし",
-          "romaji": "this year",
-          "url": "ことし.mp3"
+          "part": "noun",
+          "vocabulary": "ことし",
+          "kanji": "今年",
+          "english": "this year",
+          "url": "t4_kotoshi.mp3"
         },
         {
           "id": "t4v_21",
           "type": "vocab",
-          "moji": "こんげつ",
-          "romaji": "this month",
-          "url": "こんげつ.mp3"
+          "part": "noun",
+          "vocabulary": "こんげつ",
+          "kanji": "今月",
+          "english": "this month",
+          "url": "t4_kongetsu.mp3"
         },
         {
           "id": "t4v_22",
           "type": "vocab",
-          "moji": "こんしゅう",
-          "romaji": "this week",
-          "url": "こんしゅう.mp3"
+          "part": "noun",
+          "vocabulary": "こんしゅう",
+          "kanji": "今週",
+          "english": "this week",
+          "url": "t4_konshuu.mp3"
         },
         {
           "id": "t4v_23",
           "type": "vocab",
-          "moji": "こんばん",
-          "romaji": "this evening",
-          "url": "こんばん.mp3"
+          "part": "noun",
+          "vocabulary": "こんばん",
+          "kanji": "今晩",
+          "english": "this evening",
+          "url": "t4_konban.mp3"
         },
         {
           "id": "t4v_24",
           "type": "vocab",
-          "moji": "さんぽします",
-          "romaji": "to stroll",
-          "url": "さんぽします.mp3"
+          "part": "verb",
+          "vocabulary": "さんぽします",
+          "kanji": "散歩します",
+          "english": "to stroll",
+          "url": "t4_sanposhimasu.mp3"
         },
         {
           "id": "t4v_25",
           "type": "vocab",
-          "moji": "～しゅうかん",
-          "romaji": "~week(s)",
-          "url": "～しゅうかん.mp3"
+          "part": "noun",
+          "vocabulary": "～しゅうかん",
+          "kanji": "～週間",
+          "english": "~week(s)",
+          "url": "t4_shuukan.mp3"
         },
         {
           "id": "t4v_26",
           "type": "vocab",
-          "moji": "すずしい",
-          "romaji": "Refreshing",
-          "url": "すずしい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "すずしい",
+          "kanji": "涼しい",
+          "english": "Refreshing",
+          "url": "t4_suzushii.mp3"
         },
         {
           "id": "t4v_27",
           "type": "vocab",
-          "moji": "せんげつ",
-          "romaji": "last month",
-          "url": "せんげつ.mp3"
+          "part": "noun",
+          "vocabulary": "せんげつ",
+          "kanji": "先月",
+          "english": "last month",
+          "url": "t4_sengetsu.mp3"
         },
         {
           "id": "t4v_28",
           "type": "vocab",
-          "moji": "せんしゅう",
-          "romaji": "last week",
-          "url": "せんしゅう.mp3"
+          "part": "noun",
+          "vocabulary": "せんしゅう",
+          "kanji": "先週",
+          "english": "last week",
+          "url": "t4_senshuu.mp3"
         },
         {
           "id": "t4v_29",
           "type": "vocab",
-          "moji": "たいへん",
-          "romaji": "hard",
-          "url": "たいへん.mp3"
+          "part": "na-adjective",
+          "vocabulary": "たいへん",
+          "kanji": "大変",
+          "english": "hard",
+          "url": "t4_taihen.mp3"
         },
         {
           "id": "t4v_30",
           "type": "vocab",
-          "moji": "たのしい",
-          "romaji": "enjoyable",
-          "url": "たのしい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "たのしい",
+          "kanji": "楽しい",
+          "english": "enjoyable",
+          "url": "t4_tanoshii.mp3"
         },
         {
           "id": "t4v_31",
           "type": "vocab",
-          "moji": "ちず",
-          "romaji": "map",
-          "url": "ちず.mp3"
+          "part": "noun",
+          "vocabulary": "ちず",
+          "kanji": "地図",
+          "english": "map",
+          "url": "t4_chizu.mp3"
         },
         {
           "id": "t4v_32",
           "type": "vocab",
-          "moji": "つかいます",
-          "romaji": "to use",
-          "url": "つかいます.mp3"
+          "part": "verb",
+          "vocabulary": "つかいます",
+          "kanji": "使います",
+          "english": "to use",
+          "url": "t4_tsukaimasu.mp3"
         },
         {
           "id": "t4v_33",
           "type": "vocab",
-          "moji": "てんき",
-          "romaji": "weather",
-          "url": "てんき.mp3"
+          "part": "noun",
+          "vocabulary": "てんき",
+          "kanji": "天気",
+          "english": "weather",
+          "url": "t4_tenki.mp3"
         },
         {
           "id": "t4v_34",
           "type": "vocab",
-          "moji": "どうやって",
-          "romaji": "in what way",
-          "url": "どうやって.mp3"
+          "part": "interrogative",
+          "vocabulary": "どうやって",
+          "kanji": "",
+          "english": "in what way",
+          "url": "t4_douyatte.mp3"
         },
         {
           "id": "t4v_35",
           "type": "vocab",
-          "moji": "どうして",
-          "romaji": "why",
-          "url": "どうして.mp3"
+          "part": "interrogative",
+          "vocabulary": "どうして",
+          "kanji": "",
+          "english": "why",
+          "url": "t4_doushite.mp3"
         },
         {
           "id": "t4v_36",
           "type": "vocab",
-          "moji": "ときどき",
-          "romaji": "sometimes",
-          "url": "ときどき.mp3"
+          "part": "adverb",
+          "vocabulary": "ときどき",
+          "kanji": "時々",
+          "english": "sometimes",
+          "url": "t4_tokidoki.mp3"
         },
         {
           "id": "t4v_37",
           "type": "vocab",
-          "moji": "どのぐらい",
-          "romaji": "how long",
-          "url": "どのぐらい.mp3"
+          "part": "interrogative",
+          "vocabulary": "どのぐらい",
+          "kanji": "",
+          "english": "how long",
+          "url": "t4_donogurai.mp3"
         },
         {
           "id": "t4v_38",
           "type": "vocab",
-          "moji": "パーティー",
-          "romaji": "party",
-          "url": "パーティー.mp3"
+          "part": "noun",
+          "vocabulary": "パーティー",
+          "kanji": "",
+          "english": "party",
+          "url": "t4_pati.mp3"
         },
         {
           "id": "t4v_39",
           "type": "vocab",
-          "moji": "はたらきます",
-          "romaji": "to work",
-          "url": "はたらきます.mp3"
+          "part": "verb",
+          "vocabulary": "はたらきます",
+          "kanji": "働きます",
+          "english": "to work",
+          "url": "t4_hatarakimasu.mp3"
         },
         {
           "id": "t4v_40",
           "type": "vocab",
-          "moji": "はなします",
-          "romaji": "to speak",
-          "url": "はなします.mp3"
+          "part": "verb",
+          "vocabulary": "はなします",
+          "kanji": "話します",
+          "english": "to speak",
+          "url": "t4_hanashimasu.mp3"
         },
         {
           "id": "t4v_41",
           "type": "vocab",
-          "moji": "ビール",
-          "romaji": "beer",
-          "url": "ビール.mp3"
+          "part": "noun",
+          "vocabulary": "ビール",
+          "kanji": "",
+          "english": "beer",
+          "url": "t4_biru.mp3"
         },
         {
           "id": "t4v_42",
           "type": "vocab",
-          "moji": "ひこうき",
-          "romaji": "airplane",
-          "url": "ひこうき.mp3"
+          "part": "noun",
+          "vocabulary": "ひこうき",
+          "kanji": "飛行機",
+          "english": "airplane",
+          "url": "t4_hikouki.mp3"
         },
         {
           "id": "t4v_43",
           "type": "vocab",
-          "moji": "ひま",
-          "romaji": "free time",
-          "url": "ひま.mp3"
+          "part": "na-adjective",
+          "vocabulary": "ひま",
+          "kanji": "暇",
+          "english": "free time",
+          "url": "t4_hima.mp3"
         },
         {
           "id": "t4v_44",
           "type": "vocab",
-          "moji": "プール",
-          "romaji": "swimming pool",
-          "url": "プール.mp3"
+          "part": "noun",
+          "vocabulary": "プール",
+          "kanji": "",
+          "english": "swimming pool",
+          "url": "t4_puuru.mp3"
         },
         {
           "id": "t4v_45",
           "type": "vocab",
-          "moji": "ふゆ",
-          "romaji": "winter",
-          "url": "ふゆ.mp3"
+          "part": "noun",
+          "vocabulary": "ふゆ",
+          "kanji": "冬",
+          "english": "winter",
+          "url": "t4_fuyu.mp3"
         },
         {
           "id": "t4v_46",
           "type": "vocab",
-          "moji": "ホテル",
-          "romaji": "hotel",
-          "url": "ホテル.mp3"
+          "part": "noun",
+          "vocabulary": "ホテル",
+          "kanji": "",
+          "english": "hotel",
+          "url": "t4_hoteru.mp3"
         },
         {
           "id": "t4v_47",
           "type": "vocab",
-          "moji": "まいあさ",
-          "romaji": "every morning",
-          "url": "まいあさ.mp3"
+          "part": "noun",
+          "vocabulary": "まいあさ",
+          "kanji": "毎朝",
+          "english": "every morning",
+          "url": "t4_maiasa.mp3"
         },
         {
           "id": "t4v_48",
           "type": "vocab",
-          "moji": "まいしゅう",
-          "romaji": "every week",
-          "url": "まいしゅう.mp3"
+          "part": "noun",
+          "vocabulary": "まいしゅう",
+          "kanji": "毎週",
+          "english": "every week",
+          "url": "t4_maishuu.mp3"
         },
         {
           "id": "t4v_49",
           "type": "vocab",
-          "moji": "まいつき",
-          "romaji": "every month",
-          "url": "まいつき.mp3"
+          "part": "noun",
+          "vocabulary": "まいつき",
+          "kanji": "毎月",
+          "english": "every month",
+          "url": "t4_maitsuki.mp3"
         },
         {
           "id": "t4v_50",
           "type": "vocab",
-          "moji": "まいとし",
-          "romaji": "every year",
-          "url": "まいとし.mp3"
+          "part": "noun",
+          "vocabulary": "まいとし",
+          "kanji": "毎年",
+          "english": "every year",
+          "url": "t4_maitoshi.mp3"
         },
         {
           "id": "t4v_51",
           "type": "vocab",
-          "moji": "まいばん",
-          "romaji": "every night",
-          "url": "まいばん.mp3"
+          "part": "noun",
+          "vocabulary": "まいばん",
+          "kanji": "毎晩",
+          "english": "every night",
+          "url": "t4_maiban.mp3"
         },
         {
           "id": "t4v_52",
           "type": "vocab",
-          "moji": "みんな",
-          "romaji": "everyone",
-          "url": "みんな.mp3"
+          "part": "noun",
+          "vocabulary": "みんな",
+          "kanji": "",
+          "english": "everyone",
+          "url": "t4_minna.mp3"
         },
         {
           "id": "t4v_53",
           "type": "vocab",
-          "moji": "やさい",
-          "romaji": "vegetable",
-          "url": "やさい.mp3"
+          "part": "noun",
+          "vocabulary": "やさい",
+          "kanji": "野菜",
+          "english": "vegetable",
+          "url": "t4_yasai.mp3"
         },
         {
           "id": "t4v_54",
           "type": "vocab",
-          "moji": "ゆき",
-          "romaji": "snow",
-          "url": "ゆき.mp3"
+          "part": "noun",
+          "vocabulary": "ゆき",
+          "kanji": "雪",
+          "english": "snow",
+          "url": "t4_yuki.mp3"
         },
         {
           "id": "t4v_55",
           "type": "vocab",
-          "moji": "よく",
-          "romaji": "often, well",
-          "url": "よく.mp3"
+          "part": "adverb",
+          "vocabulary": "よく",
+          "kanji": "",
+          "english": "often, well",
+          "url": "t4_yoku.mp3"
         },
         {
           "id": "t4v_56",
           "type": "vocab",
-          "moji": "らいげつ",
-          "romaji": "next month",
-          "url": "らいげつ.mp3"
+          "part": "noun",
+          "vocabulary": "らいげつ",
+          "kanji": "来月",
+          "english": "next month",
+          "url": "t4_raigetsu.mp3"
         },
         {
           "id": "t4v_57",
           "type": "vocab",
-          "moji": "らいしゅう",
-          "romaji": "next week",
-          "url": "らいしゅう.mp3"
+          "part": "noun",
+          "vocabulary": "らいしゅう",
+          "kanji": "来週",
+          "english": "next week",
+          "url": "t4_raishuu.mp3"
         },
         {
           "id": "t4v_58",
           "type": "vocab",
-          "moji": "らいねん",
-          "romaji": "next year",
-          "url": "らいねん.mp3"
+          "part": "noun",
+          "vocabulary": "らいねん",
+          "kanji": "来年",
+          "english": "next year",
+          "url": "t4_rainen.mp3"
         },
         {
           "id": "t4v_59",
           "type": "vocab",
-          "moji": "りょこう",
-          "romaji": "travel",
-          "url": "りょこう.mp3"
+          "part": "noun",
+          "vocabulary": "りょこう",
+          "kanji": "旅行",
+          "english": "travel",
+          "url": "t4_ryokou.mp3"
         }
       ], 
       TOPIC4_TITLE_and_grammar : [
@@ -4680,485 +5153,623 @@ export const learnData =
         {
           "id": "t5v_1",
           "type": "vocab",
-          "moji": "あめ",
-          "romaji": "rain",
-          "url": "あめ.mp3"
+          "part": "noun",
+          "vocabulary": "あめ",
+          "kanji": "雨",
+          "english": "rain",
+          "url": "t5_ame.mp3"
         },
         {
           "id": "t5v_2",
           "type": "vocab",
-          "moji": "あらいます",
-          "romaji": "to wash",
-          "url": "あらいます.mp3"
+          "part": "verb",
+          "vocabulary": "あらいます",
+          "kanji": "洗います",
+          "english": "to wash",
+          "url": "t5_araimasu.mp3"
         },
         {
           "id": "t5v_3",
           "type": "vocab",
-          "moji": "いす",
-          "romaji": "chair",
-          "url": "いす.mp3"
+          "part": "noun",
+          "vocabulary": "いす",
+          "kanji": "椅子",
+          "english": "chair",
+          "url": "t5_isu.mp3"
         },
         {
           "id": "t5v_4",
           "type": "vocab",
-          "moji": "いま",
-          "romaji": "now",
-          "url": "いま.mp3"
+          "part": "noun",
+          "vocabulary": "いま",
+          "kanji": "今",
+          "english": "now",
+          "url": "t5_ima.mp3"
         },
         {
           "id": "t5v_5",
           "type": "vocab",
-          "moji": "いれます",
-          "romaji": "to put in",
-          "url": "いれます.mp3"
+          "part": "verb",
+          "vocabulary": "いれます",
+          "kanji": "入れます",
+          "english": "to put in",
+          "url": "t5_iremasu.mp3"
         },
         {
           "id": "t5v_6",
           "type": "vocab",
-          "moji": "いろいろ",
-          "romaji": "various",
-          "url": "いろいろ.mp3"
+          "part": "na-adjective",
+          "vocabulary": "いろいろ",
+          "kanji": "",
+          "english": "various",
+          "url": "t5_iroiro.mp3"
         },
         {
           "id": "t5v_7",
           "type": "vocab",
-          "moji": "おきます",
-          "romaji": "to put",
-          "url": "おきます.mp3"
+          "part": "verb",
+          "vocabulary": "おきます",
+          "kanji": "置きます",
+          "english": "to put",
+          "url": "t5_okimasu.mp3"
         },
         {
           "id": "t5v_8",
           "type": "vocab",
-          "moji": "おさら",
-          "romaji": "plate, dish",
-          "url": "おさら.mp3"
+          "part": "noun",
+          "vocabulary": "おさら",
+          "kanji": "お皿",
+          "english": "plate, dish",
+          "url": "t5_osara.mp3"
         },
         {
           "id": "t5v_9",
           "type": "vocab",
-          "moji": "おしえます",
-          "romaji": "to teach, to tell",
-          "url": "おしえます.mp3"
+          "part": "verb",
+          "vocabulary": "おしえます",
+          "kanji": "教えます",
+          "english": "to teach, to tell",
+          "url": "t5_oshiemasu.mp3"
         },
         {
           "id": "t5v_10",
           "type": "vocab",
-          "moji": "おります",
-          "romaji": "to get off, to descend",
-          "url": "おります.mp3"
+          "part": "verb",
+          "vocabulary": "おります",
+          "kanji": "降ります",
+          "english": "to get off, to descend",
+          "url": "t5_orimasu.mp3"
         },
         {
           "id": "t5v_11",
           "type": "vocab",
-          "moji": "かさ",
-          "romaji": "Umbrella",
-          "url": "かさ.mp3"
+          "part": "noun",
+          "vocabulary": "かさ",
+          "kanji": "傘",
+          "english": "Umbrella",
+          "url": "t5_kasa.mp3"
         },
         {
           "id": "t5v_12",
           "type": "vocab",
-          "moji": "カップ",
-          "romaji": "Cup",
-          "url": "カップ.mp3"
+          "part": "noun",
+          "vocabulary": "カップ",
+          "kanji": "",
+          "english": "Cup",
+          "url": "t5_kappu.mp3"
         },
         {
           "id": "t5v_13",
           "type": "vocab",
-          "moji": "かみ",
-          "romaji": "paper",
-          "url": "かみ.mp3"
+          "part": "noun",
+          "vocabulary": "かみ",
+          "kanji": "紙",
+          "english": "paper",
+          "url": "t5_kami.mp3"
         },
         {
           "id": "t5v_14",
           "type": "vocab",
-          "moji": "カレンダー",
-          "romaji": "calendar",
-          "url": "カレンダー.mp3"
+          "part": "noun",
+          "vocabulary": "カレンダー",
+          "kanji": "",
+          "english": "calendar",
+          "url": "t5_karenda.mp3"
         },
         {
           "id": "t5v_15",
           "type": "vocab",
-          "moji": "ぎゅうにく",
-          "romaji": "Beef",
-          "url": "ぎゅうにく.mp3"
+          "part": "noun",
+          "vocabulary": "ぎゅうにく",
+          "kanji": "牛肉",
+          "english": "Beef",
+          "url": "t5_gyuuniku.mp3"
         },
         {
           "id": "t5v_16",
           "type": "vocab",
-          "moji": "きらい",
-          "romaji": "Hate",
-          "url": "きらい.mp3"
+          "part": "na-adjective",
+          "vocabulary": "きらい",
+          "kanji": "嫌い",
+          "english": "Hate",
+          "url": "t5_kirai.mp3"
         },
         {
           "id": "t5v_17",
           "type": "vocab",
-          "moji": "きります",
-          "romaji": "to cut",
-          "url": "きります.mp3"
+          "part": "verb",
+          "vocabulary": "きります",
+          "kanji": "切ります",
+          "english": "to cut",
+          "url": "t5_kirimasu.mp3"
         },
         {
           "id": "t5v_18",
           "type": "vocab",
-          "moji": "くだもの",
-          "romaji": "Fruit",
-          "url": "くだもの.mp3"
+          "part": "noun",
+          "vocabulary": "くだもの",
+          "kanji": "果物",
+          "english": "Fruit",
+          "url": "t5_kudamono.mp3"
         },
         {
           "id": "t5v_19",
           "type": "vocab",
-          "moji": "くつ",
-          "romaji": "Shoes",
-          "url": "くつ.mp3"
+          "part": "noun",
+          "vocabulary": "くつ",
+          "kanji": "靴",
+          "english": "Shoes",
+          "url": "t5_kutsu.mp3"
         },
         {
           "id": "t5v_20",
           "type": "vocab",
-          "moji": "くつした",
-          "romaji": "Socks",
-          "url": "くつした.mp3"
+          "part": "noun",
+          "vocabulary": "くつした",
+          "kanji": "靴下",
+          "english": "Socks",
+          "url": "t5_kutsushita.mp3"
         },
         {
           "id": "t5v_21",
           "type": "vocab",
-          "moji": "けさ",
-          "romaji": "this morning",
-          "url": "けさ.mp3"
+          "part": "noun",
+          "vocabulary": "けさ",
+          "kanji": "今朝",
+          "english": "this morning",
+          "url": "t5_kesa.mp3"
         },
         {
           "id": "t5v_22",
           "type": "vocab",
-          "moji": "コート",
-          "romaji": "coat, tennis court",
-          "url": "コート.mp3"
+          "part": "noun",
+          "vocabulary": "コート",
+          "kanji": "",
+          "english": "coat, tennis court",
+          "url": "t5_kouto.mp3"
         },
         {
           "id": "t5v_23",
           "type": "vocab",
-          "moji": "コップ",
-          "romaji": "a glass",
-          "url": "コップ.mp3"
+          "part": "noun",
+          "vocabulary": "コップ",
+          "kanji": "",
+          "english": "a glass",
+          "url": "t5_koppu.mp3"
         },
         {
           "id": "t5v_24",
           "type": "vocab",
-          "moji": "コピーします",
-          "romaji": "to copy",
-          "url": "コピーします.mp3"
+          "part": "verb",
+          "vocabulary": "コピーします",
+          "kanji": "",
+          "english": "to copy",
+          "url": "t5_kopishimasu.mp3"
         },
         {
           "id": "t5v_25",
           "type": "vocab",
-          "moji": "さかな",
-          "romaji": "Fish",
-          "url": "さかな.mp3"
+          "part": "noun",
+          "vocabulary": "さかな",
+          "kanji": "魚",
+          "english": "Fish",
+          "url": "t5_sakana.mp3"
         },
         {
           "id": "t5v_26",
           "type": "vocab",
-          "moji": "さします",
-          "romaji": "to stretch out hands, to raise an umbrella",
-          "url": "さします.mp3"
+          "part": "verb",
+          "vocabulary": "さします",
+          "kanji": "",
+          "english": "to stretch out hands, to raise an umbrella",
+          "url": "t5_sashimasu.mp3"
         },
         {
           "id": "t5v_27",
           "type": "vocab",
-          "moji": "さとう",
-          "romaji": "Sugar",
-          "url": "さとう.mp3"
+          "part": "noun",
+          "vocabulary": "さとう",
+          "kanji": "砂糖",
+          "english": "Sugar",
+          "url": "t5_satou.mp3"
         },
         {
           "id": "t5v_28",
           "type": "vocab",
-          "moji": "しお",
-          "romaji": "Salt",
-          "url": "しお.mp3"
+          "part": "noun",
+          "vocabulary": "しお",
+          "kanji": "塩",
+          "english": "Salt",
+          "url": "t5_shio.mp3"
         },
         {
           "id": "t5v_29",
           "type": "vocab",
-          "moji": "しめます",
-          "romaji": "to close something",
-          "url": "しめます.mp3"
+          "part": "verb",
+          "vocabulary": "しめます",
+          "kanji": "閉めます",
+          "english": "to close something",
+          "url": "t5_shimemasu.mp3"
         },
         {
           "id": "t5v_30",
           "type": "vocab",
-          "moji": "シャツ",
-          "romaji": "Shirt",
-          "url": "シャツ.mp3"
+          "part": "noun",
+          "vocabulary": "シャツ",
+          "kanji": "",
+          "english": "Shirt",
+          "url": "t5_shatsu.mp3"
         },
         {
           "id": "t5v_31",
           "type": "vocab",
-          "moji": "しょうゆ",
-          "romaji": "soy sauce",
-          "url": "しょうゆ.mp3"
+          "part": "noun",
+          "vocabulary": "しょうゆ",
+          "kanji": "",
+          "english": "soy sauce",
+          "url": "t5_shouyu.mp3"
         },
         {
           "id": "t5v_32",
           "type": "vocab",
-          "moji": "スカート",
-          "romaji": "Skirt",
-          "url": "スカート.mp3"
+          "part": "noun",
+          "vocabulary": "スカート",
+          "kanji": "",
+          "english": "Skirt",
+          "url": "t5_sukato.mp3"
         },
         {
           "id": "t5v_33",
           "type": "vocab",
-          "moji": "すき",
-          "romaji": "Likeable",
-          "url": "すき.mp3"
+          "part": "na-adjective",
+          "vocabulary": "すき",
+          "kanji": "好き",
+          "english": "Likeable",
+          "url": "t5_suki.mp3"
         },
         {
           "id": "t5v_34",
           "type": "vocab",
-          "moji": "ズボン",
-          "romaji": "Trousers",
-          "url": "ズボン.mp3"
+          "part": "noun",
+          "vocabulary": "ズボン",
+          "kanji": "",
+          "english": "Trousers",
+          "url": "t5_zubon.mp3"
         },
         {
           "id": "t5v_35",
           "type": "vocab",
-          "moji": "すわります",
-          "romaji": "to sit",
-          "url": "すわります.mp3"
+          "part": "verb",
+          "vocabulary": "すわります",
+          "kanji": "座ります",
+          "english": "to sit",
+          "url": "t5_suwarimasu.mp3"
         },
         {
           "id": "t5v_36",
           "type": "vocab",
-          "moji": "セーター",
-          "romaji": "sweater, jumper",
-          "url": "セーター.mp3"
+          "part": "noun",
+          "vocabulary": "セーター",
+          "kanji": "",
+          "english": "sweater, jumper",
+          "url": "t5_seita.mp3"
         },
         {
           "id": "t5v_37",
           "type": "vocab",
-          "moji": "ぜんぶ",
-          "romaji": "All",
-          "url": "ぜんぶ.mp3"
+          "part": "adverb",
+          "vocabulary": "ぜんぶ",
+          "kanji": "全部",
+          "english": "All",
+          "url": "t5_zenbu.mp3"
         },
         {
           "id": "t5v_38",
           "type": "vocab",
-          "moji": "たちます",
-          "romaji": "to stand",
-          "url": "たちます.mp3"
+          "part": "verb",
+          "vocabulary": "たちます",
+          "kanji": "立ちます",
+          "english": "to stand",
+          "url": "t5_tachimasu.mp3"
         },
         {
           "id": "t5v_39",
           "type": "vocab",
-          "moji": "ちょっと",
-          "romaji": "somewhat",
-          "url": "ちょっと.mp3"
+          "part": "adverb",
+          "vocabulary": "ちょっと",
+          "kanji": "",
+          "english": "somewhat",
+          "url": "t5_chotto.mp3"
         },
         {
           "id": "t5v_40",
           "type": "vocab",
-          "moji": "つけます",
-          "romaji": "to turn on",
-          "url": "つけます.mp3"
+          "part": "verb",
+          "vocabulary": "つけます",
+          "kanji": "",
+          "english": "to turn on",
+          "url": "t5_tsukemasu.mp3"
         },
         {
           "id": "t5v_41",
           "type": "vocab",
-          "moji": "でんき",
-          "romaji": "electricity, electric light",
-          "url": "でんき.mp3"
+          "part": "noun",
+          "vocabulary": "でんき",
+          "kanji": "電気",
+          "english": "electricity, electric light",
+          "url": "t5_denki.mp3"
         },
         {
           "id": "t5v_42",
           "type": "vocab",
-          "moji": "でんわ",
-          "romaji": "telephone",
-          "url": "でんわ.mp3"
+          "part": "noun",
+          "vocabulary": "でんわ",
+          "kanji": "電話",
+          "english": "telephone",
+          "url": "t5_denwa.mp3"
         },
         {
           "id": "t5v_43",
           "type": "vocab",
-          "moji": "とまります",
-          "romaji": "to come to a halt",
-          "url": "とまります.mp3"
+          "part": "verb",
+          "vocabulary": "とまります",
+          "kanji": "止まります",
+          "english": "to come to a halt",
+          "url": "t5_tomarimasu.mp3"
         },
         {
           "id": "t5v_44",
           "type": "vocab",
-          "moji": "とり",
-          "romaji": "bird",
-          "url": "とり.mp3"
+          "part": "noun",
+          "vocabulary": "とり",
+          "kanji": "鳥",
+          "english": "bird",
+          "url": "t5_tori.mp3"
         },
         {
           "id": "t5v_45",
           "type": "vocab",
-          "moji": "とりにく",
-          "romaji": "chicken meat",
-          "url": "とりにく.mp3"
+          "part": "noun",
+          "vocabulary": "とりにく",
+          "kanji": "鶏肉",
+          "english": "chicken meat",
+          "url": "t5_toriniku.mp3"
         },
         {
           "id": "t5v_46",
           "type": "vocab",
-          "moji": "とります",
-          "romaji": "to take something",
-          "url": "とります.mp3"
+          "part": "verb",
+          "vocabulary": "とります",
+          "kanji": "取ります",
+          "english": "to take something",
+          "url": "t5_torimasu.mp3"
         },
         {
           "id": "t5v_47",
           "type": "vocab",
-          "moji": "にく",
-          "romaji": "meat",
-          "url": "にく.mp3"
+          "part": "noun",
+          "vocabulary": "にく",
+          "kanji": "肉",
+          "english": "meat",
+          "url": "t5_niku.mp3"
         },
         {
           "id": "t5v_48",
           "type": "vocab",
-          "moji": "ネクタイ",
-          "romaji": "tie, necktie",
-          "url": "ネクタイ.mp3"
+          "part": "noun",
+          "vocabulary": "ネクタイ",
+          "kanji": "",
+          "english": "tie, necktie",
+          "url": "t5_nekutai.mp3"
         },
         {
           "id": "t5v_49",
           "type": "vocab",
-          "moji": "ノート",
-          "romaji": "notebook, exercise book",
-          "url": "ノート.mp3"
+          "part": "noun",
+          "vocabulary": "ノート",
+          "kanji": "",
+          "english": "notebook, exercise book",
+          "url": "t5_nouto.mp3"
         },
         {
           "id": "t5v_50",
           "type": "vocab",
-          "moji": "のります",
-          "romaji": "to get on, to ride",
-          "url": "のります.mp3"
+          "part": "verb",
+          "vocabulary": "のります",
+          "kanji": "乗ります",
+          "english": "to get on, to ride",
+          "url": "t5_norimasu.mp3"
         },
         {
           "id": "t5v_51",
           "type": "vocab",
-          "moji": "はな",
-          "romaji": "flower",
-          "url": "はな.mp3"
+          "part": "noun",
+          "vocabulary": "はな",
+          "kanji": "花",
+          "english": "flower",
+          "url": "t5_hana.mp3"
         },
         {
           "id": "t5v_52",
           "type": "vocab",
-          "moji": "ひきます",
-          "romaji": "to play an instrument with strings",
-          "url": "ひきます.mp3"
+          "part": "verb",
+          "vocabulary": "ひきます",
+          "kanji": "弾きます",
+          "english": "to play an instrument with strings",
+          "url": "t5_hikimasu.mp3"
         },
         {
           "id": "t5v_53",
           "type": "vocab",
-          "moji": "ふく",
-          "romaji": "clothes",
-          "url": "ふく.mp3"
+          "part": "noun",
+          "vocabulary": "ふく",
+          "kanji": "服",
+          "english": "clothes",
+          "url": "t5_fuku.mp3"
         },
         {
           "id": "t5v_54",
           "type": "vocab",
-          "moji": "ぶたにく",
-          "romaji": "pork",
-          "url": "ぶたにく.mp3"
+          "part": "noun",
+          "vocabulary": "ぶたにく",
+          "kanji": "豚肉",
+          "english": "pork",
+          "url": "t5_butaniku.mp3"
         },
         {
           "id": "t5v_55",
           "type": "vocab",
-          "moji": "ふります",
-          "romaji": "to fall, e.g. rain or snow",
-          "url": "ふります.mp3"
+          "part": "verb",
+          "vocabulary": "ふります",
+          "kanji": "降ります",
+          "english": "to fall, e.g. rain or snow",
+          "url": "t5_furimasu.mp3"
         },
         {
           "id": "t5v_56",
           "type": "vocab",
-          "moji": "ペット",
-          "romaji": "pet",
-          "url": "ペット.mp3"
+          "part": "noun",
+          "vocabulary": "ペット",
+          "kanji": "",
+          "english": "pet",
+          "url": "t5_petto.mp3"
         },
         {
           "id": "t5v_57",
           "type": "vocab",
-          "moji": "ぼうし",
-          "romaji": "hat",
-          "url": "ぼうし.mp3"
+          "part": "noun",
+          "vocabulary": "ぼうし",
+          "kanji": "帽子",
+          "english": "hat",
+          "url": "t5_boushi.mp3"
         },
         {
           "id": "t5v_58",
           "type": "vocab",
-          "moji": "ほしい",
-          "romaji": "want",
-          "url": "ほしい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "ほしい",
+          "kanji": "欲しい",
+          "english": "want",
+          "url": "t5_hoshi.mp3"
         },
         {
           "id": "t5v_59",
           "type": "vocab",
-          "moji": "まがります",
-          "romaji": "to turn, to bend",
-          "url": "まがります.mp3"
+          "part": "verb",
+          "vocabulary": "まがります",
+          "kanji": "曲がります",
+          "english": "to turn, to bend",
+          "url": "t5_magarimasu.mp3"
         },
         {
           "id": "t5v_60",
           "type": "vocab",
-          "moji": "また",
-          "romaji": "again, and",
-          "url": "また.mp3"
+          "part": "adverb",
+          "vocabulary": "また",
+          "kanji": "",
+          "english": "again, and",
+          "url": "t5_mata.mp3"
         },
         {
           "id": "t5v_61",
           "type": "vocab",
-          "moji": "まちます",
-          "romaji": "to wait",
-          "url": "まちます.mp3"
+          "part": "verb",
+          "vocabulary": "まちます",
+          "kanji": "待ちます",
+          "english": "to wait",
+          "url": "t5_machimasu.mp3"
         },
         {
           "id": "t5v_62",
           "type": "vocab",
-          "moji": "まっすぐ",
-          "romaji": "straight ahead, direct",
-          "url": "まっすぐ.mp3"
+          "part": "adverb",
+          "vocabulary": "まっすぐ",
+          "kanji": "",
+          "english": "straight ahead, direct",
+          "url": "t5_massugu.mp3"
         },
         {
           "id": "t5v_63",
           "type": "vocab",
-          "moji": "みせます",
-          "romaji": "to show",
-          "url": "みせます.mp3"
+          "part": "verb",
+          "vocabulary": "みせます",
+          "kanji": "見せます",
+          "english": "to show",
+          "url": "t5_misemasu.mp3"
         },
         {
           "id": "t5v_64",
           "type": "vocab",
-          "moji": "めがね",
-          "romaji": "glasses",
-          "url": "めがね.mp3"
+          "part": "noun",
+          "vocabulary": "めがね",
+          "kanji": "眼鏡",
+          "english": "glasses",
+          "url": "t5_megane.mp3"
         },
         {
           "id": "t5v_65",
           "type": "vocab",
-          "moji": "もっと",
-          "romaji": "more",
-          "url": "もっと.mp3"
+          "part": "adverb",
+          "vocabulary": "もっと",
+          "kanji": "",
+          "english": "more",
+          "url": "t5_motto.mp3"
         },
         {
           "id": "t5v_66",
           "type": "vocab",
-          "moji": "やすみます",
-          "romaji": "to rest",
-          "url": "やすみます.mp3"
+          "part": "verb",
+          "vocabulary": "やすみます",
+          "kanji": "休みます",
+          "english": "to rest",
+          "url": "t5_yasumimasu.mp3"
         },
         {
           "id": "t5v_67",
           "type": "vocab",
-          "moji": "やります",
-          "romaji": "to do",
-          "url": "やります.mp3"
+          "part": "verb",
+          "vocabulary": "やります",
+          "kanji": "",
+          "english": "to do",
+          "url": "t5_yarimasu.mp3"
         },
         {
           "id": "t5v_68",
           "type": "vocab",
-          "moji": "ゆっくり",
-          "romaji": "slowly",
-          "url": "ゆっくり.mp3"
+          "part": "adverb",
+          "vocabulary": "ゆっくり",
+          "kanji": "",
+          "english": "slowly",
+          "url": "t5_yukkuri.mp3"
         },
         {
           "id": "t5v_69",
           "type": "vocab",
-          "moji": "よびます",
-          "romaji": "to call out, to invite",
-          "url": "よびます.mp3"
+          "part": "verb",
+          "vocabulary": "よびます",
+          "kanji": "呼びます",
+          "english": "to call out, to invite",
+          "url": "t5_yobimasu.mp3"
         }
       ], 
       TOPIC5_TITLE_and_grammar : [
@@ -5352,499 +5963,650 @@ export const learnData =
         {
           "id": "t6v_1",
           "type": "vocab",
-          "moji": "あおい",
-          "romaji": "blue",
-          "url": "あおい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "あおい",
+          "kanji": "青い",
+          "english": "blue",
+          "url": "t6_aoi.mp3"
         },
         {
           "id": "t6v_2",
           "type": "vocab",
-          "moji": "あかい",
-          "romaji": "red",
-          "url": "あかい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "あかい",
+          "kanji": "赤い",
+          "english": "red",
+          "url": "t6_akai.mp3"
         },
         {
           "id": "t6v_3",
           "type": "vocab",
-          "moji": "あかるい",
-          "romaji": "bright",
-          "url": "あかるい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "あかるい",
+          "kanji": "明るい",
+          "english": "bright",
+          "url": "t6_akarui.mp3"
         },
         {
           "id": "t6v_4",
           "type": "vocab",
-          "moji": "あけます",
-          "romaji": "to open",
-          "url": "あけます.mp3"
+          "part": "verb",
+          "vocabulary": "あけます",
+          "kanji": "開けます",
+          "english": "to open",
+          "url": "t6_akemasu.mp3"
         },
         {
           "id": "t6v_5",
           "type": "vocab",
-          "moji": "あし",
-          "romaji": "foot, leg",
-          "url": "あし.mp3"
+          "part": "noun",
+          "vocabulary": "あし",
+          "kanji": "足",
+          "english": "foot, leg",
+          "url": "t6_ashi.mp3"
         },
         {
           "id": "t6v_6",
           "type": "vocab",
-          "moji": "あたま",
-          "romaji": "head",
-          "url": "あたま.mp3"
+          "part": "noun",
+          "vocabulary": "あたま",
+          "kanji": "頭",
+          "english": "head",
+          "url": "t6_atama.mp3"
         },
         {
           "id": "t6v_7",
           "type": "vocab",
-          "moji": "あに",
-          "romaji": "(humble) older brother",
-          "url": "あに.mp3"
+          "part": "noun",
+          "vocabulary": "あに",
+          "kanji": "兄",
+          "english": "(humble) older brother",
+          "url": "t6_ani.mp3"
         },
         {
           "id": "t6v_8",
           "type": "vocab",
-          "moji": "あね",
-          "romaji": "(humble) older sister",
-          "url": "あね.mp3"
+          "part": "noun",
+          "vocabulary": "あね",
+          "kanji": "姉",
+          "english": "(humble) older sister",
+          "url": "t6_ane.mp3"
         },
         {
           "id": "t6v_9",
           "type": "vocab",
-          "moji": "あぶない",
-          "romaji": "dangerous",
-          "url": "あぶない.mp3"
+          "part": "i-adjective",
+          "vocabulary": "あぶない",
+          "kanji": "危ない",
+          "english": "dangerous",
+          "url": "t6_abunai.mp3"
         },
         {
           "id": "t6v_10",
           "type": "vocab",
-          "moji": "あまい",
-          "romaji": "sweet",
-          "url": "あまい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "あまい",
+          "kanji": "甘い",
+          "english": "sweet",
+          "url": "t6_amai.mp3"
         },
         {
           "id": "t6v_11",
           "type": "vocab",
-          "moji": "いもうと",
-          "romaji": "(humble) younger sister",
-          "url": "いもうと.mp3"
+          "part": "noun",
+          "vocabulary": "いもうと",
+          "kanji": "妹",
+          "english": "(humble) younger sister",
+          "url": "t6_imouto.mp3"
         },
         {
           "id": "t6v_12",
           "type": "vocab",
-          "moji": "いろ",
-          "romaji": "color",
-          "url": "いろ.mp3"
+          "part": "noun",
+          "vocabulary": "いろ",
+          "kanji": "色",
+          "english": "color",
+          "url": "t6_iro.mp3"
         },
         {
           "id": "t6v_13",
           "type": "vocab",
-          "moji": "うるさい",
-          "romaji": "noisy, annoying",
-          "url": "うるさい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "うるさい",
+          "kanji": "",
+          "english": "noisy, annoying",
+          "url": "t6_urusai.mp3"
         },
         {
           "id": "t6v_14",
           "type": "vocab",
-          "moji": "おおい",
-          "romaji": "many",
-          "url": "おおい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "おおい",
+          "kanji": "多い",
+          "english": "many",
+          "url": "t6_oui.mp3"
         },
         {
           "id": "t6v_15",
           "type": "vocab",
-          "moji": "おかあさん",
-          "romaji": "(honorable) mother",
-          "url": "おかあさん.mp3"
+          "part": "noun",
+          "vocabulary": "おかあさん",
+          "kanji": "お母さん",
+          "english": "(honorable) mother",
+          "url": "t6_oka_san.mp3"
         },
         {
           "id": "t6v_16",
           "type": "vocab",
-          "moji": "おくさん",
-          "romaji": "(honorable) wife",
-          "url": "おくさん.mp3"
+          "part": "noun",
+          "vocabulary": "おくさん",
+          "kanji": "奥さん",
+          "english": "(honorable) wife",
+          "url": "t6_oku_san.mp3"
         },
         {
           "id": "t6v_17",
           "type": "vocab",
-          "moji": "おじいさん",
-          "romaji": "grandfather, male senior citizen",
-          "url": "おじいさん.mp3"
+          "part": "noun",
+          "vocabulary": "おじいさん",
+          "kanji": "",
+          "english": "grandfather, male senior citizen",
+          "url": "t6_oji_san.mp3"
         },
         {
           "id": "t6v_18",
           "type": "vocab",
-          "moji": "おじいさん",
-          "romaji": "uncle, middle aged gentleman",
-          "url": "おじいさん.mp3"
+          "part": "noun",
+          "vocabulary": "おじさん",
+          "kanji": "伯父/叔父",
+          "english": "uncle, middle aged gentleman",
+          "url": "t6_ojii_san.mp3"
         },
         {
           "id": "t6v_19",
           "type": "vocab",
-          "moji": "おとうさん",
-          "romaji": "(honorable) father",
-          "url": "おとうさん.mp3"
+          "part": "noun",
+          "vocabulary": "おとうさん",
+          "kanji": "お父さん",
+          "english": "(honorable) father",
+          "url": "t6_otou_san.mp3"
         },
         {
           "id": "t6v_20",
           "type": "vocab",
-          "moji": "おとうと",
-          "romaji": "younger brother",
-          "url": "おとうと.mp3"
+          "part": "noun",
+          "vocabulary": "おとうと",
+          "kanji": "弟",
+          "english": "younger brother",
+          "url": "t6_otouto.mp3"
         },
         {
           "id": "t6v_21",
           "type": "vocab",
-          "moji": "おとな",
-          "romaji": "Adult",
-          "url": "おとな.mp3"
+          "part": "noun",
+          "vocabulary": "おとな",
+          "kanji": "大人",
+          "english": "Adult",
+          "url": "t6_otona.mp3"
         },
         {
           "id": "t6v_22",
           "type": "vocab",
-          "moji": "おにいさん",
-          "romaji": "(honorable) older brother",
-          "url": "おにいさん.mp3"
+          "part": "noun",
+          "vocabulary": "おにいさん",
+          "kanji": "お兄さん",
+          "english": "(honorable) older brother",
+          "url": "t6_onii_san.mp3"
         },
         {
           "id": "t6v_23",
           "type": "vocab",
-          "moji": "おねえさん",
-          "romaji": "(honorable) older sister",
-          "url": "おねえさん.mp3"
+          "part": "noun",
+          "vocabulary": "おねえさん",
+          "kanji": "お姉さん",
+          "english": "(honorable) older sister",
+          "url": "t6_onei_san.mp3"
         },
         {
           "id": "t6v_24",
           "type": "vocab",
-          "moji": "おば",
-          "romaji": "Aunt",
-          "url": "おば.mp3"
+          "part": "noun",
+          "vocabulary": "おばさん",
+          "kanji": "伯母/叔母",
+          "english": "Aunt",
+          "url": "t6_oba.mp3"
         },
         {
           "id": "t6v_25",
           "type": "vocab",
-          "moji": "おばあさん",
-          "romaji": "grandmother, female senior-citizen",
-          "url": "おばあさん.mp3"
+          "part": "noun",
+          "vocabulary": "おばあさん",
+          "kanji": "",
+          "english": "grandmother, female senior-citizen",
+          "url": "t6_oba_san.mp3"
         },
         {
           "id": "t6v_26",
           "type": "vocab",
-          "moji": "おもい",
-          "romaji": "Heavy",
-          "url": "おもい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "おもい",
+          "kanji": "重い",
+          "english": "Heavy",
+          "url": "t6_omoi.mp3"
         },
         {
           "id": "t6v_27",
           "type": "vocab",
-          "moji": "おもしろい",
-          "romaji": "Interesting",
-          "url": "おもしろい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "おもしろい",
+          "kanji": "",
+          "english": "Interesting",
+          "url": "t6_omoshiroi.mp3"
         },
         {
           "id": "t6v_28",
           "type": "vocab",
-          "moji": "かお",
-          "romaji": "",
-          "url": "かお.mp3"
+          "part": "noun",
+          "vocabulary": "かお",
+          "kanji": "顔",
+          "english": "",
+          "url": "t6_kao.mp3"
         },
         {
           "id": "t6v_29",
           "type": "vocab",
-          "moji": "かぶります",
-          "romaji": "to put on/ wear (hats, caps, hoods)",
-          "url": "かぶります.mp3"
+          "part": "verb",
+          "vocabulary": "かぶります",
+          "kanji": "",
+          "english": "to put on/ wear (hats, caps, hoods)",
+          "url": "t6_kaburimasu.mp3"
         },
         {
           "id": "t6v_30",
           "type": "vocab",
-          "moji": "からい",
-          "romaji": "Spicy",
-          "url": "からい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "からい",
+          "kanji": "辛い",
+          "english": "Spicy",
+          "url": "t6_karai.mp3"
         },
         {
           "id": "t6v_31",
           "type": "vocab",
-          "moji": "からだ",
-          "romaji": "Body",
-          "url": "からだ.mp3"
+          "part": "noun",
+          "vocabulary": "からだ",
+          "kanji": "体",
+          "english": "Body",
+          "url": "t6_karada.mp3"
         },
         {
           "id": "t6v_32",
           "type": "vocab",
-          "moji": "かるい",
-          "romaji": "Light",
-          "url": "かるい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "かるい",
+          "kanji": "軽い",
+          "english": "Light",
+          "url": "t6_karui.mp3"
         },
         {
           "id": "t6v_33",
           "type": "vocab",
-          "moji": "かわいい",
-          "romaji": "Cute",
-          "url": "かわいい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "かわいい",
+          "kanji": "",
+          "english": "Cute",
+          "url": "t6_kawaii.mp3"
         },
         {
           "id": "t6v_34",
           "type": "vocab",
-          "moji": "きえます",
-          "romaji": "to disappear",
-          "url": "きえます.mp3"
+          "part": "verb",
+          "vocabulary": "きえます",
+          "kanji": "消えます",
+          "english": "to disappear",
+          "url": "t6_kiemasu.mp3"
         },
         {
           "id": "t6v_35",
           "type": "vocab",
-          "moji": "きって",
-          "romaji": "postage stamp",
-          "url": "きって.mp3"
+          "part": "noun",
+          "vocabulary": "きって",
+          "kanji": "切手",
+          "english": "postage stamp",
+          "url": "t6_kitte.mp3"
         },
         {
           "id": "t6v_36",
           "type": "vocab",
-          "moji": "きょうだい",
-          "romaji": "(humble) siblings",
-          "url": "きょうだい.mp3"
+          "part": "noun",
+          "vocabulary": "きょうだい",
+          "kanji": "兄弟",
+          "english": "(humble) siblings",
+          "url": "t6_kyoudai.mp3"
         },
         {
           "id": "t6v_37",
           "type": "vocab",
-          "moji": "くち",
-          "romaji": "mouth, opening",
-          "url": "くち.mp3"
+          "part": "noun",
+          "vocabulary": "くち",
+          "kanji": "口",
+          "english": "mouth, opening",
+          "url": "t6_kuchi.mp3"
         },
         {
           "id": "t6v_38",
           "type": "vocab",
-          "moji": "くらい",
-          "romaji": "Gloomy",
-          "url": "くらい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "くらい",
+          "kanji": "暗い",
+          "english": "Gloomy",
+          "url": "t6_kurai.mp3"
         },
         {
           "id": "t6v_39",
           "type": "vocab",
-          "moji": "くろい",
-          "romaji": "black",
-          "url": "くろい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "くろい",
+          "kanji": "黒い",
+          "english": "black",
+          "url": "t6_kuroi.mp3"
         },
         {
           "id": "t6v_40",
           "type": "vocab",
-          "moji": "けします",
-          "romaji": "to erase, to turn off power",
-          "url": "けします.mp3"
+          "part": "verb",
+          "vocabulary": "けします",
+          "kanji": "消します",
+          "english": "to erase, to turn off power",
+          "url": "t6_keshimasu.mp3"
         },
         {
           "id": "t6v_41",
           "type": "vocab",
-          "moji": "けっこんします",
-          "romaji": "to marry",
-          "url": "けっこんします.mp3"
+          "part": "verb",
+          "vocabulary": "けっこんします",
+          "kanji": "結婚します",
+          "english": "to marry",
+          "url": "t6_kekkonshimasu.mp3"
         },
         {
           "id": "t6v_42",
           "type": "vocab",
-          "moji": "こども",
-          "romaji": "Child",
-          "url": "こども.mp3"
+          "part": "noun",
+          "vocabulary": "こども",
+          "kanji": "子供",
+          "english": "Child",
+          "url": "t6_kodomo.mp3"
         },
         {
           "id": "t6v_43",
           "type": "vocab",
-          "moji": "しにます",
-          "romaji": "to die",
-          "url": "しにます.mp3"
+          "part": "verb",
+          "vocabulary": "しにます",
+          "kanji": "死にます",
+          "english": "to die",
+          "url": "t6_shinimasu.mp3"
         },
         {
           "id": "t6v_44",
           "type": "vocab",
-          "moji": "じょうず",
-          "romaji": "Skillful",
-          "url": "じょうず.mp3"
+          "part": "noun",
+          "vocabulary": "しゅみ",
+          "kanji": "",
+          "english": "hobby",
+          "url": "t6_shumi.mp3"
         },
         {
           "id": "t6v_45",
           "type": "vocab",
-          "moji": "じょうぶ",
-          "romaji": "strong, durable",
-          "url": "じょうぶ.mp3"
+          "part": "na-adjective",
+          "vocabulary": "じょうず",
+          "kanji": "上手",
+          "english": "Skillful",
+          "url": "t6_jouzu.mp3"
         },
         {
           "id": "t6v_46",
           "type": "vocab",
-          "moji": "しります",
-          "romaji": "to know",
-          "url": "しります.mp3"
+          "part": "na-adjective",
+          "vocabulary": "じょうぶ",
+          "kanji": "丈夫",
+          "english": "strong, durable",
+          "url": "t6_joubu.mp3"
         },
         {
           "id": "t6v_47",
           "type": "vocab",
-          "moji": "しろい",
-          "romaji": "White",
-          "url": "しろい.mp3"
+          "part": "verb",
+          "vocabulary": "しります",
+          "kanji": "知ります",
+          "english": "to know",
+          "url": "t6_shirimasu.mp3"
         },
         {
           "id": "t6v_48",
           "type": "vocab",
-          "moji": "すくない",
-          "romaji": "a few",
-          "url": "すくない.mp3"
+          "part": "i-adjective",
+          "vocabulary": "しろい",
+          "kanji": "白い",
+          "english": "White",
+          "url": "t6_shiroi.mp3"
         },
         {
           "id": "t6v_49",
           "type": "vocab",
-          "moji": "すみます",
-          "romaji": "to live in",
-          "url": "すみます.mp3"
+          "part": "i-adjective",
+          "vocabulary": "すくない",
+          "kanji": "少ない",
+          "english": "a few",
+          "url": "t6_sukunai.mp3"
         },
         {
           "id": "t6v_50",
           "type": "vocab",
-          "moji": "せ",
-          "romaji": "height, stature",
-          "url": "せ.mp3"
+          "part": "verb",
+          "vocabulary": "すみます",
+          "kanji": "住みます",
+          "english": "to live in",
+          "url": "t6_sumimasu.mp3"
         },
         {
           "id": "t6v_51",
           "type": "vocab",
-          "moji": "たいせつ",
-          "romaji": "important",
-          "url": "たいせつ.mp3"
+          "part": "noun",
+          "vocabulary": "せ",
+          "kanji": "背",
+          "english": "height, stature",
+          "url": "t6_se.mp3"
         },
         {
           "id": "t6v_52",
           "type": "vocab",
-          "moji": "ちかい",
-          "romaji": "near",
-          "url": "ちかい.mp3"
+          "part": "na-adjective",
+          "vocabulary": "たいせつ",
+          "kanji": "大切",
+          "english": "important",
+          "url": "t6_taisetsu.mp3"
         },
         {
           "id": "t6v_53",
           "type": "vocab",
-          "moji": "つよい",
-          "romaji": "powerful",
-          "url": "つよい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "ちかい",
+          "kanji": "近い",
+          "english": "near",
+          "url": "t6_chikai.mp3"
         },
         {
           "id": "t6v_54",
           "type": "vocab",
-          "moji": "て",
-          "romaji": "hand",
-          "url": "て.mp3"
+          "part": "i-adjective",
+          "vocabulary": "つよい",
+          "kanji": "強い",
+          "english": "powerful",
+          "url": "t6_tsuyoi.mp3"
         },
         {
           "id": "t6v_55",
           "type": "vocab",
-          "moji": "とおい",
-          "romaji": "far",
-          "url": "とおい.mp3"
+          "part": "noun",
+          "vocabulary": "て",
+          "kanji": "手",
+          "english": "hand",
+          "url": "t6_te.mp3"
         },
         {
           "id": "t6v_56",
           "type": "vocab",
-          "moji": "ながい",
-          "romaji": "long",
-          "url": "ながい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "とおい",
+          "kanji": "遠い",
+          "english": "far",
+          "url": "t6_toui.mp3"
         },
         {
           "id": "t6v_57",
           "type": "vocab",
-          "moji": "ならびます",
-          "romaji": "to line up, to stand in a line",
-          "url": "ならびます.mp3"
+          "part": "i-adjective",
+          "vocabulary": "ながい",
+          "kanji": "長い",
+          "english": "long",
+          "url": "t6_nagai.mp3"
         },
         {
           "id": "t6v_58",
           "type": "vocab",
-          "moji": "なります",
-          "romaji": "to become",
-          "url": "なります.mp3"
+          "part": "verb",
+          "vocabulary": "ならびます",
+          "kanji": "並びます",
+          "english": "to line up, to stand in a line",
+          "url": "t6_narabimasu.mp3"
         },
         {
           "id": "t6v_59",
           "type": "vocab",
-          "moji": "はな",
-          "romaji": "nose",
-          "url": "はな.mp3"
+          "part": "verb",
+          "vocabulary": "なります",
+          "kanji": "",
+          "english": "to become",
+          "url": "t6_narimasu.mp3"
         },
         {
           "id": "t6v_60",
           "type": "vocab",
-          "moji": "ひと",
-          "romaji": "person",
-          "url": "ひと.mp3"
+          "part": "noun",
+          "vocabulary": "はな",
+          "kanji": "鼻",
+          "english": "nose",
+          "url": "t6_hana.mp3"
         },
         {
           "id": "t6v_61",
           "type": "vocab",
-          "moji": "ひろい",
-          "romaji": "spacious, wide",
-          "url": "ひろい.mp3"
+          "part": "noun",
+          "vocabulary": "ひと",
+          "kanji": "人",
+          "english": "person",
+          "url": "t6_hito.mp3"
         },
         {
           "id": "t6v_62",
           "type": "vocab",
-          "moji": "へた",
-          "romaji": "unskillful",
-          "url": "へた.mp3"
+          "part": "i-adjective",
+          "vocabulary": "ひろい",
+          "kanji": "広い",
+          "english": "spacious, wide",
+          "url": "t6_hiroi.mp3"
         },
         {
           "id": "t6v_63",
           "type": "vocab",
-          "moji": "まるい",
-          "romaji": "round, circular",
-          "url": "まるい.mp3"
+          "part": "na-adjective",
+          "vocabulary": "へた",
+          "kanji": "下手",
+          "english": "unskillful",
+          "url": "t6_heta.mp3"
         },
         {
           "id": "t6v_64",
           "type": "vocab",
-          "moji": "みじかい",
-          "romaji": "short",
-          "url": "みじかい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "まるい",
+          "kanji": "丸い/円い",
+          "english": "round, circular",
+          "url": "t6_marui.mp3"
         },
         {
           "id": "t6v_65",
           "type": "vocab",
-          "moji": "みどり",
-          "romaji": "green",
-          "url": "みどり.mp3"
+          "part": "i-adjective",
+          "vocabulary": "みじかい",
+          "kanji": "短い",
+          "english": "short",
+          "url": "t6_mijikai.mp3"
         },
         {
           "id": "t6v_66",
           "type": "vocab",
-          "moji": "みみ",
-          "romaji": "ear",
-          "url": "みみ.mp3"
+          "part": "noun",
+          "vocabulary": "みどり",
+          "kanji": "緑",
+          "english": "green",
+          "url": "t6_midori.mp3"
         },
         {
           "id": "t6v_67",
           "type": "vocab",
-          "moji": "め",
-          "romaji": "eye",
-          "url": "め.mp3"
+          "part": "noun",
+          "vocabulary": "みみ",
+          "kanji": "耳",
+          "english": "ear",
+          "url": "t6_mimi.mp3"
         },
         {
           "id": "t6v_68",
           "type": "vocab",
-          "moji": "もちます",
-          "romaji": "to hold",
-          "url": "もちます.mp3"
+          "part": "noun",
+          "vocabulary": "め",
+          "kanji": "目",
+          "english": "eye",
+          "url": "t6_me.mp3"
         },
         {
           "id": "t6v_69",
           "type": "vocab",
-          "moji": "よわい",
-          "romaji": "weak",
-          "url": "よわい.mp3"
+          "part": "verb",
+          "vocabulary": "もちます",
+          "kanji": "持ちます",
+          "english": "to hold",
+          "url": "t6_mochimasu.mp3"
         },
         {
           "id": "t6v_70",
           "type": "vocab",
-          "moji": "りょうしん",
-          "romaji": "both parents",
-          "url": "りょうしん.mp3"
+          "part": "i-adjective",
+          "vocabulary": "よわい",
+          "kanji": "弱い",
+          "english": "weak",
+          "url": "t6_yowai.mp3"
         },
         {
           "id": "t6v_71",
           "type": "vocab",
-          "moji": "わかい",
-          "romaji": "young",
-          "url": "わかい.mp3"
+          "part": "noun",
+          "vocabulary": "りょうしん",
+          "kanji": "両親",
+          "english": "both parents",
+          "url": "t6_ryoushin.mp3"
+        },
+        {
+          "id": "t6v_72",
+          "type": "vocab",
+          "part": "i-adjective",
+          "vocabulary": "わかい",
+          "kanji": "若い",
+          "english": "young",
+          "url": "t6_wakai.mp3"
         }
       ], 
       TOPIC6_TITLE_and_grammar : [
@@ -6030,331 +6792,425 @@ export const learnData =
         {
           "id": "t7v_1",
           "type": "vocab",
-          "moji": "あびます",
-          "romaji": "to bathe, to shower",
-          "url": "あびます.mp3"
+          "part": "verb",
+          "vocabulary": "あびます",
+          "kanji": "浴びます",
+          "english": "to bathe, to shower",
+          "url": "t7_abimasu.mp3"
         },
         {
           "id": "t7v_2",
           "type": "vocab",
-          "moji": "あるきます",
-          "romaji": "to walk",
-          "url": "あるきます.mp3"
+          "part": "verb",
+          "vocabulary": "あるきます",
+          "kanji": "歩きます",
+          "english": "to walk",
+          "url": "t7_arukimasu.mp3"
         },
         {
           "id": "t7v_3",
           "type": "vocab",
-          "moji": "いいます",
-          "romaji": "to say",
-          "url": "いいます.mp3"
+          "part": "verb",
+          "vocabulary": "いいます",
+          "kanji": "言います",
+          "english": "to say",
+          "url": "t7_iimasu.mp3"
         },
         {
           "id": "t7v_4",
           "type": "vocab",
-          "moji": "いそがしい",
-          "romaji": "busy, irritated",
-          "url": "いそがしい.mp3"
+          "part": "i-adjective",
+          "vocabulary": "いそがしい",
+          "kanji": "忙しい",
+          "english": "busy, irritated",
+          "url": "t7_isogashii.mp3"
         },
         {
           "id": "t7v_5",
           "type": "vocab",
-          "moji": "うた",
-          "romaji": "song",
-          "url": "うた.mp3"
+          "part": "noun",
+          "vocabulary": "うた",
+          "kanji": "歌",
+          "english": "song",
+          "url": "t7_uta.mp3"
         },
         {
           "id": "t7v_6",
           "type": "vocab",
-          "moji": "うたいます",
-          "romaji": "to sing",
-          "url": "うたいます.mp3"
+          "part": "verb",
+          "vocabulary": "うたいます",
+          "kanji": "歌います",
+          "english": "to sing",
+          "url": "t7_utaimasu.mp3"
         },
         {
           "id": "t7v_7",
           "type": "vocab",
-          "moji": "うまれます",
-          "romaji": "to be born",
-          "url": "うまれます.mp3"
+          "part": "verb",
+          "vocabulary": "うまれます",
+          "kanji": "生まれます",
+          "english": "to be born",
+          "url": "t7_umaremasu.mp3"
         },
         {
           "id": "t7v_8",
           "type": "vocab",
-          "moji": "おなじ",
-          "romaji": "same",
-          "url": "おなじ.mp3"
+          "part": "na-adjective",
+          "vocabulary": "おなじ",
+          "kanji": "同じ",
+          "english": "same",
+          "url": "t7_onaji.mp3"
         },
         {
           "id": "t7v_9",
           "type": "vocab",
-          "moji": "おふろ",
-          "romaji": "Bath",
-          "url": "おふろ.mp3"
+          "part": "noun",
+          "vocabulary": "おふろ",
+          "kanji": "お風呂",
+          "english": "Bath",
+          "url": "t7_ofuro.mp3"
         },
         {
           "id": "t7v_10",
           "type": "vocab",
-          "moji": "おべんとう",
-          "romaji": "boxed lunch",
-          "url": "おべんとう.mp3"
+          "part": "noun",
+          "vocabulary": "おべんとう",
+          "kanji": "お弁当",
+          "english": "boxed lunch",
+          "url": "t7_obentou.mp3"
         },
         {
           "id": "t7v_11",
           "type": "vocab",
-          "moji": "かします",
-          "romaji": "to lend",
-          "url": "かします.mp3"
+          "part": "verb",
+          "vocabulary": "かします",
+          "kanji": "貸します",
+          "english": "to lend",
+          "url": "t7_kashimasu.mp3"
         },
         {
           "id": "t7v_12",
           "type": "vocab",
-          "moji": "かぜ",
-          "romaji": "Wind",
-          "url": "かぜ.mp3"
+          "part": "noun",
+          "vocabulary": "かぜ",
+          "kanji": "風",
+          "english": "Wind",
+          "url": "t7_kaze.mp3"
         },
         {
           "id": "t7v_13",
           "type": "vocab",
-          "moji": "かぜ",
-          "romaji": "a cold",
-          "url": "かぜ.mp3"
+          "part": "noun",
+          "vocabulary": "かぜ",
+          "kanji": "風邪",
+          "english": "a cold",
+          "url": "t7_kaze.mp3"
         },
         {
           "id": "t7v_14",
           "type": "vocab",
-          "moji": "かど",
-          "romaji": "a corner",
-          "url": "かど.mp3"
+          "part": "noun",
+          "vocabulary": "かど",
+          "kanji": "角",
+          "english": "a corner",
+          "url": "t7_kado.mp3"
         },
         {
           "id": "t7v_15",
           "type": "vocab",
-          "moji": "かわ",
-          "romaji": "River",
-          "url": "かわ.mp3"
+          "part": "noun",
+          "vocabulary": "かわ",
+          "kanji": "川",
+          "english": "River",
+          "url": "t7_kawa.mp3"
         },
         {
           "id": "t7v_16",
           "type": "vocab",
-          "moji": "ギター",
-          "romaji": "Guitar",
-          "url": "ギター.mp3"
+          "part": "noun",
+          "vocabulary": "ギター",
+          "kanji": "",
+          "english": "Guitar",
+          "url": "t7_gita.mp3"
         },
         {
           "id": "t7v_17",
           "type": "vocab",
-          "moji": "くすり",
-          "romaji": "medicine",
-          "url": "くすり.mp3"
+          "part": "noun",
+          "vocabulary": "くすり",
+          "kanji": "薬",
+          "english": "medicine",
+          "url": "t7_kusuri.mp3"
         },
         {
           "id": "t7v_18",
           "type": "vocab",
-          "moji": "こうさてん",
-          "romaji": "intersection",
-          "url": "こうさてん.mp3"
+          "part": "noun",
+          "vocabulary": "こうさてん",
+          "kanji": "交差点",
+          "english": "intersection",
+          "url": "t7_kousaten.mp3"
         },
         {
           "id": "t7v_19",
           "type": "vocab",
-          "moji": "さいふ",
-          "romaji": "Wallet",
-          "url": "さいふ.mp3"
+          "part": "noun",
+          "vocabulary": "さいふ",
+          "kanji": "財布",
+          "english": "Wallet",
+          "url": "t7_saifu.mp3"
         },
         {
           "id": "t7v_20",
           "type": "vocab",
-          "moji": "じかん",
-          "romaji": "Time",
-          "url": "じかん.mp3"
+          "part": "noun",
+          "vocabulary": "じかん",
+          "kanji": "時間",
+          "english": "Time",
+          "url": "t7_jikan.mp3"
         },
         {
           "id": "t7v_21",
           "type": "vocab",
-          "moji": "シャワー",
-          "romaji": "Shower",
-          "url": "シャワー.mp3"
+          "part": "noun",
+          "vocabulary": "シャワー",
+          "kanji": "",
+          "english": "Shower",
+          "url": "t7_shawa.mp3"
         },
         {
           "id": "t7v_22",
           "type": "vocab",
-          "moji": "せんたくします",
-          "romaji": "to launder/to do washing",
-          "url": "せんたくします.mp3"
+          "part": "verb",
+          "vocabulary": "せんたくします",
+          "kanji": "洗濯します",
+          "english": "to launder/to do washing",
+          "url": "t7_sentakushimasu.mp3"
         },
         {
           "id": "t7v_23",
           "type": "vocab",
-          "moji": "そうじします",
-          "romaji": "to clean, to sweep",
-          "url": "そうじします.mp3"
+          "part": "verb",
+          "vocabulary": "そうじします",
+          "kanji": "掃除します",
+          "english": "to clean, to sweep",
+          "url": "t7_soujishimasu.mp3"
         },
         {
           "id": "t7v_24",
           "type": "vocab",
-          "moji": "だいじょうぶ",
-          "romaji": "all right",
-          "url": "だいじょうぶ.mp3"
+          "part": "na-adjective",
+          "vocabulary": "だいじょうぶ",
+          "kanji": "大丈夫",
+          "english": "all right",
+          "url": "t7_daijoubu.mp3"
         },
         {
           "id": "t7v_25",
           "type": "vocab",
-          "moji": "タクシー",
-          "romaji": "taxi",
-          "url": "タクシー.mp3"
+          "part": "noun",
+          "vocabulary": "タクシー",
+          "kanji": "",
+          "english": "taxi",
+          "url": "t7_takushi.mp3"
         },
         {
           "id": "t7v_26",
           "type": "vocab",
-          "moji": "だんだん",
-          "romaji": "gradually",
-          "url": "だんだん.mp3"
+          "part": "adverb",
+          "vocabulary": "だんだん",
+          "kanji": "",
+          "english": "gradually",
+          "url": "t7_dandan.mp3"
         },
         {
           "id": "t7v_27",
           "type": "vocab",
-          "moji": "ちかてつ",
-          "romaji": "underground train",
-          "url": "ちかてつ.mp3"
+          "part": "noun",
+          "vocabulary": "ちかてつ",
+          "kanji": "地下鉄",
+          "english": "underground train",
+          "url": "t7_chikatetsu.mp3"
         },
         {
           "id": "t7v_28",
           "type": "vocab",
-          "moji": "つぎ",
-          "romaji": "next",
-          "url": "つぎ.mp3"
+          "part": "noun",
+          "vocabulary": "つぎ",
+          "kanji": "次",
+          "english": "next",
+          "url": "t7_tsugi.mp3"
         },
         {
           "id": "t7v_29",
           "type": "vocab",
-          "moji": "でかけます",
-          "romaji": "to go out",
-          "url": "でかけます.mp3"
+          "part": "verb",
+          "vocabulary": "でかけます",
+          "kanji": "出かけます",
+          "english": "to go out",
+          "url": "t7_dekakemasu.mp3"
         },
         {
           "id": "t7v_30",
           "type": "vocab",
-          "moji": "でます",
-          "romaji": "to appear,to leave",
-          "url": "でます.mp3"
+          "part": "verb",
+          "vocabulary": "でます",
+          "kanji": "出ます",
+          "english": "to appear,to leave",
+          "url": "t7_demasu.mp3"
         },
         {
           "id": "t7v_31",
           "type": "vocab",
-          "moji": "ならいます",
-          "romaji": "to learn",
-          "url": "ならいます.mp3"
+          "part": "verb",
+          "vocabulary": "ならいます",
+          "kanji": "習います",
+          "english": "to learn",
+          "url": "t7_naraimasu.mp3"
         },
         {
           "id": "t7v_32",
           "type": "vocab",
-          "moji": "のぼります",
-          "romaji": "to climb",
-          "url": "のぼります.mp3"
+          "part": "verb",
+          "vocabulary": "のぼります",
+          "kanji": "登ります",
+          "english": "to climb",
+          "url": "t7_noborimasu.mp3"
         },
         {
           "id": "t7v_33",
           "type": "vocab",
-          "moji": "はいります",
-          "romaji": "to enter, to contain",
-          "url": "はいります.mp3"
+          "part": "verb",
+          "vocabulary": "はいります",
+          "kanji": "入ります",
+          "english": "to enter, to contain",
+          "url": "t7_hairimasu.mp3"
         },
         {
           "id": "t7v_34",
           "type": "vocab",
-          "moji": "はこ",
-          "romaji": "box",
-          "url": "はこ.mp3"
+          "part": "noun",
+          "vocabulary": "はこ",
+          "kanji": "箱",
+          "english": "box",
+          "url": "t7_hako.mp3"
         },
         {
           "id": "t7v_35",
           "type": "vocab",
-          "moji": "はし",
-          "romaji": "tooth",
-          "url": "はし.mp3"
+          "part": "noun",
+          "vocabulary": "は",
+          "kanji": "歯",
+          "english": "tooth",
+          "url": "t7_ha.mp3"
         },
         {
           "id": "t7v_36",
           "type": "vocab",
-          "moji": "はし",
-          "romaji": "bridge",
-          "url": "はし.mp3"
+          "part": "noun",
+          "vocabulary": "はし",
+          "kanji": "橋",
+          "english": "bridge",
+          "url": "t7_hashi.mp3"
         },
         {
           "id": "t7v_37",
           "type": "vocab",
-          "moji": "はじめて",
-          "romaji": "for the first time",
-          "url": "はじめて.mp3"
+          "part": "adverb",
+          "vocabulary": "はじめて",
+          "kanji": "初めて",
+          "english": "for the first time",
+          "url": "t7_hajimete.mp3"
         },
         {
           "id": "t7v_38",
           "type": "vocab",
-          "moji": "はしります",
-          "romaji": "to run",
-          "url": "はしります.mp3"
+          "part": "verb",
+          "vocabulary": "はしります",
+          "kanji": "走ります",
+          "english": "to run",
+          "url": "t7_hashirimasu.mp3"
         },
         {
           "id": "t7v_39",
           "type": "vocab",
-          "moji": "びょういん",
-          "romaji": "hospital",
-          "url": "びょういん.mp3"
+          "part": "noun",
+          "vocabulary": "びょういん",
+          "kanji": "病院",
+          "english": "hospital",
+          "url": "t7_byouin.mp3"
         },
         {
           "id": "t7v_40",
           "type": "vocab",
-          "moji": "びょうき",
-          "romaji": "illness",
-          "url": "びょうき.mp3"
+          "part": "noun",
+          "vocabulary": "びょうき",
+          "kanji": "病気",
+          "english": "illness",
+          "url": "t7_byouki.mp3"
         },
         {
           "id": "t7v_41",
           "type": "vocab",
-          "moji": "まだ",
-          "romaji": "yet, still",
-          "url": "まだ.mp3"
+          "part": "adverb",
+          "vocabulary": "まだ",
+          "kanji": "",
+          "english": "yet, still",
+          "url": "t7_mada.mp3"
         },
         {
           "id": "t7v_42",
           "type": "vocab",
-          "moji": "みがきます",
-          "romaji": "to brush teeth, to polish",
-          "url": "みがきます.mp3"
+          "part": "verb",
+          "vocabulary": "みがきます",
+          "kanji": "磨きます",
+          "english": "to brush teeth, to polish",
+          "url": "t7_migakimasu.mp3"
         },
         {
           "id": "t7v_43",
           "type": "vocab",
-          "moji": "みち",
-          "romaji": "street",
-          "url": "みち.mp3"
+          "part": "noun",
+          "vocabulary": "みち",
+          "kanji": "道",
+          "english": "street",
+          "url": "t7_michi.mp3"
         },
         {
           "id": "t7v_44",
           "type": "vocab",
-          "moji": "もう",
-          "romaji": "already",
-          "url": "もう.mp3"
+          "part": "adverb",
+          "vocabulary": "もう",
+          "kanji": "",
+          "english": "already",
+          "url": "t7_mou.mp3"
         },
         {
           "id": "t7v_45",
           "type": "vocab",
-          "moji": "やま",
-          "romaji": "",
-          "url": "やま.mp3"
+          "part": "noun",
+          "vocabulary": "やま",
+          "kanji": "山",
+          "english": "",
+          "url": "t7_yama.mp3"
         },
         {
           "id": "t7v_46",
           "type": "vocab",
-          "moji": "れんしゅうします",
-          "romaji": "to practice",
-          "url": "れんしゅうします.mp3"
+          "part": "verb",
+          "vocabulary": "れんしゅうします",
+          "kanji": "練習します",
+          "english": "to practice",
+          "url": "t7_renshuushimasu.mp3"
         },
         {
           "id": "t7v_47",
           "type": "vocab",
-          "moji": "わたります",
-          "romaji": "to go across",
-          "url": "わたります.mp3"
+          "part": "verb",
+          "vocabulary": "わたります",
+          "kanji": "渡ります",
+          "english": "to go across",
+          "url": "t7_watarimasu.mp3"
         }
       ], 
       TOPIC7_TITLE_and_grammar : [
@@ -6540,275 +7396,353 @@ export const learnData =
         {
           "id": "t8v_1",
           "type": "vocab",
-          "moji": "あき",
-          "romaji": "autumn",
-          "url": "あき.mp3"
+          "part": "noun",
+          "vocabulary": "あき",
+          "kanji": "秋",
+          "english": "autumn",
+          "url": "t8_aki.mp3"
         },
         {
           "id": "t8v_2",
           "type": "vocab",
-          "moji": "いみ",
-          "romaji": "meaning",
-          "url": "いみ.mp3"
+          "part": "noun",
+          "vocabulary": "いみ",
+          "kanji": "意味",
+          "english": "meaning",
+          "url": "t8_imi.mp3"
         },
         {
           "id": "t8v_3",
           "type": "vocab",
-          "moji": "いりぐち",
-          "romaji": "entrance",
-          "url": "いりぐち.mp3"
+          "part": "noun",
+          "vocabulary": "いりぐち",
+          "kanji": "入口",
+          "english": "entrance",
+          "url": "t8_iriguchi.mp3"
         },
         {
           "id": "t8v_4",
           "type": "vocab",
-          "moji": "うります",
-          "romaji": "to sell",
-          "url": "うります.mp3"
+          "part": "verb",
+          "vocabulary": "うります",
+          "kanji": "売ります",
+          "english": "to sell",
+          "url": "t8_urimasu.mp3"
         },
         {
           "id": "t8v_5",
           "type": "vocab",
-          "moji": "おします",
-          "romaji": "to push, to stamp something",
-          "url": "おします.mp3"
+          "part": "verb",
+          "vocabulary": "おします",
+          "kanji": "押します",
+          "english": "to push, to stamp something",
+          "url": "t8_oshimasu.mp3"
         },
         {
           "id": "t8v_6",
           "type": "vocab",
-          "moji": "おぼえます",
-          "romaji": "to remember",
-          "url": "おぼえます.mp3"
+          "part": "verb",
+          "vocabulary": "おぼえます",
+          "kanji": "覚えます",
+          "english": "to remember",
+          "url": "t8_oboemasu.mp3"
         },
         {
           "id": "t8v_7",
           "type": "vocab",
-          "moji": "およぎます",
-          "romaji": "to swim",
-          "url": "およぎます.mp3"
+          "part": "verb",
+          "vocabulary": "およぎます",
+          "kanji": "泳ぎます",
+          "english": "to swim",
+          "url": "t8_oyogimasu.mp3"
         },
         {
           "id": "t8v_8",
           "type": "vocab",
-          "moji": "かぎ",
-          "romaji": "Key",
-          "url": "かぎ.mp3"
+          "part": "noun",
+          "vocabulary": "かぎ",
+          "kanji": "鍵",
+          "english": "Key",
+          "url": "t8_kagi.mp3"
         },
         {
           "id": "t8v_9",
           "type": "vocab",
-          "moji": "きた",
-          "romaji": "North",
-          "url": "きた.mp3"
+          "part": "noun",
+          "vocabulary": "きた",
+          "kanji": "北",
+          "english": "North",
+          "url": "t8_kita.mp3"
         },
         {
           "id": "t8v_10",
           "type": "vocab",
-          "moji": "げんかん",
-          "romaji": "entry hall",
-          "url": "げんかん.mp3"
+          "part": "noun",
+          "vocabulary": "げんかん",
+          "kanji": "玄関",
+          "english": "entry hall",
+          "url": "t8_genkan.mp3"
         },
         {
           "id": "t8v_11",
           "type": "vocab",
-          "moji": "こうばん",
-          "romaji": "police box",
-          "url": "こうばん.mp3"
+          "part": "noun",
+          "vocabulary": "こうばん",
+          "kanji": "交番",
+          "english": "police box",
+          "url": "t8_kouban.mp3"
         },
         {
           "id": "t8v_12",
           "type": "vocab",
-          "moji": "こえ",
-          "romaji": "Voice",
-          "url": "こえ.mp3"
+          "part": "noun",
+          "vocabulary": "こえ",
+          "kanji": "声",
+          "english": "Voice",
+          "url": "t8_koe.mp3"
         },
         {
           "id": "t8v_13",
           "type": "vocab",
-          "moji": "じぶん",
-          "romaji": "Oneself",
-          "url": "じぶん.mp3"
+          "part": "noun",
+          "vocabulary": "じぶん",
+          "kanji": "自分",
+          "english": "Oneself",
+          "url": "t8_jibun.mp3"
         },
         {
           "id": "t8v_14",
           "type": "vocab",
-          "moji": "すぐに",
-          "romaji": "Instantly",
-          "url": "すぐに.mp3"
+          "part": "adverb",
+          "vocabulary": "すぐに",
+          "kanji": "",
+          "english": "Instantly",
+          "url": "t8_suguni.mp3"
         },
         {
           "id": "t8v_15",
           "type": "vocab",
-          "moji": "だけ",
-          "romaji": "",
-          "url": "だけ.mp3"
+          "part": "adverb",
+          "vocabulary": "だけ",
+          "kanji": "",
+          "english": "",
+          "url": "t8_dake.mp3"
         },
         {
           "id": "t8v_16",
           "type": "vocab",
-          "moji": "だします",
-          "romaji": "to put out",
-          "url": "だします.mp3"
+          "part": "verb",
+          "vocabulary": "だします",
+          "kanji": "出します",
+          "english": "to put out",
+          "url": "t8_dashimasu.mp3"
         },
         {
           "id": "t8v_17",
           "type": "vocab",
-          "moji": "たぶん",
-          "romaji": "probably",
-          "url": "たぶん.mp3"
+          "part": "adverb",
+          "vocabulary": "たぶん",
+          "kanji": "",
+          "english": "probably",
+          "url": "t8_tabun.mp3"
         },
         {
           "id": "t8v_18",
           "type": "vocab",
-          "moji": "ちょうど",
-          "romaji": "exactly",
-          "url": "ちょうど.mp3"
+          "part": "adverb",
+          "vocabulary": "ちょうど",
+          "kanji": "",
+          "english": "exactly",
+          "url": "t8_choudo.mp3"
         },
         {
           "id": "t8v_19",
           "type": "vocab",
-          "moji": "つかれます",
-          "romaji": "to get tired",
-          "url": "つかれます.mp3"
+          "part": "verb",
+          "vocabulary": "つかれます",
+          "kanji": "疲れます",
+          "english": "to get tired",
+          "url": "t8_tsukaremasu.mp3"
         },
         {
           "id": "t8v_20",
           "type": "vocab",
-          "moji": "でぐち",
-          "romaji": "exit",
-          "url": "でぐち.mp3"
+          "part": "noun",
+          "vocabulary": "でぐち",
+          "kanji": "出口",
+          "english": "exit",
+          "url": "t8_deguchi.mp3"
         },
         {
           "id": "t8v_21",
           "type": "vocab",
-          "moji": "でも",
-          "romaji": "but",
-          "url": "でも.mp3"
+          "part": "接続詞",
+          "vocabulary": "でも",
+          "kanji": "",
+          "english": "but",
+          "url": "t8_demo.mp3"
         },
         {
           "id": "t8v_22",
           "type": "vocab",
-          "moji": "どうぶつ",
-          "romaji": "animal",
-          "url": "どうぶつ.mp3"
+          "part": "noun",
+          "vocabulary": "どうぶつ",
+          "kanji": "動物",
+          "english": "animal",
+          "url": "t8_doubutsu.mp3"
         },
         {
           "id": "t8v_23",
           "type": "vocab",
-          "moji": "なつ",
-          "romaji": "summer",
-          "url": "なつ.mp3"
+          "part": "noun",
+          "vocabulary": "なつ",
+          "kanji": "夏",
+          "english": "summer",
+          "url": "t8_natsu.mp3"
         },
         {
           "id": "t8v_24",
           "type": "vocab",
-          "moji": "にし",
-          "romaji": "west",
-          "url": "にし.mp3"
+          "part": "noun",
+          "vocabulary": "にし",
+          "kanji": "西",
+          "english": "west",
+          "url": "t8_nishi.mp3"
         },
         {
           "id": "t8v_25",
           "type": "vocab",
-          "moji": "にもつ",
-          "romaji": "luggage",
-          "url": "にもつ.mp3"
+          "part": "noun",
+          "vocabulary": "にもつ",
+          "kanji": "荷物",
+          "english": "luggage",
+          "url": "t8_nimotsu.mp3"
         },
         {
           "id": "t8v_26",
           "type": "vocab",
-          "moji": "ぬぎます",
-          "romaji": "to take off clothes",
-          "url": "ぬぎます.mp3"
+          "part": "verb",
+          "vocabulary": "ぬぎます",
+          "kanji": "脱ぎます",
+          "english": "to take off clothes",
+          "url": "t8_nugimasu.mp3"
         },
         {
           "id": "t8v_27",
           "type": "vocab",
-          "moji": "はきます",
-          "romaji": "to wear, to put on trousers",
-          "url": "はきます.mp3"
+          "part": "verb",
+          "vocabulary": "はきます",
+          "kanji": "履きます",
+          "english": "to wear, to put on trousers",
+          "url": "t8_hakimasu.mp3"
         },
         {
           "id": "t8v_28",
           "type": "vocab",
-          "moji": "はじめ",
-          "romaji": "beginning",
-          "url": "はじめ.mp3"
+          "part": "noun",
+          "vocabulary": "はじめ",
+          "kanji": "初め/始め",
+          "english": "beginning",
+          "url": "t8_hajime.mp3"
         },
         {
           "id": "t8v_29",
           "type": "vocab",
-          "moji": "はなし",
-          "romaji": "talk, story",
-          "url": "はなし.mp3"
+          "part": "noun",
+          "vocabulary": "はなし",
+          "kanji": "話",
+          "english": "talk, story",
+          "url": "t8_hanashi.mp3"
         },
         {
           "id": "t8v_30",
           "type": "vocab",
-          "moji": "はる",
-          "romaji": "spring",
-          "url": "はる.mp3"
+          "part": "noun",
+          "vocabulary": "はる",
+          "kanji": "春",
+          "english": "spring",
+          "url": "t8_haru.mp3"
         },
         {
           "id": "t8v_31",
           "type": "vocab",
-          "moji": "はんぶん",
-          "romaji": "half minute",
-          "url": "はんぶん.mp3"
+          "part": "noun",
+          "vocabulary": "はんぶん",
+          "kanji": "半分",
+          "english": "half minute",
+          "url": "t8_hanbun.mp3"
         },
         {
           "id": "t8v_32",
           "type": "vocab",
-          "moji": "ひがし",
-          "romaji": "east",
-          "url": "ひがし.mp3"
+          "part": "noun",
+          "vocabulary": "ひがし",
+          "kanji": "東",
+          "english": "east",
+          "url": "t8_higashi.mp3"
         },
         {
           "id": "t8v_33",
           "type": "vocab",
-          "moji": "ほか",
-          "romaji": "other, the rest",
-          "url": "ほか.mp3"
+          "part": "noun",
+          "vocabulary": "ほか",
+          "kanji": "",
+          "english": "other, the rest",
+          "url": "t8_hoka.mp3"
         },
         {
           "id": "t8v_34",
           "type": "vocab",
-          "moji": "ポケット",
-          "romaji": "pocket",
-          "url": "ポケット.mp3"
+          "part": "noun",
+          "vocabulary": "ポケット",
+          "kanji": "",
+          "english": "pocket",
+          "url": "t8_poketto.mp3"
         },
         {
           "id": "t8v_35",
           "type": "vocab",
-          "moji": "ボタン",
-          "romaji": "button",
-          "url": "ボタン.mp3"
+          "part": "noun",
+          "vocabulary": "ボタン",
+          "kanji": "",
+          "english": "button",
+          "url": "t8_botan.mp3"
         },
         {
           "id": "t8v_36",
           "type": "vocab",
-          "moji": "ほんとう",
-          "romaji": "truth",
-          "url": "ほんとう.mp3"
+          "part": "noun",
+          "vocabulary": "ほんとう",
+          "kanji": "本当",
+          "english": "truth",
+          "url": "t8_hontou.mp3"
         },
         {
           "id": "t8v_37",
           "type": "vocab",
-          "moji": "みなみ",
-          "romaji": "south",
-          "url": "みなみ.mp3"
+          "part": "noun",
+          "vocabulary": "みなみ",
+          "kanji": "南",
+          "english": "south",
+          "url": "t8_minami.mp3"
         },
         {
           "id": "t8v_38",
           "type": "vocab",
-          "moji": "もの",
-          "romaji": "thing",
-          "url": "もの.mp3"
+          "part": "noun",
+          "vocabulary": "もの",
+          "kanji": "",
+          "english": "thing",
+          "url": "t8_mono.mp3"
         },
         {
           "id": "t8v_39",
           "type": "vocab",
-          "moji": "わすれます",
-          "romaji": "to forget",
-          "url": "わすれます.mp3"
+          "part": "verb",
+          "vocabulary": "わすれます",
+          "kanji": "忘れます",
+          "english": "to forget",
+          "url": "t8_wasuremasu.mp3"
         }
       ], 
       TOPIC8_TITLE_and_grammar : [

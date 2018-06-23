@@ -147,8 +147,7 @@ module.exports = StyleSheet.create({
     },
     containerHome2 : {
         position: 'relative',
-        padding : 20,
-
+        padding : 20        
     },
     containerHomeinside2: {
         borderWidth: 1,
@@ -174,6 +173,9 @@ module.exports = StyleSheet.create({
         height: 60,
         borderBottomWidth: 1,
         borderBottomColor: '#ddd',
+    },
+    NoBorder : {
+        borderBottomWidth: 0
     },
     HomeIcon : {
         backgroundColor : '#45b4e7',

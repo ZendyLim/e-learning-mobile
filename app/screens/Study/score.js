@@ -47,14 +47,21 @@ import {
       index: navigation.getParam('index', null),
       headerTitle: navigation.getParam('headerTitle', null),
       studyType: navigation.getParam('studyType', null),
+      isTopicTest: navigation.getParam('isTopicTest', null),
+      formatType: navigation.getParam('formatType', null),
+      idList: navigation.getParam('idList', null),
+      oneType: navigation.getParam('oneType',null)
     }    
 
     this.item = StudyList[initialParams.index];
     this.item['index'] = initialParams.index;
     this.item['studyType'] = initialParams.studyType;
-    //this.item['headerTitle'] = this.item.title; 
+    this.item['isTopicTest'] = initialParams.isTopicTest; 
     this.item['headerTitle'] = initialParams.headerTitle;
-    console.log(this.item);
+    this.item['formatType'] = initialParams.formatType;
+    this.item['idList'] = initialParams.idList;
+    this.item['oneType'] = initialParams.oneType;
+      
   }
   goToTopicSelection = () =>  {    
 
@@ -67,8 +74,24 @@ import {
       });
       this.props.navigation.dispatch(resetAction);
       
-    }else{
-      this.retry();
+    }
+    else if(this.item.formatType == 'FUKUSHU'){
+      const resetAction = NavigationActions.reset({ 
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'StudyList' }),
+        ]
+      });
+      this.props.navigation.dispatch(resetAction);
+    }
+    else{
+      var nav = this.setNavStudyList(this.state.type, 1);
+                     
+      const resetAction = NavigationActions.reset(nav);
+      
+      this.props.navigation.dispatch(resetAction);
+
+      
     }
   }
   componentWillUnmount(){
@@ -82,11 +105,36 @@ import {
                      
     const resetAction = NavigationActions.reset(nav);
     
-    this.props.navigation.dispatch(resetAction);
-  
+    this.props.navigation.dispatch(resetAction);    
   }
 
   setNav(type, index) {
+    let nav;
+
+    if(this.item.headerTitle == 'topic_test'){
+      nav = { 
+        index: index,
+        actions: [
+          NavigationActions.navigate({ routeName: 'StudyList' }),
+          NavigationActions.navigate({ routeName: 'QuizFlash' , params: this.item })
+        ]
+      };
+    }
+    else{
+      
+      nav = { 
+        index: index,
+        actions: [
+          NavigationActions.navigate({ routeName: 'StudyList' }),
+          NavigationActions.navigate({ routeName: 'QuizFlash' , params: this.item })
+        ]
+      };
+    }
+
+    return nav;
+  }
+
+  setNavStudyList(type, index) {
     let nav;
 
     if(this.item.headerTitle == 'topic_test'){
@@ -99,7 +147,7 @@ import {
       };
     }
     else{
-      console.log(this.item);
+      
       nav = { 
         index: index,
         actions: [
@@ -256,7 +304,7 @@ const study = require('../../styles/study');
 function mapStateToProps(state, props) {
 
   const score = Helper.countScore(state.study.studyRecord,state.study.quizSize);
-
+  
   return {
       StudentID: state.user.user.id,
       studyRecord: state.study.studyRecord,

@@ -403,6 +403,18 @@ module.exports = StyleSheet.create({
 			position:'absolute'
 		},
 		// Question Panel
+		quizInfo:{
+			//position:"absolute",
+			right:0,
+			top:0,
+			zIndex:10,
+			padding:5,
+			backgroundColor:"rgba(255,255,255,0.8)"
+		},
+		quizInfoText:{
+			fontSize:16,
+			textAlign:"right"
+		},
 		questionWrapper: {
 			padding:10,
 			flex: 1,
@@ -522,7 +534,9 @@ module.exports = StyleSheet.create({
 		timesUpText:{
 			color:'#fff',
 			flexDirection:'column',
-			fontSize:36
+			fontSize:36,
+			marginLeft:5,
+			marginRight:5
 		},
 		quizBtnContainer:{
 			position:'relative'
@@ -544,17 +558,15 @@ module.exports = StyleSheet.create({
 			width:(window.width/2.5) - 10,
 		},
 		quizLong:{
-			padding:5,
+			padding:10,
 			width: window.width - 30
 		},
 		quizGrammar:{
-			padding:5,
-			paddingLeft:10,
-			paddingRight:10,
+			padding:10,
 			width: window.width - 30
 		},
 		quizVocab:{
-			padding:5,
+			padding:10,
 			width: window.width - 30
 		},
 		quizBtnPress:{
@@ -619,8 +631,8 @@ module.exports = StyleSheet.create({
 			paddingBottom:20
 		},
 		quizAnswerWrapper:{			
-			position:'relative',
-			height: window.height - 210,			
+			position:'relative',			
+			height: window.height - 290,						
 		},
 		additionalInfo:{
 			fontSize:25,
@@ -630,13 +642,13 @@ module.exports = StyleSheet.create({
 			color:textSecondary
 		},
 		blocker:{
-			position:'absolute',
+			position:'absolute',			
 			width:'100%',
 			height:'100%',
 			left:0,
 			top:0,
 			elevation:10,
-			zIndex:10
+			zIndex:99
 		},
 		absoluteScreen : {
 			position: 'absolute',
@@ -716,7 +728,7 @@ module.exports = StyleSheet.create({
 			position:'absolute',
 			top:10,
 			right:10,
-			zIndex:10,			
+			zIndex:20,			
 		},
 		correctVolume:{
 			color:primaryColor,
