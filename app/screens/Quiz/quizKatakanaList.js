@@ -21,7 +21,8 @@ import  { strings }   from '../../config/localization';
     static navigationOptions = ({ navigation }) =>{
         const {state} = navigation;
         return {
-            title: `${strings['KATAKANA_LIST_TITLE']}`,
+            // title: `${strings['KATAKANA_LIST_TITLE']}`,
+            title: `${strings[state.params.quizHeaderTitle]}`,
         };
       };
 
@@ -129,6 +130,16 @@ import  { strings }   from '../../config/localization';
                 this.setState({ statusPerRow: this.checkRows })
             }
         }
+        katakanaList.map((item, key)=>(
+            this.checkItems[key] = false,
+            this.setState({ stsList: this.checkItems }),
+            this.selectedList(key)
+        ));  
+        
+        this.setState({stsList: ""});
+        this.setState({idList:[]});
+        this.setState({statusCheckAll:false});
+        this.setState({ checkAllText: strings['CHECK_ALL'] })
     }
 
 
@@ -166,6 +177,7 @@ import  { strings }   from '../../config/localization';
     // };
 
     checkAll(){
+        console.log(this.state.statusCheckAll,"status")
         this.setState({statusCheckAll: !this.state.statusCheckAll})
         if(this.state.statusCheckAll){
             {katakanaList.map((item, key)=>(
@@ -178,7 +190,14 @@ import  { strings }   from '../../config/localization';
             ))};  
             this.setState({ checkAllText: strings['CHECK_ALL'] })     
         }else{
-            {katakanaList.map((item, key)=>(
+            this.checkAllValidation() 
+            this.setState({ checkAllText: strings['UNCHECK_ALL'] })    
+        }
+    };
+
+    checkAllValidation(){
+        if(this.state.idList.length==0){
+           {katakanaList.map((item, key)=>(
                 this.checkItems[key] = true,
                 this.setState({ stsList: this.checkItems }),
                 this.selectedList(key),
@@ -186,9 +205,21 @@ import  { strings }   from '../../config/localization';
                 this.checkRows[key] = true,
                 this.setState({ statusPerRow: this.checkRows })
             ))};  
-            this.setState({ checkAllText: strings['UNCHECK_ALL'] })    
         }
-    };
+        else{
+            for(x=0;x<katakanaList.length;x++){
+                if(this.checkItems[x] != true){
+                    this.checkItems[x] = true,
+                    this.setState({ stsList: this.checkItems }),
+                    this.selectedList(x),
+    
+                    this.checkRows[x] = true,
+                    this.setState({ statusPerRow: this.checkRows })
+                }
+            }
+        } 
+    }
+
     checkRow(key){
         if(this.checkRows[key]){
             this.checkRows[key] = false,
@@ -215,7 +246,7 @@ import  { strings }   from '../../config/localization';
     checkRowStatus(status) {
         return status == true;
     }
-    checkAllStatus = () => {   
+    checkAllStatus = () => {
         if(this.checkRows.every(this.checkRowStatus)){
             this.setState({statusCheckAll: true})
             this.setState({ checkAllText: strings['UNCHECK_ALL'] }) 
@@ -227,8 +258,9 @@ import  { strings }   from '../../config/localization';
 
     proceed = () => {
         const { navigation } = this.props;
-        
         if(!this.validation()){
+            const idList = this.state.idList;
+            this.setStatusfalse();
             this.props.navigation.navigate('QuizFlash', {
                 type: navigation.getParam('type',null),
                 title: navigation.getParam('title',null),

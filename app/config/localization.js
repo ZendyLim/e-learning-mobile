@@ -263,14 +263,21 @@ export let strings = new LocalizedStrings({
    HIRAGANA_KATAKANA_LIST_VALIDATION : "少なくとも5つのデータを選択する必要があります",
    
     //login part
-  SIGN_IN : "サインイン",
-  SIGN_IN_USERNAME : "ユーザー名",
-  SIGN_IN_PASSWORD : "パスワード",
-  SIGN_IN_MESSAGE : "ユーザー名とパスワードを入力してください",
-  SIGN_IN_VALIDATION_USERNAME : "ユーザー名が必須です",
-  SIGN_IN_VALIDATION_PASSWORD : "パスワードが必須です",
-  SIGN_IN_VALIDATION_FAILED : "ユーザー名とパスワードが間違った",
+  // SIGN_IN : "サインイン",
+  // SIGN_IN_USERNAME : "ユーザー名",
+  // SIGN_IN_PASSWORD : "パスワード",
+  // SIGN_IN_MESSAGE : "ユーザー名とパスワードを入力してください",
+  // SIGN_IN_VALIDATION_USERNAME : "ユーザー名が必須です",
+  // SIGN_IN_VALIDATION_PASSWORD : "パスワードが必須です",
+  // SIGN_IN_VALIDATION_FAILED : "ユーザー名とパスワードが間違った",
   
+  SIGN_IN : "Sign In",
+  SIGN_IN_USERNAME : "Username",
+  SIGN_IN_PASSWORD : "Password",
+  SIGN_IN_MESSAGE : "Input your username and password",
+  SIGN_IN_VALIDATION_USERNAME : "User name is required",
+  SIGN_IN_VALIDATION_PASSWORD : "Password is required",
+  SIGN_IN_VALIDATION_FAILED : "Username and password is wrong",
 
   //profile part
   PROFILE_PERSONAL_DATA : "個人データ",

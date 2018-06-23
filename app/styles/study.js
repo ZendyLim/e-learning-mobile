@@ -175,7 +175,7 @@ module.exports = StyleSheet.create({
   },
   summaryLearn : {
     width: '100%',
-    height: 30,
+    height: "auto",
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
@@ -186,6 +186,7 @@ module.exports = StyleSheet.create({
   },
   summaryTitle : {
     flex: 2,
+    fontSize:15,
   },
   summaryDetail : {
     flex: 1,

@@ -61,7 +61,7 @@ import {
     const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
-    return  datefinish.getDate() + " " + monthNames[datefinish.getMonth()] + " " + datefinish.getFullYear() + " " + datefinish.getHours() + ":" + datefinish.getMinutes();
+    return  datefinish.getDate() + " " + monthNames[datefinish.getMonth()] + " " + datefinish.getFullYear() + "\n" + datefinish.getHours() + ":" + datefinish.getMinutes();
   }
 
   checkType = (itemType) =>{

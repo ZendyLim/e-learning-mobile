@@ -89,7 +89,7 @@ class HiraganaListScreen extends Component {
         headerTitle: this.state.headerTitle
       };
         
-      if(topicId == 'T001'){
+      if(param.topicId == 'T001'){
         this.props.navigation.navigate('QuizMain',(
           param
         ));
