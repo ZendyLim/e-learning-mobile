@@ -199,7 +199,7 @@ import {
                       <View style={ !timerRun && styles.blocker }></View>
                       <View style={[ styles.quizInfo ]}>
                         <Text style={ styles.quizInfoText }>
-                          Points: { this.setScore() }/100 Questions: { this.state.counter+1 }/{ this.allQuestion.length }
+                          {strings.POINTS}: { this.setScore() }/100 {strings.QUESTIONS}: { this.state.counter+1 }/{ this.allQuestion.length }
                         </Text>
                       </View>
 
@@ -776,12 +776,6 @@ import {
 
           this.setState(this.initialState);
           this.props.navigation.dispatch(resetAction);
-
-          // this.props.navigation.navigate('ScoreScreen',{
-          //   index : this.state.index,
-          //   typeQuiz : this.initialParams.formatType,
-          //   studyTitle : this.title
-          // });
           
         }
       }
