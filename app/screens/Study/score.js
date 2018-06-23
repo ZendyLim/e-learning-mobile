@@ -303,7 +303,7 @@ const study = require('../../styles/study');
 // and insert/links it into the props of our component.
 // This function makes Redux know that this component needs to be passed a piece of the state
 function mapStateToProps(state, props) {
-
+  console.log(state.study);
   const score = Helper.countScore(state.study.studyRecord,state.study.quizSize);
   
   return {
