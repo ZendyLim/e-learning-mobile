@@ -6222,7 +6222,7 @@ export const flashData = [
         "type": "vocab",
         "moji": "いもうと",
         "romaji": "(humble) younger sister",
-        "url": "t6_imōto.mp3"
+        "url": "t6_imouto.mp3"
       },
       {
         "id": "t6v_12",
@@ -6984,7 +6984,7 @@ export const flashData = [
         "type": "vocab",
         "moji": "おべんとう",
         "romaji": "boxed lunch",
-        "url": "t7_obentō.mp3"
+        "url": "t7_obentou.mp3"
       },
       {
         "id": "t7v_11",
@@ -7187,14 +7187,14 @@ export const flashData = [
         "type": "vocab",
         "moji": "びょういん",
         "romaji": "hospital",
-        "url": "t7_byōin.mp3"
+        "url": "t7_byouin.mp3"
       },
       {
         "id": "t7v_40",
         "type": "vocab",
         "moji": "びょうき",
         "romaji": "illness",
-        "url": "t7_byōki.mp3"
+        "url": "t7_byouki.mp3"
       },
       {
         "id": "t7v_41",
@@ -7436,7 +7436,7 @@ export const flashData = [
         "type": "kanji",
         "moji": "貝",
         "romaji": "かい",
-        "url": "t7_sakana.mp3"
+        "url": "t7_kai.mp3"
       },
       {
         "id": "t7k_12",
@@ -7967,7 +7967,7 @@ export const flashData = [
         "type": "kanji",
         "moji": "乗",
         "romaji": "の",
-        "url": ".mp3"
+        "url": "no.mp3"
       },
       {
         "id": "t8k_11",
@@ -8004,6 +8004,43 @@ export const flashData = [
         "romaji": "ご",
         "url": "t8_go_noon.mp3"
       }
+    ], 
+    TEST : [
+      {
+        "id": "t8k_1",
+        "type": "kanji",
+        "moji": "英",
+        "romaji": "えい",
+        "url": "t8_ei.mp3"
+      },
+      {
+        "id": "t8k_2",
+        "type": "kanji",
+        "moji": "語",
+        "romaji": "ご",
+        "url": "t8_go.mp3"
+      },
+      {
+        "id": "t8k_3",
+        "type": "kanji",
+        "moji": "天",
+        "romaji": "てん",
+        "url": "t8_ten.mp3"
+      },
+      {
+        "id": "t8k_4",
+        "type": "kanji",
+        "moji": "気",
+        "romaji": "き",
+        "url": "t8_ki.mp3"
+      },
+      {
+        "id": "t8k_5",
+        "type": "kanji",
+        "moji": "雨",
+        "romaji": "あめ",
+        "url": "t8_ame.mp3"
+      },
     ]
   }
 ]
