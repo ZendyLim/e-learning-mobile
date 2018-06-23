@@ -118,6 +118,13 @@ import {
         listening: 3
       }
 
+      // this.testItemCount = {
+      //   vocabulary: 1,
+      //   kanji: 1,
+      //   grammar: 1,
+      //   reading: 1,
+      //   listening: 1
+      // }
       this.shortType = {
         'v' : 'vocabulary',
         'g' : 'grammar',
@@ -848,12 +855,17 @@ import {
   };
 
   setScore(){
-    var quizSizes = 0;
-
+    var quizSizes = this.allQuestion.length;
+    
     if(this.initialParams.isTopicTest){
-      quizSizes = this.allQuestion.length;
+      
+      return Helper.countScore(this.studyRecord,quizSizes);
     }  
-    return Helper.countScore(this.studyRecord,quizSizes);
+    else{
+      return Helper.countScore(this.studyRecord,quizSizes,true);
+    }
+    
+    
   }
 
     goNextQuestion() {            
