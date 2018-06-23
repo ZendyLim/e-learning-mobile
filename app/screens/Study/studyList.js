@@ -64,9 +64,7 @@ class StudyListScreen extends Component {
       this.props.navigation.navigate('QuizFlash',(
          item
       ));
-      // this.props.navigation.navigate('TopicList',(
-      //   item
-      // ));
+      
     }
     else{
       this.props.navigation.navigate('TopicList',(

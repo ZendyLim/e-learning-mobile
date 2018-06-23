@@ -47,8 +47,8 @@ class CorrectPanel extends Component {
           <View>
             <Text style={ styles.correctText }>{ this.stripSpace(displayToText) }</Text>
             <Text style={ styles.correctText }>{ this.props.question.romaji }</Text>
-            <Text style={ styles.correctHighlight }>English</Text>
-            <Text style={ styles.correctText }>{ this.props.question.english }</Text>
+            {/* <Text style={ styles.correctHighlight }>English</Text> */}
+            {/* <Text style={ styles.correctText }>{ this.props.question.english }</Text> */}
           </View>
           
           {this.props.question.audio != '' && 

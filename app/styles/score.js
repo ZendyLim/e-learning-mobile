@@ -212,7 +212,12 @@ module.exports = StyleSheet.create({
     },
     imageHome : {
         width: '100%',
-        height: '100%',
+        height: '100%',        
+    },
+    ruleScore:{
+        fontSize:16,
+        marginBottom:10,
+        textAlign:"center",
         elevation: 4
     }
       

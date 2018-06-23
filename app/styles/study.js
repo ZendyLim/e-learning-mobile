@@ -250,11 +250,9 @@ module.exports = StyleSheet.create({
   nextTopic: {
     height: 60,
     width : '98%',
-    backgroundColor: '#cccccc',
+    backgroundColor: primaryColor,
     justifyContent: 'center',
     alignItems: 'center',
-    borderColor: '#cccccc',
-    borderWidth: 1,
     borderRadius: 5,
   },
   buttonTopicNextText:{
