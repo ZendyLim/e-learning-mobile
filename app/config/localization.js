@@ -130,6 +130,11 @@ export let strings = new LocalizedStrings({
   PROFILE_FB_SIGN_IN : "Sign In :",
   PROFILE_SETTING : "Setting",
   PROFILE_LOGOUT : "Logout",
+
+  LOGOUT_CONFIRM:"Confirm",
+  LOGOUT_YES:"Yes",
+  LOGOUT_CANCEL:"Cancel",
+  LOGOUT_MESSAGE:"Are you sure you want to logout?",
   //summary part
   SUMMARY_VOCABULARY : "Vocabulary",
   SUMMARY_GRAMMAR: "Grammar",
@@ -309,7 +314,11 @@ export let strings = new LocalizedStrings({
   PROFILE_FB_SIGN_IN : "サインイン :",
   PROFILE_SETTING : "設定",
   PROFILE_LOGOUT : "ログアウト",
-
+  
+  LOGOUT_CONFIRM:"確認",
+  LOGOUT_YES:"はい",
+  LOGOUT_CANCEL:"キャンセル",
+  LOGOUT_MESSAGE:"ログアウトしてもよろしいですか？",
   
   //summary part
   SUMMARY_HEADER : "概要",
