@@ -22,7 +22,7 @@ export function countScore(studyRecord,quizItems = 0, byPoint = false) {
     if(quizItems && !byPoint){
         countQuest = 100;
     }
-    else{
+    else if(byPoint){
         countQuest = quizItems * 2;
     }
 
