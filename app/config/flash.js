@@ -6222,7 +6222,7 @@ export const flashData = [
         "type": "vocab",
         "moji": "いもうと",
         "romaji": "(humble) younger sister",
-        "url": "t6_imōto.mp3"
+        "url": "t6_imouto.mp3"
       },
       {
         "id": "t6v_12",
@@ -6264,14 +6264,14 @@ export const flashData = [
         "type": "vocab",
         "moji": "おじいさん",
         "romaji": "grandfather, male senior citizen",
-        "url": "t6_oji_san.mp3"
+        "url": "t6_ojii_san.mp3"
       },
       {
         "id": "t6v_18",
         "type": "vocab",
-        "moji": "おじいさん",
+        "moji": "おじさん",
         "romaji": "uncle, middle aged gentleman",
-        "url": "t6_ojii_san.mp3"
+        "url": "t6_oji_san.mp3"
       },
       {
         "id": "t6v_19",
@@ -6311,7 +6311,7 @@ export const flashData = [
       {
         "id": "t6v_24",
         "type": "vocab",
-        "moji": "おば",
+        "moji": "おばさん",
         "romaji": "Aunt",
         "url": "t6_oba.mp3"
       },
@@ -6451,194 +6451,201 @@ export const flashData = [
       {
         "id": "t6v_44",
         "type": "vocab",
+        "moji": "しゅみ",
+        "romaji": "hobby",
+        "url": "t6_shumi.mp3"
+      },
+      {
+        "id": "t6v_45",
+        "type": "vocab",
         "moji": "じょうず",
         "romaji": "Skillful",
         "url": "t6_jouzu.mp3"
       },
       {
-        "id": "t6v_45",
+        "id": "t6v_46",
         "type": "vocab",
         "moji": "じょうぶ",
         "romaji": "strong, durable",
         "url": "t6_joubu.mp3"
       },
       {
-        "id": "t6v_46",
+        "id": "t6v_47",
         "type": "vocab",
         "moji": "しります",
         "romaji": "to know",
         "url": "t6_shirimasu.mp3"
       },
       {
-        "id": "t6v_47",
+        "id": "t6v_48",
         "type": "vocab",
         "moji": "しろい",
         "romaji": "White",
         "url": "t6_shiroi.mp3"
       },
       {
-        "id": "t6v_48",
+        "id": "t6v_49",
         "type": "vocab",
         "moji": "すくない",
         "romaji": "a few",
         "url": "t6_sukunai.mp3"
       },
       {
-        "id": "t6v_49",
+        "id": "t6v_50",
         "type": "vocab",
         "moji": "すみます",
         "romaji": "to live in",
         "url": "t6_sumimasu.mp3"
       },
       {
-        "id": "t6v_50",
+        "id": "t6v_51",
         "type": "vocab",
         "moji": "せ",
         "romaji": "height, stature",
         "url": "t6_se.mp3"
       },
       {
-        "id": "t6v_51",
+        "id": "t6v_52",
         "type": "vocab",
         "moji": "たいせつ",
         "romaji": "important",
         "url": "t6_taisetsu.mp3"
       },
       {
-        "id": "t6v_52",
+        "id": "t6v_53",
         "type": "vocab",
         "moji": "ちかい",
         "romaji": "near",
         "url": "t6_chikai.mp3"
       },
       {
-        "id": "t6v_53",
+        "id": "t6v_54",
         "type": "vocab",
         "moji": "つよい",
         "romaji": "powerful",
         "url": "t6_tsuyoi.mp3"
       },
       {
-        "id": "t6v_54",
+        "id": "t6v_55",
         "type": "vocab",
         "moji": "て",
         "romaji": "hand",
         "url": "t6_te.mp3"
       },
       {
-        "id": "t6v_55",
+        "id": "t6v_56",
         "type": "vocab",
         "moji": "とおい",
         "romaji": "far",
         "url": "t6_toui.mp3"
       },
       {
-        "id": "t6v_56",
+        "id": "t6v_57",
         "type": "vocab",
         "moji": "ながい",
         "romaji": "long",
         "url": "t6_nagai.mp3"
       },
       {
-        "id": "t6v_57",
+        "id": "t6v_58",
         "type": "vocab",
         "moji": "ならびます",
         "romaji": "to line up, to stand in a line",
         "url": "t6_narabimasu.mp3"
       },
       {
-        "id": "t6v_58",
+        "id": "t6v_59",
         "type": "vocab",
         "moji": "なります",
         "romaji": "to become",
         "url": "t6_narimasu.mp3"
       },
       {
-        "id": "t6v_59",
+        "id": "t6v_60",
         "type": "vocab",
         "moji": "はな",
         "romaji": "nose",
         "url": "t6_hana.mp3"
       },
       {
-        "id": "t6v_60",
+        "id": "t6v_61",
         "type": "vocab",
         "moji": "ひと",
         "romaji": "person",
         "url": "t6_hito.mp3"
       },
       {
-        "id": "t6v_61",
+        "id": "t6v_62",
         "type": "vocab",
         "moji": "ひろい",
         "romaji": "spacious, wide",
         "url": "t6_hiroi.mp3"
       },
       {
-        "id": "t6v_62",
+        "id": "t6v_63",
         "type": "vocab",
         "moji": "へた",
         "romaji": "unskillful",
         "url": "t6_heta.mp3"
       },
       {
-        "id": "t6v_63",
+        "id": "t6v_64",
         "type": "vocab",
         "moji": "まるい",
         "romaji": "round, circular",
         "url": "t6_marui.mp3"
       },
       {
-        "id": "t6v_64",
+        "id": "t6v_65",
         "type": "vocab",
         "moji": "みじかい",
         "romaji": "short",
         "url": "t6_mijikai.mp3"
       },
       {
-        "id": "t6v_65",
+        "id": "t6v_66",
         "type": "vocab",
         "moji": "みどり",
         "romaji": "green",
         "url": "t6_midori.mp3"
       },
       {
-        "id": "t6v_66",
+        "id": "t6v_67",
         "type": "vocab",
         "moji": "みみ",
         "romaji": "ear",
         "url": "t6_mimi.mp3"
       },
       {
-        "id": "t6v_67",
+        "id": "t6v_68",
         "type": "vocab",
         "moji": "め",
         "romaji": "eye",
         "url": "t6_me.mp3"
       },
       {
-        "id": "t6v_68",
+        "id": "t6v_69",
         "type": "vocab",
         "moji": "もちます",
         "romaji": "to hold",
         "url": "t6_mochimasu.mp3"
       },
       {
-        "id": "t6v_69",
+        "id": "t6v_70",
         "type": "vocab",
         "moji": "よわい",
         "romaji": "weak",
         "url": "t6_yowai.mp3"
       },
       {
-        "id": "t6v_70",
+        "id": "t6v_71",
         "type": "vocab",
         "moji": "りょうしん",
         "romaji": "both parents",
         "url": "t6_ryoushin.mp3"
       },
       {
-        "id": "t6v_71",
+        "id": "t6v_72",
         "type": "vocab",
         "moji": "わかい",
         "romaji": "young",
@@ -6984,7 +6991,7 @@ export const flashData = [
         "type": "vocab",
         "moji": "おべんとう",
         "romaji": "boxed lunch",
-        "url": "t7_obentō.mp3"
+        "url": "t7_obentou.mp3"
       },
       {
         "id": "t7v_11",
@@ -7187,14 +7194,14 @@ export const flashData = [
         "type": "vocab",
         "moji": "びょういん",
         "romaji": "hospital",
-        "url": "t7_byōin.mp3"
+        "url": "t7_byouin.mp3"
       },
       {
         "id": "t7v_40",
         "type": "vocab",
         "moji": "びょうき",
         "romaji": "illness",
-        "url": "t7_byōki.mp3"
+        "url": "t7_byouki.mp3"
       },
       {
         "id": "t7v_41",
@@ -7436,7 +7443,7 @@ export const flashData = [
         "type": "kanji",
         "moji": "貝",
         "romaji": "かい",
-        "url": "t7_sakana.mp3"
+        "url": "t7_kai.mp3"
       },
       {
         "id": "t7k_12",
@@ -7967,7 +7974,7 @@ export const flashData = [
         "type": "kanji",
         "moji": "乗",
         "romaji": "の",
-        "url": ".mp3"
+        "url": "no.mp3"
       },
       {
         "id": "t8k_11",
@@ -8004,6 +8011,43 @@ export const flashData = [
         "romaji": "ご",
         "url": "t8_go_noon.mp3"
       }
+    ], 
+    TEST : [
+      {
+        "id": "t8k_1",
+        "type": "kanji",
+        "moji": "英",
+        "romaji": "えい",
+        "url": "t8_ei.mp3"
+      },
+      {
+        "id": "t8k_2",
+        "type": "kanji",
+        "moji": "語",
+        "romaji": "ご",
+        "url": "t8_go.mp3"
+      },
+      {
+        "id": "t8k_3",
+        "type": "kanji",
+        "moji": "天",
+        "romaji": "てん",
+        "url": "t8_ten.mp3"
+      },
+      {
+        "id": "t8k_4",
+        "type": "kanji",
+        "moji": "気",
+        "romaji": "き",
+        "url": "t8_ki.mp3"
+      },
+      {
+        "id": "t8k_5",
+        "type": "kanji",
+        "moji": "雨",
+        "romaji": "あめ",
+        "url": "t8_ame.mp3"
+      },
     ]
   }
 ]

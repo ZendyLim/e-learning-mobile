@@ -50,15 +50,21 @@ class StudyListScreen extends Component {
     item['categoryId'] = 'C001';
     //console.log(item);
     this.getMistakes(item.topic_id);
+    console.log(item);
     if(item.type == 'INITIAL'){
       item['studyType'] = item.title;
       this.props.navigation.navigate('HiraganaList',(
         item
       ));
     }else if(item.type == 'FUKUSHU'){
-      this.props.navigation.navigate('TopicList',(
-        item
+
+      item['formatType'] = 'FUKUSHU';
+      item['idList'] = this.props.lock[item.topic_id].mistakes;
+
+      this.props.navigation.navigate('QuizFlash',(
+         item
       ));
+      
     }
     else{
       this.props.navigation.navigate('TopicList',(
@@ -117,7 +123,7 @@ class StudyListScreen extends Component {
       <ScrollView style={study.StudyContainer}>
 
           { StudyList.map((item, key)=>(
-          <View  key={key} style={study.cardBox}>
+          <View  key={key} style={[study.cardBox, styles.shadow]}>
             <TouchableOpacity style={study.titleContainer} onPress={this.navigateToLearn.bind(this, item, key)}>
               <Image
                 style={study.cardImg}

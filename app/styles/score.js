@@ -147,8 +147,7 @@ module.exports = StyleSheet.create({
     },
     containerHome2 : {
         position: 'relative',
-        padding : 20,
-
+        padding : 20        
     },
     containerHomeinside2: {
         borderWidth: 1,
@@ -175,6 +174,9 @@ module.exports = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#ddd',
     },
+    NoBorder : {
+        borderBottomWidth: 0
+    },
     HomeIcon : {
         backgroundColor : '#45b4e7',
         height: 30,
@@ -197,6 +199,7 @@ module.exports = StyleSheet.create({
         borderTopColor : '#ddd',
         borderTopWidth : 1,
         padding: 20,
+        zIndex:120
     },
     imageHomeCon : {
         position : 'absolute',
@@ -204,10 +207,18 @@ module.exports = StyleSheet.create({
         right: 0,
         width: 80,
         height: 200,
+        zIndex: 121,
+        elevation: 3
     },
     imageHome : {
         width: '100%',
-        height: '100%',
+        height: '100%',        
+    },
+    ruleScore:{
+        fontSize:16,
+        marginBottom:10,
+        textAlign:"center",
+        elevation: 4
     }
       
 });

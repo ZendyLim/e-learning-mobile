@@ -9,15 +9,13 @@ const initialState = {
     err: '',
     isErr: false,
     fukushu: true,
-    quizSize: 0,
-    fukushuMistakes:[]
+    quizSize: 0
 };
  
 export default function userReducer (state = initialState, action) {
     switch (action.type) {
         
-        case START_TIME_LEARN:
-        console.log(action);
+        case START_TIME_LEARN:        
             state = Object.assign({}, state, { 
                 studyType: action.studyType,
                 startTime : action.startLearn,
@@ -45,11 +43,6 @@ export default function userReducer (state = initialState, action) {
         state = Object.assign({}, state, { 
             studyRecord: [].concat(state.studyRecord, [action.studyRecord])
         });
-        case MISTAKES:
-        console.log(action);
-        state = Object.assign({}, state, { 
-            fukushuMistakes: [].concat(state.fukushuMistakes, [action.mistakes])
-        });   
         return state;
         default:
             return state;

@@ -39,7 +39,7 @@ class QuizBeforeScreen extends Component {
     const { navigation } = this.props;
     
     this.param = {
-        type: navigation.getParam('type',null),
+        formatType: navigation.getParam('formatType',null),
         title: navigation.getParam('title',null),
         studyType: navigation.getParam('studyType',null),
         img: navigation.getParam('img',null),
@@ -58,7 +58,7 @@ class QuizBeforeScreen extends Component {
         <ScrollView style={study.StudyContainer}>
             {this.list.map((item, key)=>(
                 <TouchableOpacity key={key} style={study.btnLearn}  onPress={this.quiz.bind(this, item.type)}>
-                    <Text> {strings[item.title]} </Text>
+                    <Text style={study.btnLearnText}> {strings[item.title]} </Text>
                 </TouchableOpacity>
             ))}
        </ScrollView>

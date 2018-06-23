@@ -79,11 +79,15 @@ export default class HL4 extends Component {
       }
 
       getRandom = () =>{
-        var count = HLlist.length;
-        var random = Math.floor(Math.random() * count);
-        while( HLlist[random]['id'] == ""){
-          var random = Math.floor(Math.random() * count);
-          }
+        var randomVal = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,130,131,132,133,134,135,136,137,138,139,140,141,142];
+        var count = randomVal.length;
+        var randomSet = Math.floor(Math.random() * count);
+        var random = randomVal[randomSet];
+        // var count = HLlist.length;
+        // var random = Math.floor(Math.random() * count);
+        // while( HLlist[random]['id'] == ""){
+        //   var random = Math.floor(Math.random() * count);
+        //   }
         this.canvasBg.clear();
         this.canvasCorrect.clear();
         this.canvas2.clear();

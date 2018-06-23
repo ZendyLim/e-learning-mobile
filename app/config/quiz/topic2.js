@@ -1268,24 +1268,24 @@ export const listening = [
         "english":"vietnam",
         "answerOption":[
             {
-                "id":"tp2_l_4",
+                "id":"tp2_l_3",
                 "type":"listening",
-                "moji":"日本"
+                "moji":"1月 26日"
             },
             {
                 "id":"tp2_l_2",
                 "type":"listening",
-                "moji":"フィリピン"
-            },
-            {
-                "id":"tp2_l_3",
-                "type":"listening",
-                "moji":"ベトナム"
+                "moji":"2月 1日"
             },
             {
                 "id":"tp2_l_1",
                 "type":"listening",
-                "moji":"タイ"
+                "moji":"2月 18日"
+            },
+            {
+                "id":"tp2_l_4",
+                "type":"listening",
+                "moji":"8月 18日"
             }
         ],
         "audio":"t2_listening_3.mp3"

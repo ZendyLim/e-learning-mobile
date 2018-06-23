@@ -94,6 +94,11 @@ export let strings = new LocalizedStrings({
    PROCEED : "Proceed >",
    QUIZLIST : "Quizlist",
    HIRAGANA_KATAKANA_LIST_VALIDATION : "You need to choose at least 5 data",
+   POINTS: "Points",
+   QUESTIONS: "Questions",
+   PASSOVER: "In order to pass you need points above 80",
+   NEED_PASS:"You need to pass the test 1 time to proceed to next topic. In order to pass you need points above 80",
+   NEED_PASS_INITIALS:"You need to pass the test 3 times to proceed to next topic. In order to pass you need points above 80",
 
   //login part
   SIGN_IN : "Sign In",
@@ -261,6 +266,11 @@ export let strings = new LocalizedStrings({
    PROCEED : "持続する >",
    QUIZLIST : "クイズリスト",
    HIRAGANA_KATAKANA_LIST_VALIDATION : "少なくとも5つのデータを選択する必要があります",
+   POINTS: "点",
+   QUESTIONS: "問",
+   PASSOVER: "80点以上で合格",
+   NEED_PASS:"次のトピックを続けるように、テストを1回合格が必要です。80点以上で合。",
+   NEED_PASS_INITIALS:"次のトピックを続けるように、テストを3回合格が必要です。80点以上で合。",
    
     //login part
   // SIGN_IN : "サインイン",

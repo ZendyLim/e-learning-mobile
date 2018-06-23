@@ -50,6 +50,28 @@ import {
     }
   }
 
+  function stopSound(testInfo, component) {
+    setTestState(testInfo, component, 'pending');
+
+    const callback = (error, sound) => {
+      if (error) {
+        Alert.alert('error', error.message);
+        setTestState(testInfo, component, 'fail');
+        return;
+      }
+      setTestState(testInfo, component, 'stoping');
+      sound.setVolume(0);
+      sound.stop();
+      sound.release();
+    };
+
+    if (testInfo.isRequire) {
+      const sound = new Sound(testInfo.url, error => callback(error, sound));
+    } else {
+      const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
+    }
+  }
+
   class HiraganaFlashcardScreen extends Component {
 
     static navigationOptions = {
@@ -95,9 +117,11 @@ import {
       })
 
       this.data = flashData[0][this.props.title];
-      this.data.sort(function() {
-        return 0.5 - Math.random()
-      })
+      if(this.props.title != 'FLASH_CARD_HIRAGANA' && this.props.title != 'FLASH_CARD_KATAKANA') {
+        this.data.sort(function() {
+          return 0.5 - Math.random()
+        })
+      }
 
       const { navigation } = this.props;
 
@@ -144,6 +168,12 @@ import {
     componentDidMount() {
       this.flipperFunction(this.tickInterval / this.flipSpeed);
       playSound(this.state , this);
+    }
+
+    componentWillUnmount() {
+      this.resetValue();
+      stopSound(this.state , this);
+      this.pause();
     }
 
     pause(){
@@ -225,6 +255,21 @@ import {
       }
     }
 
+    resetValue(){
+      params = {
+        loopingSound: undefined,
+        tests: {},
+
+        indicator: new Animated.Value(0),
+        pos: new Animated.Value(0),
+        moji: this.data[0].moji,
+        romaji: this.data[0].romaji, 
+        url: this.data[0].url,
+      };
+
+      this.setState(params);
+    }
+
     render() {
       const frontAnimatedStyle = {
         transform: [
@@ -253,7 +298,7 @@ import {
                   return playSound(this.state , this);
                 }} style={studyStyles.iconContainer}>
                 <View style={studyStyles.cardIcon} >
-                  <Icon name='volume-up' color='#45B3EB' size={40}/>
+                  <Icon name='volume-up' color='#45B3EB' size={80}/>
                 </View>
               </TouchableOpacity>
               <TouchableWithoutFeedback onPress={() => this.flipCard()}>
@@ -261,6 +306,7 @@ import {
                   <Animated.View style={[frontAnimatedStyle]}>
                     <View style={[studyStyles.cardText]}>
                       <ResponsiveText 
+                        textType={'flip'}
                         content={this.state.front} 
                         title={this.props.title} 
                         textLength={this.state.mojiLength} />
@@ -269,6 +315,7 @@ import {
                   <Animated.View  style={[backAnimatedStyle]}>
                     <View style={[studyStyles.cardText]}>
                     <ResponsiveText 
+                      textType={'flip'}
                       content={this.state.back} 
                       title={this.props.title} 
                       textLength={this.state.romajiLength} />

@@ -25,40 +25,30 @@ class QuestionPanel extends Component {
 
   constructor(props) {
       super(props);
-      this.currentAudio = this.props.question.id;
+      this.currentAudio = '';
       this.currentQuestion = '';
       this.imageSource = this.props.img ? ( ImageData[this.props.img] ) : ImageData.default_bg;
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.currentQuestion = this.props.question.id;
-    if(this.props.format == 'audio'){      
-      this.loadAudio();
-      setTimeout(() => {
-        this.playAudio(true)
-      }, 500);
+    if(this.props.format == 'audio'){    
+      this.loadAudio();      
     }
   }
 
   componentDidUpdate(){
     if(this.currentQuestion != this.props.question.id){
-      
-      this.stopAudio();
-      
+      this.stopAudio();          
       this.currentQuestion = this.props.question.id;
       if(this.props.format == 'audio'){        
         this.loadAudio();
-        this.props.questionReady(true);
-        
+        this.props.questionReady(true);    
       }
       else{        
         this.props.questionReady(true);
       }      
       
-    }
-    
-    if(this.quizAudio){
-      this.quizAudio.stop();        
     }
 
   }
@@ -78,6 +68,7 @@ class QuestionPanel extends Component {
     if(this.props.timesUp){
       return(
         <View style={[ styles.timesUp, styles.displayInlineContainer ]}>
+            <Icon name="clock-o" style={ [styles.timesUpText, styles.displayInline] }></Icon>
             <Text style={[ styles.timesUpText, styles.displayInline ]}>{ strings.TIMES_UP }</Text> 
         </View>
       );
@@ -91,7 +82,7 @@ class QuestionPanel extends Component {
     if(this.props.format == 'audio'){
       return(
         <View style={[ styles.questionContainer, styles.col12 ]}>
-          <TouchableHighlight onPress={() => this.playAudio(true) }>
+          <TouchableHighlight onPress={() => this.loadAudio(true) }>
               <Icon name="volume-up" style={ styles.questionBigText }></Icon>
           </TouchableHighlight>
         </View>
@@ -170,36 +161,33 @@ class QuestionPanel extends Component {
       );
     }
 
-    loadAudio(){
+    loadAudio(forcePlay = false){
+      this.stopAudio();
+      
       this.quizAudio = new Sound(this.props.question.audio, Sound.MAIN_BUNDLE, (error) => {
         if (error) {          
           return;
         }        
-        this.playAudio()
+        this.playAudio(forcePlay);
         
-
       });
     }
 
     playAudio(forcePlay = false){
       
       playDifferentAudio = this.currentAudio != this.props.question.id && this.props.format == 'audio';
-
+      
       if(playDifferentAudio || forcePlay){    
-            
+       
         this.currentAudio = this.props.question.id;        
         this.quizAudio.stop(() => {
           this.quizAudio.play((success) => {
-            if (!success) {              
-              //this.quizAudio.reset();
-            } 
+            
+            // this.quizAudio.release();
           });
         });
-        
-        
+              
       }
-      
-
     }
 
 }

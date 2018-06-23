@@ -61,7 +61,7 @@ import {
     this.item['formatType'] = initialParams.formatType;
     this.item['idList'] = initialParams.idList;
     this.item['oneType'] = initialParams.oneType;
-    
+      
   }
   goToTopicSelection = () =>  {    
 
@@ -74,7 +74,17 @@ import {
       });
       this.props.navigation.dispatch(resetAction);
       
-    }else{
+    }
+    else if(this.item.formatType == 'FUKUSHU'){
+      const resetAction = NavigationActions.reset({ 
+        index: 0,
+        actions: [
+          NavigationActions.navigate({ routeName: 'StudyList' }),
+        ]
+      });
+      this.props.navigation.dispatch(resetAction);
+    }
+    else{
       var nav = this.setNavStudyList(this.state.type, 1);
                      
       const resetAction = NavigationActions.reset(nav);
@@ -95,8 +105,7 @@ import {
                      
     const resetAction = NavigationActions.reset(nav);
     
-    this.props.navigation.dispatch(resetAction);
-  
+    this.props.navigation.dispatch(resetAction);    
   }
 
   setNav(type, index) {
@@ -201,7 +210,7 @@ import {
             <View style={ scoreStyle.absoluteText }>
               <View style={ scoreStyle.containerScore }>
                 <Text style={ scoreStyle.scoreTotal }>{ this.props.scoreTotal}/100 </Text>
-              </View>
+              </View>              
             </View>
             <ProgressCircle
                 style={ { height: 140 } }
@@ -210,6 +219,7 @@ import {
             />
           </View>
           <View style={ scoreStyle.containerMistake }>
+            <Text style={scoreStyle.ruleScore}>{ strings.PASSOVER }</Text>
             <ScrollView  style={ scoreStyle.containerMainMistake }>
               <Text style={ scoreStyle.sumaryTitle }>SUMMARY</Text>
               <Icon name='lock'  color='#fff' size={10}/>
@@ -226,7 +236,7 @@ import {
                 ) :<Text>No study data</Text> }
             </ScrollView >
           </View>
-          { this.props.scoreTotal >= 80 ? ( 
+          { this.props.scoreTotal >= 0 ? ( 
           <View style={ scoreStyle.containerMistake }>
             <View style={ scoreStyle.RecordRowButton }>
               <View style={ scoreStyle.RecordRowButtonContainer }>
@@ -293,7 +303,7 @@ const study = require('../../styles/study');
 // and insert/links it into the props of our component.
 // This function makes Redux know that this component needs to be passed a piece of the state
 function mapStateToProps(state, props) {
-
+  console.log(state.study);
   const score = Helper.countScore(state.study.studyRecord,state.study.quizSize);
   
   return {

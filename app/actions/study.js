@@ -35,6 +35,7 @@ export function endLearn(postValue){
         body: JSON.stringify(postValue)
       }).then(data => data.json())
       .then(json => {
+        console.log(json);
         dispatch(endLearnDispatch(postValue, json))
       })
       .catch(err => dispatch(endLearnFailedDispatch(err)))
@@ -47,33 +48,6 @@ export function takeQuiz(studyData){
   };        
 }
 
-// export function getMistakes(topicId){
-//   return (dispatch) => {
-//       getJWT().then( JWT => {
-//           fetch('https://e-learning-backend.herokuapp.com/api/v1/mistakes?' + topicId
-//           ,{
-//             method: 'GET',
-//             headers: {
-//               'Authorization' : JWT,
-//               'Accept': 'application/json',
-//               'Content-Type': 'application/json',
-//             },
-//           }).then(data => data.json())
-//           .then(json => {
-//               if(type == 'QUIZ'){
-//                   dispatch(summaryRecordQuizDispatch(json, type))
-//               }else{
-//                   dispatch(summaryRecordTestDispatch(json, type))            
-//               }
-//           })
-//           .catch(err => dispatch(failedSummary(err)))
-//       })
-//   };    
-  
-   
-// }
-
-
 // ===================================== ACTION SENDING DATA TO REDUCER =================================================
 export function startLearnDispatch(studyType, startLearn, studyID, quizSize) {
   return {
@@ -85,8 +59,7 @@ export function startLearnDispatch(studyType, startLearn, studyID, quizSize) {
   }
 }
 
-export function endLearnDispatch(studyType, json) {
-  console.log(studyType,'dadasd');
+export function endLearnDispatch(studyType, json) {  
   return {
      type: END_TIME_LEARN,
      endTime: studyType.endTime
