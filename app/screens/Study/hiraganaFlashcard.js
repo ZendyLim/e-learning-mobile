@@ -50,6 +50,28 @@ import {
     }
   }
 
+  function stopSound(testInfo, component) {
+    setTestState(testInfo, component, 'pending');
+
+    const callback = (error, sound) => {
+      if (error) {
+        Alert.alert('error', error.message);
+        setTestState(testInfo, component, 'fail');
+        return;
+      }
+      setTestState(testInfo, component, 'stoping');
+      sound.setVolume(0);
+      sound.stop();
+      sound.release();
+    };
+
+    if (testInfo.isRequire) {
+      const sound = new Sound(testInfo.url, error => callback(error, sound));
+    } else {
+      const sound = new Sound(testInfo.url, testInfo.basePath, error => callback(error, sound));
+    }
+  }
+
   class HiraganaFlashcardScreen extends Component {
 
     static navigationOptions = {
@@ -146,6 +168,12 @@ import {
       playSound(this.state , this);
     }
 
+    componentWillUnmount() {
+      this.resetValue();
+      stopSound(this.state , this);
+      this.pause();
+    }
+
     pause(){
       this.flipIndicator = 0;
       clearInterval(this.flipperInterval);
@@ -225,6 +253,21 @@ import {
       }
     }
 
+    resetValue(){
+      params = {
+        loopingSound: undefined,
+        tests: {},
+
+        indicator: new Animated.Value(0),
+        pos: new Animated.Value(0),
+        moji: this.data[0].moji,
+        romaji: this.data[0].romaji, 
+        url: this.data[0].url,
+      };
+
+      this.setState(params);
+    }
+
     render() {
       const frontAnimatedStyle = {
         transform: [
@@ -253,7 +296,7 @@ import {
                   return playSound(this.state , this);
                 }} style={studyStyles.iconContainer}>
                 <View style={studyStyles.cardIcon} >
-                  <Icon name='volume-up' color='#45B3EB' size={40}/>
+                  <Icon name='volume-up' color='#45B3EB' size={80}/>
                 </View>
               </TouchableOpacity>
               <TouchableWithoutFeedback onPress={() => this.flipCard()}>

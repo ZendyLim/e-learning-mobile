@@ -27,7 +27,8 @@ import {
   import { quizItems } from '../../config/quiz/index';
   import { StudyList } from '../../config/studyList';
   import { studyType } from '../../config/quizFormat';
-
+  import * as Helper from '../../actions/helper'; 
+  
   /*
     TODO:
     1.0 Refine the code 
@@ -153,7 +154,7 @@ import {
         <View style={styles.container}>
           { this.state.question && this.state.question.id ? (
             <View style={[styles.row]}>
-
+              
               <QuestionPanel 
                   question={ this.state.question } 
                   format={ format } 
@@ -189,7 +190,12 @@ import {
                   (
                     <View>
                       <View style={ !timerRun && styles.blocker }></View>
-                    
+                      <View style={[ styles.quizInfo ]}>
+                        <Text style={ styles.quizInfoText }>
+                          Points: { this.setScore() }/100 Questions: { this.state.counter+1 }/{ this.allQuestion.length }
+                        </Text>
+                      </View>
+
                       <Quiz 
                         question={ this.state.question } 
                         answerOptions={ this.state.question.answerOption }
@@ -255,8 +261,7 @@ import {
          
       if(this.initialParams.idList && this.initialParams.idList.length){
         if(this.initialParams.formatType == 'FUKUSHU'){
-          this.setDefineFukushu(this.initialParams.idList);
-          //this.setListQuestion();
+          this.setDefineFukushu(this.initialParams.idList);          
         }
         else{
           this.setListQuestion();
@@ -832,16 +837,24 @@ import {
     };
 
     setEndQuiz = () =>  {
-      var endTime = ( new Date().getTime() / 1000);
-
+      var endTime = ( new Date().getTime() / 1000);      
       var parseValue = this.reduxParam;
-      
+            
       parseValue['finishTime'] = endTime;
-      parseValue['questions'] = this.studyRecord;      
-      
-      console.log('--end--', parseValue);
+      parseValue['questions'] = this.studyRecord;
+      parseValue['score'] = this.setScore();
+            
       this.props.endLearn(parseValue); //call our action
   };
+
+  setScore(){
+    var quizSizes = 0;
+
+    if(this.initialParams.isTopicTest){
+      quizSizes = this.allQuestion.length;
+    }  
+    return Helper.countScore(this.studyRecord,quizSizes);
+  }
 
     goNextQuestion() {            
         
@@ -853,9 +866,11 @@ import {
       
       if(this.initialParams.formatType == 'Quiz'){        
         this.setState({
-          showCorrect:true,          
+          showCorrect:true,   
+          expression:'sad',
+          timesUp:true    
         });             
-
+        
       }
       else{
         this.setState({
@@ -863,8 +878,8 @@ import {
           expression:'sad'
         });
         
-        setTimeout(() => {
-          
+        
+        setTimeout(() => {          
           this.setNextQuestion();
         }, this.state.pause); 
       }
