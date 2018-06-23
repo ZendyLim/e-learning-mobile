@@ -199,6 +199,7 @@ module.exports = StyleSheet.create({
         borderTopColor : '#ddd',
         borderTopWidth : 1,
         padding: 20,
+        zIndex:120
     },
     imageHomeCon : {
         position : 'absolute',
@@ -206,10 +207,13 @@ module.exports = StyleSheet.create({
         right: 0,
         width: 80,
         height: 200,
+        zIndex: 121,
+        elevation: 3
     },
     imageHome : {
         width: '100%',
         height: '100%',
+        elevation: 4
     }
       
 });
