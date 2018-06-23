@@ -59,8 +59,7 @@ export function startLearnDispatch(studyType, startLearn, studyID, quizSize) {
   }
 }
 
-export function endLearnDispatch(studyType, json) {
-  console.log(studyType,'dadasd');
+export function endLearnDispatch(studyType, json) {  
   return {
      type: END_TIME_LEARN,
      endTime: studyType.endTime

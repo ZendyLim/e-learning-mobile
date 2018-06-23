@@ -125,6 +125,13 @@ module.exports = StyleSheet.create({
     marginRight: 10, 
   }, 
 
+  mB10: {
+    marginBottom: 10, 
+  },
+  mB20: {
+    marginBottom: 20, 
+  }, 
+
   textBlack: {
     color: 'black',
   }, 
