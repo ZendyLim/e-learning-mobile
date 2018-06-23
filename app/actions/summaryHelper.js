@@ -46,7 +46,7 @@ export function setSummaryCount(data, callback){
         }
     }
     var parseValue = {
-        VOCABULARY : initialArr.length + vocabularyArr.length,
+        VOCABULARY : vocabularyArr.length,
         GRAMMAR : grammarArr.length,
         KANJI : kanjiArr.length,
         
