@@ -17,7 +17,7 @@ import {
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import { HiraganaLearnStack }  from '../../config/router';
-  import { flashData } from '../../config/flash';
+  import { learnData } from '../../config/learnTopic';
   import { ImageData } from '../../config/image_list';
   import  { strings }   from '../../config/localization';
   import * as Actions from '../../actions/user'; //Import your actions
@@ -130,7 +130,7 @@ function playSound(testInfo, component) {
           </View>
           {/* <Text style={learnsl1.TextTitle}>{this.props.title}</Text> */}
           <FlatList 
-          data={ flashData[0]['GREETING_TITLE'] }
+          data={ learnData['GREETING_TITLE'] }
           renderItem={({item}) => {
             return(
               <FlatListItem item={item} component={this}/>

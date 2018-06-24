@@ -134,13 +134,13 @@ class StudyListScreen extends Component {
               <Text style={study.title}> { strings[item.title] } </Text>
             </TouchableOpacity>
             
-              { this.checkLock(item.topic_id) ? (              
+              {/* { this.checkLock(item.topic_id) ? (              
                 <TouchableOpacity style={study.lockButton} onPress={this.lockedMessage.bind(this, item, key)}>  
                   <Icon name='lock'  color='#fff' size={40}/>
                 </TouchableOpacity>
                 ) : (
                   <Text style={study.NotlockButton}>not lock</Text>
-              )}           
+              )}            */}
           </View>
         )
       )}
