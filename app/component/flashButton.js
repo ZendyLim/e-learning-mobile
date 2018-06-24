@@ -31,7 +31,7 @@ class FlashButton extends Component {
         style={studyStyles.roundButtonText}
         onPress={() => this.props.onPress()}
       >
-         <Text style={[studyStyles.textLg, studyStyles.textCenter, studyStyles.textWhite]}>
+         <Text style={[{fontSize: 30}, studyStyles.textCenter, studyStyles.textWhite]}>
            &nbsp;{ this.props.textName }x&nbsp;
          </Text>
       </TouchableOpacity>

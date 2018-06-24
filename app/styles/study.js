@@ -308,8 +308,6 @@ roundButton: {
 roundButtonText: {
   backgroundColor:'#45B3EB',
   borderRadius:50,
-  width: '80%',
-  height: '80%',
   paddingLeft: '3%',
   paddingRight: '3%',
   paddingBottom: '6%',
