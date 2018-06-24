@@ -574,6 +574,14 @@ export const vocabulary = [
         "romaji":"wakai",
         "english":"young",
         "audio":"t6_wakai.mp3"
+    },
+    {
+        "id":"tp6_v_73",
+        "type":"vocabulary",
+        "moji":"しょうゆ",
+        "romaji":"shouyu",
+        "english":"soy sauce",
+        "audio":"t6_shouyu.mp3"
     }
 ]
 

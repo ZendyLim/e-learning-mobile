@@ -21,7 +21,7 @@ export const StudyList = [{
       random: true,
       //types:['audio_english', 'audio_moji'],
       //types:['moji_english', 'english_moji','audio_english','audio_moji'],
-      types:['english_moji','audio_english','audio_moji'],
+      types:['english_moji','english_fill','audio_english','audio_fill'],      
       withCorrection:true,
       style:'quizLong'
     }
@@ -36,7 +36,7 @@ export const StudyList = [{
       random: true,
       //types:['audio_english', 'audio_moji'],
       //types:['moji_english', 'english_moji','audio_english','audio_moji'],
-      types:['english_moji','audio_english','audio_moji'],
+      types:['english_moji','english_fill','audio_english','audio_fill'],      
       withCorrection:true,
       style:'quizVocab'
     }
