@@ -1,2147 +1,699 @@
 export const learnData = 
     { 
-      FLASH_CARD_HIRAGANA : [
-        //SeiOn
-        {
-          "id":"h_a",
-          "type":"hiragana",      
-          "romaji":"a",
-          "moji":"あ",
-          "url":"a.mp3"
-        },
-        {
-          "id":"h_se",
-          "type":"hiragana",      
-          "romaji":"se",
-          "moji":"せ",
-          "url":"se.mp3"
-        },
-        {
-          "id":"h_so",
-          "type":"hiragana",      
-          "romaji":"so",
-          "moji":"そ",
-          "url":"so.mp3"
-        },
-        {
-          "id":"h_ta",
-          "type":"hiragana",      
-          "romaji":"ta",
-          "moji":"た",
-          "url":"ta.mp3"
-        },
-        {
-          "id":"h_chi",
-          "type":"hiragana",      
-          "romaji":"chi",
-          "moji":"ち",
-          "url":"te.mp3"
-  
-        },
-        {
-          "id":"h_tsu",
-          "type":"hiragana",      
-          "romaji":"tsu",
-          "moji":"つ",
-          "url":"tsu.mp3"
-  
-        },
-        {
-          "id":"h_te",
-          "type":"hiragana",      
-          "romaji":"te",
-          "moji":"て",
-          "url":"te.mp3"
-        },
-        {
-          "id":"h_to",
-          "type":"hiragana",      
-          "romaji":"to",
-          "moji":"と",
-          "url":"to.mp3"
-        },
-        {
-          "id":"h_na",
-          "type":"hiragana",      
-          "romaji":"na",
-          "moji":"な",
-          "url":"na.mp3"
-        },
-        {
-          "id":"h_ni",
-          "type":"hiragana",      
-          "romaji":"ni",
-          "moji":"に",
-          "url":"ni.mp3"
-        },
-        {
-          "id":"h_nu",
-          "type":"hiragana",      
-          "romaji":"nu",
-          "moji":"ぬ",
-          "url":"nu.mp3"
-        },
-        {
-          "id":"h_ne",
-          "type":"hiragana",      
-          "romaji":"ne",
-          "moji":"ね",
-          "url":"ne.mp3"
-        },
-        {
-          "id":"h_no",
-          "type":"hiragana",      
-          "romaji":"no",
-          "moji":"の",
-          "url":"no.mp3"
-        },
-        {
-          "id":"h_ha",
-          "type":"hiragana",      
-          "romaji":"ha",
-          "moji":"は",
-          "url":"ha.mp3"
-        },
-        {
-          "id":"h_hi",
-          "type":"hiragana",      
-          "romaji":"hi",
-          "moji":"ひ",
-          "url":"hi.mp3"
-        },
-        {
-          "id":"h_fu",
-          "type":"hiragana",      
-          "romaji":"fu",
-          "moji":"ふ",
-          "url":"fu.mp3"
-        },
-        {
-          "id":"h_he",
-          "type":"hiragana",      
-          "romaji":"he",
-          "moji":"へ",
-          "url":"he.mp3"
-        },
-        {
-          "id":"h_ho",
-          "type":"hiragana",      
-          "romaji":"ho",
-          "moji":"ほ",
-          "url":"ho.mp3"
-        },
-        {
-          "id":"h_ma",
-          "type":"hiragana",      
-          "romaji":"ma",
-          "moji":"ま",
-          "url":"ma.mp3"
-        },
-        {
-          "id":"h_mi",
-          "type":"hiragana",      
-          "romaji":"mi",
-          "moji":"み",
-          "url":"mi.mp3"
-        },
-        {
-          "id":"h_mu",
-          "type":"hiragana",      
-          "romaji":"mu",
-          "moji":"む",
-          "url":"mu.mp3"
-        },
-        {
-          "id":"h_me",
-          "type":"hiragana",      
-          "romaji":"me",
-          "moji":"め",
-          "url":"me.mp3"
-        },
-        {
-          "id":"h_mo",
-          "type":"hiragana",      
-          "romaji":"mo",
-          "moji":"も",
-          "url":"mo.mp3"
-        },
-        {
-          "id":"h_ya",
-          "type":"hiragana",      
-          "romaji":"ya",
-          "moji":"や",
-          "url":"ya.mp3"
-        },
-        {
-          "id":"h_yu",
-          "type":"hiragana",      
-          "romaji":"yu",
-          "moji":"ゆ",
-          "url":"yu.mp3"
-        },
-        {
-          "id":"h_yo",
-          "type":"hiragana",      
-          "romaji":"yo",
-          "moji":"よ",
-          "url":"yo.mp3"
-        },
-        {
-          "id":"h_ra",
-          "type":"hiragana",      
-          "romaji":"ra",
-          "moji":"ら",
-          "url":"ra.mp3"
-        },
-        {
-          "id":"h_ri",
-          "type":"hiragana",      
-          "romaji":"ri",
-          "moji":"り",
-          "url":"ri.mp3"
-        },
-        {
-          "id":"h_ru",
-          "type":"hiragana",      
-          "romaji":"ru",
-          "moji":"る",
-          "url":"ru.mp3"
-        },
-        {
-          "id":"h_re",
-          "type":"hiragana",      
-          "romaji":"re",
-          "moji":"れ",
-          "url":"re.mp3"
-        },
-        {
-          "id":"h_ro",
-          "type":"hiragana",      
-          "romaji":"ro",
-          "moji":"ろ",
-          "url":"ro.mp3"
-        },
-        {
-          "id":"h_wa",
-          "type":"hiragana",      
-          "romaji":"wa",
-          "moji":"わ",
-          "url":"wa.mp3"
-        }, 
-        {
-          "id":"h_wo",
-          "type":"hiragana",      
-          "romaji":"o(wo)",
-          "moji":"を",
-          "url":"wo.mp3"
-        },
-        {
-          "id":"h_n",
-          "type":"hiragana",      
-          "romaji":"n",
-          "moji":"ん",
-          "url":"n.mp3"
-       },
-        //DakuOn
-        {
-          "id":"h_ga",
-          "type":"hiragana",      
-          "romaji":"ga",
-          "moji":"が",
-          "url":"ga.mp3"
-        },
-        {
-          "id":"h_gi",
-          "type":"hiragana",      
-          "romaji":"gi",
-          "moji":"ぎ",
-          "url":"gi.mp3"
-        },
-        {
-          "id":"h_gu",
-          "type":"hiragana",      
-          "romaji":"gu",
-          "moji":"ぐ",
-          "url":"gu.mp3"
-        },
-        {
-          "id":"h_ge",
-          "type":"hiragana",      
-          "romaji":"ge",
-          "moji":"げ",
-          "url":"ge.mp3"
-        },
-        {
-          "id":"h_go",
-          "type":"hiragana",      
-          "romaji":"go",
-          "moji":"ご",
-          "url":"go.mp3"
-        },
-        {
-          "id":"h_za",
-          "type":"hiragana",      
-          "romaji":"za",
-          "moji":"ざ",
-          "url":"za.mp3"
-        },
-        {
-          "id":"h_ji",
-          "type":"hiragana",      
-          "romaji":"ji(zi)",
-          "moji":"じ",
-          "url":"ji.mp3"
-        },
-        {
-          "id":"h_zu",
-          "type":"hiragana",      
-          "romaji":"zu",
-          "moji":"ず",
-          "url":"zu.mp3"
-        },
-        {
-          "id":"h_ze",
-          "type":"hiragana",      
-          "romaji":"ze",
-          "moji":"ぜ",
-          "url":"ze.mp3"
-        },
-        {
-          "id":"h_zo",
-          "type":"hiragana",      
-          "romaji":"zo",
-          "moji":"ぞ",
-          "url":"zo.mp3"
-        },
-        {
-          "id":"h_da",
-          "type":"hiragana",      
-          "romaji":"da",
-          "moji":"だ",
-          "url":"da.mp3"
-        },
-        {
-          "id":"h_di",
-          "type":"hiragana",      
-          "romaji":"ji(di)",
-          "moji":"ぢ",
-          "url":"ji.mp3"
-        },
-        {
-          "id":"h_du",
-          "type":"hiragana",      
-          "romaji":"zu(du)",
-          "moji":"づ",
-          "url":"du.mp3"
-        },
-        {
-          "id":"h_de",
-          "type":"hiragana",      
-          "romaji":"de",
-          "moji":"で",
-          "url":"de.mp3"
-        },
-        {
-          "id":"h_do",
-          "type":"hiragana",      
-          "romaji":"do",
-          "moji":"ど",
-          "url":"do.mp3"
-        },
-        {
-          "id":"h_ba",
-          "type":"hiragana",      
-          "romaji":"ba",
-          "moji":"ば",
-          "url":"ba.mp3"
-        },
-        {
-          "id":"h_bi",
-          "type":"hiragana",      
-          "romaji":"bi",
-          "moji":"び",
-          "url":"bi.mp3"
-        },
-        {
-          "id":"h_bu",
-          "type":"hiragana",      
-          "romaji":"bu",
-          "moji":"ぶ",
-          "url":"bu.mp3"
-        },
-        {
-          "id":"h_be",
-          "type":"hiragana",      
-          "romaji":"be",
-          "moji":"べ",
-          "url":"be.mp3"
-        },
-        {
-          "id":"h_bo",
-          "type":"hiragana",      
-          "romaji":"bo",
-          "moji":"ぼ",
-          "url":"bohl.mp3"
-        },
-        {
-          "id":"h_pa",
-          "type":"hiragana",      
-          "romaji":"pa",
-          "moji":"ぱ",
-          "url":"pa.mp3"
-        },
-        {
-          "id":"h_pi",
-          "type":"hiragana",      
-          "romaji":"pi",
-          "moji":"ぴ",
-          "url":"pi.mp3"
-        },
-        {
-          "id":"h_pu",
-          "type":"hiragana",      
-          "romaji":"pu",
-          "moji":"ぷ",
-          "url":"pu.mp3"
-        },
-        {
-          "id":"h_pe",
-          "type":"hiragana",      
-          "romaji":"pe",
-          "moji":"ぺ",
-          "url":"pe.mp3"
-        },
-        {
-          "id":"h_po",
-          "type":"hiragana",      
-          "romaji":"po",
-          "moji":"ぽ",
-          "url":"po.mp3"
-        },
-        //YoOn
-        {
-          "id":"h_kya",
-          "type":"hiragana",      
-          "romaji":"kya",
-          "moji":"きゃ",
-          "url":"kya.mp3"
-  
-        }, 
-        {
-          "id":"h_kyu",
-          "type":"hiragana",      
-          "romaji":"kyu",
-          "moji":"きゅ",
-          "url":"kyu.mp3"
-  
-        }, 
-        {
-          "id":"h_kyo",
-          "type":"hiragana",      
-          "romaji":"kyo",
-          "moji":"きょ",
-          "url":"kyo.mp3"
-  
-        },
-        {
-          "id":"h_sha",
-          "type":"hiragana",      
-          "romaji":"sha",
-          "moji":"しゃ",
-          "url":"sha.mp3"
-  
-        }, 
-        {
-          "id":"h_shu",
-          "type":"hiragana",      
-          "romaji":"shu",
-          "moji":"しゅ",
-          "url":"shu.mp3"
-  
-        }, 
-        {
-          "id":"h_sho",
-          "type":"hiragana",      
-          "romaji":"sho",
-          "moji":"しょ",
-          "url":"sho.mp3"
-  
-        },
-        {
-          "id":"h_cha",
-          "type":"hiragana",      
-          "romaji":"cha",
-          "moji":"ちゃ",
-          "url":"cha.mp3"
-  
-        }, 
-        {
-          "id":"h_chu",
-          "type":"hiragana",      
-          "romaji":"chu",
-          "moji":"ちゅ",
-          "url":"chu.mp3"
-  
-        }, 
-        {
-          "id":"h_cho",
-          "type":"hiragana",      
-          "romaji":"cho",
-          "moji":"ちょ",
-          "url":"cho.mp3"
-  
-        },
-        {
-          "id":"h_nya",
-          "type":"hiragana",      
-          "romaji":"nya",
-          "moji":"にゃ",
-          "url":"nya.mp3"
-  
-        }, 
-        {
-          "id":"h_nyu",
-          "type":"hiragana",      
-          "romaji":"nyu",
-          "moji":"にゅ",
-          "url":"nyu.mp3"
-  
-        }, 
-        {
-          "id":"h_nyo",
-          "type":"hiragana",      
-          "romaji":"nyo",
-          "moji":"にょ",
-          "url":"nyo.mp3"
-  
-        },
-        {
-          "id":"h_hya",
-          "type":"hiragana",      
-          "romaji":"hya",
-          "moji":"ひゃ",
-          "url":"hya.mp3"
-  
-        },
-        {
-          "id":"h_hyu",
-          "type":"hiragana",      
-          "romaji":"hyu",
-          "moji":"ひゅ",
-          "url":"hyu.mp3"
-  
-        }, 
-        {
-          "id":"h_hyo",
-          "type":"hiragana",      
-          "romaji":"hyo",
-          "moji":"ひょ",
-          "url":"hyo.mp3"
-  
-        },
-        {
-          "id":"h_mya",
-          "type":"hiragana",      
-          "romaji":"mya",
-          "moji":"みゃ",
-          "url":"mya.mp3"
-  
-        },
-        {
-          "id":"h_myu",
-          "type":"hiragana",      
-          "romaji":"myu",
-          "moji":"みゅ",
-          "url":"myu.mp3"
-  
-        }, 
-        {
-          "id":"h_myo",
-          "type":"hiragana",      
-          "romaji":"myo",
-          "moji":"みょ",
-          "url":"myo.mp3"
-  
-        },
-        {
-          "id":"h_rya",
-          "type":"hiragana",      
-          "romaji":"rya",
-          "moji":"りゃ",
-          "url":"ka.mp3"
-  
-        }, 
-        {
-          "id":"h_ryu",
-          "type":"hiragana",      
-          "romaji":"ryu",
-          "moji":"りゅ",
-          "url":"ku.mp3"
-  
-        },
-        {
-          "id":"h_ryo",
-          "type":"hiragana",      
-          "romaji":"ryo",
-          "moji":"りょ",
-          "url":"ko.mp3"
-  
-        },
-        {
-          "id":"h_gya",
-          "type":"hiragana",      
-          "romaji":"gya",
-          "moji":"ぎゃ",
-          "url":"gya.mp3"
-  
-        }, 
-        {
-          "id":"h_gyu",
-          "type":"hiragana",      
-          "romaji":"gyu",
-          "moji":"ぎゅ",
-          "url":"gyu.mp3"
-  
-        },
-        {
-          "id":"h_gyo",
-          "type":"hiragana",      
-          "romaji":"gyo",
-          "moji":"ぎょ",
-          "url":"gyo.mp3"
-  
-        },
-        {
-          "id":"h_ja",
-          "type":"hiragana",      
-          "romaji":"ja",
-          "moji":"じゃ",
-          "url":"jya.mp3"
-        }, 
-        {
-          "id":"h_ju",
-          "type":"hiragana",      
-          "romaji":"ju",
-          "moji":"じゅ",
-          "url":"jyu.mp3"
-        }, 
-        {
-          "id":"h_jo",
-          "type":"hiragana",      
-          "romaji":"jo",
-          "moji":"じょ",
-          "url":"jyo.mp3"
-        },
-        {
-          "id":"h_bya",
-          "type":"hiragana",      
-          "romaji":"bya",
-          "moji":"びゃ",
-          "url":"bya.mp3"
-  
-        }, 
-        {
-          "id":"h_qbyu",
-          "type":"hiragana",      
-          "romaji":"byu",
-          "moji":"びゅ",
-          "url":"byu.mp3"
-  
-        }, 
-        {
-          "id":"h_byo",
-          "type":"hiragana",      
-          "romaji":"byo",
-          "moji":"びょ",
-          "url":"byo.mp3"
-  
-        },
-        {
-          "id":"h_pya",
-          "type":"hiragana",      
-          "romaji":"pya",
-          "moji":"ぴゃ",
-          "url":"pya.mp3"
-  
-        }, 
-        {
-          "id":"h_pyu",
-          "type":"hiragana",      
-          "romaji":"pyu",
-          "moji":"ぴゅ",
-          "url":"pyu.mp3"
-  
-        }, 
-        {
-          "id":"h_pyo",
-          "type":"hiragana",      
-          "romaji":"pyo",
-          "moji":"ぴょ",
-          "url":"pyo.mp3"
-  
-        }
-      ],
-      FLASH_CARD_KATAKANA : [
-        //SeiOn
-        {
-          "id":"k_a",
-          "type":"katakana",      
-          "romaji":"a",
-          "moji":"ア",
-          "url":"a.mp3"
-       },
-        {
-          "id":"k_i",
-          "type":"katakana",      
-          "romaji":"i",
-          "moji":"イ",
-          "url":"i.mp3"
-       },
-        {
-          "id":"k_u",
-          "type":"katakana",      
-          "romaji":"u",
-          "moji":"ウ",
-          "url":"u.mp3"
-       },
-        {
-          "id":"k_e",
-          "type":"katakana",      
-          "romaji":"e",
-          "moji":"エ",
-          "url":"e.mp3"
-       },
-        {
-          "id":"k_o",
-          "type":"katakana",      
-          "romaji":"o",
-          "moji":"オ",
-          "url":"o.mp3"
-       },
-        {
-          "id":"k_ka",
-          "type":"katakana",      
-          "romaji":"ka",
-          "moji":"カ",
-          "url":"ka.mp3"
-        },
-        {
-          "id":"k_ki",
-          "type":"katakana",      
-          "romaji":"ki",
-          "moji":"キ",
-          "url":"ki.mp3"
-        },
-        {
-          "id":"k_ku",
-          "type":"katakana",      
-          "romaji":"ku",
-          "moji":"ク",
-          "url":"ku.mp3"
-        },
-        {
-          "id":"k_ke",
-          "type":"katakana",      
-          "romaji":"ke",
-          "moji":"ケ",
-          "url":"ke.mp3"
-        },
-        {
-          "id":"k_ko",
-          "type":"katakana",      
-          "romaji":"ko",
-          "moji":"コ",
-          "url":"ko.mp3"
-        },
-        {
-          "id":"k_sa",
-          "type":"katakana",      
-          "romaji":"sa",
-          "moji":"サ",
-          "url":"sa.mp3"
-        },
-        {
-          "id":"k_shi",
-          "type":"katakana",      
-          "romaji":"shi",
-          "moji":"シ",
-          "url":"shi.mp3"
-  
-        },
-        {
-          "id":"k_su",
-          "type":"katakana",      
-          "romaji":"su",
-          "moji":"ス",
-          "url":"su.mp3"
-        },
-        {
-          "id":"k_se",
-          "type":"katakana",      
-          "romaji":"se",
-          "moji":"セ",
-          "url":"se.mp3"
-        },
-        {
-          "id":"k_so",
-          "type":"katakana",      
-          "romaji":"so",
-          "moji":"ソ",
-          "url":"so.mp3"
-        },
-        {
-          "id":"k_ta",
-          "type":"katakana",      
-          "romaji":"ta",
-          "moji":"タ",
-          "url":"ta.mp3"
-        },
-        {
-          "id":"k_chi",
-          "type":"katakana",      
-          "romaji":"chi",
-          "moji":"チ",
-          "url":"chi.mp3"
-  
-        },
-        {
-          "id":"k_tsu",
-          "type":"katakana",      
-          "romaji":"tsu",
-          "moji":"ツ",
-          "url":"tsu.mp3"
-  
-        },
-        {
-          "id":"k_te",
-          "type":"katakana",      
-          "romaji":"te",
-          "moji":"テ",
-          "url":"te.mp3"
-        },
-        {
-          "id":"k_to",
-          "type":"katakana",      
-          "romaji":"to",
-          "moji":"ト",
-          "url":"to.mp3"
-        },
-        {
-          "id":"k_na",
-          "type":"katakana",      
-          "romaji":"na",
-          "moji":"ナ",
-          "url":"na.mp3"
-        },
-        {
-          "id":"k_ni",
-          "type":"katakana",      
-          "romaji":"ni",
-          "moji":"ニ",
-          "url":"ni.mp3"
-        },
-        {
-          "id":"k_nu",
-          "type":"katakana",      
-          "romaji":"nu",
-          "moji":"ヌ",
-          "url":"nu.mp3"
-        },
-        {
-          "id":"k_ne",
-          "type":"katakana",      
-          "romaji":"ne",
-          "moji":"ネ",
-          "url":"ne.mp3"
-        },
-        {
-          "id":"k_no",
-          "type":"katakana",      
-          "romaji":"no",
-          "moji":"ノ",
-          "url":"no.mp3"
-        },
-        {
-          "id":"k_ha",
-          "type":"katakana",      
-          "romaji":"ha",
-          "moji":"ハ",
-          "url":"ha.mp3"
-        },
-        {
-          "id":"k_hi",
-          "type":"katakana",      
-          "romaji":"hi",
-          "moji":"ヒ",
-          "url":"hi.mp3"
-        },
-        {
-          "id":"k_fu",
-          "type":"katakana",      
-          "romaji":"fu",
-          "moji":"フ",
-          "url":"fu.mp3"
-        },
-        {
-          "id":"k_he",
-          "type":"katakana",      
-          "romaji":"he",
-          "moji":"ヘ",
-          "url":"he.mp3"
-        },
-        {
-          "id":"k_ho",
-          "type":"katakana",      
-          "romaji":"ho",
-          "moji":"ホ",
-          "url":"ho.mp3"
-        },
-        {
-          "id":"k_ma",
-          "type":"katakana",      
-          "romaji":"ma",
-          "moji":"マ",
-          "url":"ma.mp3"
-        },
-        {
-          "id":"k_mi",
-          "type":"katakana",      
-          "romaji":"mi",
-          "moji":"ミ",
-          "url":"mi.mp3"
-        },
-        {
-          "id":"k_mu",
-          "type":"katakana",      
-          "romaji":"mu",
-          "moji":"ム",
-          "url":"mu.mp3"
-        },
-        {
-          "id":"k_me",
-          "type":"katakana",      
-          "romaji":"me",
-          "moji":"メ",
-          "url":"me.mp3"
-        },
-        {
-          "id":"k_mo",
-          "type":"katakana",      
-          "romaji":"mo",
-          "moji":"モ",
-          "url":"mo.mp3"
-        },
-        {
-          "id":"k_ya",
-          "type":"katakana",      
-          "romaji":"ya",
-          "moji":"ヤ",
-          "url":"ya.mp3"
-        },
-        {
-          "id":"k_yu",
-          "type":"katakana",      
-          "romaji":"yu",
-          "moji":"ユ",
-          "url":"yu.mp3"
-        },
-        {
-          "id":"k_yo",
-          "type":"katakana",      
-          "romaji":"yo",
-          "moji":"ヨ",
-          "url":"yo.mp3"
-        },
-        {
-          "id":"k_ra",
-          "type":"katakana",      
-          "romaji":"ra",
-          "moji":"ラ",
-          "url":"ra.mp3"
-        },
-        {
-          "id":"k_ri",
-          "type":"katakana",      
-          "romaji":"ri",
-          "moji":"リ",
-          "url":"ri.mp3"
-        },
-        {
-          "id":"k_ru",
-          "type":"katakana",      
-          "romaji":"ru",
-          "moji":"ル",
-          "url":"ru.mp3"
-        },
-        {
-          "id":"k_re",
-          "type":"katakana",      
-          "romaji":"re",
-          "moji":"レ",
-          "url":"re.mp3"
-        },
-        {
-          "id":"k_ro",
-          "type":"katakana",      
-          "romaji":"ro",
-          "moji":"ロ",
-          "url":"ro.mp3"
-        },
-        {
-          "id":"k_wa",
-          "type":"katakana",      
-          "romaji":"wa",
-          "moji":"ワ",
-          "url":"wa.mp3"
-        }, 
-        {
-          "id":"k_wo",
-          "type":"katakana",      
-          "romaji":"o(wo)",
-          "moji":"ヲ",
-          "url":"wo.mp3"
-        },
-        {
-          "id":"k_n",
-          "type":"katakana",      
-          "romaji":"n",
-          "moji":"ン",
-          "url":"n.mp3"
-       },
-        //DakuOn
-        {
-          "id":"k_ga",
-          "type":"katakana",      
-          "romaji":"ga",
-          "moji":"ガ",
-          "url":"ga.mp3"
-        },
-        {
-          "id":"k_gi",
-          "type":"katakana",      
-          "romaji":"gi",
-          "moji":"ギ",
-          "url":"gi.mp3"
-        },
-        {
-          "id":"k_gu",
-          "type":"katakana",      
-          "romaji":"gu",
-          "moji":"グ",
-          "url":"gu.mp3"
-        },
-        {
-          "id":"k_ge",
-          "type":"katakana",      
-          "romaji":"ge",
-          "moji":"ゲ",
-          "url":"ge.mp3"
-        },
-        {
-          "id":"k_go",
-          "type":"katakana",      
-          "romaji":"go",
-          "moji":"ゴ",
-          "url":"go.mp3"
-        },
-        {
-          "id":"k_za",
-          "type":"katakana",      
-          "romaji":"za",
-          "moji":"ザ",
-          "url":"za.mp3"
-        },
-        {
-          "id":"k_ji",
-          "type":"katakana",      
-          "romaji":"ji(zi)",
-          "moji":"ジ",
-          "url":"ji.mp3"
-        },
-        {
-          "id":"k_zu",
-          "type":"katakana",      
-          "romaji":"zu",
-          "moji":"ズ",
-          "url":"zu.mp3"
-        },
-        {
-          "id":"k_ze",
-          "type":"katakana",      
-          "romaji":"ze",
-          "moji":"ゼ",
-          "url":"ze.mp3"
-        },
-        {
-          "id":"k_zo",
-          "type":"katakana",      
-          "romaji":"zo",
-          "moji":"ゾ",
-          "url":"zo.mp3"
-        },
-        {
-          "id":"k_da",
-          "type":"katakana",      
-          "romaji":"da",
-          "moji":"ダ",
-          "url":"da.mp3"
-        },
-        {
-          "id":"k_di",
-          "type":"katakana",      
-          "romaji":"ji(di)",
-          "moji":"ヂ",
-          "url":"ji.mp3"
-        },
-        {
-          "id":"k_du",
-          "type":"katakana",      
-          "romaji":"zu(du)",
-          "moji":"ヅ",
-          "url":"du.mp3"
-        },
-        {
-          "id":"k_de",
-          "type":"katakana",      
-          "romaji":"de",
-          "moji":"デ",
-          "url":"de.mp3"
-        },
-        {
-          "id":"k_do",
-          "type":"katakana",      
-          "romaji":"do",
-          "moji":"ド",
-          "url":"do.mp3"
-        },
-        {
-          "id":"k_ba",
-          "type":"katakana",      
-          "romaji":"ba",
-          "moji":"バ",
-          "url":"ba.mp3"
-        },
-        {
-          "id":"k_bi",
-          "type":"katakana",      
-          "romaji":"bi",
-          "moji":"ビ",
-          "url":"bi.mp3"
-        },
-        {
-          "id":"k_bu",
-          "type":"katakana",      
-          "romaji":"bu",
-          "moji":"ブ",
-          "url":"bu.mp3"
-        },
-        {
-          "id":"k_be",
-          "type":"katakana",      
-          "romaji":"be",
-          "moji":"ベ",
-          "url":"be.mp3"
-        },
-        {
-          "id":"k_bo",
-          "type":"katakana",      
-          "romaji":"bo",
-          "moji":"ボ",
-          "url":"bohl.mp3"
-        },
-        {
-          "id":"k_pa",
-          "type":"katakana",      
-          "romaji":"pa",
-          "moji":"パ",
-          "url":"pa.mp3"
-        },
-        {
-          "id":"k_pi",
-          "type":"katakana",      
-          "romaji":"pi",
-          "moji":"ピ",
-          "url":"pi.mp3"
-        },
-        {
-          "id":"k_pu",
-          "type":"katakana",      
-          "romaji":"pu",
-          "moji":"プ",
-          "url":"pu.mp3"
-        },
-        {
-          "id":"k_pe",
-          "type":"katakana",      
-          "romaji":"pe",
-          "moji":"ペ",
-          "url":"pe.mp3"
-        },
-        {
-          "id":"k_po",
-          "type":"katakana",      
-          "romaji":"po",
-          "moji":"ポ",
-          "url":"po.mp3"
-        },
-        //YoOn
-        {
-          "id":"k_kya",
-          "type":"katakana",      
-          "romaji":"kya",
-          "moji":"キャ",
-          "url":"kya.mp3"
-  
-        }, 
-        {
-          "id":"k_kyu",
-          "type":"katakana",      
-          "romaji":"kyu",
-          "moji":"キュ",
-          "url":"kyu.mp3"
-  
-        }, 
-        {
-          "id":"k_kyo",
-          "type":"katakana",      
-          "romaji":"kyo",
-          "moji":"キョ",
-          "url":"kyo.mp3"
-  
-        },
-        {
-          "id":"k_sha",
-          "type":"katakana",      
-          "romaji":"sha",
-          "moji":"シャ",
-          "url":"sha.mp3"
-  
-        }, 
-        {
-          "id":"k_shu",
-          "type":"katakana",      
-          "romaji":"shu",
-          "moji":"シュ",
-          "url":"shu.mp3"
-  
-        }, 
-        {
-          "id":"k_sho",
-          "type":"katakana",      
-          "romaji":"sho",
-          "moji":"ショ",
-          "url":"sho.mp3"
-  
-        },
-        {
-          "id":"k_cha",
-          "type":"katakana",      
-          "romaji":"cha",
-          "moji":"チャ",
-          "url":"cha.mp3"
-  
-        }, 
-        {
-          "id":"k_chu",
-          "type":"katakana",      
-          "romaji":"chu",
-          "moji":"チュ",
-          "url":"chu.mp3"
-  
-        }, 
-        {
-          "id":"k_cho",
-          "type":"katakana",      
-          "romaji":"cho",
-          "moji":"チョ",
-          "url":"cho.mp3"
-  
-        },
-        {
-          "id":"k_nya",
-          "type":"katakana",      
-          "romaji":"nya",
-          "moji":"ニャ",
-          "url":"nya.mp3"
-  
-        }, 
-        {
-          "id":"k_nyu",
-          "type":"katakana",      
-          "romaji":"nyu",
-          "moji":"ニュ",
-          "url":"nyu.mp3"
-  
-        }, 
-        {
-          "id":"k_nyo",
-          "type":"katakana",      
-          "romaji":"nyo",
-          "moji":"ニョ",
-          "url":"nyo.mp3"
-  
-        },
-        {
-          "id":"k_hya",
-          "type":"katakana",      
-          "romaji":"hya",
-          "moji":"ヒャ",
-          "url":"hya.mp3"
-  
-        }, 
-        {
-          "id":"k_hyu",
-          "type":"katakana",      
-          "romaji":"hyu",
-          "moji":"ヒュ",
-          "url":"hyu.mp3"
-  
-        }, 
-        {
-          "id":"k_hyo",
-          "type":"katakana",      
-          "romaji":"hyo",
-          "moji":"ヒョ",
-          "url":"hyo.mp3"
-  
-        },
-        {
-          "id":"k_mya",
-          "type":"katakana",      
-          "romaji":"mya",
-          "moji":"ミャ",
-          "url":"mya.mp3"
-  
-        }, 
-        {
-          "id":"k_myu",
-          "type":"katakana",      
-          "romaji":"myu",
-          "moji":"ミュ",
-          "url":"ku.mp3"
-  
-        }, 
-        {
-          "id":"k_myo",
-          "type":"katakana",      
-          "romaji":"myo",
-          "moji":"ミョ",
-          "url":"ko.mp3"
-  
-        },
-        {
-          "id":"k_rya",
-          "type":"katakana",      
-          "romaji":"rya",
-          "moji":"リャ",
-          "url":"ka.mp3"
-  
-        }, 
-        {
-          "id":"k_ryu",
-          "type":"katakana",      
-          "romaji":"ryu",
-          "moji":"リュ",
-          "url":"ku.mp3"
-  
-        }, 
-        {
-          "id":"k_ryo",
-          "type":"katakana",      
-          "romaji":"ryo",
-          "moji":"リョ",
-          "url":"ko.mp3"
-  
-        },
-        {
-          "id":"k_gya",
-          "type":"katakana",      
-          "romaji":"gya",
-          "moji":"ギャ",
-          "url":"ka.mp3"
-  
-        }, 
-        {
-          "id":"k_gyu",
-          "type":"katakana",      
-          "romaji":"gyu",
-          "moji":"ギュ",
-          "url":"ku.mp3"
-  
-        }, 
-        {
-          "id":"k_gyo",
-          "type":"katakana",      
-          "romaji":"gyo",
-          "moji":"ギョ",
-          "url":"ko.mp3"
-  
-        },
-        {
-          "id":"k_ja",
-          "type":"katakana",      
-          "romaji":"ja",
-          "moji":"ジャ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"k_ju",
-          "type":"katakana",      
-          "romaji":"ju",
-          "moji":"ジュ",
-          "url":"ku.mp3"
-        },
-        {
-          "id":"k_jo",
-          "type":"katakana",      
-          "romaji":"jo",
-          "moji":"ジョ",
-          "url":"ko.mp3"
-        },
-        {
-          "id":"k_bya",
-          "type":"katakana",      
-          "romaji":"bya",
-          "moji":"ビャ",
-          "url":"ka.mp3"
-  
-        },
-        {
-          "id":"k_byu",
-          "type":"katakana",      
-          "romaji":"byu",
-          "moji":"ビュ",
-          "url":"ku.mp3"
-  
-        }, 
-        {
-          "id":"k_byo",
-          "type":"katakana",      
-          "romaji":"byo",
-          "moji":"ビョ",
-          "url":"ko.mp3"
-  
-        },
-        {
-          "id":"k_pya",
-          "type":"katakana",      
-          "romaji":"pya",
-          "moji":"ピャ",
-          "url":"ka.mp3"
-  
-        }, 
-        {
-          "id":"k_pyu",
-          "type":"katakana",      
-          "romaji":"pyu",
-          "moji":"ピュ",
-          "url":"ku.mp3"
-  
-        },
-        {
-          "id":"k_pyo",
-          "type":"katakana",      
-          "romaji":"pyo",
-          "moji":"ピョ",
-          "url":"ko.mp3"
-  
-        }
-      ],
       NUMBER_TITLE : [
-        //SeiOn
-        {   
-          "id":"num_1",
-          "type":"vocabulary",  
-          "romaji":"zero",
-          "moji":"ぜろ",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"num_1",
-          "type":"vocabulary",  
-          "romaji":"one",
-          "moji":"いち",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"num_2",
-          "type":"vocabulary",      
-          "romaji":"two",
-          "moji":"に",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"num_3",
-          "type":"vocabulary",      
-          "romaji":"three",
-          "moji":"さん",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"num_4",
-          "type":"vocabulary",      
-          "romaji":"four",
-          "moji":"よん/し",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"num_5",
-          "type":"vocabulary",      
-          "romaji":"five",
-          "moji":"ご",
-          "url":"ka.mp3"
-        }, 
         {
-          "id":"num_5",
-          "type":"vocabulary",      
-          "romaji":"six",
-          "moji":"ろく",
-          "url":"ka.mp3"
+          "id": "num_0",
+          "type": "vocab",
+          "moji": "ぜろ",
+          "romaji": "zero",
+          "url": "n_zero.mp3"
         },
         {
-          "id":"num_5",
-          "type":"vocabulary",      
-          "romaji":"seven",
-          "moji":"なな/しち",
-          "url":"ka.mp3"
+          "id": "num_1",
+          "type": "vocab",
+          "moji": "いち",
+          "romaji": "one",
+          "url": "n_ichi.mp3"
         },
         {
-          "id":"num_5",
-          "type":"vocabulary",      
-          "romaji":"eight",
-          "moji":"はち",
-          "url":"ka.mp3"
+          "id": "num_2",
+          "type": "vocab",
+          "moji": "に",
+          "romaji": "two",
+          "url": "n_ni.mp3"
         },
         {
-          "id":"num_5",
-          "type":"vocabulary",      
-          "romaji":"nine",
-          "moji":"きゅう/く",
-          "url":"ka.mp3"
+          "id": "num_3",
+          "type": "vocab",
+          "moji": "さん",
+          "romaji": "three",
+          "url": "n_san.mp3"
         },
         {
-          "id":"num_5",
-          "type":"vocabulary",      
-          "romaji":"ten",
-          "moji":"じゅう",
-          "url":"ka.mp3"
+          "id": "num_4",
+          "type": "vocab",
+          "moji": "よん/し",
+          "romaji": "four",
+          "url": "n_yon.mp3"
         },
         {
-          "id":"num_5",
-          "type":"vocabulary",      
-          "romaji":"eleven",
-          "moji":"じゅういち",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"num_10",
-          "type":"vocabulary",      
-          "romaji":"twelve",
-          "moji":"じゅうに",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"num_100",
-          "type":"vocabulary",      
-          "romaji":"thirteen",
-          "moji":"じゅうさん",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"num_1000",
-          "type":"vocabulary",      
-          "romaji":"fourteen",
-          "moji":"じゅうよん/じゅうし",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"num_10000",
-          "type":"vocabulary",      
-          "romaji":"fifteen",
-          "moji":"じゅうご",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"num_100000",
-          "type":"vocabulary",      
-          "romaji":"sixteen",
-          "moji":"じゅうろく",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"num_1000000",
-          "type":"vocabulary",      
-          "romaji":"seventeen",
-          "moji":"じゅうなな/じゅうしち",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"thing_1",
-          "type":"vocabulary",      
-          "romaji":"eighteen",
-          "moji":"じゅうはち",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"thing_2",
-          "type":"vocabulary",      
-          "romaji":"nineteen",
-          "moji":"じゅうきゅう/じゅうく",
-          "url":"ka.mp3"
-        },
-        {   
-          "id":"person_1",
-          "type":"vocabulary",      
-          "romaji":"twenty",
-          "moji":"にじゅう",
-          "url":"ka.mp3"
+          "id": "num_5",
+          "type": "vocab",
+          "moji": "ご",
+          "romaji": "five",
+          "url": "n_go.mp3"
         },
         {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"thirty",
-          "moji":"さんじゅう",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"forty",
-          "moji":"よんじゅう",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"fifty",
-          "moji":"ごじゅう",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"sixty",
-          "moji":"ろくじゅう",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"seventy",
-          "moji":"ななじゅう",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"eighty",
-          "moji":"はちじゅう",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"ninety",
-          "moji":"きゅうじゅう",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"one hundred",
-          "moji":"ひゃく",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"two hundred",
-          "moji":"にひゃく",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"three hundred",
-          "moji":"さんびゃく",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"four hundred",
-          "moji":"よんひゃく",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"five hundred",
-          "moji":"ごひゃく",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"six hundred",
-          "moji":"ろっぴゃく",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"seven hundred",
-          "moji":"ななひゃく",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"eight hundred",
-          "moji":"はっぴゃく",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"nine hundred",
-          "moji":"きゅうひゃく",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"thousand",
-          "moji":"せん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"two thousand",
-          "moji":"にせん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"three thousand",
-          "moji":"さんぜん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"four thousand",
-          "moji":"よんせん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"five thousand",
-          "moji":"ごせん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"six thousand",
-          "moji":"ろくせん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"seven thousand",
-          "moji":"ななせん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"eight thousand",
-          "moji":"はっせん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"nine thousand",
-          "moji":"きゅうせん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"ten thousand",
-          "moji":"いちまん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"hundred thousand",
-          "moji":"じゅうまん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"a million",
-          "moji":"ひゃくまん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"one piece",
-          "moji":"ひとつ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"two pieces",
-          "moji":"ふたつ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"three pieces",
-          "moji":"みっつ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"four pieces",
-          "moji":"よっつ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"five pieces",
-          "moji":"いつつ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"six pieces",
-          "moji":"むっつ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"seven pieces",
-          "moji":"ななつ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"eight pieces",
-          "moji":"やっつ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"nine pieces",
-          "moji":"ここのつ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"ten pieces",
-          "moji":"とお",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"one piece",
-          "moji":"いっこ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"two pieces",
-          "moji":"にこ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"three pieces",
-          "moji":"さんこ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"four pieces",
-          "moji":"よんこ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"five pieces",
-          "moji":"ごこ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"six pieces",
-          "moji":"ろっこ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"seven pieces",
-          "moji":"ななこ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"eight pieces",
-          "moji":"はっこ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"nine pieces",
-          "moji":"きゅうこ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"ten pieces",
-          "moji":"じゅっこ",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"one person",
-          "moji":"ひとり",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"two persons",
-          "moji":"ふたり",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"three persons",
-          "moji":"さんにん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"four persons",
-          "moji":"よにん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"five persons",
-          "moji":"ごにん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"six persons",
-          "moji":"ろくにん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"seven persons",
-          "moji":"ななにん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"eight persons",
-          "moji":"はちにん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"nine persons",
-          "moji":"きゅうにん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"ten persons",
-          "moji":"じゅうにん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"one piece",
-          "moji":"いっぽん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"two pieces",
-          "moji":"にほん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"three pieces",
-          "moji":"さんぼん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"four pieces",
-          "moji":"よんほん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"five pieces",
-          "moji":"ごほん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"six pieces",
-          "moji":"ろっぽん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"seven pieces",
-          "moji":"ななほん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"eight pieces",
-          "moji":"はっぽん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"nine pieces",
-          "moji":"きゅうほん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"ten pieces",
-          "moji":"じゅっぽん",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"one piece",
-          "moji":"いちまい",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"two pieces",
-          "moji":"にまい",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"three pieces",
-          "moji":"さんまい",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"four pieces",
-          "moji":"よんまい",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"five pieces",
-          "moji":"ごまい",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"six pieces",
-          "moji":"ろくまい",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"seven pieces",
-          "moji":"ななまい",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"eight pieces",
-          "moji":"はちまい",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"nine pieces",
-          "moji":"きゅうまい",
-          "url":"ka.mp3"
-        }, 
-        {
-          "id":"person_2",
-          "type":"vocabulary",      
-          "romaji":"ten pieces",
-          "moji":"じゅうまい",
-          "url":"ka.mp3"
-        }, 
+          "id": "num_6",
+          "type": "vocab",
+          "moji": "ろく",
+          "romaji": "six",
+          "url": "n_roku.mp3"
+        },
+        {
+          "id": "num_7",
+          "type": "vocab",
+          "moji": "なな/しち",
+          "romaji": "seven",
+          "url": "n_nana.mp3"
+        },
+        {
+          "id": "num_8",
+          "type": "vocab",
+          "moji": "はち",
+          "romaji": "eight",
+          "url": "n_hachi.mp3"
+        },
+        {
+          "id": "num_9",
+          "type": "vocab",
+          "moji": "きゅう/く",
+          "romaji": "nine",
+          "url": "n_kyuu.mp3"
+        },
+        {
+          "id": "num_10",
+          "type": "vocab",
+          "moji": "じゅう",
+          "romaji": "ten",
+          "url": "n_juu.mp3"
+        },
+        {
+          "id": "num_11",
+          "type": "vocab",
+          "moji": "じゅういち",
+          "romaji": "eleven",
+          "url": "n_juuichi.mp3"
+        },
+        {
+          "id": "num_12",
+          "type": "vocab",
+          "moji": "じゅうに",
+          "romaji": "twelve",
+          "url": "n_juuni.mp3"
+        },
+        {
+          "id": "num_13",
+          "type": "vocab",
+          "moji": "じゅうさん",
+          "romaji": "thirteen",
+          "url": "n_juusan.mp3"
+        },
+        {
+          "id": "num_14",
+          "type": "vocab",
+          "moji": "じゅうよん/じゅうし",
+          "romaji": "fourteen",
+          "url": "n_juuyon.mp3"
+        },
+        {
+          "id": "num_15",
+          "type": "vocab",
+          "moji": "じゅうご",
+          "romaji": "fifteen",
+          "url": "n_juugo.mp3"
+        },
+        {
+          "id": "num_16",
+          "type": "vocab",
+          "moji": "じゅうろく",
+          "romaji": "sixteen",
+          "url": "n_juuroku.mp3"
+        },
+        {
+          "id": "num_17",
+          "type": "vocab",
+          "moji": "じゅうなな/じゅうしち",
+          "romaji": "seventeen",
+          "url": "n_juunana.mp3"
+        },
+        {
+          "id": "num_18",
+          "type": "vocab",
+          "moji": "じゅうはち",
+          "romaji": "eighteen",
+          "url": "n_juuhachi.mp3"
+        },
+        {
+          "id": "num_19",
+          "type": "vocab",
+          "moji": "じゅうきゅう/じゅうく",
+          "romaji": "nineteen",
+          "url": "n_juukyuu.mp3"
+        },
+        {
+          "id": "num_20",
+          "type": "vocab",
+          "moji": "にじゅう",
+          "romaji": "twenty",
+          "url": "n_nijuu.mp3"
+        },
+        {
+          "id": "num_22",
+          "type": "vocab",
+          "moji": "さんじゅう",
+          "romaji": "thirty",
+          "url": "n_sanjuu.mp3"
+        },
+        {
+          "id": "num_23",
+          "type": "vocab",
+          "moji": "よんじゅう",
+          "romaji": "forty",
+          "url": "n_yonjuu.mp3"
+        },
+        {
+          "id": "num_24",
+          "type": "vocab",
+          "moji": "ごじゅう",
+          "romaji": "fifty",
+          "url": "n_gojuu.mp3"
+        },
+        {
+          "id": "num_25",
+          "type": "vocab",
+          "moji": "ろくじゅう",
+          "romaji": "sixty",
+          "url": "n_rokujuu.mp3"
+        },
+        {
+          "id": "num_26",
+          "type": "vocab",
+          "moji": "ななじゅう",
+          "romaji": "seventy",
+          "url": "n_nanajuu.mp3"
+        },
+        {
+          "id": "num_27",
+          "type": "vocab",
+          "moji": "はちじゅう",
+          "romaji": "eighty",
+          "url": "n_hachijuu.mp3"
+        },
+        {
+          "id": "num_28",
+          "type": "vocab",
+          "moji": "きゅうじゅう",
+          "romaji": "ninety",
+          "url": "n_kyuujuu.mp3"
+        },
+        {
+          "id": "num_29",
+          "type": "vocab",
+          "moji": "ひゃく",
+          "romaji": "one hundred",
+          "url": "n_hyaku.mp3"
+        },
+        {
+          "id": "num_30",
+          "type": "vocab",
+          "moji": "にひゃく",
+          "romaji": "two hundred",
+          "url": "n_nihyaku.mp3"
+        },
+        {
+          "id": "num_31",
+          "type": "vocab",
+          "moji": "さんびゃく",
+          "romaji": "three hundred",
+          "url": "n_sanbyaku.mp3"
+        },
+        {
+          "id": "num_32",
+          "type": "vocab",
+          "moji": "よんひゃく",
+          "romaji": "four hundred",
+          "url": "n_yonhyaku.mp3"
+        },
+        {
+          "id": "num_33",
+          "type": "vocab",
+          "moji": "ごひゃく",
+          "romaji": "five hundred",
+          "url": "n_gohyaku.mp3"
+        },
+        {
+          "id": "num_34",
+          "type": "vocab",
+          "moji": "ろっぴゃく",
+          "romaji": "six hundred",
+          "url": "n_roppyaku.mp3"
+        },
+        {
+          "id": "num_35",
+          "type": "vocab",
+          "moji": "ななひゃく",
+          "romaji": "seven hundred",
+          "url": "n_nanahyaku.mp3"
+        },
+        {
+          "id": "num_36",
+          "type": "vocab",
+          "moji": "はっぴゃく",
+          "romaji": "eight hundred",
+          "url": "n_happyaku.mp3"
+        },
+        {
+          "id": "num_37",
+          "type": "vocab",
+          "moji": "きゅうひゃく",
+          "romaji": "nine hundred",
+          "url": "n_kyuuhyaku.mp3"
+        },
+        {
+          "id": "num_38",
+          "type": "vocab",
+          "moji": "せん",
+          "romaji": "thousand",
+          "url": "n_sen.mp3"
+        },
+        {
+          "id": "num_39",
+          "type": "vocab",
+          "moji": "にせん",
+          "romaji": "two thousand",
+          "url": "n_nisen.mp3"
+        },
+        {
+          "id": "num_40",
+          "type": "vocab",
+          "moji": "さんぜん",
+          "romaji": "three thousand",
+          "url": "n_sanzen.mp3"
+        },
+        {
+          "id": "num_41",
+          "type": "vocab",
+          "moji": "よんせん",
+          "romaji": "four thousand",
+          "url": "n_yonsen.mp3"
+        },
+        {
+          "id": "num_42",
+          "type": "vocab",
+          "moji": "ごせん",
+          "romaji": "five thousand",
+          "url": "n_gosen.mp3"
+        },
+        {
+          "id": "num_43",
+          "type": "vocab",
+          "moji": "ろくせん",
+          "romaji": "six thousand",
+          "url": "n_rokusen.mp3"
+        },
+        {
+          "id": "num_44",
+          "type": "vocab",
+          "moji": "ななせん",
+          "romaji": "seven thousand",
+          "url": "n_nanasen.mp3"
+        },
+        {
+          "id": "num_45",
+          "type": "vocab",
+          "moji": "はっせん",
+          "romaji": "eight thousand",
+          "url": "n_hassen.mp3"
+        },
+        {
+          "id": "num_46",
+          "type": "vocab",
+          "moji": "きゅうせん",
+          "romaji": "nine thousand",
+          "url": "n_kyuusen.mp3"
+        },
+        {
+          "id": "num_47",
+          "type": "vocab",
+          "moji": "いちまん",
+          "romaji": "ten thousand",
+          "url": "n_ichiman.mp3"
+        },
+        {
+          "id": "num_48",
+          "type": "vocab",
+          "moji": "じゅうまん",
+          "romaji": "hundred thousand",
+          "url": "n_juuman.mp3"
+        },
+        {
+          "id": "num_49",
+          "type": "vocab",
+          "moji": "ひゃくまん",
+          "romaji": "a million",
+          "url": "n_hyakuman.mp3"
+        },
+        {
+          "id": "num_50",
+          "type": "vocab",
+          "moji": "ひとつ",
+          "romaji": "one piece",
+          "url": "n_hitotsu.mp3"
+        },
+        {
+          "id": "num_51",
+          "type": "vocab",
+          "moji": "ふたつ",
+          "romaji": "two pieces",
+          "url": "n_futatsu.mp3"
+        },
+        {
+          "id": "num_52",
+          "type": "vocab",
+          "moji": "みっつ",
+          "romaji": "three pieces",
+          "url": "n_mittsu.mp3"
+        },
+        {
+          "id": "num_53",
+          "type": "vocab",
+          "moji": "よっつ",
+          "romaji": "four pieces",
+          "url": "n_yottsu.mp3"
+        },
+        {
+          "id": "num_54",
+          "type": "vocab",
+          "moji": "いつつ",
+          "romaji": "five pieces",
+          "url": "n_itsutsu.mp3"
+        },
+        {
+          "id": "num_55",
+          "type": "vocab",
+          "moji": "むっつ",
+          "romaji": "six pieces",
+          "url": "n_muttsu.mp3"
+        },
+        {
+          "id": "num_56",
+          "type": "vocab",
+          "moji": "ななつ",
+          "romaji": "seven pieces",
+          "url": "n_nanatsu.mp3"
+        },
+        {
+          "id": "num_57",
+          "type": "vocab",
+          "moji": "やっつ",
+          "romaji": "eight pieces",
+          "url": "n_yattsu.mp3"
+        },
+        {
+          "id": "num_58",
+          "type": "vocab",
+          "moji": "ここのつ",
+          "romaji": "nine pieces",
+          "url": "n_kokonotsu.mp3"
+        },
+        {
+          "id": "num_59",
+          "type": "vocab",
+          "moji": "とお",
+          "romaji": "ten pieces",
+          "url": "n_too.mp3"
+        },
+        {
+          "id": "num_60",
+          "type": "vocab",
+          "moji": "いっこ",
+          "romaji": "one piece",
+          "url": "n_ikko.mp3"
+        },
+        {
+          "id": "num_61",
+          "type": "vocab",
+          "moji": "にこ",
+          "romaji": "two pieces",
+          "url": "n_niko.mp3"
+        },
+        {
+          "id": "num_62",
+          "type": "vocab",
+          "moji": "さんこ",
+          "romaji": "three pieces",
+          "url": "n_sanko.mp3"
+        },
+        {
+          "id": "num_63",
+          "type": "vocab",
+          "moji": "よんこ",
+          "romaji": "four pieces",
+          "url": "n_yonko.mp3"
+        },
+        {
+          "id": "num_64",
+          "type": "vocab",
+          "moji": "ごこ",
+          "romaji": "five pieces",
+          "url": "n_goko.mp3"
+        },
+        {
+          "id": "num_65",
+          "type": "vocab",
+          "moji": "ろっこ",
+          "romaji": "six pieces",
+          "url": "n_rokko.mp3"
+        },
+        {
+          "id": "num_66",
+          "type": "vocab",
+          "moji": "ななこ",
+          "romaji": "seven pieces",
+          "url": "n_nanako.mp3"
+        },
+        {
+          "id": "num_67",
+          "type": "vocab",
+          "moji": "はっこ",
+          "romaji": "eight pieces",
+          "url": "n_hakko.mp3"
+        },
+        {
+          "id": "num_68",
+          "type": "vocab",
+          "moji": "きゅうこ",
+          "romaji": "nine pieces",
+          "url": "n_kyuuko.mp3"
+        },
+        {
+          "id": "num_69",
+          "type": "vocab",
+          "moji": "じゅっこ",
+          "romaji": "ten pieces",
+          "url": "n_jukko.mp3"
+        },
+        {
+          "id": "num_70",
+          "type": "vocab",
+          "moji": "ひとり",
+          "romaji": "one person",
+          "url": "n_hitori.mp3"
+        },
+        {
+          "id": "num_71",
+          "type": "vocab",
+          "moji": "ふたり",
+          "romaji": "two persons",
+          "url": "n_futari.mp3"
+        },
+        {
+          "id": "num_72",
+          "type": "vocab",
+          "moji": "さんにん",
+          "romaji": "three persons",
+          "url": "n_sannin.mp3"
+        },
+        {
+          "id": "num_73",
+          "type": "vocab",
+          "moji": "よにん",
+          "romaji": "four persons",
+          "url": "n_yonin.mp3"
+        },
+        {
+          "id": "num_74",
+          "type": "vocab",
+          "moji": "ごにん",
+          "romaji": "five persons",
+          "url": "n_gonin.mp3"
+        },
+        {
+          "id": "num_75",
+          "type": "vocab",
+          "moji": "ろくにん",
+          "romaji": "six persons",
+          "url": "n_rokunin.mp3"
+        },
+        {
+          "id": "num_76",
+          "type": "vocab",
+          "moji": "ななにん",
+          "romaji": "seven persons",
+          "url": "n_nananin.mp3"
+        },
+        {
+          "id": "num_77",
+          "type": "vocab",
+          "moji": "はちにん",
+          "romaji": "eight persons",
+          "url": "n_hachinin.mp3"
+        },
+        {
+          "id": "num_78",
+          "type": "vocab",
+          "moji": "きゅうにん",
+          "romaji": "nine persons",
+          "url": "n_kyuunin.mp3"
+        },
+        {
+          "id": "num_79",
+          "type": "vocab",
+          "moji": "じゅうにん",
+          "romaji": "ten persons",
+          "url": "n_juunin.mp3"
+        },
+        {
+          "id": "num_80",
+          "type": "vocab",
+          "moji": "いっぽん",
+          "romaji": "one piece",
+          "url": "n_ippon.mp3"
+        },
+        {
+          "id": "num_81",
+          "type": "vocab",
+          "moji": "にほん",
+          "romaji": "two pieces",
+          "url": "n_nihon.mp3"
+        },
+        {
+          "id": "num_82",
+          "type": "vocab",
+          "moji": "さんぼん",
+          "romaji": "three pieces",
+          "url": "n_sanbon.mp3"
+        },
+        {
+          "id": "num_83",
+          "type": "vocab",
+          "moji": "よんほん",
+          "romaji": "four pieces",
+          "url": "n_yonhon.mp3"
+        },
+        {
+          "id": "num_84",
+          "type": "vocab",
+          "moji": "ごほん",
+          "romaji": "five pieces",
+          "url": "n_gohon.mp3"
+        },
+        {
+          "id": "num_85",
+          "type": "vocab",
+          "moji": "ろっぽん",
+          "romaji": "six pieces",
+          "url": "n_roppon.mp3"
+        },
+        {
+          "id": "num_86",
+          "type": "vocab",
+          "moji": "ななほん",
+          "romaji": "seven pieces",
+          "url": "n_nanahon.mp3"
+        },
+        {
+          "id": "num_87",
+          "type": "vocab",
+          "moji": "はっぽん",
+          "romaji": "eight pieces",
+          "url": "n_happon.mp3"
+        },
+        {
+          "id": "num_88",
+          "type": "vocab",
+          "moji": "きゅうほん",
+          "romaji": "nine pieces",
+          "url": "n_kyuuhon.mp3"
+        },
+        {
+          "id": "num_89",
+          "type": "vocab",
+          "moji": "じゅっぽん",
+          "romaji": "ten pieces",
+          "url": "n_juppon.mp3"
+        },
+        {
+          "id": "num_90",
+          "type": "vocab",
+          "moji": "いちまい",
+          "romaji": "one piece",
+          "url": "n_ichimai.mp3"
+        },
+        {
+          "id": "num_91",
+          "type": "vocab",
+          "moji": "にまい",
+          "romaji": "two pieces",
+          "url": "n_nimai.mp3"
+        },
+        {
+          "id": "num_92",
+          "type": "vocab",
+          "moji": "さんまい",
+          "romaji": "three pieces",
+          "url": "n_sanmai.mp3"
+        },
+        {
+          "id": "num_93",
+          "type": "vocab",
+          "moji": "よんまい",
+          "romaji": "four pieces",
+          "url": "n_yonmai.mp3"
+        },
+        {
+          "id": "num_94",
+          "type": "vocab",
+          "moji": "ごまい",
+          "romaji": "five pieces",
+          "url": "n_gomai.mp3"
+        },
+        {
+          "id": "num_95",
+          "type": "vocab",
+          "moji": "ろくまい",
+          "romaji": "six pieces",
+          "url": "n_rokumai.mp3"
+        },
+        {
+          "id": "num_96",
+          "type": "vocab",
+          "moji": "ななまい",
+          "romaji": "seven pieces",
+          "url": "n_nanamai.mp3"
+        },
+        {
+          "id": "num_97",
+          "type": "vocab",
+          "moji": "はちまい",
+          "romaji": "eight pieces",
+          "url": "n_hachimai.mp3"
+        },
+        {
+          "id": "num_98",
+          "type": "vocab",
+          "moji": "きゅうまい",
+          "romaji": "nine pieces",
+          "url": "n_kyuumai.mp3"
+        },
+        {
+          "id": "num_99",
+          "type": "vocab",
+          "moji": "じゅうまい",
+          "romaji": "ten pieces",
+          "url": "n_juumai.mp3"
+        }
       ], 
       GREETING_TITLE : [
         //SeiOn
@@ -2150,65 +702,65 @@ export const learnData =
           "type":"vocabulary",  
           "romaji":"Good morning",
           "moji":"おはようございます",
-          "url":"ka.mp3"
+          "url":"g_ohayougozaimasu.mp3"
         },
         {   
           "id":"grt_2",
           "type":"vocabulary",      
           "romaji":"Good afternoon",
           "moji":"こんにちは",
-          "url":"ka.mp3"
+          "url":"g_konnichiha.mp3"
         },
         {   
           "id":"grt_3",
           "type":"vocabulary",      
           "romaji":"Good evening",
           "moji":"こんばんは",
-          "url":"ka.mp3"
+          "url":"g_konbanha.mp3"
         },
         {   
           "id":"grt_4",
           "type":"vocabulary",      
           "romaji":"Good-bye",
           "moji":"さようなら",
-          "url":"ka.mp3"
+          "url":"g_sayounara.mp3"
         }, 
         {   
           "id":"grt_5",
           "type":"vocabulary",      
           "romaji":"Thank you very much",
           "moji":"ありがとうございます",
-          "url":"ka.mp3"
+          "url":"g_arigatougozaimasu.mp3"
         },
         {   
           "id":"grt_6",
           "type":"vocabulary",      
           "romaji":"It's a pleasure to meet you",
           "moji":"はじめまして",
-          "url":"ka.mp3"
+          "url":"g_hajimemashite.mp3"
         },
         {   
           "id":"grt_7",
           "type":"vocabulary",      
           "romaji":"I'm looking forward to knowing you",
           "moji":"よろしくおねがいします",
-          "url":"ka.mp3"
+          "url":"g_yoroshikuonegaishimasu.mp3"
         },
         {   
           "id":"grt_8",
           "type":"vocabulary",      
           "romaji":"Excuse me / I'm sorry",
           "moji":"すみません",
-          "url":"ka.mp3"
+          "url":"g_sumimasen.mp3"
         }, 
         {   
           "id":"grt_9",
           "type":"vocabulary",      
           "romaji":"Good night",
           "moji":"おやすみなさい",
-          "url":"ka.mp3"
+          "url":"g_oyasuminasai.mp3"
         },
-      ], 
+      ],  
       TOPIC1_TITLE_and_vocabulary : [
         {
           "id": "t1v_1",
@@ -2243,7 +795,7 @@ export const learnData =
           "part": "interrogative",
           "vocabulary": "いくつ",
           "kanji": "",
-          "english": "hou many",
+          "english": "how many",
           "url": "t1_ikutsu.mp3"
         },
         {
@@ -2252,7 +804,7 @@ export const learnData =
           "part": "interrogative",
           "vocabulary": "いくら",
           "kanji": "",
-          "english": "hou much",
+          "english": "how much",
           "url": "t1_ikura.mp3"
         },
         {
@@ -2965,7 +1517,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "おんがく",
           "kanji": "音楽",
-          "english": "Music",
+          "english": "music",
           "url": "t2_ongaku.mp3"
         },
         {
@@ -3019,7 +1571,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "きょう",
           "kanji": "今日",
-          "english": "Today",
+          "english": "today",
           "url": "t2_kyou.mp3"
         },
         {
@@ -3028,7 +1580,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "ぎんこう",
           "kanji": "銀行",
-          "english": "Bank",
+          "english": "bank",
           "url": "t2_ginkou.mp3"
         },
         {
@@ -3046,7 +1598,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "こうえん",
           "kanji": "公園",
-          "english": "Park",
+          "english": "park",
           "url": "t2_kouen.mp3"
         },
         {
@@ -3064,7 +1616,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "コーヒー",
           "kanji": "",
-          "english": "Coffee",
+          "english": "coffee",
           "url": "t2_kohi.mp3"
         },
         {
@@ -3109,7 +1661,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "じてんしゃ",
           "kanji": "自転車",
-          "english": "Bicycle",
+          "english": "bicycle",
           "url": "t2_jitensha.mp3"
         },
         {
@@ -3781,7 +2333,7 @@ export const learnData =
           "vocabulary": "おおきい",
           "kanji": "大きい",
           "english": "big",
-          "url": "t3_ooki.mp3"
+          "url": "t3_ookii.mp3"
         },
         {
           "id": "t3v_16",
@@ -3798,7 +2350,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "きのう",
           "kanji": "昨日",
-          "english": "Yesterday",
+          "english": "yesterday",
           "url": "t3_kinou.mp3"
         },
         {
@@ -3825,7 +2377,7 @@ export const learnData =
           "part": "i-adjective",
           "vocabulary": "さむい",
           "kanji": "寒い",
-          "english": "Cold",
+          "english": "cold",
           "url": "t3_samui.mp3"
         },
         {
@@ -3834,7 +2386,7 @@ export const learnData =
           "part": "na-adjective",
           "vocabulary": "しずか",
           "kanji": "静か",
-          "english": "Quiet",
+          "english": "quiet",
           "url": "t3_shizuka.mp3"
         },
         {
@@ -3843,7 +2395,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "した",
           "kanji": "下",
-          "english": "Below",
+          "english": "below",
           "url": "t3_shita.mp3"
         },
         {
@@ -3852,7 +2404,7 @@ export const learnData =
           "part": "adverb",
           "vocabulary": "すこし",
           "kanji": "少し",
-          "english": "Few",
+          "english": "few",
           "url": "t3_sukoshi.mp3"
         },
         {
@@ -3861,7 +2413,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "スポーツ",
           "kanji": "",
-          "english": "Sport",
+          "english": "sport",
           "url": "t3_supotsu.mp3"
         },
         {
@@ -3870,7 +2422,7 @@ export const learnData =
           "part": "接続詞",
           "vocabulary": "そして",
           "kanji": "",
-          "english": "And",
+          "english": "and",
           "url": "t3_soshite.mp3"
         },
         {
@@ -3879,7 +2431,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "そと",
           "kanji": "外",
-          "english": "Outside",
+          "english": "outside",
           "url": "t3_soto.mp3"
         },
         {
@@ -3951,7 +2503,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "ドア",
           "kanji": "",
-          "english": "Western style door",
+          "english": "western style door",
           "url": "t3_doa.mp3"
         },
         {
@@ -4517,7 +3069,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "かいもの",
           "kanji": "買い物",
-          "english": "Shopping",
+          "english": "shopping",
           "url": "t4_kaimono.mp3"
         },
         {
@@ -4661,7 +3213,7 @@ export const learnData =
           "part": "i-adjective",
           "vocabulary": "すずしい",
           "kanji": "涼しい",
-          "english": "Refreshing",
+          "english": "refreshing",
           "url": "t4_suzushii.mp3"
         },
         {
@@ -4894,7 +3446,7 @@ export const learnData =
           "type": "vocab",
           "part": "noun",
           "vocabulary": "みんな",
-          "kanji": "",
+          "kanji": "皆",
           "english": "everyone",
           "url": "t4_minna.mp3"
         },
@@ -5246,7 +3798,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "かさ",
           "kanji": "傘",
-          "english": "Umbrella",
+          "english": "umbrella",
           "url": "t5_kasa.mp3"
         },
         {
@@ -5255,7 +3807,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "カップ",
           "kanji": "",
-          "english": "Cup",
+          "english": "cup",
           "url": "t5_kappu.mp3"
         },
         {
@@ -5282,7 +3834,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "ぎゅうにく",
           "kanji": "牛肉",
-          "english": "Beef",
+          "english": "beef",
           "url": "t5_gyuuniku.mp3"
         },
         {
@@ -5291,7 +3843,7 @@ export const learnData =
           "part": "na-adjective",
           "vocabulary": "きらい",
           "kanji": "嫌い",
-          "english": "Hate",
+          "english": "hate",
           "url": "t5_kirai.mp3"
         },
         {
@@ -5309,7 +3861,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "くだもの",
           "kanji": "果物",
-          "english": "Fruit",
+          "english": "fruit",
           "url": "t5_kudamono.mp3"
         },
         {
@@ -5318,7 +3870,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "くつ",
           "kanji": "靴",
-          "english": "Shoes",
+          "english": "shoes",
           "url": "t5_kutsu.mp3"
         },
         {
@@ -5327,7 +3879,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "くつした",
           "kanji": "靴下",
-          "english": "Socks",
+          "english": "socks",
           "url": "t5_kutsushita.mp3"
         },
         {
@@ -5372,7 +3924,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "さかな",
           "kanji": "魚",
-          "english": "Fish",
+          "english": "fish",
           "url": "t5_sakana.mp3"
         },
         {
@@ -5390,7 +3942,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "さとう",
           "kanji": "砂糖",
-          "english": "Sugar",
+          "english": "sugar",
           "url": "t5_satou.mp3"
         },
         {
@@ -5399,7 +3951,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "しお",
           "kanji": "塩",
-          "english": "Salt",
+          "english": "salt",
           "url": "t5_shio.mp3"
         },
         {
@@ -5417,7 +3969,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "シャツ",
           "kanji": "",
-          "english": "Shirt",
+          "english": "shirt",
           "url": "t5_shatsu.mp3"
         },
         {
@@ -5435,7 +3987,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "スカート",
           "kanji": "",
-          "english": "Skirt",
+          "english": "skirt",
           "url": "t5_sukato.mp3"
         },
         {
@@ -5444,7 +3996,7 @@ export const learnData =
           "part": "na-adjective",
           "vocabulary": "すき",
           "kanji": "好き",
-          "english": "Likeable",
+          "english": "likeable",
           "url": "t5_suki.mp3"
         },
         {
@@ -5453,7 +4005,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "ズボン",
           "kanji": "",
-          "english": "Trousers",
+          "english": "trousers",
           "url": "t5_zubon.mp3"
         },
         {
@@ -5480,7 +4032,7 @@ export const learnData =
           "part": "adverb",
           "vocabulary": "ぜんぶ",
           "kanji": "全部",
-          "english": "All",
+          "english": "all",
           "url": "t5_zenbu.mp3"
         },
         {
@@ -6146,7 +4698,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "おとな",
           "kanji": "大人",
-          "english": "Adult",
+          "english": "adult",
           "url": "t6_otona.mp3"
         },
         {
@@ -6171,9 +4723,9 @@ export const learnData =
           "id": "t6v_24",
           "type": "vocab",
           "part": "noun",
-          "vocabulary": "おばさん",
+          "vocabulary": "おば",
           "kanji": "伯母/叔母",
-          "english": "Aunt",
+          "english": "aunt",
           "url": "t6_oba.mp3"
         },
         {
@@ -6191,7 +4743,7 @@ export const learnData =
           "part": "i-adjective",
           "vocabulary": "おもい",
           "kanji": "重い",
-          "english": "Heavy",
+          "english": "heavy",
           "url": "t6_omoi.mp3"
         },
         {
@@ -6200,7 +4752,7 @@ export const learnData =
           "part": "i-adjective",
           "vocabulary": "おもしろい",
           "kanji": "",
-          "english": "Interesting",
+          "english": "interesting",
           "url": "t6_omoshiroi.mp3"
         },
         {
@@ -6209,7 +4761,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "かお",
           "kanji": "顔",
-          "english": "",
+          "english": "face",
           "url": "t6_kao.mp3"
         },
         {
@@ -6227,7 +4779,7 @@ export const learnData =
           "part": "i-adjective",
           "vocabulary": "からい",
           "kanji": "辛い",
-          "english": "Spicy",
+          "english": "spicy",
           "url": "t6_karai.mp3"
         },
         {
@@ -6236,7 +4788,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "からだ",
           "kanji": "体",
-          "english": "Body",
+          "english": "body",
           "url": "t6_karada.mp3"
         },
         {
@@ -6245,7 +4797,7 @@ export const learnData =
           "part": "i-adjective",
           "vocabulary": "かるい",
           "kanji": "軽い",
-          "english": "Light",
+          "english": "light",
           "url": "t6_karui.mp3"
         },
         {
@@ -6254,7 +4806,7 @@ export const learnData =
           "part": "i-adjective",
           "vocabulary": "かわいい",
           "kanji": "",
-          "english": "Cute",
+          "english": "cute",
           "url": "t6_kawaii.mp3"
         },
         {
@@ -6299,7 +4851,7 @@ export const learnData =
           "part": "i-adjective",
           "vocabulary": "くらい",
           "kanji": "暗い",
-          "english": "Gloomy",
+          "english": "gloomy",
           "url": "t6_kurai.mp3"
         },
         {
@@ -6389,7 +4941,7 @@ export const learnData =
           "part": "i-adjective",
           "vocabulary": "しろい",
           "kanji": "白い",
-          "english": "White",
+          "english": "white",
           "url": "t6_shiroi.mp3"
         },
         {
@@ -6795,7 +5347,7 @@ export const learnData =
           "part": "verb",
           "vocabulary": "あびます",
           "kanji": "浴びます",
-          "english": "to bathe, to shower",
+          "english": "to bath, to shower",
           "url": "t7_abimasu.mp3"
         },
         {
@@ -6867,7 +5419,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "おふろ",
           "kanji": "お風呂",
-          "english": "Bath",
+          "english": "bath",
           "url": "t7_ofuro.mp3"
         },
         {
@@ -6894,7 +5446,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "かぜ",
           "kanji": "風",
-          "english": "Wind",
+          "english": "wind",
           "url": "t7_kaze.mp3"
         },
         {
@@ -6921,7 +5473,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "かわ",
           "kanji": "川",
-          "english": "River",
+          "english": "river",
           "url": "t7_kawa.mp3"
         },
         {
@@ -6930,7 +5482,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "ギター",
           "kanji": "",
-          "english": "Guitar",
+          "english": "guitar",
           "url": "t7_gita.mp3"
         },
         {
@@ -6957,7 +5509,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "さいふ",
           "kanji": "財布",
-          "english": "Wallet",
+          "english": "wallet",
           "url": "t7_saifu.mp3"
         },
         {
@@ -6966,7 +5518,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "じかん",
           "kanji": "時間",
-          "english": "Time",
+          "english": "time",
           "url": "t7_jikan.mp3"
         },
         {
@@ -6975,7 +5527,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "シャワー",
           "kanji": "",
-          "english": "Shower",
+          "english": "shower",
           "url": "t7_shawa.mp3"
         },
         {
@@ -7191,7 +5743,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "やま",
           "kanji": "山",
-          "english": "",
+          "english": "mountain",
           "url": "t7_yama.mp3"
         },
         {
@@ -7471,7 +6023,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "きた",
           "kanji": "北",
-          "english": "North",
+          "english": "north",
           "url": "t8_kita.mp3"
         },
         {
@@ -7498,7 +6050,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "こえ",
           "kanji": "声",
-          "english": "Voice",
+          "english": "voice",
           "url": "t8_koe.mp3"
         },
         {
@@ -7507,7 +6059,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "じぶん",
           "kanji": "自分",
-          "english": "Oneself",
+          "english": "oneself",
           "url": "t8_jibun.mp3"
         },
         {
@@ -7516,7 +6068,7 @@ export const learnData =
           "part": "adverb",
           "vocabulary": "すぐに",
           "kanji": "",
-          "english": "Instantly",
+          "english": "instantly",
           "url": "t8_suguni.mp3"
         },
         {
@@ -7525,7 +6077,7 @@ export const learnData =
           "part": "adverb",
           "vocabulary": "だけ",
           "kanji": "",
-          "english": "",
+          "english": "only",
           "url": "t8_dake.mp3"
         },
         {
@@ -7669,7 +6221,7 @@ export const learnData =
           "part": "noun",
           "vocabulary": "はんぶん",
           "kanji": "半分",
-          "english": "half minute",
+          "english": "half",
           "url": "t8_hanbun.mp3"
         },
         {
@@ -7801,7 +6353,7 @@ export const learnData =
           "type": "kanji",
           "kanji": "英",
           "read": "えい",
-          "english": "English",
+          "english": "english",
           "word": "英語",
           "url": "t8_ei.mp3"
         },

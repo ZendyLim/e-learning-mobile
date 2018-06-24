@@ -18,7 +18,9 @@ class QuizMainScreen extends Component {
         title: `${strings['QUIZLIST']}`,
     };
   };
-  
+  state = {
+    quizHeaderTitle:"",
+  }
   constructor(props){
       super(props);
       this.list = QuizListData.hiragana_katakana;
@@ -30,7 +32,7 @@ class QuizMainScreen extends Component {
         <ScrollView style={study.StudyContainer}>
             {this.list.map((item, key)=>(
                 
-                <TouchableOpacity key={key} style={study.btnLearn}  onPress={this.quiz.bind(this, item.type)}>
+                <TouchableOpacity key={key} style={study.btnLearn}  onPress={this.quiz.bind(this, item.type, item.title)}>
                     <Text style={study.btnLearnText} > {strings[item.title]} </Text>
                 </TouchableOpacity>
             ))}
@@ -38,9 +40,8 @@ class QuizMainScreen extends Component {
     );
   }
 
-  quiz = (type) => {
+  quiz = (type, title) => {
     const { navigation } = this.props;
-
     this.props.navigation.navigate('QuizList',(
         {
             type: navigation.getParam('type',null),
@@ -54,6 +55,7 @@ class QuizMainScreen extends Component {
             index:  navigation.getParam('index',null),        
             categoryId :  navigation.getParam('categoryId',null), 
             headerTitle :  navigation.getParam('headerTitle',null),
+            quizHeaderTitle : title
         }
       ));
   };  

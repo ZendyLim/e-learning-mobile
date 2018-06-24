@@ -51,12 +51,23 @@ import mainSettings from '../screens/Setting/mainsetting';
 
 import historyListScreen from '../screens/Summary/historyList';
 import historyDetailScreen from '../screens/Summary/historyDetail';
+import  { strings }   from './localization';
 
 const styles = require('../styles/style');
 
 export const QuizStack = TabNavigator({ 
-    QuizHiraganaList: QuizHiraganaListScreen, 
-    QuizKarakanaList: QuizKatakanaListScreen
+    QuizHiraganaList: {
+        screen: QuizHiraganaListScreen, 
+        navigationOptions: { 
+            tabBarLabel: strings['HIRAGANA_LIST_TITLE']
+        }
+    }, 
+    QuizKarakanaList: {
+        screen: QuizKatakanaListScreen, 
+        navigationOptions: { 
+            tabBarLabel: strings['KATAKANA_LIST_TITLE']
+        }
+    }, 
 }, {
     tabBarPosition: 'top',
 });
