@@ -165,7 +165,7 @@ export const vocabulary = [
         "moji":"おとな",
         "romaji":"otona",
         "english":"Adult",
-        "audio":"t6_otona.mp3"
+        "audio":""
     },
     {
         "id":"tp6_v_22",
@@ -189,7 +189,7 @@ export const vocabulary = [
         "moji":"おばさん",
         "romaji":"oba",
         "english":"Aunt",
-        "audio":"t6_oba.mp3"
+        "audio":"t6_oba_san.mp3"
     },
     {
         "id":"tp6_v_25",
@@ -197,7 +197,7 @@ export const vocabulary = [
         "moji":"おばあさん",
         "romaji":"o bā-san",
         "english":"grandmother, female senior-citizen",
-        "audio":"t6_oba_san.mp3"
+        "audio":"t6_obaa_san.mp3"
     },
     {
         "id":"tp6_v_26",
