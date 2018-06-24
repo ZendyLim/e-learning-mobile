@@ -865,12 +865,12 @@ export const reading = [
             {
                 "id":"tp8_r_5",
                 "type":"reading",
-                "moji":""
+                "moji":"車の運転が上手になること　"
             },
             {
                 "id":"tp8_r_2",
                 "type":"reading",
-                "moji":"車の運転が上手になること　2．仕事で大変だったことを忘れること　"
+                "moji":"仕事で大変だったことを忘れること　"
             },
             {
                 "id":"tp8_r_7",
