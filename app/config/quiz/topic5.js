@@ -483,7 +483,7 @@ export const vocabulary = [
         "id":"tp5_v_61",
         "type":"vocabulary",
         "moji":"まちます",
-        "romaji":"machimas",
+        "romaji":"machimasu",
         "english":"to wait",
         "audio":"t5_machimas.mp3"
     },
@@ -698,7 +698,7 @@ export const grammar = [
         "romaji":"watashi wa ryokō ga suki desu.",
         "moji":"わたし は 旅行 が 好き です。",
         "kanji":"わたし は 旅行 が 好き です。",
-        "english":"I like travle.",
+        "english":"I like travel.",
         "audio":"tp5_g_1.mp3"
     },
     {
@@ -939,8 +939,8 @@ export const grammar = [
         "id":"tp5_g_28",
         "type":"grammar",
         "romaji":"kinō, eiga o mite, kaimono shimashita.",
-        "moji":"きのう、 映画 を 見て 、 買い物 しました。",
-        "kanji":"きのう、 映画 を 見て 、 買い物 しました。",
+        "moji":"きのう、 映画 を 見て、 買い物 しました。",
+        "kanji":"きのう、 映画 を 見て、 買い物 しました。",
         "english":"Yesterday, I watched a movie and went shopping.",
         "audio":"tp5_g_28.mp3"
     },
@@ -1080,10 +1080,10 @@ export const listening = [
     {
         "id":"tp5_l_2",
         "type":"listening",
-        "romaji":"",
-        "moji":"",
-        "kanji":"",
-        "english":"",
+        "romaji":"パスポートを見せます",
+        "moji":"パスポートを見せます",
+        "kanji":"パスポートを見せます",
+        "english":"パスポートを見せます",
         "answerOption":[
             {
                 "id":"tp5_l_4",
@@ -1111,10 +1111,10 @@ export const listening = [
     {
         "id":"tp5_l_3",
         "type":"listening",
-        "romaji":"",
-        "moji":"",
-        "kanji":"",
-        "english":"",
+        "romaji":"地図を買います",
+        "moji":"地図を買います",
+        "kanji":"地図を買います",
+        "english":"地図を買います",
         "answerOption":[
             {
                 "id":"tp5_l_3",

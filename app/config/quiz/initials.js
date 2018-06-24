@@ -394,7 +394,7 @@ export const numbers = [
     {
         "id":"num_50",
         "type":"vocabulary",
-        "english":"1",
+        "english":"1 thing",
         "moji":"ひとつ",
         "romaji":"hitotsu",
         "audio":"n_hitotsu.mp3"
@@ -402,7 +402,7 @@ export const numbers = [
     {
         "id":"num_51",
         "type":"vocabulary",
-        "english":"2",
+        "english":"2 things",
         "moji":"ふたつ",
         "romaji":"futatsu",
         "audio":"n_futatsu.mp3"
@@ -410,7 +410,7 @@ export const numbers = [
     {
         "id":"num_52",
         "type":"vocabulary",
-        "english":"3",
+        "english":"3 things",
         "moji":"みっつ",
         "romaji":"mittsu",
         "audio":"n_mittsu.mp3"
@@ -418,7 +418,7 @@ export const numbers = [
     {
         "id":"num_53",
         "type":"vocabulary",
-        "english":"4",
+        "english":"4 things",
         "moji":"よっつ",
         "romaji":"yottsu",
         "audio":"n_yottsu.mp3"
@@ -426,7 +426,7 @@ export const numbers = [
     {
         "id":"num_54",
         "type":"vocabulary",
-        "english":"5",
+        "english":"5 things",
         "moji":"いつつ",
         "romaji":"itsutsu",
         "audio":"n_itsutsu.mp3"
@@ -434,7 +434,7 @@ export const numbers = [
     {
         "id":"num_55",
         "type":"vocabulary",
-        "english":"6",
+        "english":"6 things",
         "moji":"むっつ",
         "romaji":"muttsu",
         "audio":"n_muttsu.mp3"
@@ -442,7 +442,7 @@ export const numbers = [
     {
         "id":"num_56",
         "type":"vocabulary",
-        "english":"7",
+        "english":"7 things",
         "moji":"ななつ",
         "romaji":"nanatsu",
         "audio":"n_nanatsu.mp3"
@@ -450,7 +450,7 @@ export const numbers = [
     {
         "id":"num_57",
         "type":"vocabulary",
-        "english":"8",
+        "english":"8 things",
         "moji":"やっつ",
         "romaji":"yattsu",
         "audio":"n_yattsu.mp3"
@@ -458,7 +458,7 @@ export const numbers = [
     {
         "id":"num_58",
         "type":"vocabulary",
-        "english":"9",
+        "english":"9 things",
         "moji":"ここのつ",
         "romaji":"kokonotsu",
         "audio":"n_kokonotsu.mp3"
@@ -466,7 +466,7 @@ export const numbers = [
     {
         "id":"num_59",
         "type":"vocabulary",
-        "english":"10",
+        "english":"10 things",
         "moji":"とお",
         "romaji":"too",
         "audio":"n_too.mp3"
@@ -634,7 +634,7 @@ export const numbers = [
     {
         "id":"num_80",
         "type":"vocabulary",
-        "english":"1",
+        "english":"1 thin and long thing",
         "moji":"いっぽん",
         "romaji":"ippon",
         "audio":"n_ippon.mp3"
@@ -642,7 +642,7 @@ export const numbers = [
     {
         "id":"num_81",
         "type":"vocabulary",
-        "english":"2",
+        "english":"2 thin and long things",
         "moji":"にほん",
         "romaji":"nihon",
         "audio":"n_nihon.mp3"
@@ -650,7 +650,7 @@ export const numbers = [
     {
         "id":"num_82",
         "type":"vocabulary",
-        "english":"3",
+        "english":"3 thin and long things",
         "moji":"さんぼん",
         "romaji":"sanbon",
         "audio":"n_sanbon.mp3"
@@ -658,7 +658,7 @@ export const numbers = [
     {
         "id":"num_83",
         "type":"vocabulary",
-        "english":"4",
+        "english":"4 thin and long things",
         "moji":"よんほん",
         "romaji":"yonhon",
         "audio":"n_yonhon.mp3"
@@ -666,7 +666,7 @@ export const numbers = [
     {
         "id":"num_84",
         "type":"vocabulary",
-        "english":"5",
+        "english":"5 thin and long things",
         "moji":"ごほん",
         "romaji":"gohon",
         "audio":"n_gohon.mp3"
@@ -674,7 +674,7 @@ export const numbers = [
     {
         "id":"num_85",
         "type":"vocabulary",
-        "english":"6",
+        "english":"6 thin and long things",
         "moji":"ろっぽん",
         "romaji":"roppon",
         "audio":"n_roppon.mp3"
@@ -682,7 +682,7 @@ export const numbers = [
     {
         "id":"num_86",
         "type":"vocabulary",
-        "english":"7",
+        "english":"7 thin and long things",
         "moji":"ななほん",
         "romaji":"nanahon",
         "audio":"n_nanahon.mp3"
@@ -690,7 +690,7 @@ export const numbers = [
     {
         "id":"num_87",
         "type":"vocabulary",
-        "english":"8",
+        "english":"8 thin and long things",
         "moji":"はっぽん",
         "romaji":"happon",
         "audio":"n_happon.mp3"
@@ -698,7 +698,7 @@ export const numbers = [
     {
         "id":"num_88",
         "type":"vocabulary",
-        "english":"9",
+        "english":"9 thin and long things",
         "moji":"きゅうほん",
         "romaji":"kyuuhon",
         "audio":"n_kyuuhon.mp3"
@@ -706,7 +706,7 @@ export const numbers = [
     {
         "id":"num_89",
         "type":"vocabulary",
-        "english":"10",
+        "english":"10 thin and long things",
         "moji":"じゅっぽん",
         "romaji":"juppon",
         "audio":"n_juppon.mp3"
@@ -714,7 +714,7 @@ export const numbers = [
     {
         "id":"num_90",
         "type":"vocabulary",
-        "english":"1",
+        "english":"1 sheet",
         "moji":"いちまい",
         "romaji":"ichimai",
         "audio":"n_ichimai.mp3"
@@ -722,7 +722,7 @@ export const numbers = [
     {
         "id":"num_91",
         "type":"vocabulary",
-        "english":"2",
+        "english":"2 sheets",
         "moji":"にまい",
         "romaji":"nimai",
         "audio":"n_nimai.mp3"
@@ -730,7 +730,7 @@ export const numbers = [
     {
         "id":"num_92",
         "type":"vocabulary",
-        "english":"3",
+        "english":"3 sheets",
         "moji":"さんまい",
         "romaji":"sanmai",
         "audio":"n_sanmai.mp3"
@@ -738,7 +738,7 @@ export const numbers = [
     {
         "id":"num_93",
         "type":"vocabulary",
-        "english":"4",
+        "english":"4 sheets",
         "moji":"よんまい",
         "romaji":"yonmai",
         "audio":"n_yonmai.mp3"
@@ -746,7 +746,7 @@ export const numbers = [
     {
         "id":"num_94",
         "type":"vocabulary",
-        "english":"5",
+        "english":"5 sheets",
         "moji":"ごまい",
         "romaji":"gomai",
         "audio":"n_gomai.mp3"
@@ -754,7 +754,7 @@ export const numbers = [
     {
         "id":"num_95",
         "type":"vocabulary",
-        "english":"6",
+        "english":"6 sheets",
         "moji":"ろくまい",
         "romaji":"rokumai",
         "audio":"n_rokumai.mp3"
@@ -762,7 +762,7 @@ export const numbers = [
     {
         "id":"num_96",
         "type":"vocabulary",
-        "english":"7",
+        "english":"7 sheets",
         "moji":"ななまい",
         "romaji":"nanamai",
         "audio":"n_nanamai.mp3"
@@ -770,7 +770,7 @@ export const numbers = [
     {
         "id":"num_97",
         "type":"vocabulary",
-        "english":"8",
+        "english":"8 sheets",
         "moji":"はちまい",
         "romaji":"hachimai",
         "audio":"n_hachimai.mp3"
@@ -778,7 +778,7 @@ export const numbers = [
     {
         "id":"num_98",
         "type":"vocabulary",
-        "english":"9",
+        "english":"9 sheets",
         "moji":"きゅうまい",
         "romaji":"kyuumai",
         "audio":"n_kyuumai.mp3"
@@ -786,7 +786,7 @@ export const numbers = [
     {
         "id":"num_99",
         "type":"vocabulary",
-        "english":"10",
+        "english":"10 sheets",
         "moji":"じゅうまい",
         "romaji":"juumai",
         "audio":"n_juumai.mp3"

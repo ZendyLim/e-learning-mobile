@@ -300,7 +300,7 @@ import {
         this.setState({
           question: this.currentQuestion
         });
-
+        console.log(this.allQuestion);
         this.randomQuizFormat();
 
         this.setStartQuiz();
