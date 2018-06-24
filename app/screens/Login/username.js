@@ -77,10 +77,10 @@ import {
           <View style={styles.characterChatContainer}>
             <Text>{strings['SIGN_IN_MESSAGE']}</Text>
           </View>
-          <Image
+          {/* <Image
           style={styles.characterFixLogin}
           source={require('../../img/character-exp-normal.png')}
-          />
+          /> */}
         </View>
       );
     }

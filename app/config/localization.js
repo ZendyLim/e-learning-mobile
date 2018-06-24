@@ -130,6 +130,11 @@ export let strings = new LocalizedStrings({
   PROFILE_FB_SIGN_IN : "Sign In :",
   PROFILE_SETTING : "Setting",
   PROFILE_LOGOUT : "Logout",
+
+  LOGOUT_CONFIRM:"Confirm",
+  LOGOUT_YES:"Yes",
+  LOGOUT_CANCEL:"Cancel",
+  LOGOUT_MESSAGE:"Are you sure you want to logout?",
   //summary part
   SUMMARY_VOCABULARY : "Vocabulary",
   SUMMARY_GRAMMAR: "Grammar",
@@ -273,14 +278,21 @@ export let strings = new LocalizedStrings({
    NEED_PASS_INITIALS:"次のトピックを続けるように、テストを3回合格が必要です。80点以上で合。",
    
     //login part
-  SIGN_IN : "サインイン",
-  SIGN_IN_USERNAME : "ユーザー名",
-  SIGN_IN_PASSWORD : "パスワード",
-  SIGN_IN_MESSAGE : "ユーザー名とパスワードを入力してください",
-  SIGN_IN_VALIDATION_USERNAME : "ユーザー名が必須です",
-  SIGN_IN_VALIDATION_PASSWORD : "パスワードが必須です",
-  SIGN_IN_VALIDATION_FAILED : "ユーザー名とパスワードが間違った",
+  // SIGN_IN : "サインイン",
+  // SIGN_IN_USERNAME : "ユーザー名",
+  // SIGN_IN_PASSWORD : "パスワード",
+  // SIGN_IN_MESSAGE : "ユーザー名とパスワードを入力してください",
+  // SIGN_IN_VALIDATION_USERNAME : "ユーザー名が必須です",
+  // SIGN_IN_VALIDATION_PASSWORD : "パスワードが必須です",
+  // SIGN_IN_VALIDATION_FAILED : "ユーザー名とパスワードが間違った",
   
+  SIGN_IN : "Sign In",
+  SIGN_IN_USERNAME : "Username",
+  SIGN_IN_PASSWORD : "Password",
+  SIGN_IN_MESSAGE : "Input your username and password",
+  SIGN_IN_VALIDATION_USERNAME : "User name is required",
+  SIGN_IN_VALIDATION_PASSWORD : "Password is required",
+  SIGN_IN_VALIDATION_FAILED : "Username and password is wrong",
 
   //profile part
   PROFILE_PERSONAL_DATA : "個人データ",
@@ -302,7 +314,11 @@ export let strings = new LocalizedStrings({
   PROFILE_FB_SIGN_IN : "サインイン :",
   PROFILE_SETTING : "設定",
   PROFILE_LOGOUT : "ログアウト",
-
+  
+  LOGOUT_CONFIRM:"確認",
+  LOGOUT_YES:"はい",
+  LOGOUT_CANCEL:"キャンセル",
+  LOGOUT_MESSAGE:"ログアウトしてもよろしいですか？",
   
   //summary part
   SUMMARY_HEADER : "概要",
