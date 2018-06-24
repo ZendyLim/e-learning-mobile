@@ -806,9 +806,21 @@ module.exports = StyleSheet.create({
 		contentLoginData:{
 			padding:10,
 			marginBottom:190,
-		}
+		},
 
-
+		monthYearContainer: {
+			flex: 1,
+			flexDirection: 'row', 
+			alignItems: 'center',
+			justifyContent: 'space-between' 
+		  }, 
+		  monthYear: {
+			flex: 1,
+			flexDirection: 'row', 
+			justifyContent: 'center', 
+			alignItems:'center', 
+			width: '40%',
+		  },
 
 
 
