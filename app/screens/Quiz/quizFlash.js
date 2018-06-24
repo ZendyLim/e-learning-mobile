@@ -118,6 +118,13 @@ import {
         listening: 3
       }
 
+      // this.testItemCount = {
+      //   vocabulary: 1,
+      //   kanji: 1,
+      //   grammar: 1,
+      //   reading: 1,
+      //   listening: 1
+      // }
       this.shortType = {
         'v' : 'vocabulary',
         'g' : 'grammar',
@@ -192,7 +199,7 @@ import {
                       <View style={ !timerRun && styles.blocker }></View>
                       <View style={[ styles.quizInfo ]}>
                         <Text style={ styles.quizInfoText }>
-                          Points: { this.setScore() }/100 Questions: { this.state.counter+1 }/{ this.allQuestion.length }
+                          {strings.POINTS}: { this.setScore() }/100 {strings.QUESTIONS}: { this.state.counter+1 }/{ this.allQuestion.length }
                         </Text>
                       </View>
 
@@ -293,7 +300,7 @@ import {
         this.setState({
           question: this.currentQuestion
         });
-
+        console.log(this.allQuestion);
         this.randomQuizFormat();
 
         this.setStartQuiz();
@@ -769,12 +776,6 @@ import {
 
           this.setState(this.initialState);
           this.props.navigation.dispatch(resetAction);
-
-          // this.props.navigation.navigate('ScoreScreen',{
-          //   index : this.state.index,
-          //   typeQuiz : this.initialParams.formatType,
-          //   studyTitle : this.title
-          // });
           
         }
       }
@@ -848,12 +849,17 @@ import {
   };
 
   setScore(){
-    var quizSizes = 0;
-
+    var quizSizes = this.allQuestion.length;
+    
     if(this.initialParams.isTopicTest){
-      quizSizes = this.allQuestion.length;
+      
+      return Helper.countScore(this.studyRecord,quizSizes);
     }  
-    return Helper.countScore(this.studyRecord,quizSizes);
+    else{
+      return Helper.countScore(this.studyRecord,quizSizes,true);
+    }
+    
+    
   }
 
     goNextQuestion() {            

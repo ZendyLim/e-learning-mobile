@@ -13,6 +13,7 @@ import {
     TextInput,
     Modal,
     TouchableOpacity,
+    Alert
   } from 'react-native';
   import LocalizedString from "react-native-localization";
 import { List, ListItem } from 'react-native-elements';
@@ -359,7 +360,7 @@ import { studyDays, studyReasonOption, major } from '../../config/data';
                 <Text style={styles.menuOption}>{strings['SETTING_LANGUAGES_PROFILE']}</Text>
                 <View style={styles.vline}></View>
               </TouchableOpacity>
-              <TouchableOpacity onPress={this._showMoreApp}>
+              <TouchableOpacity onPress={this.onClickLogout}>
                 <Text style={styles.menuOption}>{strings['PROFILE_LOGOUT']}</Text>
                 <View style={styles.vline}></View>
               </TouchableOpacity>
@@ -441,6 +442,19 @@ import { studyDays, studyReasonOption, major } from '../../config/data';
       "07", "08", "09", "10", "11", "12"
     ];
       return  dateFormat.getFullYear()+ "-" + monthNames[dateFormat.getMonth()] ;
+    }
+
+    onClickLogout = () => {
+      Alert.alert(strings['LOGOUT_CONFIRM'], strings['LOGOUT_MESSAGE'], [{
+        text: strings['LOGOUT_YES'],
+        onPress: () => this._showMoreApp()
+      },
+      {text: strings['LOGOUT_CANCEL']}
+      ],
+      {
+        cancelable:false
+      }
+    )                 
     }
   }
 

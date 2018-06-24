@@ -22,12 +22,13 @@ import  { strings }   from '../../config/localization';
         //header: null,
         const {state} = navigation;
         return {
-            title: `${strings['HIRAGANA_LIST_TITLE']}`,
+            title: `${strings[state.params.quizHeaderTitle]}`,
         };
       };
 
     state = {
         checkAllText: strings['CHECK_ALL'],
+
         statusCheckAll: false,
         stsList : "",
         statusPerRow: false,
@@ -42,10 +43,10 @@ import  { strings }   from '../../config/localization';
         this.checkRows = [];
     }
 
-    componentDidMount(){
+    componentDidMount() {
         const { navigation } = this.props;
-        this.setStatusfalse();
     }
+
     render() {
         let idLength = 0;
       return ( 
@@ -97,7 +98,6 @@ import  { strings }   from '../../config/localization';
       );
     }
 
-
     validation = () => {
         // const { studyReason, statusDays, finishDate} = this.state;
         const {idList} = this.state;
@@ -141,8 +141,17 @@ import  { strings }   from '../../config/localization';
                 this.setState({ statusPerRow: this.checkRows })
             }
         }
+        hiraganaList.map((item, key)=>(
+            this.checkItems[key] = false,
+            this.setState({ stsList: this.checkItems }),
+            this.selectedList(key)
+        ));  
+        
+        this.setState({stsList: ""});
+        this.setState({idList:[]});
+        this.setState({statusCheckAll:false});
+        this.setState({ checkAllText: strings['CHECK_ALL'] }) 
     }
-
 
     mojiAutoSize(length, moji, key){
         if(length == 2){
@@ -165,6 +174,7 @@ import  { strings }   from '../../config/localization';
      }
 
     checkAll(){
+        console.log(this.state.statusCheckAll,"status")
         this.setState({statusCheckAll: !this.state.statusCheckAll})
         if(this.state.statusCheckAll){
             hiraganaList.map((item, key)=>(
@@ -177,7 +187,14 @@ import  { strings }   from '../../config/localization';
             ));  
             this.setState({ checkAllText: strings['CHECK_ALL'] })     
         }else{
-            {hiraganaList.map((item, key)=>(
+            this.checkAllValidation()
+            this.setState({ checkAllText: strings['UNCHECK_ALL'] })    
+        }
+    };
+    
+    checkAllValidation(){
+        if(this.state.idList.length==0){
+           {hiraganaList.map((item, key)=>(
                 this.checkItems[key] = true,
                 this.setState({ stsList: this.checkItems }),
                 this.selectedList(key),
@@ -185,16 +202,26 @@ import  { strings }   from '../../config/localization';
                 this.checkRows[key] = true,
                 this.setState({ statusPerRow: this.checkRows })
             ))};  
-            this.setState({ checkAllText: strings['UNCHECK_ALL'] })    
         }
-    };
+        else{
+            for(x=0;x<hiraganaList.length;x++){
+                if(this.checkItems[x] != true){
+                    this.checkItems[x] = true,
+                    this.setState({ stsList: this.checkItems }),
+                    this.selectedList(x),
+    
+                    this.checkRows[x] = true,
+                    this.setState({ statusPerRow: this.checkRows })
+                }
+            }
+        } 
+    }
 
     checkRow(key){
         if(this.checkRows[key]){
             this.checkRows[key] = false,
             this.setState({ statusPerRow: this.checkRows })
             this.checkAllStatus();
-
             for(x=0;x<5;x++){
                 this.checkItems[key] = false,
                 this.setState({ stsList: this.checkItems })
@@ -205,7 +232,6 @@ import  { strings }   from '../../config/localization';
             this.checkRows[key] = true,
             this.setState({ statusPerRow: this.checkRows })
             this.checkAllStatus();
-
             for(x=0;x<5;x++){
                 this.checkItems[key] = true,
                 this.setState({ stsList: this.checkItems })
@@ -218,10 +244,13 @@ import  { strings }   from '../../config/localization';
     checkRowStatus(status) {
         return status == true;
     }
-    checkAllStatus = () => {   
+
+    checkAllStatus = () => {      
         if(this.checkRows.every(this.checkRowStatus)){
-            this.setState({statusCheckAll: true})
-            this.setState({ checkAllText: strings['UNCHECK_ALL'] }) 
+            if(this.checkRows.length == 27){
+                this.setState({statusCheckAll: true})
+                this.setState({ checkAllText: strings['UNCHECK_ALL'] }) 
+            }  
         }else{
             this.setState({statusCheckAll: false})
             this.setState({ checkAllText: strings['CHECK_ALL'] }) 
@@ -230,8 +259,9 @@ import  { strings }   from '../../config/localization';
 
     proceed = () => {
         const { navigation } = this.props;
-
         if(!this.validation()){
+            const idList = this.state.idList;
+            this.setStatusfalse();
             this.props.navigation.navigate('QuizFlash',
                 (
                     {
@@ -244,12 +274,13 @@ import  { strings }   from '../../config/localization';
                         quizOptions: navigation.getParam('quizOptions',null),
                         oneType: navigation.getParam('oneType',null),
                         idList: this.state.idList,
+                        idList: idList,
                         index:  navigation.getParam('index',null),
                         categoryId :  navigation.getParam('categoryId',null), 
                         headerTitle:  navigation.getParam('headerTitle',null), 
                     }
                 )
-            );
+            ); 
         }     
     };
 

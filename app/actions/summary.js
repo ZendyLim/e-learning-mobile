@@ -17,6 +17,7 @@ async function getJWT(){
 //================================   API FETCH ===================================
 
 export function getAllRecord(){
+    
     return (dispatch) => {
         getJWT().then( JWT => {
             fetch('https://e-learning-backend.herokuapp.com/api/v1/activities',{
@@ -27,7 +28,8 @@ export function getAllRecord(){
                 'Content-Type': 'application/json',
               },
             }).then(data => data.json())
-            .then(json => {
+            .then(json => {   
+                            
                 SummaryHelper.setSummaryCount(json.activities.quiz, dataVal =>{
                     dispatch(summaryCountAllDispatch(dataVal))            
                 }); 

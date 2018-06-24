@@ -117,9 +117,11 @@ import {
       })
 
       this.data = flashData[0][this.props.title];
-      this.data.sort(function() {
-        return 0.5 - Math.random()
-      })
+      if(this.props.title != 'FLASH_CARD_HIRAGANA' && this.props.title != 'FLASH_CARD_KATAKANA') {
+        this.data.sort(function() {
+          return 0.5 - Math.random()
+        })
+      }
 
       const { navigation } = this.props;
 

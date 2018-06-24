@@ -207,11 +207,18 @@ module.exports = StyleSheet.create({
         right: 0,
         width: 80,
         height: 200,
-        zIndex: 121
+        zIndex: 121,
+        elevation: 3
     },
     imageHome : {
         width: '100%',
-        height: '100%',
+        height: '100%',        
+    },
+    ruleScore:{
+        fontSize:16,
+        marginBottom:10,
+        textAlign:"center",
+        elevation: 4
     }
       
 });

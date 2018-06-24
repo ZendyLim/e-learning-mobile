@@ -45,7 +45,7 @@ export const vocabulary = [
         "moji":"あります",
         "romaji":"arimasu",
         "english":"to be,to have (used for inanimate objects)",
-        "audio":"",
+        "audio":"t3_arimasu.mp3",
     },
     {
         "id":"tp3_v_7",
@@ -453,7 +453,7 @@ export const vocabulary = [
         "moji":"まど",
         "romaji":"mado",
         "english":"window",
-        "audio":"",
+        "audio":"t3_mado.mp3",
     },
     {
         "id":"tp3_v_58",

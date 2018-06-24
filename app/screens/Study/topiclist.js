@@ -18,6 +18,9 @@ import  { strings }   from '../../config/localization';
 import { ImageData } from '../../config/image_list';
 import { StudyList } from '../../config/studyList';
 
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as Actions from '../../actions/summary'; 
 class TopicListScreen extends Component {
 
   static navigationOptions = ({ navigation }) =>{
@@ -33,18 +36,24 @@ class TopicListScreen extends Component {
       title:"TOPIC10_TITLE",
       img: "",
       index: "",
+      nextTopic: "",
   };
   }
 
   componentDidMount() {
     const { navigation } = this.props;
-    this.setState({
+
+    params = {
       title: navigation.getParam('title', null),
       img: navigation.getParam('img', null),
       type: navigation.getParam('type', null),
-      index: navigation.getParam('index', null),
-    });
-    console.log(navigation.getParam('index', null));
+      index: navigation.getParam('index', null),      
+    }
+
+    params.nextTopic = StudyList[params.index + 1];
+
+    this.setState(params);
+    console.log(params);
     //Console.log(navigation.getParam('userName', null),"NIAMAK");
   }
 
@@ -80,18 +89,50 @@ navigateToLearn=(type, categoryId)=>{
   navigateToNextTopic=()=>{
     var item = StudyList[this.state.index + 1];
     item['index'] = this.state.index + 1;
+    locks = this.props.lock;
+    console.log(item);
+    if(locks[item.topic_id].lock){
+      if(this.state.type == 'INITIAL'){
+        alert(strings.NEED_PASS_INITIAL);
+      }
+      else{
+        alert(strings.NEED_PASS);
+      }
+      
+    }
+    else{
+
+      let resetAction;
+
+      if(item.type == 'FUKUSHU'){
+
+        item['formatType'] = 'FUKUSHU';
+        item['idList'] = this.props.lock[item.topic_id].mistakes;
+
+        resetAction = NavigationActions.reset({ 
+          index: 1,
+          actions: [
+            NavigationActions.navigate({ routeName: 'StudyList' }),
+            NavigationActions.navigate({ routeName: 'QuizFlash' , params: item })
+          ]
+        });        
+        
+      }
+      else{
+
+        resetAction = NavigationActions.reset({ 
+          index: 1,
+          actions: [
+            NavigationActions.navigate({ routeName: 'StudyList' }),
+            NavigationActions.navigate({ routeName: 'TopicList' , params: item })
+          ]
+        });
+
+      }
+
+      this.props.navigation.dispatch(resetAction);
+    }
     
-    const resetAction = NavigationActions.reset({ 
-      index: 1,
-      actions: [
-        NavigationActions.navigate({ routeName: 'StudyList' }),
-        NavigationActions.navigate({ routeName: 'TopicList' , params: item })
-      ]
-    });
-
-    this.props.navigation.dispatch(resetAction);
-
-  
  }
   render() {
     return (
@@ -119,6 +160,7 @@ navigateToLearn=(type, categoryId)=>{
               <Text style={[study.buttonTopicText]}>{ strings['topic_test'] }</Text>
             </TouchableOpacity>
           </View>
+          
           <View style={[study.buttonContainerTopicNext]}>
             <TouchableOpacity style={[study.nextTopic, styles.shadow]} onPress={this.navigateToNextTopic.bind(this)}>
               <Text style={[study.buttonTopicNextText]}>{ strings['next_topic'] }</Text>
@@ -139,4 +181,23 @@ navigateToLearn=(type, categoryId)=>{
 const styles = require('../../styles/style');
 const study = require('../../styles/study');
 
-export default TopicListScreen;
+// The function takes data from the app current state,
+// and insert/links it into the props of our component.
+// This function makes Redux know that this component needs to be passed a piece of the state
+function mapStateToProps(state, props) {
+  
+  return {
+      lock : state.summary.lock      
+  }
+}
+
+
+// Doing this merges our actions into the component’s props,
+// while wrapping them in dispatch() so that they immediately dispatch an Action.
+// Just by doing this, we will have access to the actions defined in out actions file (action/home.js)
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(Actions, dispatch);
+}
+
+//Connect everything
+export default connect(mapStateToProps, mapDispatchToProps)(TopicListScreen);

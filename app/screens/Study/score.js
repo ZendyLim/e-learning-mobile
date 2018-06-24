@@ -210,7 +210,7 @@ import {
             <View style={ scoreStyle.absoluteText }>
               <View style={ scoreStyle.containerScore }>
                 <Text style={ scoreStyle.scoreTotal }>{ this.props.scoreTotal}/100 </Text>
-              </View>
+              </View>              
             </View>
             <ProgressCircle
                 style={ { height: 140 } }
@@ -219,6 +219,7 @@ import {
             />
           </View>
           <View style={ scoreStyle.containerMistake }>
+            <Text style={scoreStyle.ruleScore}>{ strings.PASSOVER }</Text>
             <ScrollView  style={ scoreStyle.containerMainMistake }>
               <Text style={ scoreStyle.sumaryTitle }>SUMMARY</Text>
               <Icon name='lock'  color='#fff' size={10}/>
@@ -235,7 +236,7 @@ import {
                 ) :<Text>No study data</Text> }
             </ScrollView >
           </View>
-          { this.props.scoreTotal >= 80 ? ( 
+          { this.props.scoreTotal >= 0 ? ( 
           <View style={ scoreStyle.containerMistake }>
             <View style={ scoreStyle.RecordRowButton }>
               <View style={ scoreStyle.RecordRowButtonContainer }>
@@ -302,7 +303,7 @@ const study = require('../../styles/study');
 // and insert/links it into the props of our component.
 // This function makes Redux know that this component needs to be passed a piece of the state
 function mapStateToProps(state, props) {
-
+  console.log(state.study);
   const score = Helper.countScore(state.study.studyRecord,state.study.quizSize);
   
   return {

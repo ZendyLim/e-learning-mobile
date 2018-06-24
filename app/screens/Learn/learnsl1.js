@@ -17,8 +17,7 @@ import {
   import { bindActionCreators } from 'redux';
   import { connect } from 'react-redux';
   import { HiraganaLearnStack }  from '../../config/router';
-  // import { number } from '../../config/numberlearn';
-  import { flashData } from '../../config/flash';
+  import { learnData } from '../../config/learnTopic';
   import { ImageData } from '../../config/image_list';
   import  { strings }   from '../../config/localization';
   import * as Actions from '../../actions/user'; //Import your actions
@@ -103,8 +102,8 @@ function playSound(testInfo, component) {
       }
 
     render() {
-      console.log(flashData.NUMBER_TITLE);
-      console.log(flashData);
+      console.log(learnData.NUMBER_TITLE);
+      console.log(learnData);
       return (
       // <ScrollView>
       <View style={learnsl1.MainContainer}>
@@ -117,7 +116,7 @@ function playSound(testInfo, component) {
             <Text style={study.title}> { strings[this.props.studyType] } </Text>
           </View>
           <FlatList 
-          data={ flashData[0]['NUMBER_TITLE'] }
+          data={ learnData['NUMBER_TITLE'] }
           renderItem={({item}) => {
             return(
               <FlatListItem item={item} component={this}/>
