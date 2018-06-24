@@ -1689,7 +1689,7 @@ export const learnData =
           "vocabulary": "ジュース",
           "kanji": "",
           "english": "juice",
-          "url": "t2_jyusu.mp3"
+          "url": "t2_jusu.mp3"
         },
         {
           "id": "t2v_31",
@@ -4249,7 +4249,7 @@ export const learnData =
           "vocabulary": "まちます",
           "kanji": "待ちます",
           "english": "to wait",
-          "url": "t5_machimasu.mp3"
+          "url": "t5_machimas.mp3"
         },
         {
           "id": "t5v_62",
@@ -4445,7 +4445,7 @@ export const learnData =
           "read": "ご/うしろ、あと",
           "english": "back",
           "word": "午後、後ろ、後",
-          "url": "t5_go_ushiro, ato.mp3"
+          "url": "t5_go_ushiro.mp3"
         },
         {
           "id": "t5k_9",
@@ -4663,7 +4663,7 @@ export const learnData =
           "vocabulary": "おじいさん",
           "kanji": "",
           "english": "grandfather, male senior citizen",
-          "url": "t6_oji_san.mp3"
+          "url": "t6_ojii_san.mp3"
         },
         {
           "id": "t6v_18",
@@ -4672,7 +4672,7 @@ export const learnData =
           "vocabulary": "おじさん",
           "kanji": "伯父/叔父",
           "english": "uncle, middle aged gentleman",
-          "url": "t6_ojii_san.mp3"
+          "url": "t6_oji_san.mp3"
         },
         {
           "id": "t6v_19",
