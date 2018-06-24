@@ -23,8 +23,9 @@ export const studyType = {
     },
     initial:{ // for number and aisatsu
         english_moji:'IQ1',
-        audio_english:'IQ2',
-        audio_moji:'IQ3'
+        english_fill:'IQ2',
+        audio_moji:'IQ3',
+        audio_fill:'IQ4'
     },
     vocabulary:{ // topic 1 to 8
         english_moji:'GQ1',

@@ -558,15 +558,15 @@ module.exports = StyleSheet.create({
 			width:(window.width/2.5) - 10,
 		},
 		quizLong:{
-			padding:10,
+			padding:7,
 			width: window.width - 30
 		},
 		quizGrammar:{
-			padding:10,
+			padding:7,
 			width: window.width - 30
 		},
 		quizVocab:{
-			padding:10,
+			padding:7,
 			width: window.width - 30
 		},
 		quizBtnPress:{
