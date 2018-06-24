@@ -74,10 +74,10 @@ export const vocabulary = [
     {
         "id":"tp2_v_10",
         "type":"vocabulary",
-        "romaji":"o sake",
+        "romaji":"osake",
         "moji":"おさけ",
         "english":"alcohol, rice wine",
-        "audio":""
+        "audio":"t2_osake.mp3"
     },
     {
         "id":"tp2_v_11",
@@ -229,7 +229,7 @@ export const vocabulary = [
         "romaji":"shashin",
         "moji":"しゃしん",
         "english":"photograph",
-        "audio":""
+        "audio":"t2_shashin.mp3"
     },
     {
         "id":"tp2_v_30",
@@ -237,7 +237,7 @@ export const vocabulary = [
         "romaji":"jūsu",
         "moji":"ジュース",
         "english":"juice",
-        "audio":""
+        "audio":"t2_jusu.mp3"
     },
     {
         "id":"tp2_v_31",
@@ -245,7 +245,7 @@ export const vocabulary = [
         "romaji":"shinbun",
         "moji":"しんぶん",
         "english":"newspaper",
-        "audio":""
+        "audio":"t2_shinbun.mp3"
     },
     {
         "id":"tp2_v_32",
@@ -253,7 +253,7 @@ export const vocabulary = [
         "romaji":"suimasu",
         "moji":"すいます",
         "english":"to smoke, to suck",
-        "audio":""
+        "audio":"t2_suimasu.mp3"
     },
     {
         "id":"tp2_v_33",
@@ -261,7 +261,7 @@ export const vocabulary = [
         "romaji":"sūpā",
         "moji":"スーパー",
         "english":"supermarket",
-        "audio":""
+        "audio":"t2_supa.mp3"
     },
     {
         "id":"tp2_v_34",
@@ -389,7 +389,7 @@ export const vocabulary = [
         "romaji":"haha",
         "moji":"はは",
         "english":"my mother",
-        "audio":""
+        "audio":"t2_haha.mp3"
     },
     {
         "id":"tp2_v_50",
@@ -397,7 +397,7 @@ export const vocabulary = [
         "romaji":"ban",
         "moji":"ばん",
         "english":"evening",
-        "audio":""
+        "audio":"t2_ban.mp3"
     },
     {
         "id":"tp2_v_51",
@@ -405,7 +405,7 @@ export const vocabulary = [
         "romaji":"pan",
         "moji":"パン",
         "english":"bread",
-        "audio":""
+        "audio":"t2_pan.mp3"
     },
     {
         "id":"tp2_v_52",
@@ -1223,7 +1223,7 @@ export const listening = [
             {
                 "id":"tp2_l_1",
                 "type":"listening",
-                "moji":"４時間 "
+                "moji":"４時間"
             }
         ],
         "audio":"t2_listening_1.mp3"
