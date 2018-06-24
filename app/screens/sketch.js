@@ -37,7 +37,7 @@ export default class HL4 extends Component {
         this.state = {
           example: 0,
           color: '#000000',
-          thickness: 5,
+          thickness: 10,
           message: '',
           progress: 0,
           currentData: 'h_a',
@@ -71,7 +71,7 @@ export default class HL4 extends Component {
           path: {
             id: i, // path id
             color: color, 
-            width: 5,
+            width: 10,
             data: path.data,
           } 
           }
