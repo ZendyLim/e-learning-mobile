@@ -43,27 +43,50 @@ import {
       dateTo:"",
       startDate : "",
       statusMajor:false,
+
+      graduateMonth:"Month",
+      graduateYear:"Year",
+      fromMonth:"Month",
+      fromYear:"Year",
+      toMonth:"Month",
+      toYear:"Year",
     }
     constructor(props){
         super(props);
         this.checkMajor = [];
+        this.monthList= ["Month","01", "02", "03", "04", "05", "06",
+        "07", "08", "09", "10", "11", "12"];
+        this.yearList=["Year"];
       }
     
     validation () {
         const { latestEducation, latestEducationName, graduationYear, englishLevel, 
-            japaneseType, japaneseSchoolName, dateFrom, dateTo, gender, birthdate, statusMajor} = this.state;
+            japaneseType, japaneseSchoolName, dateFrom, dateTo, gender, birthdate, statusMajor,
+            graduateMonth, graduateYear, fromMonth, fromYear,toMonth,toYear} = this.state;
         let error = '';
         console.log(latestEducation,"latest")
-        if (!birthdate) error = "Birthdate is required";
-        else if (gender == "Choose your gender") error = "Gender is required";
-        else if (latestEducation == "Choose latest education") error = "Latest Education is required";
-        else if (!latestEducationName) error = "School / University name is required";
-        else if (!graduationYear) error = "Graduation year is required";
-        else if (englishLevel == "Choose english level") error = "English level is required";
+        // if (!birthdate) error = "Birthdate is required";
+        // else if (gender == "Choose your gender") error = "Gender is required";
+        // else if (latestEducation == "Choose latest education") error = "Latest Education is required";
+        // else if (!latestEducationName) error = "School / University name is required";
+        // else if (graduateMonth=="Month" ) error ="please select graduation month";
+        // else if (graduateYear=="Year" ) error ="please select graduation year";
+        // else if (!graduationYear) error = "Graduation year is required";
+        // else if (englishLevel == "Choose english level") error = "English level is required";
         if(japaneseType !="None"){
-            if(!dateFrom) error ="Date From is required";
-            else if(!dateTo) error = "Date to is required";
-            else if(dateTo <= dateFrom) error = "Date From Cannot < than date to";
+            if (fromMonth=="Month") error ="please select from month";
+            else if (fromYear=="Year") error ="please select from year";
+            else if (toMonth=="Month") error ="please select to month";
+            else if (toYear=="Year") error ="please select to year";
+
+            if(fromMonth!="Month" && fromYear!="Year" && toMonth!="Month" && toYear!="Year"){
+                var fromYearMonth = (fromYear.concat(fromMonth));
+                var toYearMonth = (toYear.concat(toMonth));
+                if(toYearMonth <= fromYearMonth) error = "Date From Cannot lower than date to";
+            }
+            // if(!dateFrom) error ="Date From is required";
+            // else if(!dateTo) error = "Date to is required";
+            // else if(dateTo <= dateFrom) error = "Date From Cannot < than date to";
         }
         if (latestEducation == "University"){
             let stsmajor = false
@@ -93,6 +116,7 @@ import {
         userPass: navigation.getParam('userPass', null),
         startDate : navigation.getParam('startDate', null),
       });
+      this.setYear();
     }
 
     
@@ -132,6 +156,27 @@ import {
     updateJapaneseType = (japaneseTypeUpdate) => {
         this.setState({ japaneseType: japaneseTypeUpdate })
     }
+    updateGraduateMonth = (month) => {
+        console.log(month)
+        this.setState({ graduateMonth: month })
+    }
+    updateGraduateYear = (year) => {
+        this.setState({ graduateYear: year })
+    }
+
+    updateFromMonth = (month) => {
+        this.setState({ fromMonth: month })
+    }
+    updateFromYear = (year) => {
+        this.setState({ fromYear: year })
+    }
+    updateToMonth = (month) => {
+        this.setState({ toMonth: month })
+    }
+    updateToYear = (year) => {
+        this.setState({ toYear: year })
+    }
+
     // updateMajor = (majorUpdate) => {
     //     this.setState({ educationMajor: majorUpdate })
     // }
@@ -201,7 +246,24 @@ import {
                     ))}
 
                     <Text style={styles.textBlue}>Graduation Year</Text>
-                    <DatePicker
+                    <View style={styles.monthYearContainer}>
+                        <Picker
+                            style={styles.monthYear}
+                            selectedValue={this.state.graduateMonth} onValueChange = {this.updateGraduateMonth}> 
+                            {this.monthList.map((item, index) => {
+                                return ( <Picker.Item label={item} value={item} key={index}/>) 
+                            })} 
+                        </Picker>
+                        <Picker
+                            style={styles.monthYear}
+                            // style={{width: 100}}
+                            selectedValue={this.state.graduateYear} onValueChange = {this.updateGraduateYear}> 
+                            {this.yearList.map((item, index) => {
+                                return ( <Picker.Item label={item} value={item} key={index}/>) 
+                            })} 
+                        </Picker>
+                    </View>
+                    {/* <DatePicker
                     style={{width: 130}}
                     date={this.state.graduationYear}
                     androidMode="spinner"
@@ -222,7 +284,7 @@ import {
                         }
                     }}
                     onDateChange={this.onDateChange}
-                    />
+                    /> */}
                     <Text style={styles.textBlue}>Your english level</Text>
                     <Picker style={[styles.picker]}
                         style={{ height: 50, width: 200 }}
@@ -242,10 +304,64 @@ import {
                         <Picker.Item label={item.text} value={item.text} key={key} />
                         ))}
                     </Picker>
+                    <Text style={styles.textBlue}>From</Text>
+                    <View style={styles.monthYearContainer}>
+                        <Picker
+                            style={styles.monthYear}
+                            selectedValue={this.state.fromMonth} onValueChange = {this.updateFromMonth}> 
+                            {this.monthList.map((item, index) => {
+                                return ( <Picker.Item label={item} value={item} key={index}/>) 
+                            })} 
+                        </Picker>
+                        <Picker
+                            style={styles.monthYear}
+                            // style={{width: 100}}
+                            selectedValue={this.state.fromYear} onValueChange = {this.updateFromYear}> 
+                            {this.yearList.map((item, index) => {
+                                return ( <Picker.Item label={item} value={item} key={index}/>) 
+                            })} 
+                        </Picker>
+                    </View>
+
+                     <Text style={styles.textBlue}>To</Text>
+                     <View style={styles.monthYearContainer}>
+                        <Picker
+                            style={styles.monthYear}
+                            selectedValue={this.state.toMonth} onValueChange = {this.updateToMonth}> 
+                            {this.monthList.map((item, index) => {
+                                return ( <Picker.Item label={item} value={item} key={index}/>) 
+                            })} 
+                        </Picker>
+                        <Picker
+                            style={styles.monthYear}
+                            // style={{width: 100}}
+                            selectedValue={this.state.toYear} onValueChange = {this.updateToYear}> 
+                            {this.yearList.map((item, index) => {
+                                return ( <Picker.Item label={item} value={item} key={index}/>) 
+                            })} 
+                        </Picker>
+                    </View>
                             
-                    <View style={styles.flexRow}>
+                    {/* <View style={styles.flexRow}>
                         <View style={styles.flex1}>
                             <Text style={styles.textBlue}>From</Text>
+                            <View style={styles.monthYearContainer}>
+                                <Picker
+                                    style={styles.monthYear}
+                                    selectedValue={this.state.graduateMonth} onValueChange = {this.updateGraduateMonth}> 
+                                    {this.monthList.map((item, index) => {
+                                        return ( <Picker.Item label={item} value={index} key={index}/>) 
+                                    })} 
+                                </Picker>
+                                <Picker
+                                    style={styles.monthYear}
+                                    // style={{width: 100}}
+                                    selectedValue={this.state.graduateYear} onValueChange = {this.updateGraduateYear}> 
+                                    {this.yearList.map((item, index) => {
+                                        return ( <Picker.Item label={item} value={index} key={index}/>) 
+                                    })} 
+                                </Picker>
+                            </View>
                             <DatePicker
                                 style={{width: 130}}
                                 date={this.state.dateFrom}
@@ -294,7 +410,7 @@ import {
                                 onDateChange={this.dateToChange}
                             />
                         </View>
-                    </View>
+                    </View> */}
                     <TouchableOpacity
                         style={styles.buttonBlue}
                         onPress={this.timeIn}
@@ -317,9 +433,16 @@ import {
       );
     }
   
+    combineYearMonth (year, month) {
+        return year + "-" + month;
+    }
+
     timeIn = () => {
         var userData = this.state;
         userData['educationMajor'] = this.combineMajors();
+        userData['graduationYear'] = this.combineYearMonth(this.state.graduateYear, this.state.graduateMonth);
+        userData['dateFrom'] = this.combineYearMonth(this.state.fromYear, this.state.fromMonth);
+        userData['dateTo'] = this.combineYearMonth(this.state.toYear, this.state.toMonth);
         if(!this.validation()){
             this.props.navigation.navigate('TimeIn',(this.state));
         }
@@ -346,6 +469,15 @@ import {
           }
         } 
         return majorStatus;
+    }
+
+    setYear(){
+        var year= (new Date()).getFullYear();
+        for(x=0;x<50;x++){
+          this.yearList.push(String(year) );    
+          year=year-1;  
+        }
+        console.log(this.yearList);
     }
 
   }

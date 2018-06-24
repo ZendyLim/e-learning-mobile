@@ -102,7 +102,7 @@ import {
       let error = '';
       if(data.success==false) error = strings['SIGN_IN_VALIDATION_FAILED'];
       if (error) {
-        Alert.alert(strings['WARNING'], error);
+        Alert.alert("Warning", error);
         return true; 
       }
       else{
