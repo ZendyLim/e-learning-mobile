@@ -183,7 +183,7 @@ export let strings = new LocalizedStrings({
 
   },
  ja: {
-   loginGuest: "ログイン",
+   loginGuest: "Login",
    vocabulary : "語彙",
    grammar : "文法",
    kanji : "漢字",
