@@ -60,7 +60,6 @@ import {
         return;
       }
       setTestState(testInfo, component, 'stoping');
-      sound.setVolume(0);
       sound.stop();
       sound.release();
     };

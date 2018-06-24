@@ -234,7 +234,8 @@ import {
 
     componentWillUnmount() {
       this.resetValue();
-      stopSound(this.state , this);      
+      stopSound(this.state , this);  
+      this.autoplay = true;    
       this.playNpause();
     }
 
